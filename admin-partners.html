@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-admin">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Thesis Dashboard</span>
+            <span class="nav-badge">ADMIN</span>
+        </div>
+        <div class="nav-links">
+            <a href="admin.html" class="nav-link">Overview</a>
+            <a href="admin-partners.html" class="nav-link active">Partners</a>
+            <a href="admin-funding.html" class="nav-link">Funding</a>
+            <a href="admin-roadmap.html" class="nav-link">Roadmap</a>
+            <button id="logoutBtn" class="nav-link nav-logout">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="admin-header">
+            <div class="admin-header-content">
+                <h1>Partner Organizations</h1>
+                <p class="admin-subtitle">24 Partners | 12 Agreements Signed</p>
+            </div>
+            <div class="admin-header-actions">
+                <select id="filterCategory" class="select-filter">
+                    <option value="all">All Categories</option>
+                    <option value="demand">Demand Efficiency</option>
+                    <option value="circular">Circular Economy</option>
+                    <option value="enablers">Enablers</option>
+                    <option value="transport">Transport</option>
+                    <option value="buildings">Buildings</option>
+                    <option value="air">Air Quality</option>
+                    <option value="notf">Neighbourhoods</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Tier 1 Partners -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="tier-badge tier-1">Tier 1</span>
+                Priority Partners (₹40-60 Cr each)
+            </h2>
+            <div class="partners-grid" id="tier1Partners">
+                <div class="partner-card" data-category="demand">
+                    <div class="partner-header">
+                        <h3>NRDC India</h3>
+                        <span class="partner-allocation">₹40-50 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Buildings</span>
+                        <span class="focus-tag">Cool Roofs</span>
+                        <span class="focus-tag">ECBC</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> National buildings efficiency scale-up</p>
+                        <p><strong>Org Budget:</strong> $244M (Global NRDC, 2024)</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Pioneered cool roofs program in India (Telangana, Ahmedabad)</li>
+                            <li>ECBC compliance expertise across multiple states</li>
+                            <li>Heat Action Plan development with state governments</li>
+                            <li>Strong policy advocacy at national level</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>200K cool roofs by Year 3</li>
+                            <li>ECBC compliance in 5 states</li>
+                            <li>50K commercial buildings assessed</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                        <span class="partner-timeline">Target: Day 45</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="demand">
+                    <div class="partner-header">
+                        <h3>WRI India</h3>
+                        <span class="partner-allocation">₹30-40 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Public Facilities</span>
+                        <span class="focus-tag">Equity</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Public facility efficiency, equity integration</p>
+                        <p><strong>Org Budget:</strong> $272M (Global WRI, 2024)</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Forum for Decarbonising Transport with NITI Aayog</li>
+                            <li>NDC Transport Initiative for Asia leadership</li>
+                            <li>Urban mobility and city research expertise</li>
+                            <li>Strong government and multilateral relationships</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>50K public facilities optimized</li>
+                            <li>PRADAN rural integration</li>
+                            <li>Equity framework development</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="demand circular">
+                    <div class="partner-header">
+                        <h3>CEEW</h3>
+                        <span class="partner-allocation">₹50-60 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Cooling</span>
+                        <span class="focus-tag">Circular Economy</span>
+                        <span class="focus-tag">Research</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Cooling research + circular economy research</p>
+                        <p><strong>Org Budget:</strong> $33M (2024) - India's leading clean energy think tank</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Asia's top climate think tank (ICCG ranking)</li>
+                            <li>India Cooling Action Plan research leadership</li>
+                            <li>Solar panel and battery recycling research pioneers</li>
+                            <li>Energy access and transitions expertise</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>National cooling roadmap</li>
+                            <li>Solar/battery recycling research</li>
+                            <li>Policy framework development</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="demand">
+                    <div class="partner-header">
+                        <h3>ITDP India</h3>
+                        <span class="partner-allocation">₹20-25 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Transport</span>
+                        <span class="focus-tag">BRT</span>
+                        <span class="focus-tag">TOD</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Transport demand management</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Designed Ahmedabad Janmarg BRT (130K+ daily passengers)</li>
+                            <li>TOD guidelines for multiple Indian cities</li>
+                            <li>Complete Streets framework development</li>
+                            <li>Global network of sustainable transport expertise</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>5 city BRT/TOD plans</li>
+                            <li>Modal shift programs</li>
+                            <li>20B passenger-km shifted</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                        <span class="partner-timeline">Target: Day 55</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tier 2 Partners -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="tier-badge tier-2">Tier 2</span>
+                Core Partners (₹15-30 Cr each)
+            </h2>
+            <div class="partners-grid" id="tier2Partners">
+                <div class="partner-card" data-category="demand">
+                    <div class="partner-header">
+                        <h3>Prayas Energy Group</h3>
+                        <span class="partner-allocation">₹15-20 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Regulatory</span>
+                        <span class="focus-tag">DSM Policy</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Regulatory research and DSM policy</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>30+ years of energy policy research in Pune</li>
+                            <li>SERC regulatory interventions expertise</li>
+                            <li>Demand-side management policy development</li>
+                            <li>Consumer rights and electricity access advocacy</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>DSM regulatory framework for 5 states</li>
+                            <li>Tariff reform recommendations</li>
+                            <li>Consumer awareness programs</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="demand">
+                    <div class="partner-header">
+                        <h3>Development Alternatives</h3>
+                        <span class="partner-allocation">₹15-20 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Rural</span>
+                        <span class="focus-tag">Buildings</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Rural building efficiency</p>
+                        <p><strong>Org Budget:</strong> $25M (2025) - Social enterprise group</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>40+ years of sustainable development work</li>
+                            <li>Rural housing and construction expertise</li>
+                            <li>Fly ash brick and eco-building materials</li>
+                            <li>Grassroots implementation capability</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>500 rural building assessments (Year 1)</li>
+                            <li>Rural buildings efficiency program</li>
+                            <li>Local materials and techniques documentation</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                        <span class="partner-timeline">Target: Day 60</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="enablers">
+                    <div class="partner-header">
+                        <h3>Ethos Foundation</h3>
+                        <span class="partner-allocation">₹12-15 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Education</span>
+                        <span class="focus-tag">Architecture</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Architecture education reform</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Climate-responsive architecture curriculum</li>
+                            <li>Network of architecture colleges</li>
+                            <li>Studio-based learning programs</li>
+                            <li>Faculty development programs</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>15 college MOUs and curriculum draft (Year 1)</li>
+                            <li>30 colleges with reformed curriculum (Year 3)</li>
+                            <li>Architecture education reform at scale</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="notf">
+                    <div class="partner-header">
+                        <h3>Final Mile</h3>
+                        <span class="partner-allocation">₹8-12 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Behavior</span>
+                        <span class="focus-tag">Nudges</span>
+                        <span class="focus-tag">Community</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Behavioral interventions for sustainability</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Behavioral science and nudge design expertise</li>
+                            <li>RCT-based intervention measurement</li>
+                            <li>Energy and water behavior change programs</li>
+                            <li>Community engagement methodologies</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>3 behavioral RCTs launched (Year 1)</li>
+                            <li>Community engagement framework</li>
+                            <li>100 neighbourhood pilots supported (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="circular">
+                    <div class="partner-header">
+                        <h3>Saahas</h3>
+                        <span class="partner-allocation">₹18-22 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Collection</span>
+                        <span class="focus-tag">Operations</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Collection network operations</p>
+                        <p><strong>Org Budget:</strong> ₹66.7 Cr (2025) - Social enterprise</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Zero Waste services across multiple cities</li>
+                            <li>Waste collection and segregation expertise</li>
+                            <li>EPR compliance and reporting systems</li>
+                            <li>Producer responsibility implementation</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>3-city collection pilot operational (Year 1)</li>
+                            <li>15-city collection network (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="circular">
+                    <div class="partner-header">
+                        <h3>TERI</h3>
+                        <span class="partner-allocation">₹15-20 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">R&D</span>
+                        <span class="focus-tag">Recycling Tech</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Recycling technology R&D</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>India's leading sustainability research institute</li>
+                            <li>GRIHA green building rating system</li>
+                            <li>Solar panel and battery recycling R&D</li>
+                            <li>World Sustainable Development Summit convener</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>Recycling technology assessment</li>
+                            <li>Net-zero buildings research</li>
+                            <li>BIPV integration studies</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="circular air">
+                    <div class="partner-header">
+                        <h3>CSTEP</h3>
+                        <span class="partner-allocation">₹10-15 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Battery</span>
+                        <span class="focus-tag">Modeling</span>
+                        <span class="focus-tag">Air Quality</span>
+                        <span class="focus-tag">Sensors</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Battery lifecycle modeling + Air quality monitoring</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Bangalore-based energy and climate policy think tank</li>
+                            <li>Air quality modeling and source apportionment</li>
+                            <li>200 low-cost sensor deployment in Bengaluru with Aurassure</li>
+                            <li>EV and battery lifecycle modeling expertise</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>200 sensors deployed in Bengaluru (Year 1)</li>
+                            <li>2 state battery roadmaps (Year 1)</li>
+                            <li>Open AQ India platform contribution (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="circular">
+                    <div class="partner-header">
+                        <h3>Chintan</h3>
+                        <span class="partner-allocation">₹8-12 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Advocacy</span>
+                        <span class="focus-tag">EPR</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> EPR policy advocacy</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>20+ years of waste sector advocacy</li>
+                            <li>Informal waste worker rights champion</li>
+                            <li>EPR policy expertise and coalition building</li>
+                            <li>Producer responsibility advocacy</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>Battery EPR coalition formed (Year 1)</li>
+                            <li>EPR policy adoption (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="enablers">
+                    <div class="partner-header">
+                        <h3>IIHS</h3>
+                        <span class="partner-allocation">₹15-20 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Career Pathways</span>
+                        <span class="focus-tag">Urban Research</span>
+                        <span class="focus-tag">Capacity Building</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> ASSURE program for career pathways and professional development</p>
+                        <p><strong>Org Budget:</strong> ₹66.5 Cr (FY2024)</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>India's premier urban research institution</li>
+                            <li>ASSURE program for sustainability professionals</li>
+                            <li>Executive education and city practice</li>
+                            <li>Multi-disciplinary urban expertise</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>Career pathway framework (Year 1)</li>
+                            <li>5,000 professionals trained (Year 3)</li>
+                            <li>Urban sustainability curriculum</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="notf">
+                    <div class="partner-header">
+                        <h3>B.PAC</h3>
+                        <span class="partner-allocation">₹8-12 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Civic Leadership</span>
+                        <span class="focus-tag">Ward Governance</span>
+                        <span class="focus-tag">Participatory Democracy</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> B.CLIP civic leadership training, B.ENGAGED ward governance, B.GREEN sustainability</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>B.CLIP civic leadership program (9 batches since 2013)</li>
+                            <li>B.ENGAGED ward-level governance initiative</li>
+                            <li>B.GREEN environmental sustainability program</li>
+                            <li>Non-partisan citizen mobilization expertise</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>50 civic leaders trained (Year 1)</li>
+                            <li>5 ward sustainability pilots (Year 1)</li>
+                            <li>200 civic leaders, 25 ward programs (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="notf">
+                    <div class="partner-header">
+                        <h3>Praja Foundation</h3>
+                        <span class="partner-allocation">₹10-15 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Accountability</span>
+                        <span class="focus-tag">Ward Data</span>
+                        <span class="focus-tag">Elected Reps</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Councillor/MLA report cards, urban governance research, NoTF data partner</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Councillor/MLA report cards (publishing since 2010)</li>
+                            <li>Ward-level civic data collection and analysis</li>
+                            <li>Data source for NoTF climate baseline platform</li>
+                            <li>49 workshops with elected representatives since 2016</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>Sustainability metrics in councillor report cards (Year 1)</li>
+                            <li>Ward-level data for Mumbai (227 wards)</li>
+                            <li>100 elected reps trained on sustainability (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="notf">
+                    <div class="partner-header">
+                        <h3>Janaagraha</h3>
+                        <span class="partner-allocation">₹12-18 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Municipal Finance</span>
+                        <span class="focus-tag">Participatory Budgeting</span>
+                        <span class="focus-tag">City Systems</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> MyCityMyBudget participatory budgeting, ASICS city assessment, municipal bonds</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>MyCityMyBudget in Bengaluru, Mangaluru, Vizag</li>
+                            <li>ASICS Annual Survey of India's City-Systems</li>
+                            <li>Municipal finance and green bond expertise</li>
+                            <li>Direct engagement with NITI Aayog on urban policy</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>Green budget tracking in 3 cities (Year 1)</li>
+                            <li>Sustainability metrics in ASICS (Year 1)</li>
+                            <li>5 municipal green bonds supported (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tier 3 Partners -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="tier-badge tier-3">Tier 3</span>
+                Specialized Partners (₹5-15 Cr each)
+            </h2>
+            <div class="partners-grid" id="tier3Partners">
+                <div class="partner-card" data-category="enablers">
+                    <div class="partner-header">
+                        <h3>SFC (Sustainability for Climate)</h3>
+                        <span class="partner-allocation">₹8-12 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Policy Research</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Climate policy research and advocacy</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Climate policy research expertise</li>
+                            <li>Sustainable development frameworks</li>
+                            <li>Policy advocacy at state and national levels</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="enablers">
+                    <div class="partner-header">
+                        <h3>Vasudha Foundation</h3>
+                        <span class="partner-allocation">₹8-12 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Data Platform</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Data platform and renewable energy advocacy</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Renewable energy data and analytics</li>
+                            <li>Clean energy transition research</li>
+                            <li>Just transition and livelihoods focus</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="enablers">
+                    <div class="partner-header">
+                        <h3>CSE</h3>
+                        <span class="partner-allocation">₹10-15 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Awareness</span>
+                        <span class="focus-tag">Media</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Public awareness and media engagement</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Down To Earth magazine and media network</li>
+                            <li>40+ years of environmental advocacy</li>
+                            <li>Training and capacity building programs</li>
+                            <li>Air quality and urban environment expertise</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="notf">
+                    <div class="partner-header">
+                        <h3>Socratus Foundation</h3>
+                        <span class="partner-allocation">₹5-8 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Deliberative Democracy</span>
+                        <span class="focus-tag">Climate Action</span>
+                        <span class="focus-tag">Citizen Juries</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Green Up climate initiative, Janta ka Faisla citizen juries, collective wisdom</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Green Up climate action initiative</li>
+                            <li>Janta ka Faisla (People's Verdict) citizen jury platform</li>
+                            <li>Collective wisdom methodologies</li>
+                            <li>Rural-urban citizen engagement</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>5 citizen climate assemblies (Year 1)</li>
+                            <li>50 citizen assemblies conducted (Year 3)</li>
+                            <li>Deliberative democracy replication guide</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="circular">
+                    <div class="partner-header">
+                        <h3>Saath</h3>
+                        <span class="partner-allocation">₹5-8 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Informal Sector</span>
+                        <span class="focus-tag">Cooperatives</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Informal sector integration and cooperative development</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Gujarat-based livelihood and urban development NGO</li>
+                            <li>Informal waste worker integration</li>
+                            <li>Cooperative formation and management</li>
+                            <li>Community-based enterprise development</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-signed">Agreement Signed</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="transport notf">
+                    <div class="partner-header">
+                        <h3>UrbanMorph</h3>
+                        <span class="partner-allocation">₹5-10 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Walking</span>
+                        <span class="focus-tag">Cycling</span>
+                        <span class="focus-tag">Community</span>
+                        <span class="focus-tag">Open Streets</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Non-motorized transport and neighbourhood activation</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Walking and cycling infrastructure design</li>
+                            <li>Open Streets events organization</li>
+                            <li>Pop-up pedestrianization pilots</li>
+                            <li>Community engagement for NMT</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>5 city cycling assessments (Year 1)</li>
+                            <li>10 Open Streets events (Year 1)</li>
+                            <li>500 km cycling infrastructure plans (Year 3)</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="buildings">
+                    <div class="partner-header">
+                        <h3>IGBC / CII</h3>
+                        <span class="partner-allocation">₹10-15 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Green Certification</span>
+                        <span class="focus-tag">Industry</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> Green building certification & industry engagement</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>14,500+ certified projects, 12.3 billion sq.ft</li>
+                            <li>India's leading green building rating system</li>
+                            <li>Industry coalition for sustainable construction</li>
+                            <li>LEED and IGBC rating expertise</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>Green building standards workshop series (Year 1)</li>
+                            <li>500 new IGBC certified buildings (Year 3)</li>
+                            <li>Industry coalition for net-zero buildings</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+
+                <div class="partner-card" data-category="buildings">
+                    <div class="partner-header">
+                        <h3>ASCI</h3>
+                        <span class="partner-allocation">₹8-12 Cr</span>
+                    </div>
+                    <div class="partner-focus">
+                        <span class="focus-tag">Capacity Building</span>
+                        <span class="focus-tag">State Training</span>
+                    </div>
+                    <div class="partner-details">
+                        <p><strong>Focus:</strong> ECBC training for state governments</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Hyderabad-based administrative training institute</li>
+                            <li>State government capacity building</li>
+                            <li>Policy implementation training</li>
+                            <li>Building code enforcement training</li>
+                        </ul>
+                        <p><strong>Key Deliverables:</strong></p>
+                        <ul>
+                            <li>ECBC training program design (Year 1)</li>
+                            <li>1,000 municipal officials trained (Year 3)</li>
+                            <li>5 state ECBC enforcement programs</li>
+                        </ul>
+                    </div>
+                    <div class="partner-meta">
+                        <span class="agreement-status status-pending">Agreement Pending</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer footer-admin">
+        <div class="footer-content">
+            <p>Thesis Dashboard - Admin Dashboard</p>
+            <p class="footer-note">Classification: CONFIDENTIAL</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin-partners.js"></script>
+</body>
+</html>

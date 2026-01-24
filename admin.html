@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Thesis Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-admin">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Thesis Dashboard</span>
+            <span class="nav-badge">ADMIN</span>
+        </div>
+        <div class="nav-links">
+            <a href="admin.html" class="nav-link active">Overview</a>
+            <a href="admin-partners.html" class="nav-link">Partners</a>
+            <a href="admin-funding.html" class="nav-link">Funding</a>
+            <a href="admin-roadmap.html" class="nav-link">Roadmap</a>
+            <button id="logoutBtn" class="nav-link nav-logout">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Admin Header -->
+        <section class="admin-header">
+            <div class="admin-header-content">
+                <h1>Portfolio Management Dashboard</h1>
+                <p class="admin-subtitle">Confidential - Internal Use Only</p>
+            </div>
+            <div class="admin-header-actions">
+                <button class="btn btn-secondary" id="refreshData">
+                    <span>↻</span> Refresh Data
+                </button>
+                <button class="btn btn-primary" id="exportReport">
+                    <span>↓</span> Export Report
+                </button>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="section">
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">🤝</div>
+                    <div class="admin-stat-content">
+                        <span class="admin-stat-value" id="total-partners">24</span>
+                        <span class="admin-stat-label">Partner Organizations</span>
+                    </div>
+                    <div class="admin-stat-trend trend-up">11 Signed</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">💰</div>
+                    <div class="admin-stat-content">
+                        <span class="admin-stat-value" id="total-budget">₹253-270 Cr</span>
+                        <span class="admin-stat-label">Total Portfolio (3 Years)</span>
+                    </div>
+                    <div class="admin-stat-trend">Approved</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">🏘️</div>
+                    <div class="admin-stat-content">
+                        <span class="admin-stat-value" id="wards-covered">596</span>
+                        <span class="admin-stat-label">Wards with Climate Data</span>
+                    </div>
+                    <div class="admin-stat-trend trend-up">2 Cities Live</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">💸</div>
+                    <div class="admin-stat-content">
+                        <span class="admin-stat-value" id="disbursed">₹0 Cr</span>
+                        <span class="admin-stat-label">Disbursed</span>
+                    </div>
+                    <div class="admin-stat-trend">Q1 Target: ₹50-60 Cr</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Allocation -->
+        <section class="section">
+            <h2 class="section-title">Portfolio Allocation</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Budget by Category</h3>
+                    <canvas id="budgetChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Year-wise Phasing</h3>
+                    <canvas id="phasingChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Overview Table -->
+        <section class="section">
+            <h2 class="section-title">Partner Portfolio Overview</h2>
+            <div class="table-container">
+                <table class="admin-table" id="partnerTable">
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Category</th>
+                            <th>Allocation (₹ Cr)</th>
+                            <th>Agreement Status</th>
+                            <th>Q1 Progress</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="partnerTableBody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Funding Categories -->
+        <section class="section">
+            <h2 class="section-title">Funding Categories</h2>
+            <div class="funding-categories-grid">
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>Demand Efficiency</h3>
+                        <span class="funding-amount">₹145-155 Cr</span>
+                    </div>
+                    <div class="funding-category-percentage">
+                        <div class="funding-bar">
+                            <div class="funding-bar-fill" style="width: 55%"></div>
+                        </div>
+                        <span>55%</span>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li>NRDC India - Buildings Scale-up</li>
+                        <li>WRI India - Public Facilities</li>
+                        <li>CEEW - Cooling Research</li>
+                        <li>Prayas - Regulatory Research</li>
+                        <li>ITDP India - Transport Demand</li>
+                        <li>Development Alternatives - Rural</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>Circular Economy</h3>
+                        <span class="funding-amount">₹68-75 Cr</span>
+                    </div>
+                    <div class="funding-category-percentage">
+                        <div class="funding-bar">
+                            <div class="funding-bar-fill" style="width: 30%"></div>
+                        </div>
+                        <span>30%</span>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li>CEEW - Circular Research</li>
+                        <li>Saahas - Collection Operations</li>
+                        <li>TERI - Recycling R&D</li>
+                        <li>CSTEP - Battery Modeling</li>
+                        <li>Chintan - Policy Advocacy</li>
+                        <li>Saath - Informal Sector</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>Enablers</h3>
+                        <span class="funding-amount">₹40-45 Cr</span>
+                    </div>
+                    <div class="funding-category-percentage">
+                        <div class="funding-bar">
+                            <div class="funding-bar-fill" style="width: 15%"></div>
+                        </div>
+                        <span>15%</span>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li>Ethos Foundation - Education</li>
+                        <li>Final Mile - Behavior Change</li>
+                        <li>SFC - Policy Research</li>
+                        <li>Vasudha - Data Platform</li>
+                        <li>CSE - Public Awareness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 90-Day Roadmap Summary -->
+        <section class="section">
+            <h2 class="section-title">90-Day Launch Progress</h2>
+            <div class="roadmap-timeline">
+                <div class="timeline-item active">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>Month 1: Foundation</h4>
+                        <p>Internal alignment, partner outreach</p>
+                        <span class="timeline-status status-current">Current Phase</span>
+                        <ul class="timeline-checklist">
+                            <li class="checked">Review strategy documents</li>
+                            <li class="checked">Finalize portfolio budget</li>
+                            <li>Establish PMU structure</li>
+                            <li>Complete 10 discovery calls</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>Month 2: Partnership Development</h4>
+                        <p>Agreement development, cluster workshops</p>
+                        <span class="timeline-status status-pending">Upcoming</span>
+                        <ul class="timeline-checklist">
+                            <li>Sign 5 Tier 1 Agreements</li>
+                            <li>Buildings Cluster Workshop</li>
+                            <li>Circular Economy Workshop</li>
+                            <li>Behavior Cluster Workshop</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>Month 3: Operationalization</h4>
+                        <p>Dashboard MVP, first disbursements</p>
+                        <span class="timeline-status status-pending">Upcoming</span>
+                        <ul class="timeline-checklist">
+                            <li>Dashboard MVP live</li>
+                            <li>₹50-60 Cr disbursed</li>
+                            <li>5 partner dashboards</li>
+                            <li>Launch event completed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Monitoring -->
+        <section class="section">
+            <h2 class="section-title">Risk Monitoring</h2>
+            <div class="risk-grid">
+                <div class="risk-card risk-low">
+                    <div class="risk-header">
+                        <span class="risk-level">LOW</span>
+                        <h4>Budget Utilization</h4>
+                    </div>
+                    <p>On track for Q1 disbursement targets</p>
+                </div>
+                <div class="risk-card risk-medium">
+                    <div class="risk-header">
+                        <span class="risk-level">MEDIUM</span>
+                        <h4>Partner Onboarding</h4>
+                    </div>
+                    <p>Agreement negotiations in progress</p>
+                </div>
+                <div class="risk-card risk-low">
+                    <div class="risk-header">
+                        <span class="risk-level">LOW</span>
+                        <h4>Data Quality</h4>
+                    </div>
+                    <p>Baseline collection framework ready</p>
+                </div>
+                <div class="risk-card risk-low">
+                    <div class="risk-header">
+                        <span class="risk-level">LOW</span>
+                        <h4>Policy Windows</h4>
+                    </div>
+                    <p>Battery EPR timeline on track</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NoTF Ward-Level Climate Data -->
+        <section class="section">
+            <h2 class="section-title">NoTF: Ward-Level Climate Data Platform</h2>
+            <div class="funding-categories-grid">
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>📊 Bengaluru (Live)</h3>
+                        <span class="funding-amount">369 Wards</span>
+                    </div>
+                    <div class="funding-category-percentage">
+                        <div class="funding-bar">
+                            <div class="funding-bar-fill" style="width: 63%"></div>
+                        </div>
+                        <span>63% Data Quality</span>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>Energy & Buildings:</strong> 100% coverage</li>
+                        <li><strong>Waste Management:</strong> 100% coverage</li>
+                        <li><strong>Urban Greening:</strong> 100% coverage</li>
+                        <li><strong>Transportation:</strong> Partial data</li>
+                        <li><strong>Air Quality:</strong> 16 stations</li>
+                        <li><strong>Disaster Resilience:</strong> Flood 100%, Heat partial</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>📊 Mumbai (Live)</h3>
+                        <span class="funding-amount">227 Wards</span>
+                    </div>
+                    <div class="funding-category-percentage">
+                        <div class="funding-bar">
+                            <div class="funding-bar-fill" style="width: 60%"></div>
+                        </div>
+                        <span>60% Data Quality</span>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>Energy & Buildings:</strong> 100% coverage</li>
+                        <li><strong>Waste Management:</strong> 100% coverage</li>
+                        <li><strong>Transportation:</strong> Pending</li>
+                        <li><strong>Air Quality:</strong> Pending</li>
+                        <li><strong>Water Resources:</strong> Pending</li>
+                        <li><strong>Urban Greening:</strong> Pending</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>🗓️ Planned 2026</h3>
+                        <span class="funding-amount">766 Wards</span>
+                    </div>
+                    <div class="funding-category-percentage">
+                        <div class="funding-bar">
+                            <div class="funding-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span>In Planning</span>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>Delhi:</strong> 272 wards (Q2 2026)</li>
+                        <li><strong>Chennai:</strong> 200 wards (Q2 2026)</li>
+                        <li><strong>Hyderabad:</strong> 150 wards (Q3 2026)</li>
+                        <li><strong>Pune:</strong> 144 wards (Q3 2026)</li>
+                        <li><strong>Target:</strong> 8 cities by Year 3</li>
+                        <li><strong>License:</strong> CC BY-NC-SA 4.0</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-note">
+                <p><strong>Data Sources:</strong> Census of India 2011, BBMP, MCGM, OpenCity.in, KSPCB, MPCB, IISc, Praja Foundation, DataMeet. Platform supports 11 Indian languages.</p>
+            </div>
+        </section>
+
+        <!-- Philanthropies & CSR Funders by Sector -->
+        <section class="section">
+            <h2 class="section-title">Philanthropies & CSR Funders by Sector</h2>
+            <div class="funding-categories-grid">
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>🏢 Buildings & Energy Efficiency</h3>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>Shakti Foundation</strong> - ECBC, thermal comfort, building codes</li>
+                        <li><strong>MacArthur Foundation</strong> - $18M climate portfolio in India</li>
+                        <li><strong>ClimateWorks Foundation</strong> - Clean energy efficiency</li>
+                        <li><strong>IKEA Foundation</strong> - Productive use renewable energy</li>
+                        <li><strong>Bloomberg Philanthropies</strong> - City-level climate programs</li>
+                        <li><strong>Children's Investment Fund (CIFF)</strong> - ₹106 Cr India Clean Air</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>🚌 Transport & Mobility</h3>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>Shakti Foundation</strong> - Sustainable urban transport, 80% modal shift</li>
+                        <li><strong>Bloomberg Philanthropies</strong> - EV roadmaps, city transport</li>
+                        <li><strong>World Bank ESMAP</strong> - $1.5B electric mobility (2024)</li>
+                        <li><strong>ClimateWorks</strong> - Transport decarbonization</li>
+                        <li><strong>Hewlett Foundation</strong> - Clean mobility coalition</li>
+                        <li><strong>Good Energies Foundation</strong> - EV infrastructure</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>🌬️ Air Quality</h3>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>CIFF</strong> - ₹106 Cr for India Clean Air Phase 2</li>
+                        <li><strong>Shakti Foundation</strong> - ₹4-10 Cr/year emission studies</li>
+                        <li><strong>UNEP</strong> - ₹53 Cr Global Air Quality Program</li>
+                        <li><strong>Bloomberg Philanthropies</strong> - Surat, Patna air strategies</li>
+                        <li><strong>Climate & Health Funders Coalition</strong> - $300M (2025)</li>
+                        <li><strong>Wellcome Trust</strong> - Air pollution health research</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>♻️ Circular Economy</h3>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>IKEA Foundation</strong> - Renewable energy supply chains</li>
+                        <li><strong>Ellen MacArthur Foundation</strong> - Circular economy systems</li>
+                        <li><strong>Oak Foundation</strong> - E-waste and recycling</li>
+                        <li><strong>Tata Trusts</strong> - Environment & energy initiatives</li>
+                        <li><strong>Infosys Foundation</strong> - Environmental sustainability</li>
+                        <li><strong>JSW Foundation</strong> - Industrial sustainability</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>🏘️ Neighbourhoods & Open Data</h3>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>Rohini Nilekani Philanthropies</strong> - India Climate Collaborative, civic data</li>
+                        <li><strong>Omidyar Network India</strong> - Open data, civic tech platforms</li>
+                        <li><strong>Google.org</strong> - Data for social impact, mapping</li>
+                        <li><strong>Azim Premji Foundation</strong> - Grassroots development, local governance</li>
+                        <li><strong>EkStep Foundation</strong> - Open digital infrastructure</li>
+                        <li><strong>Tata Trusts</strong> - Community-based programs, urban data</li>
+                    </ul>
+                </div>
+                <div class="funding-category-card">
+                    <div class="funding-category-header">
+                        <h3>🌍 Cross-Sector Climate Funders</h3>
+                    </div>
+                    <ul class="funding-partners-list">
+                        <li><strong>India Climate Collaborative (ICC)</strong> - Multi-funder coalition</li>
+                        <li><strong>MacArthur + Hewlett + Packard</strong> - Solar energy consortium</li>
+                        <li><strong>Rockefeller Foundation</strong> - Climate & health integration</li>
+                        <li><strong>Gates Foundation</strong> - Climate adaptation</li>
+                        <li><strong>Quadrature Climate Foundation</strong> - Data-driven climate</li>
+                        <li><strong>Omidyar Network India</strong> - Climate-tech startups</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-note">
+                <p><strong>Note:</strong> This is not an exhaustive list. Major Indian CSR funders include Tata Group, Reliance Foundation, Infosys, HDFC, ITC, Mahindra, Godrej, and JSW.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-admin">
+        <div class="footer-content">
+            <p>Thesis Dashboard - Admin Dashboard</p>
+            <p class="footer-note">Classification: CONFIDENTIAL | Last updated: <span id="lastUpdated">-</span></p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

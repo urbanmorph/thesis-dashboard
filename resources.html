@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Climate Action Tracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Climate Action Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="sectors.html" class="nav-link">Sectors</a>
+            <a href="resources.html" class="nav-link active">Resources</a>
+            <a href="login.html" class="nav-link nav-admin">Admin</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <!-- Hero -->
+        <section class="hero" style="padding: var(--space-2xl); margin-bottom: var(--space-xl);">
+            <div class="hero-content">
+                <h1 style="font-size: 2rem;">Resources</h1>
+                <p class="hero-subtitle">Data sources, citations, and key terminology</p>
+            </div>
+        </section>
+
+        <!-- Resource Tabs -->
+        <div class="resource-tabs">
+            <button class="resource-tab active" data-section="references">
+                <span>📖</span>
+                <span>Data Sources</span>
+            </button>
+            <button class="resource-tab" data-section="glossary">
+                <span>📚</span>
+                <span>Glossary</span>
+            </button>
+        </div>
+
+        <!-- Data Sources Section -->
+        <div class="resource-content-panel active" id="references">
+            <div class="reference-grid">
+                <div class="reference-section">
+                    <h4>Energy Consumption & Demand</h4>
+                    <ol class="reference-list">
+                        <li>Bureau of Energy Efficiency. (2024). <em>India Energy Scenario Report 2024</em>. Ministry of Power.</li>
+                        <li>Central Electricity Authority. (2024). <em>Growth of Electricity Sector in India</em>.</li>
+                        <li>International Energy Agency. (2024). <em>World Energy Investment 2024 - India</em>.</li>
+                        <li>Ministry of Power. (2024). <em>Power Sector at a Glance</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Buildings & Cooling</h4>
+                    <ol class="reference-list" start="5">
+                        <li>Bureau of Energy Efficiency. (2023). <em>ECBC 2017 Compliance Status Report</em>.</li>
+                        <li>MoEFCC. (2019). <em>India Cooling Action Plan</em>.</li>
+                        <li>NRDC India. (2023). <em>Cool Roofs Implementation Guide</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Transport</h4>
+                    <ol class="reference-list" start="8">
+                        <li>MoRTH. (2024). <em>Road Transport Year Book 2022-23</em>.</li>
+                        <li>ITDP India. (2023). <em>BRT Planning Guide for Indian Cities</em>.</li>
+                        <li>NITI Aayog. (2022). <em>India Transport Energy Outlook</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Circular Economy & RE</h4>
+                    <ol class="reference-list" start="11">
+                        <li>CEEW. (2025). <em>Solar Panel Waste Management in India</em>.</li>
+                        <li>MNRE. (2024). <em>Annual Report 2023-24</em>.</li>
+                        <li>NITI Aayog & RMI. (2023). <em>Battery Recycling Roadmap</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>National Targets & Policy</h4>
+                    <ol class="reference-list" start="14">
+                        <li>GoI. (2022). <em>Updated NDC Under Paris Agreement</em>.</li>
+                        <li>MoEFCC. (2022). <em>Long-Term Low-Carbon Strategy</em>.</li>
+                        <li>PIB. (2023). <em>Net Zero 2070 Commitment</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Agriculture & Industrial</h4>
+                    <ol class="reference-list" start="17">
+                        <li>BEE. (2023). <em>PAT Scheme Results and Roadmap</em>.</li>
+                        <li>Ministry of Agriculture. (2023). <em>Agricultural Statistics 2023</em>.</li>
+                        <li>CGWB. (2023). <em>Dynamic Ground Water Resources</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Transport & Urban Mobility</h4>
+                    <ol class="reference-list" start="20">
+                        <li>WRI India. (2024). <em>Forum for Decarbonising Transport</em>.</li>
+                        <li>IEA. (2024). <em>Transitioning India's Road Transport</em>.</li>
+                        <li>MoHUA. (2025). <em>Metro Rail Network Status Report</em>.</li>
+                        <li>MHI. (2024). <em>FAME II Electric Bus Status</em>.</li>
+                        <li>ITDP India. (2019). <em>Complete Streets Framework</em>.</li>
+                        <li>WRI India. (2023). <em>Public Bicycle Sharing Systems</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Buildings & Green Construction</h4>
+                    <ol class="reference-list" start="26">
+                        <li>NRDC India. (2024). <em>Building Energy Codes Adoption</em>.</li>
+                        <li>MoEFCC & CLASP. (2025). <em>AC Efficiency Standards</em>.</li>
+                        <li>IGBC. (2024). <em>Green Building Statistics India</em>.</li>
+                        <li>TERI-GRIHA. (2024). <em>GRIHA Certified Projects</em>.</li>
+                        <li>Telangana. (2023). <em>Cool Roof Policy 2023-28</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Air Quality</h4>
+                    <ol class="reference-list" start="31">
+                        <li>CPCB. (2025). <em>NAAQMS Programme</em>.</li>
+                        <li>Google. (2024). <em>Air View+ India Insights</em>.</li>
+                        <li>Respirer Living Sciences. (2025). <em>Climate Tech in Action</em>.</li>
+                        <li>UrbanEmissions.Info. (2025). <em>NCAP Monitoring Needs</em>.</li>
+                        <li>CEEW. (2024). <em>Hyperlocal Air Pollution Sources</em>.</li>
+                        <li>CSE. (2024). <em>AQ Monitoring Coverage</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Neighbourhoods & Ward Data</h4>
+                    <ol class="reference-list" start="37">
+                        <li>NoTF. (2026). <em>Bengaluru Ward Climate Data (369 wards)</em>. CC BY-NC-SA.</li>
+                        <li>NoTF. (2026). <em>Mumbai Ward Climate Data (227 wards)</em>. CC BY-NC-SA.</li>
+                        <li>Census of India. (2011). <em>Primary Census Abstract</em>.</li>
+                        <li>OpenCity.in. (2024). <em>Bengaluru Urban Data Portal</em>.</li>
+                        <li>BBMP. (2024). <em>Ward Boundaries & Census Data</em>.</li>
+                        <li>MCGM. (2024). <em>Electoral Ward Data</em>.</li>
+                        <li>DataMeet. (2024). <em>Municipal Spatial Data</em>.</li>
+                        <li>Praja Foundation. (2024). <em>Ward-Level Governance Reports</em>.</li>
+                    </ol>
+                </div>
+                <div class="reference-section">
+                    <h4>Buildings: Carbon & Construction</h4>
+                    <ol class="reference-list" start="45">
+                        <li>RMI & NIUA. (2020). <em>Build Right the First Time</em>.</li>
+                        <li>AEEE. (2024). <em>Tackling Embodied Carbon</em>.</li>
+                        <li>JLL India. (2025). <em>Office Market Report 2025</em>.</li>
+                        <li>Mordor Intelligence. (2025). <em>Residential Construction Forecast</em>.</li>
+                        <li>IIHS & Infosys. (2024). <em>ASSURE Program</em>. 100M sq.ft.</li>
+                        <li>IGBC. (2024). <em>Mission on Net Zero</em>.</li>
+                        <li>CREDAI & IGBC. (2023). <em>4,000 Green Projects by 2030</em>.</li>
+                        <li>CEEW. (2024). <em>India Cooling Action Research</em>.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Glossary Section -->
+        <div class="resource-content-panel" id="glossary">
+            <div class="glossary-grid">
+                <div class="glossary-card">
+                    <dt>NDC</dt>
+                    <dd>Nationally Determined Contributions - India's climate commitments under Paris Agreement</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>ECBC</dt>
+                    <dd>Energy Conservation Building Code - mandatory standards for commercial buildings</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>EPR</dt>
+                    <dd>Extended Producer Responsibility - producers responsible for end-of-life management</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>PAT</dt>
+                    <dd>Perform, Achieve and Trade - industrial energy efficiency trading scheme</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>Mtoe</dt>
+                    <dd>Million tonnes of oil equivalent - standard energy measurement</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>TWh</dt>
+                    <dd>Terawatt-hours - electricity measurement (1 TWh = 1 billion kWh)</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>BRT</dt>
+                    <dd>Bus Rapid Transit - dedicated bus lanes for efficient public transport</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>TOD</dt>
+                    <dd>Transit-Oriented Development - urban planning around transit stations</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>NCAP</dt>
+                    <dd>National Clean Air Programme - initiative to reduce air pollution in 131 cities</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>CAAQMS</dt>
+                    <dd>Continuous Ambient Air Quality Monitoring Stations - real-time monitoring by CPCB</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>PM2.5</dt>
+                    <dd>Particulate Matter 2.5 - fine particles ≤2.5 micrometers, major health concern</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>AQI</dt>
+                    <dd>Air Quality Index - standardized measure of air pollution (0-500 scale)</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>Source Apportionment</dt>
+                    <dd>Scientific study to identify and quantify pollution sources</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>NMT</dt>
+                    <dd>Non-Motorized Transport - walking, cycling, human-powered modes</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>IGBC</dt>
+                    <dd>Indian Green Building Council - certification body for green buildings</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>GRIHA</dt>
+                    <dd>Green Rating for Integrated Habitat Assessment - national rating system</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>NoTF</dt>
+                    <dd>Neighbourhoods of the Future - community-led sustainability platform</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>RWA</dt>
+                    <dd>Resident Welfare Association - community organization for governance</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>BBMP</dt>
+                    <dd>Bruhat Bengaluru Mahanagara Palike - Bengaluru corporation (369 wards)</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>MCGM</dt>
+                    <dd>Municipal Corporation of Greater Mumbai - governing 227 wards</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>Ward</dt>
+                    <dd>Administrative subdivision for local governance - smallest urban unit</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>CC BY-NC-SA</dt>
+                    <dd>Creative Commons Attribution-NonCommercial-ShareAlike license</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>ASSURE</dt>
+                    <dd>IIHS program for 100M sq.ft high-performance buildings by 2030</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>HPB</dt>
+                    <dd>High-Performance Buildings - 25-50% more efficient than standard</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>Embodied Carbon</dt>
+                    <dd>CO2 from materials & construction (40% of India's building emissions)</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>Operational Carbon</dt>
+                    <dd>CO2 from building energy use during occupancy (60% of emissions)</dd>
+                </div>
+                <div class="glossary-card">
+                    <dt>CREDAI</dt>
+                    <dd>Confederation of Real Estate Developers - 4,000 green projects by 2030</dd>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Data updated quarterly • Last update: January 2026</p>
+        <p class="footer-license">CC BY-NC-SA 4.0</p>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.resource-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.resource-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.resource-content-panel').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                const sectionId = tab.dataset.section;
+                document.getElementById(sectionId).classList.add('active');
+                history.replaceState(null, null, '#' + sectionId);
+            });
+        });
+
+        // Handle direct URL with hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const tab = document.querySelector(`[data-section="${hash}"]`);
+                if (tab) tab.click();
+            }
+        });
+    </script>
+</body>
+</html>

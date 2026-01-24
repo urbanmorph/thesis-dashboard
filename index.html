@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Tracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Climate Action Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">Dashboard</a>
+            <a href="sectors.html" class="nav-link">Sectors</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="login.html" class="nav-link nav-admin">Admin</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>Q1 2026 • Active</span>
+                </div>
+                <h1>Multi-Sector Climate Action Initiative</h1>
+                <p class="hero-subtitle">Driving sustainability transformation across 8 priority states through research, policy, and implementation support.</p>
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <strong>2026-2029</strong>
+                        <span>Program Period</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <strong>Year 1</strong>
+                        <span>Current Phase</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats -->
+        <section class="impact-stats">
+            <div class="impact-stat">
+                <div class="impact-value">10 TWh</div>
+                <div class="impact-label">Energy Saved</div>
+            </div>
+            <div class="impact-stat">
+                <div class="impact-value">20B km</div>
+                <div class="impact-label">Passenger-km Shifted</div>
+            </div>
+            <div class="impact-stat">
+                <div class="impact-value">500K</div>
+                <div class="impact-label">Buildings Assessed</div>
+            </div>
+            <div class="impact-stat">
+                <div class="impact-value">1M</div>
+                <div class="impact-label">Households Engaged</div>
+            </div>
+            <div class="impact-stat">
+                <div class="impact-value">30+</div>
+                <div class="impact-label">Policies Influenced</div>
+            </div>
+        </section>
+        <p class="impact-stats-title">Year 3 Impact Targets</p>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Sectors Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="card-title-icon">📊</span>
+                        Sector Progress
+                    </h2>
+                    <a href="sectors.html" class="card-link">View Details →</a>
+                </div>
+                <div class="card-body">
+                    <a href="sectors.html#energy" class="sector-item">
+                        <div class="sector-icon">⚡</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Energy</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar active" style="width: 8%;"></div>
+                                </div>
+                                <span class="sector-status status-active">8%</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sectors.html#transport" class="sector-item">
+                        <div class="sector-icon">🚌</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Transport</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar planning" style="width: 10%;"></div>
+                                </div>
+                                <span class="sector-status status-planning">Planning</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sectors.html#buildings" class="sector-item">
+                        <div class="sector-icon">🏗️</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Buildings</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar active" style="width: 30%;"></div>
+                                </div>
+                                <span class="sector-status status-active">30%</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sectors.html#air" class="sector-item">
+                        <div class="sector-icon">🌬️</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Air Quality</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar active" style="width: 15%;"></div>
+                                </div>
+                                <span class="sector-status status-active">15%</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sectors.html#notf" class="sector-item">
+                        <div class="sector-icon">🏘️</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Neighbourhoods</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar planning" style="width: 10%;"></div>
+                                </div>
+                                <span class="sector-status status-planning">Planning</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sectors.html#waste" class="sector-item">
+                        <div class="sector-icon">🗑️</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Waste</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar coming" style="width: 0%;"></div>
+                                </div>
+                                <span class="sector-status status-coming">Coming Soon</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sectors.html#water" class="sector-item">
+                        <div class="sector-icon">💧</div>
+                        <div class="sector-content">
+                            <div class="sector-name">Water</div>
+                            <div class="sector-progress">
+                                <div class="progress-track">
+                                    <div class="progress-bar coming" style="width: 0%;"></div>
+                                </div>
+                                <span class="sector-status status-coming">Coming Soon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Theory of Change Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="card-title-icon">🎯</span>
+                        Theory of Change
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="toc-flow">
+                        <div class="toc-step">
+                            <div class="toc-number">1</div>
+                            <div class="toc-content">
+                                <h4>Shifts</h4>
+                                <p>Long-term systemic changes: decarbonized energy, sustainable mobility, net-zero buildings, clean air, resilient communities</p>
+                            </div>
+                        </div>
+                        <div class="toc-step">
+                            <div class="toc-number">2</div>
+                            <div class="toc-content">
+                                <h4>Targets</h4>
+                                <p>Measurable goals that drive shifts: 10 TWh saved, 500K buildings, 20B passenger-km, 30+ policies</p>
+                            </div>
+                        </div>
+                        <div class="toc-step">
+                            <div class="toc-number">3</div>
+                            <div class="toc-content">
+                                <h4>Markers</h4>
+                                <p>Observable signals of progress: policy adoptions, pilot deployments, behavioral changes, investment flows</p>
+                            </div>
+                        </div>
+                        <div class="toc-step">
+                            <div class="toc-number">4</div>
+                            <div class="toc-content">
+                                <h4>Strategies</h4>
+                                <p>Interventions to overcome barriers: research, capacity building, blended finance, coalition building</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geographic Focus Card -->
+            <div class="card" style="grid-column: 1 / -1;">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="card-title-icon">🗺️</span>
+                        Geographic Focus
+                    </h2>
+                    <span style="font-size: 0.8rem; color: var(--gray-500);">8 Priority States</span>
+                </div>
+                <div class="card-body">
+                    <div class="geo-grid" style="grid-template-columns: repeat(4, 1fr);">
+                        <div class="geo-item">
+                            <span class="geo-name">Maharashtra</span>
+                            <span class="geo-focus">Industrial, Urban</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Karnataka</span>
+                            <span class="geo-focus">Tech, Mobility</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Tamil Nadu</span>
+                            <span class="geo-focus">Industrial, Wind</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Gujarat</span>
+                            <span class="geo-focus">Solar, Industrial</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Rajasthan</span>
+                            <span class="geo-focus">Solar, Waste</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Uttar Pradesh</span>
+                            <span class="geo-focus">Residential, Agri</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Andhra Pradesh</span>
+                            <span class="geo-focus">Multi-sector</span>
+                        </div>
+                        <div class="geo-item">
+                            <span class="geo-name">Telangana</span>
+                            <span class="geo-focus">Commercial, Transport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overview Stats -->
+        <section class="overview-stats">
+            <div class="overview-stat">
+                <div class="stat-value">7</div>
+                <div class="stat-label">Sectors</div>
+            </div>
+            <div class="overview-stat">
+                <div class="stat-value">8</div>
+                <div class="stat-label">States</div>
+            </div>
+            <div class="overview-stat">
+                <div class="stat-value">24</div>
+                <div class="stat-label">Partners</div>
+            </div>
+            <div class="overview-stat">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Years</div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <a href="sectors.html" class="action-btn primary">
+                <span>📊</span> Explore Sectors
+            </a>
+            <a href="resources.html#references" class="action-btn">
+                <span>📖</span> Data Sources
+            </a>
+            <a href="resources.html#glossary" class="action-btn">
+                <span>📚</span> Glossary
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Data updated quarterly • Last update: January 2026</p>
+        <p class="footer-license">CC BY-NC-SA 4.0</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors - Climate Action Tracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Climate Action Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="sectors.html" class="nav-link active">Sectors</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="login.html" class="nav-link nav-admin">Admin</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <!-- Hero -->
+        <section class="hero" style="padding: var(--space-2xl); margin-bottom: var(--space-xl);">
+            <div class="hero-content">
+                <h1 style="font-size: 2rem;">Sector Strategies</h1>
+                <p class="hero-subtitle">Baseline → Shift → Targets → Markers → Strategies</p>
+            </div>
+        </section>
+
+        <!-- Sector Tabs -->
+        <div class="sector-tabs" style="justify-content: center; flex-wrap: nowrap; gap: var(--space-xs);">
+            <button class="sector-tab active" data-sector="energy" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">⚡</span>
+                <span class="tab-label">Energy</span>
+            </button>
+            <button class="sector-tab" data-sector="transport" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🚌</span>
+                <span class="tab-label">Transport</span>
+                <span class="tab-status status-planning">Planning</span>
+            </button>
+            <button class="sector-tab" data-sector="buildings" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🏗️</span>
+                <span class="tab-label">Buildings</span>
+            </button>
+            <button class="sector-tab" data-sector="air" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🌬️</span>
+                <span class="tab-label">Air</span>
+            </button>
+            <button class="sector-tab" data-sector="notf" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🏘️</span>
+                <span class="tab-label">NoTF</span>
+                <span class="tab-status status-planning">Planning</span>
+            </button>
+            <button class="sector-tab" data-sector="waste" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🗑️</span>
+                <span class="tab-label">Waste</span>
+                <span class="tab-status status-coming">Soon</span>
+            </button>
+            <button class="sector-tab" data-sector="water" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">💧</span>
+                <span class="tab-label">Water</span>
+                <span class="tab-status status-coming">Soon</span>
+            </button>
+        </div>
+
+        <!-- ENERGY SECTOR -->
+        <div class="sector-content-panel active" id="energy">
+            <div class="sector-hero">
+                <h2>Energy Sector</h2>
+                <p>Demand-side efficiency and circular economy for sustainable energy transition</p>
+            </div>
+
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Energy Consumption</h4>
+                        <ul>
+                            <li>Total primary energy: 900+ Mtoe annually <a href="resources.html#references" style="font-size: 0.75rem;">[1,2]</a></li>
+                            <li>89% fossil fuel dependent <a href="resources.html#references" style="font-size: 0.75rem;">[3]</a></li>
+                            <li>Energy intensity: 0.11 kgoe per $ GDP <a href="resources.html#references" style="font-size: 0.75rem;">[3]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Efficiency Gap</h4>
+                        <ul>
+                            <li>Buildings: Only 5% ECBC compliant <a href="resources.html#references" style="font-size: 0.75rem;">[5]</a></li>
+                            <li>Agriculture pumps: 30-40% efficiency <a href="resources.html#references" style="font-size: 0.75rem;">[17]</a></li>
+                            <li>Cool roofs: &lt;1% penetration <a href="resources.html#references" style="font-size: 0.75rem;">[7]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Circular Economy</h4>
+                        <ul>
+                            <li>Solar waste: &lt;5K tonnes recycled/year <a href="resources.html#references" style="font-size: 0.75rem;">[11]</a></li>
+                            <li>No formal battery recycling at scale <a href="resources.html#references" style="font-size: 0.75rem;">[13]</a></li>
+                            <li>EPR framework under development <a href="resources.html#references" style="font-size: 0.75rem;">[11]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Progress -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--primary);">
+                <h3>Current Progress (Q1 2026)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Energy Savings</h4>
+                        <ul>
+                            <li><strong>0.8 TWh</strong> saved (8% of Year 3 target)</li>
+                            <li><strong>0.2 GW</strong> peak demand reduced (7% of target)</li>
+                            <li><strong>0.6 MT CO2</strong> avoided</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Implementation</h4>
+                        <ul>
+                            <li><strong>15,000</strong> buildings optimized (3% of 500K target)</li>
+                            <li><strong>2,000</strong> professionals trained (7% of 30K target)</li>
+                            <li><strong>2</strong> policies influenced (7% of 30 target)</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Circular Economy</h4>
+                        <ul>
+                            <li><strong>1,500 tonnes</strong> recycling capacity (4% of 40K target)</li>
+                            <li><strong>3 states</strong> with active programs</li>
+                            <li><strong>$0.2B</strong> import savings</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Source: Program metrics updated January 2026</p>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Decarbonized Energy System</h4>
+                        <ul>
+                            <li>Energy demand decoupled from economic growth</li>
+                            <li>Circular material flows for RE infrastructure</li>
+                            <li>Efficiency-first approach embedded in policy</li>
+                            <li>45% emissions intensity reduction achieved</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones</h4>
+                        <ul>
+                            <li>10 TWh annual energy savings</li>
+                            <li>500K buildings optimized</li>
+                            <li>40K tonnes/year recycling capacity</li>
+                            <li>30+ policies influenced</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets (config.js)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>Energy intensity per unit GDP declining</li>
+                            <li>ECBC compliance rates in target states</li>
+                            <li>Recycling facility throughput volumes</li>
+                            <li>Cool roof installations tracked</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>State adoption of efficiency mandates</li>
+                            <li>Industry commitment to EPR schemes</li>
+                            <li>Discourse shift toward demand-side solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Removing Barriers</h4>
+                        <ul>
+                            <li>Research: Data gaps on efficiency potential</li>
+                            <li>Policy: EPR framework development</li>
+                            <li>Finance: Blended finance for recycling infra</li>
+                            <li>Capacity: Training for ECBC enforcement</li>
+                            <li>Coalition: Industry-government partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🏢</div>
+                        <h4>Buildings Efficiency</h4>
+                        <p>Cool roofs, ECBC compliance, passive design</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">500K buildings optimized</span>
+                            <span class="focus-target">5M sq.m cool roofs</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🏭</div>
+                        <h4>Industrial & Agriculture</h4>
+                        <p>PAT expansion, pump efficiency programs</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">5 industrial sectors</span>
+                            <span class="focus-target">50K pumps upgraded</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">♻️</div>
+                        <h4>Circular Economy</h4>
+                        <p>Solar & battery recycling infrastructure</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">40K tonnes/year capacity</span>
+                            <span class="focus-target">80%+ mineral recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRANSPORT SECTOR -->
+        <div class="sector-content-panel" id="transport">
+            <div class="sector-hero">
+                <h2>Transport Sector</h2>
+                <p>Sustainable mobility, modal shift, and public transit systems</p>
+            </div>
+
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Transport Emissions</h4>
+                        <ul>
+                            <li>13.5% of energy-related emissions <a href="resources.html#references" style="font-size: 0.75rem;">[10,21]</a></li>
+                            <li>Road transport: 90% of sector consumption <a href="resources.html#references" style="font-size: 0.75rem;">[8]</a></li>
+                            <li>Oil imports: 89% import dependent <a href="resources.html#references" style="font-size: 0.75rem;">[3]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Urban Mobility</h4>
+                        <ul>
+                            <li>Urban population: 500M (2025) <a href="resources.html#references" style="font-size: 0.75rem;">[20]</a></li>
+                            <li>Short trips (&lt;5 km): 40% of urban trips <a href="resources.html#references" style="font-size: 0.75rem;">[9]</a></li>
+                            <li>Congestion cost: 1.5% of GDP <a href="resources.html#references" style="font-size: 0.75rem;">[20]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Public Transit</h4>
+                        <ul>
+                            <li>Metro: 1,035 km in 23 cities <a href="resources.html#references" style="font-size: 0.75rem;">[22]</a></li>
+                            <li>E-buses: 10,000+ deployed in 50+ cities <a href="resources.html#references" style="font-size: 0.75rem;">[23]</a></li>
+                            <li>BRT: Limited to few cities (Ahmedabad, Pune) <a href="resources.html#references" style="font-size: 0.75rem;">[9]</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Status: Planning phase - baseline assessment in progress</p>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Sustainable Urban Mobility</h4>
+                        <ul>
+                            <li>Public transit as preferred mode in cities</li>
+                            <li>Walking and cycling normalized for short trips</li>
+                            <li>Reduced dependence on private vehicles</li>
+                            <li>Oil import dependency significantly reduced</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones</h4>
+                        <ul>
+                            <li>20B passenger-km shifted to public transit</li>
+                            <li>5 city BRT/TOD plans implemented</li>
+                            <li>500 km cycling infrastructure</li>
+                            <li>10 complete streets projects</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets based on <a href="resources.html#references">[9,20,24]</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>Public transit ridership growth rates</li>
+                            <li>Modal share data in target cities</li>
+                            <li>Km of dedicated bus/cycle lanes added</li>
+                            <li>E-bus fleet deployment numbers</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>City master plans prioritizing NMT</li>
+                            <li>Citizen perception of public transit quality</li>
+                            <li>Political commitment to car-free zones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Removing Barriers</h4>
+                        <ul>
+                            <li>Research: Modal shift impact studies</li>
+                            <li>Policy: TOD zoning and parking reforms</li>
+                            <li>Finance: Viability gap funding for BRT</li>
+                            <li>Capacity: Urban planners trained in NMT</li>
+                            <li>Coalition: Transit agency coordination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🚇</div>
+                        <h4>Public Transit & BRT</h4>
+                        <p>Ahmedabad Janmarg model replication</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">5 city BRT/TOD plans</span>
+                            <span class="focus-target">20B passenger-km shifted</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🚴</div>
+                        <h4>Walking & Cycling</h4>
+                        <p>Complete Streets, public bike sharing</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">500 km cycling lanes</span>
+                            <span class="focus-target">10 complete streets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUILDINGS SECTOR -->
+        <div class="sector-content-panel" id="buildings">
+            <div class="sector-hero">
+                <h2>Buildings Sector</h2>
+                <p>High-performance buildings, embodied carbon reduction, and net-zero construction</p>
+            </div>
+
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Emissions Profile</h4>
+                        <ul>
+                            <li>Buildings: 17-22% of total CO2 <a href="resources.html#references" style="font-size: 0.75rem;">[45]</a></li>
+                            <li>Embodied carbon: 40% of building emissions <a href="resources.html#references" style="font-size: 0.75rem;">[46]</a></li>
+                            <li>70% of 2030 infrastructure yet to be built <a href="resources.html#references" style="font-size: 0.75rem;">[45]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Construction Pipeline</h4>
+                        <ul>
+                            <li>Commercial: 78M sq.ft absorbed in 2025 <a href="resources.html#references" style="font-size: 0.75rem;">[47]</a></li>
+                            <li>Residential: 30M units needed by 2030 <a href="resources.html#references" style="font-size: 0.75rem;">[48]</a></li>
+                            <li>Concrete demand: 500→800 MT by 2030 <a href="resources.html#references" style="font-size: 0.75rem;">[46]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Policy & Cooling</h4>
+                        <ul>
+                            <li>ECBC: 23 states notified, few enforcing <a href="resources.html#references" style="font-size: 0.75rem;">[5,26]</a></li>
+                            <li>AC peak load: 46 GW (2025) <a href="resources.html#references" style="font-size: 0.75rem;">[6,52]</a></li>
+                            <li>Cool roofs: Telangana only state policy <a href="resources.html#references" style="font-size: 0.75rem;">[30]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Progress -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--primary);">
+                <h3>Current Progress (Q1 2026)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Buildings Optimized</h4>
+                        <ul>
+                            <li><strong>15,000</strong> buildings assessed (3% of 500K target)</li>
+                            <li><strong>2,000</strong> professionals trained via ASSURE</li>
+                            <li>ECBC compliance tracking initiated</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Cool Roofs</h4>
+                        <ul>
+                            <li><strong>150,000</strong> cool roofs installed (75% of 200K target)</li>
+                            <li><strong>3 states</strong> with active programs (60% of 5 target)</li>
+                            <li>Telangana leading implementation</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Policy Influence</h4>
+                        <ul>
+                            <li><strong>2 policies</strong> influenced (7% of 30 target)</li>
+                            <li>State-level ECBC enforcement in progress</li>
+                            <li>CREDAI-IGBC partnership active</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Source: Program metrics updated January 2026</p>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Net-Zero Built Environment</h4>
+                        <ul>
+                            <li>All new construction meets HPB standards</li>
+                            <li>Embodied carbon considered in design</li>
+                            <li>Passive cooling reduces AC dependence</li>
+                            <li>ECBC enforced as building code standard</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones</h4>
+                        <ul>
+                            <li>10M sq.ft HPB (ASSURE Year 1)</li>
+                            <li>500K buildings assessed</li>
+                            <li>200K cool roofs installed</li>
+                            <li>5 states with ECBC enforcement</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets based on <a href="resources.html#references">[49,7,26]</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>ASSURE program sq.ft commitments</li>
+                            <li>ECBC compliance rates by state</li>
+                            <li>Green building certifications issued</li>
+                            <li>Cooling demand growth vs projections</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>Developer adoption of HPB practices</li>
+                            <li>State building bylaws updated for ECBC</li>
+                            <li>Consumer demand for efficient buildings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Removing Barriers</h4>
+                        <ul>
+                            <li>Research: Embodied carbon benchmarks</li>
+                            <li>Policy: ECBC enforcement mechanisms</li>
+                            <li>Finance: Green building incentives</li>
+                            <li>Capacity: 12,000+ professionals via ASSURE</li>
+                            <li>Coalition: CREDAI-IGBC partnership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">📋</div>
+                        <h4>ECBC Compliance</h4>
+                        <p>23 states notified, enforcement needed</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">5 states enforcement</span>
+                            <span class="focus-target">1,000 officials trained</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🏠</div>
+                        <h4>Cool Roofs</h4>
+                        <p>2-7°C indoor temperature reduction</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">200K cool roofs</span>
+                            <span class="focus-target">3 state policies</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">❄️</div>
+                        <h4>Efficient Cooling</h4>
+                        <p>AC peak: 46→143 GW by 2030</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">40% demand reduction</span>
+                            <span class="focus-target">64 TWh/year savings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AIR QUALITY SECTOR -->
+        <div class="sector-content-panel" id="air">
+            <div class="sector-hero">
+                <h2>Air Quality Sector</h2>
+                <p>Hyperlocal monitoring, source apportionment, and Open AQ model for India</p>
+            </div>
+
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Air Quality Crisis</h4>
+                        <ul>
+                            <li>131 non-attainment cities under NCAP <a href="resources.html#references" style="font-size: 0.75rem;">[31,34]</a></li>
+                            <li>Delhi PM2.5: ~100 µg/m³ (standard: 40) <a href="resources.html#references" style="font-size: 0.75rem;">[31]</a></li>
+                            <li>Air pollution: 2nd health risk factor <a href="resources.html#references" style="font-size: 0.75rem;">[35]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Monitoring Infrastructure</h4>
+                        <ul>
+                            <li>CPCB: ~450 real-time stations <a href="resources.html#references" style="font-size: 0.75rem;">[31]</a></li>
+                            <li>Only 12% census towns have stations <a href="resources.html#references" style="font-size: 0.75rem;">[36]</a></li>
+                            <li>Only 30% cities have source apportionment <a href="resources.html#references" style="font-size: 0.75rem;">[34]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Low-Cost Sensors</h4>
+                        <ul>
+                            <li>Respirer: 2,000+ monitors deployed <a href="resources.html#references" style="font-size: 0.75rem;">[33]</a></li>
+                            <li>Google Air View+: 150 cities <a href="resources.html#references" style="font-size: 0.75rem;">[32]</a></li>
+                            <li>CSTEP/Aurassure: 200 sensors Bengaluru <a href="resources.html#references" style="font-size: 0.75rem;">[35]</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Status: Active - sensor network deployment in progress</p>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Clean Air for All Cities</h4>
+                        <ul>
+                            <li>All NCAP cities meet air quality standards</li>
+                            <li>Data-driven, targeted interventions</li>
+                            <li>Real-time public access to AQ information</li>
+                            <li>Source-specific pollution reduction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones</h4>
+                        <ul>
+                            <li>500 additional sensors deployed</li>
+                            <li>15 NCAP cities with source apportionment</li>
+                            <li>Open AQ India platform live</li>
+                            <li>5 cities with dynamic attribution models</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets based on <a href="resources.html#references">[33,34,35]</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>Sensor network density per city</li>
+                            <li>PM2.5 trends in monitored areas</li>
+                            <li>API usage on Open AQ platform</li>
+                            <li>Source apportionment studies completed</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>City action plans citing sensor data</li>
+                            <li>Media coverage using hyperlocal data</li>
+                            <li>Citizen awareness of pollution sources</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Removing Barriers</h4>
+                        <ul>
+                            <li>Research: Low-cost sensor validation</li>
+                            <li>Policy: Data sharing mandates</li>
+                            <li>Tech: Unified API development</li>
+                            <li>Capacity: City officials trained in data use</li>
+                            <li>Coalition: CSTEP, WRI, Respirer network</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">📡</div>
+                        <h4>Hyperlocal Sensing</h4>
+                        <p>Dense low-cost sensor deployment</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">500 additional sensors</span>
+                            <span class="focus-target">8 cities networked</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🔬</div>
+                        <h4>Source Apportionment</h4>
+                        <p>Dynamic real-time attribution</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">15 NCAP cities</span>
+                            <span class="focus-target">5 dynamic models</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🌐</div>
+                        <h4>Open AQ India</h4>
+                        <p>Unified data platform with APIs</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">5 data providers</span>
+                            <span class="focus-target">Public dashboards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEIGHBOURHOODS SECTOR -->
+        <div class="sector-content-panel" id="notf">
+            <div class="sector-hero">
+                <h2>Neighbourhoods of the Future</h2>
+                <p>Community-led action, ward-level climate data, and integrated sustainability</p>
+            </div>
+
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Behavioral Gap</h4>
+                        <ul>
+                            <li>Technology alone misses 20-30% of savings</li>
+                            <li>Limited community-level climate action</li>
+                            <li>No hyperlocal data for ward-level planning</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Ward-Level Data Platform</h4>
+                        <ul>
+                            <li>Bengaluru: 369 wards × 7 climate sectors <a href="resources.html#references" style="font-size: 0.75rem;">[37,41]</a></li>
+                            <li>Mumbai: 227 wards × 2 sectors <a href="resources.html#references" style="font-size: 0.75rem;">[38,42]</a></li>
+                            <li>Confidence: 60-63% with cited sources <a href="resources.html#references" style="font-size: 0.75rem;">[37,38]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Community Infrastructure</h4>
+                        <ul>
+                            <li>RWAs exist but not climate-focused <a href="resources.html#references" style="font-size: 0.75rem;">[44]</a></li>
+                            <li>No trained community champions</li>
+                            <li>Limited replicable models</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Status: Planning - ward data platform active, community programs launching</p>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Resilient, Sustainable Communities</h4>
+                        <ul>
+                            <li>Neighbourhoods as units of climate action</li>
+                            <li>Community-owned sustainability practices</li>
+                            <li>Hyperlocal data driving local decisions</li>
+                            <li>Behavioral change at household level</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones</h4>
+                        <ul>
+                            <li>8 cities with ward-level data</li>
+                            <li>1M households engaged</li>
+                            <li>500 community champions trained</li>
+                            <li>100 model neighbourhoods</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets based on <a href="resources.html#references">[37,38]</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>Ward data platform usage metrics</li>
+                            <li>Household participation rates</li>
+                            <li>Community champions active monthly</li>
+                            <li>Replicable models documented</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>RWA adoption of sustainability agendas</li>
+                            <li>Local councillor engagement with data</li>
+                            <li>Peer-to-peer sharing of practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Removing Barriers</h4>
+                        <ul>
+                            <li>Research: Behavioral intervention design</li>
+                            <li>Data: Ward-level climate baselines</li>
+                            <li>Tech: Multilingual platform (11 languages)</li>
+                            <li>Capacity: Community champion training</li>
+                            <li>Coalition: RWA and local govt partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg);">
+                <h3>Expansion Roadmap</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">📊</div>
+                        <h4>Current Coverage</h4>
+                        <p>Bengaluru + Mumbai: 596 wards</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">11 languages</span>
+                            <span class="focus-target">60-63% confidence</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🗺️</div>
+                        <h4>Next Cities</h4>
+                        <p>Delhi, Chennai, Hyderabad, Pune</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">766 additional wards</span>
+                            <span class="focus-target">8 cities by Year 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">👥</div>
+                        <h4>Community Action</h4>
+                        <p>RWA partnerships, community champions</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">100 model neighbourhoods</span>
+                            <span class="focus-target">500 champions trained</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🧠</div>
+                        <h4>Behavioral Change</h4>
+                        <p>Nudges, social norms, gamification</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">1M households engaged</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🔄</div>
+                        <h4>Integrated Solutions</h4>
+                        <p>Cross-sector neighbourhood plans</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">20 integrated pilots</span>
+                            <span class="focus-target">5 replicable models</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WASTE SECTOR -->
+        <div class="sector-content-panel" id="waste">
+            <div class="sector-hero">
+                <h2>Waste Management Sector</h2>
+                <p>Municipal solid waste, plastic waste reduction, and e-waste management</p>
+            </div>
+
+            <div class="coming-soon">
+                <div class="coming-soon-icon">🗑️</div>
+                <h3>Coming Soon</h3>
+                <p>Detailed tracking for the Waste Management sector will be available soon.</p>
+                <div class="coming-tags">
+                    <span class="coming-tag">Municipal Solid Waste</span>
+                    <span class="coming-tag">Plastic Waste</span>
+                    <span class="coming-tag">E-waste</span>
+                    <span class="coming-tag">Waste-to-Energy</span>
+                    <span class="coming-tag">Composting</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- WATER SECTOR -->
+        <div class="sector-content-panel" id="water">
+            <div class="sector-hero">
+                <h2>Water Sector</h2>
+                <p>Water conservation, wastewater treatment, and groundwater management</p>
+            </div>
+
+            <div class="coming-soon">
+                <div class="coming-soon-icon">💧</div>
+                <h3>Coming Soon</h3>
+                <p>Detailed tracking for the Water sector will be available soon.</p>
+                <div class="coming-tags">
+                    <span class="coming-tag">Conservation</span>
+                    <span class="coming-tag">Wastewater Treatment</span>
+                    <span class="coming-tag">Groundwater</span>
+                    <span class="coming-tag">Water-Energy Nexus</span>
+                    <span class="coming-tag">Rainwater Harvesting</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Data updated quarterly • CC BY-NC-SA 4.0</p>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.sector-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.sector-content-panel').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                const sectorId = tab.dataset.sector;
+                document.getElementById(sectorId).classList.add('active');
+                history.replaceState(null, null, '#' + sectorId);
+            });
+        });
+
+        // Handle direct URL with hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const tab = document.querySelector(`[data-sector="${hash}"]`);
+                if (tab) tab.click();
+            }
+        });
+    </script>
+</body>
+</html>

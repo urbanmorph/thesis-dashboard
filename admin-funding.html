@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funding - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-admin">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Thesis Dashboard</span>
+            <span class="nav-badge">ADMIN</span>
+        </div>
+        <div class="nav-links">
+            <a href="admin.html" class="nav-link">Overview</a>
+            <a href="admin-partners.html" class="nav-link">Partners</a>
+            <a href="admin-funding.html" class="nav-link active">Funding</a>
+            <a href="admin-roadmap.html" class="nav-link">Roadmap</a>
+            <button id="logoutBtn" class="nav-link nav-logout">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="admin-header">
+            <div class="admin-header-content">
+                <h1>Funding Allocation</h1>
+                <p class="admin-subtitle">Total Portfolio: ₹253-270 Cr over 3 Years</p>
+            </div>
+        </section>
+
+        <!-- Budget Summary -->
+        <section class="section">
+            <div class="budget-summary-grid">
+                <div class="budget-summary-card">
+                    <h3>Year 1</h3>
+                    <span class="budget-amount">₹75-80 Cr</span>
+                    <span class="budget-percent">30%</span>
+                    <div class="budget-bar">
+                        <div class="budget-bar-fill" style="width: 30%"></div>
+                    </div>
+                </div>
+                <div class="budget-summary-card">
+                    <h3>Year 2</h3>
+                    <span class="budget-amount">₹100-110 Cr</span>
+                    <span class="budget-percent">40%</span>
+                    <div class="budget-bar">
+                        <div class="budget-bar-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="budget-summary-card">
+                    <h3>Year 3</h3>
+                    <span class="budget-amount">₹75-80 Cr</span>
+                    <span class="budget-percent">30%</span>
+                    <div class="budget-bar">
+                        <div class="budget-bar-fill" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Breakdown -->
+        <section class="section">
+            <h2 class="section-title">Category Breakdown</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Allocation by Category</h3>
+                    <canvas id="categoryPieChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Year-wise by Category</h3>
+                    <canvas id="categoryBarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Allocation Table -->
+        <section class="section">
+            <h2 class="section-title">Year 1 Allocation Details</h2>
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Allocation</th>
+                            <th>Key Activities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="category-tag demand">Demand Efficiency</span></td>
+                            <td>₹40-45 Cr</td>
+                            <td>Pilots, baseline, first scale</td>
+                        </tr>
+                        <tr>
+                            <td><span class="category-tag circular">Circular Economy</span></td>
+                            <td>₹20-22 Cr</td>
+                            <td>Research, pilot design, collection start</td>
+                        </tr>
+                        <tr>
+                            <td><span class="category-tag enablers">Enablers</span></td>
+                            <td>₹7-8 Cr</td>
+                            <td>Data infrastructure, awareness launch</td>
+                        </tr>
+                        <tr>
+                            <td><span class="category-tag policy">Policy Research</span></td>
+                            <td>₹5-6 Cr</td>
+                            <td>State assessments, policy analysis</td>
+                        </tr>
+                        <tr>
+                            <td><span class="category-tag operations">Dashboard + PMU</span></td>
+                            <td>₹3-4 Cr</td>
+                            <td>System setup, operations</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- First Disbursements -->
+        <section class="section">
+            <h2 class="section-title">Q1 Disbursement Plan</h2>
+            <div class="disbursement-grid">
+                <div class="disbursement-card">
+                    <div class="disbursement-header">
+                        <h4>NRDC India</h4>
+                        <span class="disbursement-amount">₹12-15 Cr</span>
+                    </div>
+                    <div class="disbursement-milestone">
+                        <span class="milestone-label">Release Milestone:</span>
+                        <p>MOU signed, Year 1 workplan approved</p>
+                    </div>
+                    <div class="disbursement-status">
+                        <span class="status-indicator status-pending"></span>
+                        Pending MOU
+                    </div>
+                </div>
+                <div class="disbursement-card">
+                    <div class="disbursement-header">
+                        <h4>WRI India</h4>
+                        <span class="disbursement-amount">₹9-12 Cr</span>
+                    </div>
+                    <div class="disbursement-milestone">
+                        <span class="milestone-label">Release Milestone:</span>
+                        <p>MOU signed, PRADAN integration plan</p>
+                    </div>
+                    <div class="disbursement-status">
+                        <span class="status-indicator status-pending"></span>
+                        Pending MOU
+                    </div>
+                </div>
+                <div class="disbursement-card">
+                    <div class="disbursement-header">
+                        <h4>CEEW</h4>
+                        <span class="disbursement-amount">₹15-18 Cr</span>
+                    </div>
+                    <div class="disbursement-milestone">
+                        <span class="milestone-label">Release Milestone:</span>
+                        <p>MOU signed, cooling + circular plans</p>
+                    </div>
+                    <div class="disbursement-status">
+                        <span class="status-indicator status-pending"></span>
+                        Pending MOU
+                    </div>
+                </div>
+                <div class="disbursement-card">
+                    <div class="disbursement-header">
+                        <h4>ITDP India</h4>
+                        <span class="disbursement-amount">₹6-8 Cr</span>
+                    </div>
+                    <div class="disbursement-milestone">
+                        <span class="milestone-label">Release Milestone:</span>
+                        <p>MOU signed, transport demand proposal</p>
+                    </div>
+                    <div class="disbursement-status">
+                        <span class="status-indicator status-pending"></span>
+                        Pending MOU
+                    </div>
+                </div>
+                <div class="disbursement-card">
+                    <div class="disbursement-header">
+                        <h4>Development Alternatives</h4>
+                        <span class="disbursement-amount">₹5-6 Cr</span>
+                    </div>
+                    <div class="disbursement-milestone">
+                        <span class="milestone-label">Release Milestone:</span>
+                        <p>MOU signed, rural buildings pilot design</p>
+                    </div>
+                    <div class="disbursement-status">
+                        <span class="status-indicator status-pending"></span>
+                        Pending MOU
+                    </div>
+                </div>
+            </div>
+            <div class="disbursement-total">
+                <span>Q1 Total Target:</span>
+                <strong>₹50-60 Cr</strong>
+            </div>
+        </section>
+
+        <!-- Partner Allocation Table -->
+        <section class="section">
+            <h2 class="section-title">Complete Partner Allocation</h2>
+            <div class="table-container">
+                <table class="admin-table" id="allocationTable">
+                    <thead>
+                        <tr>
+                            <th>Partner</th>
+                            <th>Category</th>
+                            <th>3-Year Total</th>
+                            <th>Year 1</th>
+                            <th>Year 2</th>
+                            <th>Year 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>NRDC India</td>
+                            <td><span class="category-tag demand">Demand</span></td>
+                            <td>₹40-50 Cr</td>
+                            <td>₹12-15 Cr</td>
+                            <td>₹16-20 Cr</td>
+                            <td>₹12-15 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>WRI India</td>
+                            <td><span class="category-tag demand">Demand</span></td>
+                            <td>₹30-40 Cr</td>
+                            <td>₹9-12 Cr</td>
+                            <td>₹12-16 Cr</td>
+                            <td>₹9-12 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>CEEW</td>
+                            <td><span class="category-tag demand">Demand</span> <span class="category-tag circular">Circular</span></td>
+                            <td>₹50-60 Cr</td>
+                            <td>₹15-18 Cr</td>
+                            <td>₹20-24 Cr</td>
+                            <td>₹15-18 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>ITDP India</td>
+                            <td><span class="category-tag demand">Demand</span></td>
+                            <td>₹20-25 Cr</td>
+                            <td>₹6-8 Cr</td>
+                            <td>₹8-10 Cr</td>
+                            <td>₹6-7 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Prayas</td>
+                            <td><span class="category-tag demand">Demand</span></td>
+                            <td>₹15-20 Cr</td>
+                            <td>₹5-6 Cr</td>
+                            <td>₹6-8 Cr</td>
+                            <td>₹4-6 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Development Alternatives</td>
+                            <td><span class="category-tag demand">Demand</span></td>
+                            <td>₹15-20 Cr</td>
+                            <td>₹5-6 Cr</td>
+                            <td>₹6-8 Cr</td>
+                            <td>₹4-6 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Ethos Foundation</td>
+                            <td><span class="category-tag enablers">Enablers</span></td>
+                            <td>₹12-15 Cr</td>
+                            <td>₹4-5 Cr</td>
+                            <td>₹5-6 Cr</td>
+                            <td>₹3-4 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Final Mile</td>
+                            <td><span class="category-tag enablers">Enablers</span></td>
+                            <td>₹8-12 Cr</td>
+                            <td>₹3-4 Cr</td>
+                            <td>₹3-5 Cr</td>
+                            <td>₹2-3 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Saahas</td>
+                            <td><span class="category-tag circular">Circular</span></td>
+                            <td>₹18-22 Cr</td>
+                            <td>₹5-7 Cr</td>
+                            <td>₹7-9 Cr</td>
+                            <td>₹6-6 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>TERI</td>
+                            <td><span class="category-tag circular">Circular</span></td>
+                            <td>₹15-20 Cr</td>
+                            <td>₹5-6 Cr</td>
+                            <td>₹6-8 Cr</td>
+                            <td>₹4-6 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>CSTEP</td>
+                            <td><span class="category-tag circular">Circular</span></td>
+                            <td>₹10-15 Cr</td>
+                            <td>₹3-5 Cr</td>
+                            <td>₹4-6 Cr</td>
+                            <td>₹3-4 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Chintan</td>
+                            <td><span class="category-tag circular">Circular</span></td>
+                            <td>₹8-12 Cr</td>
+                            <td>₹3-4 Cr</td>
+                            <td>₹3-5 Cr</td>
+                            <td>₹2-3 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Saath</td>
+                            <td><span class="category-tag circular">Circular</span></td>
+                            <td>₹5-8 Cr</td>
+                            <td>₹2-3 Cr</td>
+                            <td>₹2-3 Cr</td>
+                            <td>₹1-2 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>SFC</td>
+                            <td><span class="category-tag enablers">Enablers</span></td>
+                            <td>₹8-12 Cr</td>
+                            <td>₹3-4 Cr</td>
+                            <td>₹3-5 Cr</td>
+                            <td>₹2-3 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>Vasudha</td>
+                            <td><span class="category-tag enablers">Enablers</span></td>
+                            <td>₹8-12 Cr</td>
+                            <td>₹3-4 Cr</td>
+                            <td>₹3-5 Cr</td>
+                            <td>₹2-3 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>CSE</td>
+                            <td><span class="category-tag enablers">Enablers</span></td>
+                            <td>₹10-15 Cr</td>
+                            <td>₹3-5 Cr</td>
+                            <td>₹4-6 Cr</td>
+                            <td>₹3-4 Cr</td>
+                        </tr>
+                        <tr class="table-total">
+                            <td><strong>Total</strong></td>
+                            <td></td>
+                            <td><strong>₹253-270 Cr</strong></td>
+                            <td><strong>₹75-80 Cr</strong></td>
+                            <td><strong>₹100-110 Cr</strong></td>
+                            <td><strong>₹75-80 Cr</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-admin">
+        <div class="footer-content">
+            <p>Thesis Dashboard - Admin Dashboard</p>
+            <p class="footer-note">Classification: CONFIDENTIAL</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin-funding.js"></script>
+</body>
+</html>

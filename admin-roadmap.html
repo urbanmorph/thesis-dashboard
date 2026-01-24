@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-admin">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Thesis Dashboard</span>
+            <span class="nav-badge">ADMIN</span>
+        </div>
+        <div class="nav-links">
+            <a href="admin.html" class="nav-link">Overview</a>
+            <a href="admin-partners.html" class="nav-link">Partners</a>
+            <a href="admin-funding.html" class="nav-link">Funding</a>
+            <a href="admin-roadmap.html" class="nav-link active">Roadmap</a>
+            <button id="logoutBtn" class="nav-link nav-logout">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="admin-header">
+            <div class="admin-header-content">
+                <h1>Implementation Roadmap</h1>
+                <p class="admin-subtitle">90-Day Launch Plan & Quarterly Milestones</p>
+            </div>
+        </section>
+
+        <!-- 90-Day Timeline -->
+        <section class="section">
+            <h2 class="section-title">90-Day Launch Plan</h2>
+
+            <!-- Month 1 -->
+            <div class="roadmap-month">
+                <div class="month-header">
+                    <h3>Month 1: Foundation Setting (Days 1-30)</h3>
+                    <span class="month-status status-current">Current Phase</span>
+                </div>
+
+                <div class="week-grid">
+                    <div class="week-card">
+                        <h4>Week 1-2: Internal Alignment</h4>
+                        <table class="roadmap-table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Deliverable</th>
+                                    <th>Owner</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Review strategy documents</td>
+                                    <td>Team alignment on priorities</td>
+                                    <td>Funder team</td>
+                                    <td><span class="task-status done">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Finalize portfolio budget</td>
+                                    <td>Approved ₹253-270 Cr allocation</td>
+                                    <td>Finance</td>
+                                    <td><span class="task-status done">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Establish PMU structure</td>
+                                    <td>Team roles, reporting lines</td>
+                                    <td>Leadership</td>
+                                    <td><span class="task-status progress">In Progress</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Set up communication channels</td>
+                                    <td>Slack/Teams, email lists</td>
+                                    <td>Operations</td>
+                                    <td><span class="task-status pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="week-card">
+                        <h4>Week 3-4: Partner Outreach</h4>
+                        <div class="outreach-tiers">
+                            <div class="outreach-tier">
+                                <h5>Tier 1 (Priority)</h5>
+                                <ul>
+                                    <li>NRDC India - Email + call <span class="task-status pending">Pending</span></li>
+                                    <li>WRI India - Email + call <span class="task-status pending">Pending</span></li>
+                                    <li>CEEW - Email + call <span class="task-status pending">Pending</span></li>
+                                    <li>ITDP India - Email + call <span class="task-status pending">Pending</span></li>
+                                </ul>
+                            </div>
+                            <div class="outreach-tier">
+                                <h5>Tier 2</h5>
+                                <ul>
+                                    <li>Prayas, DA, Ethos, Final Mile - Introductory emails</li>
+                                    <li>Saahas, TERI, CSTEP, Chintan - Introductory emails</li>
+                                </ul>
+                            </div>
+                            <div class="outreach-tier">
+                                <h5>Tier 3</h5>
+                                <ul>
+                                    <li>SFC, Vasudha, CSE, Saath - Schedule for Month 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="milestone-box">
+                            <strong>Milestone:</strong> 10 partner discovery calls completed by Day 30
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 2 -->
+            <div class="roadmap-month">
+                <div class="month-header">
+                    <h3>Month 2: Partnership Development (Days 31-60)</h3>
+                    <span class="month-status status-upcoming">Upcoming</span>
+                </div>
+
+                <div class="week-grid">
+                    <div class="week-card">
+                        <h4>MOU Development</h4>
+                        <table class="roadmap-table">
+                            <thead>
+                                <tr>
+                                    <th>Partner</th>
+                                    <th>MOU Elements</th>
+                                    <th>Target Signing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>NRDC</td>
+                                    <td>Scale-up plan, Ethos integration, ASSURE linkage</td>
+                                    <td>Day 45</td>
+                                </tr>
+                                <tr>
+                                    <td>WRI</td>
+                                    <td>PRADAN integration, equity framework</td>
+                                    <td>Day 50</td>
+                                </tr>
+                                <tr>
+                                    <td>CEEW</td>
+                                    <td>Cooling + circular split, Saahas integration</td>
+                                    <td>Day 55</td>
+                                </tr>
+                                <tr>
+                                    <td>ITDP</td>
+                                    <td>Transport demand focus, metrics</td>
+                                    <td>Day 55</td>
+                                </tr>
+                                <tr>
+                                    <td>Development Alternatives</td>
+                                    <td>Rural buildings, Ethos linkage</td>
+                                    <td>Day 60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="week-card">
+                        <h4>Integration Cluster Workshops</h4>
+                        <div class="workshop-list">
+                            <div class="workshop-item">
+                                <h5>Buildings Cluster Workshop (Day 40)</h5>
+                                <p><strong>Participants:</strong> NRDC, WRI, DA, Ethos, (IIHS ASSURE)</p>
+                                <p><strong>Agenda:</strong> Role clarity, handoffs, shared metrics</p>
+                            </div>
+                            <div class="workshop-item">
+                                <h5>Circular Economy Cluster Workshop (Day 45)</h5>
+                                <p><strong>Participants:</strong> CEEW, Saahas, TERI, CSTEP, Chintan, Saath</p>
+                                <p><strong>Agenda:</strong> Research-operations integration, policy timeline</p>
+                            </div>
+                            <div class="workshop-item">
+                                <h5>Behavior & Awareness Cluster Workshop (Day 50)</h5>
+                                <p><strong>Participants:</strong> Final Mile, CSE, Prayas</p>
+                                <p><strong>Agenda:</strong> Nudge design, campaign coordination</p>
+                            </div>
+                        </div>
+                        <div class="milestone-box">
+                            <strong>Milestone:</strong> 5 MOUs signed, 3 cluster designs complete by Day 60
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 3 -->
+            <div class="roadmap-month">
+                <div class="month-header">
+                    <h3>Month 3: Operationalization (Days 61-90)</h3>
+                    <span class="month-status status-upcoming">Upcoming</span>
+                </div>
+
+                <div class="week-grid">
+                    <div class="week-card">
+                        <h4>Dashboard MVP Launch</h4>
+                        <table class="roadmap-table">
+                            <thead>
+                                <tr>
+                                    <th>Week</th>
+                                    <th>Deliverable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Week 9</td>
+                                    <td>Data model finalized, Supabase setup</td>
+                                </tr>
+                                <tr>
+                                    <td>Week 10</td>
+                                    <td>Partner data submission portal live</td>
+                                </tr>
+                                <tr>
+                                    <td>Week 11</td>
+                                    <td>Executive summary dashboard draft</td>
+                                </tr>
+                                <tr>
+                                    <td>Week 12</td>
+                                    <td>5 Tier 1 partner dashboards live</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="week-card">
+                        <h4>Launch Event (Day 85-90)</h4>
+                        <div class="event-details">
+                            <p><strong>Format:</strong> Half-day portfolio convening</p>
+                            <p><strong>Participants:</strong> All 24 partner organizations</p>
+                            <h5>Agenda:</h5>
+                            <ul>
+                                <li>Funder vision presentation</li>
+                                <li>Partner introductions (2 min each)</li>
+                                <li>Integration cluster breakouts</li>
+                                <li>Dashboard demonstration</li>
+                                <li>Year 1 priorities alignment</li>
+                                <li>Media announcement</li>
+                            </ul>
+                        </div>
+                        <div class="milestone-box milestone-final">
+                            <strong>Final Milestone:</strong> ₹50-60 Cr disbursed, dashboard MVP live, launch event completed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Year 1 Quarterly Milestones -->
+        <section class="section">
+            <h2 class="section-title">Year 1 Quarterly Milestones</h2>
+            <div class="quarterly-grid">
+                <div class="quarter-card">
+                    <h4>Q1 (Months 1-3): Launch</h4>
+                    <ul class="quarter-targets">
+                        <li><span class="target-metric">MOUs signed:</span> 10/16</li>
+                        <li><span class="target-metric">First disbursements:</span> ₹50-60 Cr</li>
+                        <li><span class="target-metric">Dashboard MVP:</span> Live</li>
+                        <li><span class="target-metric">Launch event:</span> Completed</li>
+                        <li><span class="target-metric">Baseline data:</span> 80% metrics</li>
+                    </ul>
+                </div>
+                <div class="quarter-card">
+                    <h4>Q2 (Months 4-6): Pilots</h4>
+                    <ul class="quarter-targets">
+                        <li><span class="target-metric">MOUs signed:</span> 16/16</li>
+                        <li><span class="target-metric">Pilot projects:</span> 20+ launched</li>
+                        <li><span class="target-metric">Partner dashboards:</span> All live</li>
+                        <li><span class="target-metric">Policy windows mapped:</span> 10 state + 3 national</li>
+                    </ul>
+                </div>
+                <div class="quarter-card">
+                    <h4>Q3 (Months 7-9): Scale</h4>
+                    <ul class="quarter-targets">
+                        <li><span class="target-metric">Energy saved:</span> 1.5 TWh</li>
+                        <li><span class="target-metric">Buildings optimized:</span> 30,000</li>
+                        <li><span class="target-metric">Recycling capacity:</span> 5,000 t/yr</li>
+                        <li><span class="target-metric">Policies influenced:</span> 3</li>
+                    </ul>
+                </div>
+                <div class="quarter-card">
+                    <h4>Q4 (Months 10-12): Results</h4>
+                    <ul class="quarter-targets">
+                        <li><span class="target-metric">Energy saved:</span> 2.0 TWh</li>
+                        <li><span class="target-metric">Buildings optimized:</span> 50,000</li>
+                        <li><span class="target-metric">Recycling capacity:</span> 8,000 t/yr</li>
+                        <li><span class="target-metric">Policies influenced:</span> 5</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Window Calendar -->
+        <section class="section">
+            <h2 class="section-title">Policy Window Calendar</h2>
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Policy</th>
+                            <th>Window</th>
+                            <th>Lead Partners</th>
+                            <th>Action Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Battery EPR Rules</td>
+                            <td>Q2-Q3 2026</td>
+                            <td>Chintan, CEEW</td>
+                            <td>Draft + advocacy by May 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Solar Panel EPR</td>
+                            <td>Q3-Q4 2026</td>
+                            <td>CEEW, Chintan</td>
+                            <td>Build on battery success</td>
+                        </tr>
+                        <tr>
+                            <td>ECBC Update</td>
+                            <td>Q1-Q2 2027</td>
+                            <td>NRDC, SFC</td>
+                            <td>State pilot evidence</td>
+                        </tr>
+                        <tr>
+                            <td>National Cooling Action Plan</td>
+                            <td>Ongoing</td>
+                            <td>CEEW</td>
+                            <td>State implementation</td>
+                        </tr>
+                        <tr>
+                            <td>Green Building Mandate</td>
+                            <td>State-specific</td>
+                            <td>NRDC, WRI</td>
+                            <td>State-by-state</td>
+                        </tr>
+                        <tr>
+                            <td>Transport Demand Policy</td>
+                            <td>City-specific</td>
+                            <td>ITDP</td>
+                            <td>BRT/TOD evidence</td>
+                        </tr>
+                        <tr>
+                            <td>Architecture Education (CoA)</td>
+                            <td>Q4 2027+</td>
+                            <td>Ethos</td>
+                            <td>Evidence + advocacy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Risk Monitoring -->
+        <section class="section">
+            <h2 class="section-title">Risk Monitoring & Escalation</h2>
+            <div class="risk-monitoring-grid">
+                <div class="risk-monitor-card">
+                    <h4>Early Warning Indicators</h4>
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>Risk</th>
+                                <th>Indicator</th>
+                                <th>Threshold</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Partner underperformance</td>
+                                <td>Quarterly milestone miss</td>
+                                <td>2 consecutive</td>
+                            </tr>
+                            <tr>
+                                <td>Budget under-utilization</td>
+                                <td>&lt;70% quarterly</td>
+                                <td>2 consecutive</td>
+                            </tr>
+                            <tr>
+                                <td>Integration failure</td>
+                                <td>No cross-partner deliverable</td>
+                                <td>6 months</td>
+                            </tr>
+                            <tr>
+                                <td>Policy window miss</td>
+                                <td>Deadline approaching</td>
+                                <td>60 days out</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="risk-monitor-card">
+                    <h4>Escalation Protocol</h4>
+                    <div class="escalation-levels">
+                        <div class="escalation-level">
+                            <span class="level-badge level-1">Level 1</span>
+                            <p><strong>Partner:</strong> Single metric off track → Partner support call (Weekly)</p>
+                        </div>
+                        <div class="escalation-level">
+                            <span class="level-badge level-2">Level 2</span>
+                            <p><strong>Cluster:</strong> Integration issue → Cluster lead intervention (Bi-weekly)</p>
+                        </div>
+                        <div class="escalation-level">
+                            <span class="level-badge level-3">Level 3</span>
+                            <p><strong>Portfolio:</strong> Multiple partner issues → PMU review meeting (Monthly)</p>
+                        </div>
+                        <div class="escalation-level">
+                            <span class="level-badge level-4">Level 4</span>
+                            <p><strong>Strategic:</strong> Systemic problem → Funder leadership decision (As needed)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-admin">
+        <div class="footer-content">
+            <p>Thesis Dashboard - Admin Dashboard</p>
+            <p class="footer-note">Classification: CONFIDENTIAL</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

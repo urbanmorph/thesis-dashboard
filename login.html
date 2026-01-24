@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Climate Action Tracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .login-container {
+            min-height: calc(100vh - 180px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-2xl);
+        }
+        .login-card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-xl);
+            padding: var(--space-2xl);
+            width: 100%;
+            max-width: 420px;
+            border: 1px solid var(--gray-200);
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        .login-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            display: block;
+        }
+        .login-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+        }
+        .login-header p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: var(--space-sm);
+        }
+        .form-group input {
+            width: 100%;
+            padding: var(--space-md);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            transition: all var(--transition);
+            font-family: inherit;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-glow);
+        }
+        .btn-login {
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: inherit;
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg), 0 0 20px var(--primary-glow);
+        }
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            margin-bottom: var(--space-lg);
+            display: none;
+        }
+        .error-message.show {
+            display: block;
+        }
+        .login-footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--gray-200);
+        }
+        .login-footer p {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-bottom: var(--space-sm);
+        }
+        .login-footer a {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Climate Action Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="sectors.html" class="nav-link">Sectors</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="login.html" class="nav-link nav-admin active">Admin</a>
+        </div>
+    </nav>
+
+    <main class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <span class="login-icon">🔐</span>
+                <h1>Admin Access</h1>
+                <p>Enter credentials to access partner and funding details</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <div id="loginError" class="error-message"></div>
+                <button type="submit" class="btn-login">Sign In</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Authorized personnel only</p>
+                <a href="index.html">← Back to Dashboard</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Admin access is logged and monitored</p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
