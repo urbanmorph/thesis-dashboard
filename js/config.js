@@ -10,10 +10,9 @@
 
 const CONFIG = {
     // Supabase Configuration
-    // Get these from your Supabase project settings
     supabase: {
-        url: 'https://your-project.supabase.co',
-        anonKey: 'your-anon-key-here',
+        url: 'https://qvgrydejqvdkwedyixne.supabase.co',
+        anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF2Z3J5ZGVqcXZka3dlZHlpeG5lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgyMzExMTgsImV4cCI6MjA4MzgwNzExOH0.nb5pmuLVrhr3vHFv1F5Jvpd8bQQSRB7bnhZReSYGMy8',
         bucket: 'dashboard-data'
     },
 
