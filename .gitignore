@@ -36,3 +36,6 @@ temp/
 
 # Local data (use Supabase in production)
 data/local/
+
+# Supporting documents (internal planning)
+supporting-docs/
