@@ -1,0 +1,553 @@
+{
+  "lastUpdated": "2026-01-24T00:00:00.000Z",
+  "researchPeriod": "2024-2026",
+  "sectors": {
+    "energy": {
+      "name": "Energy Sector",
+      "targets": {
+        "energySavings": "10 TWh annual",
+        "buildingsOptimized": "500,000",
+        "recyclingCapacity": "40,000 tonnes/year"
+      },
+      "challenges": {
+        "policy": [
+          {
+            "challenge": "Subsidized electricity prices undermine efficiency investments",
+            "source": "Bureau of Energy Efficiency",
+            "statistic": "Most distribution utilities continue to subsidize retail electricity prices, making efficiency investments less attractive"
+          },
+          {
+            "challenge": "Energy efficiency programs remain largely voluntary",
+            "source": "BEE India",
+            "statistic": "Limited mandatory compliance requirements for building energy codes"
+          },
+          {
+            "challenge": "CCTS compliance mechanism transition challenges",
+            "source": "Ministry of Power",
+            "statistic": "Seven major sectors transitioned from PAT to CCTS in December 2025, requiring significant adjustment"
+          }
+        ],
+        "financial": [
+          {
+            "challenge": "Economic benefits of EE investments cannot be monetized upfront",
+            "source": "BEE/UNFCCC",
+            "statistic": "High initial costs and uncertain payback periods deter investment"
+          },
+          {
+            "challenge": "Limited State Energy Conservation Fund utilization",
+            "source": "BEE",
+            "statistic": "SECF is underutilized as a financing instrument for state-level projects"
+          },
+          {
+            "challenge": "Energy efficiency budget allocations reduced",
+            "source": "India Cooling Action Plan Analysis",
+            "statistic": "Over 50% reduction in energy efficiency allocations from $16M to $8M in Interim Budget 2024"
+          }
+        ],
+        "technical": [
+          {
+            "challenge": "Testing standards undervalue AC efficiency",
+            "source": "CLASP/BEE",
+            "statistic": "Current standard ignores humidity impact, causing up to 25% underestimation of energy use"
+          },
+          {
+            "challenge": "Renewable energy scaling constraints beyond 1,500 GW",
+            "source": "CEEW",
+            "statistic": "Only 29% of wind and 27% of solar potential in areas with population density <250/sq.km"
+          },
+          {
+            "challenge": "Land conflicts restrict deployment",
+            "source": "CEEW",
+            "statistic": "Only 35% of wind and 41% of solar potential in conflict-free areas"
+          }
+        ],
+        "behavioral": [
+          {
+            "challenge": "Limited consumer awareness of energy-saving technologies",
+            "source": "BEE",
+            "statistic": "Poor market penetration due to awareness gaps"
+          },
+          {
+            "challenge": "Market transformation barriers",
+            "source": "BEE",
+            "statistic": "High costs, limited awareness, and lack of supply chain readiness persist"
+          }
+        ],
+        "institutional": [
+          {
+            "challenge": "Limited technical and financial capacity at state level",
+            "source": "BEE",
+            "statistic": "Capacity constraints limit scale-up of efficient technologies"
+          },
+          {
+            "challenge": "Infrastructure paucity and implementation gaps",
+            "source": "IEA India Report",
+            "statistic": "Multiple bottlenecks in active policy implementation"
+          },
+          {
+            "challenge": "Labor shortages in energy efficiency sector",
+            "source": "IEA Energy Efficiency 2025",
+            "statistic": "18 million people work in EE globally, but persistent shortages in high-growth regions like India"
+          }
+        ]
+      },
+      "recommendations": [
+        "Implement firm mandatory building energy codes nationwide",
+        "Scale up blended financing mechanisms for efficiency investments",
+        "Update testing standards to reflect real-world conditions including humidity",
+        "Strengthen State Energy Conservation Funds with better utilization frameworks",
+        "Expand energy auditing and management institutional support"
+      ],
+      "sources": [
+        "Bureau of Energy Efficiency (beeindia.gov.in)",
+        "IEA Energy Efficiency 2025 Report",
+        "CEEW Renewable Energy Studies",
+        "MNRE Progress Reports 2024-25"
+      ]
+    },
+    "transport": {
+      "name": "Transport Sector",
+      "targets": {
+        "passengerKmShifted": "20 billion passenger-km to public transit",
+        "brtTodPlans": "5 city BRT/TOD plans",
+        "cyclingInfrastructure": "500 km"
+      },
+      "challenges": {
+        "policy": [
+          {
+            "challenge": "TOD implementation lags despite National Policy since 2017",
+            "source": "ITDP/MoHUA",
+            "statistic": "Six years after policy, take-off remains slow despite rapid metro expansion"
+          },
+          {
+            "challenge": "Motor Vehicles Act restrictions on private operators",
+            "source": "MoRTH",
+            "statistic": "Laws impede competition and restrict high-quality bus service availability"
+          },
+          {
+            "challenge": "Gap between state policy and local bylaws",
+            "source": "Research Studies",
+            "statistic": "Deficiencies in land use regulations and coordination between governance levels"
+          }
+        ],
+        "financial": [
+          {
+            "challenge": "Electric buses 2-3x more expensive than diesel",
+            "source": "NITI Aayog",
+            "statistic": "High capital costs and financing gaps for EV fleet operators"
+          },
+          {
+            "challenge": "ISTS charge waivers expiring",
+            "source": "IEEFA",
+            "statistic": "100% waivers only valid until June 2025, then 25% annual reduction"
+          },
+          {
+            "challenge": "Private sector financing barriers for EV charging",
+            "source": "NITI Aayog",
+            "statistic": "EV-to-public-charger ratio at 235:1 vs 20:1 in mature markets"
+          }
+        ],
+        "technical": [
+          {
+            "challenge": "Poor multimodal integration",
+            "source": "ITDP India",
+            "statistic": "Journey must be convenient and connected; fragmented systems deter modal shift"
+          },
+          {
+            "challenge": "Limited last-mile connectivity to metros",
+            "source": "WRI India",
+            "statistic": "Only 28% of jobs in Bengaluru within 500m of metro stations"
+          },
+          {
+            "challenge": "Inadequate charging infrastructure",
+            "source": "NITI Aayog",
+            "statistic": "29,277 public charging stations as of August 2025, targeting 88,500 under PM E-DRIVE"
+          }
+        ],
+        "behavioral": [
+          {
+            "challenge": "Steady decline in public transport ridership",
+            "source": "ITDP India",
+            "statistic": "Growing incomes drive shift to personal vehicles; 138% PMV growth vs 26% urban population growth"
+          },
+          {
+            "challenge": "Paradigm shift required from car-oriented planning",
+            "source": "Research Studies",
+            "statistic": "Massive training and sensitization needed for planners and public"
+          }
+        ],
+        "institutional": [
+          {
+            "challenge": "Fragmented governance across multiple agencies",
+            "source": "ITDP India",
+            "statistic": "Delhi alone has 10+ agencies handling transport, causing coordination inefficiencies"
+          },
+          {
+            "challenge": "Only 63 of 458 cities with 1 lakh+ population have formal bus networks",
+            "source": "ITDP India",
+            "statistic": "Majority of smaller cities lack public bus systems"
+          },
+          {
+            "challenge": "State transport undertakings need modernization",
+            "source": "MoRTH Workshop 2024",
+            "statistic": "Need for intelligent transport systems, smart card payments, and AVLS integration"
+          }
+        ]
+      },
+      "recommendations": [
+        "Enable seamless physical, information, and fare integration across modes",
+        "Allocate budget for TOD implementation in metro cities",
+        "Revisit Motor Vehicles Act to enable market competition",
+        "Scale up PM E-DRIVE charging infrastructure to 88,500 stations",
+        "Develop walking and cycling infrastructure within 1km of transit stations"
+      ],
+      "sources": [
+        "ITDP India Reports",
+        "WRI India Urban Mobility Studies",
+        "MoRTH Annual Report 2024-25",
+        "NITI Aayog EV Reports 2024-25"
+      ]
+    },
+    "buildings": {
+      "name": "Buildings Sector",
+      "targets": {
+        "buildingsAssessed": "500,000",
+        "coolRoofsInstalled": "200,000",
+        "ecbcEnforcementStates": "5"
+      },
+      "challenges": {
+        "policy": [
+          {
+            "challenge": "ECBC implementation modest despite notification over decade ago",
+            "source": "NRDC India",
+            "statistic": "23 states notified ECBC but implementation and compliance remain weak"
+          },
+          {
+            "challenge": "Building codes not in local bylaws in accessible language",
+            "source": "ICAP Implementation",
+            "statistic": "Codes missing introduction in implementable format at local level"
+          },
+          {
+            "challenge": "No clear definition of thermal comfort in ICAP",
+            "source": "Carbon Copy",
+            "statistic": "Plan lacks benchmarks for energy efficiency measures for active and passive cooling"
+          }
+        ],
+        "financial": [
+          {
+            "challenge": "High upfront costs for green building materials",
+            "source": "IGBC",
+            "statistic": "Operational costs decrease but initial investment remains barrier"
+          },
+          {
+            "challenge": "IGBC certification expensive for smaller projects",
+            "source": "IGBC",
+            "statistic": "Costs for technologies, materials, and consultants deter affordable housing projects"
+          },
+          {
+            "challenge": "Cool roof ecosystem support gaps",
+            "source": "NRDC",
+            "statistic": "Need for material supplier compendium, certified labor, and cost documentation"
+          }
+        ],
+        "technical": [
+          {
+            "challenge": "Cooling demand growth outpacing efficiency gains",
+            "source": "IEA Energy Efficiency 2025",
+            "statistic": "Cooling alone could add 500 GW to peak demand by 2035 in India"
+          },
+          {
+            "challenge": "Limited access to innovative green technologies",
+            "source": "IGBC/AEEE",
+            "statistic": "Technical expertise lacking during design and construction phases"
+          },
+          {
+            "challenge": "Informal sector cooling solutions inadequate",
+            "source": "ICAP Implementation",
+            "statistic": "High density and small dwellings make interventions impossible at scale"
+          }
+        ],
+        "behavioral": [
+          {
+            "challenge": "Stakeholder belief that green buildings cost more",
+            "source": "AEEE/IGBC",
+            "statistic": "Perception adversely affects greening of building sector"
+          },
+          {
+            "challenge": "Consumer awareness of ECBC and green building benefits low",
+            "source": "NRDC",
+            "statistic": "Limited market transformation due to awareness gaps"
+          }
+        ],
+        "institutional": [
+          {
+            "challenge": "Third Party Assessor pool insufficient",
+            "source": "NRDC/GHMC Telangana",
+            "statistic": "Need for empaneling more TPAs for ECBC compliance"
+          },
+          {
+            "challenge": "Buildings account for 30% of global energy demand",
+            "source": "IEA 2025",
+            "statistic": "50% of countries lack efficiency standards for new buildings"
+          },
+          {
+            "challenge": "Cooling-related emissions continue rising",
+            "source": "ICAP Analysis",
+            "statistic": "156 Mt CO2e in 2024, projected to reach 329 Mt CO2e by 2035 without intervention"
+          }
+        ]
+      },
+      "recommendations": [
+        "Strengthen ECBC compliance frameworks with Third Party Assessor networks",
+        "Develop cool roof material supplier compendium and training programs",
+        "Shift building codes to passive design principles",
+        "Include ECBC in local building bylaws in accessible language",
+        "Mainstream district cooling and low-carbon materials in development policies"
+      ],
+      "sources": [
+        "NRDC India Cool Roofs Reports",
+        "Bureau of Energy Efficiency",
+        "IGBC Certification Studies",
+        "AEEE State Energy Efficiency Index 2024",
+        "India Cooling Action Plan Analysis"
+      ]
+    },
+    "airQuality": {
+      "name": "Air Quality Sector",
+      "targets": {
+        "additionalSensors": "500",
+        "ncapCitiesSourceApportionment": "15",
+        "openAqPlatform": "Open AQ India platform"
+      },
+      "challenges": {
+        "policy": [
+          {
+            "challenge": "NCAP focuses on PM10 instead of more harmful PM2.5",
+            "source": "CREA/CSE",
+            "statistic": "Lack of health-driven priorities delays tackling PM2.5 pollution"
+          },
+          {
+            "challenge": "NCAP target of 1,500 manual monitoring stations unmet",
+            "source": "CREA Report 2025",
+            "statistic": "Shortfall of 534 stations as of 2024"
+          },
+          {
+            "challenge": "Differing metrics between CPCB and Star Rating System",
+            "source": "CREA",
+            "statistic": "Cities performing well in one metric perform poorly in another, making comparison difficult"
+          }
+        ],
+        "financial": [
+          {
+            "challenge": "Significant underutilization of NCAP funds",
+            "source": "CSE Analysis",
+            "statistic": "Only 51% of Rs 1,615 crore released until May 2024 has been utilized"
+          },
+          {
+            "challenge": "82 non-attainment cities utilized only 40% of allocated funds",
+            "source": "CREA",
+            "statistic": "498 crore utilized out of 1,253 crore allocated until November 2023"
+          }
+        ],
+        "technical": [
+          {
+            "challenge": "28 of 130 cities lack continuous monitoring stations",
+            "source": "CREA 2025",
+            "statistic": "Significant gaps in real-time air quality monitoring"
+          },
+          {
+            "challenge": "Data quality concerns with CAAQMS stations",
+            "source": "CREA",
+            "statistic": "Poor maintenance and non-compliance with CPCB siting guidelines"
+          },
+          {
+            "challenge": "Source apportionment studies incomplete",
+            "source": "CEEW/CREA",
+            "statistic": "Only 50 of 130 NCAP cities completed studies, PRANA portal shows only 40"
+          },
+          {
+            "challenge": "Air forecasting systems limited to Delhi",
+            "source": "CREA",
+            "statistic": "Despite NCAP goal for forecasting in all non-attainment cities by 2022"
+          },
+          {
+            "challenge": "Industrial stack monitoring data gaps",
+            "source": "CEEW",
+            "statistic": "81% of monitored stacks have >1,000 hours of missing data annually"
+          }
+        ],
+        "behavioral": [
+          {
+            "challenge": "Limited citizen access to air quality data",
+            "source": "OpenAQ/CEEW",
+            "statistic": "CPCB website unresponsive due to high traffic, hampering data access"
+          },
+          {
+            "challenge": "Only 12% of 4,041 census cities have any air monitoring",
+            "source": "CSE Analysis",
+            "statistic": "47% of population outside air quality monitoring grid coverage"
+          }
+        ],
+        "institutional": [
+          {
+            "challenge": "Only central PRANA portal functional despite regional goals",
+            "source": "CREA",
+            "statistic": "Air information centres at regional levels not established as planned by 2020"
+          },
+          {
+            "challenge": "Informal sector lacks legal heat protections",
+            "source": "NRDC",
+            "statistic": "70% of non-agricultural workers in informal sector without policy enforcement"
+          },
+          {
+            "challenge": "Lack of standardized protocols across monitoring networks",
+            "source": "OpenAQ Research",
+            "statistic": "Interoperability issues limit integration into open data platforms"
+          }
+        ]
+      },
+      "recommendations": [
+        "Shift NCAP 2.0 primary focus to PM2.5 with health-driven priorities",
+        "Complete CAAQMS installation in remaining 28 cities without continuous monitoring",
+        "Accelerate source apportionment studies in remaining NCAP cities",
+        "Improve fund utilization with streamlined project approval processes",
+        "Establish regional air information centres as originally planned"
+      ],
+      "sources": [
+        "CPCB PRANA Portal",
+        "CEEW Air Pollution Studies",
+        "CSE Winter Air Pollution Analysis 2024-25",
+        "UrbanEmissions.Info",
+        "OpenAQ Platform Data",
+        "CREA NCAP Progress Reports 2024-25"
+      ]
+    },
+    "neighbourhoods": {
+      "name": "Neighbourhoods Sector",
+      "targets": {
+        "citiesWithWardData": "8",
+        "householdsEngaged": "1,000,000",
+        "communityChampions": "500"
+      },
+      "challenges": {
+        "policy": [
+          {
+            "challenge": "Census data outdated - most recent complete data from 2011",
+            "source": "Census of India",
+            "statistic": "Census 2027 will be next complete enumeration; current planning uses projections"
+          },
+          {
+            "challenge": "Greater Bengaluru Governance Act risks re-centralizing authority",
+            "source": "ORF/Citizen Matters",
+            "statistic": "Local institutions relegated to advisory roles, undermining grassroots democracy"
+          },
+          {
+            "challenge": "Mumbai BMC elections long overdue",
+            "source": "Free Press Journal",
+            "statistic": "Civic elections delayed since 2020, governance accountability gap"
+          }
+        ],
+        "financial": [
+          {
+            "challenge": "Municipalities dependent on state funding",
+            "source": "Praja Foundation",
+            "statistic": "Cities cannot introduce or revise taxes independently, limiting long-term planning"
+          },
+          {
+            "challenge": "BEST buses face financial crisis",
+            "source": "Citizen Analysis Mumbai",
+            "statistic": "Cumulative debts of nearly Rs 9,300 crore"
+          }
+        ],
+        "technical": [
+          {
+            "challenge": "Ward delimitation exercise pending for GBA",
+            "source": "Bengaluru News",
+            "statistic": "City must be divided afresh with 150 wards per corporation by November 2025"
+          },
+          {
+            "challenge": "Complex urban system with varying town growth patterns",
+            "source": "Census Studies",
+            "statistic": "Increasing share of stabilizing towns, decreasing growing towns, emergence of declining towns"
+          },
+          {
+            "challenge": "Service continuity during governance transitions",
+            "source": "Greater Bengaluru Authority",
+            "statistic": "Staff and resource allocation between five new corporations is critical hurdle"
+          }
+        ],
+        "behavioral": [
+          {
+            "challenge": "Limited citizen participation mechanisms",
+            "source": "Praja Foundation/BBMP",
+            "statistic": "Few wards conduct regular Ward Committee meetings"
+          },
+          {
+            "challenge": "Self-governance challenges in slum relocation",
+            "source": "Research Studies Mumbai",
+            "statistic": "Relocatees face new civic responsibilities with differential access to power"
+          }
+        ],
+        "institutional": [
+          {
+            "challenge": "Ward Committee functioning irregular",
+            "source": "B.PAC Bengaluru",
+            "statistic": "Pressure needed to ensure meetings are held regularly"
+          },
+          {
+            "challenge": "More than 70% of Mumbai land already built-up",
+            "source": "Knight Frank/MCGM",
+            "statistic": "City functionally landlocked, outward expansion not viable"
+          },
+          {
+            "challenge": "Multiple ward-level problems with inadequate governance",
+            "source": "Citizen Matters",
+            "statistic": "Felled trees, broken utilities, garbage, potholes at lowest tier of governance"
+          },
+          {
+            "challenge": "Youth engagement mechanisms limited",
+            "source": "Praja Foundation",
+            "statistic": "Only 10 fellows selected for National Urban Youth Fellowship 2025"
+          }
+        ]
+      },
+      "recommendations": [
+        "Devolve financial powers to city governments for independent tax administration",
+        "Mandate quarterly ward reports and service-level benchmark disclosures",
+        "Establish open data portals for transparent civic data access",
+        "Strengthen capacity building for municipal staff and elected representatives",
+        "Ensure citizen participation through regular Ward Committee meetings",
+        "Integrate climate and gender audits into all major urban projects"
+      ],
+      "sources": [
+        "Census of India",
+        "BBMP/Greater Bengaluru Authority Documentation",
+        "MCGM Climate Budget Reports 2024-25",
+        "Praja Foundation Urban Governance Index",
+        "Citizen Matters Analysis"
+      ]
+    }
+  },
+  "crossCuttingChallenges": [
+    {
+      "theme": "Data Gaps and Quality",
+      "description": "Outdated census data (2011), inconsistent monitoring protocols, poor data quality in air monitoring, and missing industrial emissions data hamper evidence-based planning across all sectors"
+    },
+    {
+      "theme": "Institutional Fragmentation",
+      "description": "Multiple agencies with overlapping mandates in transport, buildings, and urban governance create coordination challenges and implementation delays"
+    },
+    {
+      "theme": "Financial Utilization",
+      "description": "Consistent underutilization of allocated funds across NCAP, energy efficiency, and urban development programs despite availability of resources"
+    },
+    {
+      "theme": "Capacity Constraints",
+      "description": "Shortage of trained professionals for energy auditing, Third Party Assessment, TOD planning, and municipal governance"
+    },
+    {
+      "theme": "Behavioral Change",
+      "description": "Consumer awareness gaps and entrenched preferences for personal vehicles and conventional building practices limit adoption of sustainable alternatives"
+    }
+  ]
+}

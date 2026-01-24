@@ -24,11 +24,11 @@
     </nav>
 
     <main class="dashboard-main">
-        <!-- Hero -->
-        <section class="hero" style="padding: var(--space-2xl); margin-bottom: var(--space-xl);">
+        <!-- Dynamic Sector Hero -->
+        <section class="hero sector-hero-dynamic" id="sector-hero-container" style="padding: var(--space-2xl); margin-bottom: var(--space-xl);">
             <div class="hero-content">
-                <h1 style="font-size: 2rem;">Sector Strategies</h1>
-                <p class="hero-subtitle">Baseline → Shift → Targets → Markers → Strategies</p>
+                <h1 id="sector-hero-title" style="font-size: 2rem;">⚡ Energy Sector</h1>
+                <p id="sector-hero-subtitle" class="hero-subtitle">Demand-side efficiency and circular economy for sustainable energy transition</p>
             </div>
         </section>
 
@@ -70,11 +70,6 @@
 
         <!-- ENERGY SECTOR -->
         <div class="sector-content-panel active" id="energy">
-            <div class="sector-hero">
-                <h2>Energy Sector</h2>
-                <p>Demand-side efficiency and circular economy for sustainable energy transition</p>
-            </div>
-
             <!-- Baseline -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
                 <h3>Baseline (Current Status)</h3>
@@ -167,6 +162,37 @@
                 </div>
             </div>
 
+            <!-- Challenges -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--danger);">
+                <h3>Challenges</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Policy & Regulatory</h4>
+                        <ul>
+                            <li>Subsidized electricity undermines efficiency investments <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                            <li>EE programs remain largely voluntary <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                            <li>CCTS transition challenges for 7 major sectors <a href="resources.html#references" style="font-size: 0.75rem;">[MoP]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Financial</h4>
+                        <ul>
+                            <li>EE benefits cannot be monetized upfront <a href="resources.html#references" style="font-size: 0.75rem;">[BEE/UNFCCC]</a></li>
+                            <li>50%+ budget cuts to EE allocations ($16M→$8M) <a href="resources.html#references" style="font-size: 0.75rem;">[ICAP]</a></li>
+                            <li>State Energy Conservation Funds underutilized <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Technical & Capacity</h4>
+                        <ul>
+                            <li>AC testing standards undervalue efficiency by 25% <a href="resources.html#references" style="font-size: 0.75rem;">[CLASP/BEE]</a></li>
+                            <li>Limited state-level technical capacity <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                            <li>18M EE workers globally but shortages in India <a href="resources.html#references" style="font-size: 0.75rem;">[IEA 2025]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="sector-grid">
                 <div class="info-panel">
                     <h3>Markers</h3>
@@ -192,13 +218,13 @@
                 <div class="info-panel">
                     <h3>Strategies</h3>
                     <div class="info-block">
-                        <h4>Removing Barriers</h4>
+                        <h4>Addressing Challenges</h4>
                         <ul>
-                            <li>Research: Data gaps on efficiency potential</li>
-                            <li>Policy: EPR framework development</li>
-                            <li>Finance: Blended finance for recycling infra</li>
-                            <li>Capacity: Training for ECBC enforcement</li>
-                            <li>Coalition: Industry-government partnerships</li>
+                            <li><strong>Policy:</strong> Implement mandatory building energy codes <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                            <li><strong>Finance:</strong> Scale blended financing for EE investments <a href="resources.html#references" style="font-size: 0.75rem;">[IEA]</a></li>
+                            <li><strong>Technical:</strong> Update AC testing for real-world conditions <a href="resources.html#references" style="font-size: 0.75rem;">[CLASP]</a></li>
+                            <li><strong>Capacity:</strong> Strengthen SECF utilization frameworks <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                            <li><strong>Institutional:</strong> Expand energy auditing support <a href="resources.html#references" style="font-size: 0.75rem;">[IEA 2025]</a></li>
                         </ul>
                     </div>
                 </div>
@@ -240,11 +266,6 @@
 
         <!-- TRANSPORT SECTOR -->
         <div class="sector-content-panel" id="transport">
-            <div class="sector-hero">
-                <h2>Transport Sector</h2>
-                <p>Sustainable mobility, modal shift, and public transit systems</p>
-            </div>
-
             <!-- Baseline -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
                 <h3>Baseline (Current Status)</h3>
@@ -306,6 +327,37 @@
                 </div>
             </div>
 
+            <!-- Challenges -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--danger);">
+                <h3>Challenges</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Policy & Regulatory</h4>
+                        <ul>
+                            <li>TOD implementation lags 6 years after policy <a href="resources.html#references" style="font-size: 0.75rem;">[ITDP/MoHUA]</a></li>
+                            <li>Motor Vehicles Act restricts private operators <a href="resources.html#references" style="font-size: 0.75rem;">[MoRTH]</a></li>
+                            <li>Gap between state policy and local bylaws <a href="resources.html#references" style="font-size: 0.75rem;">[WRI]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Financial & Infrastructure</h4>
+                        <ul>
+                            <li>E-buses 2-3x more expensive than diesel <a href="resources.html#references" style="font-size: 0.75rem;">[NITI Aayog]</a></li>
+                            <li>EV charging ratio 235:1 vs 20:1 global standard <a href="resources.html#references" style="font-size: 0.75rem;">[NITI Aayog]</a></li>
+                            <li>Only 28% of Bengaluru jobs within 500m of metro <a href="resources.html#references" style="font-size: 0.75rem;">[WRI India]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Institutional & Behavioral</h4>
+                        <ul>
+                            <li>Only 63 of 458 cities (1L+ pop) have bus networks <a href="resources.html#references" style="font-size: 0.75rem;">[ITDP]</a></li>
+                            <li>138% PMV growth vs 26% urban population growth <a href="resources.html#references" style="font-size: 0.75rem;">[ITDP]</a></li>
+                            <li>Delhi has 10+ agencies handling transport <a href="resources.html#references" style="font-size: 0.75rem;">[ITDP]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="sector-grid">
                 <div class="info-panel">
                     <h3>Markers</h3>
@@ -331,13 +383,13 @@
                 <div class="info-panel">
                     <h3>Strategies</h3>
                     <div class="info-block">
-                        <h4>Removing Barriers</h4>
+                        <h4>Addressing Challenges</h4>
                         <ul>
-                            <li>Research: Modal shift impact studies</li>
-                            <li>Policy: TOD zoning and parking reforms</li>
-                            <li>Finance: Viability gap funding for BRT</li>
-                            <li>Capacity: Urban planners trained in NMT</li>
-                            <li>Coalition: Transit agency coordination</li>
+                            <li><strong>Integration:</strong> Seamless physical, info & fare integration <a href="resources.html#references" style="font-size: 0.75rem;">[ITDP]</a></li>
+                            <li><strong>Policy:</strong> Revisit MVA to enable competition <a href="resources.html#references" style="font-size: 0.75rem;">[MoRTH]</a></li>
+                            <li><strong>Finance:</strong> Allocate TOD implementation budgets <a href="resources.html#references" style="font-size: 0.75rem;">[MoHUA]</a></li>
+                            <li><strong>Infra:</strong> Scale PM E-DRIVE to 88,500 chargers <a href="resources.html#references" style="font-size: 0.75rem;">[NITI Aayog]</a></li>
+                            <li><strong>NMT:</strong> Walking/cycling infra within 1km of transit <a href="resources.html#references" style="font-size: 0.75rem;">[WRI]</a></li>
                         </ul>
                     </div>
                 </div>
@@ -370,11 +422,6 @@
 
         <!-- BUILDINGS SECTOR -->
         <div class="sector-content-panel" id="buildings">
-            <div class="sector-hero">
-                <h2>Buildings Sector</h2>
-                <p>High-performance buildings, embodied carbon reduction, and net-zero construction</p>
-            </div>
-
             <!-- Baseline -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
                 <h3>Baseline (Current Status)</h3>
@@ -467,6 +514,37 @@
                 </div>
             </div>
 
+            <!-- Challenges -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--danger);">
+                <h3>Challenges</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Policy & Regulatory</h4>
+                        <ul>
+                            <li>23 states notified ECBC but weak implementation <a href="resources.html#references" style="font-size: 0.75rem;">[NRDC]</a></li>
+                            <li>Building codes not in local bylaws <a href="resources.html#references" style="font-size: 0.75rem;">[ICAP]</a></li>
+                            <li>No clear thermal comfort definition in ICAP <a href="resources.html#references" style="font-size: 0.75rem;">[Carbon Copy]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Financial & Technical</h4>
+                        <ul>
+                            <li>High upfront costs for green materials <a href="resources.html#references" style="font-size: 0.75rem;">[IGBC]</a></li>
+                            <li>Cooling could add 500 GW peak by 2035 <a href="resources.html#references" style="font-size: 0.75rem;">[IEA 2025]</a></li>
+                            <li>Cool roof ecosystem gaps (suppliers, labor) <a href="resources.html#references" style="font-size: 0.75rem;">[NRDC]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Institutional & Behavioral</h4>
+                        <ul>
+                            <li>Third Party Assessor pool insufficient <a href="resources.html#references" style="font-size: 0.75rem;">[NRDC/GHMC]</a></li>
+                            <li>Belief that green buildings cost more <a href="resources.html#references" style="font-size: 0.75rem;">[AEEE/IGBC]</a></li>
+                            <li>Cooling emissions: 156→329 Mt CO2e by 2035 <a href="resources.html#references" style="font-size: 0.75rem;">[ICAP]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="sector-grid">
                 <div class="info-panel">
                     <h3>Markers</h3>
@@ -492,13 +570,13 @@
                 <div class="info-panel">
                     <h3>Strategies</h3>
                     <div class="info-block">
-                        <h4>Removing Barriers</h4>
+                        <h4>Addressing Challenges</h4>
                         <ul>
-                            <li>Research: Embodied carbon benchmarks</li>
-                            <li>Policy: ECBC enforcement mechanisms</li>
-                            <li>Finance: Green building incentives</li>
-                            <li>Capacity: 12,000+ professionals via ASSURE</li>
-                            <li>Coalition: CREDAI-IGBC partnership</li>
+                            <li><strong>Compliance:</strong> Strengthen TPA networks for ECBC <a href="resources.html#references" style="font-size: 0.75rem;">[NRDC]</a></li>
+                            <li><strong>Ecosystem:</strong> Cool roof supplier compendium & training <a href="resources.html#references" style="font-size: 0.75rem;">[NRDC]</a></li>
+                            <li><strong>Design:</strong> Shift codes to passive design principles <a href="resources.html#references" style="font-size: 0.75rem;">[ICAP]</a></li>
+                            <li><strong>Local:</strong> Include ECBC in local bylaws <a href="resources.html#references" style="font-size: 0.75rem;">[BEE]</a></li>
+                            <li><strong>Cooling:</strong> Mainstream district cooling & low-carbon materials <a href="resources.html#references" style="font-size: 0.75rem;">[IEA]</a></li>
                         </ul>
                     </div>
                 </div>
@@ -540,11 +618,6 @@
 
         <!-- AIR QUALITY SECTOR -->
         <div class="sector-content-panel" id="air">
-            <div class="sector-hero">
-                <h2>Air Quality Sector</h2>
-                <p>Hyperlocal monitoring, source apportionment, and Open AQ model for India</p>
-            </div>
-
             <!-- Baseline -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
                 <h3>Baseline (Current Status)</h3>
@@ -606,6 +679,37 @@
                 </div>
             </div>
 
+            <!-- Challenges -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--danger);">
+                <h3>Challenges</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Policy & Monitoring</h4>
+                        <ul>
+                            <li>NCAP focuses on PM10 instead of PM2.5 <a href="resources.html#references" style="font-size: 0.75rem;">[CREA/CSE]</a></li>
+                            <li>28 of 130 cities lack continuous monitoring <a href="resources.html#references" style="font-size: 0.75rem;">[CREA 2025]</a></li>
+                            <li>Shortfall of 534 manual stations vs target <a href="resources.html#references" style="font-size: 0.75rem;">[CREA]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Financial & Data</h4>
+                        <ul>
+                            <li>Only 51% of NCAP funds utilized (Rs 1,615 Cr) <a href="resources.html#references" style="font-size: 0.75rem;">[CSE]</a></li>
+                            <li>82 cities utilized only 40% of allocated funds <a href="resources.html#references" style="font-size: 0.75rem;">[CREA]</a></li>
+                            <li>81% of industrial stacks missing >1000 hrs data <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Technical & Institutional</h4>
+                        <ul>
+                            <li>Only 50 of 130 cities completed source studies <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW/CREA]</a></li>
+                            <li>Air forecasting limited to Delhi only <a href="resources.html#references" style="font-size: 0.75rem;">[CREA]</a></li>
+                            <li>47% of population outside monitoring grid <a href="resources.html#references" style="font-size: 0.75rem;">[CSE]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="sector-grid">
                 <div class="info-panel">
                     <h3>Markers</h3>
@@ -631,13 +735,13 @@
                 <div class="info-panel">
                     <h3>Strategies</h3>
                     <div class="info-block">
-                        <h4>Removing Barriers</h4>
+                        <h4>Addressing Challenges</h4>
                         <ul>
-                            <li>Research: Low-cost sensor validation</li>
-                            <li>Policy: Data sharing mandates</li>
-                            <li>Tech: Unified API development</li>
-                            <li>Capacity: City officials trained in data use</li>
-                            <li>Coalition: CSTEP, WRI, Respirer network</li>
+                            <li><strong>Focus:</strong> Shift NCAP 2.0 to PM2.5 priority <a href="resources.html#references" style="font-size: 0.75rem;">[CREA]</a></li>
+                            <li><strong>Coverage:</strong> Complete CAAQMS in 28 gap cities <a href="resources.html#references" style="font-size: 0.75rem;">[CREA]</a></li>
+                            <li><strong>Studies:</strong> Accelerate source apportionment <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW]</a></li>
+                            <li><strong>Finance:</strong> Streamline fund utilization process <a href="resources.html#references" style="font-size: 0.75rem;">[CSE]</a></li>
+                            <li><strong>Regional:</strong> Establish air information centres <a href="resources.html#references" style="font-size: 0.75rem;">[CREA]</a></li>
                         </ul>
                     </div>
                 </div>
@@ -679,11 +783,6 @@
 
         <!-- NEIGHBOURHOODS SECTOR -->
         <div class="sector-content-panel" id="notf">
-            <div class="sector-hero">
-                <h2>Neighbourhoods of the Future</h2>
-                <p>Community-led action, ward-level climate data, and integrated sustainability</p>
-            </div>
-
             <!-- Baseline -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
                 <h3>Baseline (Current Status)</h3>
@@ -745,6 +844,37 @@
                 </div>
             </div>
 
+            <!-- Challenges -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--danger);">
+                <h3>Challenges</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Policy & Governance</h4>
+                        <ul>
+                            <li>Census data outdated - last complete 2011 <a href="resources.html#references" style="font-size: 0.75rem;">[Census]</a></li>
+                            <li>Greater Bengaluru Act risks re-centralizing <a href="resources.html#references" style="font-size: 0.75rem;">[ORF]</a></li>
+                            <li>Mumbai BMC elections delayed since 2020 <a href="resources.html#references" style="font-size: 0.75rem;">[FPJ]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Financial & Technical</h4>
+                        <ul>
+                            <li>Municipalities fiscally dependent on states <a href="resources.html#references" style="font-size: 0.75rem;">[Praja]</a></li>
+                            <li>BEST buses: Rs 9,300 Cr cumulative debt <a href="resources.html#references" style="font-size: 0.75rem;">[Citizen]</a></li>
+                            <li>Ward delimitation pending for Bengaluru <a href="resources.html#references" style="font-size: 0.75rem;">[GBA]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Institutional & Behavioral</h4>
+                        <ul>
+                            <li>Ward Committee meetings irregular <a href="resources.html#references" style="font-size: 0.75rem;">[B.PAC]</a></li>
+                            <li>70% of Mumbai land already built-up <a href="resources.html#references" style="font-size: 0.75rem;">[MCGM]</a></li>
+                            <li>Limited citizen participation mechanisms <a href="resources.html#references" style="font-size: 0.75rem;">[Praja]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="sector-grid">
                 <div class="info-panel">
                     <h3>Markers</h3>
@@ -770,13 +900,13 @@
                 <div class="info-panel">
                     <h3>Strategies</h3>
                     <div class="info-block">
-                        <h4>Removing Barriers</h4>
+                        <h4>Addressing Challenges</h4>
                         <ul>
-                            <li>Research: Behavioral intervention design</li>
-                            <li>Data: Ward-level climate baselines</li>
-                            <li>Tech: Multilingual platform (11 languages)</li>
-                            <li>Capacity: Community champion training</li>
-                            <li>Coalition: RWA and local govt partnerships</li>
+                            <li><strong>Finance:</strong> Devolve tax powers to cities <a href="resources.html#references" style="font-size: 0.75rem;">[Praja]</a></li>
+                            <li><strong>Transparency:</strong> Mandate quarterly ward reports <a href="resources.html#references" style="font-size: 0.75rem;">[Praja]</a></li>
+                            <li><strong>Data:</strong> Open data portals for civic access <a href="resources.html#references" style="font-size: 0.75rem;">[OpenCity]</a></li>
+                            <li><strong>Capacity:</strong> Train municipal staff & representatives <a href="resources.html#references" style="font-size: 0.75rem;">[B.PAC]</a></li>
+                            <li><strong>Participation:</strong> Regular Ward Committee meetings <a href="resources.html#references" style="font-size: 0.75rem;">[BBMP]</a></li>
                         </ul>
                     </div>
                 </div>
@@ -841,11 +971,6 @@
 
         <!-- WASTE SECTOR -->
         <div class="sector-content-panel" id="waste">
-            <div class="sector-hero">
-                <h2>Waste Management Sector</h2>
-                <p>Municipal solid waste, plastic waste reduction, and e-waste management</p>
-            </div>
-
             <div class="coming-soon">
                 <div class="coming-soon-icon">🗑️</div>
                 <h3>Coming Soon</h3>
@@ -862,11 +987,6 @@
 
         <!-- WATER SECTOR -->
         <div class="sector-content-panel" id="water">
-            <div class="sector-hero">
-                <h2>Water Sector</h2>
-                <p>Water conservation, wastewater treatment, and groundwater management</p>
-            </div>
-
             <div class="coming-soon">
                 <div class="coming-soon-icon">💧</div>
                 <h3>Coming Soon</h3>
@@ -887,6 +1007,26 @@
     </footer>
 
     <script>
+        // Sector hero content
+        const sectorHeroes = {
+            energy: { icon: '⚡', title: 'Energy Sector', subtitle: 'Demand-side efficiency and circular economy for sustainable energy transition' },
+            transport: { icon: '🚌', title: 'Transport Sector', subtitle: 'Sustainable mobility, modal shift, and public transit systems' },
+            buildings: { icon: '🏗️', title: 'Buildings Sector', subtitle: 'High-performance buildings, embodied carbon reduction, and net-zero construction' },
+            air: { icon: '🌬️', title: 'Air Quality Sector', subtitle: 'Hyperlocal monitoring, source apportionment, and Open AQ model for India' },
+            notf: { icon: '🏘️', title: 'Neighbourhoods of the Future', subtitle: 'Community-led action, ward-level climate data, and integrated sustainability' },
+            waste: { icon: '🗑️', title: 'Waste Management Sector', subtitle: 'Municipal solid waste, plastic waste reduction, and e-waste management' },
+            water: { icon: '💧', title: 'Water Sector', subtitle: 'Water conservation, wastewater treatment, and groundwater management' }
+        };
+
+        // Update hero content
+        function updateHero(sectorId) {
+            const hero = sectorHeroes[sectorId];
+            if (hero) {
+                document.getElementById('sector-hero-title').textContent = hero.icon + ' ' + hero.title;
+                document.getElementById('sector-hero-subtitle').textContent = hero.subtitle;
+            }
+        }
+
         // Tab switching functionality
         document.querySelectorAll('.sector-tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -895,6 +1035,7 @@
                 tab.classList.add('active');
                 const sectorId = tab.dataset.sector;
                 document.getElementById(sectorId).classList.add('active');
+                updateHero(sectorId);
                 history.replaceState(null, null, '#' + sectorId);
             });
         });
