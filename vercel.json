@@ -2,9 +2,8 @@
     "version": 2,
     "name": "india-climate-dashboard",
     "public": true,
-    "cleanUrls": true,
+    "cleanUrls": false,
     "trailingSlash": false,
-    "$schema": "https://openapi.vercel.sh/vercel.json",
     "headers": [
         {
             "source": "/(.*)",
