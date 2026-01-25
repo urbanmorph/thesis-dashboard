@@ -134,13 +134,14 @@ const Auth = (function () {
                 const password = document.getElementById('password').value;
                 const errorEl = document.getElementById('loginError');
                 const submitBtn = loginForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
 
                 // Show loading state
                 submitBtn.disabled = true;
-                submitBtn.querySelector('span:first-child').textContent = 'Signing in...';
+                submitBtn.textContent = 'Signing in...';
 
                 // Clear previous errors
-                errorEl.classList.add('hidden');
+                errorEl.classList.remove('show');
                 errorEl.textContent = '';
 
                 // Attempt login
@@ -150,9 +151,9 @@ const Auth = (function () {
                     window.location.href = 'admin.html';
                 } else {
                     errorEl.textContent = result.error;
-                    errorEl.classList.remove('hidden');
+                    errorEl.classList.add('show');
                     submitBtn.disabled = false;
-                    submitBtn.querySelector('span:first-child').textContent = 'Sign In';
+                    submitBtn.textContent = originalBtnText;
                 }
             });
         }
