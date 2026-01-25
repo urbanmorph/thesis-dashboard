@@ -171,10 +171,18 @@ const Auth = (function () {
 
             if (!authenticated) {
                 log('Not authenticated - redirecting to login');
-                // Use replace to avoid back button issues
-                window.location.replace('login.html');
-                // Throw to stop execution
-                throw new Error('Not authenticated');
+                // Remove loading overlay before redirecting
+                document.documentElement.classList.remove('auth-checking');
+                if (document.body) {
+                    document.body.classList.remove('auth-checking');
+                }
+
+                // Small delay to prevent redirect loop
+                setTimeout(() => {
+                    window.location.replace('login.html');
+                }, 100);
+
+                return false;
             }
 
             log('User authenticated - removing loading overlay');
@@ -185,13 +193,19 @@ const Auth = (function () {
             }
             return true;
         } catch (error) {
-            if (error.message !== 'Not authenticated') {
-                console.error('Page protection error:', error);
+            console.error('Page protection error:', error);
+            // Remove overlay on error
+            document.documentElement.classList.remove('auth-checking');
+            if (document.body) {
+                document.body.classList.remove('auth-checking');
             }
-            // Don't redirect if already redirecting
-            if (!window.location.href.includes('login.html')) {
-                window.location.replace('login.html');
-            }
+
+            setTimeout(() => {
+                if (!window.location.href.includes('login.html')) {
+                    window.location.replace('login.html');
+                }
+            }, 100);
+
             return false;
         }
     }
@@ -226,14 +240,8 @@ const Auth = (function () {
             if (loginForm) {
                 log('Login form found');
 
-                // If already authenticated, redirect to admin
-                const authenticated = await isAuthenticated();
-                if (authenticated) {
-                    log('Already authenticated - redirecting to admin');
-                    window.location.href = 'admin.html';
-                    return;
-                }
-
+                // REMOVED: Don't check auth on login page - causes redirect loop
+                // Just set up the login form handler
                 log('Setting up login form handler');
                 // Handle login form submission
                 loginForm.addEventListener('submit', async (e) => {
