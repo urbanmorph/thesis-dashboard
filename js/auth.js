@@ -6,29 +6,48 @@
 const Auth = (function () {
     let supabaseClient = null;
     let isInitialized = false;
+    const DEBUG = true; // Enable debug logging
+
+    function log(...args) {
+        if (DEBUG) console.log('[Auth]', ...args);
+    }
 
     /**
      * Initialize Supabase client for auth
      */
     async function initSupabase() {
-        if (isInitialized && supabaseClient) return supabaseClient;
-
-        // Wait for Supabase library to load if not already loaded
-        if (typeof supabase === 'undefined') {
-            await new Promise((resolve) => {
-                const script = document.createElement('script');
-                script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-                script.onload = resolve;
-                document.head.appendChild(script);
-            });
+        if (isInitialized && supabaseClient) {
+            log('Supabase already initialized');
+            return supabaseClient;
         }
 
-        supabaseClient = supabase.createClient(
-            CONFIG.supabase.url,
-            CONFIG.supabase.anonKey
-        );
-        isInitialized = true;
-        return supabaseClient;
+        try {
+            log('Initializing Supabase...');
+
+            // Wait for Supabase library to load if not already loaded
+            if (typeof supabase === 'undefined') {
+                log('Loading Supabase library...');
+                await new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+                    script.onload = resolve;
+                    script.onerror = () => reject(new Error('Failed to load Supabase library'));
+                    document.head.appendChild(script);
+                });
+            }
+
+            log('Creating Supabase client...');
+            supabaseClient = supabase.createClient(
+                CONFIG.supabase.url,
+                CONFIG.supabase.anonKey
+            );
+            isInitialized = true;
+            log('Supabase initialized successfully');
+            return supabaseClient;
+        } catch (error) {
+            console.error('Failed to initialize Supabase:', error);
+            return null;
+        }
     }
 
     /**
@@ -36,9 +55,22 @@ const Auth = (function () {
      */
     async function isAuthenticated() {
         try {
+            log('Checking authentication...');
             const client = await initSupabase();
-            const { data: { session } } = await client.auth.getSession();
-            return session !== null;
+            if (!client) {
+                log('No Supabase client - treating as not authenticated');
+                return false;
+            }
+
+            const { data: { session }, error } = await client.auth.getSession();
+            if (error) {
+                console.error('Session check error:', error);
+                return false;
+            }
+
+            const authenticated = session !== null;
+            log('Authenticated:', authenticated);
+            return authenticated;
         } catch (error) {
             console.error('Auth check error:', error);
             return false;
@@ -51,6 +83,8 @@ const Auth = (function () {
     async function getSession() {
         try {
             const client = await initSupabase();
+            if (!client) return null;
+
             const { data: { session } } = await client.auth.getSession();
             return session;
         } catch (error) {
@@ -65,6 +99,8 @@ const Auth = (function () {
     async function getUser() {
         try {
             const client = await initSupabase();
+            if (!client) return null;
+
             const { data: { user } } = await client.auth.getUser();
             return user;
         } catch (error) {
@@ -83,7 +119,12 @@ const Auth = (function () {
         }
 
         try {
+            log('Attempting login for:', email);
             const client = await initSupabase();
+            if (!client) {
+                return { success: false, error: 'Authentication system not available' };
+            }
+
             const { data, error } = await client.auth.signInWithPassword({
                 email: email,
                 password: password
@@ -94,6 +135,7 @@ const Auth = (function () {
                 return { success: false, error: error.message };
             }
 
+            log('Login successful');
             return { success: true, user: data.user };
         } catch (err) {
             console.error('Login exception:', err);
@@ -106,8 +148,11 @@ const Auth = (function () {
      */
     async function logout() {
         try {
+            log('Logging out...');
             const client = await initSupabase();
-            await client.auth.signOut();
+            if (client) {
+                await client.auth.signOut();
+            }
             window.location.href = 'login.html';
         } catch (error) {
             console.error('Logout error:', error);
@@ -118,17 +163,21 @@ const Auth = (function () {
 
     /**
      * Protect a page - redirect to login if not authenticated
-     * This function blocks and redirects immediately, preventing page flash
      */
     async function protectPage() {
         try {
+            log('Protecting page...');
             const authenticated = await isAuthenticated();
+
             if (!authenticated) {
-                // Redirect immediately without removing loading class
+                log('Not authenticated - redirecting to login');
+                // Use replace to avoid back button issues
                 window.location.replace('login.html');
-                return false;
+                // Throw to stop execution
+                throw new Error('Not authenticated');
             }
 
+            log('User authenticated - removing loading overlay');
             // Remove loading class to show content
             document.documentElement.classList.remove('auth-checking');
             if (document.body) {
@@ -136,8 +185,13 @@ const Auth = (function () {
             }
             return true;
         } catch (error) {
-            console.error('Page protection error:', error);
-            window.location.replace('login.html');
+            if (error.message !== 'Not authenticated') {
+                console.error('Page protection error:', error);
+            }
+            // Don't redirect if already redirecting
+            if (!window.location.href.includes('login.html')) {
+                window.location.replace('login.html');
+            }
             return false;
         }
     }
@@ -146,83 +200,115 @@ const Auth = (function () {
      * Initialize authentication on page load
      */
     async function init() {
-        // CRITICAL: Check admin pages FIRST before anything else
-        const isAdminPage = window.location.pathname.includes('admin');
-        if (isAdminPage) {
-            // Block immediately and check auth
-            await protectPage();
-            // If we reach here, user is authenticated
-        }
+        try {
+            log('Initializing auth system...');
+            const currentPath = window.location.pathname;
+            log('Current path:', currentPath);
 
-        await initSupabase();
+            // CRITICAL: Check admin pages FIRST before anything else
+            const isAdminPage = currentPath.includes('admin');
+            log('Is admin page:', isAdminPage);
 
-        // Check for login form
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            // If already authenticated, redirect to admin
-            const authenticated = await isAuthenticated();
-            if (authenticated) {
-                window.location.href = 'admin.html';
-                return;
+            if (isAdminPage) {
+                log('Admin page detected - checking auth immediately');
+                // Block immediately and check auth
+                await protectPage();
+                // If we reach here, user is authenticated
+                log('Auth check passed for admin page');
+                return; // Exit early for admin pages
             }
 
-            // Handle login form submission
-            loginForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
+            // Initialize Supabase for non-admin pages
+            await initSupabase();
 
-                const email = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
-                const errorEl = document.getElementById('loginError');
-                const submitBtn = loginForm.querySelector('button[type="submit"]');
-                const originalBtnText = submitBtn.textContent;
+            // Check for login form
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                log('Login form found');
 
-                // Show loading state
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Signing in...';
-
-                // Clear previous errors
-                errorEl.classList.remove('show');
-                errorEl.textContent = '';
-
-                // Attempt login
-                const result = await login(email, password);
-
-                if (result.success) {
+                // If already authenticated, redirect to admin
+                const authenticated = await isAuthenticated();
+                if (authenticated) {
+                    log('Already authenticated - redirecting to admin');
                     window.location.href = 'admin.html';
-                } else {
-                    errorEl.textContent = result.error;
-                    errorEl.classList.add('show');
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalBtnText;
+                    return;
                 }
-            });
-        }
 
-        // Check for logout button
-        const logoutBtn = document.getElementById('logoutBtn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                logout();
-            });
+                log('Setting up login form handler');
+                // Handle login form submission
+                loginForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const email = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    const errorEl = document.getElementById('loginError');
+                    const submitBtn = loginForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.textContent;
+
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Signing in...';
+
+                    // Clear previous errors
+                    errorEl.classList.remove('show');
+                    errorEl.textContent = '';
+
+                    // Attempt login
+                    const result = await login(email, password);
+
+                    if (result.success) {
+                        window.location.href = 'admin.html';
+                    } else {
+                        errorEl.textContent = result.error;
+                        errorEl.classList.add('show');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                    }
+                });
+            }
+
+            // Check for logout button
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                log('Logout button found');
+                logoutBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    logout();
+                });
+            }
+
+            log('Auth initialization complete');
+        } catch (error) {
+            console.error('Auth initialization error:', error);
         }
     }
 
-    // CRITICAL: Run auth check IMMEDIATELY, even before DOM is ready
-    // This prevents any page content from rendering before auth is verified
-    const isAdminPage = window.location.pathname.includes('admin');
+    // CRITICAL: Determine page type and initialize appropriately
+    const currentPath = window.location.pathname;
+    const isAdminPage = currentPath.includes('admin');
+
+    log('Script loaded. Path:', currentPath, 'Is admin:', isAdminPage);
+
     if (isAdminPage) {
-        // Add loading class immediately
+        // Admin page: Add loading class immediately and start auth check
+        log('Admin page - adding loading overlay immediately');
         document.documentElement.classList.add('auth-checking');
-        // Start auth check immediately
-        (async () => {
-            await init();
-        })();
+
+        // Start auth check immediately (don't wait for DOM)
+        init().catch(error => {
+            console.error('Admin page init error:', error);
+            window.location.replace('login.html');
+        });
     } else {
-        // For non-admin pages, initialize normally
+        // Non-admin page: Initialize normally after DOM ready
+        log('Non-admin page - waiting for DOM ready');
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
+            document.addEventListener('DOMContentLoaded', () => {
+                log('DOM ready - initializing auth');
+                init();
+            });
         } else {
+            log('DOM already ready - initializing auth');
             init();
         }
     }
