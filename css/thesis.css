@@ -1,8 +1,9 @@
 /* ==========================================
    Hidden Dynamics Page - Minimal Styling
+   Updated: 2026-01-25
    ========================================== */
 
-/* Hero Section - Minimal Dark Theme */
+/* Hero Section - Dark Slate Background */
 .thesis-hero {
     background: #1e293b;
     color: var(--white);
