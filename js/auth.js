@@ -7,6 +7,7 @@ const Auth = (function () {
     let supabaseClient = null;
     let isInitialized = false;
     const DEBUG = true; // Enable debug logging
+    const DISABLE_AUTH = true; // TEMPORARILY DISABLE AUTH FOR TESTING
 
     function log(...args) {
         if (DEBUG) console.log('[Auth]', ...args);
@@ -167,6 +168,17 @@ const Auth = (function () {
     async function protectPage() {
         try {
             log('Protecting page...');
+
+            // TEMPORARY: Skip auth check for testing
+            if (DISABLE_AUTH) {
+                log('AUTH DISABLED - allowing access');
+                document.documentElement.classList.remove('auth-checking');
+                if (document.body) {
+                    document.body.classList.remove('auth-checking');
+                }
+                return true;
+            }
+
             const authenticated = await isAuthenticated();
 
             if (!authenticated) {
