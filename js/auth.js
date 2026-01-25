@@ -118,20 +118,42 @@ const Auth = (function () {
 
     /**
      * Protect a page - redirect to login if not authenticated
+     * This function blocks and redirects immediately, preventing page flash
      */
     async function protectPage() {
-        const authenticated = await isAuthenticated();
-        if (!authenticated) {
-            window.location.href = 'login.html';
+        try {
+            const authenticated = await isAuthenticated();
+            if (!authenticated) {
+                // Redirect immediately without removing loading class
+                window.location.replace('login.html');
+                return false;
+            }
+
+            // Remove loading class to show content
+            document.documentElement.classList.remove('auth-checking');
+            if (document.body) {
+                document.body.classList.remove('auth-checking');
+            }
+            return true;
+        } catch (error) {
+            console.error('Page protection error:', error);
+            window.location.replace('login.html');
             return false;
         }
-        return true;
     }
 
     /**
      * Initialize authentication on page load
      */
     async function init() {
+        // CRITICAL: Check admin pages FIRST before anything else
+        const isAdminPage = window.location.pathname.includes('admin');
+        if (isAdminPage) {
+            // Block immediately and check auth
+            await protectPage();
+            // If we reach here, user is authenticated
+        }
+
         await initSupabase();
 
         // Check for login form
@@ -184,19 +206,25 @@ const Auth = (function () {
                 logout();
             });
         }
-
-        // Check if current page is admin and protect it
-        const isAdminPage = window.location.pathname.includes('admin');
-        if (isAdminPage) {
-            await protectPage();
-        }
     }
 
-    // Initialize on DOM ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
+    // CRITICAL: Run auth check IMMEDIATELY, even before DOM is ready
+    // This prevents any page content from rendering before auth is verified
+    const isAdminPage = window.location.pathname.includes('admin');
+    if (isAdminPage) {
+        // Add loading class immediately
+        document.documentElement.classList.add('auth-checking');
+        // Start auth check immediately
+        (async () => {
+            await init();
+        })();
     } else {
-        init();
+        // For non-admin pages, initialize normally
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
     }
 
     // Public API
