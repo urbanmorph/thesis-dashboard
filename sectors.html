@@ -191,6 +191,99 @@
                 </div>
             </div>
 
+            <!-- Energy Services Gap - Sankey Visualization -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid #8b5cf6; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);">
+                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="font-size: 1.25rem;">⚡</span> The Energy Services Gap
+                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">Only 15-20% of primary energy delivers useful services</span>
+                </h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">India's energy discourse focuses on supply while 80%+ of primary energy never does useful work. This is the largest hidden opportunity.</p>
+
+                <!-- Sankey-style Flow Diagram -->
+                <div style="background: var(--gray-50); border-radius: 8px; padding: var(--space-md); margin-bottom: var(--space-md); overflow-x: auto;">
+                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
+<span style="color: var(--gray-600);">PRIMARY ENERGY</span>                      <span style="color: var(--gray-600);">FINAL ENERGY</span>                        <span style="color: var(--gray-600);">USEFUL ENERGY</span>
+<span style="color: var(--gray-600);">903 Mtoe (100%)</span>                       <span style="color: var(--gray-600);">~590 Mtoe (65%)</span>                      <span style="color: var(--gray-600);">~150 Mtoe (17%)</span>
+
+<span style="font-weight: bold; color: #dc2626;">█████████████████████████████████████████████████████████████████████████████████████████████████████</span> 100%
+        │
+        ├──<span style="color: #dc2626;">█████████████████████████████████</span> 35% <span style="color: #dc2626;">← Power plant thermal losses (coal ~65% wasted as heat)</span>
+        │
+        ▼
+<span style="font-weight: bold; color: #f59e0b;">█████████████████████████████████████████████████████████████████</span> 65%
+        │
+        ├──<span style="color: #f59e0b;">███████████</span> 11% <span style="color: #f59e0b;">← T&D losses (~17% of delivered electricity)</span>
+        │
+        ▼
+<span style="font-weight: bold; color: #eab308;">██████████████████████████████████████████████████████</span> 54%
+        │
+        ├──<span style="color: #eab308;">█████████████████████████████████████</span> 37% <span style="color: #eab308;">← End-use device losses</span>
+        │   │
+        │   ├── Traditional cooking (chulha): <span style="color: #dc2626;">90% lost</span> — 700M people affected
+        │   ├── Agricultural pumps: <span style="color: #dc2626;">70% lost</span> — &lt;2% of 30M pumps &gt;40% efficient
+        │   ├── IC engine vehicles: <span style="color: #dc2626;">75-80% lost</span> — 92% of transport energy
+        │   ├── Air conditioners: <span style="color: #f59e0b;">17-28% extra</span> at real-world temps vs lab
+        │   └── Incandescent lighting: <span style="color: #dc2626;">95% lost</span> — still in rural areas
+        │
+        ▼
+<span style="font-weight: bold; color: #22c55e;">█████████████████</span> 17% <span style="font-weight: bold; color: #22c55e;">← USEFUL ENERGY (light, motion, heat, cooling)</span>
+                    </div>
+                </div>
+
+                <!-- Key Statistics Grid -->
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Power Generation</h4>
+                        <ul>
+                            <li>Coal plant efficiency: <strong>35%</strong> (design: 38%) <a href="https://energy.prayaspune.org" style="font-size: 0.7rem;" target="_blank">[Prayas]</a></li>
+                            <li>T&D losses: <strong>17%</strong> (down from 23% in 2014) <a href="https://mospi.gov.in" style="font-size: 0.7rem;" target="_blank">[MoSPI]</a></li>
+                            <li>65% of coal input becomes waste heat</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Cooking</h4>
+                        <ul>
+                            <li>Traditional chulha: <strong>8-10%</strong> efficient <a href="https://www.cwejournal.org" style="font-size: 0.7rem;" target="_blank">[CWE Journal]</a></li>
+                            <li>Improved cookstoves: 16-35% efficient</li>
+                            <li><strong>66%</strong> of households use solid fuel <a href="https://pib.gov.in" style="font-size: 0.7rem;" target="_blank">[Census 2011]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Agricultural Pumps</h4>
+                        <ul>
+                            <li>Average pump efficiency: <strong>25-30%</strong> <a href="https://beeindia.gov.in" style="font-size: 0.7rem;" target="_blank">[BEE]</a></li>
+                            <li>Star-rated pumps: 40-45% efficient</li>
+                            <li><strong>&lt;2%</strong> of pumps exceed 40% efficiency</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Transport</h4>
+                        <ul>
+                            <li>IC engine efficiency: <strong>20-25%</strong> <a href="https://ourworldindata.org" style="font-size: 0.7rem;" target="_blank">[OWID]</a></li>
+                            <li>Transport exergy efficiency: <strong>21-22%</strong> <a href="https://link.springer.com" style="font-size: 0.7rem;" target="_blank">[Springer]</a></li>
+                            <li>Road = 92% of transport energy <a href="https://ceew.in" style="font-size: 0.7rem;" target="_blank">[CEEW]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Air Conditioning</h4>
+                        <ul>
+                            <li>Lab test: 35°C; Real summer: <strong>45-50°C</strong> <a href="https://downtoearth.org.in" style="font-size: 0.7rem;" target="_blank">[CSE]</a></li>
+                            <li>At 45°C: 5-star AC worse than 1-star rated</li>
+                            <li>Real-world: <strong>17-28% more</strong> power than rated</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Lighting</h4>
+                        <ul>
+                            <li>Incandescent: <strong>~5%</strong> efficient (rest is heat)</li>
+                            <li>LED: <strong>80-90%</strong> less energy <a href="https://pib.gov.in" style="font-size: 0.7rem;" target="_blank">[PIB/UJALA]</a></li>
+                            <li>LED market share: 46% (was 0.3% in 2011)</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Sources: MoSPI Energy Statistics 2024, BEE India Energy Scenario 2024, IEA E4 Profile, CEEW Transport Study, CSE AC Study, Prayas Energy</p>
+            </div>
+
             <!-- Hidden Dynamics - The Real Investment Opportunities -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--warning); background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);">
                 <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
@@ -200,57 +293,57 @@
                 <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
                 <div class="focus-grid">
                     <div class="info-block">
-                        <h4>The Subsidy Trap</h4>
+                        <h4>The Final-Use Blind Spot</h4>
                         <ul>
-                            <li><strong>Perverse incentives:</strong> Free/cheap agricultural power kills pump efficiency investments</li>
-                            <li><strong>Political capture:</strong> Electricity subsidies are electoral currency — reform = political suicide</li>
-                            <li><strong>Hidden costs:</strong> DISCOMs lose ₹30K+ Cr annually; efficiency savings can't compete with "free"</li>
-                            <li><strong>Investment opportunity:</strong> Income support decoupled from consumption, feeder-level metering</li>
+                            <li><strong>Invisible waste:</strong> Only 15-20% of primary energy delivers useful services — 80%+ lost before reaching end-use</li>
+                            <li><strong>Supply obsession:</strong> Policy measures capacity addition (GW), not services delivered (lumens, p-km, ton-hours)</li>
+                            <li><strong>Measurement gap:</strong> No tracking of useful energy — we measure kWh sold, not outcomes achieved</li>
+                            <li><strong>Investment opportunity:</strong> Energy services framing, outcome-based metrics, exergy accounting</li>
                         </ul>
                     </div>
                     <div class="info-block">
-                        <h4>The ESCO Paradox</h4>
+                        <h4>The Pump Subsidy Trap</h4>
                         <ul>
-                            <li><strong>Performance contracts fail:</strong> ESCOs can't get paid because DISCOMs don't bill accurately</li>
-                            <li><strong>Baseline manipulation:</strong> No reliable pre-intervention data to prove savings</li>
-                            <li><strong>Split incentives:</strong> Building owners invest, tenants benefit — no one acts</li>
-                            <li><strong>Investment opportunity:</strong> DISCOM billing reform, standardized M&V protocols, green leases</li>
+                            <li><strong>Perverse incentives:</strong> Free agricultural power → &lt;2% of 30M pumps exceed 40% efficiency <a href="https://beeindia.gov.in" style="font-size: 0.7rem;" target="_blank">[BEE]</a></li>
+                            <li><strong>Political capture:</strong> Electricity subsidies are electoral currency — 25-40% savings potential untapped</li>
+                            <li><strong>Hidden costs:</strong> 33 TWh/year wasted (₹20K+ Cr); efficiency can't compete with "free"</li>
+                            <li><strong>Investment opportunity:</strong> Income support decoupled from consumption, feeder-level metering, ESCO models</li>
                         </ul>
                     </div>
                     <div class="info-block">
                         <h4>The Labeling Theater</h4>
                         <ul>
-                            <li><strong>Star ratings gamed:</strong> Lab testing conditions don't match real-world usage (ACs 25% worse)</li>
-                            <li><strong>Market surveillance weak:</strong> BEE can't enforce post-sale; cheap inefficient products flood market</li>
-                            <li><strong>Consumer confusion:</strong> Multiple labels, no standardization across appliances</li>
-                            <li><strong>Investment opportunity:</strong> Real-world testing protocols, strong enforcement with penalties</li>
+                            <li><strong>AC testing fraud:</strong> Lab test at 35°C; real summer at 45-50°C → 5-star performs worse than 1-star <a href="https://downtoearth.org.in" style="font-size: 0.7rem;" target="_blank">[CSE]</a></li>
+                            <li><strong>Performance gap:</strong> ACs consume 17-28% more power than rated at real temperatures</li>
+                            <li><strong>Standards lag:</strong> India tests for mild climate; ignores ISO hot climate protocol (46°C outside)</li>
+                            <li><strong>Investment opportunity:</strong> Real-world testing protocols, dynamic efficiency ratings, enforcement</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>The Cooking Energy Tragedy</h4>
+                        <ul>
+                            <li><strong>Massive waste:</strong> 700M people use chulhas at 8-10% efficiency — 90% of fuel wasted as heat/smoke <a href="https://cwejournal.org" style="font-size: 0.7rem;" target="_blank">[CWE]</a></li>
+                            <li><strong>Health toll:</strong> 482,000 deaths/year from household air pollution (2017)</li>
+                            <li><strong>LPG gap:</strong> PMUY distributed connections but refill rates low due to cost</li>
+                            <li><strong>Investment opportunity:</strong> Improved biomass stoves, electric cooking, biogas systems</li>
                         </ul>
                     </div>
                     <div class="info-block">
                         <h4>The Generation Bias</h4>
                         <ul>
-                            <li><strong>Policy asymmetry:</strong> RE gets viability gap funding; efficiency gets voluntary programs</li>
-                            <li><strong>Lobbying imbalance:</strong> Solar/wind industry organized; efficiency diffuse, no constituency</li>
-                            <li><strong>Grid planning blind:</strong> Capacity addition favored over demand reduction in projections</li>
-                            <li><strong>Investment opportunity:</strong> Negawatt markets, efficiency as capacity resource</li>
+                            <li><strong>Policy asymmetry:</strong> RE gets viability gap funding + RPOs; efficiency gets voluntary programs</li>
+                            <li><strong>Lobbying imbalance:</strong> Solar/wind industry organized (SECI, MNRE); efficiency diffuse, no constituency</li>
+                            <li><strong>Grid planning blind:</strong> CEA projects capacity addition; never models demand reduction scenarios</li>
+                            <li><strong>Investment opportunity:</strong> Negawatt markets, efficiency certificates, demand response as capacity</li>
                         </ul>
                     </div>
                     <div class="info-block">
-                        <h4>The Recycling Myth</h4>
+                        <h4>The Thermal Power Lock-in</h4>
                         <ul>
-                            <li><strong>No scale:</strong> India recycles <5K tonnes solar panels/year; 100K+ tonnes already in landfills</li>
-                            <li><strong>EPR not enforced:</strong> Manufacturers game "collection" via paper transactions</li>
-                            <li><strong>Battery black market:</strong> Lead-acid recycling 90% informal, toxic exposure widespread</li>
-                            <li><strong>Investment opportunity:</strong> Formal recycling infrastructure, material passports, deposit schemes</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>The Cooling Collision</h4>
-                        <ul>
-                            <li><strong>AC growth unstoppable:</strong> 300M units by 2040; efficiency gains wiped out by volume</li>
-                            <li><strong>Industry lock-in:</strong> Manufacturers profit from cheap, inefficient units; premium models unsold</li>
-                            <li><strong>Refrigerant transition stalled:</strong> Low-GWP alternatives exist but supply chain not ready</li>
-                            <li><strong>Investment opportunity:</strong> District cooling, passive design mandates, leapfrog tech</li>
+                            <li><strong>Stranded efficiency:</strong> Coal plants at 35% efficiency (design 38%) — 65% of fuel wasted <a href="https://energy.prayaspune.org" style="font-size: 0.7rem;" target="_blank">[Prayas]</a></li>
+                            <li><strong>Age penalty:</strong> Efficiency degrades 1-2% for plants &gt;25 years — but kept running for political reasons</li>
+                            <li><strong>Merit order ignored:</strong> Efficient plants underutilized while inefficient plants run for state revenue</li>
+                            <li><strong>Investment opportunity:</strong> Efficiency-based dispatch, accelerated retirement, waste heat recovery</li>
                         </ul>
                     </div>
                 </div>
