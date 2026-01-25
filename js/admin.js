@@ -41,12 +41,10 @@ const AdminDashboard = (function () {
      * Load data from storage
      */
     async function loadData() {
-        try {
-            partnersData = await DataStore.getPartners();
-            fundingData = await DataStore.getFunding();
-        } catch (error) {
-            console.error('Error loading admin data:', error);
-        }
+        // DataStore disabled - using static data
+        console.log('Using static/fallback data (DataStore disabled)');
+        partnersData = null;
+        fundingData = null;
     }
 
     /**

@@ -4,6 +4,7 @@
     "public": true,
     "cleanUrls": true,
     "trailingSlash": false,
+    "$schema": "https://openapi.vercel.sh/vercel.json",
     "headers": [
         {
             "source": "/(.*)",
