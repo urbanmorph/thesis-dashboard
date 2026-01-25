@@ -56,12 +56,5 @@
             "source": "/dashboard",
             "destination": "/index.html"
         }
-    ],
-    "redirects": [
-        {
-            "source": "/admin",
-            "destination": "/admin.html",
-            "permanent": false
-        }
     ]
 }
