@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Climate Action Tracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gray-50);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            padding: var(--space-lg);
+        }
+
+        .login-card {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            padding: var(--space-2xl);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .login-header h1 {
+            font-size: 1.75rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-xs);
+        }
+
+        .login-header p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: all 0.15s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gray-900);
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--gray-900);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .btn-login:hover {
+            background: var(--gray-800);
+            transform: translateY(-1px);
+        }
+
+        .btn-login:disabled {
+            background: var(--gray-400);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-loader {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #fef2f2;
+            border: 1px solid #ef4444;
+            color: #dc2626;
+            padding: var(--space-md);
+            border-radius: 6px;
+            margin-top: var(--space-md);
+            font-size: 0.9rem;
+        }
+
+        .success-message {
+            background: var(--white);
+            border-left: 3px solid var(--gray-900);
+            padding: var(--space-lg);
+            border-radius: 6px;
+            margin-top: var(--space-lg);
+            text-align: center;
+        }
+
+        .success-message p {
+            margin: var(--space-sm) 0;
+            color: var(--gray-700);
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--gray-200);
+            color: var(--gray-600);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>🌱 Climate Action Tracker</h1>
+                <p>Admin Portal</p>
+            </div>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p id="successText">Signing in...</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="admin@example.com" autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password" autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span class="btn-text">Sign In</span>
+                    <span class="btn-loader" style="display: none;"></span>
+                </button>
+
+                <div id="loginError" class="error-message" style="display: none;"></div>
+            </form>
+
+            <div class="login-footer">
+                <p>Climate Action Tracking Dashboard</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/supabase-config.js"></script>
+    <script>
+        // Check if already logged in
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                await waitForSupabase();
+                const { data: { user }, error } = await supabaseClient.auth.getUser();
+
+                if (error) {
+                    await supabaseClient.auth.signOut();
+                    return;
+                }
+
+                if (user) {
+                    console.log('Already authenticated, redirecting...');
+                    window.location.href = 'admin.html';
+                }
+            } catch (e) {
+                console.log('Not authenticated:', e.message);
+            }
+        });
+
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const loginBtn = document.getElementById('loginBtn');
+            const errorDiv = document.getElementById('loginError');
+            const successDiv = document.getElementById('successMessage');
+            const loginForm = document.getElementById('loginForm');
+
+            // Show loading state
+            loginBtn.disabled = true;
+            loginBtn.querySelector('.btn-text').style.display = 'none';
+            loginBtn.querySelector('.btn-loader').style.display = 'inline-block';
+            errorDiv.style.display = 'none';
+
+            try {
+                await waitForSupabase();
+
+                const { data, error } = await supabaseClient.auth.signInWithPassword({
+                    email,
+                    password
+                });
+
+                if (error) throw error;
+
+                console.log('Login successful');
+
+                // Hide form and show success message
+                loginForm.style.display = 'none';
+                successDiv.style.display = 'block';
+                document.getElementById('successText').textContent = 'Login successful! Redirecting...';
+
+                // Redirect to admin dashboard
+                setTimeout(() => {
+                    window.location.href = 'admin.html';
+                }, 1000);
+
+            } catch (error) {
+                console.error('Login error:', error);
+                errorDiv.textContent = error.message || 'Invalid email or password. Please try again.';
+                errorDiv.style.display = 'block';
+                loginBtn.disabled = false;
+                loginBtn.querySelector('.btn-text').style.display = 'inline';
+                loginBtn.querySelector('.btn-loader').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
