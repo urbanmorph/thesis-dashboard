@@ -485,9 +485,6 @@ a:hover {
     background: linear-gradient(90deg, var(--info), #60a5fa);
 }
 
-.progress-bar.coming {
-    background: var(--gray-300);
-}
 
 .sector-status {
     font-size: 0.65rem;
@@ -509,10 +506,6 @@ a:hover {
     color: var(--info);
 }
 
-.status-coming {
-    background: var(--gray-100);
-    color: var(--gray-500);
-}
 
 /* ==========================================
    Theory of Change
@@ -554,41 +547,6 @@ a:hover {
     font-size: 0.8rem;
     color: var(--gray-500);
     margin: 0;
-}
-
-/* ==========================================
-   Geographic Grid
-   ========================================== */
-.geo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
-}
-
-.geo-item {
-    background: var(--gray-50);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
-    transition: all var(--transition-fast);
-    border: 1px solid transparent;
-}
-
-.geo-item:hover {
-    background: var(--white);
-    border-color: var(--primary);
-}
-
-.geo-name {
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: var(--dark);
-    display: block;
-    margin-bottom: var(--space-xs);
-}
-
-.geo-focus {
-    font-size: 0.75rem;
-    color: var(--gray-500);
 }
 
 /* ==========================================
@@ -920,47 +878,6 @@ a:hover {
     border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-/* Coming Soon */
-.coming-soon {
-    text-align: center;
-    padding: var(--space-3xl);
-    background: var(--gray-50);
-    border-radius: var(--radius-xl);
-    border: 2px dashed var(--gray-300);
-}
-
-.coming-soon-icon {
-    font-size: 4rem;
-    opacity: 0.4;
-    margin-bottom: var(--space-md);
-}
-
-.coming-soon h3 {
-    color: var(--gray-500);
-    margin-bottom: var(--space-md);
-}
-
-.coming-soon p {
-    color: var(--gray-400);
-    max-width: 400px;
-    margin: 0 auto var(--space-lg);
-}
-
-.coming-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    justify-content: center;
-}
-
-.coming-tag {
-    padding: var(--space-xs) var(--space-md);
-    background: var(--gray-200);
-    color: var(--gray-500);
-    border-radius: var(--radius-full);
-    font-size: 0.8rem;
-}
-
 /* ==========================================
    Resources Page
    ========================================== */
@@ -1153,47 +1070,3 @@ a:hover {
     }
 }
 
-/* ==========================================
-   Authentication Loading State
-   ========================================== */
-
-/* Hide page content while checking authentication */
-html.auth-checking,
-body.auth-checking {
-    overflow: hidden;
-}
-
-html.auth-checking::before,
-body.auth-checking::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--white);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-html.auth-checking::after,
-body.auth-checking::after {
-    content: 'Verifying access...';
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    color: var(--gray-500);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-/* Hide all page content during auth check */
-html.auth-checking body,
-body.auth-checking > *:not(script) {
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
