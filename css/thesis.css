@@ -17,11 +17,12 @@
     margin-bottom: var(--space-md);
     font-weight: 700;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .thesis-hero .subtitle {
     font-size: 1.1rem;
-    opacity: 0.85;
+    color: rgba(255, 255, 255, 0.9);
     max-width: 800px;
     line-height: 1.7;
     margin-bottom: var(--space-lg);
@@ -29,12 +30,13 @@
 
 .thesis-hero .key-stat {
     display: inline-block;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     padding: var(--space-sm) var(--space-lg);
     border-radius: 6px;
     font-weight: 500;
     font-size: 0.9rem;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #ffffff;
 }
 
 /* Dynamic Navigation */
@@ -277,10 +279,11 @@
     font-size: 1.5rem;
     margin-bottom: var(--space-md);
     font-weight: 700;
+    color: #ffffff;
 }
 
 .bottom-cta p {
-    opacity: 0.85;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--space-xl);
     font-size: 1rem;
     max-width: 600px;
