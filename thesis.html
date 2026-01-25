@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hidden Dynamics | Climate Action Tracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sectors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .thesis-hero {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+            color: white;
+            padding: var(--space-2xl) var(--space-lg);
+            margin: -var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        .thesis-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+            font-weight: 800;
+        }
+        .thesis-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        .thesis-hero .key-stat {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 4px;
+            margin-top: var(--space-md);
+            font-weight: 600;
+        }
+        .dynamic-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            padding: var(--space-md);
+            background: var(--gray-50);
+            border-radius: 8px;
+            position: sticky;
+            top: 60px;
+            z-index: 100;
+        }
+        .dynamic-nav a {
+            padding: var(--space-sm) var(--space-md);
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .dynamic-nav a:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .dynamic-nav a .nav-num {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: var(--gray-200);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 0.75rem;
+            margin-right: var(--space-xs);
+        }
+        .dynamic-nav a:hover .nav-num {
+            background: rgba(255,255,255,0.3);
+        }
+        .dynamic-section {
+            margin-bottom: var(--space-2xl);
+            scroll-margin-top: 140px;
+        }
+        .dynamic-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-md);
+            border-bottom: 3px solid var(--primary);
+        }
+        .dynamic-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            opacity: 0.3;
+        }
+        .dynamic-title-group h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--space-xs);
+            color: var(--gray-900);
+        }
+        .dynamic-title-group .tagline {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            font-style: italic;
+        }
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        .evidence-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: var(--space-md);
+            border-left: 4px solid var(--gray-300);
+        }
+        .evidence-card.energy { border-left-color: #f59e0b; }
+        .evidence-card.transport { border-left-color: #3b82f6; }
+        .evidence-card.buildings { border-left-color: #8b5cf6; }
+        .evidence-card.air { border-left-color: #06b6d4; }
+        .evidence-card.waste { border-left-color: #10b981; }
+        .evidence-card.notf { border-left-color: #ec4899; }
+        .evidence-card .sector-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-xs);
+        }
+        .evidence-card.energy .sector-label { color: #f59e0b; }
+        .evidence-card.transport .sector-label { color: #3b82f6; }
+        .evidence-card.buildings .sector-label { color: #8b5cf6; }
+        .evidence-card.air .sector-label { color: #06b6d4; }
+        .evidence-card.waste .sector-label { color: #10b981; }
+        .evidence-card.notf .sector-label { color: #ec4899; }
+        .evidence-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: var(--space-sm);
+            color: var(--gray-800);
+        }
+        .evidence-card p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+        .evidence-card .stat {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+        .investment-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            margin-top: var(--space-md);
+        }
+        .investment-box h4 {
+            color: #15803d;
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        .investment-box ul {
+            margin: 0;
+            padding-left: var(--space-lg);
+        }
+        .investment-box li {
+            margin-bottom: var(--space-xs);
+            color: var(--gray-700);
+        }
+        .failure-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+        .failure-box h4 {
+            color: #dc2626;
+            margin-bottom: var(--space-sm);
+        }
+        .failure-box p {
+            margin: 0;
+            color: var(--gray-700);
+        }
+        .bottom-cta {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-xl);
+            border-radius: 12px;
+            text-align: center;
+            margin-top: var(--space-2xl);
+        }
+        .bottom-cta h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+        }
+        .bottom-cta p {
+            opacity: 0.8;
+            margin-bottom: var(--space-lg);
+        }
+        .bottom-cta .cta-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .bottom-cta a {
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .bottom-cta a.primary {
+            background: white;
+            color: var(--gray-900);
+        }
+        .bottom-cta a.secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌱</span>
+            <span class="nav-title">Climate Action Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="thesis.html" class="nav-link active">Hidden Dynamics</a>
+            <a href="sectors.html" class="nav-link">Sectors</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+        </div>
+    </nav>
+
+    <main class="sectors-main" style="padding-top: 0;">
+        <!-- Hero Section -->
+        <div class="thesis-hero">
+            <h1>Why Climate Interventions Fail</h1>
+            <p class="subtitle">
+                India's sustainability investments consistently underperform. The problem isn't technical solutions or funding gaps —
+                it's <strong>hidden dynamics</strong> that make well-designed interventions fail. Understanding these dynamics
+                reveals where catalytic capital can unlock system change.
+            </p>
+            <span class="key-stat">Only 15-20% of primary energy delivers useful services</span>
+        </div>
+
+        <!-- Dynamic Navigation -->
+        <nav class="dynamic-nav">
+            <a href="#data-integrity"><span class="nav-num">1</span> Data Integrity</a>
+            <a href="#perverse-incentives"><span class="nav-num">2</span> Perverse Incentives</a>
+            <a href="#informal-paradox"><span class="nav-num">3</span> Informal Paradox</a>
+            <a href="#lab-reality"><span class="nav-num">4</span> Lab vs Reality</a>
+            <a href="#political-economy"><span class="nav-num">5</span> Political Economy</a>
+            <a href="#supply-obsession"><span class="nav-num">6</span> Supply Obsession</a>
+            <a href="#split-incentives"><span class="nav-num">7</span> Split Incentives</a>
+        </nav>
+
+        <!-- Dynamic 1: Data Integrity Crisis -->
+        <section class="dynamic-section" id="data-integrity">
+            <div class="dynamic-header">
+                <span class="dynamic-number">01</span>
+                <div class="dynamic-title-group">
+                    <h2>The Data Integrity Crisis</h2>
+                    <p class="tagline">You can't manage what you can't measure — and measurement is gamed</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>Policies assume accurate data. But data collectors have incentives to misreport. Contractors overreport tonnage/coverage to get paid. Government agencies underreport failures to meet targets. The result: interventions designed on false baselines, evaluated with manipulated metrics.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">Self-reported</span>
+                    <h4>DISCOM billing data unreliable</h4>
+                    <p>ESCOs can't prove savings because baseline data doesn't exist or is manipulated. AT&C losses hidden in accounting.</p>
+                </div>
+                <div class="evidence-card waste">
+                    <span class="sector-label">Waste</span>
+                    <span class="stat">31.7%</span>
+                    <h4>Waste unaccounted in official stats</h4>
+                    <p>Contractors paid by tonnage overreport. "97% collection" is self-reported with no GPS verification.</p>
+                </div>
+                <div class="evidence-card air">
+                    <span class="sector-label">Air Quality</span>
+                    <span class="stat">81%</span>
+                    <h4>Industrial stacks missing >1000 hrs data</h4>
+                    <p>Industries self-report emissions. CAAQMS placed in low-pollution areas. Real hotspots unmeasured.</p>
+                </div>
+                <div class="evidence-card notf">
+                    <span class="sector-label">Communities</span>
+                    <span class="stat">2011</span>
+                    <h4>Census data 15 years outdated</h4>
+                    <p>Ward-level planning based on 2011 Census. Fast-growing areas invisible. Service delivery misallocated.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Independent verification infrastructure:</strong> Third-party audits, citizen monitoring, counter-data</li>
+                    <li><strong>Real-time tracking:</strong> GPS on waste trucks, IoT on pumps, continuous emissions monitoring</li>
+                    <li><strong>Open data platforms:</strong> Public dashboards that expose gaps and enable accountability</li>
+                    <li><strong>Satellite/remote sensing:</strong> Independent measurement that can't be gamed at source</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dynamic 2: Perverse Incentive Structures -->
+        <section class="dynamic-section" id="perverse-incentives">
+            <div class="dynamic-header">
+                <span class="dynamic-number">02</span>
+                <div class="dynamic-title-group">
+                    <h2>Perverse Incentive Structures</h2>
+                    <p class="tagline">Those who should act have incentives not to</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>Efficiency programs assume actors will adopt better solutions when available. But existing incentive structures reward the opposite behavior. Free electricity kills pump efficiency. Tipping fees guarantee waste tonnage. Road dust spending is visible action without impact.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">&lt;2%</span>
+                    <h4>Pumps exceed 40% efficiency</h4>
+                    <p>Free agricultural power = zero incentive to upgrade. 30M pumps at 25-30% efficiency. 33 TWh/year wasted.</p>
+                </div>
+                <div class="evidence-card waste">
+                    <span class="sector-label">Waste</span>
+                    <span class="stat">Guaranteed</span>
+                    <h4>Tonnage contracts kill reduction</h4>
+                    <p>PPPs guarantee X tonnes/day. WtE plants need feedstock forever. Companies lobby against composting/recycling.</p>
+                </div>
+                <div class="evidence-card air">
+                    <span class="sector-label">Air Quality</span>
+                    <span class="stat">67%</span>
+                    <h4>NCAP funds to road sweeping</h4>
+                    <p>Visible action, limited impact. Avoids hard targets (vehicles, industry). Only 4% to monitoring.</p>
+                </div>
+                <div class="evidence-card transport">
+                    <span class="sector-label">Transport</span>
+                    <span class="stat">Free</span>
+                    <h4>Parking subsidizes car ownership</h4>
+                    <p>Mandatory parking in building codes. Free street parking worth ₹1000s Cr/year. Never accounted.</p>
+                </div>
+                <div class="evidence-card notf">
+                    <span class="sector-label">Communities</span>
+                    <span class="stat">Visible</span>
+                    <h4>Ward funds favor visible projects</h4>
+                    <p>Councillors spend on roads, gates — not efficiency. No performance metric on climate outcomes.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Outcome-based contracts:</strong> Pay for waste reduced, not collected. Pay for energy saved, not supplied.</li>
+                    <li><strong>Subsidy reform support:</strong> Direct benefit transfer decoupled from consumption. Political cover for reform.</li>
+                    <li><strong>Accountability mechanisms:</strong> Public scorecards, citizen feedback loops, performance-linked grants</li>
+                    <li><strong>Incentive realignment pilots:</strong> Demonstrate alternatives that align actor incentives with outcomes</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dynamic 3: Informal Sector Paradox -->
+        <section class="dynamic-section" id="informal-paradox">
+            <div class="dynamic-header">
+                <span class="dynamic-number">03</span>
+                <div class="dynamic-title-group">
+                    <h2>The Informal Sector Paradox</h2>
+                    <p class="tagline">The people actually doing the work are excluded from the system</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>"Formalization" programs often destroy what works. Large company contracts exclude informal workers who were actually delivering results. Permit raj pushes workers underground. The formal system designs solutions that ignore 60%+ of actual activity.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card waste">
+                    <span class="sector-label">Waste</span>
+                    <span class="stat">80%+</span>
+                    <h4>Recycling by informal workers</h4>
+                    <p>4M+ waste pickers achieve most actual recycling. Formalization via company contracts often excludes them — rates drop.</p>
+                </div>
+                <div class="evidence-card transport">
+                    <span class="sector-label">Transport</span>
+                    <span class="stat">10M+</span>
+                    <h4>Paratransit drivers invisible</h4>
+                    <p>Auto/taxi drivers have no voice in policy. App platforms take 25-30%. No social protection, no career path.</p>
+                </div>
+                <div class="evidence-card buildings">
+                    <span class="sector-label">Buildings</span>
+                    <span class="stat">60%+</span>
+                    <h4>Construction is informal</h4>
+                    <p>Building codes don't reach informal construction. Masons don't know efficient techniques. No training pipeline.</p>
+                </div>
+                <div class="evidence-card notf">
+                    <span class="sector-label">Communities</span>
+                    <span class="stat">30-50%</span>
+                    <h4>Urban population in slums</h4>
+                    <p>No formal address, no services. Climate most vulnerable, least invested. RWAs represent owners, not renters or slums.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Formalization that empowers:</strong> Worker-owned cooperatives, not company contracts that displace</li>
+                    <li><strong>Direct market access:</strong> Platforms that connect informal workers to markets, cut out extractive middlemen</li>
+                    <li><strong>Skill development:</strong> Mason training, driver upskilling, waste picker professionalization</li>
+                    <li><strong>Tenure security:</strong> Slum mapping, property rights that enable investment in efficiency</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dynamic 4: Lab vs Reality Gap -->
+        <section class="dynamic-section" id="lab-reality">
+            <div class="dynamic-header">
+                <span class="dynamic-number">04</span>
+                <div class="dynamic-title-group">
+                    <h2>The Lab vs. Reality Gap</h2>
+                    <p class="tagline">Standards and testing don't reflect actual conditions</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>Efficiency standards look good on paper but fail in the field. Lab tests use conditions that don't exist in India. Compliance is checked at approval, never at operation. The gap between rated and actual performance can be 20-50%.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">17-28%</span>
+                    <h4>Extra power at real AC temperatures</h4>
+                    <p>Lab test at 35°C; real summer at 45-50°C. At 45°C, 5-star AC performs worse than 1-star rated. CSE study.</p>
+                </div>
+                <div class="evidence-card buildings">
+                    <span class="sector-label">Buildings</span>
+                    <span class="stat">23 → 5</span>
+                    <h4>States notified ECBC; few enforce</h4>
+                    <p>Compliance checked at plan approval, never post-occupancy. Builders get OC without ECBC clearance.</p>
+                </div>
+                <div class="evidence-card waste">
+                    <span class="sector-label">Waste</span>
+                    <span class="stat">97%</span>
+                    <h4>"Collection" unverified</h4>
+                    <p>Self-reported coverage. No GPS tracking. Workers remix segregated waste — infrastructure doesn't match claims.</p>
+                </div>
+                <div class="evidence-card air">
+                    <span class="sector-label">Air Quality</span>
+                    <span class="stat">Low-pollution</span>
+                    <h4>Monitors placed in clean areas</h4>
+                    <p>CAAQMS siting avoids hotspots. Official readings understate actual exposure. Source apportionment 5-10 years old.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Real-world testing protocols:</strong> Field validation, not just lab certification. Hot climate standards for India.</li>
+                    <li><strong>Post-occupancy audits:</strong> Measure actual building performance vs. design. Energy performance certificates at sale.</li>
+                    <li><strong>Independent monitoring:</strong> Citizen sensors, satellite verification, third-party audits</li>
+                    <li><strong>Adaptive standards:</strong> Dynamic ratings that reflect actual operating conditions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dynamic 5: Political Economy Traps -->
+        <section class="dynamic-section" id="political-economy">
+            <div class="dynamic-header">
+                <span class="dynamic-number">05</span>
+                <div class="dynamic-title-group">
+                    <h2>Political Economy Traps</h2>
+                    <p class="tagline">Electoral pressures prevent rational policy</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>Technical solutions assume policy follows evidence. But policy follows votes. Free electricity, free parking, cheap fuel are electoral currency. Industry lobbies shape regulations. Enforcement is blocked by political connections. Reform = political suicide.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">Electoral</span>
+                    <h4>Electricity subsidies are vote banks</h4>
+                    <p>Free agricultural power politically untouchable. DISCOMs lose ₹30K+ Cr/year. No state will reform first.</p>
+                </div>
+                <div class="evidence-card air">
+                    <span class="sector-label">Air Quality</span>
+                    <span class="stat">Protected</span>
+                    <h4>Industry pressures regulators</h4>
+                    <p>SPCB officials under pressure. "Business-friendly" wins over lungs. Consent-to-operate renewed automatically.</p>
+                </div>
+                <div class="evidence-card buildings">
+                    <span class="sector-label">Buildings</span>
+                    <span class="stat">70%+</span>
+                    <h4>Sand illegally mined</h4>
+                    <p>Deep political links. Enforcement blocked. Rivers destroyed. C&D recycling alternative ignored.</p>
+                </div>
+                <div class="evidence-card transport">
+                    <span class="sector-label">Transport</span>
+                    <span class="stat">10+</span>
+                    <h4>Agencies in Delhi, no one accountable</h4>
+                    <p>UMTAs advisory only. Auto industry shapes policy. Public transit begs while cars get PLI.</p>
+                </div>
+                <div class="evidence-card notf">
+                    <span class="sector-label">Communities</span>
+                    <span class="stat">Gerrymandered</span>
+                    <h4>Ward boundaries favor incumbents</h4>
+                    <p>Delimitation is political. Fast-growing areas under-represented. Data boundaries don't match service delivery.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Citizen demand building:</strong> Awareness campaigns that create political pressure for reform</li>
+                    <li><strong>Coalition building:</strong> Unite diffuse efficiency constituency against organized industry lobbies</li>
+                    <li><strong>Political cover:</strong> Multi-state coordination so no one reforms alone. Central incentives for reform.</li>
+                    <li><strong>Independent institutions:</strong> Empowered regulators outside political control. Judicial interventions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dynamic 6: Supply Obsession -->
+        <section class="dynamic-section" id="supply-obsession">
+            <div class="dynamic-header">
+                <span class="dynamic-number">06</span>
+                <div class="dynamic-title-group">
+                    <h2>The Supply Obsession</h2>
+                    <p class="tagline">We measure inputs (GW, tonnes, sq.ft) not outcomes (services delivered)</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>Energy policy counts capacity added, not services delivered. Waste policy counts tonnes processed, not waste reduced. Building policy counts sq.ft certified, not comfort achieved. The entire measurement system rewards supply expansion over demand efficiency.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">15-20%</span>
+                    <h4>Primary energy delivers useful services</h4>
+                    <p>65% lost at power plant. 17% in T&D. 37% at end-use devices. We add GW while 80%+ is wasted.</p>
+                </div>
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">VGF + RPOs</span>
+                    <h4>RE gets funding; efficiency gets voluntary programs</h4>
+                    <p>Solar/wind industry organized. Efficiency diffuse, no constituency. Grid planning never models demand reduction.</p>
+                </div>
+                <div class="evidence-card transport">
+                    <span class="sector-label">Transport</span>
+                    <span class="stat">Roads</span>
+                    <h4>Infrastructure, not mobility</h4>
+                    <p>Policy measures km of roads built, not people-km moved efficiently. Congestion framed as road shortage, not car excess.</p>
+                </div>
+                <div class="evidence-card waste">
+                    <span class="sector-label">Waste</span>
+                    <span class="stat">Tonnes</span>
+                    <h4>Processing, not reduction</h4>
+                    <p>Swachh Bharat counts processing capacity. No metric for waste prevention. EPR counts certificates, not actual recycling.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Outcome metrics:</strong> Measure lumens delivered, not kWh sold. Measure mobility, not road-km. Measure comfort, not sq.ft.</li>
+                    <li><strong>Energy services framing:</strong> Reframe policy around services (cooling, lighting, mobility) not commodities (electricity, fuel)</li>
+                    <li><strong>Negawatt markets:</strong> Value demand reduction as equivalent to supply addition. Efficiency certificates.</li>
+                    <li><strong>Useful energy accounting:</strong> Track exergy, not just energy. Expose the 80% waste in the system.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dynamic 7: Split Incentives -->
+        <section class="dynamic-section" id="split-incentives">
+            <div class="dynamic-header">
+                <span class="dynamic-number">07</span>
+                <div class="dynamic-title-group">
+                    <h2>The Split Incentive Problem</h2>
+                    <p class="tagline">Those who invest don't benefit; those who benefit don't invest</p>
+                </div>
+            </div>
+
+            <div class="failure-box">
+                <h4>Why Traditional Interventions Fail</h4>
+                <p>Building owners pay for efficiency; tenants get lower bills. Developers bear upfront costs; buyers get lifecycle savings years later. Contractors are paid to build, not to optimize. The investor and beneficiary are different people — so no one acts.</p>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card buildings">
+                    <span class="sector-label">Buildings</span>
+                    <span class="stat">Build & Sell</span>
+                    <h4>Developers exit before operational costs</h4>
+                    <p>No incentive for lifecycle efficiency. Green premium myth — buyers won't pay upfront for future savings.</p>
+                </div>
+                <div class="evidence-card buildings">
+                    <span class="sector-label">Buildings</span>
+                    <span class="stat">Owner ≠ Tenant</span>
+                    <h4>Landlord pays, tenant benefits</h4>
+                    <p>Rental properties never upgraded. Commercial tenants pay utilities but can't modify buildings.</p>
+                </div>
+                <div class="evidence-card energy">
+                    <span class="sector-label">Energy</span>
+                    <span class="stat">ESCO</span>
+                    <h4>Performance contracts fail</h4>
+                    <p>Savings hard to prove. Baseline disputes. Building owners don't trust contractors. No standardized M&V.</p>
+                </div>
+                <div class="evidence-card notf">
+                    <span class="sector-label">Communities</span>
+                    <span class="stat">Volunteer</span>
+                    <h4>Champions unpaid, unsupported</h4>
+                    <p>Community organizers burn out. NGOs extract case studies, communities get nothing lasting. No career path.</p>
+                </div>
+            </div>
+
+            <div class="investment-box">
+                <h4>💡 Investment Opportunity</h4>
+                <ul>
+                    <li><strong>Green leases:</strong> Contracts that share efficiency savings between landlord and tenant</li>
+                    <li><strong>On-bill financing:</strong> Efficiency upgrades paid through utility bills. No upfront cost barrier.</li>
+                    <li><strong>Energy performance disclosure:</strong> Mandatory efficiency ratings at sale/rent. Market rewards efficiency.</li>
+                    <li><strong>Aggregation models:</strong> Pool small buildings for efficiency upgrades. Reduce transaction costs.</li>
+                    <li><strong>Paid community organizers:</strong> Professionalize climate work at local level. Career paths, not volunteerism.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <div class="bottom-cta">
+            <h3>The Hidden Dynamics ARE the Investment Thesis</h3>
+            <p>Sector-specific interventions fail because they don't address these cross-cutting dynamics.<br>
+            Catalytic capital should target system visibility, accountability infrastructure, and incentive realignment.</p>
+            <div class="cta-buttons">
+                <a href="sectors.html" class="primary">Explore Sector Evidence →</a>
+                <a href="resources.html" class="secondary">View Data Sources</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
+            <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0" style="height: 31px;">
+        </a>
+    </footer>
+</body>
+</html>
