@@ -25,16 +25,11 @@ const CONFIG = {
         roadmap: 'admin/roadmap.json'
     },
 
-    // Admin credentials (for demo purposes)
-    // In production, use proper authentication
+    // Authentication now handled by Supabase Auth
+    // Create users in your Supabase project dashboard:
+    // Authentication > Users > Add User
     auth: {
-        // These are hashed for basic security
-        // Default: admin / climate2026
-        credentials: {
-            username: 'admin',
-            // Simple hash - in production use proper auth
-            passwordHash: '62dc210006a043de2e2f6efb18bc7a2d370b88818aaae27b3625451c8a95778b'
-        }
+        enabled: true
     },
 
     // Dashboard settings
