@@ -5,7 +5,7 @@
 
 /* Hero Section - Dark Slate Background */
 .thesis-hero {
-    background: #1e293b;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: var(--white);
     padding: var(--space-3xl) var(--space-lg);
     border-radius: 12px;
@@ -266,7 +266,7 @@
 
 /* Bottom CTA */
 .bottom-cta {
-    background: #1e293b;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: var(--white);
     padding: var(--space-3xl) var(--space-xl);
     border-radius: 12px;
@@ -293,7 +293,7 @@
 
 .bottom-cta .btn {
     background: var(--white);
-    color: #1e293b;
+    color: #0f172a;
     padding: var(--space-md) var(--space-2xl);
     border-radius: 6px;
     text-decoration: none;
