@@ -7,11 +7,8 @@ const AdminPartners = (function () {
      * Initialize partners page
      */
     function init() {
-        // Check authentication
-        if (!Auth.isAuthenticated()) {
-            window.location.href = 'login.html';
-            return;
-        }
+        // Auth check is handled by auth.js protectPage()
+        // No need to check again here to avoid redirect loops
 
         console.log('Initializing Admin Partners page...');
 
