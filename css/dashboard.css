@@ -164,15 +164,6 @@ a:hover {
     background: var(--primary-glow);
 }
 
-.nav-admin {
-    background: var(--dark);
-    color: var(--white) !important;
-}
-
-.nav-admin:hover {
-    background: var(--dark-700) !important;
-}
-
 /* ==========================================
    Main Container
    ========================================== */
