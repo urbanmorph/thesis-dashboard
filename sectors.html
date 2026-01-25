@@ -58,7 +58,6 @@
             <button class="sector-tab" data-sector="waste" style="padding: var(--space-sm) var(--space-md);">
                 <span class="tab-icon">🗑️</span>
                 <span class="tab-label">Waste</span>
-                <span class="tab-status status-coming">Soon</span>
             </button>
             <button class="sector-tab" data-sector="water" style="padding: var(--space-sm) var(--space-md);">
                 <span class="tab-icon">💧</span>
@@ -1195,16 +1194,241 @@
 
         <!-- WASTE SECTOR -->
         <div class="sector-content-panel" id="waste">
-            <div class="coming-soon">
-                <div class="coming-soon-icon">🗑️</div>
-                <h3>Coming Soon</h3>
-                <p>Detailed tracking for the Waste Management sector will be available soon.</p>
-                <div class="coming-tags">
-                    <span class="coming-tag">Municipal Solid Waste</span>
-                    <span class="coming-tag">Plastic Waste</span>
-                    <span class="coming-tag">E-waste</span>
-                    <span class="coming-tag">Waste-to-Energy</span>
-                    <span class="coming-tag">Composting</span>
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Waste Generation & Composition</h4>
+                        <ul>
+                            <li>62-65 million tonnes MSW annually (170,000 TPD) <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB/MoHUA]</a></li>
+                            <li>250 million tonnes legacy waste at 2,300+ dumpsites <a href="resources.html#references" style="font-size: 0.75rem;">[SBM-U]</a></li>
+                            <li>Waste composition: 45% organic, 40% inert, 10% recyclable, 5% hazardous</li>
+                            <li>Projected to reach 165 MT by 2030, 436 MT by 2050 <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Collection & Processing</h4>
+                        <ul>
+                            <li>97% door-to-door collection coverage <a href="resources.html#references" style="font-size: 0.75rem;">[SBM-U 2024]</a></li>
+                            <li>70% scientific processing (up from 18% in 2014) <a href="resources.html#references" style="font-size: 0.75rem;">[MoHUA]</a></li>
+                            <li>Source segregation: Only 40-60% nationally <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB]</a></li>
+                            <li>31.7% waste unaccounted for (50,655 TPD) <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB 2020-21]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Specialized Waste Streams</h4>
+                        <ul>
+                            <li>Plastic: 4-9 MT/year, only 8% achieves true circularity <a href="resources.html#references" style="font-size: 0.75rem;">[MoEFCC]</a></li>
+                            <li>E-waste: 1.75 MT/year, 43% formally recycled <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB 2024]</a></li>
+                            <li>C&D waste: 150-500 MT/year, <7% recycled <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB]</a></li>
+                            <li>4 million+ informal waste pickers, <20% integrated <a href="resources.html#references" style="font-size: 0.75rem;">[ILO]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Urban Hierarchy & Disparities</h4>
+                        <ul>
+                            <li>Mega cities (7): 0.70 kg/capita/day waste generation <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB]</a></li>
+                            <li>Tier 1 cities face land scarcity & complex waste streams</li>
+                            <li>Tier 2/3 cities: Basic infrastructure gaps, limited expertise</li>
+                            <li>Urban areas (46% population) generate 74% of total waste</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Circular Waste Economy</h4>
+                        <ul>
+                            <li>Zero waste to landfill achieved (<5% residual)</li>
+                            <li>Circular material flows with maximum resource recovery</li>
+                            <li>Waste workers integrated into formal economy (75%)</li>
+                            <li>Differentiated city-tier strategies operational</li>
+                            <li>India as global circular economy leader</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones (2030)</h4>
+                        <ul>
+                            <li>95% scientific waste processing (from 70%)</li>
+                            <li>50% plastic recycling rate (from 8%)</li>
+                            <li>90% organic waste processing (from 25%)</li>
+                            <li>80% e-waste collection & processing (from 43%)</li>
+                            <li>Legacy waste remediation: 2,400+ dumpsites by Oct 2026</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: SWM Rules 2024, SBM-U 2.0 targets</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenges -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--danger);">
+                <h3>Challenges</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Policy & Governance</h4>
+                        <ul>
+                            <li>₹79,000 crore NGT penalties levied, mostly uncollected <a href="resources.html#references" style="font-size: 0.75rem;">[NGT]</a></li>
+                            <li>80% of environmental funds remain unspent <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB]</a></li>
+                            <li>One-size-fits-all approach fails smaller ULBs</li>
+                            <li>Weak enforcement: CPCB spent <1% of ₹45.81 Cr collected <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB 2024]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Infrastructure & Technology</h4>
+                        <ul>
+                            <li>Processing facilities underperform due to mixed waste</li>
+                            <li>Lack of scientific landfills in most cities</li>
+                            <li>Outdated collection vehicles without GPS tracking</li>
+                            <li>Transportation costs: 60-70% of total expenditure</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Behavioral & Social</h4>
+                        <ul>
+                            <li>Only 30-40% households segregate at source regularly <a href="resources.html#references" style="font-size: 0.75rem;">[CPCB]</a></li>
+                            <li>General public apathy contaminates waste streams</li>
+                            <li>4M+ waste pickers face health risks, lack social protection</li>
+                            <li>Informal sector dominance in recycling (80%+)</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Financial & Data</h4>
+                        <ul>
+                            <li>Tipping-fee PPPs discourage waste reduction</li>
+                            <li>ULBs lack capital for infrastructure investments</li>
+                            <li>Waste data based on outdated surveys (2011 Census)</li>
+                            <li>31.7% waste unaccounted in official statistics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>Source segregation rates by city tier</li>
+                            <li>Waste-to-landfill reduction percentages</li>
+                            <li>Recycling facility throughput volumes</li>
+                            <li>EPR certificate trading volumes</li>
+                            <li>Formal waste worker integration rates</li>
+                            <li>Legacy dumpsite remediation progress</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>ULB adoption of SWM Rules 2024</li>
+                            <li>Industry commitment to circular design</li>
+                            <li>Citizen participation in segregation drives</li>
+                            <li>Private sector investment in waste infrastructure</li>
+                            <li>Startup ecosystem development in waste tech</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Addressing Challenges</h4>
+                        <ul>
+                            <li><strong>Enforcement:</strong> Collect NGT penalties, deploy environmental funds <a href="resources.html#references" style="font-size: 0.75rem;">[NGT/CPCB]</a></li>
+                            <li><strong>Segregation:</strong> Implement EBWGR certificates, citizen awareness <a href="resources.html#references" style="font-size: 0.75rem;">[SWM 2024]</a></li>
+                            <li><strong>Technology:</strong> Deploy 100K+ smart bins, AI sorting in 500 MRFs <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                            <li><strong>Finance:</strong> Launch ₹50,000 Cr National Waste Infrastructure Fund <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                            <li><strong>Integration:</strong> Formalize 75% of waste workers by 2030 <a href="resources.html#references" style="font-size: 0.75rem;">[ILO]</a></li>
+                            <li><strong>Differentiation:</strong> Tier-specific strategies for cities <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment & Economic Impact -->
+            <div class="info-panel sector-grid-full" style="margin-top: var(--space-lg); border-left: 4px solid var(--success);">
+                <h3>Investment & Economic Impact</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Investment Required</h4>
+                        <ul>
+                            <li><strong>$14-19 billion</strong> market size by 2026-2030 <a href="resources.html#references" style="font-size: 0.75rem;">[Mordor Intel]</a></li>
+                            <li><strong>₹50,000 crore</strong> National Waste Infrastructure Fund (2025-2030) <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                            <li><strong>₹1,41,678 crore</strong> Swachh Bharat Mission Urban 2.0 (2021-2026) <a href="resources.html#references" style="font-size: 0.75rem;">[MoHUA]</a></li>
+                            <li><strong>₹20,000 crore</strong> green bonds for waste projects <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                            <li>$1.64 billion deal pipeline on India Investment Grid <a href="resources.html#references" style="font-size: 0.75rem;">[IIG 2025]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>GDP & Economic Benefits</h4>
+                        <ul>
+                            <li><strong>$2 trillion</strong> circular economy value by 2050 <a href="resources.html#references" style="font-size: 0.75rem;">[MoEFCC 2025]</a></li>
+                            <li><strong>₹3.5 trillion/year</strong> circular economy potential by 2030 <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW]</a></li>
+                            <li><strong>₹75 billion/year</strong> revenue from waste processing by 2030 <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                            <li><strong>₹2,460 crore/year</strong> from bio-methanation of 50% wet waste <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW]</a></li>
+                            <li><strong>₹1,200 crore/year</strong> savings in collection & transport costs <a href="resources.html#references" style="font-size: 0.75rem;">[Blueprint]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Quality of Life Benefits</h4>
+                        <ul>
+                            <li><strong>10 million green jobs</strong> by 2050 across circular economy <a href="resources.html#references" style="font-size: 0.75rem;">[MoEFCC 2025]</a></li>
+                            <li><strong>1.9 million jobs</strong> from plastic waste recycling by 2047 <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW]</a></li>
+                            <li>10+ million tonnes CO₂-eq emissions reduction from bio-methanation <a href="resources.html#references" style="font-size: 0.75rem;">[CEEW]</a></li>
+                            <li>Improved public health from legacy waste remediation</li>
+                            <li>Formal employment & social protection for 3M+ waste workers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">♻️</div>
+                        <h4>Circularity Model</h4>
+                        <p>Systems approach per circularity model: waste flows, MRFs, formal/informal integration</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">95% processing by 2030</span>
+                            <span class="focus-target">75% worker integration</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🏙️</div>
+                        <h4>Tier-Based Strategy</h4>
+                        <p>Differentiated approaches: Tier 1 (advanced hubs), Tier 2 (cluster facilities), Tier 3 (decentralized)</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">500 MRFs with AI sorting</span>
+                            <span class="focus-target">100K+ smart bins</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🔄</div>
+                        <h4>Legacy Waste Remediation</h4>
+                        <p>2,400+ dumpsites cleanup by Oct 2026</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">250 MT legacy waste</span>
+                            <span class="focus-target">Top 20 cities by Mar 2026</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🎯</div>
+                        <h4>Specialized Streams</h4>
+                        <p>Plastic EPR, e-waste collection, C&D recycling</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">50% plastic recycling</span>
+                            <span class="focus-target">80% e-waste collection</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1240,7 +1464,7 @@
             buildings: { icon: '🏗️', title: 'Buildings Sector', subtitle: 'High-performance buildings, embodied carbon reduction, and net-zero construction' },
             air: { icon: '🌬️', title: 'Air Quality Sector', subtitle: 'Hyperlocal monitoring, source apportionment, and Open AQ model for India' },
             notf: { icon: '🏘️', title: 'Neighbourhoods of the Future', subtitle: 'Community-led action, ward-level climate data, and integrated sustainability' },
-            waste: { icon: '🗑️', title: 'Waste Management Sector', subtitle: 'Municipal solid waste, plastic waste reduction, and e-waste management' },
+            waste: { icon: '🗑️', title: 'Waste Management Sector', subtitle: 'Circular economy, differentiated city strategies, and zero waste to landfill' },
             water: { icon: '💧', title: 'Water Sector', subtitle: 'Water conservation, wastewater treatment, and groundwater management' }
         };
 
