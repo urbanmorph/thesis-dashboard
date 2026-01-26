@@ -51,11 +51,6 @@
                 <span class="tab-icon">🌬️</span>
                 <span class="tab-label">Air</span>
             </button>
-            <button class="sector-tab" data-sector="notf" style="padding: var(--space-sm) var(--space-md);">
-                <span class="tab-icon">🏘️</span>
-                <span class="tab-label">NoTF</span>
-                <span class="tab-status status-planning">Planning</span>
-            </button>
             <button class="sector-tab" data-sector="waste" style="padding: var(--space-sm) var(--space-md);">
                 <span class="tab-icon">🗑️</span>
                 <span class="tab-label">Waste</span>
@@ -63,6 +58,11 @@
             <button class="sector-tab" data-sector="water" style="padding: var(--space-sm) var(--space-md);">
                 <span class="tab-icon">💧</span>
                 <span class="tab-label">Water</span>
+            </button>
+            <button class="sector-tab" data-sector="notf" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🏘️</span>
+                <span class="tab-label">NoTF</span>
+                <span class="tab-status status-planning">Planning</span>
             </button>
         </div>
 
@@ -1549,361 +1549,6 @@
         </div>
 
         <!-- NEIGHBOURHOODS SECTOR -->
-        <div class="sector-content-panel" id="notf">
-            <!-- Baseline -->
-            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
-                <h3>Baseline (Current Status)</h3>
-                <div class="focus-grid">
-                    <div class="info-block">
-                        <h4>Behavioral Gap</h4>
-                        <ul>
-                            <li>Technology alone misses 20-30% of savings</li>
-                            <li>Limited community-level climate action</li>
-                            <li>No hyperlocal data for ward-level planning</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Ward-Level Data Platform</h4>
-                        <ul>
-                            <li>Bengaluru: 369 wards × 7 climate sectors <a href="resources.html#references" style="font-size: 0.75rem;">[37,41]</a></li>
-                            <li>Mumbai: 227 wards × 2 sectors <a href="resources.html#references" style="font-size: 0.75rem;">[38,42]</a></li>
-                            <li>Confidence: 60-63% with cited sources <a href="resources.html#references" style="font-size: 0.75rem;">[37,38]</a></li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Community Infrastructure</h4>
-                        <ul>
-                            <li>RWAs exist but not climate-focused <a href="resources.html#references" style="font-size: 0.75rem;">[44]</a></li>
-                            <li>No trained community champions</li>
-                            <li>Limited replicable models</li>
-                        </ul>
-                    </div>
-                </div>
-                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Status: Planning - ward data platform active, community programs launching</p>
-            </div>
-
-            <div class="sector-grid">
-                <div class="info-panel">
-                    <h3>Shift</h3>
-                    <div class="info-block">
-                        <h4>Resilient, Sustainable Communities</h4>
-                        <ul>
-                            <li>Neighbourhoods as units of climate action</li>
-                            <li>Community-owned sustainability practices</li>
-                            <li>Hyperlocal data driving local decisions</li>
-                            <li>Behavioral change at household level</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-panel">
-                    <h3>Targets</h3>
-                    <div class="info-block">
-                        <h4>Year 3 Milestones</h4>
-                        <ul>
-                            <li>8 cities with ward-level data</li>
-                            <li>1M households engaged</li>
-                            <li>500 community champions trained</li>
-                            <li>100 model neighbourhoods</li>
-                        </ul>
-                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets based on <a href="resources.html#references">[37,38]</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Neighbourhood Governance Gap -->
-            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid #3b82f6; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);">
-                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
-                    <span style="font-size: 1.25rem;">🏘️</span> The Neighbourhood Governance Gap
-                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">Who plans, who decides, who benefits?</span>
-                </h3>
-                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Indian cities have wards but not ward governance. Decisions happen at city level while impacts are hyperlocal.</p>
-
-                <!-- Governance Flow Diagram -->
-                <div style="background: var(--gray-50); border-radius: 8px; padding: var(--space-md); margin-bottom: var(--space-md); overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: var(--gray-600);">GOVERNANCE LEVEL</span>                    <span style="color: var(--gray-600);">POWER</span>                         <span style="color: var(--gray-600);">CLIMATE DECISION</span>
-
-<span style="font-weight: bold; color: #6366f1;">STATE GOVERNMENT</span>                     Budget, Policy, Land           │  <span style="font-weight: bold;">90%</span> of decisions
-████████████████████████████████████████████████████████████   │  Urban policy, transit, energy
-                                                               │  No ward-level targets
-
-<span style="font-weight: bold; color: #8b5cf6;">MUNICIPAL CORPORATION</span>                Implementation, Services       │  <span style="font-weight: bold;">8%</span> of decisions
-██████████                                                     │  Waste, water, roads
-                                                               │  City-wide averages
-
-<span style="font-weight: bold; color: #22c55e;">WARD COMMITTEE</span>                       Advisory only (74th CAA)       │  <span style="font-weight: bold;">2%</span> of decisions
-██                                                             │  No budget, no staff
-                                                               │  Meetings: 1-2/year
-
-<span style="font-weight: bold; color: #dc2626;">NEIGHBOURHOOD (RWA)</span>                  None (informal)                │  <span style="font-weight: bold;">0%</span> formal power
-─                                                              │  Elite, fragmented
-                                                               │  <span style="color: #dc2626;">But 100% of impact</span>
-                    </div>
-                </div>
-
-                <!-- Key Statistics Grid -->
-                <div class="focus-grid">
-                    <div class="info-block">
-                        <h4>Democratic Deficit</h4>
-                        <ul>
-                            <li>Mumbai: <strong>BMC elections delayed since 2020</strong> <a href="https://freepressjournal.in" style="font-size: 0.7rem;" target="_blank">[FPJ]</a></li>
-                            <li>Bengaluru: <strong>Ward delimitation pending</strong> <a href="https://bengaluru.citizenmatters.in" style="font-size: 0.7rem;" target="_blank">[CitizenMatters]</a></li>
-                            <li>Ward Committees meet <strong>1-2 times/year</strong> at best <a href="https://bfriendsgroup.org" style="font-size: 0.7rem;" target="_blank">[B.PAC]</a></li>
-                            <li>Census data <strong>14+ years old</strong> (2011)</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Fiscal Weakness</h4>
-                        <ul>
-                            <li>Municipalities <strong>fiscally dependent</strong> on states <a href="https://praja.org" style="font-size: 0.7rem;" target="_blank">[Praja]</a></li>
-                            <li>BEST buses: <strong>Rs 9,300 Cr</strong> cumulative debt <a href="https://bengaluru.citizenmatters.in" style="font-size: 0.7rem;" target="_blank">[Citizen]</a></li>
-                            <li>Ward funds: <strong>₹2-5 Cr/year</strong> (discretionary)</li>
-                            <li>No dedicated climate budget at ward level</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Representation Gap</h4>
-                        <ul>
-                            <li>RWAs represent <strong>owners, not renters</strong> (30-50% of residents)</li>
-                            <li><strong>30-50%</strong> urban population in informal settlements</li>
-                            <li>No formal address = <strong>no services, no voice</strong></li>
-                            <li>English-speaking minority dominates platforms</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Data Blackhole</h4>
-                        <ul>
-                            <li>No ward-level <strong>energy consumption</strong> data</li>
-                            <li>No ward-level <strong>emissions inventory</strong></li>
-                            <li>No ward-level <strong>climate vulnerability</strong> maps</li>
-                            <li>Census, electoral, service boundaries <strong>don't align</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Sources: Praja Foundation, B.PAC Reports, Citizen Matters, Census 2011</p>
-            </div>
-
-            <!-- Hidden Dynamics - The Real Investment Opportunities -->
-            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--warning); background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);">
-                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
-                    <span style="font-size: 1.25rem;">🔍</span> Hidden Dynamics
-                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">Where the real problems live</span>
-                </h3>
-                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
-                <div class="focus-grid">
-                    <div class="info-block">
-                        <h4>The Elite Capture Problem</h4>
-                        <ul>
-                            <li><strong>RWAs ≠ community:</strong> Resident Welfare Associations represent apartment owners, not renters or slum residents</li>
-                            <li><strong>Class bias:</strong> "Model neighbourhoods" often mean gated communities — excludes majority</li>
-                            <li><strong>Voice inequality:</strong> English-speaking, tech-savvy residents dominate; informal workers invisible</li>
-                            <li><strong>Investment opportunity:</strong> Inclusive community organizing, slum partnerships, vernacular outreach</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>The Ward Boundary Game</h4>
-                        <ul>
-                            <li><strong>Delimitation politics:</strong> Ward boundaries redrawn to favor incumbents, not communities</li>
-                            <li><strong>Data misalignment:</strong> Census, electoral, and service delivery boundaries don't match</li>
-                            <li><strong>Representation gaps:</strong> Fast-growing areas under-represented; old areas over-represented</li>
-                            <li><strong>Investment opportunity:</strong> GIS-based rational delimitation, boundary harmonization</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>The Councillor Incentive Gap</h4>
-                        <ul>
-                            <li><strong>Ward funds unspent:</strong> Councillors hoard discretionary funds for election cycles</li>
-                            <li><strong>Visibility bias:</strong> Funds go to visible projects (roads, gates) not efficiency (waste, water)</li>
-                            <li><strong>No performance metric:</strong> Councillors not evaluated on climate/sustainability outcomes</li>
-                            <li><strong>Investment opportunity:</strong> Ward-level climate scorecards, participatory budgeting</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>The Informal Settlement Exclusion</h4>
-                        <ul>
-                            <li><strong>Off the map:</strong> 30-50% of urban population in slums — no formal address, no services</li>
-                            <li><strong>Climate most vulnerable:</strong> Flood-prone, heat-exposed, worst air quality — least invested</li>
-                            <li><strong>Tenure insecurity:</strong> No property rights = no incentive to invest in efficiency</li>
-                            <li><strong>Investment opportunity:</strong> Slum mapping, tenure formalization, community infrastructure</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>The Data Sovereignty Issue</h4>
-                        <ul>
-                            <li><strong>Who owns ward data?:</strong> Government, platforms, or communities? No clarity</li>
-                            <li><strong>Surveillance risk:</strong> Hyperlocal data can enable targeting — gentrification, displacement</li>
-                            <li><strong>Digital divide:</strong> Data platforms exclude non-smartphone users, elderly, informal workers</li>
-                            <li><strong>Investment opportunity:</strong> Community data trusts, offline access, data protection protocols</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>The Volunteer Burnout Cycle</h4>
-                        <ul>
-                            <li><strong>Champion fatigue:</strong> Community champions unpaid, unsupported — high dropout</li>
-                            <li><strong>Project extraction:</strong> NGOs extract case studies, communities get nothing lasting</li>
-                            <li><strong>No career path:</strong> Climate work at community level is volunteer, not profession</li>
-                            <li><strong>Investment opportunity:</strong> Paid community organizers, local institution building, handoff protocols</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Discovery Methods -->
-            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid #6366f1;">
-                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
-                    <span style="font-size: 1.25rem;">🔬</span> Discovery Methods
-                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">How to surface hidden dynamics</span>
-                </h3>
-                <div class="focus-grid">
-                    <div class="info-block">
-                        <h4>Representation Audit</h4>
-                        <ul>
-                            <li>Who attends RWA meetings? Demographics vs. ward population</li>
-                            <li>Map RWA coverage vs. informal settlements</li>
-                            <li>Track whose voices reach councillors</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Ward Fund Forensics</h4>
-                        <ul>
-                            <li>Track discretionary fund allocation patterns</li>
-                            <li>Compare spending by type: visible vs. efficiency</li>
-                            <li>Audit utilization rates and election cycle timing</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Informal Settlement Mapping</h4>
-                        <ul>
-                            <li>Satellite + ground truth for slum boundaries</li>
-                            <li>Service access mapping: water, waste, electricity</li>
-                            <li>Climate vulnerability assessment by settlement</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Champion Lifecycle Tracking</h4>
-                        <ul>
-                            <li>Survey community champion dropout rates and reasons</li>
-                            <li>Track project sustainability after NGO exit</li>
-                            <li>Identify what support keeps champions engaged</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sector-grid">
-                <div class="info-panel">
-                    <h3>Markers</h3>
-                    <div class="info-block">
-                        <h4>Quantitative Signals</h4>
-                        <ul>
-                            <li>Ward data platform usage metrics</li>
-                            <li>Household participation rates</li>
-                            <li>Community champions active monthly</li>
-                            <li>Replicable models documented</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Qualitative Signals</h4>
-                        <ul>
-                            <li>RWA adoption of sustainability agendas</li>
-                            <li>Local councillor engagement with data</li>
-                            <li>Peer-to-peer sharing of practices</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-panel">
-                    <h3>Strategies</h3>
-                    <div class="info-block">
-                        <h4>Addressing Hidden Dynamics</h4>
-                        <ul>
-                            <li><strong>Elite Capture:</strong> Inclusive organizing; slum partnerships; vernacular outreach</li>
-                            <li><strong>Ward Boundaries:</strong> GIS-based rational delimitation; boundary harmonization</li>
-                            <li><strong>Councillor Incentives:</strong> Ward-level climate scorecards; participatory budgeting</li>
-                            <li><strong>Informal Exclusion:</strong> Slum mapping; tenure formalization; community infrastructure</li>
-                            <li><strong>Data Sovereignty:</strong> Community data trusts; offline access; data protection</li>
-                            <li><strong>Volunteer Burnout:</strong> Stipends for champions; institutional embedding; succession plans</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Investment & Economic Impact -->
-            <div class="info-panel sector-grid-full" style="margin-top: var(--space-lg); border-left: 4px solid var(--success);">
-                <h3>Investment & Economic Impact</h3>
-                <div class="focus-grid">
-                    <div class="info-block">
-                        <h4>Investment Required</h4>
-                        <ul>
-                            <li><strong>$2.4 trillion</strong> urban infrastructure by 2050 <a href="resources.html#references" style="font-size: 0.75rem;">[63]</a></li>
-                            <li><strong>$10.9 trillion</strong> by 2070 for ~1B city residents <a href="resources.html#references" style="font-size: 0.75rem;">[63]</a></li>
-                            <li>Green municipal bonds for local financing <a href="resources.html#references" style="font-size: 0.75rem;">[36]</a></li>
-                            <li>Devolve tax powers to cities for fiscal autonomy <a href="resources.html#references" style="font-size: 0.75rem;">[49]</a></li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>GDP & Economic Benefits</h4>
-                        <ul>
-                            <li><strong>70% of GDP</strong> from urban areas <a href="resources.html#references" style="font-size: 0.75rem;">[20]</a></li>
-                            <li>20-30% additional savings from behavioral change <a href="resources.html#references" style="font-size: 0.75rem;">[3]</a></li>
-                            <li>Reduced municipal service costs via citizen action</li>
-                            <li>Property value increase in sustainable neighbourhoods</li>
-                        </ul>
-                    </div>
-                    <div class="info-block">
-                        <h4>Quality of Life Benefits</h4>
-                        <ul>
-                            <li>Community ownership of sustainability practices</li>
-                            <li>Improved local air quality and green spaces</li>
-                            <li>Enhanced social cohesion via collective action</li>
-                            <li>Resilience to climate events at ward level</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-panel sector-grid-full">
-                <h3>Focus Areas</h3>
-                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Partner-driven interventions that address hidden dynamics, not add more capacity.</p>
-                <div class="focus-grid">
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🏛️</div>
-                        <h4>Ward Committee Power</h4>
-                        <p>Statutory authority for ward committees, not just advisory role. Budget allocation power.</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Ward Committee Weakness</span>
-                        </div>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🏘️</div>
-                        <h4>Informal Settlement Inclusion</h4>
-                        <p>Extend services to 30-50% residents in informal areas; integrate in ward-level planning</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Informal Exclusion</span>
-                        </div>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">📊</div>
-                        <h4>Real-Time Ward Data</h4>
-                        <p>Replace 2011 census with live data; enable evidence-based service delivery</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Census Staleness</span>
-                        </div>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🤝</div>
-                        <h4>Inclusive Governance</h4>
-                        <p>RWAs represent owners, not renters. Expand participation to include all residents.</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: RWA Elite Capture</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- WASTE SECTOR -->
         <div class="sector-content-panel" id="waste">
             <!-- Baseline -->
             <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
@@ -2651,6 +2296,361 @@
                 </div>
             </div>
         </div>
+        <div class="sector-content-panel" id="notf">
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Behavioral Gap</h4>
+                        <ul>
+                            <li>Technology alone misses 20-30% of savings</li>
+                            <li>Limited community-level climate action</li>
+                            <li>No hyperlocal data for ward-level planning</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Ward-Level Data Platform</h4>
+                        <ul>
+                            <li>Bengaluru: 369 wards × 7 climate sectors <a href="resources.html#references" style="font-size: 0.75rem;">[37,41]</a></li>
+                            <li>Mumbai: 227 wards × 2 sectors <a href="resources.html#references" style="font-size: 0.75rem;">[38,42]</a></li>
+                            <li>Confidence: 60-63% with cited sources <a href="resources.html#references" style="font-size: 0.75rem;">[37,38]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Community Infrastructure</h4>
+                        <ul>
+                            <li>RWAs exist but not climate-focused <a href="resources.html#references" style="font-size: 0.75rem;">[44]</a></li>
+                            <li>No trained community champions</li>
+                            <li>Limited replicable models</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Status: Planning - ward data platform active, community programs launching</p>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Shift</h3>
+                    <div class="info-block">
+                        <h4>Resilient, Sustainable Communities</h4>
+                        <ul>
+                            <li>Neighbourhoods as units of climate action</li>
+                            <li>Community-owned sustainability practices</li>
+                            <li>Hyperlocal data driving local decisions</li>
+                            <li>Behavioral change at household level</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Targets</h3>
+                    <div class="info-block">
+                        <h4>Year 3 Milestones</h4>
+                        <ul>
+                            <li>8 cities with ward-level data</li>
+                            <li>1M households engaged</li>
+                            <li>500 community champions trained</li>
+                            <li>100 model neighbourhoods</li>
+                        </ul>
+                        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-sm);">Source: Program targets based on <a href="resources.html#references">[37,38]</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neighbourhood Governance Gap -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid #3b82f6; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);">
+                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="font-size: 1.25rem;">🏘️</span> The Neighbourhood Governance Gap
+                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">Who plans, who decides, who benefits?</span>
+                </h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Indian cities have wards but not ward governance. Decisions happen at city level while impacts are hyperlocal.</p>
+
+                <!-- Governance Flow Diagram -->
+                <div style="background: var(--gray-50); border-radius: 8px; padding: var(--space-md); margin-bottom: var(--space-md); overflow-x: auto;">
+                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
+<span style="color: var(--gray-600);">GOVERNANCE LEVEL</span>                    <span style="color: var(--gray-600);">POWER</span>                         <span style="color: var(--gray-600);">CLIMATE DECISION</span>
+
+<span style="font-weight: bold; color: #6366f1;">STATE GOVERNMENT</span>                     Budget, Policy, Land           │  <span style="font-weight: bold;">90%</span> of decisions
+████████████████████████████████████████████████████████████   │  Urban policy, transit, energy
+                                                               │  No ward-level targets
+
+<span style="font-weight: bold; color: #8b5cf6;">MUNICIPAL CORPORATION</span>                Implementation, Services       │  <span style="font-weight: bold;">8%</span> of decisions
+██████████                                                     │  Waste, water, roads
+                                                               │  City-wide averages
+
+<span style="font-weight: bold; color: #22c55e;">WARD COMMITTEE</span>                       Advisory only (74th CAA)       │  <span style="font-weight: bold;">2%</span> of decisions
+██                                                             │  No budget, no staff
+                                                               │  Meetings: 1-2/year
+
+<span style="font-weight: bold; color: #dc2626;">NEIGHBOURHOOD (RWA)</span>                  None (informal)                │  <span style="font-weight: bold;">0%</span> formal power
+─                                                              │  Elite, fragmented
+                                                               │  <span style="color: #dc2626;">But 100% of impact</span>
+                    </div>
+                </div>
+
+                <!-- Key Statistics Grid -->
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Democratic Deficit</h4>
+                        <ul>
+                            <li>Mumbai: <strong>BMC elections delayed since 2020</strong> <a href="https://freepressjournal.in" style="font-size: 0.7rem;" target="_blank">[FPJ]</a></li>
+                            <li>Bengaluru: <strong>Ward delimitation pending</strong> <a href="https://bengaluru.citizenmatters.in" style="font-size: 0.7rem;" target="_blank">[CitizenMatters]</a></li>
+                            <li>Ward Committees meet <strong>1-2 times/year</strong> at best <a href="https://bfriendsgroup.org" style="font-size: 0.7rem;" target="_blank">[B.PAC]</a></li>
+                            <li>Census data <strong>14+ years old</strong> (2011)</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Fiscal Weakness</h4>
+                        <ul>
+                            <li>Municipalities <strong>fiscally dependent</strong> on states <a href="https://praja.org" style="font-size: 0.7rem;" target="_blank">[Praja]</a></li>
+                            <li>BEST buses: <strong>Rs 9,300 Cr</strong> cumulative debt <a href="https://bengaluru.citizenmatters.in" style="font-size: 0.7rem;" target="_blank">[Citizen]</a></li>
+                            <li>Ward funds: <strong>₹2-5 Cr/year</strong> (discretionary)</li>
+                            <li>No dedicated climate budget at ward level</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Representation Gap</h4>
+                        <ul>
+                            <li>RWAs represent <strong>owners, not renters</strong> (30-50% of residents)</li>
+                            <li><strong>30-50%</strong> urban population in informal settlements</li>
+                            <li>No formal address = <strong>no services, no voice</strong></li>
+                            <li>English-speaking minority dominates platforms</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Data Blackhole</h4>
+                        <ul>
+                            <li>No ward-level <strong>energy consumption</strong> data</li>
+                            <li>No ward-level <strong>emissions inventory</strong></li>
+                            <li>No ward-level <strong>climate vulnerability</strong> maps</li>
+                            <li>Census, electoral, service boundaries <strong>don't align</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Sources: Praja Foundation, B.PAC Reports, Citizen Matters, Census 2011</p>
+            </div>
+
+            <!-- Hidden Dynamics - The Real Investment Opportunities -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--warning); background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);">
+                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="font-size: 1.25rem;">🔍</span> Hidden Dynamics
+                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">Where the real problems live</span>
+                </h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>The Elite Capture Problem</h4>
+                        <ul>
+                            <li><strong>RWAs ≠ community:</strong> Resident Welfare Associations represent apartment owners, not renters or slum residents</li>
+                            <li><strong>Class bias:</strong> "Model neighbourhoods" often mean gated communities — excludes majority</li>
+                            <li><strong>Voice inequality:</strong> English-speaking, tech-savvy residents dominate; informal workers invisible</li>
+                            <li><strong>Investment opportunity:</strong> Inclusive community organizing, slum partnerships, vernacular outreach</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>The Ward Boundary Game</h4>
+                        <ul>
+                            <li><strong>Delimitation politics:</strong> Ward boundaries redrawn to favor incumbents, not communities</li>
+                            <li><strong>Data misalignment:</strong> Census, electoral, and service delivery boundaries don't match</li>
+                            <li><strong>Representation gaps:</strong> Fast-growing areas under-represented; old areas over-represented</li>
+                            <li><strong>Investment opportunity:</strong> GIS-based rational delimitation, boundary harmonization</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>The Councillor Incentive Gap</h4>
+                        <ul>
+                            <li><strong>Ward funds unspent:</strong> Councillors hoard discretionary funds for election cycles</li>
+                            <li><strong>Visibility bias:</strong> Funds go to visible projects (roads, gates) not efficiency (waste, water)</li>
+                            <li><strong>No performance metric:</strong> Councillors not evaluated on climate/sustainability outcomes</li>
+                            <li><strong>Investment opportunity:</strong> Ward-level climate scorecards, participatory budgeting</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>The Informal Settlement Exclusion</h4>
+                        <ul>
+                            <li><strong>Off the map:</strong> 30-50% of urban population in slums — no formal address, no services</li>
+                            <li><strong>Climate most vulnerable:</strong> Flood-prone, heat-exposed, worst air quality — least invested</li>
+                            <li><strong>Tenure insecurity:</strong> No property rights = no incentive to invest in efficiency</li>
+                            <li><strong>Investment opportunity:</strong> Slum mapping, tenure formalization, community infrastructure</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>The Data Sovereignty Issue</h4>
+                        <ul>
+                            <li><strong>Who owns ward data?:</strong> Government, platforms, or communities? No clarity</li>
+                            <li><strong>Surveillance risk:</strong> Hyperlocal data can enable targeting — gentrification, displacement</li>
+                            <li><strong>Digital divide:</strong> Data platforms exclude non-smartphone users, elderly, informal workers</li>
+                            <li><strong>Investment opportunity:</strong> Community data trusts, offline access, data protection protocols</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>The Volunteer Burnout Cycle</h4>
+                        <ul>
+                            <li><strong>Champion fatigue:</strong> Community champions unpaid, unsupported — high dropout</li>
+                            <li><strong>Project extraction:</strong> NGOs extract case studies, communities get nothing lasting</li>
+                            <li><strong>No career path:</strong> Climate work at community level is volunteer, not profession</li>
+                            <li><strong>Investment opportunity:</strong> Paid community organizers, local institution building, handoff protocols</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discovery Methods -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid #6366f1;">
+                <h3 style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <span style="font-size: 1.25rem;">🔬</span> Discovery Methods
+                    <span style="font-size: 0.75rem; font-weight: normal; color: var(--gray-500); margin-left: auto;">How to surface hidden dynamics</span>
+                </h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Representation Audit</h4>
+                        <ul>
+                            <li>Who attends RWA meetings? Demographics vs. ward population</li>
+                            <li>Map RWA coverage vs. informal settlements</li>
+                            <li>Track whose voices reach councillors</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Ward Fund Forensics</h4>
+                        <ul>
+                            <li>Track discretionary fund allocation patterns</li>
+                            <li>Compare spending by type: visible vs. efficiency</li>
+                            <li>Audit utilization rates and election cycle timing</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Informal Settlement Mapping</h4>
+                        <ul>
+                            <li>Satellite + ground truth for slum boundaries</li>
+                            <li>Service access mapping: water, waste, electricity</li>
+                            <li>Climate vulnerability assessment by settlement</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Champion Lifecycle Tracking</h4>
+                        <ul>
+                            <li>Survey community champion dropout rates and reasons</li>
+                            <li>Track project sustainability after NGO exit</li>
+                            <li>Identify what support keeps champions engaged</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sector-grid">
+                <div class="info-panel">
+                    <h3>Markers</h3>
+                    <div class="info-block">
+                        <h4>Quantitative Signals</h4>
+                        <ul>
+                            <li>Ward data platform usage metrics</li>
+                            <li>Household participation rates</li>
+                            <li>Community champions active monthly</li>
+                            <li>Replicable models documented</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Qualitative Signals</h4>
+                        <ul>
+                            <li>RWA adoption of sustainability agendas</li>
+                            <li>Local councillor engagement with data</li>
+                            <li>Peer-to-peer sharing of practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Addressing Hidden Dynamics</h4>
+                        <ul>
+                            <li><strong>Elite Capture:</strong> Inclusive organizing; slum partnerships; vernacular outreach</li>
+                            <li><strong>Ward Boundaries:</strong> GIS-based rational delimitation; boundary harmonization</li>
+                            <li><strong>Councillor Incentives:</strong> Ward-level climate scorecards; participatory budgeting</li>
+                            <li><strong>Informal Exclusion:</strong> Slum mapping; tenure formalization; community infrastructure</li>
+                            <li><strong>Data Sovereignty:</strong> Community data trusts; offline access; data protection</li>
+                            <li><strong>Volunteer Burnout:</strong> Stipends for champions; institutional embedding; succession plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment & Economic Impact -->
+            <div class="info-panel sector-grid-full" style="margin-top: var(--space-lg); border-left: 4px solid var(--success);">
+                <h3>Investment & Economic Impact</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Investment Required</h4>
+                        <ul>
+                            <li><strong>$2.4 trillion</strong> urban infrastructure by 2050 <a href="resources.html#references" style="font-size: 0.75rem;">[63]</a></li>
+                            <li><strong>$10.9 trillion</strong> by 2070 for ~1B city residents <a href="resources.html#references" style="font-size: 0.75rem;">[63]</a></li>
+                            <li>Green municipal bonds for local financing <a href="resources.html#references" style="font-size: 0.75rem;">[36]</a></li>
+                            <li>Devolve tax powers to cities for fiscal autonomy <a href="resources.html#references" style="font-size: 0.75rem;">[49]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>GDP & Economic Benefits</h4>
+                        <ul>
+                            <li><strong>70% of GDP</strong> from urban areas <a href="resources.html#references" style="font-size: 0.75rem;">[20]</a></li>
+                            <li>20-30% additional savings from behavioral change <a href="resources.html#references" style="font-size: 0.75rem;">[3]</a></li>
+                            <li>Reduced municipal service costs via citizen action</li>
+                            <li>Property value increase in sustainable neighbourhoods</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Quality of Life Benefits</h4>
+                        <ul>
+                            <li>Community ownership of sustainability practices</li>
+                            <li>Improved local air quality and green spaces</li>
+                            <li>Enhanced social cohesion via collective action</li>
+                            <li>Resilience to climate events at ward level</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel sector-grid-full">
+                <h3>Focus Areas</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Partner-driven interventions that address hidden dynamics, not add more capacity.</p>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🏛️</div>
+                        <h4>Ward Committee Power</h4>
+                        <p>Statutory authority for ward committees, not just advisory role. Budget allocation power.</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Ward Committee Weakness</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🏘️</div>
+                        <h4>Informal Settlement Inclusion</h4>
+                        <p>Extend services to 30-50% residents in informal areas; integrate in ward-level planning</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Informal Exclusion</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">📊</div>
+                        <h4>Real-Time Ward Data</h4>
+                        <p>Replace 2011 census with live data; enable evidence-based service delivery</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Census Staleness</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🤝</div>
+                        <h4>Inclusive Governance</h4>
+                        <p>RWAs represent owners, not renters. Expand participation to include all residents.</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: RWA Elite Capture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WASTE SECTOR -->
     </main>
 
     <footer class="footer">
