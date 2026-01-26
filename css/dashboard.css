@@ -264,7 +264,7 @@ a:hover {
    ========================================== */
 .impact-stats {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
     margin-bottom: var(--space-2xl);
 }
@@ -956,12 +956,6 @@ a:hover {
 /* ==========================================
    Responsive
    ========================================== */
-@media (max-width: 1200px) {
-    .impact-stats {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 992px) {
     .dashboard-grid,
     .sector-grid,
