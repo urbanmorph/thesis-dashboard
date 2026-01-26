@@ -28,154 +28,158 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="hero-badge-dot"></span>
-                    <span>Q1 2026 • Active</span>
-                </div>
-                <h1>Multi-Sector Climate Action Initiative</h1>
-                <p class="hero-subtitle">Driving sustainability transformation across 8 priority states through research, policy, and implementation support.</p>
-                <div class="hero-meta">
-                    <div class="hero-meta-item">
-                        <strong>2026-2029</strong>
-                        <span>Program Period</span>
+                <h1>India Has the Infrastructure. Why Isn't It Working?</h1>
+                <p class="hero-subtitle">4,000+ waste processing plants at 25% capacity. STPs built but not operated. Pumps subsidized to waste energy. The problem isn't money or technology — it's <strong>hidden dynamics</strong> that make well-designed systems fail.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-value">15-20%</span>
+                        <span class="stat-label">of primary energy delivers useful services</span>
                     </div>
-                    <div class="hero-meta-item">
-                        <strong>Year 1</strong>
-                        <span>Current Phase</span>
+                    <div class="hero-stat">
+                        <span class="stat-value">28%</span>
+                        <span class="stat-label">of sewage actually treated</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">25%</span>
+                        <span class="stat-label">of waste plants at capacity</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Dashboard Grid -->
-        <div class="dashboard-grid">
-            <!-- Sectors Card -->
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title">
-                        <span class="card-title-icon">📊</span>
-                        Sector Progress
-                    </h2>
-                    <a href="sectors.html" class="card-link">View Details →</a>
-                </div>
-                <div class="card-body">
-                    <a href="sectors.html#energy" class="sector-item">
-                        <div class="sector-icon">⚡</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Energy</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar active" style="width: 8%;"></div>
-                                </div>
-                                <span class="sector-status status-active">8%</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="sectors.html#transport" class="sector-item">
-                        <div class="sector-icon">🚌</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Transport</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar active" style="width: 12%;"></div>
-                                </div>
-                                <span class="sector-status status-active">12%</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="sectors.html#buildings" class="sector-item">
-                        <div class="sector-icon">🏗️</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Buildings</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar active" style="width: 30%;"></div>
-                                </div>
-                                <span class="sector-status status-active">30%</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="sectors.html#air" class="sector-item">
-                        <div class="sector-icon">🌬️</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Air Quality</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar active" style="width: 15%;"></div>
-                                </div>
-                                <span class="sector-status status-active">15%</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="sectors.html#notf" class="sector-item">
-                        <div class="sector-icon">🏘️</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Neighbourhoods</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar planning" style="width: 10%;"></div>
-                                </div>
-                                <span class="sector-status status-planning">Planning</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="sectors.html#waste" class="sector-item">
-                        <div class="sector-icon">🗑️</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Waste</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar active" style="width: 5%;"></div>
-                                </div>
-                                <span class="sector-status status-active">5%</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="sectors.html#water" class="sector-item">
-                        <div class="sector-icon">💧</div>
-                        <div class="sector-content">
-                            <div class="sector-name">Water</div>
-                            <div class="sector-progress">
-                                <div class="progress-track">
-                                    <div class="progress-bar active" style="width: 5%;"></div>
-                                </div>
-                                <span class="sector-status status-active">5%</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+        <!-- Sector Gap Cards -->
+        <section class="sector-gaps">
+            <h2 class="section-title">The Gap in Every Sector</h2>
+            <p class="section-subtitle">Infrastructure exists. Policies exist. Investment exists. What's missing is understanding why systems underperform.</p>
 
-            <!-- Right Column: Why Interventions Fail + Action Framework -->
-            <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+            <div class="gap-grid">
+                <a href="sectors.html#energy" class="gap-card">
+                    <div class="gap-icon">⚡</div>
+                    <h3>Energy</h3>
+                    <div class="gap-stat">80%+ lost</div>
+                    <p class="gap-desc">Primary energy wasted before reaching end-use. Free pump power, AC labeling fraud, coal plant lock-in.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Supply Obsession</div>
+                </a>
+
+                <a href="sectors.html#transport" class="gap-card">
+                    <div class="gap-icon">🚌</div>
+                    <h3>Transport</h3>
+                    <div class="gap-stat">Free parking</div>
+                    <p class="gap-desc">Public space worth ₹1000s Cr/year given free to cars. Auto lobby blocks modal shift. Last-mile unsolved.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Perverse Incentives</div>
+                </a>
+
+                <a href="sectors.html#buildings" class="gap-card">
+                    <div class="gap-icon">🏗️</div>
+                    <h3>Buildings</h3>
+                    <div class="gap-stat">5% ECBC</div>
+                    <p class="gap-desc">70% of 2030 buildings yet to be built. Builders optimize for cost, not efficiency. Buyers pay the bills.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Split Incentives</div>
+                </a>
+
+                <a href="sectors.html#air" class="gap-card">
+                    <div class="gap-icon">🌬️</div>
+                    <h3>Air Quality</h3>
+                    <div class="gap-stat">67% → dust</div>
+                    <p class="gap-desc">NCAP funds to road sweeping (25-40% of PM2.5) while industries (20-40%) get 1% of spend.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Political Economy</div>
+                </a>
+
+                <a href="sectors.html#notf" class="gap-card">
+                    <div class="gap-icon">🏘️</div>
+                    <h3>Neighbourhoods</h3>
+                    <div class="gap-stat">2% power</div>
+                    <p class="gap-desc">Ward committees have advisory power only. RWAs represent owners, not the 30-50% in informal settlements.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Elite Capture</div>
+                </a>
+
+                <a href="sectors.html#waste" class="gap-card">
+                    <div class="gap-icon">🗑️</div>
+                    <h3>Waste</h3>
+                    <div class="gap-stat">4,000 plants</div>
+                    <p class="gap-desc">Processing infrastructure at 25% utilization. Informal workers do 80% of recycling but get 5-10% of value.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Informal Paradox</div>
+                </a>
+
+                <a href="sectors.html#water" class="gap-card">
+                    <div class="gap-icon">💧</div>
+                    <h3>Water</h3>
+                    <div class="gap-stat">25% global</div>
+                    <p class="gap-desc">India extracts 25% of world's groundwater. Free pump power drives depletion. STPs built but not operated.</p>
+                    <div class="gap-dynamic">Hidden dynamic: Free Resource Trap</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Pattern Recognition -->
+        <section class="patterns-section">
+            <div class="patterns-grid">
                 <!-- Hidden Dynamics Card -->
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">
                             <span class="card-title-icon">🔍</span>
-                            Why Interventions Fail
+                            The Same Patterns Everywhere
                         </h2>
-                        <a href="thesis.html" class="card-link">Explore →</a>
+                        <a href="thesis.html" class="card-link">Deep Dive →</a>
                     </div>
                     <div class="card-body">
-                        <p style="margin-bottom: var(--space-md);">India's sustainability investments consistently underperform. The problem isn't technical solutions — it's <strong>hidden dynamics</strong> that make well-designed interventions fail.</p>
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); font-size: 0.85rem;">
-                            <a href="thesis.html#data-integrity" class="thesis-link">1. Data Integrity Crisis</a>
-                            <a href="thesis.html#perverse-incentives" class="thesis-link">2. Perverse Incentives</a>
-                            <a href="thesis.html#informal-paradox" class="thesis-link">3. Informal Paradox</a>
-                            <a href="thesis.html#lab-reality" class="thesis-link">4. Lab vs Reality Gap</a>
-                            <a href="thesis.html#political-economy" class="thesis-link">5. Political Economy</a>
-                            <a href="thesis.html#supply-obsession" class="thesis-link">6. Supply Obsession</a>
-                            <a href="thesis.html#split-incentives" class="thesis-link">7. Split Incentives</a>
-                        </div>
-                        <div style="margin-top: var(--space-md); padding: var(--space-sm); background: var(--gray-100); border-radius: 6px; text-align: center;">
-                            <strong style="font-size: 1.25rem;">15-20%</strong>
-                            <span style="display: block; font-size: 0.8rem; color: var(--gray-600);">of primary energy delivers useful services</span>
+                        <p style="margin-bottom: var(--space-md);">Seven hidden dynamics block progress across all sectors. Understanding them reveals where catalytic investment creates leverage.</p>
+                        <div class="dynamics-list">
+                            <a href="thesis.html#data-integrity" class="dynamic-item">
+                                <span class="dynamic-num">1</span>
+                                <div>
+                                    <strong>Data Integrity Crisis</strong>
+                                    <span>Self-reported metrics are gamed. 97% waste collection, 88% segregation — unverified.</span>
+                                </div>
+                            </a>
+                            <a href="thesis.html#perverse-incentives" class="dynamic-item">
+                                <span class="dynamic-num">2</span>
+                                <div>
+                                    <strong>Perverse Incentives</strong>
+                                    <span>Free electricity kills efficiency. Tonnage contracts reward collection over diversion.</span>
+                                </div>
+                            </a>
+                            <a href="thesis.html#informal-paradox" class="dynamic-item">
+                                <span class="dynamic-num">3</span>
+                                <div>
+                                    <strong>Informal Paradox</strong>
+                                    <span>4M+ waste pickers do 80% of recycling. Formalization excludes them.</span>
+                                </div>
+                            </a>
+                            <a href="thesis.html#lab-reality" class="dynamic-item">
+                                <span class="dynamic-num">4</span>
+                                <div>
+                                    <strong>Lab vs Reality</strong>
+                                    <span>ACs tested at 35°C, used at 45°C. Real-world performance 17-28% worse.</span>
+                                </div>
+                            </a>
+                            <a href="thesis.html#political-economy" class="dynamic-item">
+                                <span class="dynamic-num">5</span>
+                                <div>
+                                    <strong>Political Economy</strong>
+                                    <span>Tanker mafias, land mafias, auto lobbies. Vested interests block reform.</span>
+                                </div>
+                            </a>
+                            <a href="thesis.html#supply-obsession" class="dynamic-item">
+                                <span class="dynamic-num">6</span>
+                                <div>
+                                    <strong>Supply Obsession</strong>
+                                    <span>We measure capacity added, not services delivered. GW not lumens, tonnes not circularity.</span>
+                                </div>
+                            </a>
+                            <a href="thesis.html#split-incentives" class="dynamic-item">
+                                <span class="dynamic-num">7</span>
+                                <div>
+                                    <strong>Split Incentives</strong>
+                                    <span>Builders optimize cost, buyers pay bills. Landlords decide, tenants suffer.</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Theory of Change Card (Action Framework) -->
+                <!-- Theory of Change Card -->
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">
@@ -184,41 +188,41 @@
                         </h2>
                     </div>
                     <div class="card-body">
+                        <p style="margin-bottom: var(--space-md);">Instead of funding more infrastructure, address why existing systems underperform.</p>
                         <div class="toc-flow">
                             <div class="toc-step">
                                 <div class="toc-number">1</div>
                                 <div class="toc-content">
                                     <h4>Diagnose</h4>
-                                    <p>Identify which hidden dynamics block progress in each sector</p>
+                                    <p>Which hidden dynamics block this sector? What's the real bottleneck?</p>
                                 </div>
                             </div>
                             <div class="toc-step">
                                 <div class="toc-number">2</div>
                                 <div class="toc-content">
                                     <h4>Partner</h4>
-                                    <p>Extend existing work or find new partners who can address dynamics</p>
+                                    <p>Who's already working on this? Can we extend their work or find new partners?</p>
                                 </div>
                             </div>
                             <div class="toc-step">
                                 <div class="toc-number">3</div>
                                 <div class="toc-content">
                                     <h4>Remove</h4>
-                                    <p>Eliminate barriers through targeted interventions</p>
+                                    <p>Targeted interventions to eliminate barriers, not add more capacity.</p>
                                 </div>
                             </div>
                             <div class="toc-step">
                                 <div class="toc-number">4</div>
                                 <div class="toc-content">
                                     <h4>Scale</h4>
-                                    <p>Enable solutions to spread once dynamics are addressed</p>
+                                    <p>Once dynamics are addressed, solutions spread. Unlock what's already built.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
+        </section>
 
         <!-- Quick Actions -->
         <section class="quick-actions">

@@ -954,9 +954,197 @@ a:hover {
 }
 
 /* ==========================================
+   Hero Stats (Dashboard Redesign)
+   ========================================== */
+.hero-stats {
+    display: flex;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.hero-stat {
+    text-align: center;
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-stat .stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+}
+
+.hero-stat .stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 150px;
+}
+
+/* ==========================================
+   Sector Gaps Section
+   ========================================== */
+.sector-gaps {
+    margin-bottom: var(--space-2xl);
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+    color: var(--gray-500);
+    margin-bottom: var(--space-xl);
+    font-size: 1rem;
+}
+
+.gap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.gap-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+    text-decoration: none;
+    display: block;
+}
+
+.gap-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gray-300);
+}
+
+.gap-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.gap-card h3 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: var(--space-sm);
+}
+
+.gap-stat {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark-700);
+    margin-bottom: var(--space-sm);
+    line-height: 1;
+}
+
+.gap-desc {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+}
+
+.gap-dynamic {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    padding-top: var(--space-sm);
+    border-top: 1px dashed var(--gray-200);
+    font-style: italic;
+}
+
+/* ==========================================
+   Patterns Section
+   ========================================== */
+.patterns-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.patterns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+/* ==========================================
+   Dynamics List
+   ========================================== */
+.dynamics-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.dynamic-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition);
+    border: 1px solid transparent;
+}
+
+.dynamic-item:hover {
+    background: var(--gray-50);
+    border-color: var(--gray-200);
+}
+
+.dynamic-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-600);
+    flex-shrink: 0;
+}
+
+.dynamic-item:hover .dynamic-num {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.dynamic-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.dynamic-item strong {
+    font-size: 0.9rem;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.dynamic-item span {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    line-height: 1.4;
+}
+
+/* ==========================================
    Responsive
    ========================================== */
 @media (max-width: 992px) {
+    .patterns-grid {
+        grid-template-columns: 1fr;
+    }
+
     .dashboard-grid,
     .sector-grid,
     .reference-grid {
@@ -982,7 +1170,28 @@ a:hover {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .hero-stat {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .hero-stat .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .gap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gap-stat {
+        font-size: 1.25rem;
     }
 
     .sector-tabs {
