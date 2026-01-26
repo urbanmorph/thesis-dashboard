@@ -64,6 +64,16 @@
                 <span class="tab-label">NoTF</span>
                 <span class="tab-status status-planning">Planning</span>
             </button>
+            <button class="sector-tab" data-sector="food" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🌾</span>
+                <span class="tab-label">Food</span>
+                <span class="tab-status status-planning">New</span>
+            </button>
+            <button class="sector-tab" data-sector="biodiversity" style="padding: var(--space-sm) var(--space-md);">
+                <span class="tab-icon">🌳</span>
+                <span class="tab-label">Biodiversity</span>
+                <span class="tab-status status-planning">New</span>
+            </button>
         </div>
 
         <!-- ENERGY SECTOR -->
@@ -2699,7 +2709,450 @@
             </div>
         </div>
 
-        <!-- WASTE SECTOR -->
+        <!-- FOOD SYSTEMS SECTOR -->
+        <div class="sector-content-panel" id="food">
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Food Loss & Waste</h4>
+                        <ul>
+                            <li><strong>78.2 million tonnes</strong> food wasted annually <a href="resources.html#references" style="font-size: 0.75rem;">[144]</a></li>
+                            <li>Value of loss: <strong>₹92,000 crore/year</strong> <a href="resources.html#references" style="font-size: 0.75rem;">[144]</a></li>
+                            <li><strong>40% of fruits/vegetables</strong> lost before reaching markets <a href="resources.html#references" style="font-size: 0.75rem;">[145]</a></li>
+                            <li><strong>64.1 MT CO₂e</strong> emissions from post-harvest losses <a href="resources.html#references" style="font-size: 0.75rem;">[144]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Cold Chain Gap</h4>
+                        <ul>
+                            <li>Only <strong>500 of 125,000</strong> needed rural packhouses exist <a href="resources.html#references" style="font-size: 0.75rem;">[145]</a></li>
+                            <li>Cold storage <strong>70% for potatoes only</strong> <a href="resources.html#references" style="font-size: 0.75rem;">[145]</a></li>
+                            <li>Reefer trucks: <strong>9,000 vs 62,000 needed</strong> <a href="resources.html#references" style="font-size: 0.75rem;">[145]</a></li>
+                            <li>Horticulture gets <strong>&lt;4% of cold storage</strong> capacity <a href="resources.html#references" style="font-size: 0.75rem;">[145]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Production & Nutrition</h4>
+                        <ul>
+                            <li><strong>MSP covers only 23 crops</strong> — biased toward rice/wheat <a href="resources.html#references" style="font-size: 0.75rem;">[146]</a></li>
+                            <li>Rice/wheat area: <strong>60% of foodgrains</strong>, millets: &lt;10% <a href="resources.html#references" style="font-size: 0.75rem;">[146]</a></li>
+                            <li>Public distribution: <strong>almost exclusively rice/wheat</strong> <a href="resources.html#references" style="font-size: 0.75rem;">[146]</a></li>
+                            <li>Dietary diversity declining despite production increases</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shift -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--warning);">
+                <h3>The Shift</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+                    <div>
+                        <h4 style="color: var(--gray-500);">FROM: Production Obsession</h4>
+                        <ul style="color: var(--gray-600);">
+                            <li>Maximize output (Green Revolution model)</li>
+                            <li>Rice/wheat monoculture incentives</li>
+                            <li>Post-harvest loss accepted as inevitable</li>
+                            <li>Urban retail infrastructure focus</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--success);">TO: Nutrition & Sustainability</h4>
+                        <ul>
+                            <li>Minimize loss across value chain</li>
+                            <li>Dietary diversity and millet revival</li>
+                            <li>Rural cold chain infrastructure</li>
+                            <li>Farmer-to-fork efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Dynamics -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--secondary);">
+                <h3>Hidden Dynamics</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Why infrastructure alone won't solve food system inefficiency</p>
+
+                <div class="focus-grid" style="margin-bottom: var(--space-lg);">
+                    <div class="evidence-card">
+                        <div class="evidence-stat">70%</div>
+                        <div class="evidence-context">Cold storage monopolized by potatoes — leaving horticulture stranded</div>
+                        <div class="evidence-implication"><strong>Dynamic:</strong> Potato processing industry shaped cold chain, not nutrition needs</div>
+                    </div>
+                    <div class="evidence-card">
+                        <div class="evidence-stat">₹2.5L Cr</div>
+                        <div class="evidence-context">Annual MSP procurement — almost all rice/wheat</div>
+                        <div class="evidence-implication"><strong>Dynamic:</strong> Price support creates production lock-in, undermines crop diversification</div>
+                    </div>
+                    <div class="evidence-card">
+                        <div class="evidence-stat">0.4%</div>
+                        <div class="evidence-context">Packhouse coverage in rural areas (500 of 125,000 needed)</div>
+                        <div class="evidence-implication"><strong>Dynamic:</strong> Capital flows to urban cold storage, not farm-gate infrastructure</div>
+                    </div>
+                </div>
+
+                <div class="dynamics-list" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md);">
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">1. MSP Lock-In</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Guaranteed procurement for rice/wheat creates rational disincentive to shift to millets or horticulture. Farmers face price risk without MSP support.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">2. Cold Chain Capture</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Potato processing industry built cold storage for their needs; other produce has no equivalent demand aggregator to justify investment.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">3. Last-Mile Economics</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Rural packhouses unviable without aggregation; individual farmers can't fill cold storage economically. FPOs remain weak in most states.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">4. APMC Fragmentation</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">State-level mandi reforms incomplete; multiple handling points add cost and spoilage; direct marketing still faces legal barriers in many states.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">5. PDS Path Dependency</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Public Distribution System infrastructure built for rice/wheat. Including millets requires parallel logistics the system wasn't designed for.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">6. Water-Food Nexus Ignored</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Free electricity for pumping + MSP for water-intensive crops = groundwater depletion. Environmental costs externalized from food pricing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Markers -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg);">
+                <h3>Markers (Observable Signals)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Infrastructure Markers</h4>
+                        <ul>
+                            <li>Rural packhouse density per 1,000 farmers</li>
+                            <li>Cold storage utilization by crop type</li>
+                            <li>Reefer truck availability at mandis</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Policy Markers</h4>
+                        <ul>
+                            <li>MSP crop diversification index</li>
+                            <li>PDS millet distribution volumes</li>
+                            <li>FPO formation and activity rates</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Outcome Markers</h4>
+                        <ul>
+                            <li>Post-harvest loss rates by crop</li>
+                            <li>Farmer price realization vs mandi prices</li>
+                            <li>Dietary diversity scores (district level)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategies & Investment -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Addressing Hidden Dynamics</h4>
+                        <ul>
+                            <li><strong>MSP Lock-In:</strong> Expand MSP to millets with equivalent procurement; shift PDS to nutrition-based entitlements</li>
+                            <li><strong>Cold Chain Capture:</strong> Multi-commodity cold stores; horticulture-specific subsidies; break potato monopoly</li>
+                            <li><strong>Last-Mile:</strong> FPO strengthening; aggregation centers at panchayat level; shared infrastructure models</li>
+                            <li><strong>APMC Reform:</strong> State-level direct marketing laws; reduce intermediation; electronic trading platforms</li>
+                            <li><strong>PDS Path:</strong> Fortified millet pilots; build parallel distribution for diverse foods</li>
+                            <li><strong>Water-Food:</strong> Water budgeting for MSP crops; differential pricing for water-intensive cultivation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Investment & Economic Impact</h3>
+                    <div class="info-block">
+                        <h4>Investment Required</h4>
+                        <ul>
+                            <li><strong>₹1.7 lakh crore</strong> for 35MT additional cold chain capacity <a href="resources.html#references" style="font-size: 0.75rem;">[145]</a></li>
+                            <li>125,000 packhouses needed across rural India</li>
+                            <li>53,000 additional reefer trucks required</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Economic Returns</h4>
+                        <ul>
+                            <li><strong>₹92,000 Cr/year</strong> food loss avoided <a href="resources.html#references" style="font-size: 0.75rem;">[144]</a></li>
+                            <li>25-40% higher farmer price realization with cold chain</li>
+                            <li>Health cost savings from improved nutrition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Focus Areas -->
+            <div class="info-panel sector-grid-full" style="margin-top: var(--space-lg);">
+                <h3>Focus Areas</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Interventions targeting hidden dynamics — not just building more cold storage.</p>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🥬</div>
+                        <h4>Horticulture Cold Chain</h4>
+                        <p>Break potato monopoly; multi-commodity cold stores near production clusters; farm-gate infrastructure priority</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Cold Chain Capture</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🌾</div>
+                        <h4>Millet Value Chains</h4>
+                        <p>MSP expansion to millets; PDS diversification; processing infrastructure for ready-to-eat millet products</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: MSP Lock-In</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🤝</div>
+                        <h4>FPO Aggregation</h4>
+                        <p>Strengthen Farmer Producer Organizations for collective cold storage use; panchayat-level aggregation points</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Last-Mile Economics</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">💧</div>
+                        <h4>Water-Smart MSP</h4>
+                        <p>Differential support for water-intensive vs drought-resistant crops; align agricultural policy with water availability</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Water-Food Nexus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIODIVERSITY SECTOR -->
+        <div class="sector-content-panel" id="biodiversity">
+            <!-- Baseline -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--gray-400);">
+                <h3>Baseline (Current Status)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Forest Cover Change</h4>
+                        <ul>
+                            <li><strong>24,651 sq km</strong> dense forest lost (2003-2023) <a href="resources.html#references" style="font-size: 0.75rem;">[147]</a></li>
+                            <li>Replaced by <strong>plantations, not natural regeneration</strong> <a href="resources.html#references" style="font-size: 0.75rem;">[147]</a></li>
+                            <li>Forest fires: <strong>44% of tree cover loss</strong> since 2001 <a href="resources.html#references" style="font-size: 0.75rem;">[148]</a></li>
+                            <li>India ranks <strong>176 of 180</strong> on Nature Conservation Index <a href="resources.html#references" style="font-size: 0.75rem;">[149]</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>CAMPA Fund Failure</h4>
+                        <ul>
+                            <li>Compensatory plantation <strong>survival rate: 7.5%</strong> <a href="resources.html#references" style="font-size: 0.75rem;">[150]</a></li>
+                            <li><strong>₹66,000+ crore</strong> accumulated, poorly utilized <a href="resources.html#references" style="font-size: 0.75rem;">[150]</a></li>
+                            <li>Net forest loss masked by "compensatory" plantings</li>
+                            <li>Monoculture plantations ≠ biodiverse forests</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Wildlife & Habitat</h4>
+                        <ul>
+                            <li><strong>Lantana covers 40%</strong> of tiger reserve area <a href="resources.html#references" style="font-size: 0.75rem;">[151]</a></li>
+                            <li>Human-wildlife conflict: <strong>2,727 deaths</strong> from elephants (2019-24) <a href="resources.html#references" style="font-size: 0.75rem;">[152]</a></li>
+                            <li>Corridors fragmented by linear infrastructure</li>
+                            <li>67% of Protected Areas face moderate-to-high threat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shift -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--warning);">
+                <h3>The Shift</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+                    <div>
+                        <h4 style="color: var(--gray-500);">FROM: Compensatory Planting</h4>
+                        <ul style="color: var(--gray-600);">
+                            <li>Plantations as forest replacement</li>
+                            <li>Fund accumulation without outcomes</li>
+                            <li>Protected Areas as islands</li>
+                            <li>Species vs ecosystem focus</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--success);">TO: Ecosystem Restoration</h4>
+                        <ul>
+                            <li>Natural regeneration priority</li>
+                            <li>Outcomes-based conservation</li>
+                            <li>Landscape connectivity</li>
+                            <li>Biodiversity as climate infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Dynamics -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg); border-left: 4px solid var(--secondary);">
+                <h3>Hidden Dynamics</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Why more plantations won't restore biodiversity</p>
+
+                <div class="focus-grid" style="margin-bottom: var(--space-lg);">
+                    <div class="evidence-card">
+                        <div class="evidence-stat">7.5%</div>
+                        <div class="evidence-context">CAMPA plantation survival rate — billions spent, forests still lost</div>
+                        <div class="evidence-implication"><strong>Dynamic:</strong> Plantations count as "compensation" but don't replicate ecosystems</div>
+                    </div>
+                    <div class="evidence-card">
+                        <div class="evidence-stat">40%</div>
+                        <div class="evidence-context">Tiger reserve area invaded by Lantana camara</div>
+                        <div class="evidence-implication"><strong>Dynamic:</strong> Invasive species outcompete native regeneration; removal is labor-intensive</div>
+                    </div>
+                    <div class="evidence-card">
+                        <div class="evidence-stat">₹66K Cr</div>
+                        <div class="evidence-context">CAMPA funds accumulated with poor utilization</div>
+                        <div class="evidence-implication"><strong>Dynamic:</strong> Fund exists to legitimize diversion, not restore forests</div>
+                    </div>
+                </div>
+
+                <div class="dynamics-list" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md);">
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">1. Compensation Accounting</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">CAMPA creates legal fiction that planted saplings = lost forests. Dense natural forests diverted; monoculture plantations "compensate." Net biodiversity loss hidden in paperwork.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">2. Fund Hoarding Incentive</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">States accumulate CAMPA funds as fiscal reserves. Spending requires implementation capacity; hoarding is administratively easier. Funds become forest department savings accounts.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">3. Invasive Species Neglect</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Lantana removal is labor-intensive with no glamour. Planting new trees is photographable; clearing invasives is not. Political economy favors visible over effective action.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">4. Corridor Fragmentation</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Linear infrastructure (roads, railways, canals) fragments wildlife corridors. Mitigation measures underfunded; CAMPA compensation doesn't restore connectivity.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">5. Fire Suppression Gap</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Forest fires cause 44% of tree cover loss. Ground-level fire management requires community engagement; forest departments lack capacity for landscape-scale prevention.</p>
+                    </div>
+                    <div class="dynamics-item" style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                        <h4 style="margin-bottom: var(--space-xs); color: var(--secondary);">6. Human-Wildlife Conflict</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray-600); margin: 0;">Habitat fragmentation pushes wildlife into human areas. Compensation for crop/life loss exists but is slow; prevention infrastructure (barriers, early warning) inadequate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Markers -->
+            <div class="info-panel sector-grid-full" style="margin-bottom: var(--space-lg);">
+                <h3>Markers (Observable Signals)</h3>
+                <div class="focus-grid">
+                    <div class="info-block">
+                        <h4>Forest Quality Markers</h4>
+                        <ul>
+                            <li>Dense forest vs plantation ratio</li>
+                            <li>CAMPA plantation survival audits</li>
+                            <li>Native vs invasive species coverage</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Connectivity Markers</h4>
+                        <ul>
+                            <li>Wildlife corridor integrity index</li>
+                            <li>Linear infrastructure mitigation compliance</li>
+                            <li>Protected Area connectivity scores</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Conflict Markers</h4>
+                        <ul>
+                            <li>Human-wildlife conflict incidents</li>
+                            <li>Forest fire frequency and extent</li>
+                            <li>Community forest management adoption</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategies & Investment -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+                <div class="info-panel">
+                    <h3>Strategies</h3>
+                    <div class="info-block">
+                        <h4>Addressing Hidden Dynamics</h4>
+                        <ul>
+                            <li><strong>Compensation:</strong> Natural regeneration as default; plantation survival accountability; biodiversity metrics not tree counts</li>
+                            <li><strong>Fund Hoarding:</strong> Time-bound utilization mandates; outcome-linked disbursement; third-party monitoring</li>
+                            <li><strong>Invasives:</strong> Lantana removal campaigns; community livelihood linkage (Lantana furniture); systematic mapping</li>
+                            <li><strong>Corridors:</strong> Mandatory wildlife crossings; corridor land acquisition funds; landscape planning</li>
+                            <li><strong>Fire:</strong> Community-based fire management; early warning systems; controlled burning protocols</li>
+                            <li><strong>Conflict:</strong> Barrier infrastructure; rapid compensation; corridor restoration to reduce pressure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Investment & Economic Impact</h3>
+                    <div class="info-block">
+                        <h4>Investment Opportunity</h4>
+                        <ul>
+                            <li><strong>₹66,000+ Cr</strong> CAMPA funds available for redeployment</li>
+                            <li>Wildlife corridor restoration and acquisition</li>
+                            <li>Invasive species removal at scale</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h4>Economic Returns</h4>
+                        <ul>
+                            <li>Ecosystem services: water, carbon, soil conservation</li>
+                            <li>Reduced human-wildlife conflict costs</li>
+                            <li>Ecotourism potential with restored habitats</li>
+                            <li>Carbon credits from verified restoration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Focus Areas -->
+            <div class="info-panel sector-grid-full" style="margin-top: var(--space-lg);">
+                <h3>Focus Areas</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-md); font-style: italic;">Interventions targeting hidden dynamics — not planting more monocultures.</p>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🌿</div>
+                        <h4>Natural Regeneration</h4>
+                        <p>Shift CAMPA from plantations to natural regeneration; survival-based outcomes; biodiversity audits not tree counts</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Compensation Accounting</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🪴</div>
+                        <h4>Invasive Species Removal</h4>
+                        <p>Systematic Lantana clearing in tiger reserves; community livelihood programs; restore native understory</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Invasive Species Neglect</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🦁</div>
+                        <h4>Corridor Connectivity</h4>
+                        <p>Wildlife crossings on linear infrastructure; corridor land acquisition; landscape-level conservation planning</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Corridor Fragmentation</span>
+                        </div>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-card-icon">🔥</div>
+                        <h4>Community Fire Management</h4>
+                        <p>Village-level fire prevention committees; early warning systems; controlled burning to reduce fuel load</p>
+                        <div class="focus-targets">
+                            <span class="focus-target">Dynamic: Fire Suppression Gap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -2717,7 +3170,9 @@
             air: { icon: '🌬️', title: 'Air Quality Sector', subtitle: 'Hyperlocal monitoring, source apportionment, and Open AQ model for India' },
             notf: { icon: '🏘️', title: 'Neighbourhoods of the Future', subtitle: 'Community-led action, ward-level climate data, and integrated sustainability' },
             waste: { icon: '🗑️', title: 'Waste Management Sector', subtitle: 'Circular economy, differentiated city strategies, and zero waste to landfill' },
-            water: { icon: '💧', title: 'Water Sector', subtitle: 'Water conservation, wastewater treatment, and groundwater management' }
+            water: { icon: '💧', title: 'Water Sector', subtitle: 'Water conservation, wastewater treatment, and groundwater management' },
+            food: { icon: '🌾', title: 'Food Systems Sector', subtitle: 'Cold chain infrastructure, millet revival, and reducing post-harvest losses' },
+            biodiversity: { icon: '🌳', title: 'Biodiversity Sector', subtitle: 'Natural regeneration, invasive species removal, and wildlife corridor connectivity' }
         };
 
         // Update hero content
