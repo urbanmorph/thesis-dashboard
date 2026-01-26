@@ -227,6 +227,20 @@
     line-height: 1.6;
 }
 
+.evidence-card .impact {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px dashed var(--gray-300);
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.evidence-card .impact::before {
+    content: "↳ ";
+    color: var(--gray-400);
+}
+
 /* Investment Box - Minimal Style */
 .investment-box {
     background: var(--white);
