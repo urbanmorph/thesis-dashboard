@@ -3022,6 +3022,58 @@
                 </div>
             </div>
         </div>
+    </main>
 
+    <footer class="footer">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
+            <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0" style="height: 31px;">
+        </a>
+    </footer>
+
+    <script>
+        // Sector hero content
+        const sectorHeroes = {
+            energy: { icon: '⚡', title: 'Energy Sector', subtitle: 'Demand-side efficiency and circular economy for sustainable energy transition' },
+            transport: { icon: '🚌', title: 'Transport Sector', subtitle: 'Sustainable mobility, active transport, and public transit systems' },
+            buildings: { icon: '🏗️', title: 'Buildings Sector', subtitle: 'High-performance buildings, embodied carbon reduction, and net-zero construction' },
+            air: { icon: '🌬️', title: 'Air Quality Sector', subtitle: 'Hyperlocal monitoring, source apportionment, and Open AQ model for India' },
+            notf: { icon: '🏘️', title: 'Neighbourhoods of the Future', subtitle: 'Community-led action, ward-level climate data, and integrated sustainability' },
+            waste: { icon: '🗑️', title: 'Waste Management Sector', subtitle: 'Circular economy, differentiated city strategies, and zero waste to landfill' },
+            water: { icon: '💧', title: 'Water Sector', subtitle: 'Water conservation, wastewater treatment, and groundwater management' },
+            food: { icon: '🌾', title: 'Food Systems Sector', subtitle: 'Cold chain infrastructure, millet revival, and reducing post-harvest losses' },
+            biodiversity: { icon: '🌳', title: 'Biodiversity Sector', subtitle: 'Natural regeneration, invasive species removal, and wildlife corridor connectivity' }
+        };
+
+        // Update hero content
+        function updateHero(sectorId) {
+            const hero = sectorHeroes[sectorId];
+            if (hero) {
+                document.getElementById('sector-hero-title').textContent = hero.icon + ' ' + hero.title;
+                document.getElementById('sector-hero-subtitle').textContent = hero.subtitle;
+            }
+        }
+
+        // Tab switching functionality
+        document.querySelectorAll('.sector-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.sector-content-panel').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                const sectorId = tab.dataset.sector;
+                document.getElementById(sectorId).classList.add('active');
+                updateHero(sectorId);
+                history.replaceState(null, null, '#' + sectorId);
+            });
+        });
+
+        // Handle direct URL with hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const tab = document.querySelector(`[data-sector="${hash}"]`);
+                if (tab) tab.click();
+            }
+        });
+    </script>
 </body>
 </html>
