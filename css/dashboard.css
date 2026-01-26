@@ -1232,3 +1232,60 @@ a:hover {
     }
 }
 
+/* Sector Highlight Cards */
+.sector-highlight-card {
+    display: grid;
+    grid-template-columns: 80px repeat(4, 1fr);
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--gray-50);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+.sector-highlight-card:hover {
+    background: var(--gray-100);
+}
+
+@media (max-width: 992px) {
+    .sector-highlight-card {
+        grid-template-columns: 60px repeat(2, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .sector-highlight-card > div:nth-child(1) {
+        grid-row: span 2;
+    }
+
+    .sector-highlight-card > div:nth-child(4),
+    .sector-highlight-card > div:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .sector-highlight-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .sector-highlight-card > div:first-child {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: var(--space-sm);
+    }
+
+    .toc-flow {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .toc-flow {
+        grid-template-columns: 1fr !important;
+    }
+}
+
