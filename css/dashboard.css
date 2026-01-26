@@ -209,7 +209,7 @@ a:hover {
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-full);
     font-size: 0.8rem;
-    color: var(--gray-300);
+    color: var(--gray-200);
     margin-bottom: var(--space-lg);
     backdrop-filter: blur(4px);
 }
@@ -235,7 +235,7 @@ a:hover {
 }
 
 .hero-subtitle {
-    color: var(--gray-400);
+    color: var(--gray-300);
     font-size: 1.125rem;
     max-width: 500px;
     margin-bottom: 0;
@@ -251,7 +251,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    color: var(--gray-400);
+    color: var(--gray-300);
     font-size: 0.9rem;
 }
 
