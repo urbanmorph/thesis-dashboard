@@ -34,6 +34,9 @@ temp/
 # Vercel
 .vercel
 
+# Supabase CLI temporary files
+supabase/
+
 # Admin data (stored in Supabase - KEEP PRIVATE)
 data/partners.json
 data/funding.json
