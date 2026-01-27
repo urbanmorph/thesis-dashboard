@@ -8,23 +8,23 @@
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <nav class="navbar navbar-admin">
-        <div class="nav-brand">
-            <span class="nav-logo">🌱</span>
-            <span class="nav-title">India Progress Monitor</span>
-            <span class="nav-badge">ADMIN</span>
+    <nav class="bg-dark border-b border-gray-700 px-8 py-4 flex justify-between items-center sticky top-0 z-[100]">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🌱</span>
+            <span class="text-lg font-bold text-white">India Progress Monitor</span>
+            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded ml-2">ADMIN</span>
         </div>
-        <div class="nav-links">
-            <a href="admin.html" class="nav-link">Overview</a>
-            <a href="admin-partners.html" class="nav-link active">Partners</a>
-            <a href="admin-funding.html" class="nav-link">Funding</a>
-            <a href="admin-roadmap.html" class="nav-link">Roadmap</a>
-            <button id="logoutBtn" class="nav-link nav-logout" style="display:none;">Logout</button>
+        <div class="flex items-center gap-1">
+            <a href="admin.html" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800">Overview</a>
+            <a href="admin-partners.html" class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-150">Partners</a>
+            <a href="admin-funding.html" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800">Funding</a>
+            <a href="admin-roadmap.html" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800">Roadmap</a>
+            <button id="logoutBtn" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800 hidden">Logout</button>
         </div>
     </nav>
 
-    <main class="container">
-        <section class="admin-header">
+    <main class="max-w-[1400px] mx-auto px-12 py-12">
+        <section class="flex justify-between items-center mb-12">
             <div class="admin-header-content">
                 <h1>Partner Organizations</h1>
                 <p class="admin-subtitle">26 Partners | 13 Agreements Signed | ₹278-302 Cr Total Portfolio</p>
@@ -40,7 +40,7 @@
         </section>
 
         <!-- SIGNED AGREEMENTS SECTION -->
-        <section class="section">
+        <section class="mb-12">
             <h2 class="section-title" style="color: var(--success-dark);">
                 ✓ Agreements Signed (13 Partners)
             </h2>
@@ -504,7 +504,7 @@
         </section>
 
         <!-- POTENTIAL PARTNERS SECTION -->
-        <section class="section">
+        <section class="mb-12">
             <h2 class="section-title" style="color: var(--warning-dark);">
                 ⏳ Potential Partners (13 Partners)
             </h2>
