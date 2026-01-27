@@ -510,24 +510,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India invests in roads and metros while buses, walking, and cycling — which move most people — are starved of funds.</p>
 
-                <!-- Investment Flow Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">TRANSPORT INVESTMENT</span>                    <span style="color: #4b5563;">MODE SHARE</span>                          <span style="color: #4b5563;">RESULT</span>
-
-<span style="font-weight: bold; color: #dc2626;">█████████████████████████████████████████████████</span> Roads (~70%)     │  Cars: 5% of trips     │  <span style="color: #dc2626;">138% PMV growth</span>
-                                                                          │  but 92% of energy     │  <span style="color: #dc2626;">vs 26% population</span>
-
-<span style="font-weight: bold; color: #f59e0b;">█████████████████████████████</span> Metro (54% of MoHUA budget, 2017)    │  &lt;1% mode share        │  <span style="color: #f59e0b;">40x cost of BRT</span>
-                                                                          │  in most cities        │  <span style="color: #f59e0b;">for 4x passengers</span>
-
-<span style="font-weight: bold; color: #22c55e;">████</span> Buses (~11.5% of transport investment)                           │  Declining ridership   │  <span style="color: #22c55e;">Best ROI: 3,750</span>
-                                                                          │  but highest potential │  <span style="color: #22c55e;">pax/₹Cr/km</span>
-
-<span style="font-weight: bold; color: #06b6d4;">█</span> Walking & Cycling (minimal)                                          │  <span style="font-weight: bold;">31% of trips</span>         │  <span style="color: #dc2626;">20% of fatalities</span>
-                                                                          │  (down from 42%)       │  <span style="color: #dc2626;">85% roads no NMT</span>
-                    </div>
-                </div>
+                <!-- Interactive Investment Flow Diagram -->
+                <div id="transport-investment-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -915,25 +899,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India's building codes focus on operational energy while embodied carbon — 40% of building emissions — goes unmeasured and unregulated.</p>
 
-                <!-- Emissions Split Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">BUILDING SECTOR: 32% OF INDIA'S GHG EMISSIONS</span>
-
-<span style="font-weight: bold; color: #dc2626;">EMBODIED (40%)</span> ─────────────────────────────────────────────  <span style="color: #dc2626;">← NOT REGULATED</span>
-│
-├── Cement: <strong>8%</strong> of national emissions           │  Demand: 99 MT (2019) → 755 MT (2050)
-├── Steel: <strong>12%</strong> of national emissions           │  Demand: 328 MT (2019) → 1,360 MT (2050)
-├── Brick kilns: <strong>65 MT CO₂/year</strong>               │  2.5% of national emissions
-└── 70% of cement/steel goes to buildings        │  <span style="color: #dc2626;">70% of 2047 infrastructure not yet built</span>
-
-<span style="font-weight: bold; color: #22c55e;">OPERATIONAL (60%)</span> ────────────────────────────────────────  <span style="color: #22c55e;">← ECBC FOCUS</span>
-│
-├── Cooling: 46→143 GW peak demand by 2030       │  But ECBC covers &lt;5% of buildings
-├── Lighting, appliances, heating                │  Only 15 states notified ECBC 2017
-└── Potential: 30-50% reduction with codes       │  <span style="color: #f59e0b;">Gujarat alone could save 83 TWh by 2030</span>
-                    </div>
-                </div>
+                <!-- Interactive Emissions Split Diagram -->
+                <div id="building-emissions-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -1326,27 +1293,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">67% of NCAP funds address road dust (25-40% of PM2.5), while industries (20-40%) and vehicles (20-35%) receive a fraction of attention.</p>
 
-                <!-- Funding vs Pollution Source Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">NCAP FUND ALLOCATION</span>                                         <span style="color: #4b5563;">ACTUAL PM2.5 SOURCE</span>              <span style="color: #4b5563;">GAP</span>
-
-<span style="font-weight: bold; color: #f59e0b;">████████████████████████████████████████████████████████████</span>  Road Dust: <span style="font-weight: bold;">67%</span> funds   │  25-40% of PM2.5    │  <span style="color: #f59e0b;">Over-invested</span>
-                                                                                      │  (re-suspends quickly)│
-
-<span style="font-weight: bold; color: #dc2626;">█████</span>                                                           Vehicles: <span style="font-weight: bold;">~7%</span> funds    │  20-35% of PM2.5    │  <span style="color: #dc2626;">Under-invested</span>
-                                                                                      │  (60-80% at hotspots)│
-
-<span style="font-weight: bold; color: #dc2626;">█</span>                                                               Industries: <span style="font-weight: bold;">~1%</span> funds │  20-40% of PM2.5    │  <span style="color: #dc2626;">Severely neglected</span>
-                                                                                      │  (81% miss data)     │
-
-<span style="font-weight: bold; color: #dc2626;">█</span>                                                               Domestic Fuel: <span style="font-weight: bold;">~1%</span>   │  15-25% of PM2.5    │  <span style="color: #dc2626;">Ignored entirely</span>
-                                                                                      │  (LPG transition gap)│
-
-<span style="font-weight: bold; color: #22c55e;">████</span>                                                            Monitoring: <span style="font-weight: bold;">~4%</span> funds │  <span style="font-weight: bold; color: #dc2626;">88%</span> towns lack      │  <span style="color: #dc2626;">Flying blind</span>
-                                                                                      │  any AQ monitoring   │
-                    </div>
-                </div>
+                <!-- Interactive Funding vs Pollution Diagram -->
+                <div id="air-quality-funding-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -2047,30 +1995,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India has mandated 20% wastewater reuse since 2008. Eighteen years later, only 11 of 28 states have reuse policies — and most lack implementation plans.</p>
 
-                <!-- Reuse Gap Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">POLICY MANDATE</span>                              <span style="color: #4b5563;">REALITY</span>                           <span style="color: #4b5563;">GAP</span>
-
-<span style="font-weight: bold; color: #6366f1;">2008 National Sanitation Policy</span>             20% reuse mandate                │  <span style="color: #dc2626;">18 years, still unmet</span>
-<span style="font-weight: bold; color: #6366f1;">2016 Power Tariff Policy</span>                     Thermal plants use treated water │  <span style="color: #dc2626;">Rarely enforced</span>
-<span style="font-weight: bold; color: #6366f1;">2021 AMRUT 2.0</span>                               20% city water from reuse        │  <span style="color: #dc2626;">No state action plans</span>
-<span style="font-weight: bold; color: #6366f1;">2022 NMCG Framework</span>                          50% reuse by 2025                │  <span style="color: #dc2626;">Currently at ~5-10%</span>
-<span style="font-weight: bold; color: #6366f1;">2024 Liquid Waste Rules</span>                      50% by 2031 (bulk consumers)     │  <span style="color: #f59e0b;">Not yet effective</span>
-
-<span style="color: #4b5563;">STATE REUSE POLICIES</span>
-
-<span style="font-weight: bold; color: #22c55e;">████████████████████████████████████████</span>  States WITH policy: <span style="font-weight: bold;">11</span>
-<span style="font-weight: bold; color: #dc2626;">████████████████████████████████████████████████████████████████████</span>  States WITHOUT: <span style="font-weight: bold;">17</span>
-
-<span style="color: #4b5563;">KEY BARRIERS IDENTIFIED (CSE 2024):</span>
-• Fragmented responsibility: MoHUA, CPCB, SPCBs, ULBs — no coordinating authority
-• Lack of enforcement: Most policies advisory, not mandatory
-• Absence of standards: No unified quality benchmarks for reuse applications
-• Financial constraints: Limited funding for ULBs, especially smaller cities
-• Public hesitation: Health and safety concerns about treated water
-                    </div>
-                </div>
+                <!-- Interactive Reuse Gap Diagram -->
+                <div id="water-reuse-gap-chart" style="height: 400px; margin-bottom: 1rem;"></div>
 
                 <!-- State Performance Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -2122,27 +2048,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India extracts 25% of global groundwater but treats only 28% of sewage. Free electricity for pumps and no water pricing drive unsustainable extraction.</p>
 
-                <!-- Water Flow Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">WATER EXTRACTED</span>                         <span style="color: #4b5563;">WHAT HAPPENS</span>                    <span style="color: #4b5563;">GOVERNANCE</span>
-
-<span style="font-weight: bold; color: #3b82f6;">████████████████████████████████████████████</span>  241 BCM/year extracted    │  25% of global total
-                                                                        │  World's largest user
-
-<span style="font-weight: bold; color: #f59e0b;">██████████████████████████████████████</span>       Agriculture: <span style="font-weight: bold;">87%</span>         │  Free electricity
-                                                                        │  <span style="color: #dc2626;">No metering mandate</span>
-
-<span style="font-weight: bold; color: #6366f1;">████</span>                                         Domestic: <span style="font-weight: bold;">11%</span>              │  Tanker economy fills gap
-                                                                        │  <span style="color: #dc2626;">5,000+ informal operators</span>
-
-<span style="color: #4b5563;">SEWAGE GENERATED: 72 BILLION LITERS/DAY</span>
-
-<span style="font-weight: bold; color: #22c55e;">██████████████</span>                               Capacity exists: <span style="font-weight: bold;">37%</span>       │  STPs built
-<span style="font-weight: bold; color: #f59e0b;">██████████</span>                                   Actually treated: <span style="font-weight: bold;">28%</span>      │  <span style="color: #dc2626;">But not operated</span>
-<span style="font-weight: bold; color: #dc2626;">████</span>                                         Meets standards: <span style="font-weight: bold;">~17%</span>      │  <span style="color: #dc2626;">39% STPs non-compliant</span>
-                    </div>
-                </div>
+                <!-- Interactive Water Flow Diagram -->
+                <div id="water-flow-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -2486,25 +2393,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">The 74th Constitutional Amendment (1992) promised local self-governance. 30+ years later, ULBs remain "weak and ineffective" with minimal devolution of funds, functions, and functionaries.</p>
 
-                <!-- Devolution Status Visualization -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 650px;">
-<span style="color: #4b5563;">DEVOLUTION STATUS (18 Functions under 12th Schedule)</span>                                <a href="resources.html#references" style="font-size: 0.7rem;">[142]</a>
-
-<span style="font-weight: bold; color: #dc2626;">NO ROLE</span>           Fire Services                                              │ ULBs have zero involvement
-█                                                                              │ despite constitutional mandate
-
-<span style="font-weight: bold; color: #f59e0b;">IMPLEMENTING</span>       Economic Planning, Poverty Alleviation, Weaker Sections   │ ULBs execute central/state
-<span style="font-weight: bold; color: #f59e0b;">AGENCY ONLY</span>        █████                                                      │ schemes - no planning power
-
-<span style="font-weight: bold; color: #8b5cf6;">OVERLAPPING</span>        Urban Planning, Water, Sanitation, Slums, Amenities,      │ Parastatals control most
-<span style="font-weight: bold; color: #8b5cf6;">JURISDICTION</span>       Roads, Environment, Education, Vital Statistics + 4 more  │ functions; ULBs minimal role
-                   ███████████████████████████████████████████████████████████ │ <span style="color: #dc2626; font-weight: bold;">13 of 18 functions</span>
-
-<span style="font-weight: bold; color: #22c55e;">FULL CONTROL</span>      █                                                          │ Effectively <span style="font-weight: bold;">1 function</span>
-                                                                               │ (Birth/death registration)
-                    </div>
-                </div>
+                <!-- Interactive Devolution Status Chart -->
+                <div id="urban-devolution-chart" style="height: 400px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -3324,7 +3214,7 @@
                 Plotly.newPlot('energy-sankey', [energyData], energyLayout, {responsive: true});
             }
 
-            // 2. TRANSPORT SANKEY
+            // 2. TRANSPORT MODAL SPLIT SANKEY (Simplified)
             if (document.getElementById('transport-sankey')) {
                 const transportData = {
                     type: "sankey",
@@ -3334,40 +3224,31 @@
                         thickness: 30,
                         line: { color: "white", width: 2 },
                         label: [
-                            "Total Trips<br>100%",
-                            "Walk/Cycle<br>50% trips",
-                            "Public Transport<br>36% trips",
-                            "2-Wheelers<br>10% trips",
-                            "Private Vehicles<br>4% trips",
-                            "Space: 5%",
-                            "Space: 35%",
-                            "Space: 0%",
-                            "Space: 60%",
-                            "Emissions: 1%",
-                            "Emissions: 21%",
-                            "Emissions: 64.5%",
-                            "Emissions: 13.5%"
+                            "All Trips<br>100%",
+                            "Walk/Cycle<br>50%",
+                            "Public Transport<br>36%",
+                            "Private Vehicles<br>4%",
+                            "Road Space<br>Allocated",
+                            "5% space",
+                            "35% space",
+                            "60% space"
                         ],
-                        color: ["#6b7280", "#22c55e", "#3b82f6", "#f59e0b", "#dc2626",
-                                "#22c55e", "#3b82f6", "#6b7280", "#dc2626",
-                                "#22c55e", "#3b82f6", "#f59e0b", "#dc2626"]
+                        color: ["#6b7280", "#22c55e", "#3b82f6", "#dc2626", "#94a3b8",
+                                "#22c55e", "#3b82f6", "#dc2626"]
                     },
                     link: {
-                        source: [0, 0, 0, 0, 1, 2, 3, 4, 1, 2, 3, 4],
-                        target: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-                        value: [50, 36, 10, 4, 50, 36, 10, 4, 50, 36, 10, 4],
-                        color: ["rgba(34, 197, 94, 0.3)", "rgba(59, 130, 246, 0.3)",
-                                "rgba(245, 158, 11, 0.3)", "rgba(220, 38, 38, 0.3)",
-                                "rgba(34, 197, 94, 0.2)", "rgba(59, 130, 246, 0.2)",
-                                "rgba(107, 114, 128, 0.2)", "rgba(220, 38, 38, 0.2)",
-                                "rgba(34, 197, 94, 0.2)", "rgba(59, 130, 246, 0.2)",
-                                "rgba(245, 158, 11, 0.2)", "rgba(220, 38, 38, 0.2)"]
+                        source: [0, 0, 0, 1, 2, 3],
+                        target: [1, 2, 3, 5, 6, 7],
+                        value: [50, 36, 4, 5, 35, 60],
+                        color: ["rgba(34, 197, 94, 0.4)", "rgba(59, 130, 246, 0.4)",
+                                "rgba(220, 38, 38, 0.4)", "rgba(34, 197, 94, 0.3)",
+                                "rgba(59, 130, 246, 0.3)", "rgba(220, 38, 38, 0.3)"]
                     }
                 };
 
                 const transportLayout = {
                     title: {
-                        text: "Transport Efficiency Gap: 4% of trips get 60% space & 13.5% emissions",
+                        text: "Transport Efficiency Gap: 50% trips get 5% space, 4% trips get 60% space",
                         font: { size: 16, color: "#374151" }
                     },
                     font: { size: 11, family: "Inter, sans-serif" },
@@ -3376,6 +3257,53 @@
                 };
 
                 Plotly.newPlot('transport-sankey', [transportData], transportLayout, {responsive: true});
+            }
+
+            // 2B. TRANSPORT INVESTMENT FLOW
+            if (document.getElementById('transport-investment-sankey')) {
+                const investmentData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Transport<br>Investment",
+                            "Roads<br>70%",
+                            "Metro<br>20%",
+                            "Buses<br>11.5%",
+                            "NMT<br>~1%",
+                            "Cars: 5% trips<br>92% energy",
+                            "Metro: <1%<br>mode share",
+                            "Buses: Declining<br>best ROI",
+                            "Walk/Cycle: 31%<br>down from 42%"
+                        ],
+                        color: ["#6b7280", "#dc2626", "#f59e0b", "#22c55e", "#06b6d4",
+                                "#dc2626", "#f59e0b", "#22c55e", "#06b6d4"]
+                    },
+                    link: {
+                        source: [0, 0, 0, 0, 1, 2, 3, 4],
+                        target: [1, 2, 3, 4, 5, 6, 7, 8],
+                        value: [70, 20, 11.5, 1, 70, 20, 11.5, 1],
+                        color: ["rgba(220, 38, 38, 0.4)", "rgba(245, 158, 11, 0.4)",
+                                "rgba(34, 197, 94, 0.4)", "rgba(6, 182, 212, 0.4)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(245, 158, 11, 0.3)",
+                                "rgba(34, 197, 94, 0.3)", "rgba(6, 182, 212, 0.3)"]
+                    }
+                };
+
+                const investmentLayout = {
+                    title: {
+                        text: "Investment Misalignment: 70% to roads, 1% to NMT (31% mode share)",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#fdf2f8'
+                };
+
+                Plotly.newPlot('transport-investment-sankey', [investmentData], investmentLayout, {responsive: true});
             }
 
             // 3. WASTE SANKEY
@@ -3480,6 +3408,212 @@
                 };
 
                 Plotly.newPlot('food-sankey', [foodData], foodLayout, {responsive: true});
+            }
+
+            // 5. BUILDING EMISSIONS SPLIT
+            if (document.getElementById('building-emissions-sankey')) {
+                const buildingData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Building Emissions<br>32% of GHG",
+                            "Embodied<br>40%",
+                            "Operational<br>60%",
+                            "Cement<br>8% national",
+                            "Steel<br>12% national",
+                            "Brick kilns<br>2.5%",
+                            "NOT REGULATED",
+                            "Cooling<br>46→143 GW",
+                            "Other<br>operations",
+                            "ECBC Focus<br><5% coverage"
+                        ],
+                        color: ["#6b7280", "#dc2626", "#22c55e", "#dc2626", "#dc2626", "#dc2626",
+                                "#ef4444", "#f59e0b", "#f59e0b", "#22c55e"]
+                    },
+                    link: {
+                        source: [0, 0, 1, 1, 1, 1, 2, 2, 2],
+                        target: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                        value: [40, 60, 8, 12, 2.5, 17.5, 30, 30, 60],
+                        color: ["rgba(220, 38, 38, 0.4)", "rgba(34, 197, 94, 0.4)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(220, 38, 38, 0.3)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(239, 68, 68, 0.5)",
+                                "rgba(245, 158, 11, 0.3)", "rgba(245, 158, 11, 0.3)",
+                                "rgba(34, 197, 94, 0.3)"]
+                    }
+                };
+
+                const buildingLayout = {
+                    title: {
+                        text: "Building Emissions: 40% embodied (unregulated), 60% operational (ECBC covers <5%)",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#f9fafb'
+                };
+
+                Plotly.newPlot('building-emissions-sankey', [buildingData], buildingLayout, {responsive: true});
+            }
+
+            // 6. AIR QUALITY FUNDING MISMATCH
+            if (document.getElementById('air-quality-funding-sankey')) {
+                const aqData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "NCAP Funds<br>100%",
+                            "Road Dust<br>67%",
+                            "Vehicles<br>7%",
+                            "Industries<br>1%",
+                            "Domestic Fuel<br>1%",
+                            "Monitoring<br>4%",
+                            "PM2.5 Source<br>25-40%",
+                            "PM2.5 Source<br>20-35%",
+                            "PM2.5 Source<br>20-40%",
+                            "PM2.5 Source<br>15-25%",
+                            "88% towns<br>no monitoring"
+                        ],
+                        color: ["#6b7280", "#f59e0b", "#dc2626", "#dc2626", "#dc2626", "#22c55e",
+                                "#f59e0b", "#dc2626", "#dc2626", "#dc2626", "#dc2626"]
+                    },
+                    link: {
+                        source: [0, 0, 0, 0, 0, 1, 2, 3, 4, 5],
+                        target: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                        value: [67, 7, 1, 1, 4, 32, 27, 30, 20, 4],
+                        color: ["rgba(245, 158, 11, 0.4)", "rgba(220, 38, 38, 0.5)",
+                                "rgba(220, 38, 38, 0.6)", "rgba(220, 38, 38, 0.6)",
+                                "rgba(34, 197, 94, 0.4)", "rgba(245, 158, 11, 0.3)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(220, 38, 38, 0.3)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(220, 38, 38, 0.4)"]
+                    }
+                };
+
+                const aqLayout = {
+                    title: {
+                        text: "NCAP Funding Mismatch: 67% to road dust (25-40% source), 1% each to industry & domestic",
+                        font: { size: 15, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#f9fafb'
+                };
+
+                Plotly.newPlot('air-quality-funding-sankey', [aqData], aqLayout, {responsive: true});
+            }
+
+            // 7. WATER FLOW
+            if (document.getElementById('water-flow-sankey')) {
+                const waterData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Water Extracted<br>241 BCM/year",
+                            "Agriculture<br>87%",
+                            "Domestic<br>11%",
+                            "Industrial<br>2%",
+                            "Free electricity<br>No metering",
+                            "Tanker economy<br>5,000+ operators",
+                            "Sewage<br>72 BLD",
+                            "STP Capacity<br>37%",
+                            "Actually Treated<br>28%",
+                            "Meets Standards<br>~17%",
+                            "39% non-compliant"
+                        ],
+                        color: ["#3b82f6", "#f59e0b", "#6366f1", "#8b5cf6",
+                                "#dc2626", "#dc2626", "#94a3b8",
+                                "#22c55e", "#f59e0b", "#22c55e", "#dc2626"]
+                    },
+                    link: {
+                        source: [0, 0, 0, 1, 2, 2, 6, 7, 8],
+                        target: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                        value: [210, 26.5, 4.5, 210, 6.5, 20, 37, 28, 17, 11],
+                        color: ["rgba(245, 158, 11, 0.4)", "rgba(99, 102, 241, 0.4)",
+                                "rgba(139, 92, 246, 0.4)", "rgba(220, 38, 38, 0.4)",
+                                "rgba(220, 38, 38, 0.4)", "rgba(148, 163, 184, 0.3)",
+                                "rgba(34, 197, 94, 0.3)", "rgba(245, 158, 11, 0.3)",
+                                "rgba(34, 197, 94, 0.4)", "rgba(220, 38, 38, 0.4)"]
+                    }
+                };
+
+                const waterLayout = {
+                    title: {
+                        text: "Water Flow: 87% to agriculture (free power), sewage 37% capacity, 17% meets standards",
+                        font: { size: 15, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#eff6ff'
+                };
+
+                Plotly.newPlot('water-flow-sankey', [waterData], waterLayout, {responsive: true});
+            }
+
+            // 8. WATER REUSE GAP (Bar chart, not Sankey)
+            if (document.getElementById('water-reuse-gap-chart')) {
+                const reuseData = [{
+                    x: ['States WITH<br>reuse policy', 'States WITHOUT<br>reuse policy'],
+                    y: [11, 17],
+                    type: 'bar',
+                    marker: {
+                        color: ['#22c55e', '#dc2626']
+                    },
+                    text: ['11 states', '17 states'],
+                    textposition: 'outside'
+                }];
+
+                const reuseLayout = {
+                    title: {
+                        text: "Water Reuse Policy Gap: Only 11 of 28 states have reuse policies",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 12, family: "Inter, sans-serif" },
+                    margin: { l: 60, r: 20, t: 60, b: 80 },
+                    paper_bgcolor: '#eff6ff',
+                    yaxis: { title: 'Number of States' },
+                    showlegend: false
+                };
+
+                Plotly.newPlot('water-reuse-gap-chart', reuseData, reuseLayout, {responsive: true});
+            }
+
+            // 9. URBAN DEVOLUTION STATUS (Bar chart)
+            if (document.getElementById('urban-devolution-chart')) {
+                const devolutionData = [{
+                    x: ['No Role', 'Implementing<br>Agency Only', 'Overlapping<br>Jurisdiction', 'Full Control'],
+                    y: [1, 3, 13, 1],
+                    type: 'bar',
+                    marker: {
+                        color: ['#dc2626', '#f59e0b', '#8b5cf6', '#22c55e']
+                    },
+                    text: ['1 function', '3 functions', '13 functions', '1 function'],
+                    textposition: 'outside'
+                }];
+
+                const devolutionLayout = {
+                    title: {
+                        text: "Devolution Status: ULBs have full control over only 1 of 18 functions",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 12, family: "Inter, sans-serif" },
+                    margin: { l: 60, r: 20, t: 60, b: 80 },
+                    paper_bgcolor: '#f9fafb',
+                    yaxis: { title: 'Number of Functions (out of 18)' },
+                    showlegend: false
+                };
+
+                Plotly.newPlot('urban-devolution-chart', devolutionData, devolutionLayout, {responsive: true});
             }
         }
 
