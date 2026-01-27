@@ -10,119 +10,119 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">
-            <span class="nav-logo">🌱</span>
-            <span class="nav-title">India Progress Monitor</span>
+    <nav class="bg-white/95 border-b border-gray-200 px-8 py-4 flex justify-between items-center sticky top-0 z-[100] backdrop-blur-sm">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🌱</span>
+            <span class="text-lg font-bold text-dark">India Progress Monitor</span>
         </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link active">Dashboard</a>
-            <a href="thesis.html" class="nav-link">Hidden Dynamics</a>
-            <a href="sectors.html" class="nav-link">Sectors</a>
-            <a href="resources.html" class="nav-link">Resources</a>
-            <a href="admin.html" class="nav-link">Admin</a>
+        <div class="flex items-center gap-1">
+            <a href="index.html" class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-150">Dashboard</a>
+            <a href="thesis.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Hidden Dynamics</a>
+            <a href="sectors.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Sectors</a>
+            <a href="resources.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Resources</a>
+            <a href="admin.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Admin</a>
         </div>
     </nav>
 
-    <main class="dashboard-main">
+    <main class="max-w-[1400px] mx-auto px-12 py-12">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>India Has the Infrastructure. Why Isn't It Working?</h1>
-                <p class="hero-subtitle">4,000+ waste processing plants at 25% capacity. STPs built but not operated. Pumps subsidized to waste energy. The problem isn't money or technology — it's <strong>hidden dynamics</strong> that make well-designed systems fail.</p>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="stat-value">15-20%</span>
-                        <span class="stat-label">of primary energy delivers useful services</span>
+        <section class="bg-gradient-to-br from-dark to-dark-700 rounded-2xl p-16 mb-12 relative overflow-hidden before:content-[''] before:absolute before:-top-1/2 before:-right-1/5 before:w-3/5 before:h-[200%] before:bg-[radial-gradient(circle,rgba(16,185,129,0.15)_0%,transparent_70%)] before:pointer-events-none">
+            <div class="relative z-10">
+                <h1 class="text-white text-5xl font-bold mb-4 max-w-[600px] leading-tight tracking-tight">India Has the Infrastructure. Why Isn't It Working?</h1>
+                <p class="text-gray-300 text-lg max-w-[500px] mb-0">4,000+ waste processing plants at 25% capacity. STPs built but not operated. Pumps subsidized to waste energy. The problem isn't money or technology — it's <strong>hidden dynamics</strong> that make well-designed systems fail.</p>
+                <div class="flex gap-8 mt-8 flex-wrap">
+                    <div class="text-center py-4 px-6 bg-white/15 rounded-xl border border-white/20">
+                        <span class="block text-3xl font-extrabold text-white leading-none mb-1">15-20%</span>
+                        <span class="block text-sm text-gray-300">of primary energy delivers useful services</span>
                     </div>
-                    <div class="hero-stat">
-                        <span class="stat-value">28%</span>
-                        <span class="stat-label">of sewage actually treated</span>
+                    <div class="text-center py-4 px-6 bg-white/15 rounded-xl border border-white/20">
+                        <span class="block text-3xl font-extrabold text-white leading-none mb-1">28%</span>
+                        <span class="block text-sm text-gray-300">of sewage actually treated</span>
                     </div>
-                    <div class="hero-stat">
-                        <span class="stat-value">25%</span>
-                        <span class="stat-label">of waste plants at capacity</span>
+                    <div class="text-center py-4 px-6 bg-white/15 rounded-xl border border-white/20">
+                        <span class="block text-3xl font-extrabold text-white leading-none mb-1">25%</span>
+                        <span class="block text-sm text-gray-300">of waste plants at capacity</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Sector Gap Cards -->
-        <section class="sector-gaps">
-            <h2 class="section-title">The Gap in Every Sector</h2>
-            <p class="section-subtitle">Infrastructure exists. Policies exist. Investment exists. What's missing is understanding why systems underperform.</p>
+        <section>
+            <h2 class="text-3xl font-bold text-dark mb-2">The Gap in Every Sector</h2>
+            <p class="text-gray-500 mb-8 text-base">Infrastructure exists. Policies exist. Investment exists. What's missing is understanding why systems underperform.</p>
 
-            <div class="gap-grid">
-                <a href="sectors.html#energy" class="gap-card">
-                    <div class="gap-icon">⚡</div>
-                    <h3>Energy</h3>
-                    <div class="gap-stat">80%+ lost</div>
-                    <p class="gap-desc">Primary energy wasted before reaching end-use. Free pump power, AC labeling fraud, coal plant lock-in.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Supply Obsession</div>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
+                <a href="sectors.html#energy" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Energy</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">80%+ lost</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Primary energy wasted before reaching end-use. Free pump power, AC labeling fraud, coal plant lock-in.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Supply Obsession</div>
                 </a>
 
-                <a href="sectors.html#transport" class="gap-card">
-                    <div class="gap-icon">🚌</div>
-                    <h3>Transport</h3>
-                    <div class="gap-stat">Free parking</div>
-                    <p class="gap-desc">Public space worth ₹1000s Cr/year given free to cars. Auto lobby blocks modal shift. Last-mile unsolved.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Perverse Incentives</div>
+                <a href="sectors.html#transport" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🚌</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Transport</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">Free parking</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Public space worth ₹1000s Cr/year given free to cars. Auto lobby blocks modal shift. Last-mile unsolved.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Perverse Incentives</div>
                 </a>
 
-                <a href="sectors.html#buildings" class="gap-card">
-                    <div class="gap-icon">🏗️</div>
-                    <h3>Buildings</h3>
-                    <div class="gap-stat">5% ECBC</div>
-                    <p class="gap-desc">70% of 2030 buildings yet to be built. Builders optimize for cost, not efficiency. Buyers pay the bills.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Split Incentives</div>
+                <a href="sectors.html#buildings" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🏗️</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Buildings</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">5% ECBC</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">70% of 2030 buildings yet to be built. Builders optimize for cost, not efficiency. Buyers pay the bills.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Split Incentives</div>
                 </a>
 
-                <a href="sectors.html#air" class="gap-card">
-                    <div class="gap-icon">🌬️</div>
-                    <h3>Air Quality</h3>
-                    <div class="gap-stat">67% → dust</div>
-                    <p class="gap-desc">NCAP funds to road sweeping (25-40% of PM2.5) while industries (20-40%) get 1% of spend.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Political Economy</div>
+                <a href="sectors.html#air" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🌬️</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Air Quality</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">67% → dust</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">NCAP funds to road sweeping (25-40% of PM2.5) while industries (20-40%) get 1% of spend.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Political Economy</div>
                 </a>
 
-                <a href="sectors.html#waste" class="gap-card">
-                    <div class="gap-icon">🗑️</div>
-                    <h3>Waste</h3>
-                    <div class="gap-stat">4,000 plants</div>
-                    <p class="gap-desc">Processing infrastructure at 25% utilization. Informal workers do 80% of recycling but get 5-10% of value.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Informal Paradox</div>
+                <a href="sectors.html#waste" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🗑️</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Waste</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">4,000 plants</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Processing infrastructure at 25% utilization. Informal workers do 80% of recycling but get 5-10% of value.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Informal Paradox</div>
                 </a>
 
-                <a href="sectors.html#water" class="gap-card">
-                    <div class="gap-icon">💧</div>
-                    <h3>Water</h3>
-                    <div class="gap-stat">11/28 states</div>
-                    <p class="gap-desc">20% reuse mandated since 2008. Only 11 states have policies. 72% sewage untreated. 3,500+ tankers fill the gap.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Policy Fragmentation</div>
+                <a href="sectors.html#water" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">💧</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Water</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">11/28 states</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">20% reuse mandated since 2008. Only 11 states have policies. 72% sewage untreated. 3,500+ tankers fill the gap.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Policy Fragmentation</div>
                 </a>
 
-                <a href="sectors.html#notf" class="gap-card">
-                    <div class="gap-icon">🏘️</div>
-                    <h3>Neighbourhoods</h3>
-                    <div class="gap-stat">31% councils inactive</div>
-                    <p class="gap-desc">74th CAA promised devolution. 30+ years later: 13 of 18 functions controlled by parastatals. No ward committees in AP, Bihar, Delhi, UP, WB.</p>
-                    <div class="gap-dynamic">Hidden dynamic: State Control</div>
+                <a href="sectors.html#notf" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🏘️</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Neighbourhoods</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">31% councils inactive</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">74th CAA promised devolution. 30+ years later: 13 of 18 functions controlled by parastatals. No ward committees in AP, Bihar, Delhi, UP, WB.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: State Control</div>
                 </a>
 
-                <a href="sectors.html#food" class="gap-card">
-                    <div class="gap-icon">🌾</div>
-                    <h3>Food Systems</h3>
-                    <div class="gap-stat">78M tonnes lost</div>
-                    <p class="gap-desc">₹92,000 Cr food wasted annually. 70% cold storage for potatoes only. Horticulture gets &lt;4% cold chain capacity.</p>
-                    <div class="gap-dynamic">Hidden dynamic: MSP Lock-In</div>
+                <a href="sectors.html#food" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🌾</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Food Systems</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">78M tonnes lost</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">₹92,000 Cr food wasted annually. 70% cold storage for potatoes only. Horticulture gets &lt;4% cold chain capacity.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: MSP Lock-In</div>
                 </a>
 
-                <a href="sectors.html#biodiversity" class="gap-card">
-                    <div class="gap-icon">🌳</div>
-                    <h3>Biodiversity</h3>
-                    <div class="gap-stat">7.5% survival</div>
-                    <p class="gap-desc">₹66,000+ Cr CAMPA funds accumulated. Compensatory plantations fail; dense forests still lost. Lantana covers 40% of tiger reserves.</p>
-                    <div class="gap-dynamic">Hidden dynamic: Compensation Accounting</div>
+                <a href="sectors.html#biodiversity" class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-200 no-underline block hover:-translate-y-1 hover:shadow-lg hover:border-gray-300">
+                    <div class="text-3xl mb-2">🌳</div>
+                    <h3 class="text-lg text-dark mb-2 font-bold">Biodiversity</h3>
+                    <div class="text-2xl font-extrabold text-dark-700 mb-2 leading-none">7.5% survival</div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">₹66,000+ Cr CAMPA funds accumulated. Compensatory plantations fail; dense forests still lost. Lantana covers 40% of tiger reserves.</p>
+                    <div class="text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200 italic">Hidden dynamic: Compensation Accounting</div>
                 </a>
             </div>
         </section>
