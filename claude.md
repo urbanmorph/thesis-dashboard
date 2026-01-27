@@ -351,6 +351,45 @@ npm run build
 4. Create a renderer module in `js/` if needed
 5. Update the HTML page to use dynamic containers
 
+## Citation & Reference System (IMPORTANT)
+
+**All data source citations use semantic slug IDs that link to specific references.**
+
+### Reference Mapping File
+- **Location**: `public/data/reference-mapping.json`
+- **Purpose**: Source of truth for all ~180 data source references
+- **Format**: Contains display number, semantic slug ID, full citation text, URL, and sector
+
+### Semantic Slug Convention
+Format: `ref-{org}-{topic}-{year}`
+
+Examples:
+| Reference | Slug ID |
+|-----------|---------|
+| CPCB. (2024). Annual Report on SWM Rules | `ref-cpcb-swm-annual-2024` |
+| MoHUA. (2024). SBM Urban 2.0 Progress | `ref-mohua-sbm-2024` |
+| TERI. (2023). State of Waste Management | `ref-teri-waste-management-2023` |
+
+### Rules for Adding New Data Sources
+1. **ALWAYS update `public/data/reference-mapping.json`** when adding new references
+2. Add the new reference to the appropriate section in `resources.html` with:
+   - Sequential number (update `start=` attribute if needed)
+   - Semantic `id="ref-{slug}"` attribute
+3. In sector pages, use `href="resources.html#ref-{slug}"` (not `#references`)
+4. Include `title="Source Name"` attribute for hover preview
+5. Keep display numbers `[83]` in citation text for readability
+
+### Citation Link Format
+```html
+<!-- In sectors.html or other pages -->
+<a href="resources.html#ref-cpcb-swm-annual-2024" title="CPCB Annual Report 2024">[83]</a>
+```
+
+### Why Semantic Slugs?
+- **Future-proof**: Adding/reordering references doesn't break links
+- **Self-documenting**: ID tells you what it references
+- **Grep-friendly**: Can search codebase for specific sources
+
 ## Troubleshooting
 
 ### Styles not updating
