@@ -12,7 +12,7 @@
     <nav class="bg-dark border-b border-gray-700 px-8 py-4 flex justify-between items-center sticky top-0 z-[100]">
         <div class="flex items-center gap-2">
             <span class="text-2xl">🌱</span>
-            <span class="nav-title">Thesis Dashboard</span>
+            <span class="text-lg font-bold text-white">Thesis Dashboard</span>
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded ml-2">ADMIN</span>
         </div>
         <div class="flex items-center gap-1">
@@ -27,37 +27,37 @@
 
     <main class="max-w-[1400px] mx-auto px-12 py-12">
         <section class="flex justify-between items-center mb-12">
-            <div class="admin-header-content">
+            <div class="">
                 <h1 class="text-3xl font-bold text-gray-900">Funding Allocation</h1>
-                <p class="admin-subtitle">Total Portfolio: ₹253-270 Cr over 3 Years</p>
+                <p class="text-sm text-gray-500 mt-1">Total Portfolio: ₹253-270 Cr over 3 Years</p>
             </div>
         </section>
 
         <!-- Budget Summary -->
         <section class="mb-12">
-            <div class="budget-summary-grid">
-                <div class="budget-summary-card">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Year 1</h3>
-                    <span class="budget-amount">₹75-80 Cr</span>
-                    <span class="budget-percent">30%</span>
-                    <div class="budget-bar">
-                        <div class="budget-bar-fill" style="width: 30%"></div>
+                    <span class="block text-2xl font-bold text-gray-900 mb-2">₹75-80 Cr</span>
+                    <span class="block text-sm text-gray-600 mb-3">30%</span>
+                    <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary transition-all duration-300" style="width: 30%"></div>
                     </div>
                 </div>
-                <div class="budget-summary-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Year 2</h3>
-                    <span class="budget-amount">₹100-110 Cr</span>
-                    <span class="budget-percent">40%</span>
-                    <div class="budget-bar">
-                        <div class="budget-bar-fill" style="width: 40%"></div>
+                    <span class="block text-2xl font-bold text-gray-900 mb-2">₹100-110 Cr</span>
+                    <span class="block text-sm text-gray-600 mb-3">40%</span>
+                    <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary transition-all duration-300" style="width: 40%"></div>
                     </div>
                 </div>
-                <div class="budget-summary-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Year 3</h3>
-                    <span class="budget-amount">₹75-80 Cr</span>
-                    <span class="budget-percent">30%</span>
-                    <div class="budget-bar">
-                        <div class="budget-bar-fill" style="width: 30%"></div>
+                    <span class="block text-2xl font-bold text-gray-900 mb-2">₹75-80 Cr</span>
+                    <span class="block text-sm text-gray-600 mb-3">30%</span>
+                    <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary transition-all duration-300" style="width: 30%"></div>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
         <!-- Category Breakdown -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Category Breakdown</h2>
-            <div class="charts-grid">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Allocation by Category</h3>
                     <canvas id="categoryPieChart"></canvas>
@@ -92,27 +92,27 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand Efficiency</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand Efficiency</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹40-45 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">Pilots, baseline, first scale</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag circular">Circular Economy</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular Economy</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹20-22 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">Research, pilot design, collection start</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag enablers">Enablers</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Enablers</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹7-8 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">Data infrastructure, awareness launch</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag policy">Policy Research</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-red-50 text-red-700 px-2 py-1 rounded text-xs font-medium">Policy Research</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-6 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">State assessments, policy analysis</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag operations">Dashboard + PMU</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs font-medium">Dashboard + PMU</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-4 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">System setup, operations</td>
                         </tr>
@@ -124,79 +124,79 @@
         <!-- First Disbursements -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Q1 Disbursement Plan</h2>
-            <div class="disbursement-grid">
-                <div class="disbursement-card">
-                    <div class="disbursement-header">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">NRDC India</h4>
-                        <span class="disbursement-amount">₹12-15 Cr</span>
+                        <span class="block text-2xl font-bold text-gray-900 mb-2">₹12-15 Cr</span>
                     </div>
-                    <div class="disbursement-milestone">
-                        <span class="milestone-label">Release Milestone:</span>
+                    <div class="text-sm text-gray-600">
+                        <span class="text-xs text-gray-500">Release Milestone:</span>
                         <p>MOU signed, Year 1 workplan approved</p>
                     </div>
-                    <div class="disbursement-status">
-                        <span class="status-indicator status-pending"></span>
+                    <div class="text-xs font-medium px-2 py-1 rounded">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium"></span>
                         Pending MOU
                     </div>
                 </div>
-                <div class="disbursement-card">
-                    <div class="disbursement-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">WRI India</h4>
-                        <span class="disbursement-amount">₹9-12 Cr</span>
+                        <span class="block text-2xl font-bold text-gray-900 mb-2">₹9-12 Cr</span>
                     </div>
-                    <div class="disbursement-milestone">
-                        <span class="milestone-label">Release Milestone:</span>
+                    <div class="text-sm text-gray-600">
+                        <span class="text-xs text-gray-500">Release Milestone:</span>
                         <p>MOU signed, PRADAN integration plan</p>
                     </div>
-                    <div class="disbursement-status">
-                        <span class="status-indicator status-pending"></span>
+                    <div class="text-xs font-medium px-2 py-1 rounded">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium"></span>
                         Pending MOU
                     </div>
                 </div>
-                <div class="disbursement-card">
-                    <div class="disbursement-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">CEEW</h4>
-                        <span class="disbursement-amount">₹15-18 Cr</span>
+                        <span class="block text-2xl font-bold text-gray-900 mb-2">₹15-18 Cr</span>
                     </div>
-                    <div class="disbursement-milestone">
-                        <span class="milestone-label">Release Milestone:</span>
+                    <div class="text-sm text-gray-600">
+                        <span class="text-xs text-gray-500">Release Milestone:</span>
                         <p>MOU signed, cooling + circular plans</p>
                     </div>
-                    <div class="disbursement-status">
-                        <span class="status-indicator status-pending"></span>
+                    <div class="text-xs font-medium px-2 py-1 rounded">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium"></span>
                         Pending MOU
                     </div>
                 </div>
-                <div class="disbursement-card">
-                    <div class="disbursement-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">ITDP India</h4>
-                        <span class="disbursement-amount">₹6-8 Cr</span>
+                        <span class="block text-2xl font-bold text-gray-900 mb-2">₹6-8 Cr</span>
                     </div>
-                    <div class="disbursement-milestone">
-                        <span class="milestone-label">Release Milestone:</span>
+                    <div class="text-sm text-gray-600">
+                        <span class="text-xs text-gray-500">Release Milestone:</span>
                         <p>MOU signed, transport demand proposal</p>
                     </div>
-                    <div class="disbursement-status">
-                        <span class="status-indicator status-pending"></span>
+                    <div class="text-xs font-medium px-2 py-1 rounded">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium"></span>
                         Pending MOU
                     </div>
                 </div>
-                <div class="disbursement-card">
-                    <div class="disbursement-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Development Alternatives</h4>
-                        <span class="disbursement-amount">₹5-6 Cr</span>
+                        <span class="block text-2xl font-bold text-gray-900 mb-2">₹5-6 Cr</span>
                     </div>
-                    <div class="disbursement-milestone">
-                        <span class="milestone-label">Release Milestone:</span>
+                    <div class="text-sm text-gray-600">
+                        <span class="text-xs text-gray-500">Release Milestone:</span>
                         <p>MOU signed, rural buildings pilot design</p>
                     </div>
-                    <div class="disbursement-status">
-                        <span class="status-indicator status-pending"></span>
+                    <div class="text-xs font-medium px-2 py-1 rounded">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium"></span>
                         Pending MOU
                     </div>
                 </div>
             </div>
-            <div class="disbursement-total">
+            <div class="font-bold text-gray-900">
                 <span>Q1 Total Target:</span>
                 <strong>₹50-60 Cr</strong>
             </div>
@@ -206,7 +206,7 @@
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Complete Partner Allocation</h2>
             <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-                <table class="admin-table" id="allocationTable">
+                <table class="w-full text-sm text-left" id="allocationTable">
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Partner</th>
@@ -220,7 +220,7 @@
                     <tbody>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">NRDC India</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹40-50 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹12-15 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹16-20 Cr</td>
@@ -228,7 +228,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">WRI India</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹30-40 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹9-12 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹12-16 Cr</td>
@@ -236,7 +236,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">CEEW</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand</span> <span class="category-tag circular">Circular</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand</span> <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹50-60 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹15-18 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹20-24 Cr</td>
@@ -244,7 +244,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">ITDP India</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹20-25 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹6-8 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹8-10 Cr</td>
@@ -252,7 +252,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Prayas</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹15-20 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-6 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹6-8 Cr</td>
@@ -260,7 +260,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Development Alternatives</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag demand">Demand</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">Demand</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹15-20 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-6 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹6-8 Cr</td>
@@ -268,7 +268,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Ethos Foundation</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag enablers">Enablers</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Enablers</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹12-15 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹4-5 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-6 Cr</td>
@@ -276,7 +276,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Final Mile</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag enablers">Enablers</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Enablers</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹8-12 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-4 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-5 Cr</td>
@@ -284,7 +284,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Saahas</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag circular">Circular</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹18-22 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-7 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹7-9 Cr</td>
@@ -292,7 +292,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">TERI</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag circular">Circular</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹15-20 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-6 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹6-8 Cr</td>
@@ -300,7 +300,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">CSTEP</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag circular">Circular</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹10-15 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-5 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹4-6 Cr</td>
@@ -308,7 +308,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Chintan</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag circular">Circular</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹8-12 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-4 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-5 Cr</td>
@@ -316,7 +316,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Saath</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag circular">Circular</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Circular</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹5-8 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹2-3 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹2-3 Cr</td>
@@ -324,7 +324,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">SFC</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag enablers">Enablers</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Enablers</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹8-12 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-4 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-5 Cr</td>
@@ -332,7 +332,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">Vasudha</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag enablers">Enablers</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Enablers</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹8-12 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-4 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-5 Cr</td>
@@ -340,13 +340,13 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 border-b border-gray-200">CSE</td>
-                            <td class="px-6 py-4 border-b border-gray-200"><span class="category-tag enablers">Enablers</span></td>
+                            <td class="px-6 py-4 border-b border-gray-200"><span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Enablers</span></td>
                             <td class="px-6 py-4 border-b border-gray-200">₹10-15 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-5 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹4-6 Cr</td>
                             <td class="px-6 py-4 border-b border-gray-200">₹3-4 Cr</td>
                         </tr>
-                        <tr class="table-total">
+                        <tr class="font-bold text-gray-900">
                             <td class="px-6 py-4 border-b border-gray-200"><strong>Total</strong></td>
                             <td class="px-6 py-4 border-b border-gray-200"></td>
                             <td class="px-6 py-4 border-b border-gray-200"><strong>₹253-270 Cr</strong></td>
@@ -362,164 +362,164 @@
         <!-- Sector-Specific Funding Categories -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Sector-Specific Funding Categories</h2>
-            <p style="color: var(--gray-600); margin-bottom: var(--space-lg);">Strategic intervention categories for each sector based on systems analysis and theory of change frameworks.</p>
+            <p class="text-gray-600 mb-6">Strategic intervention categories for each sector based on systems analysis and theory of change frameworks.</p>
 
-            <div class="funding-categories-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Energy -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">⚡ Energy</h3>
-                        <span class="funding-amount">₹145-155 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹145-155 Cr</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 55%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 55%"></div>
                         </div>
                         <span>55% of portfolio</span>
                     </div>
-                    <div class="sector-categories">
-                        <div class="category-item">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
                             <strong>Demand Efficiency</strong>
-                            <span class="category-allocation">₹90-100 Cr</span>
+                            <span class="text-sm text-gray-600">₹90-100 Cr</span>
                             <p>Buildings retrofits, ECBC compliance, public facilities, behavioral programs</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Circular Economy</strong>
-                            <span class="category-allocation">₹55-55 Cr</span>
+                            <span class="text-sm text-gray-600">₹55-55 Cr</span>
                             <p>Solar/battery recycling, EPR frameworks, material recovery pilots</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Transport -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">🚌 Transport</h3>
-                        <span class="funding-amount">₹60-80 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹60-80 Cr</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 25%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 25%"></div>
                         </div>
                         <span>25% of portfolio</span>
                     </div>
-                    <div class="sector-categories">
-                        <div class="category-item">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
                             <strong>Demand Management</strong>
-                            <span class="category-allocation">₹40-50 Cr</span>
+                            <span class="text-sm text-gray-600">₹40-50 Cr</span>
                             <p>BRT/TOD planning, modal shift programs, parking pricing, complete streets</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Active Mobility</strong>
-                            <span class="category-allocation">₹20-30 Cr</span>
+                            <span class="text-sm text-gray-600">₹20-30 Cr</span>
                             <p>Cycling infrastructure, pedestrian networks, last-mile connectivity</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Buildings -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">🏗️ Buildings</h3>
-                        <span class="funding-amount">₹105-135 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹105-135 Cr</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 42%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 42%"></div>
                         </div>
                         <span>42% of portfolio</span>
                     </div>
-                    <div class="sector-categories">
-                        <div class="category-item">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
                             <strong>Energy Efficiency Retrofits</strong>
-                            <span class="category-allocation">₹50-60 Cr</span>
+                            <span class="text-sm text-gray-600">₹50-60 Cr</span>
                             <p>ECBC compliance, commercial buildings assessment, public facilities optimization</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Passive Cooling & Design</strong>
-                            <span class="category-allocation">₹25-35 Cr</span>
+                            <span class="text-sm text-gray-600">₹25-35 Cr</span>
                             <p>Cool roofs (200K target), thermal comfort, natural ventilation, heat action plans</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Distributed Energy Systems</strong>
-                            <span class="category-allocation">₹20-25 Cr</span>
+                            <span class="text-sm text-gray-600">₹20-25 Cr</span>
                             <p>Rooftop solar, battery storage, microgrids, rural electrification</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Green Building Standards</strong>
-                            <span class="category-allocation">₹10-15 Cr</span>
+                            <span class="text-sm text-gray-600">₹10-15 Cr</span>
                             <p>GRIHA/LEED adoption, net-zero pilots, sustainable materials</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Air Quality -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">🌬️ Air Quality</h3>
-                        <span class="funding-amount">₹75-92 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹75-92 Cr</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 30%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 30%"></div>
                         </div>
                         <span>30% of portfolio</span>
                     </div>
-                    <div class="sector-categories">
-                        <div class="category-item">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
                             <strong>Source Reduction</strong>
-                            <span class="category-allocation">₹40-50 Cr</span>
+                            <span class="text-sm text-gray-600">₹40-50 Cr</span>
                             <p>Road dust control, vehicular emission controls, construction dust management</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Monitoring & Data</strong>
-                            <span class="category-allocation">₹15-20 Cr</span>
+                            <span class="text-sm text-gray-600">₹15-20 Cr</span>
                             <p>Sensor networks, real-time monitoring, emissions inventory, ward-level data</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Policy & Enforcement</strong>
-                            <span class="category-allocation">₹10-15 Cr</span>
+                            <span class="text-sm text-gray-600">₹10-15 Cr</span>
                             <p>GRAP implementation, regulatory frameworks, compliance systems</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Health Integration</strong>
-                            <span class="category-allocation">₹10-12 Cr</span>
+                            <span class="text-sm text-gray-600">₹10-12 Cr</span>
                             <p>Public health research, exposure assessment, awareness campaigns</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Waste / Circular Economy -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">🗑️ Waste / Circular Economy</h3>
-                        <span class="funding-amount">₹100-120 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹100-120 Cr</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 40%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 40%"></div>
                         </div>
                         <span>40% of portfolio</span>
                     </div>
-                    <div class="sector-categories">
-                        <div class="category-item">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
                             <strong>Collection & Segregation</strong>
-                            <span class="category-allocation">₹45-55 Cr</span>
+                            <span class="text-sm text-gray-600">₹45-55 Cr</span>
                             <p>Door-to-door systems, waste picker integration, MRF infrastructure, aggregators</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Processing & Recycling</strong>
-                            <span class="category-allocation">₹30-40 Cr</span>
+                            <span class="text-sm text-gray-600">₹30-40 Cr</span>
                             <p>Technology pilots, bio-conversion, material recovery, composting plants</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Producer Responsibility (EPR)</strong>
-                            <span class="category-allocation">₹15-20 Cr</span>
+                            <span class="text-sm text-gray-600">₹15-20 Cr</span>
                             <p>Battery/solar EPR frameworks, plastic compliance, policy development</p>
                         </div>
-                        <div class="category-item">
+                        <div class="flex items-center justify-between">
                             <strong>Informal Sector Integration</strong>
-                            <span class="category-allocation">₹10-15 Cr</span>
+                            <span class="text-sm text-gray-600">₹10-15 Cr</span>
                             <p>Social enterprise models, livelihoods, cooperatives, digital platforms</p>
                         </div>
                     </div>
@@ -530,31 +530,31 @@
         <!-- Cross-Sector Patterns -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Cross-Sector Strategic Patterns</h2>
-            <div class="risk-grid">
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">PATTERN 1</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">PATTERN 1</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Demand-Side First</h4>
                     </div>
                     <p>Prioritize efficiency and demand reduction before supply expansion across all sectors (energy efficiency before generation, modal shift before EV scale-up)</p>
                 </div>
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">PATTERN 2</span>
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">PATTERN 2</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Systems Thinking</h4>
                     </div>
                     <p>Integrate infrastructure + behavior change + policy levers simultaneously rather than isolated technical solutions</p>
                 </div>
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">PATTERN 3</span>
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">PATTERN 3</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Equity Integration</h4>
                     </div>
                     <p>Embed informal worker integration, gender-responsive design, and affordability mechanisms in all interventions</p>
                 </div>
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">PATTERN 4</span>
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">PATTERN 4</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Data-Driven</h4>
                     </div>
                     <p>Establish monitoring, measurement, and verification systems at ward-level for real-time tracking and adaptive management</p>
@@ -563,10 +563,10 @@
         </section>
     </main>
 
-    <footer class="footer footer-admin">
-        <div class="footer-content">
+    <footer class="bg-dark border-t border-gray-700 py-8 px-12 mt-16">
+        <div class="max-w-[1400px] mx-auto text-center">
             <p>Thesis Dashboard - Admin Dashboard</p>
-            <p class="footer-note">Classification: CONFIDENTIAL</p>
+            <p class="text-sm text-gray-400">Classification: CONFIDENTIAL</p>
         </div>
     </footer>
 

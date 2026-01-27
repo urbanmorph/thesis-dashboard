@@ -26,12 +26,12 @@
 
     <main class="max-w-[1400px] mx-auto px-12 py-12">
         <section class="flex justify-between items-center mb-12">
-            <div class="admin-header-content">
+            <div class="">
                 <h1 class="text-3xl font-bold text-gray-900">Partner Organizations</h1>
-                <p class="admin-subtitle">26 Partners | 13 Agreements Signed | ₹278-302 Cr Total Portfolio</p>
+                <p class="text-sm text-gray-500 mt-1">26 Partners | 13 Agreements Signed | ₹278-302 Cr Total Portfolio</p>
             </div>
-            <div class="admin-header-actions">
-                <select id="filterCategory" class="select-filter">
+            <div class="flex gap-3">
+                <select id="filterCategory" class="border border-gray-300 rounded-lg px-4 py-2 text-sm">
                     <option value="all">All Categories</option>
                     <option value="demand">Demand Efficiency</option>
                     <option value="circular">Circular Economy</option>
@@ -42,23 +42,23 @@
 
         <!-- SIGNED AGREEMENTS SECTION -->
         <section class="mb-12">
-            <h2 class="section-title" style="color: var(--success-dark);">
+            <h2 class="text-2xl font-bold text-green-700 mb-6">
                 ✓ Agreements Signed (13 Partners)
             </h2>
-            <div class="partners-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- WRI India -->
-                <div class="partner-card" data-category="demand transport">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand transport">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">WRI India</h3>
-                        <span class="partner-allocation">₹30-40 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹30-40 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Public Facilities</span>
-                        <span class="focus-tag">Transport</span>
-                        <span class="focus-tag">Equity</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Public Facilities</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Transport</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Equity</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Buildings + Transport)</p>
                         <p><strong>Org Budget:</strong> ~$272M (WRI Global, 2024); India office ~₹100 Cr+</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -77,23 +77,23 @@
                             <li>5 city transport demand management plans</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 20, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 20, 2026</span>
                     </div>
                 </div>
 
                 <!-- CEEW -->
-                <div class="partner-card" data-category="demand circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">CEEW</h3>
-                        <span class="partner-allocation">₹50-60 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹50-60 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Cooling</span>
-                        <span class="focus-tag">Circular Economy</span>
-                        <span class="focus-tag">Research</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Cooling</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Circular Economy</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Research</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency + Circular Economy</p>
                         <p><strong>Org Budget:</strong> ~$33M (~₹275 Cr) annually - India's leading climate think tank</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -112,23 +112,23 @@
                             <li>Circular economy research for 3 material streams</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 18, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 18, 2026</span>
                     </div>
                 </div>
 
                 <!-- Saahas -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Saahas Zero Waste</h3>
-                        <span class="partner-allocation">₹18-22 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹18-22 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Waste Collection</span>
-                        <span class="focus-tag">Circularity</span>
-                        <span class="focus-tag">Operations</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Waste Collection</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Circularity</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Operations</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Waste Management)</p>
                         <p><strong>Org Budget:</strong> ~₹25-30 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -147,23 +147,23 @@
                             <li>Waste picker integration - 500 workers</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 20, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 20, 2026</span>
                     </div>
                 </div>
 
                 <!-- Hasiru Dala -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Hasiru Dala</h3>
-                        <span class="partner-allocation">₹15-20 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹15-20 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Waste Pickers</span>
-                        <span class="focus-tag">Social Enterprise</span>
-                        <span class="focus-tag">Inclusive Circularity</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Waste Pickers</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Social Enterprise</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Inclusive Circularity</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Waste Management - Social Equity Focus)</p>
                         <p><strong>Org Budget:</strong> ~₹12-15 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -182,23 +182,23 @@
                             <li>Policy advocacy for informal sector integration</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 20, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 20, 2026</span>
                     </div>
                 </div>
 
                 <!-- Waste Warriors -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Waste Warriors</h3>
-                        <span class="partner-allocation">₹10-15 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹10-15 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Himalayan Waste</span>
-                        <span class="focus-tag">Tourism</span>
-                        <span class="focus-tag">Community Engagement</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Himalayan Waste</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Tourism</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Community Engagement</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Waste Management - Tourism/Himalayan Focus)</p>
                         <p><strong>Org Budget:</strong> ~₹5-8 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -217,22 +217,22 @@
                             <li>Community engagement - 100 villages</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 20, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 20, 2026</span>
                     </div>
                 </div>
 
                 <!-- TERI -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">TERI (The Energy and Resources Institute)</h3>
-                        <span class="partner-allocation">₹15-20 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹15-20 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Recycling R&D</span>
-                        <span class="focus-tag">Policy Research</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Recycling R&D</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Policy Research</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Research & Development)</p>
                         <p><strong>Org Budget:</strong> ~₹200+ Cr annually - India's premier energy/environment research institute</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -251,23 +251,23 @@
                             <li>Pilot demonstrations in 2 cities</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 15, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 15, 2026</span>
                     </div>
                 </div>
 
                 <!-- CSTEP -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">CSTEP (Center for Study of Science, Technology & Policy)</h3>
-                        <span class="partner-allocation">₹10-15 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹10-15 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Battery Recycling</span>
-                        <span class="focus-tag">Modeling</span>
-                        <span class="focus-tag">Air Quality</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Battery Recycling</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Modeling</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Air Quality</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy + Air Quality</p>
                         <p><strong>Org Budget:</strong> ~₹40-50 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -286,23 +286,23 @@
                             <li>Circular economy metrics dashboard</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 12, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 12, 2026</span>
                     </div>
                 </div>
 
                 <!-- Chintan -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Chintan Environmental Research and Action Group</h3>
-                        <span class="partner-allocation">₹8-12 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹8-12 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Policy Advocacy</span>
-                        <span class="focus-tag">Waste Pickers</span>
-                        <span class="focus-tag">EPR</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Policy Advocacy</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Waste Pickers</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">EPR</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Policy & Advocacy)</p>
                         <p><strong>Org Budget:</strong> ~₹8-10 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -321,23 +321,23 @@
                             <li>Circular economy policy gap analysis</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 10, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 10, 2026</span>
                     </div>
                 </div>
 
                 <!-- Saath -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Saath Charitable Trust</h3>
-                        <span class="partner-allocation">₹5-8 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹5-8 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Informal Sector</span>
-                        <span class="focus-tag">Gujarat</span>
-                        <span class="focus-tag">Livelihoods</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Informal Sector</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Gujarat</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Livelihoods</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Informal Sector Focus)</p>
                         <p><strong>Org Budget:</strong> ~₹15-20 Cr annually (all programs, 2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -356,23 +356,23 @@
                             <li>Community-based waste collection model - 50,000 households</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 8, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 8, 2026</span>
                     </div>
                 </div>
 
                 <!-- Ethos Foundation -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Ethos Foundation</h3>
-                        <span class="partner-allocation">₹12-15 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹12-15 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Education</span>
-                        <span class="focus-tag">Schools</span>
-                        <span class="focus-tag">Awareness</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Education</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Schools</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Awareness</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Education & Awareness)</p>
                         <p><strong>Org Budget:</strong> ~₹10-12 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -391,23 +391,23 @@
                             <li>School energy audit program - 200 schools</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Dec 20, 2025</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Dec 20, 2025</span>
                     </div>
                 </div>
 
 
                 <!-- SFC -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Shakti Sustainable Energy Foundation (SFC)</h3>
-                        <span class="partner-allocation">₹8-12 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹8-12 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Policy Research</span>
-                        <span class="focus-tag">Clean Energy</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Policy Research</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Clean Energy</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Policy & Research Support)</p>
                         <p><strong>Org Budget:</strong> ~₹200+ Cr annually in grants (major clean energy funder)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -426,23 +426,23 @@
                             <li>Technical assistance for policy implementation</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Dec 10, 2025</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Dec 10, 2025</span>
                     </div>
                 </div>
 
                 <!-- Janaagraha -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Janaagraha Centre for Citizenship and Democracy</h3>
-                        <span class="partner-allocation">₹10-15 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹10-15 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Civic Engagement</span>
-                        <span class="focus-tag">Urban Governance</span>
-                        <span class="focus-tag">Participation</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Civic Engagement</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Urban Governance</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Participation</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Civic Participation & Governance)</p>
                         <p><strong>Org Budget:</strong> ~₹50-60 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -461,23 +461,23 @@
                             <li>Participatory budgeting for climate projects</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 22, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 22, 2026</span>
                     </div>
                 </div>
 
                 <!-- Reap Benefit -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Reap Benefit</h3>
-                        <span class="partner-allocation">₹6-10 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹6-10 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Youth Leadership</span>
-                        <span class="focus-tag">Community Surveys</span>
-                        <span class="focus-tag">Behavior Change</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Youth Leadership</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Community Surveys</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Behavior Change</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Youth Engagement & Data Collection)</p>
                         <p><strong>Org Budget:</strong> ~₹8-12 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -496,8 +496,8 @@
                             <li>Community data collection for baseline studies</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-signed">Signed: Jan 23, 2026</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Signed: Jan 23, 2026</span>
                     </div>
                 </div>
 
@@ -506,25 +506,25 @@
 
         <!-- POTENTIAL PARTNERS SECTION -->
         <section class="mb-12">
-            <h2 class="section-title" style="color: var(--warning-dark);">
+            <h2 class="text-2xl font-bold text-amber-700 mb-6">
                 ⏳ Potential Partners (13 Partners)
             </h2>
 
             <!-- Tier 1 Pending -->
-            <div class="partners-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- NRDC India -->
-                <div class="partner-card" data-category="demand">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">NRDC India</h3>
-                        <span class="partner-allocation">₹40-50 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹40-50 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Buildings</span>
-                        <span class="focus-tag">Cool Roofs</span>
-                        <span class="focus-tag">ECBC</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Buildings</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Cool Roofs</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">ECBC</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Buildings)</p>
                         <p><strong>Org Budget:</strong> ~$244M (NRDC Global, 2024); India office ~₹30-40 Cr</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -543,23 +543,23 @@
                             <li>Heat Action Plan support for 10 cities</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 45</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 45</span>
                     </div>
                 </div>
 
                 <!-- ITDP India -->
-                <div class="partner-card" data-category="demand transport">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand transport">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">ITDP India</h3>
-                        <span class="partner-allocation">₹20-25 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹20-25 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Transport</span>
-                        <span class="focus-tag">BRT</span>
-                        <span class="focus-tag">TOD</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Transport</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">BRT</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">TOD</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Transport)</p>
                         <p><strong>Org Budget:</strong> ~$15M (ITDP Global); India office ~₹15-20 Cr</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -578,23 +578,23 @@
                             <li>Transport demand management frameworks</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 55</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 55</span>
                     </div>
                 </div>
 
                 <!-- Prayas Energy Group -->
-                <div class="partner-card" data-category="demand">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Prayas Energy Group</h3>
-                        <span class="partner-allocation">₹15-20 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹15-20 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Regulatory</span>
-                        <span class="focus-tag">DSM Policy</span>
-                        <span class="focus-tag">Tariffs</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Regulatory</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">DSM Policy</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Tariffs</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Policy & Regulatory)</p>
                         <p><strong>Org Budget:</strong> ~₹12-15 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -613,23 +613,23 @@
                             <li>DSM implementation monitoring reports</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 60</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 60</span>
                     </div>
                 </div>
 
                 <!-- Development Alternatives -->
-                <div class="partner-card" data-category="demand">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Development Alternatives</h3>
-                        <span class="partner-allocation">₹15-20 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹15-20 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Rural Buildings</span>
-                        <span class="focus-tag">Green Materials</span>
-                        <span class="focus-tag">Livelihoods</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Rural Buildings</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Green Materials</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Livelihoods</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Rural Buildings)</p>
                         <p><strong>Org Budget:</strong> ~₹80-100 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -648,23 +648,23 @@
                             <li>Sustainable housing design templates</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 70</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 70</span>
                     </div>
                 </div>
 
                 <!-- ICLEI South Asia -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">ICLEI South Asia</h3>
-                        <span class="partner-allocation">₹12-18 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹12-18 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">City Networks</span>
-                        <span class="focus-tag">Climate Plans</span>
-                        <span class="focus-tag">Local Governance</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">City Networks</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Climate Plans</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Local Governance</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (City Network & Capacity Building)</p>
                         <p><strong>Org Budget:</strong> ~€40M (ICLEI Global); South Asia office ~₹25-30 Cr</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -683,23 +683,23 @@
                             <li>Urban climate governance frameworks</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 50</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 50</span>
                     </div>
                 </div>
 
                 <!-- Mahila Housing Trust -->
-                <div class="partner-card" data-category="demand">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Mahila Housing Trust (MHT)</h3>
-                        <span class="partner-allocation">₹10-15 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹10-15 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Women-led Housing</span>
-                        <span class="focus-tag">Slum Upgradation</span>
-                        <span class="focus-tag">Microfinance</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Women-led Housing</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Slum Upgradation</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Microfinance</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Housing - Gender Equity Focus)</p>
                         <p><strong>Org Budget:</strong> ~₹40-50 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -718,23 +718,23 @@
                             <li>Gender-responsive climate finance models</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 65</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 65</span>
                     </div>
                 </div>
 
                 <!-- SEEDS India -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">SEEDS India</h3>
-                        <span class="partner-allocation">₹8-12 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹8-12 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Disaster Resilience</span>
-                        <span class="focus-tag">Climate Adaptation</span>
-                        <span class="focus-tag">Community Action</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Disaster Resilience</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Climate Adaptation</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Community Action</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Climate Resilience & Adaptation)</p>
                         <p><strong>Org Budget:</strong> ~₹60-80 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -753,23 +753,23 @@
                             <li>Early warning system integration</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 75</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 75</span>
                     </div>
                 </div>
 
                 <!-- Kabadiwalla Connect -->
-                <div class="partner-card" data-category="circular">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="circular">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Kabadiwalla Connect</h3>
-                        <span class="partner-allocation">₹6-10 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹6-10 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Tech Platform</span>
-                        <span class="focus-tag">Waste Pickers</span>
-                        <span class="focus-tag">Digital Integration</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Tech Platform</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Waste Pickers</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Digital Integration</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Circular Economy (Tech-enabled Waste Management)</p>
                         <p><strong>Org Budget:</strong> ~₹5-8 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -788,23 +788,23 @@
                             <li>Recycling marketplace expansion</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 80</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 80</span>
                     </div>
                 </div>
 
                 <!-- Terre Policy Centre -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Terre Policy Centre</h3>
-                        <span class="partner-allocation">₹8-12 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹8-12 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Urban Policy</span>
-                        <span class="focus-tag">Land Use</span>
-                        <span class="focus-tag">Transport Planning</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Urban Policy</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Land Use</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Transport Planning</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Urban Policy & Planning)</p>
                         <p><strong>Org Budget:</strong> ~₹10-15 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -823,23 +823,23 @@
                             <li>Urban policy research and advocacy</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 90</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 90</span>
                     </div>
                 </div>
 
                 <!-- Energy Swaraj Foundation -->
-                <div class="partner-card" data-category="demand">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="demand">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Energy Swaraj Foundation</h3>
-                        <span class="partner-allocation">₹5-8 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹5-8 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Decentralized Energy</span>
-                        <span class="focus-tag">Rural Electrification</span>
-                        <span class="focus-tag">Community Ownership</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Decentralized Energy</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Rural Electrification</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Community Ownership</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Demand Efficiency (Decentralized Energy)</p>
                         <p><strong>Org Budget:</strong> ~₹3-5 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -858,23 +858,23 @@
                             <li>Solar self-sufficiency demonstration projects</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 100</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 100</span>
                     </div>
                 </div>
 
                 <!-- Final Mile -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Final Mile Consulting</h3>
-                        <span class="partner-allocation">₹8-12 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹8-12 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Behavior Change</span>
-                        <span class="focus-tag">Nudges</span>
-                        <span class="focus-tag">Research</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Behavior Change</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Nudges</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Research</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Behavioral Science)</p>
                         <p><strong>Org Budget:</strong> ~₹20-25 Cr annually (consulting revenue, 2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -893,22 +893,22 @@
                             <li>Behavioral research on climate action adoption</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 105</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 105</span>
                     </div>
                 </div>
 
                 <!-- Vasudha -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">Vasudha Foundation</h3>
-                        <span class="partner-allocation">₹8-12 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹8-12 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Data Platform</span>
-                        <span class="focus-tag">Policy Analysis</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Data Platform</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Policy Analysis</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Data & Policy)</p>
                         <p><strong>Org Budget:</strong> ~₹8-10 Cr annually (2023-24)</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -927,23 +927,23 @@
                             <li>Annual progress reports and dashboards</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 110</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 110</span>
                     </div>
                 </div>
 
                 <!-- CSE -->
-                <div class="partner-card" data-category="enablers">
-                    <div class="partner-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-category="enablers">
+                    <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">CSE (Centre for Science and Environment)</h3>
-                        <span class="partner-allocation">₹10-15 Cr</span>
+                        <span class="text-sm font-bold text-primary">₹10-15 Cr</span>
                     </div>
-                    <div class="partner-focus">
-                        <span class="focus-tag">Public Awareness</span>
-                        <span class="focus-tag">Media</span>
-                        <span class="focus-tag">Advocacy</span>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Public Awareness</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Media</span>
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Advocacy</span>
                     </div>
-                    <div class="partner-details">
+                    <div class="space-y-3">
                         <p><strong>Sector:</strong> Enablers (Public Awareness & Advocacy)</p>
                         <p><strong>Org Budget:</strong> ~₹50+ Cr annually - India's premier environmental advocacy organization</p>
                         <p><strong>Key Strengths:</strong></p>
@@ -962,8 +962,8 @@
                             <li>Annual State of Environment reports</li>
                         </ul>
                     </div>
-                    <div class="partner-meta">
-                        <span class="agreement-status status-pending">Pending: Target Day 115</span>
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <span class="bg-amber-50 text-amber-700 px-2 py-1 rounded text-xs font-medium">Pending: Target Day 115</span>
                     </div>
                 </div>
 
@@ -972,10 +972,10 @@
 
     </main>
 
-    <footer class="footer footer-admin">
-        <div class="footer-content">
+    <footer class="bg-dark border-t border-gray-700 py-8 px-12 mt-16">
+        <div class="max-w-[1400px] mx-auto text-center">
             <p>India Progress Monitor - Partner Organizations</p>
-            <p class="footer-note">Classification: CONFIDENTIAL | Last updated: Jan 25, 2026</p>
+            <p class="text-sm text-gray-400">Classification: CONFIDENTIAL | Last updated: Jan 25, 2026</p>
         </div>
     </footer>
 

@@ -11,7 +11,7 @@
     <nav class="bg-dark border-b border-gray-700 px-8 py-4 flex justify-between items-center sticky top-0 z-[100]">
         <div class="flex items-center gap-2">
             <span class="text-2xl">🌱</span>
-            <span class="nav-title">Thesis Dashboard</span>
+            <span class="text-lg font-bold text-white">Thesis Dashboard</span>
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded ml-2">ADMIN</span>
         </div>
         <div class="flex items-center gap-1">
@@ -26,9 +26,9 @@
 
     <main class="max-w-[1400px] mx-auto px-12 py-12">
         <section class="flex justify-between items-center mb-12">
-            <div class="admin-header-content">
+            <div class="">
                 <h1 class="text-3xl font-bold text-gray-900">Implementation Roadmap</h1>
-                <p class="admin-subtitle">90-Day Launch Plan & Quarterly Milestones</p>
+                <p class="text-sm text-gray-500 mt-1">90-Day Launch Plan & Quarterly Milestones</p>
             </div>
         </section>
 
@@ -37,16 +37,16 @@
             <h2 class="text-2xl font-bold text-gray-900 mb-6">90-Day Launch Plan</h2>
 
             <!-- Month 1 -->
-            <div class="roadmap-month">
-                <div class="month-header">
+            <div class="bg-gray-50 font-semibold text-gray-700">
+                <div class="text-sm font-semibold text-gray-700 mb-2">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Month 1: Foundation Setting (Days 1-30)</h3>
-                    <span class="month-status status-current">Current Phase</span>
+                    <span class="bg-primary text-white px-2 py-1 rounded text-xs font-medium ml-2">Current Phase</span>
                 </div>
 
-                <div class="week-grid">
-                    <div class="week-card">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Week 1-2: Internal Alignment</h4>
-                        <table class="roadmap-table">
+                        <table class="w-full text-sm text-left">
                             <thead class="bg-gray-50 border-b border-gray-200">
                                 <tr>
                                     <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Action</th>
@@ -60,57 +60,57 @@
                                     <td class="px-6 py-4 border-b border-gray-200">Review strategy documents</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Team alignment on priorities</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Funder team</td>
-                                    <td class="px-6 py-4 border-b border-gray-200"><span class="task-status done">Done</span></td>
+                                    <td class="px-6 py-4 border-b border-gray-200"><span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Done</span></td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 border-b border-gray-200">Finalize portfolio budget</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Approved ₹253-270 Cr allocation</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Finance</td>
-                                    <td class="px-6 py-4 border-b border-gray-200"><span class="task-status done">Done</span></td>
+                                    <td class="px-6 py-4 border-b border-gray-200"><span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium">Done</span></td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 border-b border-gray-200">Establish PMU structure</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Team roles, reporting lines</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Leadership</td>
-                                    <td class="px-6 py-4 border-b border-gray-200"><span class="task-status progress">In Progress</span></td>
+                                    <td class="px-6 py-4 border-b border-gray-200"><span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">In Progress</span></td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 border-b border-gray-200">Set up communication channels</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Slack/Teams, email lists</td>
                                     <td class="px-6 py-4 border-b border-gray-200">Operations</td>
-                                    <td class="px-6 py-4 border-b border-gray-200"><span class="task-status pending">Pending</span></td>
+                                    <td class="px-6 py-4 border-b border-gray-200"><span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">Pending</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="week-card">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Week 3-4: Partner Outreach</h4>
-                        <div class="outreach-tiers">
-                            <div class="outreach-tier">
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                                 <h5>Tier 1 (Priority)</h5>
                                 <ul>
-                                    <li>NRDC India - Email + call <span class="task-status pending">Pending</span></li>
-                                    <li>WRI India - Email + call <span class="task-status pending">Pending</span></li>
-                                    <li>CEEW - Email + call <span class="task-status pending">Pending</span></li>
-                                    <li>ITDP India - Email + call <span class="task-status pending">Pending</span></li>
+                                    <li>NRDC India - Email + call <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">Pending</span></li>
+                                    <li>WRI India - Email + call <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">Pending</span></li>
+                                    <li>CEEW - Email + call <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">Pending</span></li>
+                                    <li>ITDP India - Email + call <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">Pending</span></li>
                                 </ul>
                             </div>
-                            <div class="outreach-tier">
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                                 <h5>Tier 2</h5>
                                 <ul>
                                     <li>Prayas, DA, Ethos, Final Mile - Introductory emails</li>
                                     <li>Saahas, TERI, CSTEP, Chintan - Introductory emails</li>
                                 </ul>
                             </div>
-                            <div class="outreach-tier">
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                                 <h5>Tier 3</h5>
                                 <ul>
                                     <li>SFC, Vasudha, CSE, Saath - Schedule for Month 2</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="milestone-box">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 mb-3 shadow-sm">
                             <strong>Milestone:</strong> 10 partner discovery calls completed by Day 30
                         </div>
                     </div>
@@ -118,16 +118,16 @@
             </div>
 
             <!-- Month 2 -->
-            <div class="roadmap-month">
-                <div class="month-header">
+            <div class="bg-gray-50 font-semibold text-gray-700">
+                <div class="text-sm font-semibold text-gray-700 mb-2">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Month 2: Partnership Development (Days 31-60)</h3>
-                    <span class="month-status status-upcoming">Upcoming</span>
+                    <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium ml-2">Upcoming</span>
                 </div>
 
-                <div class="week-grid">
-                    <div class="week-card">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">MOU Development</h4>
-                        <table class="roadmap-table">
+                        <table class="w-full text-sm text-left">
                             <thead class="bg-gray-50 border-b border-gray-200">
                                 <tr>
                                     <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Partner</th>
@@ -165,26 +165,26 @@
                         </table>
                     </div>
 
-                    <div class="week-card">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Integration Cluster Workshops</h4>
-                        <div class="workshop-list">
-                            <div class="workshop-item">
+                        <div class="space-y-2">
+                            <div class="flex items-start gap-2 text-sm text-gray-700">
                                 <h5>Buildings Cluster Workshop (Day 40)</h5>
                                 <p><strong>Participants:</strong> NRDC, WRI, DA, Ethos, (IIHS ASSURE)</p>
                                 <p><strong>Agenda:</strong> Role clarity, handoffs, shared metrics</p>
                             </div>
-                            <div class="workshop-item">
+                            <div class="flex items-start gap-2 text-sm text-gray-700">
                                 <h5>Circular Economy Cluster Workshop (Day 45)</h5>
                                 <p><strong>Participants:</strong> CEEW, Saahas, TERI, CSTEP, Chintan, Saath</p>
                                 <p><strong>Agenda:</strong> Research-operations integration, policy timeline</p>
                             </div>
-                            <div class="workshop-item">
+                            <div class="flex items-start gap-2 text-sm text-gray-700">
                                 <h5>Behavior & Awareness Cluster Workshop (Day 50)</h5>
                                 <p><strong>Participants:</strong> Final Mile, CSE, Prayas</p>
                                 <p><strong>Agenda:</strong> Nudge design, campaign coordination</p>
                             </div>
                         </div>
-                        <div class="milestone-box">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 mb-3 shadow-sm">
                             <strong>Milestone:</strong> 5 MOUs signed, 3 cluster designs complete by Day 60
                         </div>
                     </div>
@@ -192,16 +192,16 @@
             </div>
 
             <!-- Month 3 -->
-            <div class="roadmap-month">
-                <div class="month-header">
+            <div class="bg-gray-50 font-semibold text-gray-700">
+                <div class="text-sm font-semibold text-gray-700 mb-2">
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">Month 3: Operationalization (Days 61-90)</h3>
-                    <span class="month-status status-upcoming">Upcoming</span>
+                    <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium ml-2">Upcoming</span>
                 </div>
 
-                <div class="week-grid">
-                    <div class="week-card">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Dashboard MVP Launch</h4>
-                        <table class="roadmap-table">
+                        <table class="w-full text-sm text-left">
                             <thead class="bg-gray-50 border-b border-gray-200">
                                 <tr>
                                     <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Week</th>
@@ -229,9 +229,9 @@
                         </table>
                     </div>
 
-                    <div class="week-card">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Launch Event (Day 85-90)</h4>
-                        <div class="event-details">
+                        <div class="space-y-2">
                             <p><strong>Format:</strong> Half-day portfolio convening</p>
                             <p><strong>Participants:</strong> All 24 partner organizations</p>
                             <h5>Agenda:</h5>
@@ -244,7 +244,7 @@
                                 <li>Media announcement</li>
                             </ul>
                         </div>
-                        <div class="milestone-box milestone-final">
+                        <div class="bg-primary/5 border border-primary rounded-lg p-4 mb-3 shadow-sm">
                             <strong>Final Milestone:</strong> ₹50-60 Cr disbursed, dashboard MVP live, launch event completed
                         </div>
                     </div>
@@ -255,42 +255,42 @@
         <!-- Year 1 Quarterly Milestones -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Year 1 Quarterly Milestones</h2>
-            <div class="quarterly-grid">
-                <div class="quarter-card">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h4 class="text-base font-semibold text-gray-900 mb-2">Q1 (Months 1-3): Launch</h4>
-                    <ul class="quarter-targets">
-                        <li><span class="target-metric">MOUs signed:</span> 10/16</li>
-                        <li><span class="target-metric">First disbursements:</span> ₹50-60 Cr</li>
-                        <li><span class="target-metric">Dashboard MVP:</span> Live</li>
-                        <li><span class="target-metric">Launch event:</span> Completed</li>
-                        <li><span class="target-metric">Baseline data:</span> 80% metrics</li>
+                    <ul class="space-y-2 mt-4">
+                        <li><span class="flex items-center justify-between text-sm">MOUs signed:</span> 10/16</li>
+                        <li><span class="flex items-center justify-between text-sm">First disbursements:</span> ₹50-60 Cr</li>
+                        <li><span class="flex items-center justify-between text-sm">Dashboard MVP:</span> Live</li>
+                        <li><span class="flex items-center justify-between text-sm">Launch event:</span> Completed</li>
+                        <li><span class="flex items-center justify-between text-sm">Baseline data:</span> 80% metrics</li>
                     </ul>
                 </div>
-                <div class="quarter-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h4 class="text-base font-semibold text-gray-900 mb-2">Q2 (Months 4-6): Pilots</h4>
-                    <ul class="quarter-targets">
-                        <li><span class="target-metric">MOUs signed:</span> 16/16</li>
-                        <li><span class="target-metric">Pilot projects:</span> 20+ launched</li>
-                        <li><span class="target-metric">Partner dashboards:</span> All live</li>
-                        <li><span class="target-metric">Policy windows mapped:</span> 10 state + 3 national</li>
+                    <ul class="space-y-2 mt-4">
+                        <li><span class="flex items-center justify-between text-sm">MOUs signed:</span> 16/16</li>
+                        <li><span class="flex items-center justify-between text-sm">Pilot projects:</span> 20+ launched</li>
+                        <li><span class="flex items-center justify-between text-sm">Partner dashboards:</span> All live</li>
+                        <li><span class="flex items-center justify-between text-sm">Policy windows mapped:</span> 10 state + 3 national</li>
                     </ul>
                 </div>
-                <div class="quarter-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h4 class="text-base font-semibold text-gray-900 mb-2">Q3 (Months 7-9): Scale</h4>
-                    <ul class="quarter-targets">
-                        <li><span class="target-metric">Energy saved:</span> 1.5 TWh</li>
-                        <li><span class="target-metric">Buildings optimized:</span> 30,000</li>
-                        <li><span class="target-metric">Recycling capacity:</span> 5,000 t/yr</li>
-                        <li><span class="target-metric">Policies influenced:</span> 3</li>
+                    <ul class="space-y-2 mt-4">
+                        <li><span class="flex items-center justify-between text-sm">Energy saved:</span> 1.5 TWh</li>
+                        <li><span class="flex items-center justify-between text-sm">Buildings optimized:</span> 30,000</li>
+                        <li><span class="flex items-center justify-between text-sm">Recycling capacity:</span> 5,000 t/yr</li>
+                        <li><span class="flex items-center justify-between text-sm">Policies influenced:</span> 3</li>
                     </ul>
                 </div>
-                <div class="quarter-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h4 class="text-base font-semibold text-gray-900 mb-2">Q4 (Months 10-12): Results</h4>
-                    <ul class="quarter-targets">
-                        <li><span class="target-metric">Energy saved:</span> 2.0 TWh</li>
-                        <li><span class="target-metric">Buildings optimized:</span> 50,000</li>
-                        <li><span class="target-metric">Recycling capacity:</span> 8,000 t/yr</li>
-                        <li><span class="target-metric">Policies influenced:</span> 5</li>
+                    <ul class="space-y-2 mt-4">
+                        <li><span class="flex items-center justify-between text-sm">Energy saved:</span> 2.0 TWh</li>
+                        <li><span class="flex items-center justify-between text-sm">Buildings optimized:</span> 50,000</li>
+                        <li><span class="flex items-center justify-between text-sm">Recycling capacity:</span> 8,000 t/yr</li>
+                        <li><span class="flex items-center justify-between text-sm">Policies influenced:</span> 5</li>
                     </ul>
                 </div>
             </div>
@@ -360,10 +360,10 @@
         <!-- Risk Monitoring -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Risk Monitoring & Escalation</h2>
-            <div class="risk-monitoring-grid">
-                <div class="risk-monitor-card">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h4 class="text-base font-semibold text-gray-900 mb-2">Early Warning Indicators</h4>
-                    <table class="risk-table">
+                    <table class="w-full text-sm text-left">
                         <thead class="bg-gray-50 border-b border-gray-200">
                             <tr>
                                 <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Risk</th>
@@ -395,23 +395,23 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="risk-monitor-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h4 class="text-base font-semibold text-gray-900 mb-2">Escalation Protocol</h4>
-                    <div class="escalation-levels">
-                        <div class="escalation-level">
-                            <span class="level-badge level-1">Level 1</span>
+                    <div class="space-y-4">
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                            <span class="bg-green-50 text-green-700 px-3 py-1 rounded text-sm font-medium">Level 1</span>
                             <p><strong>Partner:</strong> Single metric off track → Partner support call (Weekly)</p>
                         </div>
-                        <div class="escalation-level">
-                            <span class="level-badge level-2">Level 2</span>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                            <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded text-sm font-medium">Level 2</span>
                             <p><strong>Cluster:</strong> Integration issue → Cluster lead intervention (Bi-weekly)</p>
                         </div>
-                        <div class="escalation-level">
-                            <span class="level-badge level-3">Level 3</span>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded text-sm font-medium">Level 3</span>
                             <p><strong>Portfolio:</strong> Multiple partner issues → PMU review meeting (Monthly)</p>
                         </div>
-                        <div class="escalation-level">
-                            <span class="level-badge level-4">Level 4</span>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                            <span class="bg-red-50 text-red-700 px-3 py-1 rounded text-sm font-medium">Level 4</span>
                             <p><strong>Strategic:</strong> Systemic problem → Funder leadership decision (As needed)</p>
                         </div>
                     </div>
@@ -420,10 +420,10 @@
         </section>
     </main>
 
-    <footer class="footer footer-admin">
-        <div class="footer-content">
+    <footer class="bg-dark border-t border-gray-700 py-8 px-12 mt-16">
+        <div class="max-w-[1400px] mx-auto text-center">
             <p>Thesis Dashboard - Admin Dashboard</p>
-            <p class="footer-note">Classification: CONFIDENTIAL</p>
+            <p class="text-sm text-gray-400">Classification: CONFIDENTIAL</p>
         </div>
     </footer>
 
