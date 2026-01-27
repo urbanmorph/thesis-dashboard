@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
 </head>
 <body>
     <nav class="bg-white/95 border-b border-gray-200 px-8 py-4 flex justify-between items-center sticky top-0 z-[100] backdrop-blur-sm">
@@ -144,36 +145,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India's energy discourse focuses on supply while 80%+ of primary energy never does useful work. This is the largest hidden opportunity.</p>
 
-                <!-- Sankey-style Flow Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">PRIMARY ENERGY</span>                      <span style="color: #4b5563;">FINAL ENERGY</span>                        <span style="color: #4b5563;">USEFUL ENERGY</span>
-<span style="color: #4b5563;">903 Mtoe (100%)</span>                       <span style="color: #4b5563;">~590 Mtoe (65%)</span>                      <span style="color: #4b5563;">~150 Mtoe (17%)</span>
-
-<span style="font-weight: bold; color: #dc2626;">█████████████████████████████████████████████████████████████████████████████████████████████████████</span> 100%
-        │
-        ├──<span style="color: #dc2626;">█████████████████████████████████</span> 35% <span style="color: #dc2626;">← Power plant thermal losses (coal ~65% wasted as heat)</span>
-        │
-        ▼
-<span style="font-weight: bold; color: #f59e0b;">█████████████████████████████████████████████████████████████████</span> 65%
-        │
-        ├──<span style="color: #f59e0b;">███████████</span> 11% <span style="color: #f59e0b;">← T&D losses (~17% of delivered electricity)</span>
-        │
-        ▼
-<span style="font-weight: bold; color: #eab308;">██████████████████████████████████████████████████████</span> 54%
-        │
-        ├──<span style="color: #eab308;">█████████████████████████████████████</span> 37% <span style="color: #eab308;">← End-use device losses</span>
-        │   │
-        │   ├── Traditional cooking (chulha): <span style="color: #dc2626;">90% lost</span> — 700M people affected
-        │   ├── Agricultural pumps: <span style="color: #dc2626;">70% lost</span> — &lt;2% of 30M pumps &gt;40% efficient
-        │   ├── IC engine vehicles: <span style="color: #dc2626;">75-80% lost</span> — 92% of transport energy
-        │   ├── Air conditioners: <span style="color: #f59e0b;">17-28% extra</span> at real-world temps vs lab
-        │   └── Incandescent lighting: <span style="color: #dc2626;">95% lost</span> — still in rural areas
-        │
-        ▼
-<span style="font-weight: bold; color: #22c55e;">█████████████████</span> 17% <span style="font-weight: bold; color: #22c55e;">← USEFUL ENERGY (light, motion, heat, cooling)</span>
-                    </div>
-                </div>
+                <!-- Interactive Sankey Diagram -->
+                <div id="energy-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -606,30 +579,8 @@
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Walk/cycle = 50% of trips but zero investment. Public transport = 36% ridership but declining. Private vehicles = 4% of trips but 60%+ of space and emissions.</p>
 
-                <!-- Sankey-style Flow Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">URBAN TRIPS (Mode Share)</span>             <span style="color: #4b5563;">ROAD SPACE</span>                          <span style="color: #4b5563;">EMISSIONS</span>
-
-<span style="font-weight: bold; color: #22c55e;">██████████████████████████████████████████████████</span> 50% <span style="font-weight: bold; color: #22c55e;">WALK/CYCLE</span> → <span style="color: #4b5563;">Space: 5%</span> → <span style="color: #22c55e;">Emissions: 0%</span>
-<span style="font-weight: bold; color: #3b82f6;">████████████████████████████████████</span> 36% <span style="font-weight: bold; color: #3b82f6;">PUBLIC TRANSIT</span> → <span style="color: #4b5563;">Space: 20%</span> → <span style="color: #3b82f6;">Emissions: 25%</span>
-<span style="font-weight: bold; color: #ec4899;">████████████</span> 10% <span style="font-weight: bold; color: #ec4899;">PARATRANSIT</span> → <span style="color: #4b5563;">Space: 15%</span> → <span style="color: #f59e0b;">Emissions: 15%</span>
-<span style="font-weight: bold; color: #dc2626;">████</span> 4% <span style="font-weight: bold; color: #dc2626;">PRIVATE VEHICLES</span> → <span style="color: #dc2626;">Space: 60%</span> → <span style="color: #dc2626;">Emissions: 60%</span>
-
-<span style="color: #4b5563;">TRANSPORT ENERGY EFFICIENCY:</span>
-
-IC ENGINE VEHICLES (92% of transport energy):
-<span style="color: #dc2626;">████████████████████</span> 20-25% efficiency → <span style="color: #dc2626;">75-80% LOST AS HEAT</span>
-<span style="color: #f59e0b;">███████</span> 7-10% idling loss → Traffic congestion, signals
-<span style="font-weight: bold; color: #22c55e;">████</span> <strong>12-15%</strong> → Actual motion energy delivered
-
-<span style="color: #4b5563;">PARKING SUBSIDY (hidden cost):</span>
-<span style="color: #dc2626;">██████████████████████████████████████████</span> ₹1,000s Cr/year in free parking → <strong>$25/hr equivalent value</strong>
-
-<span style="color: #4b5563;">THE WALKING/CYCLING GAP:</span>
-Modal share: <span style="font-weight: bold; color: #22c55e;">50%</span>  │  Budget share: <span style="font-weight: bold; color: #dc2626;">&lt;1%</span>  │  Road space: <span style="font-weight: bold; color: #dc2626;">5%</span>
-                    </div>
-                </div>
+                <!-- Interactive Sankey Diagram -->
+                <div id="transport-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -1731,45 +1682,8 @@ Modal share: <span style="font-weight: bold; color: #22c55e;">50%</span>  │  B
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Officials claim 97% collection and 70% processing. Reality: 32% unaccounted, 75% plants idle, 8% true circularity. ₹30,000 Cr/year in recyclables goes to landfills.</p>
 
-                <!-- Sankey-style Flow Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">WASTE GENERATED</span>                      <span style="color: #4b5563;">OFFICIAL CLAIM</span>                      <span style="color: #4b5563;">ACTUAL OUTCOME</span>
-<span style="color: #4b5563;">170,000 TPD (100%)</span>                      <span style="color: #4b5563;">Managed: 97%</span>                          <span style="color: #4b5563;">Circular: 8%</span>
-
-<span style="font-weight: bold; color: #22c55e;">████████████████████████████████████████████████████████████████████████████████████████████████</span> 100%
-        │
-        ├──<span style="color: #dc2626;">████████████████████████████████</span> 32% <span style="color: #dc2626;">← UNACCOUNTED (50,655 TPD) — data integrity crisis</span>
-        │
-        ▼
-<span style="font-weight: bold; color: #3b82f6;">████████████████████████████████████████████████████████████████</span> 68% "Collected"
-        │
-        ├──<span style="color: #f59e0b;">████████████████████████</span> 25% <span style="color: #f59e0b;">← LANDFILLED directly (4,000 plants at 25% capacity)</span>
-        │
-        ▼
-<span style="font-weight: bold; color: #8b5cf6;">████████████████████████████████████████</span> 43% Reaches processing
-        │
-        ├── FORMAL SECTOR (20%)
-        │   │
-        │   ├──<span style="color: #dc2626;">███████</span> 8% <span style="color: #dc2626;">← Plant underutilization + segregation failure</span>
-        │   │
-        │   ▼
-        │   <span style="color: #22c55e;">████</span> 4% → Recycled via formal plants
-        │
-        └── INFORMAL SECTOR (23%)
-            │
-            ├──<span style="color: #f59e0b;">██████████</span> 10% <span style="color: #f59e0b;">← Value captured by aggregators (90% of ₹30K Cr)</span>
-            │
-            ├── <span style="color: #3b82f6;">█████████</span> 9% <span style="color: #3b82f6;">← 4M+ waste pickers do 70-80% of actual recycling</span>
-            │
-            ▼
-            <span style="font-weight: bold; color: #22c55e;">████</span> 4% → Recycled via informal (pickers get 5-10% of value)
-
-<span style="font-weight: bold; color: #22c55e;">████████</span> 8% <span style="font-weight: bold; color: #22c55e;">← TRUE CIRCULARITY (plastic, e-waste, C&D combined)</span>
-
-<span style="color: #dc2626;">LOST TO LANDFILLS: 92%</span>  │  <span style="color: #22c55e;">POTENTIAL VALUE: ₹30,000 Cr/year</span>
-                    </div>
-                </div>
+                <!-- Interactive Sankey Diagram -->
+                <div id="waste-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -2915,33 +2829,8 @@ Modal share: <span style="font-weight: bold; color: #22c55e;">50%</span>  │  B
                 </h3>
                 <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">16% of food production never reaches consumers. No cold chain, no packhouses, no grading infrastructure. Farmers bear 90% of loss burden while getting 25% of retail price.</p>
 
-                <!-- Sankey-style Flow Diagram -->
-                <div style="background: #f9fafb; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; overflow-x: auto;">
-                    <div style="font-family: monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre; min-width: 600px;">
-<span style="color: #4b5563;">FARM PRODUCTION</span>                      <span style="color: #4b5563;">POST-HARVEST</span>                        <span style="color: #4b5563;">REACHES CONSUMER</span>
-<span style="color: #4b5563;">420 MT produced</span>                        <span style="color: #4b5563;">Handled: 353 MT</span>                      <span style="color: #4b5563;">Consumed: 353 MT</span>
-
-<span style="font-weight: bold; color: #22c55e;">███████████████████████████████████████████████████████████████████████████████████████████</span> 100%
-        │
-        ├──<span style="color: #dc2626;">██████████████</span> 16% <span style="color: #dc2626;">← POST-HARVEST LOSSES (67 MT = ₹92,000 Cr/year)</span>
-        │   │
-        │   ├── Farm-gate: <span style="color: #dc2626;">4.7%</span> — No packhouse, improper handling
-        │   ├── Storage: <span style="color: #dc2626;">5.8%</span> — 15M MT shortfall vs 60M MT need
-        │   ├── Transport: <span style="color: #dc2626;">3.2%</span> — No cold chain (4% cold vs 50% global)
-        │   └── Processing: <span style="color: #dc2626;">2.3%</span> — Inadequate grading, wastage
-        │
-        ▼
-<span style="font-weight: bold; color: #3b82f6;">████████████████████████████████████████████████████████████████████████</span> 84% Reaches market
-
-<span style="color: #4b5563;">VALUE DISTRIBUTION (of ₹100 retail):</span>
-<span style="color: #f59e0b;">█████████████████████████</span> Farmer gets: <strong>25%</strong>
-<span style="color: #8b5cf6;">███████████████████████████████████████████████████████████████</span> Middlemen take: <strong>65%</strong>
-<span style="color: #22c55e;">██████████</span> Processor/Retailer: <strong>10%</strong>
-
-<span style="color: #dc2626;">LOSS BREAKDOWN BY CROP:</span>
-Fruits & Veg: <span style="color: #dc2626;">5.8-18%</span> loss  │  Cereals: <span style="color: #f59e0b;">4.7-5.6%</span>  │  Pulses: <span style="color: #f59e0b;">6.4-8.4%</span>
-                    </div>
-                </div>
+                <!-- Interactive Sankey Diagram -->
+                <div id="food-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
 
                 <!-- Key Statistics Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -3385,6 +3274,223 @@ Fruits & Veg: <span style="color: #dc2626;">5.8-18%</span> loss  │  Cereals: <
                 const tab = document.querySelector(`[data-sector="${hash}"]`);
                 if (tab) tab.click();
             }
+        });
+    </script>
+
+    <!-- Plotly Sankey Diagram Renderers -->
+    <script>
+        // Function to render all Sankey diagrams
+        function renderSankeyDiagrams() {
+            // 1. ENERGY SANKEY
+            if (document.getElementById('energy-sankey')) {
+                const energyData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Primary Energy<br>903 Mtoe",
+                            "Power Plant Losses<br>313 Mtoe (35%)",
+                            "Final Energy<br>590 Mtoe",
+                            "T&D Losses<br>100 Mtoe (11%)",
+                            "Final Delivered<br>490 Mtoe",
+                            "End-Use Losses<br>340 Mtoe (37%)",
+                            "Useful Energy<br>150 Mtoe (17%)"
+                        ],
+                        color: ["#8b5cf6", "#dc2626", "#f59e0b", "#f59e0b", "#eab308", "#eab308", "#22c55e"]
+                    },
+                    link: {
+                        source: [0, 0, 2, 2, 4, 4],
+                        target: [1, 2, 3, 4, 5, 6],
+                        value: [313, 590, 100, 490, 340, 150],
+                        color: ["rgba(220, 38, 38, 0.3)", "rgba(245, 158, 11, 0.3)",
+                                "rgba(245, 158, 11, 0.3)", "rgba(234, 179, 8, 0.3)",
+                                "rgba(234, 179, 8, 0.3)", "rgba(34, 197, 94, 0.5)"]
+                    }
+                };
+
+                const energyLayout = {
+                    title: {
+                        text: "Energy Services Gap: 80%+ Primary Energy Lost",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#f9fafb'
+                };
+
+                Plotly.newPlot('energy-sankey', [energyData], energyLayout, {responsive: true});
+            }
+
+            // 2. TRANSPORT SANKEY
+            if (document.getElementById('transport-sankey')) {
+                const transportData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Total Trips<br>100%",
+                            "Walk/Cycle<br>50% trips",
+                            "Public Transport<br>36% trips",
+                            "2-Wheelers<br>10% trips",
+                            "Private Vehicles<br>4% trips",
+                            "Space: 5%",
+                            "Space: 35%",
+                            "Space: 0%",
+                            "Space: 60%",
+                            "Emissions: 1%",
+                            "Emissions: 21%",
+                            "Emissions: 64.5%",
+                            "Emissions: 13.5%"
+                        ],
+                        color: ["#6b7280", "#22c55e", "#3b82f6", "#f59e0b", "#dc2626",
+                                "#22c55e", "#3b82f6", "#6b7280", "#dc2626",
+                                "#22c55e", "#3b82f6", "#f59e0b", "#dc2626"]
+                    },
+                    link: {
+                        source: [0, 0, 0, 0, 1, 2, 3, 4, 1, 2, 3, 4],
+                        target: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                        value: [50, 36, 10, 4, 50, 36, 10, 4, 50, 36, 10, 4],
+                        color: ["rgba(34, 197, 94, 0.3)", "rgba(59, 130, 246, 0.3)",
+                                "rgba(245, 158, 11, 0.3)", "rgba(220, 38, 38, 0.3)",
+                                "rgba(34, 197, 94, 0.2)", "rgba(59, 130, 246, 0.2)",
+                                "rgba(107, 114, 128, 0.2)", "rgba(220, 38, 38, 0.2)",
+                                "rgba(34, 197, 94, 0.2)", "rgba(59, 130, 246, 0.2)",
+                                "rgba(245, 158, 11, 0.2)", "rgba(220, 38, 38, 0.2)"]
+                    }
+                };
+
+                const transportLayout = {
+                    title: {
+                        text: "Transport Efficiency Gap: 4% of trips get 60% space & 13.5% emissions",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#fdf2f8'
+                };
+
+                Plotly.newPlot('transport-sankey', [transportData], transportLayout, {responsive: true});
+            }
+
+            // 3. WASTE SANKEY
+            if (document.getElementById('waste-sankey')) {
+                const wasteData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Waste Generated<br>170,000 TPD",
+                            "Unaccounted<br>32%",
+                            "Collected<br>68%",
+                            "Landfilled<br>25%",
+                            "To Processing<br>43%",
+                            "Formal Sector<br>20%",
+                            "Informal Sector<br>23%",
+                            "Plant Losses<br>16%",
+                            "Recycled (Formal)<br>4%",
+                            "Aggregator Value<br>10%",
+                            "Picker Work<br>9%",
+                            "Recycled (Informal)<br>4%",
+                            "True Circularity<br>8%"
+                        ],
+                        color: ["#22c55e", "#dc2626", "#3b82f6", "#f59e0b", "#8b5cf6",
+                                "#6366f1", "#ec4899", "#dc2626", "#22c55e",
+                                "#f59e0b", "#3b82f6", "#22c55e", "#10b981"]
+                    },
+                    link: {
+                        source: [0, 0, 2, 2, 4, 4, 5, 5, 6, 6, 6, 8, 11],
+                        target: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12],
+                        value: [32, 68, 25, 43, 20, 23, 16, 4, 10, 9, 4, 4, 4],
+                        color: ["rgba(220, 38, 38, 0.4)", "rgba(59, 130, 246, 0.3)",
+                                "rgba(245, 158, 11, 0.4)", "rgba(139, 92, 246, 0.3)",
+                                "rgba(99, 102, 241, 0.3)", "rgba(236, 72, 153, 0.3)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(34, 197, 94, 0.5)",
+                                "rgba(245, 158, 11, 0.3)", "rgba(59, 130, 246, 0.3)",
+                                "rgba(34, 197, 94, 0.4)", "rgba(16, 185, 129, 0.5)",
+                                "rgba(16, 185, 129, 0.5)"]
+                    }
+                };
+
+                const wasteLayout = {
+                    title: {
+                        text: "Waste Value Leakage: 92% lost, only 8% true circularity",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#f0fdf4'
+                };
+
+                Plotly.newPlot('waste-sankey', [wasteData], wasteLayout, {responsive: true});
+            }
+
+            // 4. FOOD SANKEY
+            if (document.getElementById('food-sankey')) {
+                const foodData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Farm Production<br>420 MT",
+                            "Post-Harvest Loss<br>67 MT (16%)",
+                            "Farm-gate Loss<br>4.7%",
+                            "Storage Loss<br>5.8%",
+                            "Transport Loss<br>3.2%",
+                            "Processing Loss<br>2.3%",
+                            "Reaches Market<br>353 MT (84%)",
+                            "Farmer Gets<br>25%",
+                            "Middlemen Take<br>65%",
+                            "Retailer<br>10%"
+                        ],
+                        color: ["#22c55e", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626",
+                                "#3b82f6", "#f59e0b", "#8b5cf6", "#22c55e"]
+                    },
+                    link: {
+                        source: [0, 0, 1, 1, 1, 1, 6, 6, 6],
+                        target: [1, 6, 2, 3, 4, 5, 7, 8, 9],
+                        value: [67, 353, 19.74, 24.36, 13.44, 10.01, 88.25, 229.45, 35.3],
+                        color: ["rgba(220, 38, 38, 0.4)", "rgba(59, 130, 246, 0.3)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(220, 38, 38, 0.3)",
+                                "rgba(220, 38, 38, 0.3)", "rgba(220, 38, 38, 0.3)",
+                                "rgba(245, 158, 11, 0.4)", "rgba(139, 92, 246, 0.4)",
+                                "rgba(34, 197, 94, 0.4)"]
+                    }
+                };
+
+                const foodLayout = {
+                    title: {
+                        text: "Food Loss Cascade: 16% lost before consumers, farmers get 25% of value",
+                        font: { size: 16, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#fffbeb'
+                };
+
+                Plotly.newPlot('food-sankey', [foodData], foodLayout, {responsive: true});
+            }
+        }
+
+        // Render diagrams when page loads
+        document.addEventListener('DOMContentLoaded', renderSankeyDiagrams);
+
+        // Re-render when tab switches (in case diagrams are hidden initially)
+        document.querySelectorAll('[data-sector]').forEach(tab => {
+            tab.addEventListener('click', () => {
+                setTimeout(renderSankeyDiagrams, 100);
+            });
         });
     </script>
 </body>
