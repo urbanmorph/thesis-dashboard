@@ -11,7 +11,7 @@
     <nav class="bg-dark border-b border-gray-700 px-8 py-4 flex justify-between items-center sticky top-0 z-[100]">
         <div class="flex items-center gap-2">
             <span class="text-2xl">🌱</span>
-            <span class="nav-title">Thesis Dashboard</span>
+            <span class="text-lg font-bold text-white">India Progress Monitor</span>
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded ml-2">ADMIN</span>
         </div>
         <div class="flex items-center gap-1">
@@ -26,31 +26,31 @@
 
     <main class="max-w-[1400px] mx-auto px-12 py-12">
         <section class="flex justify-between items-center mb-12">
-            <div class="admin-header-content">
-                <h1>Funders & Capital Sources</h1>
-                <p class="admin-subtitle">Climate Capital Stack: Philanthropies, CSR, Venture Capital & Institutional Investors</p>
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Funders & Capital Sources</h1>
+                <p class="text-sm text-gray-500 mt-1">Climate Capital Stack: Philanthropies, CSR, Venture Capital & Institutional Investors</p>
             </div>
         </section>
 
         <!-- Climate Capital Stack Overview -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Climate Capital Stack</h2>
-            <p style="color: var(--gray-600); margin-bottom: var(--space-lg);">The climate finance ecosystem spans multiple capital types, from early-stage grants to growth equity. Each layer serves different risk-return profiles and impact horizons.</p>
+            <p style="color: #4b5563; margin-bottom: 1.5rem;">The climate finance ecosystem spans multiple capital types, from early-stage grants to growth equity. Each layer serves different risk-return profiles and impact horizons.</p>
 
-            <div class="funding-categories-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Accelerators & Incubators -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🚀 Accelerators & Incubators</h3>
-                        <span class="funding-amount">Pre-Seed / Seed</span>
+                        <span class="text-sm font-medium text-gray-500">Pre-Seed / Seed</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 15%; background: var(--primary)"></div>
+                    <div class="mb-4">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-300" style="width: 15%; background: #10b981"></div>
                         </div>
                         <span>Early Stage</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Marble</strong> - Climate tech accelerator, early-stage ventures</li>
                         <li><strong>Deep Science Ventures</strong> - Science-led company creation, deep tech</li>
                         <li><strong>Carbon13</strong> - Venture builder for climate startups, Cambridge-based</li>
@@ -60,18 +60,18 @@
                 </div>
 
                 <!-- Catalytic Capital -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>💫 Catalytic Capital</h3>
-                        <span class="funding-amount">Grants / PRIs</span>
+                        <span class="text-sm font-medium text-gray-500">Grants / PRIs</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 20%; background: var(--secondary)"></div>
+                    <div class="mb-4">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-300" style="width: 20%; background: var(--secondary)"></div>
                         </div>
                         <span>Concessionary</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Elemental Impact</strong> - Early-stage climate grants, first-loss capital</li>
                         <li><strong>Schmidt Family Foundation</strong> - Climate & clean energy investments</li>
                         <li><strong>Hewlett Foundation</strong> - Climate solutions, $600M+ commitment</li>
@@ -81,18 +81,18 @@
                 </div>
 
                 <!-- Climate VCs -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🌱 Climate VCs</h3>
-                        <span class="funding-amount">Series A-C</span>
+                        <span class="text-sm font-medium text-gray-500">Series A-C</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 35%; background: var(--accent-green)"></div>
+                    <div class="mb-4">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-300" style="width: 35%; background: var(--accent-green)"></div>
                         </div>
                         <span>Venture Stage</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Extantia</strong> - Deep tech climate, European focus</li>
                         <li><strong>At One Ventures</strong> - Deep tech for planetary boundaries</li>
                         <li><strong>Climentum Capital</strong> - European climate tech fund</li>
@@ -103,18 +103,18 @@
                 </div>
 
                 <!-- Corporate Venture -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🏢 Corporate Venture</h3>
-                        <span class="funding-amount">Strategic Investment</span>
+                        <span class="text-sm font-medium text-gray-500">Strategic Investment</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 25%; background: var(--accent-orange)"></div>
+                    <div class="mb-4">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-300" style="width: 25%; background: var(--accent-orange)"></div>
                         </div>
                         <span>Strategic Stage</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Honda Xcelerator</strong> - Mobility & energy innovations</li>
                         <li><strong>TDK Ventures</strong> - Industrial deep tech, energy storage</li>
                         <li><strong>Toyota Ventures</strong> - Mobility, hydrogen, carbon neutrality</li>
@@ -125,18 +125,18 @@
                 </div>
 
                 <!-- Growth & PE -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>📈 Growth Equity & PE</h3>
-                        <span class="funding-amount">Scale Capital</span>
+                        <span class="text-sm font-medium text-gray-500">Scale Capital</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 45%; background: var(--accent-blue)"></div>
+                    <div class="mb-4">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-300" style="width: 45%; background: var(--accent-blue)"></div>
                         </div>
                         <span>Growth Stage</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Blume Equity</strong> - Growth-stage climate investments</li>
                         <li><strong>Demeter</strong> - European climate & agri-food PE</li>
                         <li><strong>Just Climate</strong> - $1.5B climate solutions fund</li>
@@ -147,18 +147,18 @@
                 </div>
 
                 <!-- Government & Multilateral -->
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🌍 Government & Multilateral</h3>
-                        <span class="funding-amount">Institutional Capital</span>
+                        <span class="text-sm font-medium text-gray-500">Institutional Capital</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 60%; background: var(--gray-600)"></div>
+                    <div class="mb-4">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-300" style="width: 60%; background: #4b5563"></div>
                         </div>
                         <span>Large Scale</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>World Bank Group</strong> - $35B+ annual climate finance</li>
                         <li><strong>European Investment Bank (EIB)</strong> - EU climate bank, 50%+ green</li>
                         <li><strong>Bpifrance</strong> - French public investment bank, climate transition</li>
@@ -173,12 +173,12 @@
         <!-- Philanthropies & CSR Funders by Sector -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Philanthropies & CSR Funders by Sector</h2>
-            <div class="funding-categories-grid">
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🏢 Buildings & Energy Efficiency</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Shakti Foundation</strong> - ECBC, thermal comfort, building codes</li>
                         <li><strong>MacArthur Foundation</strong> - $18M climate portfolio in India</li>
                         <li><strong>ClimateWorks Foundation</strong> - Clean energy efficiency</li>
@@ -187,11 +187,11 @@
                         <li><strong>Children's Investment Fund (CIFF)</strong> - Rs 106 Cr India Clean Air</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🚌 Transport & Mobility</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Shakti Foundation</strong> - Sustainable urban transport, 80% modal shift</li>
                         <li><strong>Bloomberg Philanthropies</strong> - EV roadmaps, city transport</li>
                         <li><strong>World Bank ESMAP</strong> - $1.5B electric mobility (2024)</li>
@@ -200,11 +200,11 @@
                         <li><strong>Good Energies Foundation</strong> - EV infrastructure</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🌬️ Air Quality</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>CIFF</strong> - Rs 106 Cr for India Clean Air Phase 2</li>
                         <li><strong>Shakti Foundation</strong> - Rs 4-10 Cr/year emission studies</li>
                         <li><strong>UNEP</strong> - Rs 53 Cr Global Air Quality Program</li>
@@ -213,11 +213,11 @@
                         <li><strong>Wellcome Trust</strong> - Air pollution health research</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>♻️ Circular Economy</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>IKEA Foundation</strong> - Renewable energy supply chains</li>
                         <li><strong>Ellen MacArthur Foundation</strong> - Circular economy systems</li>
                         <li><strong>Oak Foundation</strong> - E-waste and recycling</li>
@@ -226,11 +226,11 @@
                         <li><strong>JSW Foundation</strong> - Industrial sustainability</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🏘️ Neighbourhoods & Open Data</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Rohini Nilekani Philanthropies</strong> - India Climate Collaborative, civic data</li>
                         <li><strong>Omidyar Network India</strong> - Open data, civic tech platforms</li>
                         <li><strong>Google.org</strong> - Data for social impact, mapping</li>
@@ -239,11 +239,11 @@
                         <li><strong>Tata Trusts</strong> - Community-based programs, urban data</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🌍 Cross-Sector Climate Funders</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>India Climate Collaborative (ICC)</strong> - Multi-funder coalition</li>
                         <li><strong>MacArthur + Hewlett + Packard</strong> - Solar energy consortium</li>
                         <li><strong>Rockefeller Foundation</strong> - Climate & health integration</li>
@@ -253,7 +253,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="section-note">
+            <div class="text-sm text-gray-600 italic mt-4">
                 <p><strong>Note:</strong> This is not an exhaustive list. Major Indian CSR funders include Tata Group, Reliance Foundation, Infosys, HDFC, ITC, Mahindra, Godrej, and JSW.</p>
             </div>
         </section>
@@ -261,12 +261,12 @@
         <!-- India-Focused Climate Investors -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">India-Focused Climate Investors</h2>
-            <div class="funding-categories-grid">
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🇮🇳 Indian Climate VCs</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>Omnivore</strong> - Agritech & climate tech, $250M+ deployed</li>
                         <li><strong>Ecoworks Ventures</strong> - Sustainability-focused early stage</li>
                         <li><strong>Ankur Capital</strong> - Science-based solutions, agri-climate</li>
@@ -275,11 +275,11 @@
                         <li><strong>Asha Impact</strong> - Climate, healthcare, livelihoods</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🏦 Development Finance</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>SIDBI</strong> - Climate finance for MSMEs</li>
                         <li><strong>NABARD</strong> - Rural climate adaptation, green bonds</li>
                         <li><strong>IREDA</strong> - Renewable energy project finance</li>
@@ -288,11 +288,11 @@
                         <li><strong>Yes Bank Climate Bonds</strong> - Green infrastructure</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
                         <h3>🌏 International DFIs in India</h3>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-2">
                         <li><strong>IFC</strong> - $2B+ annual India climate investments</li>
                         <li><strong>ADB</strong> - $25B cumulative India climate portfolio</li>
                         <li><strong>KfW (Germany)</strong> - Indo-German climate cooperation</li>
@@ -308,30 +308,30 @@
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Climate Finance Gap Analysis</h2>
             <div class="risk-grid">
-                <div class="risk-card risk-high">
-                    <div class="risk-header">
-                        <span class="risk-level">GAP</span>
+                <div class="bg-white border-l-4 border-red-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase px-2 py-1 rounded">GAP</span>
                         <h4>$170B Annual Shortfall</h4>
                     </div>
                     <p>India needs $223B/year for NDC commitments; current flows are ~$49B annually. 76% gap remains unfunded.</p>
                 </div>
-                <div class="risk-card risk-medium">
-                    <div class="risk-header">
-                        <span class="risk-level">CHALLENGE</span>
+                <div class="bg-white border-l-4 border-amber-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase px-2 py-1 rounded">CHALLENGE</span>
                         <h4>Adaptation Underfunded</h4>
                     </div>
                     <p>Only 6% of climate finance goes to adaptation. Mitigation receives 94% despite equal urgency.</p>
                 </div>
-                <div class="risk-card risk-medium">
-                    <div class="risk-header">
-                        <span class="risk-level">CHALLENGE</span>
+                <div class="bg-white border-l-4 border-amber-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase px-2 py-1 rounded">CHALLENGE</span>
                         <h4>Domestic Capital Constraints</h4>
                     </div>
                     <p>Banks face asset-liability mismatch for 20-year climate projects. Green bond market nascent at $20B.</p>
                 </div>
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">OPPORTUNITY</span>
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase px-2 py-1 rounded">OPPORTUNITY</span>
                         <h4>Blended Finance Models</h4>
                     </div>
                     <p>First-loss capital from philanthropy can de-risk commercial investment. 1:4 to 1:8 leverage ratios possible.</p>
@@ -340,10 +340,10 @@
         </section>
     </main>
 
-    <footer class="footer footer-admin">
-        <div class="footer-content">
+    <footer class="bg-dark text-gray-400 text-center px-8 py-8 mt-12">
+        <div class="max-w-4xl mx-auto">
             <p>Thesis Dashboard - Admin Dashboard</p>
-            <p class="footer-note">Classification: CONFIDENTIAL</p>
+            <p class="text-xs text-gray-500 mt-4">Classification: CONFIDENTIAL</p>
         </div>
     </footer>
 

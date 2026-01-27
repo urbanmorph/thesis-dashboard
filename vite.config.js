@@ -12,6 +12,7 @@ export default defineConfig({
         admin: resolve(__dirname, 'admin.html'),
         'admin-partners': resolve(__dirname, 'admin-partners.html'),
         'admin-funding': resolve(__dirname, 'admin-funding.html'),
+        'admin-funders': resolve(__dirname, 'admin-funders.html'),
         'admin-roadmap': resolve(__dirname, 'admin-roadmap.html'),
         login: resolve(__dirname, 'login.html'),
       },
