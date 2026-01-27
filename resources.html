@@ -440,6 +440,30 @@
         ReferenceRenderer.fetchAndRender('/public/data/reference-mapping.json', 'references-container');
     </script>
     <script>
+        // Auto-generate IDs for glossary terms for deep linking
+        document.addEventListener('DOMContentLoaded', () => {
+            const glossaryPanel = document.getElementById('glossary');
+            if (glossaryPanel) {
+                const termCards = glossaryPanel.querySelectorAll('.bg-white.border');
+                termCards.forEach(card => {
+                    const dt = card.querySelector('dt');
+                    if (dt) {
+                        const term = dt.textContent.trim();
+                        // Convert term to ID format: lowercase, replace special chars with hyphens
+                        const id = 'glossary-' + term.toLowerCase()
+                            .replace(/\s+/g, '-')
+                            .replace(/[&]/g, '')
+                            .replace(/\./g, '')
+                            .replace(/[()]/g, '')
+                            .replace(/,/g, '');
+                        card.id = id;
+                    }
+                });
+                console.log('Glossary IDs generated for deep linking');
+            }
+        });
+    </script>
+    <script>
         // Tab switching functionality
         document.querySelectorAll('.resource-tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -469,8 +493,32 @@
         window.addEventListener('load', () => {
             const hash = window.location.hash.slice(1);
             if (hash) {
-                const tab = document.querySelector(`[data-section="${hash}"]`);
-                if (tab) tab.click();
+                // Check if it's a glossary term link
+                if (hash.startsWith('glossary-')) {
+                    // Show glossary tab
+                    const glossaryTab = document.querySelector('[data-section="glossary"]');
+                    if (glossaryTab) glossaryTab.click();
+
+                    // Scroll to the term after a short delay
+                    setTimeout(() => {
+                        const element = document.getElementById(hash);
+                        if (element) {
+                            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            // Highlight the term briefly
+                            element.style.transition = 'all 0.3s';
+                            element.style.transform = 'scale(1.05)';
+                            element.style.boxShadow = '0 10px 30px rgba(16, 185, 129, 0.3)';
+                            setTimeout(() => {
+                                element.style.transform = '';
+                                element.style.boxShadow = '';
+                            }, 2000);
+                        }
+                    }, 300);
+                } else {
+                    // Regular section tab
+                    const tab = document.querySelector(`[data-section="${hash}"]`);
+                    if (tab) tab.click();
+                }
             }
         });
     </script>
