@@ -6,7 +6,7 @@ This project is a 9-page static HTML dashboard that has been migrated to use **T
 
 ## Technology Stack
 
-- **HTML** - 9 static pages (login, index, thesis, resources, sectors, 4 admin pages)
+- **HTML** - 10 static pages (login, index, thesis, resources, sectors, 5 admin pages)
 - **Tailwind CSS v3** - Utility-first CSS framework
 - **Vite** - Build tool with fast HMR (Hot Module Replacement)
 - **Vanilla JavaScript** - No framework, uses ES modules
