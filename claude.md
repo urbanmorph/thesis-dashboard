@@ -344,6 +344,25 @@ Check `tailwind.config.js` content array includes your file:
 content: ["./*.html", "./js/**/*.js"]
 ```
 
+## Working with Claude Code
+
+### Model Selection for Different Tasks
+
+**For Planning (Research & Design):**
+- Use Opus for complex planning, architectural decisions, and exploratory work
+- Opus excels at understanding requirements and designing implementation approaches
+
+**For Implementation (Code Writing):**
+- Spin up a Sonnet agent to execute the plan and write code
+- Sonnet is faster and more cost-effective for implementation work
+- Command: Launch a task with `subagent_type: general-purpose` and `model: sonnet`
+
+**Workflow Example:**
+1. Use Opus to enter plan mode and design the solution
+2. Exit plan mode with approved plan
+3. Opus spawns Sonnet agent(s) to implement the code changes
+4. Sonnet executes efficiently while Opus monitors progress
+
 ## Reference Links
 
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
