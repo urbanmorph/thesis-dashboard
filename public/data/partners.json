@@ -1,553 +1,1494 @@
 {
-    "lastUpdated": "2026-01-24T00:00:00.000Z",
-    "summary": {
-        "total": 26,
-        "strategic": 0,
-        "agreementsSigned": 14,
-        "totalBudget": {
-            "min": 278,
-            "max": 302
-        }
+  "lastUpdated": "2026-01-27T00:00:00.000Z",
+  "summary": {
+    "total": 48,
+    "signed": 21,
+    "pending": 27,
+    "totalBudget": {
+      "min": 278,
+      "max": 302,
+      "unit": "Cr"
+    }
+  },
+  "categories": {
+    "demand": {
+      "label": "Demand Efficiency",
+      "emoji": "⚡",
+      "color": "yellow"
     },
-    "partners": [
-        {
-            "id": "nrdc",
-            "name": "NRDC India",
-            "tier": 1,
-            "category": "demand",
-            "allocation": { "min": 40, "max": 50 },
-            "orgBudget": { "value": 244, "currency": "USD", "unit": "million", "year": 2024, "note": "Global NRDC; India office is subsidiary" },
-            "agreementStatus": "pending",
-            "agreementTargetDate": "2026-02-15",
-            "progress": 15,
-            "focus": ["Buildings", "Cool Roofs", "ECBC"],
-            "deliverables": {
-                "year1": ["2 new state expansions", "50K cool roofs"],
-                "year3": ["200K cool roofs", "ECBC compliance in 5 states", "50K commercial buildings assessed"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Buildings lead"
-            }
-        },
-        {
-            "id": "wri",
-            "name": "WRI India",
-            "tier": 1,
-            "category": "demand",
-            "allocation": { "min": 30, "max": 40 },
-            "orgBudget": { "value": 272, "currency": "USD", "unit": "million", "year": 2024, "note": "Global WRI; India is country office" },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 10,
-            "focus": ["Public Facilities", "Equity"],
-            "deliverables": {
-                "year1": ["1,000 public facilities baseline"],
-                "year3": ["50K public facilities optimized", "PRADAN rural integration", "Equity framework"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Equity lead"
-            }
-        },
-        {
-            "id": "ceew",
-            "name": "CEEW",
-            "tier": 1,
-            "category": "both",
-            "allocation": { "min": 50, "max": 60 },
-            "orgBudget": { "value": 33, "currency": "USD", "unit": "million", "year": 2024, "note": "India-based think tank" },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 20,
-            "focus": ["Cooling", "Circular Economy", "Research"],
-            "deliverables": {
-                "year1": ["National cooling roadmap draft", "3-city circular pilots"],
-                "year3": ["National cooling roadmap", "Solar/battery recycling research", "Policy framework"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Cooling + Circular"
-            }
-        },
-        {
-            "id": "itdp",
-            "name": "ITDP India",
-            "tier": 1,
-            "category": "demand",
-            "allocation": { "min": 20, "max": 25 },
-            "agreementStatus": "pending",
-            "agreementTargetDate": "2026-02-25",
-            "progress": 5,
-            "focus": ["Transport", "BRT", "TOD"],
-            "deliverables": {
-                "year1": ["2 city BRT/TOD plans"],
-                "year3": ["5 city BRT/TOD plans", "Modal shift programs", "20B passenger-km shifted"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Transport"
-            }
-        },
-        {
-            "id": "prayas",
-            "name": "Prayas Energy Group",
-            "tier": 2,
-            "category": "demand",
-            "allocation": { "min": 15, "max": 20 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Regulatory", "DSM Policy"],
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Regulatory"
-            }
-        },
-        {
-            "id": "da",
-            "name": "Development Alternatives",
-            "tier": 2,
-            "category": "demand",
-            "allocation": { "min": 15, "max": 20 },
-            "orgBudget": { "value": 25, "currency": "USD", "unit": "million", "year": 2025, "note": "Social enterprise group" },
-            "agreementStatus": "pending",
-            "agreementTargetDate": "2026-03-01",
-            "progress": 0,
-            "focus": ["Rural", "Buildings"],
-            "deliverables": {
-                "year1": ["500 rural building assessments"],
-                "year3": ["Rural buildings efficiency program"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Rural buildings"
-            }
-        },
-        {
-            "id": "ethos",
-            "name": "Ethos Foundation",
-            "tier": 2,
-            "category": "enablers",
-            "allocation": { "min": 12, "max": 15 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 0,
-            "focus": ["Education", "Architecture"],
-            "deliverables": {
-                "year1": ["15 college MOUs", "Curriculum draft"],
-                "year3": ["30 colleges", "Architecture education reform"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Education"
-            }
-        },
-        {
-            "id": "finalmile",
-            "name": "Final Mile",
-            "tier": 2,
-            "category": "notf",
-            "allocation": { "min": 8, "max": 12 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Behavior", "Nudges", "Community"],
-            "deliverables": {
-                "year1": ["3 behavioral RCTs launched", "Community engagement framework"],
-                "year3": ["Behavioral intervention framework", "100 neighbourhood pilots supported"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Behavior"
-            }
-        },
-        {
-            "id": "saahas",
-            "name": "Saahas",
-            "tier": 2,
-            "category": "circular",
-            "allocation": { "min": 18, "max": 22 },
-            "orgBudget": { "value": 66.7, "currency": "INR", "unit": "crore", "year": 2025, "note": "Saahas Zero Waste social enterprise" },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 5,
-            "focus": ["Collection", "Operations", "Waste Management"],
-            "deliverables": {
-                "year1": ["3-city collection pilot operational"],
-                "year3": ["15-city collection network"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Operations"
-            }
-        },
-        {
-            "id": "hasirudala",
-            "name": "Hasiru Dala",
-            "fullName": "Hasiru Dala Innovations",
-            "tier": 2,
-            "category": "circular",
-            "allocation": { "min": 15, "max": 20 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-20",
-            "progress": 5,
-            "focus": ["Waste Picker Integration", "Inclusive Circularity", "Social Enterprise"],
-            "keyStrengths": [
-                "Bangalore-based waste picker empowerment organization",
-                "Inclusive Circularity® model integrating informal workers",
-                "Serves 430+ clients, provides livelihoods to 5,144 waste pickers",
-                "First Indian city to issue waste picker ID cards (2010-2012)"
-            ],
-            "deliverables": {
-                "year1": ["Waste picker integration model in 3 cities", "100 waste pickers formalized", "Inclusive circularity toolkit"],
-                "year3": ["1,000 waste pickers integrated", "10-city waste picker federation", "EPR compliance through informal sector"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Waste Picker Integration"
-            }
-        },
-        {
-            "id": "wastewarriors",
-            "name": "Waste Warriors",
-            "fullName": "Waste Warriors Society",
-            "tier": 2,
-            "category": "circular",
-            "allocation": { "min": 10, "max": 15 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-20",
-            "progress": 5,
-            "focus": ["Himalayan Waste Management", "Tourism Waste", "Collection & Processing"],
-            "keyStrengths": [
-                "Specializes in Indian Himalayan Region waste crisis",
-                "Collected 4,223+ tonnes since 2012 in Bhagsunag/Triund",
-                "Keeling Curve Prize 2023 winner (top 10 global climate solutions)",
-                "Mountain Protection Award 2016"
-            ],
-            "deliverables": {
-                "year1": ["2 Himalayan city waste pilots", "Tourism waste management model", "500 tonnes processed"],
-                "year3": ["10 Himalayan cities covered", "5,000 tonnes/year processing", "Mountain waste management blueprint"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Himalayan Programs"
-            }
-        },
-        {
-            "id": "teri",
-            "name": "TERI",
-            "tier": 2,
-            "category": "circular",
-            "allocation": { "min": 15, "max": 20 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["R&D", "Recycling Tech"],
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "R&D"
-            }
-        },
-        {
-            "id": "cstep",
-            "name": "CSTEP",
-            "tier": 2,
-            "category": "circular air",
-            "allocation": { "min": 10, "max": 15 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 5,
-            "focus": ["Battery", "Modeling", "Air Quality", "Sensors"],
-            "keyStrengths": [
-                "Bangalore-based energy and climate policy think tank",
-                "Air quality modeling and source apportionment",
-                "200 low-cost sensor deployment in Bengaluru with Aurassure",
-                "EV and battery lifecycle modeling"
-            ],
-            "deliverables": {
-                "year1": ["2 state battery roadmaps", "200 sensors deployed in Bengaluru", "Source apportionment study"],
-                "year3": ["Second-life battery program", "Open AQ India platform contribution", "5-city sensor network"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Air Quality & Battery"
-            }
-        },
-        {
-            "id": "chintan",
-            "name": "Chintan",
-            "tier": 2,
-            "category": "circular",
-            "allocation": { "min": 8, "max": 12 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Advocacy", "EPR"],
-            "deliverables": {
-                "year1": ["Battery EPR coalition formed"],
-                "year3": ["EPR policy adoption"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Advocacy"
-            }
-        },
-        {
-            "id": "saath",
-            "name": "Saath",
-            "tier": 3,
-            "category": "circular",
-            "allocation": { "min": 5, "max": 8 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 0,
-            "focus": ["Informal Sector", "Cooperatives"],
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Informal sector"
-            }
-        },
-        {
-            "id": "sfc",
-            "name": "SFC (Sustainability for Climate)",
-            "tier": 3,
-            "category": "enablers",
-            "allocation": { "min": 8, "max": 12 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Policy Research"],
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Policy research"
-            }
-        },
-        {
-            "id": "vasudha",
-            "name": "Vasudha Foundation",
-            "tier": 3,
-            "category": "enablers",
-            "allocation": { "min": 8, "max": 12 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Data Platform"],
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Data"
-            }
-        },
-        {
-            "id": "cse",
-            "name": "CSE",
-            "tier": 3,
-            "category": "enablers",
-            "allocation": { "min": 10, "max": 15 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Awareness", "Media"],
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Awareness"
-            }
-        },
-        {
-            "id": "urbanmorph",
-            "name": "UrbanMorph",
-            "tier": 3,
-            "category": "transport notf",
-            "allocation": { "min": 5, "max": 10 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Walking", "Cycling", "NMT", "Community", "Open Streets"],
-            "deliverables": {
-                "year1": ["5 city cycling assessments", "2 pop-up pedestrianization pilots", "10 Open Streets events"],
-                "year3": ["Complete streets in 10 cities", "500 km cycling infrastructure plans", "50 neighbourhood activations"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "NMT lead"
-            }
-        },
-        {
-            "id": "igbc",
-            "name": "IGBC / CII",
-            "tier": 2,
-            "category": "buildings",
-            "allocation": { "min": 10, "max": 15 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Green Certification", "Industry Engagement"],
-            "deliverables": {
-                "year1": ["Green building standards workshop series"],
-                "year3": ["500 new IGBC certified buildings", "Industry coalition for net-zero"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Certification"
-            }
-        },
-        {
-            "id": "asci",
-            "name": "ASCI",
-            "tier": 3,
-            "category": "buildings",
-            "allocation": { "min": 8, "max": 12 },
-            "agreementStatus": "pending",
-            "progress": 0,
-            "focus": ["Capacity Building", "State Training"],
-            "deliverables": {
-                "year1": ["ECBC training program design"],
-                "year3": ["1,000 municipal officials trained", "5 state ECBC enforcement programs"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Training"
-            }
-        },
-        {
-            "id": "iihs",
-            "name": "IIHS",
-            "tier": 2,
-            "category": "enablers",
-            "allocation": { "min": 15, "max": 20 },
-            "orgBudget": { "value": 66.5, "currency": "INR", "unit": "crore", "year": 2024, "note": "₹66.5 Cr revenue FY2024" },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-15",
-            "progress": 10,
-            "focus": ["Career Pathways", "Urban Research", "Capacity Building"],
-            "deliverables": {
-                "year1": ["Career pathway framework", "Partner coordination setup"],
-                "year3": ["5,000 professionals trained", "Urban sustainability curriculum"]
-            },
-            "contact": {
-                "primary": "Rakhi Sahay",
-                "email": "rakhi.sahay@iihs.ac.in",
-                "role": "ASSURE Program"
-            }
-        },
-        {
-            "id": "bpac",
-            "name": "B.PAC",
-            "fullName": "Bangalore Political Action Committee",
-            "tier": 2,
-            "category": "notf",
-            "allocation": { "min": 8, "max": 12 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-20",
-            "progress": 5,
-            "focus": ["Civic Leadership", "Ward Governance", "Participatory Democracy"],
-            "keyStrengths": [
-                "B.CLIP civic leadership training program (9 batches since 2013)",
-                "B.ENGAGED ward-level governance program",
-                "B.GREEN environmental sustainability initiative",
-                "Non-partisan citizen mobilization"
-            ],
-            "deliverables": {
-                "year1": ["50 civic leaders trained through B.CLIP", "5 ward sustainability pilots", "Citizen engagement toolkit"],
-                "year3": ["200 civic leaders trained", "25 wards with active sustainability programs", "Model ward replication guide"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Civic Programs"
-            }
-        },
-        {
-            "id": "praja",
-            "name": "Praja Foundation",
-            "tier": 2,
-            "category": "notf",
-            "allocation": { "min": 10, "max": 15 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-20",
-            "progress": 5,
-            "focus": ["Elected Rep Accountability", "Data-Driven Governance", "Citizen Engagement"],
-            "keyStrengths": [
-                "Councillor/MLA report cards (publishing since 2010+)",
-                "Urban governance research across 5 verticals",
-                "Elected Representatives Fellowship Programme",
-                "49 workshops with elected representatives since 2016"
-            ],
-            "deliverables": {
-                "year1": ["Sustainability metrics in councillor report cards", "5 city governance assessments", "ER Fellowship on climate"],
-                "year3": ["Sustainability integrated into all report cards", "15 cities with governance assessments", "100 elected reps trained on sustainability"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Research & Advocacy"
-            }
-        },
-        {
-            "id": "janaagraha",
-            "name": "Janaagraha",
-            "fullName": "Janaagraha Centre for Citizenship and Democracy",
-            "tier": 2,
-            "category": "notf",
-            "allocation": { "min": 12, "max": 18 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-20",
-            "progress": 5,
-            "focus": ["Municipal Finance", "Participatory Budgeting", "City Systems"],
-            "keyStrengths": [
-                "MyCityMyBudget participatory budgeting (Bengaluru, Mangaluru, Vizag)",
-                "ASICS Annual Survey of India's City-Systems",
-                "Municipal finance expertise and bond market development",
-                "Direct engagement with NITI Aayog on urban policy"
-            ],
-            "deliverables": {
-                "year1": ["Green budget tracking in 3 cities", "Sustainability metrics in ASICS", "Municipal climate finance framework"],
-                "year3": ["Participatory green budgeting in 10 cities", "Climate finance mobilization toolkit", "5 municipal green bonds supported"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Municipal Finance"
-            }
-        },
-        {
-            "id": "socratus",
-            "name": "Socratus Foundation",
-            "fullName": "Socratus Foundation for Collective Wisdom",
-            "tier": 3,
-            "category": "notf",
-            "allocation": { "min": 5, "max": 8 },
-            "agreementStatus": "signed",
-            "agreementSignedDate": "2026-01-20",
-            "progress": 5,
-            "focus": ["Deliberative Democracy", "Climate Action", "Citizen Juries"],
-            "keyStrengths": [
-                "Green Up climate action initiative",
-                "Janta ka Faisla (People's Verdict) citizen jury platform",
-                "Collective wisdom methodologies for wicked problems",
-                "Rural-urban citizen engagement"
-            ],
-            "deliverables": {
-                "year1": ["5 citizen climate assemblies", "Neighbourhood deliberation toolkit", "Green Up integration with NoTF"],
-                "year3": ["50 citizen assemblies conducted", "Climate action prioritization in 20 neighbourhoods", "Deliberative democracy replication guide"]
-            },
-            "contact": {
-                "primary": "[Name]",
-                "email": "",
-                "role": "Deliberative Programs"
-            }
-        }
-    ]
+    "circular": {
+      "label": "Circular Economy",
+      "emoji": "♻️",
+      "color": "teal"
+    },
+    "enablers": {
+      "label": "Cross-Cutting Enablers",
+      "emoji": "🔧",
+      "color": "purple"
+    },
+    "transport": {
+      "label": "Clean Transport",
+      "emoji": "🚗",
+      "color": "blue"
+    },
+    "water": {
+      "label": "Water",
+      "emoji": "💧",
+      "color": "blue"
+    },
+    "food": {
+      "label": "Food Systems",
+      "emoji": "🌾",
+      "color": "lime"
+    },
+    "biodiversity": {
+      "label": "Biodiversity",
+      "emoji": "🌳",
+      "color": "green"
+    },
+    "air": {
+      "label": "Air Quality",
+      "emoji": "🌬️",
+      "color": "sky"
+    }
+  },
+  "partners": [
+    {
+      "id": "1",
+      "name": "WRI India",
+      "category": "demand",
+      "status": "signed",
+      "signedDate": "Jan 20, 2026",
+      "allocation": {
+        "min": 30,
+        "max": 40
+      },
+      "orgBudget": "~$272M (WRI Global, 2024); India office ~₹100 Cr+",
+      "focus": [
+        "Public Facilities",
+        "Transport",
+        "Equity"
+      ],
+      "strengths": [
+        "Forum for Decarbonising Transport with NITI Aayog",
+        "NDC Transport Initiative for Asia leadership",
+        "Urban mobility and city research expertise (5+ cities)",
+        "Strong government and multilateral relationships",
+        "PRADAN partnership for rural outreach (5,000+ villages)"
+      ],
+      "deliverables": [
+        "50,000 public facilities optimized (schools, health centers)",
+        "PRADAN rural integration - 10,000 households",
+        "Equity framework development",
+        "5 city transport demand management plans"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "CEEW",
+      "category": "demand",
+      "status": "signed",
+      "signedDate": "Jan 18, 2026",
+      "allocation": {
+        "min": 50,
+        "max": 60
+      },
+      "orgBudget": "~$33M (~₹275 Cr) annually - India's leading climate think tank",
+      "focus": [
+        "Cooling",
+        "Circular Economy",
+        "Research"
+      ],
+      "strengths": [
+        "Asia's top climate think tank (ICCG ranking, 2024)",
+        "India Cooling Action Plan research leadership",
+        "Solar panel and battery recycling research pioneers",
+        "Energy access and clean energy transitions expertise",
+        "350+ publications, 90+ staff researchers"
+      ],
+      "deliverables": [
+        "National cooling roadmap (passive + behavioral strategies)",
+        "Solar/battery recycling pilot - 5,000 tonnes capacity",
+        "Policy framework for EPR Battery Rules compliance",
+        "Circular economy research for 3 material streams"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Saahas Zero Waste",
+      "category": "circular",
+      "status": "signed",
+      "signedDate": "Jan 20, 2026",
+      "allocation": {
+        "min": 18,
+        "max": 22
+      },
+      "orgBudget": "~₹25-30 Cr annually (2023-24)",
+      "focus": [
+        "Waste Collection",
+        "Circularity",
+        "Operations"
+      ],
+      "strengths": [
+        "15+ years waste management expertise in Bangalore",
+        "Processing 400+ tonnes per day across operations",
+        "Multi-material MRF operations (plastics, e-waste, organics)",
+        "Partnerships with 200+ bulk waste generators",
+        "Extended Producer Responsibility (EPR) implementation"
+      ],
+      "deliverables": [
+        "5,000 tonnes recycling capacity annually by Year 3",
+        "MRF setup in 3 cities (Tier 2/3)",
+        "E-waste collection drives - 500 tonnes",
+        "Waste picker integration - 500 workers"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Hasiru Dala",
+      "category": "circular",
+      "status": "signed",
+      "signedDate": "Jan 20, 2026",
+      "allocation": {
+        "min": 15,
+        "max": 20
+      },
+      "orgBudget": "~₹12-15 Cr annually (2023-24)",
+      "focus": [
+        "Waste Pickers",
+        "Social Enterprise",
+        "Inclusive Circularity"
+      ],
+      "strengths": [
+        "Bangalore-based waste picker empowerment organization (2013)",
+        "Inclusive Circularity® model integrating informal workers",
+        "Serves 430+ clients, provides livelihoods to 5,144 waste pickers",
+        "Hasiru Dala Innovations social enterprise (dry waste management)",
+        "Policy advocacy for informal sector rights (SWM Rules 2016)"
+      ],
+      "deliverables": [
+        "Integrate 1,000 waste pickers into formal waste value chain",
+        "Establish 3 Dry Waste Collection Centers (DWCCs)",
+        "Social enterprise model replication in 2 cities",
+        "Policy advocacy for informal sector integration"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Waste Warriors",
+      "category": "circular",
+      "status": "signed",
+      "signedDate": "Jan 20, 2026",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹5-8 Cr annually (2023-24)",
+      "focus": [
+        "Himalayan Waste",
+        "Tourism",
+        "Community Engagement"
+      ],
+      "strengths": [
+        "Keeling Curve Prize 2023 winner ($25,000 award)",
+        "Collected 4,223+ tonnes waste from Himalayas since 2012",
+        "Operations in Dharamshala, Bir, McLeod Ganj (tourism hotspots)",
+        "Community-led waste management model",
+        "Tourism sector engagement and behavior change campaigns"
+      ],
+      "deliverables": [
+        "Expand to 5 Himalayan tourism destinations",
+        "Collect and process 2,000 tonnes waste annually by Year 3",
+        "Tourism sector waste reduction campaigns (50,000 tourists)",
+        "Community engagement - 100 villages"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "TERI (The Energy and Resources Institute)",
+      "category": "circular",
+      "status": "signed",
+      "signedDate": "Jan 15, 2026",
+      "allocation": {
+        "min": 15,
+        "max": 20
+      },
+      "orgBudget": "~₹200+ Cr annually - India's premier energy/environment research institute",
+      "focus": [
+        "Recycling R&D",
+        "Policy Research"
+      ],
+      "strengths": [
+        "50+ years of environment and energy research (est. 1974)",
+        "Plastics and construction waste recycling technology expertise",
+        "Extended Producer Responsibility (EPR) framework development",
+        "Policy advisory to Ministry of Environment, Forest & Climate Change",
+        "800+ staff, 100+ active research projects"
+      ],
+      "deliverables": [
+        "Recycling technology assessment for 3 material streams",
+        "Net-zero buildings waste management research",
+        "EPR framework for battery and solar panel recycling",
+        "Pilot demonstrations in 2 cities"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "CSTEP (Center for Study of Science, Technology & Policy)",
+      "category": "air",
+      "status": "signed",
+      "signedDate": "Jan 12, 2026",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹40-50 Cr annually (2023-24)",
+      "focus": [
+        "Battery Recycling",
+        "Modeling",
+        "Air Quality"
+      ],
+      "strengths": [
+        "Battery lifecycle and recycling modeling expertise",
+        "Air quality modeling and policy analysis (NCAP, GRAP)",
+        "EV adoption and battery management research",
+        "Data-driven policy frameworks",
+        "Partnership with IISc Bangalore for academic rigor"
+      ],
+      "deliverables": [
+        "Battery recycling supply chain model for India",
+        "Air quality-EV correlation analysis (3 cities)",
+        "EPR Battery Rules compliance framework",
+        "Circular economy metrics dashboard"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Chintan Environmental Research and Action Group",
+      "category": "circular",
+      "status": "signed",
+      "signedDate": "Jan 10, 2026",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹8-10 Cr annually (2023-24)",
+      "focus": [
+        "Policy Advocacy",
+        "Waste Pickers",
+        "EPR"
+      ],
+      "strengths": [
+        "25+ years waste policy advocacy (est. 1999)",
+        "Instrumental in drafting SWM Rules 2016 (informal sector integration)",
+        "EPR framework development for plastic packaging",
+        "Waste picker rights and livelihood programs (Delhi NCR)",
+        "Research on circular economy policy gaps"
+      ],
+      "deliverables": [
+        "EPR compliance framework for 2 material streams",
+        "Policy advocacy at state level (3 states)",
+        "Waste picker integration best practices documentation",
+        "Circular economy policy gap analysis"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Saath Charitable Trust",
+      "category": "circular",
+      "status": "signed",
+      "signedDate": "Jan 8, 2026",
+      "allocation": {
+        "min": 5,
+        "max": 8
+      },
+      "orgBudget": "~₹15-20 Cr annually (all programs, 2023-24)",
+      "focus": [
+        "Informal Sector",
+        "Gujarat",
+        "Livelihoods"
+      ],
+      "strengths": [
+        "20+ years informal sector empowerment (Gujarat focus)",
+        "Urban poor livelihoods and social enterprise development",
+        "Waste picker cooperatives and social security programs",
+        "Ahmedabad slum redevelopment expertise",
+        "Community organizing and behavior change campaigns"
+      ],
+      "deliverables": [
+        "Integrate 500 waste pickers (Ahmedabad + Surat)",
+        "Waste picker cooperative establishment (2 cities)",
+        "Social security and health programs for informal workers",
+        "Community-based waste collection model - 50,000 households"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Ethos Foundation",
+      "category": "enablers",
+      "status": "signed",
+      "signedDate": "Dec 20, 2025",
+      "allocation": {
+        "min": 12,
+        "max": 15
+      },
+      "orgBudget": "~₹10-12 Cr annually (2023-24)",
+      "focus": [
+        "Education",
+        "Schools",
+        "Awareness"
+      ],
+      "strengths": [
+        "Climate education curriculum development (school-level)",
+        "Teacher training programs (10,000+ teachers trained)",
+        "Partnership with state education boards (Karnataka, Maharashtra)",
+        "Youth leadership and climate action programs",
+        "Behavior change campaigns in schools"
+      ],
+      "deliverables": [
+        "Climate education curriculum for 500 schools",
+        "Teacher training - 5,000 teachers",
+        "Student engagement - 100,000 students",
+        "School energy audit program - 200 schools"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Shakti Sustainable Energy Foundation (SFC)",
+      "category": "enablers",
+      "status": "signed",
+      "signedDate": "Dec 10, 2025",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹200+ Cr annually in grants (major clean energy funder)",
+      "focus": [
+        "Policy Research",
+        "Clean Energy"
+      ],
+      "strengths": [
+        "India's largest clean energy philanthropic funder",
+        "Policy research and advocacy across energy, transport, buildings",
+        "Convening power - brings together government, NGOs, academia",
+        "Grant-making experience (200+ organizations supported)",
+        "Technical assistance to state governments on climate policy"
+      ],
+      "deliverables": [
+        "Policy research on demand-side management (DSM)",
+        "State-level climate action plan support (3 states)",
+        "Knowledge platforms and convening events",
+        "Technical assistance for policy implementation"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Janaagraha Centre for Citizenship and Democracy",
+      "category": "enablers",
+      "status": "signed",
+      "signedDate": "Jan 22, 2026",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹50-60 Cr annually (2023-24)",
+      "focus": [
+        "Civic Engagement",
+        "Urban Governance",
+        "Participation"
+      ],
+      "strengths": [
+        "20+ years urban governance and citizen participation (est. 2001)",
+        "Ward committees and participatory budgeting expertise",
+        "Civic education and youth engagement programs",
+        "Annual Survey of India's City-Systems (ASICS) rankings",
+        "Strong city government relationships (Bangalore, Pune)"
+      ],
+      "deliverables": [
+        "Citizen engagement platforms for 5 cities",
+        "Ward-level climate action planning",
+        "Civic education on climate action - 100,000 citizens",
+        "Participatory budgeting for climate projects"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Reap Benefit",
+      "category": "enablers",
+      "status": "signed",
+      "signedDate": "Jan 23, 2026",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹8-12 Cr annually (2023-24)",
+      "focus": [
+        "Youth Leadership",
+        "Community Surveys",
+        "Behavior Change"
+      ],
+      "strengths": [
+        "Youth-led climate action and community engagement",
+        "Door-to-door surveys and data collection (1M+ households surveyed)",
+        "Waste segregation behavior change campaigns",
+        "Youth leadership development (10,000+ youth trained)",
+        "Data-driven insights for urban local bodies"
+      ],
+      "deliverables": [
+        "Youth-led surveys - 500,000 households",
+        "Behavior change campaigns (waste, energy, water)",
+        "Youth climate leadership training - 5,000 youth",
+        "Community data collection for baseline studies"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "PRADAN",
+      "category": "food",
+      "status": "signed",
+      "signedDate": "Jan 20, 2026",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹120-150 Cr annually (2023-24)",
+      "focus": [
+        "Rural Livelihoods",
+        "Agriculture",
+        "SHGs"
+      ],
+      "strengths": [
+        "40+ years rural development and livelihood programs (est. 1983)",
+        "Reaches 5,000+ villages across 10 states",
+        "Self-Help Group (SHG) mobilization (500,000+ women)",
+        "Sustainable agriculture and climate-resilient practices",
+        "Partnership with WRI India for public facilities integration"
+      ],
+      "deliverables": [
+        "Climate-resilient agriculture in 2,000 villages",
+        "SHG integration with WRI's public facilities program",
+        "Sustainable livelihood support for 10,000 households",
+        "Farmer producer organization (FPO) strengthening"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Akshayakalpa Organic",
+      "category": "food",
+      "status": "signed",
+      "signedDate": "Jan 18, 2026",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹150-200 Cr revenue (2023-24), social enterprise model",
+      "focus": [
+        "Organic Farming",
+        "Dairy",
+        "Farmer Income"
+      ],
+      "strengths": [
+        "India's largest certified organic dairy brand",
+        "Direct farmer partnerships (3,000+ farmers)",
+        "Regenerative agriculture and soil health expertise",
+        "Cold chain and value chain integration",
+        "Certified organic supply chain (NPOP, USDA, EU)"
+      ],
+      "deliverables": [
+        "Convert 5,000 acres to organic farming",
+        "Farmer income increase - 2,000 farmers",
+        "Regenerative agriculture pilots in 50 farms",
+        "Organic dairy value chain strengthening"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "ATREE",
+      "category": "biodiversity",
+      "status": "signed",
+      "signedDate": "Jan 16, 2026",
+      "allocation": {
+        "min": 12,
+        "max": 18
+      },
+      "orgBudget": "~₹40-50 Cr annually (2023-24)",
+      "focus": [
+        "Ecological Research",
+        "Western Ghats",
+        "Policy"
+      ],
+      "strengths": [
+        "30+ years biodiversity and ecology research (est. 1996)",
+        "Western Ghats conservation expertise",
+        "Long-term ecological monitoring sites",
+        "Policy advisory on biodiversity and climate adaptation",
+        "Academic partnerships (Manipal Academy, global universities)"
+      ],
+      "deliverables": [
+        "Ecological monitoring in 10 biodiversity hotspots",
+        "Western Ghats conservation strategy",
+        "Climate-biodiversity linkage research",
+        "Policy frameworks for nature-based solutions"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Foundation for Ecological Security",
+      "category": "biodiversity",
+      "status": "signed",
+      "signedDate": "Jan 14, 2026",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹60-80 Cr annually (2023-24)",
+      "focus": [
+        "Commons",
+        "Grassroots",
+        "Restoration"
+      ],
+      "strengths": [
+        "25+ years ecological restoration (est. 1998)",
+        "Community-based natural resource management",
+        "Restored 1M+ acres across 10 states",
+        "Forest Rights Act (FRA) implementation support",
+        "Grassroots partnerships with 5,000+ communities"
+      ],
+      "deliverables": [
+        "Restore 50,000 acres of degraded land",
+        "Community forest management in 200 villages",
+        "FRA implementation support in 3 states",
+        "Ecosystem services valuation studies"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "WWF India",
+      "category": "biodiversity",
+      "status": "signed",
+      "signedDate": "Jan 12, 2026",
+      "allocation": {
+        "min": 15,
+        "max": 20
+      },
+      "orgBudget": "~₹150-200 Cr annually (2023-24)",
+      "focus": [
+        "Species Conservation",
+        "Protected Areas",
+        "Policy"
+      ],
+      "strengths": [
+        "50+ years conservation in India (est. 1969)",
+        "Tiger, elephant, and snow leopard conservation programs",
+        "Protected area management partnerships",
+        "Global WWF network access",
+        "Corporate partnerships and sustainable sourcing"
+      ],
+      "deliverables": [
+        "Species conservation in 10 landscapes",
+        "Protected area co-management (5 sites)",
+        "Corporate supply chain sustainability programs",
+        "Biodiversity policy advocacy"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Nature Conservation Foundation",
+      "category": "biodiversity",
+      "status": "signed",
+      "signedDate": "Jan 10, 2026",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹12-18 Cr annually (2023-24)",
+      "focus": [
+        "High Altitude",
+        "Community Conservation",
+        "Research"
+      ],
+      "strengths": [
+        "25+ years high-altitude conservation (Himalayas, Western Ghats)",
+        "Snow leopard and high-altitude species research",
+        "Community-based conservation model (Spiti, Ladakh)",
+        "Long-term field research and monitoring",
+        "Human-wildlife coexistence programs"
+      ],
+      "deliverables": [
+        "High-altitude conservation in 5 landscapes",
+        "Community conservation agreements (50 villages)",
+        "Snow leopard and mountain ungulate monitoring",
+        "Human-wildlife conflict mitigation programs"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Keystone Foundation",
+      "category": "biodiversity",
+      "status": "signed",
+      "signedDate": "Jan 8, 2026",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹12-15 Cr annually (2023-24)",
+      "focus": [
+        "Indigenous Communities",
+        "Nilgiris",
+        "NTFP"
+      ],
+      "strengths": [
+        "30+ years indigenous community partnerships (Nilgiris)",
+        "Non-Timber Forest Product (NTFP) value chains",
+        "Community biodiversity registers and documentation",
+        "Traditional ecological knowledge integration",
+        "Honey and tribal livelihoods programs"
+      ],
+      "deliverables": [
+        "Indigenous community partnerships in 100 villages",
+        "NTFP value chain development (honey, coffee)",
+        "Community biodiversity documentation",
+        "Traditional knowledge preservation programs"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Wildlife Conservation Trust",
+      "category": "biodiversity",
+      "status": "signed",
+      "signedDate": "Jan 5, 2026",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹20-25 Cr annually (2023-24)",
+      "focus": [
+        "Wildlife Corridors",
+        "Tiger Conservation",
+        "Research"
+      ],
+      "strengths": [
+        "25+ years wildlife research and conservation",
+        "Tiger corridor mapping and protection",
+        "Human-wildlife conflict mitigation expertise",
+        "Field research in Central Indian landscapes",
+        "Partnership with state forest departments"
+      ],
+      "deliverables": [
+        "Wildlife corridor protection (5 critical corridors)",
+        "Tiger conservation in 3 landscapes",
+        "Human-wildlife conflict mitigation (200 villages)",
+        "Wildlife monitoring and research programs"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "NRDC India",
+      "category": "demand",
+      "status": "pending",
+      "targetDate": "Target Day 45",
+      "allocation": {
+        "min": 40,
+        "max": 50
+      },
+      "orgBudget": "~$244M (NRDC Global, 2024); India office ~₹30-40 Cr",
+      "focus": [
+        "Buildings",
+        "Cool Roofs",
+        "ECBC"
+      ],
+      "strengths": [
+        "Pioneered cool roofs program in India (Telangana, Ahmedabad)",
+        "ECBC (Energy Conservation Building Code) compliance expertise across 5+ states",
+        "Heat Action Plan development with state governments",
+        "Strong policy advocacy at national level (BEE, MoHUA)",
+        "Global expertise in building efficiency (US, China experience)"
+      ],
+      "deliverables": [
+        "200,000 cool roofs by Year 3 (residential + commercial)",
+        "ECBC compliance in 5 states",
+        "50,000 commercial buildings assessed",
+        "Heat Action Plan support for 10 cities"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "ITDP India",
+      "category": "transport",
+      "status": "pending",
+      "targetDate": "Target Day 55",
+      "allocation": {
+        "min": 20,
+        "max": 25
+      },
+      "orgBudget": "~$15M (ITDP Global); India office ~₹15-20 Cr",
+      "focus": [
+        "Transport",
+        "BRT",
+        "TOD"
+      ],
+      "strengths": [
+        "Designed Ahmedabad Janmarg BRT (130,000+ daily passengers)",
+        "TOD (Transit-Oriented Development) guidelines for 10+ Indian cities",
+        "Complete Streets framework development",
+        "Global network of sustainable transport expertise",
+        "Strong city government relationships (Ahmedabad, Pune, Surat)"
+      ],
+      "deliverables": [
+        "5 city BRT/TOD plans",
+        "Modal shift programs - 20B passenger-km shifted",
+        "Complete Streets pilots in 3 cities",
+        "Transport demand management frameworks"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Prayas Energy Group",
+      "category": "demand",
+      "status": "pending",
+      "targetDate": "Target Day 60",
+      "allocation": {
+        "min": 15,
+        "max": 20
+      },
+      "orgBudget": "~₹12-15 Cr annually (2023-24)",
+      "focus": [
+        "Regulatory",
+        "DSM Policy",
+        "Tariffs"
+      ],
+      "strengths": [
+        "30+ years energy regulatory expertise (est. 1993)",
+        "Demand-Side Management (DSM) policy research and advocacy",
+        "Tariff analysis and regulatory intervention expertise",
+        "Energy efficiency standards development",
+        "Technical support to State Electricity Regulatory Commissions (SERCs)"
+      ],
+      "deliverables": [
+        "DSM regulations for 3 states",
+        "Energy efficiency tariff frameworks",
+        "Regulatory capacity building (SERCs)",
+        "DSM implementation monitoring reports"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Development Alternatives",
+      "category": "demand",
+      "status": "pending",
+      "targetDate": "Target Day 70",
+      "allocation": {
+        "min": 15,
+        "max": 20
+      },
+      "orgBudget": "~₹80-100 Cr annually (2023-24)",
+      "focus": [
+        "Rural Buildings",
+        "Green Materials",
+        "Livelihoods"
+      ],
+      "strengths": [
+        "45+ years rural development and green technologies (est. 1983)",
+        "Sustainable building materials (fly ash bricks, compressed earth blocks)",
+        "Green jobs and livelihood creation (50,000+ beneficiaries)",
+        "Technology transfer and entrepreneurship development",
+        "Strong rural community networks across 10+ states"
+      ],
+      "deliverables": [
+        "Rural buildings pilot - 5,000 households",
+        "Green building materials training (500 masons)",
+        "Livelihood creation for 1,000 rural entrepreneurs",
+        "Sustainable housing design templates"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "ICLEI South Asia",
+      "category": "enablers",
+      "status": "pending",
+      "targetDate": "Target Day 50",
+      "allocation": {
+        "min": 12,
+        "max": 18
+      },
+      "orgBudget": "~€40M (ICLEI Global); South Asia office ~₹25-30 Cr",
+      "focus": [
+        "City Networks",
+        "Climate Plans",
+        "Local Governance"
+      ],
+      "strengths": [
+        "Global city network (2,500+ cities worldwide, 75+ in India)",
+        "Climate Action Planning expertise (CAP framework)",
+        "City-to-city learning and peer exchange platforms",
+        "Strong relationships with urban local bodies (ULBs)",
+        "GHG emissions inventory and reporting methodologies"
+      ],
+      "deliverables": [
+        "Climate Action Plans for 10 cities",
+        "City network events and learning exchanges",
+        "GHG inventory capacity building (50 cities)",
+        "Urban climate governance frameworks"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Mahila Housing Trust (MHT)",
+      "category": "demand",
+      "status": "pending",
+      "targetDate": "Target Day 65",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹40-50 Cr annually (2023-24)",
+      "focus": [
+        "Women-led Housing",
+        "Slum Upgradation",
+        "Microfinance"
+      ],
+      "strengths": [
+        "30+ years women-led housing and infrastructure (est. 1994)",
+        "Slum upgradation with energy efficiency integration",
+        "Microfinance for green home improvements",
+        "Partnership with SEWA (Self-Employed Women's Association)",
+        "Reached 200,000+ households across 12 states"
+      ],
+      "deliverables": [
+        "Green home upgrades - 10,000 households",
+        "Women-led energy efficiency microenterprises",
+        "Slum electrification and solar integration",
+        "Gender-responsive climate finance models"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "SEEDS India",
+      "category": "enablers",
+      "status": "pending",
+      "targetDate": "Target Day 75",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹60-80 Cr annually (2023-24)",
+      "focus": [
+        "Disaster Resilience",
+        "Climate Adaptation",
+        "Community Action"
+      ],
+      "strengths": [
+        "25+ years disaster risk reduction (est. 1994)",
+        "Community-based climate adaptation programs",
+        "Heat resilience and urban cooling strategies",
+        "Early warning systems and community preparedness",
+        "Reached 5M+ people across 20+ states"
+      ],
+      "deliverables": [
+        "Heat resilience plans for 5 cities",
+        "Community adaptation programs - 100,000 households",
+        "Climate risk assessments (ward-level)",
+        "Early warning system integration"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Kabadiwalla Connect",
+      "category": "circular",
+      "status": "pending",
+      "targetDate": "Target Day 80",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹5-8 Cr annually (2023-24)",
+      "focus": [
+        "Tech Platform",
+        "Waste Pickers",
+        "Digital Integration"
+      ],
+      "strengths": [
+        "Technology platform connecting waste pickers to recyclers",
+        "Digital integration of informal waste value chain",
+        "Real-time waste tracking and transparent pricing",
+        "Partnership with 1,000+ waste pickers (Bangalore, Hyderabad)",
+        "Data analytics for circular economy optimization"
+      ],
+      "deliverables": [
+        "Digital platform for 5,000 waste pickers",
+        "Tech-enabled MRF integration (5 cities)",
+        "Waste value chain transparency dashboard",
+        "Recycling marketplace expansion"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Terre Policy Centre",
+      "category": "enablers",
+      "status": "pending",
+      "targetDate": "Target Day 90",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹10-15 Cr annually (2023-24)",
+      "focus": [
+        "Urban Policy",
+        "Land Use",
+        "Transport Planning"
+      ],
+      "strengths": [
+        "Urban planning and land use policy expertise",
+        "Transport-land use integration research",
+        "Smart Cities Mission technical assistance",
+        "GIS mapping and spatial analysis",
+        "City development plan support (10+ cities)"
+      ],
+      "deliverables": [
+        "TOD policy frameworks for 5 cities",
+        "Land use-transport integration plans",
+        "GIS-based spatial analysis for climate planning",
+        "Urban policy research and advocacy"
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Energy Swaraj Foundation",
+      "category": "demand",
+      "status": "pending",
+      "targetDate": "Target Day 100",
+      "allocation": {
+        "min": 5,
+        "max": 8
+      },
+      "orgBudget": "~₹3-5 Cr annually (2023-24)",
+      "focus": [
+        "Decentralized Energy",
+        "Rural Electrification",
+        "Community Ownership"
+      ],
+      "strengths": [
+        "Decentralized renewable energy systems (solar microgrids)",
+        "Community-owned energy infrastructure",
+        "Rural electrification with efficiency focus",
+        "Energy literacy and awareness campaigns",
+        "Founder Chetan Solanki (IIT Bombay) - solar energy expert"
+      ],
+      "deliverables": [
+        "Decentralized solar systems - 100 villages",
+        "Community energy cooperatives",
+        "Energy literacy programs - 50,000 people",
+        "Solar self-sufficiency demonstration projects"
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Final Mile Consulting",
+      "category": "enablers",
+      "status": "pending",
+      "targetDate": "Target Day 105",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹20-25 Cr annually (consulting revenue, 2023-24)",
+      "focus": [
+        "Behavior Change",
+        "Nudges",
+        "Research"
+      ],
+      "strengths": [
+        "Behavioral science and nudge theory expertise (India's leading firm)",
+        "Energy conservation behavior change programs",
+        "Household waste segregation campaigns (multiple cities)",
+        "Data-driven intervention design and A/B testing",
+        "Partnership with governments and corporates (50+ projects)"
+      ],
+      "deliverables": [
+        "Behavior change campaigns - 1M households",
+        "Energy conservation nudges (residential sector)",
+        "Waste segregation at source - 500K households",
+        "Behavioral research on climate action adoption"
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Vasudha Foundation",
+      "category": "enablers",
+      "status": "pending",
+      "targetDate": "Target Day 110",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹8-12 Cr annually (2023-24)",
+      "focus": [
+        "Data Platform",
+        "Policy Analysis"
+      ],
+      "strengths": [
+        "Climate data and visualization platforms",
+        "Energy policy analysis and research",
+        "Open data advocacy and transparency",
+        "Technical support to government programs",
+        "Digital tools for climate monitoring"
+      ],
+      "deliverables": [
+        "Climate data platform for 10 states",
+        "Policy analysis reports (quarterly)",
+        "Open data integration with government systems",
+        "Digital monitoring tools deployment"
+      ]
+    },
+    {
+      "id": "34",
+      "name": "CSE (Centre for Science and Environment)",
+      "category": "circular",
+      "status": "pending",
+      "targetDate": "Target Day 50",
+      "allocation": {
+        "min": 12,
+        "max": 18
+      },
+      "orgBudget": "~₹50-60 Cr annually (2023-24)",
+      "focus": [
+        "Waste-to-Energy",
+        "Policy",
+        "Research"
+      ],
+      "strengths": [
+        "45+ years environment research and advocacy (est. 1980)",
+        "Waste management and circular economy expertise",
+        "Down To Earth magazine - environment journalism",
+        "Air pollution and clean energy research",
+        "Strong policy advocacy at national level"
+      ],
+      "deliverables": [
+        "Waste-to-energy pilot projects (3 cities)",
+        "Circular economy policy frameworks",
+        "Waste management best practices documentation",
+        "Air quality-waste linkage research"
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Arghyam Foundation",
+      "category": "water",
+      "status": "pending",
+      "targetDate": "Target Day 60",
+      "allocation": {
+        "min": 10,
+        "max": 15
+      },
+      "orgBudget": "~₹60-80 Cr in grants annually",
+      "focus": [
+        "Water Security",
+        "Groundwater",
+        "Data"
+      ],
+      "strengths": [
+        "15+ years water sector philanthropy",
+        "Groundwater management and recharge expertise",
+        "India Water Portal - open data platform",
+        "Strong network of 200+ water NGOs",
+        "Data-driven decision making frameworks"
+      ],
+      "deliverables": [
+        "Groundwater recharge in 100 villages",
+        "Water data platform integration",
+        "Community water management (50,000 households)",
+        "Water security policy research"
+      ]
+    },
+    {
+      "id": "36",
+      "name": "WaterAid India",
+      "category": "water",
+      "status": "pending",
+      "targetDate": "Target Day 70",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹100-120 Cr annually (2023-24)",
+      "focus": [
+        "WASH",
+        "Urban Sanitation",
+        "Community"
+      ],
+      "strengths": [
+        "30+ years WASH programs in India",
+        "Urban sanitation and slum water access",
+        "Community-led total sanitation (CLTS)",
+        "Partnership with 50+ local NGOs",
+        "Reached 5M+ people"
+      ],
+      "deliverables": [
+        "WASH programs in 50 slums",
+        "Urban sanitation infrastructure",
+        "Community water committees (200 communities)",
+        "Water quality monitoring systems"
+      ]
+    },
+    {
+      "id": "37",
+      "name": "Safe Water Network India",
+      "category": "water",
+      "status": "pending",
+      "targetDate": "Target Day 80",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹40-50 Cr annually (2023-24)",
+      "focus": [
+        "Water ATMs",
+        "Rural Access",
+        "Enterprise"
+      ],
+      "strengths": [
+        "Water ATM model - affordable safe water",
+        "Community water enterprises (200+ plants)",
+        "Water quality testing and monitoring",
+        "Financial sustainability focus",
+        "Partnership with local entrepreneurs"
+      ],
+      "deliverables": [
+        "Water ATMs in 100 locations",
+        "Community water enterprises",
+        "Water quality monitoring (500 villages)",
+        "Safe water access - 100,000 people"
+      ]
+    },
+    {
+      "id": "38",
+      "name": "CWRDM Kerala",
+      "category": "water",
+      "status": "pending",
+      "targetDate": "Target Day 90",
+      "allocation": {
+        "min": 5,
+        "max": 8
+      },
+      "orgBudget": "~₹15-20 Cr annually (2023-24)",
+      "focus": [
+        "Research",
+        "Kerala",
+        "Water Tech"
+      ],
+      "strengths": [
+        "40+ years water research (est. 1978)",
+        "Rainwater harvesting and water conservation",
+        "Kerala model water management",
+        "Climate resilience for coastal communities",
+        "Water technology development"
+      ],
+      "deliverables": [
+        "Rainwater harvesting pilots (50 sites)",
+        "Coastal water resilience (20 communities)",
+        "Water technology research",
+        "Kerala water security framework"
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Swayam Shikshan Prayog (SSP)",
+      "category": "food",
+      "status": "pending",
+      "targetDate": "Target Day 50",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹30-40 Cr annually (2023-24)",
+      "focus": [
+        "Women Farmers",
+        "Climate Adaptation",
+        "FPOs"
+      ],
+      "strengths": [
+        "25+ years women's empowerment and livelihoods",
+        "Climate-resilient agriculture for women farmers",
+        "Farmer Producer Organization (FPO) formation",
+        "Reached 300,000+ women farmers",
+        "Maharashtra and Gujarat focus"
+      ],
+      "deliverables": [
+        "Climate-resilient farming (2,000 women farmers)",
+        "Women-led FPOs (10 new FPOs)",
+        "Climate adaptation training",
+        "Livelihood diversification programs"
+      ]
+    },
+    {
+      "id": "40",
+      "name": "INREM Foundation",
+      "category": "food",
+      "status": "pending",
+      "targetDate": "Target Day 60",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹15-20 Cr annually (2023-24)",
+      "focus": [
+        "Dryland Agriculture",
+        "Watershed",
+        "Tribal"
+      ],
+      "strengths": [
+        "30+ years dryland agriculture and watershed development",
+        "Tribal community partnerships (Rajasthan, MP)",
+        "Water conservation and soil health",
+        "Climate-smart agriculture practices",
+        "Community-based natural resource management"
+      ],
+      "deliverables": [
+        "Watershed development (50 villages)",
+        "Climate-smart agriculture (5,000 farmers)",
+        "Soil health improvement programs",
+        "Tribal livelihood support"
+      ]
+    },
+    {
+      "id": "41",
+      "name": "AFPRO",
+      "category": "food",
+      "status": "pending",
+      "targetDate": "Target Day 70",
+      "allocation": {
+        "min": 5,
+        "max": 8
+      },
+      "orgBudget": "~₹80-100 Cr annually (2023-24)",
+      "focus": [
+        "Rural Infrastructure",
+        "Irrigation",
+        "Livelihoods"
+      ],
+      "strengths": [
+        "55+ years rural development (est. 1966)",
+        "Micro-irrigation and water conservation",
+        "Rural infrastructure for climate adaptation",
+        "Livelihood programs for 1M+ families",
+        "Strong government partnerships"
+      ],
+      "deliverables": [
+        "Micro-irrigation systems (10,000 farmers)",
+        "Climate-resilient infrastructure",
+        "Farmer training programs",
+        "Livelihood support for 5,000 families"
+      ]
+    },
+    {
+      "id": "42",
+      "name": "S3IDF India",
+      "category": "food",
+      "status": "pending",
+      "targetDate": "Target Day 80",
+      "allocation": {
+        "min": 5,
+        "max": 8
+      },
+      "orgBudget": "~₹25-30 Cr annually (2023-24)",
+      "focus": [
+        "FPOs",
+        "Market Access",
+        "Enterprise"
+      ],
+      "strengths": [
+        "FPO development and capacity building",
+        "Agricultural value chain strengthening",
+        "Market linkages for smallholder farmers",
+        "Climate-smart agriculture integration",
+        "Impact investment in agriculture"
+      ],
+      "deliverables": [
+        "FPO strengthening (20 FPOs)",
+        "Climate-smart value chains",
+        "Market access for 10,000 farmers",
+        "Agricultural enterprise development"
+      ]
+    },
+    {
+      "id": "43",
+      "name": "Sahaja Samrudha",
+      "category": "food",
+      "status": "pending",
+      "targetDate": "Target Day 90",
+      "allocation": {
+        "min": 4,
+        "max": 6
+      },
+      "orgBudget": "~₹10-15 Cr annually (2023-24)",
+      "focus": [
+        "Organic Farming",
+        "Karnataka",
+        "Community"
+      ],
+      "strengths": [
+        "20+ years organic farming promotion (Karnataka)",
+        "Farmer collectives and community seed banks",
+        "Organic certification support",
+        "Traditional agriculture knowledge",
+        "Reached 50,000+ farmers"
+      ],
+      "deliverables": [
+        "Organic farming conversion (2,000 acres)",
+        "Community seed banks (50 villages)",
+        "Organic certification support",
+        "Traditional knowledge documentation"
+      ]
+    },
+    {
+      "id": "44",
+      "name": "Digital Green",
+      "category": "food",
+      "status": "pending",
+      "targetDate": "Target Day 100",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹50-60 Cr annually (2023-24)",
+      "focus": [
+        "AgTech",
+        "Video Extension",
+        "Digital"
+      ],
+      "strengths": [
+        "Video-based agricultural extension",
+        "Digital tools for farmer training",
+        "Climate-smart agriculture content",
+        "Reached 2M+ farmers across 13 countries",
+        "AI and data analytics for agriculture"
+      ],
+      "deliverables": [
+        "Climate-smart agriculture videos (500 videos)",
+        "Digital extension to 100,000 farmers",
+        "AI-based advisory system",
+        "Farmer data platform"
+      ]
+    },
+    {
+      "id": "45",
+      "name": "Urban Emissions",
+      "category": "air",
+      "status": "pending",
+      "targetDate": "Target Day 50",
+      "allocation": {
+        "min": 8,
+        "max": 12
+      },
+      "orgBudget": "~₹8-12 Cr annually (2023-24)",
+      "focus": [
+        "Air Quality",
+        "Modeling",
+        "Policy"
+      ],
+      "strengths": [
+        "Air quality modeling and emissions inventory",
+        "NCAP and state action plan support",
+        "Source apportionment studies",
+        "Policy research on air pollution",
+        "Technical advisory to 20+ cities"
+      ],
+      "deliverables": [
+        "Air quality modeling (10 cities)",
+        "Emissions inventory development",
+        "Source apportionment studies (5 cities)",
+        "Policy support for NCAP implementation"
+      ]
+    },
+    {
+      "id": "46",
+      "name": "Lung Care Foundation",
+      "category": "air",
+      "status": "pending",
+      "targetDate": "Target Day 60",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~₹15-20 Cr annually (2023-24)",
+      "focus": [
+        "Health Impact",
+        "Awareness",
+        "Community"
+      ],
+      "strengths": [
+        "Air pollution health impact research",
+        "Public awareness campaigns",
+        "Community air quality monitoring",
+        "Healthcare provider training",
+        "Reached 5M+ people with awareness"
+      ],
+      "deliverables": [
+        "Health impact studies (5 cities)",
+        "Community air quality monitoring (100 sites)",
+        "Public awareness campaigns",
+        "Healthcare training programs"
+      ]
+    },
+    {
+      "id": "47",
+      "name": "Respirer Living Sciences",
+      "category": "air",
+      "status": "pending",
+      "targetDate": "Target Day 70",
+      "allocation": {
+        "min": 5,
+        "max": 8
+      },
+      "orgBudget": "~₹5-8 Cr annually (2023-24)",
+      "focus": [
+        "Air Purification",
+        "Technology",
+        "Innovation"
+      ],
+      "strengths": [
+        "Air purification technology development",
+        "Low-cost air quality sensors",
+        "Community-based air quality solutions",
+        "Technology innovation for clean air",
+        "Startup ecosystem engagement"
+      ],
+      "deliverables": [
+        "Air purification pilots (20 schools)",
+        "Low-cost sensor deployment (100 units)",
+        "Technology innovation grants",
+        "Community clean air programs"
+      ]
+    },
+    {
+      "id": "48",
+      "name": "Clean Air Asia",
+      "category": "air",
+      "status": "pending",
+      "targetDate": "Target Day 80",
+      "allocation": {
+        "min": 6,
+        "max": 10
+      },
+      "orgBudget": "~$12M (Clean Air Asia regional); India ~₹15-20 Cr",
+      "focus": [
+        "Regional Network",
+        "Transport",
+        "Policy"
+      ],
+      "strengths": [
+        "Regional air quality network across Asia",
+        "Transport and air quality linkages",
+        "Policy advisory to Asian cities",
+        "Knowledge platforms and city networks",
+        "Partnership with 250+ Asian cities"
+      ],
+      "deliverables": [
+        "Air quality action plans (5 cities)",
+        "Transport-air quality integration",
+        "Regional knowledge exchange",
+        "City network events"
+      ]
+    }
+  ]
 }

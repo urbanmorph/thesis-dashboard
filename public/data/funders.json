@@ -1,0 +1,308 @@
+{
+  "lastUpdated": "2026-01-27T00:00:00.000Z",
+  "capitalStack": {
+    "description": "The climate finance ecosystem spans multiple capital types, from early-stage grants to growth equity. Each layer serves different risk-return profiles and impact horizons.",
+    "categories": [
+      {
+        "id": "accelerators",
+        "name": "Accelerators & Incubators",
+        "stage": "Pre-Seed / Seed",
+        "emoji": "🚀",
+        "color": "#10b981",
+        "progress": 15,
+        "progressLabel": "Early Stage",
+        "investors": [
+          "Marble - Climate tech accelerator, early-stage ventures",
+          "Deep Science Ventures - Science-led company creation, deep tech",
+          "Carbon13 - Venture builder for climate startups, Cambridge-based",
+          "Greentown Labs - Largest climate tech incubator in North America",
+          "Third Derivative (D3) - RMI & New Energy Nexus accelerator"
+        ]
+      },
+      {
+        "id": "catalytic",
+        "name": "Catalytic Capital",
+        "stage": "Grants / PRIs",
+        "emoji": "💫",
+        "color": "#8b5cf6",
+        "progress": 20,
+        "progressLabel": "Concessionary",
+        "investors": [
+          "Elemental Impact - Early-stage climate grants, first-loss capital",
+          "Schmidt Family Foundation - Climate & clean energy investments",
+          "Hewlett Foundation - Climate solutions, $600M+ commitment",
+          "ClimateWorks Foundation - Global philanthropy coordination",
+          "Bezos Earth Fund - $10B climate & nature commitment"
+        ]
+      },
+      {
+        "id": "climate-vcs",
+        "name": "Climate VCs",
+        "stage": "Series A-C",
+        "emoji": "🌱",
+        "color": "#10b981",
+        "progress": 35,
+        "progressLabel": "Venture Stage",
+        "investors": [
+          "Extantia - Deep tech climate, European focus",
+          "At One Ventures - Deep tech for planetary boundaries",
+          "Climentum Capital - European climate tech fund",
+          "Carbon Equity - Climate-focused private equity access",
+          "Congruent Ventures - Sustainability-focused VC",
+          "Breakthrough Energy Ventures - Gates-led climate venture fund"
+        ]
+      },
+      {
+        "id": "corporate",
+        "name": "Corporate Venture",
+        "stage": "Strategic Investment",
+        "emoji": "🏢",
+        "color": "#f59e0b",
+        "progress": 25,
+        "progressLabel": "Strategic Stage",
+        "investors": [
+          "Honda Xcelerator - Mobility & energy innovations",
+          "TDK Ventures - Industrial deep tech, energy storage",
+          "Toyota Ventures - Mobility, hydrogen, carbon neutrality",
+          "Shell Ventures - Energy transition technologies",
+          "Amazon Climate Pledge Fund - $2B decarbonization fund",
+          "Microsoft Climate Innovation Fund - $1B carbon removal"
+        ]
+      },
+      {
+        "id": "growth",
+        "name": "Growth Equity & PE",
+        "stage": "Scale Capital",
+        "emoji": "📈",
+        "color": "#3b82f6",
+        "progress": 45,
+        "progressLabel": "Growth Stage",
+        "investors": [
+          "Blume Equity - Growth-stage climate investments",
+          "Demeter - European climate & agri-food PE",
+          "Just Climate - $1.5B climate solutions fund",
+          "TPG Rise Climate - $7B climate fund, Al Gore partnership",
+          "Brookfield Renewable - $75B+ clean energy assets",
+          "Generate Capital - Sustainable infrastructure"
+        ]
+      },
+      {
+        "id": "government",
+        "name": "Government & Multilateral",
+        "stage": "Institutional Capital",
+        "emoji": "🌍",
+        "color": "#4b5563",
+        "progress": 60,
+        "progressLabel": "Large Scale",
+        "investors": [
+          "World Bank Group - $35B+ annual climate finance",
+          "European Investment Bank (EIB) - EU climate bank, 50%+ green",
+          "Bpifrance - French public investment bank, climate transition",
+          "Green Climate Fund - $10B+ developing country climate",
+          "Asian Development Bank - $100B climate commitment by 2030",
+          "India NCEF/CAMPA - National Clean Energy & Afforestation"
+        ]
+      }
+    ]
+  },
+  "philanthropy": {
+    "description": "Sector-specific philanthropic and CSR funding landscape in India, organized by key climate sectors.",
+    "categories": [
+      {
+        "id": "buildings",
+        "name": "Buildings & Energy Efficiency",
+        "emoji": "🏢",
+        "funders": [
+          "Shakti Foundation - ECBC, thermal comfort, building codes",
+          "MacArthur Foundation - $18M climate portfolio in India",
+          "ClimateWorks Foundation - Clean energy efficiency",
+          "IKEA Foundation - Productive use renewable energy",
+          "Bloomberg Philanthropies - City-level climate programs",
+          "Children's Investment Fund (CIFF) - Rs 106 Cr India Clean Air"
+        ]
+      },
+      {
+        "id": "transport",
+        "name": "Transport & Mobility",
+        "emoji": "🚌",
+        "funders": [
+          "Shakti Foundation - Sustainable urban transport, 80% modal shift",
+          "Bloomberg Philanthropies - EV roadmaps, city transport",
+          "World Bank ESMAP - $1.5B electric mobility (2024)",
+          "ClimateWorks - Transport decarbonization",
+          "Hewlett Foundation - Clean mobility coalition",
+          "Good Energies Foundation - EV infrastructure"
+        ]
+      },
+      {
+        "id": "air",
+        "name": "Air Quality",
+        "emoji": "🌬️",
+        "funders": [
+          "CIFF - Rs 106 Cr for India Clean Air Phase 2",
+          "Shakti Foundation - Rs 4-10 Cr/year emission studies",
+          "UNEP - Rs 53 Cr Global Air Quality Program",
+          "Bloomberg Philanthropies - Surat, Patna air strategies",
+          "Climate & Health Funders Coalition - $300M (2025)",
+          "Wellcome Trust - Air pollution health research"
+        ]
+      },
+      {
+        "id": "circular",
+        "name": "Circular Economy",
+        "emoji": "♻️",
+        "funders": [
+          "IKEA Foundation - Renewable energy supply chains",
+          "Ellen MacArthur Foundation - Circular economy systems",
+          "Oak Foundation - E-waste and recycling",
+          "Tata Trusts - Environment & energy initiatives",
+          "Infosys Foundation - Environmental sustainability",
+          "JSW Foundation - Industrial sustainability"
+        ]
+      },
+      {
+        "id": "neighbourhoods",
+        "name": "Neighbourhoods & Open Data",
+        "emoji": "🏘️",
+        "funders": [
+          "Rohini Nilekani Philanthropies - India Climate Collaborative, civic data",
+          "Omidyar Network India - Open data, civic tech platforms",
+          "Google.org - Data for social impact, mapping",
+          "Azim Premji Foundation - Grassroots development, local governance",
+          "EkStep Foundation - Open digital infrastructure",
+          "Tata Trusts - Community-based programs, urban data"
+        ]
+      },
+      {
+        "id": "cross-sector",
+        "name": "Cross-Sector Climate Funders",
+        "emoji": "🌍",
+        "funders": [
+          "India Climate Collaborative (ICC) - Multi-funder coalition",
+          "MacArthur + Hewlett + Packard - Solar energy consortium",
+          "Rockefeller Foundation - Climate & health integration",
+          "Gates Foundation - Climate adaptation",
+          "Quadrature Climate Foundation - Data-driven climate",
+          "Omidyar Network India - Climate-tech startups"
+        ]
+      },
+      {
+        "id": "water",
+        "name": "Water & Sanitation",
+        "emoji": "💧",
+        "funders": [
+          "Arghyam Foundation - Water security, groundwater, data platforms",
+          "WaterAid India - WASH programs, urban sanitation",
+          "Tata Trusts - Water & sanitation infrastructure",
+          "Hindustan Unilever Foundation - Water conservation, community programs",
+          "2030 Water Resources Group - Multi-stakeholder water platform",
+          "USAID - Safe water access, WASH financing"
+        ]
+      },
+      {
+        "id": "food",
+        "name": "Food Systems & Agriculture",
+        "emoji": "🌾",
+        "funders": [
+          "Tata Trusts - Agriculture & livelihoods, FPO support",
+          "IKEA Foundation - Smallholder farmers, climate-smart agriculture",
+          "Walmart Foundation - Food systems, cold chain, market access",
+          "Rockefeller Foundation - Food system transformation",
+          "Bill & Melinda Gates Foundation - Agricultural development",
+          "EAT Foundation - Sustainable food systems"
+        ]
+      },
+      {
+        "id": "biodiversity",
+        "name": "Biodiversity & Conservation",
+        "emoji": "🌳",
+        "funders": [
+          "WWF India - Conservation programs, species protection",
+          "Wildlife Conservation Trust - Protected areas, corridors",
+          "Rainmatter Foundation - Ecological restoration, climate",
+          "David & Lucile Packard Foundation - Conservation, marine",
+          "Gordon & Betty Moore Foundation - Environmental conservation",
+          "Rohini Nilekani Philanthropies - Ecology, restoration"
+        ]
+      }
+    ],
+    "note": "This is not an exhaustive list. Major Indian CSR funders include Tata Group, Reliance Foundation, Infosys, HDFC, ITC, Mahindra, Godrej, and JSW."
+  },
+  "indiaInvestors": {
+    "description": "Climate-focused investors with significant operations in India.",
+    "categories": [
+      {
+        "id": "indian-vcs",
+        "name": "Indian Climate VCs",
+        "emoji": "🇮🇳",
+        "investors": [
+          "Omnivore - Agritech & climate tech, $250M+ deployed",
+          "Ecoworks Ventures - Sustainability-focused early stage",
+          "Ankur Capital - Science-based solutions, agri-climate",
+          "Caspian Debt - Impact lending, clean energy focus",
+          "Social Alpha - Science & tech for social impact",
+          "Asha Impact - Climate, healthcare, livelihoods"
+        ]
+      },
+      {
+        "id": "development-finance",
+        "name": "Development Finance",
+        "emoji": "🏦",
+        "investors": [
+          "SIDBI - Climate finance for MSMEs",
+          "NABARD - Rural climate adaptation, green bonds",
+          "IREDA - Renewable energy project finance",
+          "NIIF - National Infrastructure Investment Fund",
+          "SBI Green Bonds - India's largest green bond issuer",
+          "Yes Bank Climate Bonds - Green infrastructure"
+        ]
+      },
+      {
+        "id": "international-dfis",
+        "name": "International DFIs in India",
+        "emoji": "🌏",
+        "investors": [
+          "IFC - $2B+ annual India climate investments",
+          "ADB - $25B cumulative India climate portfolio",
+          "KfW (Germany) - Indo-German climate cooperation",
+          "JICA (Japan) - Green infrastructure, urban transport",
+          "AFD (France) - Sustainable cities, clean mobility",
+          "USAID/DFC - Clean energy, resilience programs"
+        ]
+      }
+    ]
+  },
+  "gap": {
+    "title": "Climate Finance Gap Analysis",
+    "challenges": [
+      {
+        "type": "gap",
+        "label": "GAP",
+        "color": "red",
+        "title": "$170B Annual Shortfall",
+        "description": "India needs $223B/year for NDC commitments; current flows are ~$49B annually. 76% gap remains unfunded."
+      },
+      {
+        "type": "challenge",
+        "label": "CHALLENGE",
+        "color": "amber",
+        "title": "Adaptation Underfunded",
+        "description": "Only 6% of climate finance goes to adaptation. Mitigation receives 94% despite equal urgency."
+      },
+      {
+        "type": "challenge",
+        "label": "CHALLENGE",
+        "color": "amber",
+        "title": "Domestic Capital Constraints",
+        "description": "Banks face asset-liability mismatch for 20-year climate projects. Green bond market nascent at $20B."
+      },
+      {
+        "type": "opportunity",
+        "label": "OPPORTUNITY",
+        "color": "green",
+        "title": "Blended Finance Models",
+        "description": "First-loss capital from philanthropy can de-risk commercial investment. 1:4 to 1:8 leverage ratios possible."
+      }
+    ]
+  }
+}
