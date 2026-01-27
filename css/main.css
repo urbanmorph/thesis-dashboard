@@ -5,8 +5,5 @@
 
 /* Highlight target elements when navigated to via citation links */
 :target {
-  background-color: #fef3c7;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
+  /* background-color removed - no yellow highlight */
 }
