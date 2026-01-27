@@ -322,6 +322,35 @@ npm run build
 - **JavaScript modules**: Not bundled by Vite - kept on CDN (Supabase, Chart.js)
 - **Responsive testing**: Test at 375px (mobile), 768px (tablet), 1440px (desktop)
 
+## Admin Data Storage (IMPORTANT)
+
+**Admin page data is PRIVATE and stored in Supabase Storage, NOT in git.**
+
+### Data Location
+- **Supabase Bucket**: `dashboard-data/admin/`
+- **Files**: `partners.json`, `funders.json`, `funding.json`
+
+### Rules for Admin Data
+1. **NEVER commit admin JSON data to git** - it contains confidential partner information
+2. **NEVER create local JSON files** in `public/data/` for admin pages
+3. **Always use `DataService`** (js/data-service.js) to fetch admin data from Supabase
+4. **Upload data via Supabase CLI**:
+   ```bash
+   supabase storage cp <file> ss:///dashboard-data/admin/<file> --experimental
+   ```
+
+### How Dynamic Admin Pages Work
+1. `data-service.js` fetches JSON from Supabase Storage bucket
+2. Falls back to local `/data/*.json` ONLY for development (files are gitignored)
+3. Renderer modules (`partner-renderer.js`, `funder-renderer.js`) generate HTML dynamically
+
+### Adding New Admin Data
+1. Create JSON structure locally for testing
+2. Upload to Supabase Storage: `supabase storage cp file.json ss:///dashboard-data/admin/file.json --experimental`
+3. Add the local file path to `.gitignore`
+4. Create a renderer module in `js/` if needed
+5. Update the HTML page to use dynamic containers
+
 ## Troubleshooting
 
 ### Styles not updating

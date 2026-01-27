@@ -34,9 +34,12 @@ temp/
 # Vercel
 .vercel
 
-# Admin data (stored in Supabase)
+# Admin data (stored in Supabase - KEEP PRIVATE)
 data/partners.json
 data/funding.json
+public/data/partners.json
+public/data/funders.json
+public/data/funding.json
 
 # Supporting documents (internal planning)
 supporting-docs/
