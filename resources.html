@@ -10,96 +10,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">
-            <span class="nav-logo">🌱</span>
-            <span class="nav-title">India Progress Monitor</span>
+    <nav class="bg-white/95 border-b border-gray-200 px-8 py-4 flex justify-between items-center sticky top-0 z-[100] backdrop-blur-sm">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🌱</span>
+            <span class="text-lg font-bold text-dark">India Progress Monitor</span>
         </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link">Dashboard</a>
-            <a href="thesis.html" class="nav-link">Hidden Dynamics</a>
-            <a href="sectors.html" class="nav-link">Sectors</a>
-            <a href="resources.html" class="nav-link active">Resources</a>
-            <a href="admin.html" class="nav-link">Admin</a>
+        <div class="flex items-center gap-1">
+            <a href="index.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Dashboard</a>
+            <a href="thesis.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Hidden Dynamics</a>
+            <a href="sectors.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Sectors</a>
+            <a href="resources.html" class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-150">Resources</a>
+            <a href="admin.html" class="text-gray-500 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-dark hover:bg-gray-100">Admin</a>
         </div>
     </nav>
 
-    <main class="dashboard-main">
+    <main class="max-w-[1400px] mx-auto px-12 py-12">
         <!-- Hero -->
-        <section class="hero" style="padding: var(--space-2xl); margin-bottom: var(--space-xl);">
-            <div class="hero-content">
-                <h1 style="font-size: 2rem;">Resources</h1>
-                <p class="hero-subtitle">Data sources, citations, and key terminology</p>
+        <section class="bg-gradient-to-br from-dark to-dark-800 text-white p-16 rounded-xl mb-12">
+            <div>
+                <h1 class="text-5xl mb-4 font-bold leading-tight">Resources</h1>
+                <p class="text-lg text-white/90 leading-relaxed">Data sources, citations, and key terminology</p>
             </div>
         </section>
 
         <!-- Resource Tabs -->
-        <div class="resource-tabs">
-            <button class="resource-tab active" data-section="references">
-                <span>📖</span>
+        <div class="flex gap-2 mb-8">
+            <button class="resource-tab flex items-center gap-2 px-6 py-3 bg-dark border-2 border-dark text-white rounded-lg cursor-pointer transition-all duration-200 text-sm font-medium" data-section="references">
+                <span class="text-base">📖</span>
                 <span>Data Sources</span>
             </button>
-            <button class="resource-tab" data-section="glossary">
-                <span>📚</span>
+            <button class="resource-tab flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-300 text-gray-700 rounded-lg cursor-pointer transition-all duration-200 text-sm font-medium hover:border-dark hover:bg-gray-50" data-section="glossary">
+                <span class="text-base">📚</span>
                 <span>Glossary</span>
             </button>
         </div>
 
         <!-- Data Sources Section -->
-        <div class="resource-content-panel active" id="references">
-            <div class="reference-grid">
-                <div class="reference-section">
-                    <h4>Energy Consumption & Demand</h4>
-                    <ol class="reference-list">
+        <div class="resource-content-panel block" id="references">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Energy Consumption & Demand</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal">
                         <li>Bureau of Energy Efficiency. (2024). <em>India Energy Scenario Report 2024</em>. Ministry of Power.</li>
                         <li>Central Electricity Authority. (2024). <em>Growth of Electricity Sector in India</em>.</li>
                         <li>International Energy Agency. (2024). <em>World Energy Investment 2024 - India</em>.</li>
                         <li>Ministry of Power. (2024). <em>Power Sector at a Glance</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Buildings & Cooling</h4>
-                    <ol class="reference-list" start="5">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Buildings & Cooling</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="5">
                         <li>Bureau of Energy Efficiency. (2023). <em>ECBC 2017 Compliance Status Report</em>.</li>
                         <li>MoEFCC. (2019). <em>India Cooling Action Plan</em>.</li>
                         <li>NRDC India. (2023). <em>Cool Roofs Implementation Guide</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Transport</h4>
-                    <ol class="reference-list" start="8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Transport</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="8">
                         <li>MoRTH. (2024). <em>Road Transport Year Book 2022-23</em>.</li>
                         <li>ITDP India. (2023). <em>BRT Planning Guide for Indian Cities</em>.</li>
                         <li>NITI Aayog. (2022). <em>India Transport Energy Outlook</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Circular Economy & RE</h4>
-                    <ol class="reference-list" start="11">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Circular Economy & RE</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="11">
                         <li>CEEW. (2025). <em>Solar Panel Waste Management in India</em>.</li>
                         <li>MNRE. (2024). <em>Annual Report 2023-24</em>.</li>
                         <li>NITI Aayog & RMI. (2023). <em>Battery Recycling Roadmap</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>National Targets & Policy</h4>
-                    <ol class="reference-list" start="14">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">National Targets & Policy</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="14">
                         <li>GoI. (2022). <em>Updated NDC Under Paris Agreement</em>.</li>
                         <li>MoEFCC. (2022). <em>Long-Term Low-Carbon Strategy</em>.</li>
                         <li>PIB. (2023). <em>Net Zero 2070 Commitment</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Agriculture & Industrial</h4>
-                    <ol class="reference-list" start="17">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Agriculture & Industrial</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="17">
                         <li>BEE. (2023). <em>PAT Scheme Results and Roadmap</em>.</li>
                         <li>Ministry of Agriculture. (2023). <em>Agricultural Statistics 2023</em>.</li>
                         <li>CGWB. (2023). <em>Dynamic Ground Water Resources</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Transport & Urban Mobility</h4>
-                    <ol class="reference-list" start="20">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Transport & Urban Mobility</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="20">
                         <li>WRI India. (2024). <em>Forum for Decarbonising Transport</em>.</li>
                         <li>IEA. (2024). <em>Transitioning India's Road Transport</em>.</li>
                         <li>MoHUA. (2025). <em>Metro Rail Network Status Report</em>.</li>
@@ -113,9 +113,9 @@
                         <li>MoHUA. (2024). <em>India Cycles4Change & Streets4People Results</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Buildings & Green Construction</h4>
-                    <ol class="reference-list" start="31">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Buildings & Green Construction</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="31">
                         <li>NRDC India. (2024). <em>Building Energy Codes Adoption</em>.</li>
                         <li>MoEFCC & CLASP. (2025). <em>AC Efficiency Standards</em>.</li>
                         <li>IGBC. (2024). <em>Green Building Statistics India</em>.</li>
@@ -123,9 +123,9 @@
                         <li>Telangana. (2023). <em>Cool Roof Policy 2023-28</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Air Quality</h4>
-                    <ol class="reference-list" start="36">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Air Quality</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="36">
                         <li>CPCB. (2025). <em>NAAQMS Programme</em>.</li>
                         <li>Google. (2024). <em>Air View+ India Insights</em>.</li>
                         <li>Respirer Living Sciences. (2025). <em>Climate Tech in Action</em>.</li>
@@ -134,9 +134,9 @@
                         <li>CSE. (2024). <em>AQ Monitoring Coverage</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Neighbourhoods & Ward Data</h4>
-                    <ol class="reference-list" start="42">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Neighbourhoods & Ward Data</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="42">
                         <li>NoTF. (2026). <em>Bengaluru Ward Climate Data (369 wards)</em>. CC BY-NC-SA.</li>
                         <li>NoTF. (2026). <em>Mumbai Ward Climate Data (227 wards)</em>. CC BY-NC-SA.</li>
                         <li>Census of India. (2011). <em>Primary Census Abstract</em>.</li>
@@ -147,9 +147,9 @@
                         <li>Praja Foundation. (2024). <em>Ward-Level Governance Reports</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Buildings: Carbon & Construction</h4>
-                    <ol class="reference-list" start="50">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Buildings: Carbon & Construction</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="50">
                         <li>RMI & NIUA. (2020). <em>Build Right the First Time</em>.</li>
                         <li>AEEE. (2024). <em>Tackling Embodied Carbon</em>.</li>
                         <li>JLL India. (2025). <em>Office Market Report 2025</em>.</li>
@@ -160,9 +160,9 @@
                         <li>CEEW. (2024). <em>India Cooling Action Research</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Investment & Economic Impact</h4>
-                    <ol class="reference-list" start="58">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Investment & Economic Impact</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="58">
                         <li>Ember. (2024). <em>India Net-Zero Financing Gap</em>. $394B additional needed.</li>
                         <li>IEEFA. (2024). <em>Achieving India's RE Target by 2030</em>. $293B solar/wind.</li>
                         <li>Deloitte India. (2025). <em>Climate Action Investment Report</em>. $1.5T by 2030.</li>
@@ -175,9 +175,9 @@
                         <li>World Bank. (2022). <em>Greener Cooling Pathway India</em>. $1.6T by 2040.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Health & Quality of Life</h4>
-                    <ol class="reference-list" start="68">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Health & Quality of Life</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="68">
                         <li>GBD/Lancet. (2019). <em>Health Impact of Air Pollution in India</em>. 1.67M deaths.</li>
                         <li>Clean Air Fund. (2021). <em>Economic Benefits of Clean Air</em>. $95B GDP gain.</li>
                         <li>Nature. (2025). <em>Air Pollution Health Co-Benefits</em>. 0.77M deaths prevented.</li>
@@ -186,9 +186,9 @@
                         <li>IndiaBioscience. (2024). <em>Sustainable Mobility & Public Health</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Dust & Pollution Control</h4>
-                    <ol class="reference-list" start="74">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Dust & Pollution Control</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="74">
                         <li>CPCB. (2017). <em>Guidelines on Dust Mitigation in Construction</em>.</li>
                         <li>CPCB. (2025). <em>Updated C&D Waste Rules</em>. Weekly logging, ₹2L fines.</li>
                         <li>NGT. (2024). <em>Directives on Construction Dust Control</em>.</li>
@@ -197,17 +197,17 @@
                         <li>CAQM. (2023). <em>Revised GRAP for NCR</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>EV Transition & Air Quality</h4>
-                    <ol class="reference-list" start="80">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">EV Transition & Air Quality</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="80">
                         <li>Eckel SP et al. (2025). <em>Zero-emissions vehicle adoption and satellite-measured NO2 air pollution in California</em>. Lancet Planetary Health. doi:10.1016/j.lanplh.2025.101379. 200 ZEVs = 1.1% NO2 reduction.</li>
                         <li>IBEF/S&P Global. (2025). <em>India EV Market Report</em>. 8% penetration 2025, 30% target by 2030.</li>
                         <li>ICCT. (2022). <em>Air quality and health impacts of large-scale vehicle electrification in India</em>. PM2.5 reduction 2.88 μg/m³ by 2030; 16,700-70,400 avoided deaths by 2040.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Waste Management & Generation</h4>
-                    <ol class="reference-list" start="83">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Waste Management & Generation</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="83">
                         <li>CPCB. (2024). <em>Annual Report on Implementation of Solid Waste Management Rules</em>. 62-65 MT MSW annually.</li>
                         <li>MoHUA. (2024). <em>Swachh Bharat Mission Urban 2.0 Progress Report</em>. 97% door-to-door collection, 70% processing.</li>
                         <li>CPCB. (2020-21). <em>Consolidated Annual Report on SWM</em>. 31.7% waste unaccounted (50,655 TPD).</li>
@@ -215,9 +215,9 @@
                         <li>NGT. (2024). <em>Environmental Compensation & Penalties</em>. ₹79,000 crore levied on states/UTs.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Circular Economy & Waste</h4>
-                    <ol class="reference-list" start="88">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Circular Economy & Waste</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="88">
                         <li>MoEFCC. (2025). <em>India's Circular Economy Potential</em>. PIB. $2T value, 10M jobs by 2050.</li>
                         <li>CEEW. (2025). <em>Unlocking India's Circular Economy Potential</em>. ₹3.5T annually by 2030.</li>
                         <li>CEEW. (2024). <em>Bio-methanation of Wet Waste</em>. ₹2,460 Cr/year revenue, 10M tonnes CO₂-eq reduction.</li>
@@ -225,70 +225,70 @@
                         <li>India Investment Grid. (2025). <em>Waste Management Deal Pipeline</em>. $1.64B projects flagged.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Specialized Waste Streams</h4>
-                    <ol class="reference-list" start="93">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Specialized Waste Streams</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="93">
                         <li>MoEFCC. (2024). <em>Plastic Waste Management Amendment Rules</em>. EPR, 120 microns, QR tracking.</li>
                         <li>CPCB. (2024). <em>E-waste Management Annual Report FY 2023-24</em>. 1.75 MT generated, 43% recycled.</li>
                         <li>CPCB. (2025). <em>Construction & Demolition Waste Management Rules</em>. 150-500 MT/year, &lt;7% recycled.</li>
                         <li>ILO & WIEGO. (2023). <em>Informal Waste Sector in India</em>. 4M+ waste pickers, &lt;20% formalized.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Waste Management Partners</h4>
-                    <ol class="reference-list" start="97">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Waste Management Partners</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="97">
                         <li>Hasiru Dala Innovations. (2025). <em>Inclusive Circularity® Model</em>. 5,144 waste pickers, 430+ clients in Bangalore.</li>
                         <li>Waste Warriors Society. (2024). <em>Himalayan Waste Management</em>. 4,223+ tonnes collected since 2012, Keeling Curve Prize 2023.</li>
                         <li>Saahas Zero Waste. (2025). <em>Collection & Operations Model</em>. ₹66.7 Cr revenue, multi-city network.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Waste Economic Impact & Jobs</h4>
-                    <ol class="reference-list" start="100">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Waste Economic Impact & Jobs</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="100">
                         <li>CEEW. (2024). <em>Green Jobs in Waste Sector</em>. 1.9M jobs from plastic recycling by 2047.</li>
                         <li>Market Research Future. (2024). <em>India Waste Management Market Size & Share Report 2035</em>.</li>
                         <li>Clean Air Fund. (2022). <em>Circular Blue Economy: From Waste to Wealth</em>. ORF.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Water: Groundwater & Supply</h4>
-                    <ol class="reference-list" start="103">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Water: Groundwater & Supply</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="103">
                         <li>CGWB. (2024). <em>Dynamic Ground Water Resources of India 2023</em>. 17% blocks over-exploited, 5% critical.</li>
                         <li>Jal Jeevan Mission. (2025). <em>Dashboard Report</em>. 78% rural households with tap connections.</li>
                         <li>World Bank. (2022). <em>India's Water Security: Policy Options</em>. 25% GDP dependent on groundwater.</li>
                         <li>IEA. (2024). <em>Water-Energy Nexus in India</em>. 18-20% electricity for water pumping.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Water: Sewage & Treatment</h4>
-                    <ol class="reference-list" start="107">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Water: Sewage & Treatment</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="107">
                         <li>CPCB. (2024). <em>National Inventory of STPs</em>. 72% sewage untreated, 39% STPs non-compliant.</li>
                         <li>NMCG. (2024). <em>Namami Gange Programme Report</em>. ₹30,000 Cr invested, mixed STP outcomes.</li>
                         <li>NFHS-5. (2021). <em>Water & Sanitation Indicators</em>. 44% households piped water.</li>
                         <li>Centre for Science & Environment. (2024). <em>State of India's Environment: Water</em>.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Water: Urban Water Economics</h4>
-                    <ol class="reference-list" start="111">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Water: Urban Water Economics</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="111">
                         <li>TERI. (2023). <em>Urban Water Supply & Sanitation</em>. ₹50,000 Cr tanker economy estimate.</li>
                         <li>IIHS. (2024). <em>Water Security in Indian Cities</em>. Intermittent supply in 90%+ cities.</li>
                         <li>WaterAid India. (2024). <em>Urban Water Equity Report</em>. Slums pay 10-20x piped water rates.</li>
                         <li>NIUA. (2024). <em>Service Level Benchmarks for Water Supply</em>. Only 69 lpcd delivered vs 135 lpcd norm.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Water: Rainwater Harvesting & Conservation</h4>
-                    <ol class="reference-list" start="115">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Water: Rainwater Harvesting & Conservation</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="115">
                         <li>Karnataka Groundwater Authority. (2023). <em>RWH Compliance Status</em>. Mandated since 2001, low functional rates.</li>
                         <li>CSE. (2024). <em>Dying Wisdom: Rainwater Harvesting in India</em>. Traditional systems abandoned.</li>
                         <li>CGWB. (2024). <em>Master Plan for Artificial Recharge</em>. 85 BCM recharge potential identified.</li>
                         <li>ATREE. (2023). <em>Bengaluru's Water Future</em>. Lake revival and aquifer recharge potential.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Waste: Infrastructure & MRF Gap</h4>
-                    <ol class="reference-list" start="119">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Waste: Infrastructure & MRF Gap</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="119">
                         <li>TERI. (2023). <em>State of Waste Management Report</em>. Prepared for The Incubation Network. 71pp. 5 city analysis, policy recommendations.</li>
                         <li>EPW. (2023). <em>Institutional Framework for Implementing Solid Waste Management in India: A Macro Analysis</em>. ULB budget: 60-70% sweeping, &lt;5% treatment.</li>
                         <li>Down to Earth. (2023). <em>India's Challenges in Waste Management</em>. Mumbai: 11,000 TPD generated vs 5,000 TPD capacity.</li>
@@ -305,9 +305,9 @@
                         <li>India Water Portal. (2024). <em>Informal Sector Contribution to Plastic Waste Collection</em>. 70-80% of plastic recycling by informal sector.</li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Water: Wastewater Reuse & Governance</h4>
-                    <ol class="reference-list" start="133">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Water: Wastewater Reuse & Governance</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="133">
                         <li>CSE & NMCG. (2024). <em>Waste to Worth: Managing India's Urban Water Crisis through Wastewater Reuse</em>. 35 case studies, 16 cities, 7 states. Only 28% treated, 72% untreated. <a href="https://www.cseindia.org/waste-to-worth-managing-india-s-urban-water-crisis-through-wastewater-reuse-12527" target="_blank">Link</a></li>
                         <li>IndiaSpend. (2024). <em>Why India Needs to Urgently Rehaul Sewage Treatment Plans</em>. 72B L/day sewage, 37% capacity, 28% treated. 73% decline in per capita water since 1950. <a href="https://www.indiaspend.com/pollution/why-india-needs-to-urgently-rehaul-sewage-treatment-plans-954097" target="_blank">Link</a></li>
                         <li>SANDRP. (2025). <em>India's Non-functional Sewage Treatment Plants</em>. Only 29% of 45,000 MLD treated. 61/154 Maharashtra STPs non-compliant. NGT ₹80,000 Cr fines. <a href="https://sandrp.in/2025/01/27/drp-nb-270125-indias-non-functional-sewage-treatment-plants/" target="_blank">Link</a></li>
@@ -318,25 +318,25 @@
                         <li>Down to Earth. (2024). <em>India's Water Crisis: The Role of Wastewater Reuse and Circularity</em>. State-level reuse data: Delhi 49%, Karnataka 43%, Rajasthan 29%, Haryana 15%, Maharashtra 17%. <a href="https://www.downtoearth.org.in/water/safety-in-circularity" target="_blank">Link</a></li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Urban Governance & Decentralization (74th CAA)</h4>
-                    <ol class="reference-list" start="141">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Urban Governance & Decentralization (74th CAA)</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="141">
                         <li>Banerjee, I. (2021). <em>Problems of Urban Self-governance in India</em>. Nagarlok, IIPA. Only 11/31 states transferred all 18 functions. Municipal own revenue 42.7% nationally. 35% average staff vacancy. Election delays, parastatal interference, fiscal dependency. <a href="https://www.iipa.org.in/cms/public/uploads/342451652163582.pdf" target="_blank">Link</a></li>
                         <li>CAG. (2021). <em>Performance Audit on Efficacy of Implementation of 74th CAA with Focus on 3Fs</em>. Odisha audit: 112/114 ULBs no elections for up to 9 years. Own revenue 11.22%. Ward committees not constituted. 13/18 functions have overlapping jurisdiction with parastatals. <a href="https://cag.gov.in/uploads/download_audit_report/2023/8.-Ch-5-Performance-audit-on-the-Efficacy-of-implementation-of-74th-Constitution-0651c2062a5c705.88651054.pdf" target="_blank">Link</a></li>
                         <li>Janaagraha. (2023). <em>ASICS 2023: Annual Survey of India's City-Systems Data Book</em>. 1,484/4,766 city councils inactive (31%). No functional ward committees in AP, Bihar, Delhi, UP, WB. Councillor salary ₹2,500-25,000/month vs MLA ₹50K-1.83L. Municipal election turnout 10-20% lower than state elections. <a href="https://www.janaagraha.org/wp-content/uploads/2024/02/ASICS-2023-data-book.pdf" target="_blank">Link</a></li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Food Systems & Cold Chain</h4>
-                    <ol class="reference-list" start="144">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Food Systems & Cold Chain</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="144">
                         <li>UNEP. (2024). <em>Food Waste Index Report 2024</em>. India: 78.2 million tonnes food wasted annually (₹92,000 Cr value). 64.1 MT CO₂e emissions from post-harvest losses. Per capita waste 50 kg/year. <a href="https://www.unep.org/resources/publication/food-waste-index-report-2024" target="_blank">Link</a></li>
                         <li>NCCD. (2023). <em>All India Cold Chain Infrastructure Capacity Assessment</em>. Only 500 of 125,000 needed rural packhouses exist. 70% cold storage for potatoes. 9,000 vs 62,000 reefer trucks needed. Horticulture gets &lt;4% cold chain capacity. ₹1.7 lakh crore investment needed. <a href="https://nccd.gov.in" target="_blank">Link</a></li>
                         <li>CACP. (2024). <em>Commission for Agricultural Costs and Prices Reports</em>. MSP covers 23 crops but 95%+ procurement is rice/wheat. Rice/wheat account for 60% of foodgrain area. PDS distributes almost exclusively rice/wheat, limiting millet uptake. <a href="https://cacp.dacnet.nic.in/" target="_blank">Link</a></li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Agricultural Economics & Land Degradation</h4>
-                    <ol class="reference-list" start="153">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Agricultural Economics & Land Degradation</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="153">
                         <li>India Water Portal. (2024). <em>Why India's rice and wheat subsidies are drying up our groundwater</em>. MSP policies caused 30% over-production of water-intensive crops. 50% of Punjab groundwater decline attributable to rice procurement. Rice-wheat covers 95% of crop area. <a href="https://www.indiawaterportal.org/groundwater/why-indias-rice-and-wheat-subsidies-are-drying-up-our-groundwater" target="_blank">Link</a></li>
                         <li>Mongabay India. (2025). <em>The hidden side of millet farming</em>. Millet farmers receive only 33-42% of what rice/wheat farmers get. Income from millet farming could not cover costs in alternate years. Lack of MSP equivalent institutional support. <a href="https://india.mongabay.com/2025/03/the-hidden-side-of-millet-farming/" target="_blank">Link</a></li>
                         <li>Springer. (2024). <em>Crop diversification and income of agricultural households in India</em>. Farm income increases by ~13% when households diversify crops. Diversified households have higher access to technical advice, markets, and credit. <a href="https://link.springer.com/article/10.1007/s44279-024-00019-0" target="_blank">Link</a></li>
@@ -346,9 +346,9 @@
                         <li>Nature/ResearchGate. (2024). <em>Economic impact of FPO membership: empirical evidence from India</em>. 22% higher price realization for FPO members. 39% higher annual agricultural income. 49% lower poverty incidence (0.352 vs 0.691). 31% lower marketing costs. <a href="https://www.nature.com/articles/s41599-025-05063-9" target="_blank">Link</a></li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Biodiversity & Forest Conservation</h4>
-                    <ol class="reference-list" start="147">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Biodiversity & Forest Conservation</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="147">
                         <li>FSI. (2023). <em>India State of Forest Report 2023</em>. 24,651 sq km dense forest lost (2003-2023), replaced by plantations not natural regeneration. Overall forest cover increase masks quality decline. <a href="https://fsi.nic.in/forest-report-2023" target="_blank">Link</a></li>
                         <li>Global Forest Watch. (2024). <em>India Forest Loss Data</em>. Forest fires account for 44% of tree cover loss since 2001. Climate change increasing fire frequency. Ground-level fire prevention underfunded. <a href="https://www.globalforestwatch.org/dashboards/country/IND" target="_blank">Link</a></li>
                         <li>Yale EPI. (2024). <em>Environmental Performance Index</em>. India ranks 176 of 180 on Nature Conservation Index. Protected Area coverage adequate but management effectiveness poor. <a href="https://epi.yale.edu/epi-results/2024/country/ind" target="_blank">Link</a></li>
@@ -357,9 +357,9 @@
                         <li>MoEFCC. (2024). <em>Human-Wildlife Conflict Report</em>. 2,727 human deaths from elephant attacks (2019-2024). Habitat fragmentation pushing wildlife into human areas. Corridor connectivity critical for reducing conflict. <a href="https://moef.gov.in" target="_blank">Link</a></li>
                     </ol>
                 </div>
-                <div class="reference-section">
-                    <h4>Biodiversity Economics & Natural Capital</h4>
-                    <ol class="reference-list" start="160">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h4 class="text-base font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2">Biodiversity Economics & Natural Capital</h4>
+                    <ol class="text-xs text-gray-700 leading-relaxed space-y-2 pl-5 list-decimal" start="160">
                         <li>World Bank. (2024). <em>Natural Capital and Ecosystem Services in India</em>. Ecosystem service decline costs India at least 5.7% of GDP annually. Traditional economic measures overlook environmental costs and natural asset depletion. <a href="https://www.worldbank.org/en/country/india" target="_blank">Link</a></li>
                         <li>WEF. (2024). <em>A third of India's economy relies on nature</em>. One-third of India's GDP depends directly on nature. Corporates need to invest more in natural climate solutions. Nature loss poses grave risk to economic growth. <a href="https://www.weforum.org/stories/2024/08/india-economy-natural-climate-solutions/" target="_blank">Link</a></li>
                         <li>ScienceDirect. (2024). <em>Quantifying habitat and biodiversity services of Indian forests</em>. Annual forest ecosystem services value: habitat $303B, biodiversity $419B, supporting services $744B. Forest carbon sink value ₹6 lakh crore ($120B) at $5/tonne. Carbon stock: 7,204 million tonnes. <a href="https://www.sciencedirect.com/science/article/pii/S2665972724001107" target="_blank">Link</a></li>
@@ -375,383 +375,383 @@
         </div>
 
         <!-- Glossary Section -->
-        <div class="resource-content-panel" id="glossary">
-            <div class="glossary-grid">
-                <div class="glossary-card">
-                    <dt>NDC</dt>
-                    <dd>Nationally Determined Contributions - India's climate commitments under Paris Agreement</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>ECBC</dt>
-                    <dd>Energy Conservation Building Code - mandatory standards for commercial buildings</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>EPR</dt>
-                    <dd>Extended Producer Responsibility - producers responsible for end-of-life management</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>PAT</dt>
-                    <dd>Perform, Achieve and Trade - industrial energy efficiency trading scheme</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Mtoe</dt>
-                    <dd>Million tonnes of oil equivalent - standard energy measurement</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>TWh</dt>
-                    <dd>Terawatt-hours - electricity measurement (1 TWh = 1 billion kWh)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>BRT</dt>
-                    <dd>Bus Rapid Transit - dedicated bus lanes for efficient public transport</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>TOD</dt>
-                    <dd>Transit-Oriented Development - urban planning around transit stations</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NCAP</dt>
-                    <dd>National Clean Air Programme - initiative to reduce air pollution in 131 cities</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>CAAQMS</dt>
-                    <dd>Continuous Ambient Air Quality Monitoring Stations - real-time monitoring by CPCB</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>PM2.5</dt>
-                    <dd>Particulate Matter 2.5 - fine particles ≤2.5 micrometers, major health concern</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>AQI</dt>
-                    <dd>Air Quality Index - standardized measure of air pollution (0-500 scale)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Source Apportionment</dt>
-                    <dd>Scientific study to identify and quantify pollution sources</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NMT</dt>
-                    <dd>Non-Motorized Transport - walking, cycling, human-powered modes</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>IGBC</dt>
-                    <dd>Indian Green Building Council - certification body for green buildings</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>GRIHA</dt>
-                    <dd>Green Rating for Integrated Habitat Assessment - national rating system</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NoTF</dt>
-                    <dd>Neighbourhoods of the Future - community-led sustainability platform</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>RWA</dt>
-                    <dd>Resident Welfare Association - community organization for governance</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>BBMP</dt>
-                    <dd>Bruhat Bengaluru Mahanagara Palike - Bengaluru corporation (369 wards)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>MCGM</dt>
-                    <dd>Municipal Corporation of Greater Mumbai - governing 227 wards</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Ward</dt>
-                    <dd>Administrative subdivision for local governance - smallest urban unit</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>CC BY-NC-SA</dt>
-                    <dd>Creative Commons Attribution-NonCommercial-ShareAlike license</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>ASSURE</dt>
-                    <dd>IIHS program for 100M sq.ft high-performance buildings by 2030</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>HPB</dt>
-                    <dd>High-Performance Buildings - 25-50% more efficient than standard</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Embodied Carbon</dt>
-                    <dd>CO2 from materials & construction (40% of India's building emissions)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Operational Carbon</dt>
-                    <dd>CO2 from building energy use during occupancy (60% of emissions)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>CREDAI</dt>
-                    <dd>Confederation of Real Estate Developers - 4,000 green projects by 2030</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>ZEV</dt>
-                    <dd>Zero-Emissions Vehicle - battery electric, plug-in hybrid, or hydrogen fuel cell vehicles</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>TROPOMI</dt>
-                    <dd>Tropospheric Monitoring Instrument - satellite sensor measuring NO2 at ~1km² resolution</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NO2</dt>
-                    <dd>Nitrogen Dioxide - combustion-related pollutant, key marker for vehicle emissions</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>FAME</dt>
-                    <dd>Faster Adoption and Manufacturing of EVs - India's EV incentive scheme</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>MSW</dt>
-                    <dd>Municipal Solid Waste - household & commercial waste (62-65 MT/year in India)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>SWM</dt>
-                    <dd>Solid Waste Management - collection, processing, disposal of waste</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>SBM-U</dt>
-                    <dd>Swachh Bharat Mission Urban - flagship waste program (₹1,41,678 Cr, 2021-2026)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>ULB</dt>
-                    <dd>Urban Local Body - municipal corporation/council responsible for waste management</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>MRF</dt>
-                    <dd>Material Recovery Facility - sorting center for recyclables from mixed waste</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>C&D Waste</dt>
-                    <dd>Construction & Demolition Waste - 150-500 MT/year, &lt;7% recycled in India</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>E-waste</dt>
-                    <dd>Electronic Waste - discarded electronics (1.75 MT/year, 43% formally recycled)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>EBWGR</dt>
-                    <dd>Extended Bulk Waste Generator Responsibility - accountability certificates per SWM Rules 2024</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Legacy Waste</dt>
-                    <dd>Accumulated waste at dumpsites - 250 MT at 2,300+ sites, remediation deadline Oct 2026</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>TPD</dt>
-                    <dd>Tonnes Per Day - standard waste measurement (170,000 TPD MSW in India)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Circular Economy</dt>
-                    <dd>System eliminating waste through reuse, recycling, regeneration - $2T opportunity by 2050</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Waste Picker</dt>
-                    <dd>Informal worker collecting recyclables - 4M+ in India, &lt;20% formalized</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Source Segregation</dt>
-                    <dd>Separating waste at generation point (wet, dry, hazardous) - only 40-60% compliance in India</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>RDF</dt>
-                    <dd>Refuse-Derived Fuel - processed waste for energy (6-15% mandatory usage in industries)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Bio-methanation</dt>
-                    <dd>Anaerobic digestion of organic waste to produce methane - ₹2,460 Cr/year potential</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>WtE</dt>
-                    <dd>Waste-to-Energy - incineration plants that generate electricity from waste (₹500+ Cr capital cost)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>IWMF</dt>
-                    <dd>Integrated Waste Management Facility - large-scale processing (500-1,000 TPD capacity)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Sanitary Landfill</dt>
-                    <dd>Engineered disposal site with liners & leachate treatment - only 645 operational vs 2,452 dumpsites</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Tipping Fee</dt>
-                    <dd>Payment per tonne for waste disposal - creates perverse incentive against waste reduction</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Kabadiwala</dt>
-                    <dd>Informal waste buyer/aggregator - backbone of India's recycling chain</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NGT</dt>
-                    <dd>National Green Tribunal - environmental court, levied ₹79,000 Cr waste penalties</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Inclusive Circularity</dt>
-                    <dd>Hasiru Dala model integrating informal waste workers into circular economy value chain</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>CGWB</dt>
-                    <dd>Central Ground Water Board - monitors 23M groundwater structures across India</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>JJM</dt>
-                    <dd>Jal Jeevan Mission - program to provide tap water to all rural households by 2024</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>STP</dt>
-                    <dd>Sewage Treatment Plant - only 28% of India's sewage is treated, 39% STPs non-compliant</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>RWH</dt>
-                    <dd>Rainwater Harvesting - mandated in many states since 2001, rarely functional</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NMCG</dt>
-                    <dd>National Mission for Clean Ganga - ₹30,000 Cr program for Ganga river rejuvenation</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>BCM</dt>
-                    <dd>Billion Cubic Meters - water volume measurement (India uses 250 BCM groundwater/year)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>LPCD</dt>
-                    <dd>Litres Per Capita per Day - water supply benchmark (135 lpcd norm, 69 lpcd actual)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Aquifer</dt>
-                    <dd>Underground water-bearing rock formation - shared commons subject to tragedy of overextraction</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>MLD</dt>
-                    <dd>Million Liters per Day - sewage/water measurement (India generates 72,000 MLD sewage)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Treated Water Reuse</dt>
-                    <dd>Using treated wastewater for non-potable purposes - only 11 of 28 states have policies</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>AMRUT 2.0</dt>
-                    <dd>Atal Mission for Rejuvenation and Urban Transformation - mandates 20% water reuse</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Tanker Mafia</dt>
-                    <dd>Informal water delivery operators with political connections - Bengaluru has 3,500+ tankers</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>CETP</dt>
-                    <dd>Common Effluent Treatment Plant - shared industrial wastewater treatment (all 8 Ganga CETPs non-compliant)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Tertiary Treatment</dt>
-                    <dd>Advanced sewage treatment for reuse - expensive, blocks industrial uptake</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>74th CAA</dt>
-                    <dd>74th Constitutional Amendment Act (1992) - provides for urban local self-governance, devolution of 18 functions to ULBs, ward committees, State Finance Commissions</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>3Fs</dt>
-                    <dd>Funds, Functions, Functionaries - three pillars of decentralization that 74th CAA mandates states to devolve to ULBs (largely unfulfilled)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>12th Schedule</dt>
-                    <dd>Constitutional schedule listing 18 functions to be devolved to ULBs - urban planning, water, sanitation, roads, slums, etc.</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Parastatal</dt>
-                    <dd>State-controlled bodies (Development Authorities, Water Corporations) that exercise functions constitutionally meant for ULBs</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>SFC</dt>
-                    <dd>State Finance Commission - constitutional body to review ULB finances and recommend fiscal transfers (frequently delayed)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>SEC</dt>
-                    <dd>State Election Commission - body for conducting ULB elections; lacks delimitation power in most states</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Ward Committee</dt>
-                    <dd>Mandated by Article 243S for cities &gt;3 lakh population; supposed to enable citizen participation; mostly non-functional</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>ASICS</dt>
-                    <dd>Annual Survey of India's City-Systems - Janaagraha's evaluation of urban laws and governance across 35 states/UTs</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>MSP</dt>
-                    <dd>Minimum Support Price - government-guaranteed procurement price for agricultural crops (23 crops, dominated by rice/wheat)</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>FPO</dt>
-                    <dd>Farmer Producer Organization - collective of farmers for aggregation, processing, and market access</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>APMC</dt>
-                    <dd>Agricultural Produce Market Committee - state-regulated mandis for agricultural trade</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>PDS</dt>
-                    <dd>Public Distribution System - government food distribution network for subsidized grains</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>CAMPA</dt>
-                    <dd>Compensatory Afforestation Fund Management and Planning Authority - fund for compensatory plantations when forests diverted</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Lantana</dt>
-                    <dd>Lantana camara - invasive species covering 40% of tiger reserves, outcompeting native vegetation</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Packhouse</dt>
-                    <dd>Farm-gate facility for sorting, grading, and pre-cooling produce before cold storage/transport</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NPK Ratio</dt>
-                    <dd>Nitrogen-Phosphorus-Potassium ratio in fertilizer application; ideal is 4:2:1, India's actual is 10.9:4.4:1</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NBS</dt>
-                    <dd>Nutrient Based Subsidy - scheme providing fixed subsidy on P&K fertilizers based on nutrient content</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>GRACE</dt>
-                    <dd>Gravity Recovery and Climate Experiment - NASA satellites measuring groundwater depletion from space</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Natural Capital</dt>
-                    <dd>Stock of natural assets (forests, water, soil, biodiversity) that provide ecosystem services; often excluded from GDP</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Ecosystem Services</dt>
-                    <dd>Benefits nature provides to humans: provisioning (food, water), regulating (climate, floods), supporting (pollination, soil), cultural</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>TEEB</dt>
-                    <dd>The Economics of Ecosystems and Biodiversity - global initiative to value nature in economic terms</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>NCAVES</dt>
-                    <dd>Natural Capital Accounting and Valuation of Ecosystem Services - UN project piloted in India since 2017</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>Green GDP</dt>
-                    <dd>GDP adjusted for environmental costs and natural capital depreciation; would show lower growth for India</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>PES</dt>
-                    <dd>Payment for Ecosystem Services - mechanism where beneficiaries pay providers to maintain ecosystem services</dd>
-                </div>
-                <div class="glossary-card">
-                    <dt>EVP</dt>
-                    <dd>Economic Value of Pollination - contribution of pollinators to crop production; ₹1.12 lakh crore/year in India</dd>
+        <div class="resource-content-panel hidden" id="glossary">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NDC</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Nationally Determined Contributions - India's climate commitments under Paris Agreement</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">ECBC</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Energy Conservation Building Code - mandatory standards for commercial buildings</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">EPR</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Extended Producer Responsibility - producers responsible for end-of-life management</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">PAT</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Perform, Achieve and Trade - industrial energy efficiency trading scheme</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Mtoe</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Million tonnes of oil equivalent - standard energy measurement</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">TWh</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Terawatt-hours - electricity measurement (1 TWh = 1 billion kWh)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">BRT</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Bus Rapid Transit - dedicated bus lanes for efficient public transport</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">TOD</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Transit-Oriented Development - urban planning around transit stations</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NCAP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">National Clean Air Programme - initiative to reduce air pollution in 131 cities</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">CAAQMS</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Continuous Ambient Air Quality Monitoring Stations - real-time monitoring by CPCB</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">PM2.5</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Particulate Matter 2.5 - fine particles ≤2.5 micrometers, major health concern</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">AQI</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Air Quality Index - standardized measure of air pollution (0-500 scale)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Source Apportionment</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Scientific study to identify and quantify pollution sources</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NMT</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Non-Motorized Transport - walking, cycling, human-powered modes</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">IGBC</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Indian Green Building Council - certification body for green buildings</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">GRIHA</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Green Rating for Integrated Habitat Assessment - national rating system</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NoTF</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Neighbourhoods of the Future - community-led sustainability platform</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">RWA</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Resident Welfare Association - community organization for governance</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">BBMP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Bruhat Bengaluru Mahanagara Palike - Bengaluru corporation (369 wards)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">MCGM</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Municipal Corporation of Greater Mumbai - governing 227 wards</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Ward</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Administrative subdivision for local governance - smallest urban unit</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">CC BY-NC-SA</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Creative Commons Attribution-NonCommercial-ShareAlike license</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">ASSURE</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">IIHS program for 100M sq.ft high-performance buildings by 2030</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">HPB</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">High-Performance Buildings - 25-50% more efficient than standard</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Embodied Carbon</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">CO2 from materials & construction (40% of India's building emissions)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Operational Carbon</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">CO2 from building energy use during occupancy (60% of emissions)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">CREDAI</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Confederation of Real Estate Developers - 4,000 green projects by 2030</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">ZEV</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Zero-Emissions Vehicle - battery electric, plug-in hybrid, or hydrogen fuel cell vehicles</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">TROPOMI</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Tropospheric Monitoring Instrument - satellite sensor measuring NO2 at ~1km² resolution</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NO2</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Nitrogen Dioxide - combustion-related pollutant, key marker for vehicle emissions</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">FAME</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Faster Adoption and Manufacturing of EVs - India's EV incentive scheme</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">MSW</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Municipal Solid Waste - household & commercial waste (62-65 MT/year in India)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">SWM</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Solid Waste Management - collection, processing, disposal of waste</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">SBM-U</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Swachh Bharat Mission Urban - flagship waste program (₹1,41,678 Cr, 2021-2026)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">ULB</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Urban Local Body - municipal corporation/council responsible for waste management</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">MRF</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Material Recovery Facility - sorting center for recyclables from mixed waste</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">C&D Waste</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Construction & Demolition Waste - 150-500 MT/year, &lt;7% recycled in India</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">E-waste</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Electronic Waste - discarded electronics (1.75 MT/year, 43% formally recycled)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">EBWGR</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Extended Bulk Waste Generator Responsibility - accountability certificates per SWM Rules 2024</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Legacy Waste</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Accumulated waste at dumpsites - 250 MT at 2,300+ sites, remediation deadline Oct 2026</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">TPD</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Tonnes Per Day - standard waste measurement (170,000 TPD MSW in India)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Circular Economy</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">System eliminating waste through reuse, recycling, regeneration - $2T opportunity by 2050</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Waste Picker</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Informal worker collecting recyclables - 4M+ in India, &lt;20% formalized</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Source Segregation</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Separating waste at generation point (wet, dry, hazardous) - only 40-60% compliance in India</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">RDF</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Refuse-Derived Fuel - processed waste for energy (6-15% mandatory usage in industries)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Bio-methanation</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Anaerobic digestion of organic waste to produce methane - ₹2,460 Cr/year potential</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">WtE</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Waste-to-Energy - incineration plants that generate electricity from waste (₹500+ Cr capital cost)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">IWMF</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Integrated Waste Management Facility - large-scale processing (500-1,000 TPD capacity)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Sanitary Landfill</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Engineered disposal site with liners & leachate treatment - only 645 operational vs 2,452 dumpsites</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Tipping Fee</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Payment per tonne for waste disposal - creates perverse incentive against waste reduction</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Kabadiwala</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Informal waste buyer/aggregator - backbone of India's recycling chain</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NGT</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">National Green Tribunal - environmental court, levied ₹79,000 Cr waste penalties</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Inclusive Circularity</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Hasiru Dala model integrating informal waste workers into circular economy value chain</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">CGWB</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Central Ground Water Board - monitors 23M groundwater structures across India</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">JJM</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Jal Jeevan Mission - program to provide tap water to all rural households by 2024</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">STP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Sewage Treatment Plant - only 28% of India's sewage is treated, 39% STPs non-compliant</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">RWH</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Rainwater Harvesting - mandated in many states since 2001, rarely functional</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NMCG</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">National Mission for Clean Ganga - ₹30,000 Cr program for Ganga river rejuvenation</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">BCM</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Billion Cubic Meters - water volume measurement (India uses 250 BCM groundwater/year)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">LPCD</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Litres Per Capita per Day - water supply benchmark (135 lpcd norm, 69 lpcd actual)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Aquifer</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Underground water-bearing rock formation - shared commons subject to tragedy of overextraction</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">MLD</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Million Liters per Day - sewage/water measurement (India generates 72,000 MLD sewage)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Treated Water Reuse</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Using treated wastewater for non-potable purposes - only 11 of 28 states have policies</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">AMRUT 2.0</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Atal Mission for Rejuvenation and Urban Transformation - mandates 20% water reuse</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Tanker Mafia</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Informal water delivery operators with political connections - Bengaluru has 3,500+ tankers</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">CETP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Common Effluent Treatment Plant - shared industrial wastewater treatment (all 8 Ganga CETPs non-compliant)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Tertiary Treatment</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Advanced sewage treatment for reuse - expensive, blocks industrial uptake</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">74th CAA</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">74th Constitutional Amendment Act (1992) - provides for urban local self-governance, devolution of 18 functions to ULBs, ward committees, State Finance Commissions</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">3Fs</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Funds, Functions, Functionaries - three pillars of decentralization that 74th CAA mandates states to devolve to ULBs (largely unfulfilled)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">12th Schedule</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Constitutional schedule listing 18 functions to be devolved to ULBs - urban planning, water, sanitation, roads, slums, etc.</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Parastatal</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">State-controlled bodies (Development Authorities, Water Corporations) that exercise functions constitutionally meant for ULBs</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">SFC</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">State Finance Commission - constitutional body to review ULB finances and recommend fiscal transfers (frequently delayed)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">SEC</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">State Election Commission - body for conducting ULB elections; lacks delimitation power in most states</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Ward Committee</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Mandated by Article 243S for cities &gt;3 lakh population; supposed to enable citizen participation; mostly non-functional</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">ASICS</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Annual Survey of India's City-Systems - Janaagraha's evaluation of urban laws and governance across 35 states/UTs</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">MSP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Minimum Support Price - government-guaranteed procurement price for agricultural crops (23 crops, dominated by rice/wheat)</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">FPO</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Farmer Producer Organization - collective of farmers for aggregation, processing, and market access</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">APMC</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Agricultural Produce Market Committee - state-regulated mandis for agricultural trade</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">PDS</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Public Distribution System - government food distribution network for subsidized grains</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">CAMPA</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Compensatory Afforestation Fund Management and Planning Authority - fund for compensatory plantations when forests diverted</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Lantana</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Lantana camara - invasive species covering 40% of tiger reserves, outcompeting native vegetation</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Packhouse</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Farm-gate facility for sorting, grading, and pre-cooling produce before cold storage/transport</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NPK Ratio</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Nitrogen-Phosphorus-Potassium ratio in fertilizer application; ideal is 4:2:1, India's actual is 10.9:4.4:1</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NBS</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Nutrient Based Subsidy - scheme providing fixed subsidy on P&K fertilizers based on nutrient content</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">GRACE</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Gravity Recovery and Climate Experiment - NASA satellites measuring groundwater depletion from space</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Natural Capital</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Stock of natural assets (forests, water, soil, biodiversity) that provide ecosystem services; often excluded from GDP</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Ecosystem Services</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Benefits nature provides to humans: provisioning (food, water), regulating (climate, floods), supporting (pollination, soil), cultural</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">TEEB</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">The Economics of Ecosystems and Biodiversity - global initiative to value nature in economic terms</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">NCAVES</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Natural Capital Accounting and Valuation of Ecosystem Services - UN project piloted in India since 2017</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">Green GDP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">GDP adjusted for environmental costs and natural capital depreciation; would show lower growth for India</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">PES</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Payment for Ecosystem Services - mechanism where beneficiaries pay providers to maintain ecosystem services</dd>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-150">
+                    <dt class="text-base font-bold text-gray-900 mb-2">EVP</dt>
+                    <dd class="text-xs text-gray-600 leading-relaxed m-0">Economic Value of Pollination - contribution of pollinators to crop production; ₹1.12 lakh crore/year in India</dd>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer">
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
-            <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0" style="height: 31px;">
+    <footer class="bg-dark text-gray-400 text-center px-8 py-8 mt-12">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="inline-block">
+            <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0" class="h-8 mx-auto">
         </a>
     </footer>
 
@@ -759,11 +759,24 @@
         // Tab switching functionality
         document.querySelectorAll('.resource-tab').forEach(tab => {
             tab.addEventListener('click', () => {
-                document.querySelectorAll('.resource-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.resource-content-panel').forEach(c => c.classList.remove('active'));
-                tab.classList.add('active');
+                // Update tab styles
+                document.querySelectorAll('.resource-tab').forEach(t => {
+                    t.classList.remove('bg-dark', 'border-dark', 'text-white');
+                    t.classList.add('bg-white', 'border-gray-300', 'text-gray-700', 'hover:border-dark', 'hover:bg-gray-50');
+                });
+                tab.classList.remove('bg-white', 'border-gray-300', 'text-gray-700', 'hover:border-dark', 'hover:bg-gray-50');
+                tab.classList.add('bg-dark', 'border-dark', 'text-white');
+
+                // Update panel visibility
+                document.querySelectorAll('.resource-content-panel').forEach(c => {
+                    c.classList.add('hidden');
+                    c.classList.remove('block');
+                });
                 const sectionId = tab.dataset.section;
-                document.getElementById(sectionId).classList.add('active');
+                const panel = document.getElementById(sectionId);
+                panel.classList.remove('hidden');
+                panel.classList.add('block');
+
                 history.replaceState(null, null, '#' + sectionId);
             });
         });
