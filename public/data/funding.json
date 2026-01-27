@@ -1,0 +1,121 @@
+{
+    "lastUpdated": "2026-01-24T00:00:00.000Z",
+    "totalBudget": {
+        "min": 253,
+        "max": 270,
+        "unit": "Cr"
+    },
+    "disbursed": 0,
+    "categories": [
+        {
+            "name": "Demand Efficiency",
+            "allocation": { "min": 145, "max": 155 },
+            "percentage": 55,
+            "partners": ["NRDC", "WRI", "CEEW (cooling)", "Prayas", "ITDP", "Development Alternatives"]
+        },
+        {
+            "name": "Circular Economy",
+            "allocation": { "min": 68, "max": 75 },
+            "percentage": 30,
+            "partners": ["CEEW (circular)", "Saahas", "TERI", "CSTEP", "Chintan", "Saath"]
+        },
+        {
+            "name": "Enablers",
+            "allocation": { "min": 40, "max": 45 },
+            "percentage": 15,
+            "partners": ["Ethos", "Final Mile", "SFC", "Vasudha", "CSE"]
+        }
+    ],
+    "yearlyPhasing": [
+        {
+            "year": 1,
+            "allocation": { "min": 75, "max": 80 },
+            "percentage": 30,
+            "keyActivities": [
+                "Pilots and baseline establishment",
+                "Research and pilot design",
+                "Data infrastructure setup",
+                "State assessments"
+            ],
+            "breakdown": {
+                "demandEfficiency": { "min": 40, "max": 45 },
+                "circularEconomy": { "min": 20, "max": 22 },
+                "enablers": { "min": 7, "max": 8 },
+                "policyResearch": { "min": 5, "max": 6 },
+                "operations": { "min": 3, "max": 4 }
+            }
+        },
+        {
+            "year": 2,
+            "allocation": { "min": 100, "max": 110 },
+            "percentage": 40,
+            "keyActivities": [
+                "Major scale-up (5 states → 12 states)",
+                "Full collection networks and recycling",
+                "National campaigns and data platform",
+                "Policy influence and national frameworks"
+            ],
+            "breakdown": {
+                "demandEfficiency": { "min": 55, "max": 60 },
+                "circularEconomy": { "min": 28, "max": 32 },
+                "enablers": { "min": 10, "max": 12 },
+                "policyResearch": { "min": 6, "max": 8 },
+                "operations": { "min": 3, "max": 4 }
+            }
+        },
+        {
+            "year": 3,
+            "allocation": { "min": 75, "max": 80 },
+            "percentage": 30,
+            "keyActivities": [
+                "Sustainability and handoff prep",
+                "Commercial models and industry transition",
+                "Institutionalization",
+                "Long-term pathway development"
+            ],
+            "breakdown": {
+                "demandEfficiency": { "min": 42, "max": 45 },
+                "circularEconomy": { "min": 20, "max": 22 },
+                "enablers": { "min": 6, "max": 7 },
+                "policyResearch": { "min": 4, "max": 5 },
+                "operations": { "min": 3, "max": 4 }
+            }
+        }
+    ],
+    "q1Disbursements": [
+        {
+            "partner": "NRDC India",
+            "amount": { "min": 12, "max": 15 },
+            "milestone": "MOU signed, Year 1 workplan approved",
+            "status": "pending"
+        },
+        {
+            "partner": "WRI India",
+            "amount": { "min": 9, "max": 12 },
+            "milestone": "MOU signed, PRADAN integration plan",
+            "status": "pending"
+        },
+        {
+            "partner": "CEEW",
+            "amount": { "min": 15, "max": 18 },
+            "milestone": "MOU signed, cooling + circular plans",
+            "status": "pending"
+        },
+        {
+            "partner": "ITDP India",
+            "amount": { "min": 6, "max": 8 },
+            "milestone": "MOU signed, transport demand proposal",
+            "status": "pending"
+        },
+        {
+            "partner": "Development Alternatives",
+            "amount": { "min": 5, "max": 6 },
+            "milestone": "MOU signed, rural buildings pilot design",
+            "status": "pending"
+        }
+    ],
+    "q1Target": {
+        "min": 50,
+        "max": 60
+    }
+}

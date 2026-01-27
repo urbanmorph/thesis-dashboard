@@ -1009,18 +1009,19 @@ a:hover {
 .gap-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
+    gap: 24px;
 }
 
 .gap-card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    border: 1px solid var(--gray-200);
-    box-shadow: var(--shadow);
-    transition: all var(--transition);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    transition: all 0.2s ease;
     text-decoration: none;
     display: block;
+    color: inherit;
 }
 
 .gap-card:hover {

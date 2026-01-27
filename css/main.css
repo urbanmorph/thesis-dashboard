@@ -1,0 +1,9 @@
+/* Import legacy CSS during migration */
+@import './dashboard.css';
+@import './styles.css';
+@import './thesis.css';
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

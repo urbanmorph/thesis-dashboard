@@ -1,0 +1,21 @@
+{
+  "name": "thesis-dashboard",
+  "version": "1.0.0",
+  "description": "A vanilla JavaScript dashboard for tracking India's climate action initiatives focused on demand efficiency and circular economy.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "vite": "^6.4.1"
+  }
+}
