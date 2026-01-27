@@ -99,7 +99,7 @@
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Partner Portfolio Overview</h2>
             <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-                <table class="admin-table" id="partnerTable">
+                <table class="w-full text-sm text-left" id="partnerTable">
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Organization</th>
@@ -120,28 +120,28 @@
         <!-- 90-Day Roadmap Summary -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">90-Day Launch Progress</h2>
-            <div class="roadmap-timeline">
-                <div class="timeline-item active">
-                    <div class="timeline-marker">1</div>
-                    <div class="timeline-content">
+            <div class="space-y-6">
+                <div class="bg-white border-l-4 border-primary rounded-lg p-6 shadow-sm">
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm mb-3">1</div>
+                    <div class="space-y-2">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Month 1: Foundation</h4>
                         <p>Internal alignment, partner outreach</p>
-                        <span class="timeline-status status-current">Current Phase</span>
-                        <ul class="timeline-checklist">
-                            <li class="checked">Review strategy documents</li>
-                            <li class="checked">Finalize portfolio budget</li>
+                        <span class="bg-primary text-white px-3 py-1 rounded text-xs font-medium inline-block mt-2">Current Phase</span>
+                        <ul class="space-y-2 mt-3 text-sm text-gray-700">
+                            <li class="flex items-center gap-2 text-gray-700"><span class="text-green-600 font-bold">✓</span> Review strategy documents</li>
+                            <li class="flex items-center gap-2 text-gray-700"><span class="text-green-600 font-bold">✓</span> Finalize portfolio budget</li>
                             <li>Establish PMU structure</li>
                             <li>Complete 10 discovery calls</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker">2</div>
-                    <div class="timeline-content">
+                <div class="bg-white border-l-4 border-gray-200 rounded-lg p-6 shadow-sm opacity-70">
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm mb-3">2</div>
+                    <div class="space-y-2">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Month 2: Partnership Development</h4>
                         <p>Agreement development, cluster workshops</p>
-                        <span class="timeline-status status-pending">Upcoming</span>
-                        <ul class="timeline-checklist">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded text-xs font-medium inline-block mt-2">Upcoming</span>
+                        <ul class="space-y-2 mt-3 text-sm text-gray-700">
                             <li>Sign 5 Tier 1 Agreements</li>
                             <li>Buildings Cluster Workshop</li>
                             <li>Circular Economy Workshop</li>
@@ -149,13 +149,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker">3</div>
-                    <div class="timeline-content">
+                <div class="bg-white border-l-4 border-gray-200 rounded-lg p-6 shadow-sm opacity-70">
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm mb-3">3</div>
+                    <div class="space-y-2">
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Month 3: Operationalization</h4>
                         <p>Dashboard MVP, first disbursements</p>
-                        <span class="timeline-status status-pending">Upcoming</span>
-                        <ul class="timeline-checklist">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded text-xs font-medium inline-block mt-2">Upcoming</span>
+                        <ul class="space-y-2 mt-3 text-sm text-gray-700">
                             <li>Dashboard MVP live</li>
                             <li>₹50-60 Cr disbursed</li>
                             <li>5 partner dashboards</li>
@@ -169,31 +169,31 @@
         <!-- Risk Monitoring -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Risk Monitoring</h2>
-            <div class="risk-grid">
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">LOW</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">LOW</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Budget Utilization</h4>
                     </div>
                     <p>On track for Q1 disbursement targets</p>
                 </div>
-                <div class="risk-card risk-medium">
-                    <div class="risk-header">
-                        <span class="risk-level">MEDIUM</span>
+                <div class="bg-white border-l-4 border-amber-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">MEDIUM</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Partner Onboarding</h4>
                     </div>
                     <p>Agreement negotiations in progress</p>
                 </div>
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">LOW</span>
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">LOW</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Data Quality</h4>
                     </div>
                     <p>Baseline collection framework ready</p>
                 </div>
-                <div class="risk-card risk-low">
-                    <div class="risk-header">
-                        <span class="risk-level">LOW</span>
+                <div class="bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm font-bold">LOW</span>
                         <h4 class="text-base font-semibold text-gray-900 mb-2">Policy Windows</h4>
                     </div>
                     <p>Battery EPR timeline on track</p>
@@ -204,19 +204,19 @@
         <!-- NoTF Ward-Level Climate Data -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">NoTF: Ward-Level Climate Data Platform</h2>
-            <div class="funding-categories-grid">
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">📊 Bengaluru (Live)</h3>
-                        <span class="funding-amount">369 Wards</span>
+                        <span class="text-sm font-bold text-primary">369 Wards</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 63%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 63%"></div>
                         </div>
                         <span>63% Data Quality</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-1 text-xs text-gray-600">
                         <li><strong>Energy & Buildings:</strong> 100% coverage</li>
                         <li><strong>Waste Management:</strong> 100% coverage</li>
                         <li><strong>Urban Greening:</strong> 100% coverage</li>
@@ -225,18 +225,18 @@
                         <li><strong>Disaster Resilience:</strong> Flood 100%, Heat partial</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">📊 Mumbai (Live)</h3>
-                        <span class="funding-amount">227 Wards</span>
+                        <span class="text-sm font-bold text-primary">227 Wards</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 60%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 60%"></div>
                         </div>
                         <span>60% Data Quality</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-1 text-xs text-gray-600">
                         <li><strong>Energy & Buildings:</strong> 100% coverage</li>
                         <li><strong>Waste Management:</strong> 100% coverage</li>
                         <li><strong>Transportation:</strong> Pending</li>
@@ -245,18 +245,18 @@
                         <li><strong>Urban Greening:</strong> Pending</li>
                     </ul>
                 </div>
-                <div class="funding-category-card">
-                    <div class="funding-category-header">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-900 mb-3">🗓️ Planned 2026</h3>
-                        <span class="funding-amount">766 Wards</span>
+                        <span class="text-sm font-bold text-primary">766 Wards</span>
                     </div>
-                    <div class="funding-category-percentage">
-                        <div class="funding-bar">
-                            <div class="funding-bar-fill" style="width: 0%"></div>
+                    <div class="text-xs text-gray-600">
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-primary transition-all duration-300" style="width: 0%"></div>
                         </div>
                         <span>In Planning</span>
                     </div>
-                    <ul class="funding-partners-list">
+                    <ul class="space-y-1 text-xs text-gray-600">
                         <li><strong>Delhi:</strong> 272 wards (Q2 2026)</li>
                         <li><strong>Chennai:</strong> 200 wards (Q2 2026)</li>
                         <li><strong>Hyderabad:</strong> 150 wards (Q3 2026)</li>
@@ -266,17 +266,17 @@
                     </ul>
                 </div>
             </div>
-            <div class="section-note">
+            <div class="text-sm text-gray-600 mb-4">
                 <p><strong>Data Sources:</strong> Census of India 2011, BBMP, MCGM, OpenCity.in, KSPCB, MPCB, IISc, Praja Foundation, DataMeet. Platform supports 11 Indian languages.</p>
             </div>
         </section>
 
     </main>
 
-    <footer class="footer footer-admin">
-        <div class="footer-content">
+    <footer class="bg-dark border-t border-gray-700 py-8 px-12 mt-16">
+        <div class="max-w-[1400px] mx-auto text-center">
             <p>India Progress Monitor - Admin Dashboard</p>
-            <p class="footer-note">Classification: CONFIDENTIAL | Last updated: <span id="lastUpdated">-</span></p>
+            <p class="text-sm text-gray-400">Classification: CONFIDENTIAL | Last updated: <span id="lastUpdated">-</span></p>
         </div>
     </footer>
 
