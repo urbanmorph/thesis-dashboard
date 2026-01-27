@@ -1,0 +1,1478 @@
+{
+  "references": [
+    {
+      "number": 1,
+      "slug": "ref-bee-energy-scenario-2024",
+      "citation": "Bureau of Energy Efficiency. (2024). <em>India Energy Scenario Report 2024</em>. Ministry of Power.",
+      "url": "https://beeindia.gov.in/sites/default/files/BEE_India_Energy_Scenario_Report-2024_web_version-rev2.pdf",
+      "sector": "energy",
+      "category": "Energy Consumption & Demand"
+    },
+    {
+      "number": 2,
+      "slug": "ref-cea-electricity-growth-2024",
+      "citation": "Central Electricity Authority. (2024). <em>Growth of Electricity Sector in India</em>.",
+      "url": "https://cea.nic.in/growth-report/",
+      "sector": "energy",
+      "category": "Energy Consumption & Demand"
+    },
+    {
+      "number": 3,
+      "slug": "ref-iea-world-energy-investment-2024",
+      "citation": "International Energy Agency. (2024). <em>World Energy Investment 2024 - India</em>.",
+      "url": "https://www.iea.org/reports/world-energy-investment-2024",
+      "sector": "energy",
+      "category": "Energy Consumption & Demand"
+    },
+    {
+      "number": 4,
+      "slug": "ref-mop-power-sector-glance-2024",
+      "citation": "Ministry of Power. (2024). <em>Power Sector at a Glance</em>.",
+      "url": "https://powermin.gov.in/en/content/power-sector-glance-all-india",
+      "sector": "energy",
+      "category": "Energy Consumption & Demand"
+    },
+    {
+      "number": 5,
+      "slug": "ref-bee-ecbc-compliance-2023",
+      "citation": "Bureau of Energy Efficiency. (2023). <em>ECBC 2017 Compliance Status Report</em>.",
+      "url": "https://udit.beeindia.gov.in/ecbc-commercial-buildings-programme/",
+      "sector": "buildings",
+      "category": "Buildings & Cooling"
+    },
+    {
+      "number": 6,
+      "slug": "ref-moefcc-icap-2019",
+      "citation": "MoEFCC. (2019). <em>India Cooling Action Plan</em>.",
+      "url": "https://ozonecell.nic.in/icap/",
+      "sector": "buildings",
+      "category": "Buildings & Cooling"
+    },
+    {
+      "number": 7,
+      "slug": "ref-nrdc-cool-roofs-2023",
+      "citation": "NRDC India. (2023). <em>Cool Roofs Implementation Guide</em>.",
+      "url": "https://www.nrdc.org/bio/sameer-kwatra/cool-roofs-india-key-beating-heat",
+      "sector": "buildings",
+      "category": "Buildings & Cooling"
+    },
+    {
+      "number": 8,
+      "slug": "ref-morth-yearbook-2022-23",
+      "citation": "MoRTH. (2024). <em>Road Transport Year Book 2022-23</em>.",
+      "url": "https://morth.nic.in/road-transport-year-books",
+      "sector": "transport",
+      "category": "Transport"
+    },
+    {
+      "number": 9,
+      "slug": "ref-itdp-brt-guide-2023",
+      "citation": "ITDP India. (2023). <em>BRT Planning Guide for Indian Cities</em>.",
+      "url": "https://brtguide.itdp.org/branch/master/guide/",
+      "sector": "transport",
+      "category": "Transport"
+    },
+    {
+      "number": 10,
+      "slug": "ref-niti-transport-energy-outlook-2022",
+      "citation": "NITI Aayog. (2022). <em>India Transport Energy Outlook</em>.",
+      "url": "https://www.niti.gov.in/sites/default/files/2023-07/98_Towards_Decarbonising_Transport_2023_compressed.pdf",
+      "sector": "transport",
+      "category": "Transport"
+    },
+    {
+      "number": 11,
+      "slug": "ref-ceew-solar-waste-2025",
+      "citation": "CEEW. (2025). <em>Solar Panel Waste Management in India</em>.",
+      "url": "https://www.ceew.in/publications/solar-panel-waste-management-india",
+      "sector": "energy",
+      "category": "Circular Economy & RE"
+    },
+    {
+      "number": 12,
+      "slug": "ref-mnre-annual-report-2023-24",
+      "citation": "MNRE. (2024). <em>Annual Report 2023-24</em>.",
+      "url": "https://mnre.gov.in/annual-report/",
+      "sector": "energy",
+      "category": "Circular Economy & RE"
+    },
+    {
+      "number": 13,
+      "slug": "ref-niti-battery-recycling-2023",
+      "citation": "NITI Aayog & RMI. (2023). <em>Battery Recycling Roadmap</em>.",
+      "url": "https://www.niti.gov.in/sites/default/files/2023-07/Battery-book-july-web-version.pdf",
+      "sector": "energy",
+      "category": "Circular Economy & RE"
+    },
+    {
+      "number": 14,
+      "slug": "ref-goi-ndc-2022",
+      "citation": "GoI. (2022). <em>Updated NDC Under Paris Agreement</em>.",
+      "url": "https://unfccc.int/sites/default/files/NDC/2022-08/India%20Updated%20First%20Nationally%20Determined%20Contrib.pdf",
+      "sector": "governance",
+      "category": "National Targets & Policy"
+    },
+    {
+      "number": 15,
+      "slug": "ref-moefcc-ltlcs-2022",
+      "citation": "MoEFCC. (2022). <em>Long-Term Low-Carbon Strategy</em>.",
+      "url": "https://unfccc.int/sites/default/files/resource/India_LTLEDS.pdf",
+      "sector": "governance",
+      "category": "National Targets & Policy"
+    },
+    {
+      "number": 16,
+      "slug": "ref-pib-net-zero-2023",
+      "citation": "PIB. (2023). <em>Net Zero 2070 Commitment</em>.",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1970518",
+      "sector": "governance",
+      "category": "National Targets & Policy"
+    },
+    {
+      "number": 17,
+      "slug": "ref-bee-pat-scheme-2023",
+      "citation": "BEE. (2023). <em>PAT Scheme Results and Roadmap</em>.",
+      "url": "https://udit.beeindia.gov.in/perform-achieve-trade/",
+      "sector": "energy",
+      "category": "Agriculture & Industrial"
+    },
+    {
+      "number": 18,
+      "slug": "ref-moa-agri-statistics-2023",
+      "citation": "Ministry of Agriculture. (2023). <em>Agricultural Statistics 2023</em>.",
+      "url": "https://desagri.gov.in/wp-content/uploads/2024/09/Agricultural-Statistics-at-a-Glance-2023.pdf",
+      "sector": "food",
+      "category": "Agriculture & Industrial"
+    },
+    {
+      "number": 19,
+      "slug": "ref-cgwb-groundwater-resources-2023",
+      "citation": "CGWB. (2023). <em>Dynamic Ground Water Resources</em>.",
+      "url": "https://cgwb.gov.in/GWRA/GWRAs-2023.html",
+      "sector": "water",
+      "category": "Agriculture & Industrial"
+    },
+    {
+      "number": 20,
+      "slug": "ref-wri-decarbonising-transport-2024",
+      "citation": "WRI India. (2024). <em>Forum for Decarbonising Transport</em>.",
+      "url": "https://wri-india.org/our-work/project/forum-decarbonising-transport",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 21,
+      "slug": "ref-iea-transitioning-road-transport-2024",
+      "citation": "IEA. (2024). <em>Transitioning India's Road Transport</em>.",
+      "url": "https://www.iea.org/reports/transitioning-indias-road-transport-sector",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 22,
+      "slug": "ref-mohua-metro-status-2025",
+      "citation": "MoHUA. (2025). <em>Metro Rail Network Status Report</em>.",
+      "url": "https://mohua.gov.in/cms/metro-rails.php",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 23,
+      "slug": "ref-mhi-fame-bus-status-2024",
+      "citation": "MHI. (2024). <em>FAME II Electric Bus Status</em>.",
+      "url": "https://fame2.heavyindustries.gov.in/",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 24,
+      "slug": "ref-itdp-complete-streets-2019",
+      "citation": "ITDP India. (2019). <em>Complete Streets Framework</em>.",
+      "url": "https://itdp.in/resource/complete-streets-framework-toolkit/",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 25,
+      "slug": "ref-wri-bicycle-sharing-2023",
+      "citation": "WRI India. (2023). <em>Public Bicycle Sharing Systems</em>.",
+      "url": "https://wri-india.org/our-work/project/sustainable-cities/pbs",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 26,
+      "slug": "ref-orf-umta-lost-transit-2024",
+      "citation": "ORF. (2024). <em>Lost in Transit: Unified Metropolitan Transport Authority</em>.",
+      "url": "https://www.orfonline.org/research/lost-in-transit",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 27,
+      "slug": "ref-orf-empowering-umta-2023",
+      "citation": "ORF. (2023). <em>Empowering UMTAs in Indian Cities</em>.",
+      "url": "https://www.orfonline.org/expert-speak/empowering-unified-metropolitan-transport-authorities-in-indian-cites",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 28,
+      "slug": "ref-karnataka-active-mobility-2022",
+      "citation": "Karnataka. (2022). <em>Active Mobility Bill</em>. Draft legislation.",
+      "url": "https://kla.kar.nic.in/assembly/bills/bills.htm",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 29,
+      "slug": "ref-itdp-walking-cycling-challenges-2025",
+      "citation": "ITDP. (2025). <em>Lessons from India's Walking & Cycling Challenges</em>.",
+      "url": "https://itdp.in/topic-resources/walking-and-cycling/",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 30,
+      "slug": "ref-mohua-cycles4change-2024",
+      "citation": "MoHUA. (2024). <em>India Cycles4Change & Streets4People Results</em>.",
+      "url": "https://smartcities.gov.in/cycles4change",
+      "sector": "transport",
+      "category": "Transport & Urban Mobility"
+    },
+    {
+      "number": 31,
+      "slug": "ref-nrdc-building-energy-codes-2024",
+      "citation": "NRDC India. (2024). <em>Building Energy Codes Adoption</em>.",
+      "url": "https://www.nrdc.org/resources/building-energy-codes-india",
+      "sector": "buildings",
+      "category": "Buildings & Green Construction"
+    },
+    {
+      "number": 32,
+      "slug": "ref-moefcc-ac-efficiency-2025",
+      "citation": "MoEFCC & CLASP. (2025). <em>AC Efficiency Standards</em>.",
+      "url": "https://www.clasp.ngo/research/all/market-assessment-of-light-commercial-air-conditioners-in-india/",
+      "sector": "buildings",
+      "category": "Buildings & Green Construction"
+    },
+    {
+      "number": 33,
+      "slug": "ref-igbc-statistics-2024",
+      "citation": "IGBC. (2024). <em>Green Building Statistics India</em>.",
+      "url": "https://igbc.in/",
+      "sector": "buildings",
+      "category": "Buildings & Green Construction"
+    },
+    {
+      "number": 34,
+      "slug": "ref-teri-griha-projects-2024",
+      "citation": "TERI-GRIHA. (2024). <em>GRIHA Certified Projects</em>.",
+      "url": "https://www.grihaindia.org/",
+      "sector": "buildings",
+      "category": "Buildings & Green Construction"
+    },
+    {
+      "number": 35,
+      "slug": "ref-telangana-cool-roof-2023",
+      "citation": "Telangana. (2023). <em>Cool Roof Policy 2023-28</em>.",
+      "url": "https://telangana.gov.in/wp-content/uploads/2023/05/Telangana-Cool-Roof-Policy-2023-2028.pdf",
+      "sector": "buildings",
+      "category": "Buildings & Green Construction"
+    },
+    {
+      "number": 36,
+      "slug": "ref-cpcb-naaqms-2025",
+      "citation": "CPCB. (2025). <em>NAAQMS Programme</em>.",
+      "url": "https://cpcb.nic.in/National-Air-Quality-Index/",
+      "sector": "air",
+      "category": "Air Quality"
+    },
+    {
+      "number": 37,
+      "slug": "ref-google-airview-2024",
+      "citation": "Google. (2024). <em>Air View+ India Insights</em>.",
+      "url": "https://blog.google/intl/en-in/company-news/using-googles-ai-and-local-ecosystem-to-generate-actionable-air-quality-insights-in-india-with-air-view/",
+      "sector": "air",
+      "category": "Air Quality"
+    },
+    {
+      "number": 38,
+      "slug": "ref-respirer-climate-tech-2025",
+      "citation": "Respirer Living Sciences. (2025). <em>Climate Tech in Action</em>.",
+      "url": "https://respirer.in/",
+      "sector": "air",
+      "category": "Air Quality"
+    },
+    {
+      "number": 39,
+      "slug": "ref-urbanemissions-ncap-monitoring-2025",
+      "citation": "UrbanEmissions.Info. (2025). <em>NCAP Monitoring Needs</em>.",
+      "url": "https://urbanemissions.info/",
+      "sector": "air",
+      "category": "Air Quality"
+    },
+    {
+      "number": 40,
+      "slug": "ref-ceew-hyperlocal-pollution-2024",
+      "citation": "CEEW. (2024). <em>Hyperlocal Air Pollution Sources</em>.",
+      "url": "https://www.ceew.in/publications/hyperlocal-air-pollution-management",
+      "sector": "air",
+      "category": "Air Quality"
+    },
+    {
+      "number": 41,
+      "slug": "ref-cse-aq-monitoring-2024",
+      "citation": "CSE. (2024). <em>AQ Monitoring Coverage</em>.",
+      "url": "https://www.cseindia.org/air-quality-monitoring",
+      "sector": "air",
+      "category": "Air Quality"
+    },
+    {
+      "number": 42,
+      "slug": "ref-notf-bengaluru-ward-data-2026",
+      "citation": "NoTF. (2026). <em>Bengaluru Ward Climate Data (369 wards)</em>. CC BY-NC-SA.",
+      "url": null,
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 43,
+      "slug": "ref-notf-mumbai-ward-data-2026",
+      "citation": "NoTF. (2026). <em>Mumbai Ward Climate Data (227 wards)</em>. CC BY-NC-SA.",
+      "url": null,
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 44,
+      "slug": "ref-census-primary-abstract-2011",
+      "citation": "Census of India. (2011). <em>Primary Census Abstract</em>.",
+      "url": "https://censusindia.gov.in/census.website/data/census-tables",
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 45,
+      "slug": "ref-opencity-bengaluru-portal-2024",
+      "citation": "OpenCity.in. (2024). <em>Bengaluru Urban Data Portal</em>.",
+      "url": "https://opencity.in/data",
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 46,
+      "slug": "ref-bbmp-ward-boundaries-2024",
+      "citation": "BBMP. (2024). <em>Ward Boundaries & Census Data</em>.",
+      "url": "https://bbmp.gov.in/",
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 47,
+      "slug": "ref-mcgm-electoral-ward-2024",
+      "citation": "MCGM. (2024). <em>Electoral Ward Data</em>.",
+      "url": "https://portal.mcgm.gov.in/",
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 48,
+      "slug": "ref-datameet-spatial-data-2024",
+      "citation": "DataMeet. (2024). <em>Municipal Spatial Data</em>.",
+      "url": "https://datameet.org/",
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 49,
+      "slug": "ref-praja-ward-governance-2024",
+      "citation": "Praja Foundation. (2024). <em>Ward-Level Governance Reports</em>.",
+      "url": "https://www.praja.org/",
+      "sector": "governance",
+      "category": "Neighbourhoods & Ward Data"
+    },
+    {
+      "number": 50,
+      "slug": "ref-rmi-build-right-2020",
+      "citation": "RMI & NIUA. (2020). <em>Build Right the First Time</em>.",
+      "url": "https://rmi.org/insight/build-right-the-first-time/",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 51,
+      "slug": "ref-aeee-embodied-carbon-2024",
+      "citation": "AEEE. (2024). <em>Tackling Embodied Carbon</em>.",
+      "url": "https://aeee.in/publication-reports/",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 52,
+      "slug": "ref-jll-office-market-2025",
+      "citation": "JLL India. (2025). <em>Office Market Report 2025</em>.",
+      "url": "https://www.jll.co.in/en/trends-and-insights/research",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 53,
+      "slug": "ref-mordor-residential-forecast-2025",
+      "citation": "Mordor Intelligence. (2025). <em>Residential Construction Forecast</em>.",
+      "url": "https://www.mordorintelligence.com/industry-reports/india-residential-construction-market",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 54,
+      "slug": "ref-iihs-assure-2024",
+      "citation": "IIHS & Infosys. (2024). <em>ASSURE Program</em>. 100M sq.ft.",
+      "url": "https://iihs.co.in/knowledge-gateway/assure/",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 55,
+      "slug": "ref-igbc-net-zero-mission-2024",
+      "citation": "IGBC. (2024). <em>Mission on Net Zero</em>.",
+      "url": "https://igbc.in/resources/",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 56,
+      "slug": "ref-credai-green-projects-2023",
+      "citation": "CREDAI & IGBC. (2023). <em>4,000 Green Projects by 2030</em>.",
+      "url": "https://credai.org/home/",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 57,
+      "slug": "ref-ceew-cooling-action-2024",
+      "citation": "CEEW. (2024). <em>India Cooling Action Research</em>.",
+      "url": "https://www.ceew.in/publications/indias-cooling-transition",
+      "sector": "buildings",
+      "category": "Buildings: Carbon & Construction"
+    },
+    {
+      "number": 58,
+      "slug": "ref-ember-net-zero-gap-2024",
+      "citation": "Ember. (2024). <em>India Net-Zero Financing Gap</em>. $394B additional needed.",
+      "url": "https://ember-climate.org/insights/research/indias-net-zero-financing-gap/",
+      "sector": "governance",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 59,
+      "slug": "ref-ieefa-re-target-2024",
+      "citation": "IEEFA. (2024). <em>Achieving India's RE Target by 2030</em>. $293B solar/wind.",
+      "url": "https://ieefa.org/region/india",
+      "sector": "energy",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 60,
+      "slug": "ref-deloitte-climate-investment-2025",
+      "citation": "Deloitte India. (2025). <em>Climate Action Investment Report</em>. $1.5T by 2030.",
+      "url": "https://www.deloitte.com/in/en/issues/climate.html",
+      "sector": "governance",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 61,
+      "slug": "ref-wef-green-growth-2023",
+      "citation": "WEF. (2023). <em>India Green Growth Potential</em>. $1T GDP, 50M jobs by 2030.",
+      "url": "https://www.weforum.org/reports/accelerating-clean-technology-in-india/",
+      "sector": "governance",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 62,
+      "slug": "ref-newclimate-transport-pathways-2024",
+      "citation": "NewClimate Institute. (2024). <em>India Transport Transition Pathways</em>.",
+      "url": "https://newclimate.org/resources/publications/india-in-transit",
+      "sector": "transport",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 63,
+      "slug": "ref-knightfrank-infrastructure-2025",
+      "citation": "Knight Frank India. (2025). <em>Infrastructure Investment Report</em>. $2.2T by 2030.",
+      "url": "https://www.knightfrank.co.in/research",
+      "sector": "governance",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 64,
+      "slug": "ref-teri-cycling-benefits-2019",
+      "citation": "TERI. (2019). <em>Benefits of Cycling in India</em>. $25B/year savings.",
+      "url": "https://www.teriin.org/project/shifting-cycling-can-result-annual-savings-16-indias-gdp",
+      "sector": "transport",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 65,
+      "slug": "ref-ifc-green-buildings-potential-2024",
+      "citation": "IFC. (2024). <em>Green Buildings Investment Potential</em>. $1.4T opportunity.",
+      "url": "https://www.ifc.org/en/insights-reports/2019/green-buildings-report",
+      "sector": "buildings",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 66,
+      "slug": "ref-crisil-green-infrastructure-2024",
+      "citation": "CRISIL. (2024). <em>Green Infrastructure Outlook</em>. Rs 31T by 2030.",
+      "url": "https://www.crisil.com/en/home/our-analysis/reports.html",
+      "sector": "governance",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 67,
+      "slug": "ref-worldbank-greener-cooling-2022",
+      "citation": "World Bank. (2022). <em>Greener Cooling Pathway India</em>. $1.6T by 2040.",
+      "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/821531515565029139/india-climate-investment-opportunities-in-south-asia",
+      "sector": "buildings",
+      "category": "Investment & Economic Impact"
+    },
+    {
+      "number": 68,
+      "slug": "ref-gbd-air-pollution-health-2019",
+      "citation": "GBD/Lancet. (2019). <em>Health Impact of Air Pollution in India</em>. 1.67M deaths.",
+      "url": "https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(18)30261-4/fulltext",
+      "sector": "air",
+      "category": "Health & Quality of Life"
+    },
+    {
+      "number": 69,
+      "slug": "ref-cleanairfund-economic-benefits-2021",
+      "citation": "Clean Air Fund. (2021). <em>Economic Benefits of Clean Air</em>. $95B GDP gain.",
+      "url": "https://www.cleanairfund.org/resource/business-case-india/",
+      "sector": "air",
+      "category": "Health & Quality of Life"
+    },
+    {
+      "number": 70,
+      "slug": "ref-nature-air-pollution-cobenefits-2025",
+      "citation": "Nature. (2025). <em>Air Pollution Health Co-Benefits</em>. 0.77M deaths prevented.",
+      "url": "https://www.nature.com/articles/s41586-024-07988-w",
+      "sector": "air",
+      "category": "Health & Quality of Life"
+    },
+    {
+      "number": 71,
+      "slug": "ref-imperial-walking-cycling-health-2013",
+      "citation": "Imperial/PHFI. (2013). <em>Walking & Cycling Health Study India</em>.",
+      "url": "https://www.imperial.ac.uk/school-public-health/epidemiology-and-biostatistics/",
+      "sector": "transport",
+      "category": "Health & Quality of Life"
+    },
+    {
+      "number": 72,
+      "slug": "ref-pnas-global-health-benefits-2025",
+      "citation": "PNAS. (2025). <em>Global Health Benefits from Walking/Cycling</em>.",
+      "url": "https://www.pnas.org/content/120/15/e2220012120",
+      "sector": "transport",
+      "category": "Health & Quality of Life"
+    },
+    {
+      "number": 73,
+      "slug": "ref-indiabioscience-sustainable-mobility-2024",
+      "citation": "IndiaBioscience. (2024). <em>Sustainable Mobility & Public Health</em>.",
+      "url": "https://indiabioscience.org/columns/indian-scenario/sustainable-mobility-a-public-health-imperative-for-urban-indias-future",
+      "sector": "transport",
+      "category": "Health & Quality of Life"
+    },
+    {
+      "number": 74,
+      "slug": "ref-cpcb-dust-mitigation-2017",
+      "citation": "CPCB. (2017). <em>Guidelines on Dust Mitigation in Construction</em>.",
+      "url": "https://cpcb.nic.in/displaypdf.php?id=aG9tZS9haXItcG9sbHV0aW9uL0d1aWRlbGluZXMtZm9yLWR1c3QtbWl0aWdhdGlvbi5wZGY=",
+      "sector": "air",
+      "category": "Dust & Pollution Control"
+    },
+    {
+      "number": 75,
+      "slug": "ref-cpcb-cd-waste-rules-2025",
+      "citation": "CPCB. (2025). <em>Updated C&D Waste Rules</em>. Weekly logging, \u20b92L fines.",
+      "url": "https://cpcb.nic.in/rules/",
+      "sector": "waste",
+      "category": "Dust & Pollution Control"
+    },
+    {
+      "number": 76,
+      "slug": "ref-ngt-construction-dust-2024",
+      "citation": "NGT. (2024). <em>Directives on Construction Dust Control</em>.",
+      "url": "https://greentribunal.gov.in/",
+      "sector": "air",
+      "category": "Dust & Pollution Control"
+    },
+    {
+      "number": 77,
+      "slug": "ref-sciencedirect-road-dust-2021",
+      "citation": "ScienceDirect. (2021). <em>Road Dust Resuspension Study</em>. PM10=270\u03bcg/m\u00b3.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1352231021000820",
+      "sector": "air",
+      "category": "Dust & Pollution Control"
+    },
+    {
+      "number": 78,
+      "slug": "ref-ceew-dust-mitigation-behaviour-2024",
+      "citation": "CEEW. (2024). <em>Dust Mitigation Behavioural Study</em>. Speed control impact.",
+      "url": "https://www.ceew.in/publications/dust-management-urban-india",
+      "sector": "air",
+      "category": "Dust & Pollution Control"
+    },
+    {
+      "number": 79,
+      "slug": "ref-caqm-revised-grap-2023",
+      "citation": "CAQM. (2023). <em>Revised GRAP for NCR</em>.",
+      "url": "https://caqm.nic.in/",
+      "sector": "air",
+      "category": "Dust & Pollution Control"
+    },
+    {
+      "number": 80,
+      "slug": "ref-eckel-zev-no2-california-2025",
+      "citation": "Eckel SP et al. (2025). <em>Zero-emissions vehicle adoption and satellite-measured NO2 air pollution in California</em>. Lancet Planetary Health. doi:10.1016/j.lanplh.2025.101379. 200 ZEVs = 1.1% NO2 reduction.",
+      "url": "https://doi.org/10.1016/j.lanplh.2025.101379",
+      "sector": "air",
+      "category": "EV Transition & Air Quality"
+    },
+    {
+      "number": 81,
+      "slug": "ref-ibef-ev-market-2025",
+      "citation": "IBEF/S&P Global. (2025). <em>India EV Market Report</em>. 8% penetration 2025, 30% target by 2030.",
+      "url": "https://www.ibef.org/industry/india-evs",
+      "sector": "transport",
+      "category": "EV Transition & Air Quality"
+    },
+    {
+      "number": 82,
+      "slug": "ref-icct-ev-health-impacts-2022",
+      "citation": "ICCT. (2022). <em>Air quality and health impacts of large-scale vehicle electrification in India</em>. PM2.5 reduction 2.88 \u03bcg/m\u00b3 by 2030; 16,700-70,400 avoided deaths by 2040.",
+      "url": "https://theicct.org/publication/understanding-the-air-quality-and-health-impacts-of-large-scale-vehicle-electrification-in-india/",
+      "sector": "transport",
+      "category": "EV Transition & Air Quality"
+    },
+    {
+      "number": 83,
+      "slug": "ref-cpcb-swm-annual-2024",
+      "citation": "CPCB. (2024). <em>Annual Report on Implementation of Solid Waste Management Rules</em>. 62-65 MT MSW annually.",
+      "url": "https://cpcb.nic.in/openpdffile.php?id=UmVwb3J0RmlsZXMvMTI0NF8xNjc2MjU0MDE4X21lZGlhcGhvdG8yMDg0Mi5wZGY=",
+      "sector": "waste",
+      "category": "Waste Management & Generation"
+    },
+    {
+      "number": 84,
+      "slug": "ref-mohua-sbm-progress-2024",
+      "citation": "MoHUA. (2024). <em>Swachh Bharat Mission Urban 2.0 Progress Report</em>. 97% door-to-door collection, 70% processing.",
+      "url": "https://sbm.gov.in/sbmReport/Home.aspx",
+      "sector": "waste",
+      "category": "Waste Management & Generation"
+    },
+    {
+      "number": 85,
+      "slug": "ref-cpcb-swm-consolidated-2020-21",
+      "citation": "CPCB. (2020-21). <em>Consolidated Annual Report on SWM</em>. 31.7% waste unaccounted (50,655 TPD).",
+      "url": "https://cpcb.nic.in/uploads/MSW/SWM_2020-21.pdf",
+      "sector": "waste",
+      "category": "Waste Management & Generation"
+    },
+    {
+      "number": 86,
+      "slug": "ref-moefcc-swm-draft-rules-2024",
+      "citation": "MoEFCC. (2024). <em>Draft Solid Waste Management Rules 2024</em>. EBWGR certificates, legacy waste deadlines.",
+      "url": "https://moef.gov.in/",
+      "sector": "waste",
+      "category": "Waste Management & Generation"
+    },
+    {
+      "number": 87,
+      "slug": "ref-ngt-environmental-compensation-2024",
+      "citation": "NGT. (2024). <em>Environmental Compensation & Penalties</em>. \u20b979,000 crore levied on states/UTs.",
+      "url": "https://greentribunal.gov.in/orders",
+      "sector": "waste",
+      "category": "Waste Management & Generation"
+    },
+    {
+      "number": 88,
+      "slug": "ref-moefcc-circular-economy-potential-2025",
+      "citation": "MoEFCC. (2025). <em>India's Circular Economy Potential</em>. PIB. $2T value, 10M jobs by 2050.",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2000000",
+      "sector": "waste",
+      "category": "Circular Economy & Waste"
+    },
+    {
+      "number": 89,
+      "slug": "ref-ceew-circular-economy-potential-2025",
+      "citation": "CEEW. (2025). <em>Unlocking India's Circular Economy Potential</em>. \u20b93.5T annually by 2030.",
+      "url": "https://www.ceew.in/publications/circular-economy-india",
+      "sector": "waste",
+      "category": "Circular Economy & Waste"
+    },
+    {
+      "number": 90,
+      "slug": "ref-ceew-biomethanation-2024",
+      "citation": "CEEW. (2024). <em>Bio-methanation of Wet Waste</em>. \u20b92,460 Cr/year revenue, 10M tonnes CO\u2082-eq reduction.",
+      "url": "https://www.ceew.in/publications/biomethanation-wet-waste-india",
+      "sector": "waste",
+      "category": "Circular Economy & Waste"
+    },
+    {
+      "number": 91,
+      "slug": "ref-mordor-waste-management-market-2025",
+      "citation": "Mordor Intelligence. (2025). <em>India Waste Management Market Report</em>. $13.6B (2025) to $19.26B (2030).",
+      "url": "https://www.mordorintelligence.com/industry-reports/india-waste-management-market",
+      "sector": "waste",
+      "category": "Circular Economy & Waste"
+    },
+    {
+      "number": 92,
+      "slug": "ref-iig-waste-pipeline-2025",
+      "citation": "India Investment Grid. (2025). <em>Waste Management Deal Pipeline</em>. $1.64B projects flagged.",
+      "url": "https://indiainvestmentgrid.gov.in/",
+      "sector": "waste",
+      "category": "Circular Economy & Waste"
+    },
+    {
+      "number": 93,
+      "slug": "ref-moefcc-plastic-waste-rules-2024",
+      "citation": "MoEFCC. (2024). <em>Plastic Waste Management Amendment Rules</em>. EPR, 120 microns, QR tracking.",
+      "url": "https://cpcb.nic.in/rules-4/",
+      "sector": "waste",
+      "category": "Specialized Waste Streams"
+    },
+    {
+      "number": 94,
+      "slug": "ref-cpcb-ewaste-annual-2023-24",
+      "citation": "CPCB. (2024). <em>E-waste Management Annual Report FY 2023-24</em>. 1.75 MT generated, 43% recycled.",
+      "url": "https://cpcb.nic.in/e-waste/",
+      "sector": "waste",
+      "category": "Specialized Waste Streams"
+    },
+    {
+      "number": 95,
+      "slug": "ref-cpcb-cd-waste-management-2025",
+      "citation": "CPCB. (2025). <em>Construction & Demolition Waste Management Rules</em>. 150-500 MT/year, <7% recycled.",
+      "url": "https://cpcb.nic.in/displaypdf.php?id=aG9tZS9DJkRXYXN0ZS5wZGY=",
+      "sector": "waste",
+      "category": "Specialized Waste Streams"
+    },
+    {
+      "number": 96,
+      "slug": "ref-ilo-informal-waste-sector-2023",
+      "citation": "ILO & WIEGO. (2023). <em>Informal Waste Sector in India</em>. 4M+ waste pickers, <20% formalized.",
+      "url": "https://www.wiego.org/informal-economy/occupational-groups/waste-pickers",
+      "sector": "waste",
+      "category": "Specialized Waste Streams"
+    },
+    {
+      "number": 97,
+      "slug": "ref-hasirudala-inclusive-circularity-2025",
+      "citation": "Hasiru Dala Innovations. (2025). <em>Inclusive Circularity\u00ae Model</em>. 5,144 waste pickers, 430+ clients in Bangalore.",
+      "url": "https://hasirudala.in/",
+      "sector": "waste",
+      "category": "Waste Management Partners"
+    },
+    {
+      "number": 98,
+      "slug": "ref-wastewarriors-himalayan-waste-2024",
+      "citation": "Waste Warriors Society. (2024). <em>Himalayan Waste Management</em>. 4,223+ tonnes collected since 2012, Keeling Curve Prize 2023.",
+      "url": "https://wastewarriors.org/",
+      "sector": "waste",
+      "category": "Waste Management Partners"
+    },
+    {
+      "number": 99,
+      "slug": "ref-saahas-zero-waste-2025",
+      "citation": "Saahas Zero Waste. (2025). <em>Collection & Operations Model</em>. \u20b966.7 Cr revenue, multi-city network.",
+      "url": "https://saahaszerowaste.com/",
+      "sector": "waste",
+      "category": "Waste Management Partners"
+    },
+    {
+      "number": 100,
+      "slug": "ref-ceew-green-jobs-waste-2024",
+      "citation": "CEEW. (2024). <em>Green Jobs in Waste Sector</em>. 1.9M jobs from plastic recycling by 2047.",
+      "url": "https://www.ceew.in/publications/green-jobs-waste-sector-india",
+      "sector": "waste",
+      "category": "Waste Economic Impact & Jobs"
+    },
+    {
+      "number": 101,
+      "slug": "ref-mrfuture-waste-market-2024",
+      "citation": "Market Research Future. (2024). <em>India Waste Management Market Size & Share Report 2035</em>.",
+      "url": "https://www.marketresearchfuture.com/reports/india-waste-management-market-8056",
+      "sector": "waste",
+      "category": "Waste Economic Impact & Jobs"
+    },
+    {
+      "number": 102,
+      "slug": "ref-cleanairfund-waste-to-wealth-2022",
+      "citation": "Clean Air Fund. (2022). <em>Circular Blue Economy: From Waste to Wealth</em>. ORF.",
+      "url": "https://www.orfonline.org/expert-speak/india-s-circular-economy-lofty-ambitions-limited-progress",
+      "sector": "waste",
+      "category": "Waste Economic Impact & Jobs"
+    },
+    {
+      "number": 103,
+      "slug": "ref-cgwb-groundwater-resources-2024",
+      "citation": "CGWB. (2024). <em>Dynamic Ground Water Resources of India 2023</em>. 17% blocks over-exploited, 5% critical.",
+      "url": "https://cgwb.gov.in/GWRA/GWRAs-2023.html",
+      "sector": "water",
+      "category": "Water: Groundwater & Supply"
+    },
+    {
+      "number": 104,
+      "slug": "ref-jjm-dashboard-2025",
+      "citation": "Jal Jeevan Mission. (2025). <em>Dashboard Report</em>. 78% rural households with tap connections.",
+      "url": "https://jaljeevanmission.gov.in/",
+      "sector": "water",
+      "category": "Water: Groundwater & Supply"
+    },
+    {
+      "number": 105,
+      "slug": "ref-worldbank-water-security-2022",
+      "citation": "World Bank. (2022). <em>India's Water Security: Policy Options</em>. 25% GDP dependent on groundwater.",
+      "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/731801468033688876/india-indias-water-economy-bracing-for-a-turbulent-future",
+      "sector": "water",
+      "category": "Water: Groundwater & Supply"
+    },
+    {
+      "number": 106,
+      "slug": "ref-iea-water-energy-nexus-2024",
+      "citation": "IEA. (2024). <em>Water-Energy Nexus in India</em>. 18-20% electricity for water pumping.",
+      "url": "https://www.iea.org/reports/water-energy-nexus",
+      "sector": "water",
+      "category": "Water: Groundwater & Supply"
+    },
+    {
+      "number": 107,
+      "slug": "ref-cpcb-stp-inventory-2024",
+      "citation": "CPCB. (2024). <em>National Inventory of STPs</em>. 72% sewage untreated, 39% STPs non-compliant.",
+      "url": "https://cpcb.nic.in/openpdffile.php?id=UmVwb3J0RmlsZXMvMTA4NF8xNjE2MTM5NjE3X21lZGlhcGhvdG8xMzg1OS5wZGY=",
+      "sector": "water",
+      "category": "Water: Sewage & Treatment"
+    },
+    {
+      "number": 108,
+      "slug": "ref-nmcg-namami-gange-2024",
+      "citation": "NMCG. (2024). <em>Namami Gange Programme Report</em>. \u20b930,000 Cr invested, mixed STP outcomes.",
+      "url": "https://nmcg.nic.in/",
+      "sector": "water",
+      "category": "Water: Sewage & Treatment"
+    },
+    {
+      "number": 109,
+      "slug": "ref-nfhs-water-sanitation-2021",
+      "citation": "NFHS-5. (2021). <em>Water & Sanitation Indicators</em>. 44% households piped water.",
+      "url": "https://rchiips.org/nfhs/NFHS-5Reports/NFHS-5_INDIA_REPORT.pdf",
+      "sector": "water",
+      "category": "Water: Sewage & Treatment"
+    },
+    {
+      "number": 110,
+      "slug": "ref-cse-water-environment-2024",
+      "citation": "Centre for Science & Environment. (2024). <em>State of India's Environment: Water</em>.",
+      "url": "https://www.cseindia.org/state-of-india-s-environment-2024-in-figures-12443",
+      "sector": "water",
+      "category": "Water: Sewage & Treatment"
+    },
+    {
+      "number": 111,
+      "slug": "ref-teri-urban-water-supply-2023",
+      "citation": "TERI. (2023). <em>Urban Water Supply & Sanitation</em>. \u20b950,000 Cr tanker economy estimate.",
+      "url": "https://www.teriin.org/article/indias-rampant-urban-water-issues-and-challenges",
+      "sector": "water",
+      "category": "Water: Urban Water Economics"
+    },
+    {
+      "number": 112,
+      "slug": "ref-iihs-water-security-2024",
+      "citation": "IIHS. (2024). <em>Water Security in Indian Cities</em>. Intermittent supply in 90%+ cities.",
+      "url": "https://iihs.co.in/knowledge-gateway/water-security/",
+      "sector": "water",
+      "category": "Water: Urban Water Economics"
+    },
+    {
+      "number": 113,
+      "slug": "ref-wateraid-urban-water-equity-2024",
+      "citation": "WaterAid India. (2024). <em>Urban Water Equity Report</em>. Slums pay 10-20x piped water rates.",
+      "url": "https://www.wateraid.org/in/publications",
+      "sector": "water",
+      "category": "Water: Urban Water Economics"
+    },
+    {
+      "number": 114,
+      "slug": "ref-niua-service-benchmarks-2024",
+      "citation": "NIUA. (2024). <em>Service Level Benchmarks for Water Supply</em>. Only 69 lpcd delivered vs 135 lpcd norm.",
+      "url": "https://cpheeo.gov.in/upload/uploadfiles/files/Handbook.pdf",
+      "sector": "water",
+      "category": "Water: Urban Water Economics"
+    },
+    {
+      "number": 115,
+      "slug": "ref-kgwa-rwh-compliance-2023",
+      "citation": "Karnataka Groundwater Authority. (2023). <em>RWH Compliance Status</em>. Mandated since 2001, low functional rates.",
+      "url": "https://kgwa.karnataka.gov.in/",
+      "sector": "water",
+      "category": "Water: Rainwater Harvesting & Conservation"
+    },
+    {
+      "number": 116,
+      "slug": "ref-cse-dying-wisdom-2024",
+      "citation": "CSE. (2024). <em>Dying Wisdom: Rainwater Harvesting in India</em>. Traditional systems abandoned.",
+      "url": "https://www.cseindia.org/dying-wisdom-9905",
+      "sector": "water",
+      "category": "Water: Rainwater Harvesting & Conservation"
+    },
+    {
+      "number": 117,
+      "slug": "ref-cgwb-artificial-recharge-2024",
+      "citation": "CGWB. (2024). <em>Master Plan for Artificial Recharge</em>. 85 BCM recharge potential identified.",
+      "url": "https://cgwb.gov.in/GW-MAPS/MAR/Master_plan_AR_2020.pdf",
+      "sector": "water",
+      "category": "Water: Rainwater Harvesting & Conservation"
+    },
+    {
+      "number": 118,
+      "slug": "ref-atree-bengaluru-water-future-2023",
+      "citation": "ATREE. (2023). <em>Bengaluru's Water Future</em>. Lake revival and aquifer recharge potential.",
+      "url": "https://www.atree.org/research/water",
+      "sector": "water",
+      "category": "Water: Rainwater Harvesting & Conservation"
+    },
+    {
+      "number": 119,
+      "slug": "ref-teri-state-waste-management-2023",
+      "citation": "TERI. (2023). <em>State of Waste Management Report</em>. Prepared for The Incubation Network. 71pp. 5 city analysis, policy recommendations.",
+      "url": "https://www.teriin.org/project/state-waste-management-report",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 120,
+      "slug": "ref-epw-swm-institutional-framework-2023",
+      "citation": "EPW. (2023). <em>Institutional Framework for Implementing Solid Waste Management in India: A Macro Analysis</em>. ULB budget: 60-70% sweeping, <5% treatment.",
+      "url": "https://www.epw.in/journal/2023/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 121,
+      "slug": "ref-dte-waste-challenges-2023",
+      "citation": "Down to Earth. (2023). <em>India's Challenges in Waste Management</em>. Mumbai: 11,000 TPD generated vs 5,000 TPD capacity.",
+      "url": "https://www.downtoearth.org.in/waste/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 122,
+      "slug": "ref-ceew-sustainable-swm-2024",
+      "citation": "CEEW. (2024). <em>How Can Indian Cities Boost Sustainable Solid Waste Management Practices</em>. 75-80% collected, <30% processed.",
+      "url": "https://www.ceew.in/publications/sustainable-solid-waste-management-indian-cities",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 123,
+      "slug": "ref-cwe-landfill-management-2024",
+      "citation": "CWE Journal. (2024). <em>Sustainable Management of Landfill Sites in India</em>. 2,452 dumpsites vs 645 landfills (10:1 ratio).",
+      "url": null,
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 124,
+      "slug": "ref-kushaagra-mrf-india-2024",
+      "citation": "Kushaagra Foundation. (2024). <em>Material Recovery Facilities in India</em>. 2,000+ MRFs, capacity types, scaling needs.",
+      "url": "https://www.kushaagra.org/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 125,
+      "slug": "ref-iitbombay-msw-processing-cost-2023",
+      "citation": "IIT-Bombay. (2023). <em>MSW Processing Cost Analysis</em>. MRF+Landfill: $19/tonne vs Incineration: $36-38/tonne.",
+      "url": "https://www.iitb.ac.in/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 126,
+      "slug": "ref-wiego-waste-pickers-statistics-2023",
+      "citation": "WIEGO. (2023). <em>Waste Pickers in India: Statistics and Contribution</em>. 1.5-4M workers, \u20b955 Cr/year municipal savings.",
+      "url": "https://www.wiego.org/informal-economy/occupational-groups/waste-pickers/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 127,
+      "slug": "ref-mongabay-ncap-five-years-2024",
+      "citation": "Mongabay India. (2024). <em>Five Years of NCAP: Why It Hasn't Worked</em>. Only 9-17% fund utilization.",
+      "url": "https://india.mongabay.com/2024/09/its-been-5-years-of-the-national-clean-air-programme-this-is-why-it-hasnt-worked/",
+      "sector": "air",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 128,
+      "slug": "ref-cse-ncap-objectives-2024",
+      "citation": "CSE India. (2024). <em>Is India's NCAP Achieving Its Objectives?</em>. 64% to road dust, 0.61% to industrial pollution.",
+      "url": "https://www.cseindia.org/is-india-s-ncap-achieving-its-objectives--12345",
+      "sector": "air",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 129,
+      "slug": "ref-cpcb-active-dumpsites-2024",
+      "citation": "CPCB. (2024). <em>Active Dumpsites Inventory</em>. 2,452 active, 3,184 identified, 234 reclaimed.",
+      "url": "https://cpcb.nic.in/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 130,
+      "slug": "ref-prs-power-sector-losses-2024",
+      "citation": "PRS India. (2024). <em>What is Fuelling Power Sector Losses</em>. DISCOM AT&C losses analysis.",
+      "url": "https://prsindia.org/theprsblog/explainer-power-sector-losses",
+      "sector": "energy",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 131,
+      "slug": "ref-globalrecycling-dry-waste-potential-2024",
+      "citation": "Global Recycling. (2024). <em>India's Dry Waste Recycling Potential</em>. \u20b930,000 Cr/year potential value from MoHUA 2021.",
+      "url": "https://global-recycling.info/",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 132,
+      "slug": "ref-iwp-informal-plastic-collection-2024",
+      "citation": "India Water Portal. (2024). <em>Informal Sector Contribution to Plastic Waste Collection</em>. 70-80% of plastic recycling by informal sector.",
+      "url": "https://www.indiawaterportal.org/articles/waste-pickers-indias-informal-sector-contribute-80-plastic-waste-collection",
+      "sector": "waste",
+      "category": "Waste: Infrastructure & MRF Gap"
+    },
+    {
+      "number": 133,
+      "slug": "ref-cpcb-swm-annual-2024-25",
+      "citation": "CPCB. (2025). <em>Annual Report on Implementation of Solid Waste Management Rules 2024-25</em>. 162,450 TPD generation, 0.38 kg/capita/day, state/UT-wise data, processing capacity metrics.",
+      "url": "https://data.gov.in",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 134,
+      "slug": "ref-mohua-sbm-dashboard-2026",
+      "citation": "MoHUA. (2026). <em>Swachh Bharat Mission 2.0 Dashboard</em>. 98% D2D collection, 81% segregation, ODF Plus status, Rs. 30,980 Cr budget.",
+      "url": "https://sbm.gov.in",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 135,
+      "slug": "ref-niti-circular-economy-waste-2024-25",
+      "citation": "NITI Aayog. (2025). <em>Circular Economy in Waste Management Report 2024-25</em>. 172 MT by 2030, 468 MT by 2050 projections, GHG emissions, remediation initiatives.",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1705772",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 136,
+      "slug": "ref-teri-waste-composition-2025",
+      "citation": "TERI. (2025). <em>India Waste Composition Study 2025</em>. MSW 57.3%, C&D 20%, Hazardous 7.9%, Plastic 5.6%, E-waste 1.8%, Biomedical 0.17%.",
+      "url": "https://www.teriin.org/",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 137,
+      "slug": "ref-imarc-waste-market-2024",
+      "citation": "IMARC Group. (2024). <em>India Waste Management Market Report 2024</em>. USD 12.84B (2025) to USD 18.65B (2034), 4.3% CAGR, regional analysis, PPP market data.",
+      "url": "https://www.imarcgroup.com/india-waste-management-market",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 138,
+      "slug": "ref-mohua-swachh-survekshan-2024-25",
+      "citation": "MoHUA. (2025). <em>Swachh Survekshan 2024-25 Results</em>. City rankings, segregation benchmarks, best practices, Safaimitra awards.",
+      "url": "https://ss.sbm.gov.in/",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 139,
+      "slug": "ref-cpcb-technology-adoption-waste-2026",
+      "citation": "CPCB. (2026). <em>Technology Adoption in Waste Management</em>. AI segregation 156 cities, IoT fleet 89 cities, Blockchain EPR 34 states, 2,845 facilities on OCEMS+.",
+      "url": "https://cpcb.nic.in/",
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 140,
+      "slug": "ref-suda-regional-waste-infrastructure-2026",
+      "citation": "State Urban Development Agencies. (2026). <em>Regional Waste Infrastructure Status Reports</em>. PPP pipeline USD 400M+ (West India), Maharashtra USD 287M contracts.",
+      "url": null,
+      "sector": "waste",
+      "category": "Waste: 2026 Data Update"
+    },
+    {
+      "number": 141,
+      "slug": "ref-cse-waste-to-worth-2024",
+      "citation": "CSE & NMCG. (2024). <em>Waste to Worth: Managing India's Urban Water Crisis through Wastewater Reuse</em>. 35 case studies, 16 cities, 7 states. Only 28% treated, 72% untreated.",
+      "url": "https://www.cseindia.org/waste-to-worth-managing-india-s-urban-water-crisis-through-wastewater-reuse-12527",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 142,
+      "slug": "ref-indiaspend-sewage-treatment-rehaul-2024",
+      "citation": "IndiaSpend. (2024). <em>Why India Needs to Urgently Rehaul Sewage Treatment Plans</em>. 72B L/day sewage, 37% capacity, 28% treated. 73% decline in per capita water since 1950.",
+      "url": "https://www.indiaspend.com/pollution/why-india-needs-to-urgently-rehaul-sewage-treatment-plans-954097",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 143,
+      "slug": "ref-sandrp-non-functional-stp-2025",
+      "citation": "SANDRP. (2025). <em>India's Non-functional Sewage Treatment Plants</em>. Only 29% of 45,000 MLD treated. 61/154 Maharashtra STPs non-compliant. NGT \u20b980,000 Cr fines.",
+      "url": "https://sandrp.in/2025/01/27/drp-nb-270125-indias-non-functional-sewage-treatment-plants/",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 144,
+      "slug": "ref-dte-water-reuse-roadblocks-2024",
+      "citation": "Down to Earth. (2024). <em>Policy and Governance Roadblocks to Treated Water Reuse</em>. Only 11/28 states have reuse policies. Fragmented responsibility across MoHUA, CPCB, SPCBs, ULBs.",
+      "url": "https://www.downtoearth.org.in/water/policy-and-governance-roadblocks-are-the-biggest-challenges-to-treated-water-reuse",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 145,
+      "slug": "ref-pib-amrut-2-framework-2021",
+      "citation": "PIB/MoHUA. (2021). <em>AMRUT 2.0 Framework</em>. \u20b92.77 lakh Cr outlay. 20% reuse mandate for cities >10K population. 40% industrial reuse at state level.",
+      "url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-the-atal-mission-for-rejuvenation-and-urban-transformation-amrut-2-0-till-2025-26/",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 146,
+      "slug": "ref-dte-tanker-economy-bangalore-2024",
+      "citation": "Down to Earth. (2024). <em>Tanker Economy Revealed: Nexus Between Water Mafia and Politicians</em>. Bengaluru 3,500+ tankers, \u20b91,200-3,000/12,000L. Ward engineers control permits.",
+      "url": "https://www.downtoearth.org.in/water/tanker-economy-revealed-nexus-between-water-mafia-and-politicians-controls-supply-in-bengaluru",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 147,
+      "slug": "ref-wateralternatives-mafias-waterscape-2014",
+      "citation": "Water Alternatives. (2014). <em>Mafias in the Waterscape: Urban Informality in Bangalore</em>. Political nexus with tanker operators. \u20b98,000-12,000 daily revenue per tanker.",
+      "url": "https://dlc.dlib.indiana.edu/dlcrest/api/core/bitstreams/6e26ce40-908f-4b3f-ace0-f1c715b247b5/content",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 148,
+      "slug": "ref-dte-wastewater-reuse-circularity-2024",
+      "citation": "Down to Earth. (2024). <em>India's Water Crisis: The Role of Wastewater Reuse and Circularity</em>. State-level reuse data: Delhi 49%, Karnataka 43%, Rajasthan 29%, Haryana 15%, Maharashtra 17%.",
+      "url": "https://www.downtoearth.org.in/water/safety-in-circularity",
+      "sector": "water",
+      "category": "Water: Wastewater Reuse & Governance"
+    },
+    {
+      "number": 149,
+      "slug": "ref-banerjee-urban-self-governance-2021",
+      "citation": "Banerjee, I. (2021). <em>Problems of Urban Self-governance in India</em>. Nagarlok, IIPA. Only 11/31 states transferred all 18 functions. Municipal own revenue 42.7% nationally. 35% average staff vacancy. Election delays, parastatal interference, fiscal dependency.",
+      "url": "https://www.iipa.org.in/cms/public/uploads/342451652163582.pdf",
+      "sector": "governance",
+      "category": "Urban Governance & Decentralization (74th CAA)"
+    },
+    {
+      "number": 150,
+      "slug": "ref-cag-74th-caa-audit-2021",
+      "citation": "CAG. (2021). <em>Performance Audit on Efficacy of Implementation of 74th CAA with Focus on 3Fs</em>. Odisha audit: 112/114 ULBs no elections for up to 9 years. Own revenue 11.22%. Ward committees not constituted. 13/18 functions have overlapping jurisdiction with parastatals.",
+      "url": "https://cag.gov.in/uploads/download_audit_report/2023/8.-Ch-5-Performance-audit-on-the-Efficacy-of-implementation-of-74th-Constitution-0651c2062a5c705.88651054.pdf",
+      "sector": "governance",
+      "category": "Urban Governance & Decentralization (74th CAA)"
+    },
+    {
+      "number": 151,
+      "slug": "ref-janaagraha-asics-2023",
+      "citation": "Janaagraha. (2023). <em>ASICS 2023: Annual Survey of India's City-Systems Data Book</em>. 1,484/4,766 city councils inactive (31%). No functional ward committees in AP, Bihar, Delhi, UP, WB. Councillor salary \u20b92,500-25,000/month vs MLA \u20b950K-1.83L. Municipal election turnout 10-20% lower than state elections.",
+      "url": "https://www.janaagraha.org/wp-content/uploads/2024/02/ASICS-2023-data-book.pdf",
+      "sector": "governance",
+      "category": "Urban Governance & Decentralization (74th CAA)"
+    },
+    {
+      "number": 152,
+      "slug": "ref-unep-food-waste-index-2024",
+      "citation": "UNEP. (2024). <em>Food Waste Index Report 2024</em>. India: 78.2 million tonnes food wasted annually (\u20b992,000 Cr value). 64.1 MT CO\u2082e emissions from post-harvest losses. Per capita waste 50 kg/year.",
+      "url": "https://www.unep.org/resources/publication/food-waste-index-report-2024",
+      "sector": "food",
+      "category": "Food Systems & Cold Chain"
+    },
+    {
+      "number": 153,
+      "slug": "ref-nccd-cold-chain-assessment-2023",
+      "citation": "NCCD. (2023). <em>All India Cold Chain Infrastructure Capacity Assessment</em>. Only 500 of 125,000 needed rural packhouses exist. 70% cold storage for potatoes. 9,000 vs 62,000 reefer trucks needed. Horticulture gets <4% cold chain capacity. \u20b91.7 lakh crore investment needed.",
+      "url": "https://nccd.gov.in",
+      "sector": "food",
+      "category": "Food Systems & Cold Chain"
+    },
+    {
+      "number": 154,
+      "slug": "ref-cacp-msp-reports-2024",
+      "citation": "CACP. (2024). <em>Commission for Agricultural Costs and Prices Reports</em>. MSP covers 23 crops but 95%+ procurement is rice/wheat. Rice/wheat account for 60% of foodgrain area. PDS distributes almost exclusively rice/wheat, limiting millet uptake.",
+      "url": "https://cacp.dacnet.nic.in/",
+      "sector": "food",
+      "category": "Food Systems & Cold Chain"
+    },
+    {
+      "number": 155,
+      "slug": "ref-iwp-rice-wheat-subsidies-groundwater-2024",
+      "citation": "India Water Portal. (2024). <em>Why India's rice and wheat subsidies are drying up our groundwater</em>. MSP policies caused 30% over-production of water-intensive crops. 50% of Punjab groundwater decline attributable to rice procurement. Rice-wheat covers 95% of crop area.",
+      "url": "https://www.indiawaterportal.org/groundwater/why-indias-rice-and-wheat-subsidies-are-drying-up-our-groundwater",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 156,
+      "slug": "ref-mongabay-millet-farming-hidden-side-2025",
+      "citation": "Mongabay India. (2025). <em>The hidden side of millet farming</em>. Millet farmers receive only 33-42% of what rice/wheat farmers get. Income from millet farming could not cover costs in alternate years. Lack of MSP equivalent institutional support.",
+      "url": "https://india.mongabay.com/2025/03/the-hidden-side-of-millet-farming/",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 157,
+      "slug": "ref-springer-crop-diversification-income-2024",
+      "citation": "Springer. (2024). <em>Crop diversification and income of agricultural households in India</em>. Farm income increases by ~13% when households diversify crops. Diversified households have higher access to technical advice, markets, and credit.",
+      "url": "https://link.springer.com/article/10.1007/s44279-024-00019-0",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 158,
+      "slug": "ref-teri-land-degradation-economics-2018",
+      "citation": "TERI. (2018). <em>Economics of Desertification, Land Degradation and Drought in India</em>. \u20b92.54 trillion annual loss (~2% GDP) from land degradation. 97.9 Mha (30% of land) degraded. 74 million tonnes nutrients lost annually. $1.73 trillion projected loss by 2050.",
+      "url": "https://www.teriin.org/sites/default/files/2018-04/Vol%20I%20-%20Macroeconomic%20assessment%20of%20the%20costs%20of%20land%20degradation%20in%20India_0.pdf",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 159,
+      "slug": "ref-nature-groundwater-depletion-food-security-2022",
+      "citation": "Nature Communications. (2022). <em>Solving groundwater depletion in India while achieving food security</em>. Punjab/Haryana aquifer depletion 109 km\u00b3/year (world's 2nd most overexploited). Borewells now 80-200 feet vs 30 feet a decade ago. 92-96% withdrawal for irrigation. Punjab spends \u20b939,000/ha on rice subsidies. Haryana offers \u20b917,500/ha to switch crops.",
+      "url": "https://www.nature.com/articles/s41467-022-31122-9",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 160,
+      "slug": "ref-springer-fertilizer-policies-2025",
+      "citation": "Springer. (2025). <em>India's fertilizer policies: implications for food security, environmental sustainability, and climate change</em>. NPK ratio 10.9:4.4:1 vs 4:2:1 ideal. \u20b91.68 lakh crore fertilizer subsidy (FY25-26). Urea over-subsidization causes nitrogen excess, groundwater nitrate contamination.",
+      "url": "https://link.springer.com/article/10.1007/s10113-025-02395-9",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 161,
+      "slug": "ref-nature-fpo-membership-impact-2024",
+      "citation": "Nature/ResearchGate. (2024). <em>Economic impact of FPO membership: empirical evidence from India</em>. 22% higher price realization for FPO members. 39% higher annual agricultural income. 49% lower poverty incidence (0.352 vs 0.691). 31% lower marketing costs.",
+      "url": "https://www.nature.com/articles/s41599-025-05063-9",
+      "sector": "food",
+      "category": "Agricultural Economics & Land Degradation"
+    },
+    {
+      "number": 162,
+      "slug": "ref-fsi-forest-report-2023",
+      "citation": "FSI. (2023). <em>India State of Forest Report 2023</em>. 24,651 sq km dense forest lost (2003-2023), replaced by plantations not natural regeneration. Overall forest cover increase masks quality decline.",
+      "url": "https://fsi.nic.in/forest-report-2023",
+      "sector": "biodiversity",
+      "category": "Biodiversity & Forest Conservation"
+    },
+    {
+      "number": 163,
+      "slug": "ref-gfw-india-forest-loss-2024",
+      "citation": "Global Forest Watch. (2024). <em>India Forest Loss Data</em>. Forest fires account for 44% of tree cover loss since 2001. Climate change increasing fire frequency. Ground-level fire prevention underfunded.",
+      "url": "https://www.globalforestwatch.org/dashboards/country/IND",
+      "sector": "biodiversity",
+      "category": "Biodiversity & Forest Conservation"
+    },
+    {
+      "number": 164,
+      "slug": "ref-yale-epi-india-2024",
+      "citation": "Yale EPI. (2024). <em>Environmental Performance Index</em>. India ranks 176 of 180 on Nature Conservation Index. Protected Area coverage adequate but management effectiveness poor.",
+      "url": "https://epi.yale.edu/country/2024/IND",
+      "sector": "biodiversity",
+      "category": "Biodiversity & Forest Conservation"
+    },
+    {
+      "number": 165,
+      "slug": "ref-cag-campa-audit-2023",
+      "citation": "CAG. (2023). <em>Audit of Compensatory Afforestation Fund</em>. \u20b966,000+ crore accumulated with poor utilization. CAMPA plantation survival rate only 7.5%. Monoculture plantations don't replicate biodiversity of diverted forests.",
+      "url": "https://cag.gov.in",
+      "sector": "biodiversity",
+      "category": "Biodiversity & Forest Conservation"
+    },
+    {
+      "number": 166,
+      "slug": "ref-joshi-lantana-invasion-2020",
+      "citation": "Joshi, A.A. et al. (2020). <em>Lantana camara invasion in tiger reserves</em>. Invasive Lantana covers 40% of tiger reserve area. Outcompetes native species; reduces prey habitat. Removal labor-intensive but critical for ecosystem restoration.",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0006320720309253",
+      "sector": "biodiversity",
+      "category": "Biodiversity & Forest Conservation"
+    },
+    {
+      "number": 167,
+      "slug": "ref-moefcc-human-wildlife-conflict-2024",
+      "citation": "MoEFCC. (2024). <em>Human-Wildlife Conflict Report</em>. 2,727 human deaths from elephant attacks (2019-2024). Habitat fragmentation pushing wildlife into human areas. Corridor connectivity critical for reducing conflict.",
+      "url": "https://moef.gov.in",
+      "sector": "biodiversity",
+      "category": "Biodiversity & Forest Conservation"
+    },
+    {
+      "number": 168,
+      "slug": "ref-worldbank-natural-capital-india-2024",
+      "citation": "World Bank. (2024). <em>Natural Capital and Ecosystem Services in India</em>. Ecosystem service decline costs India at least 5.7% of GDP annually. Traditional economic measures overlook environmental costs and natural asset depletion.",
+      "url": "https://www.worldbank.org/en/country/india",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 169,
+      "slug": "ref-wef-india-economy-nature-2024",
+      "citation": "WEF. (2024). <em>A third of India's economy relies on nature</em>. One-third of India's GDP depends directly on nature. Corporates need to invest more in natural climate solutions. Nature loss poses grave risk to economic growth.",
+      "url": "https://www.weforum.org/stories/2024/08/india-economy-natural-climate-solutions/",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 170,
+      "slug": "ref-sciencedirect-forest-ecosystem-services-2024",
+      "citation": "ScienceDirect. (2024). <em>Quantifying habitat and biodiversity services of Indian forests</em>. Annual forest ecosystem services value: habitat $303B, biodiversity $419B, supporting services $744B. Forest carbon sink value \u20b96 lakh crore ($120B) at $5/tonne. Carbon stock: 7,204 million tonnes.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2665972724001107",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 171,
+      "slug": "ref-icar-pollination-benefits-2017",
+      "citation": "ICAR. (2017). <em>Economic benefits of animal pollination to Indian agriculture</em>. Pollination services worth \u20b91,12,615 crore ($22.5B) annually \u2014 8.72% of agricultural value. 51% of crops (108 of 211) depend on animal pollination. Rapeseed/mustard most dependent: \u20b919,355 Cr EVP.",
+      "url": "https://epubs.icar.org.in/index.php/IJAgS/article/view/73903",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 172,
+      "slug": "ref-pnas-human-wildlife-conflict-cost-2021",
+      "citation": "PNAS/Centre for Wildlife Studies. (2021). <em>Human casualties are the dominant cost of human-wildlife conflict in India</em>. Elephant conflict: $33,268 per incident total cost. 0.8-1 million hectares crops damaged annually. Government compensation \u20b938 Cr/year vs actual losses in hundreds of crores. Value of human life: \u20b92.2 Cr vs compensation \u20b90.76-8.7 lakh.",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1921338118",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 173,
+      "slug": "ref-frontiers-western-ghats-valuation-2023",
+      "citation": "Frontiers/IUCN. (2023). <em>Western Ghats ecosystem services valuation</em>. 400 million people depend on Western Ghats for water and food. 30% of Indian species in 5% of land area. Ecosystem services value $612 million (2021). 50% amphibians, 67% fish endemic to region.",
+      "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2023.1026793/full",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 174,
+      "slug": "ref-nature-mangrove-flood-protection-2024",
+      "citation": "Nature/UC Santa Cruz. (2024). <em>Global Flood Protection Benefits of Mangroves</em>. Mangroves provide $65B/year flood protection globally; $855B present value over 100 years. India among top 5 global beneficiaries. 15 million more people would flood annually if mangroves lost.",
+      "url": "https://www.nature.com/articles/s41598-020-61136-6",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 175,
+      "slug": "ref-mongabay-biodiversity-finance-needs-2024",
+      "citation": "Mongabay/UNDP. (2024). <em>India's biodiversity finance needs</em>. Conservation needs: \u20b981,664 Cr/year (2025-30). Previous spending: \u20b932,207 Cr (2018-22 total). Finance gap: \u20b949,000+ Cr/year. Biodiversity credit market: $2B by 2030. 20x ROI on nature investment (UNEP).",
+      "url": "https://india.mongabay.com/2024/11/conserving-indias-biodiversity-will-cost-rs-816-billion-per-year-says-new-plan/",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 176,
+      "slug": "ref-orf-greening-gdp-natural-capital-2018",
+      "citation": "ORF/MOSPI. (2018). <em>Greening the GDP: Natural capital accounting in India</em>. India's first environmental economic accounts released 2018. NCAVES project pilot testing ecosystem accounting. Green GDP would show lower growth when ecosystem depreciation included.",
+      "url": "https://www.orfonline.org/research/greening-the-gdp-valuing-natural-capital-in-india",
+      "sector": "biodiversity",
+      "category": "Biodiversity Economics & Natural Capital"
+    }
+  ],
+  "categories": [
+    { "name": "Energy Consumption & Demand", "sector": "energy", "order": 1 },
+    { "name": "Buildings & Cooling", "sector": "buildings", "order": 2 },
+    { "name": "Transport", "sector": "transport", "order": 3 },
+    { "name": "Circular Economy & RE", "sector": "energy", "order": 4 },
+    { "name": "National Targets & Policy", "sector": "governance", "order": 5 },
+    { "name": "Agriculture & Industrial", "sector": "mixed", "order": 6 },
+    { "name": "Transport & Urban Mobility", "sector": "transport", "order": 7 },
+    { "name": "Buildings & Green Construction", "sector": "buildings", "order": 8 },
+    { "name": "Air Quality", "sector": "air", "order": 9 },
+    { "name": "Neighbourhoods & Ward Data", "sector": "governance", "order": 10 },
+    { "name": "Buildings: Carbon & Construction", "sector": "buildings", "order": 11 },
+    { "name": "Investment & Economic Impact", "sector": "governance", "order": 12 },
+    { "name": "Health & Quality of Life", "sector": "air", "order": 13 },
+    { "name": "Dust & Pollution Control", "sector": "air", "order": 14 },
+    { "name": "EV Transition & Air Quality", "sector": "transport", "order": 15 },
+    { "name": "Waste Management & Generation", "sector": "waste", "order": 16 },
+    { "name": "Circular Economy & Waste", "sector": "waste", "order": 17 },
+    { "name": "Specialized Waste Streams", "sector": "waste", "order": 18 },
+    { "name": "Waste Management Partners", "sector": "waste", "order": 19 },
+    { "name": "Waste Economic Impact & Jobs", "sector": "waste", "order": 20 },
+    { "name": "Water: Groundwater & Supply", "sector": "water", "order": 21 },
+    { "name": "Water: Sewage & Treatment", "sector": "water", "order": 22 },
+    { "name": "Water: Urban Water Economics", "sector": "water", "order": 23 },
+    { "name": "Water: Rainwater Harvesting & Conservation", "sector": "water", "order": 24 },
+    { "name": "Waste: Infrastructure & MRF Gap", "sector": "waste", "order": 25 },
+    { "name": "Waste: 2026 Data Update", "sector": "waste", "order": 26 },
+    { "name": "Water: Wastewater Reuse & Governance", "sector": "water", "order": 27 },
+    { "name": "Urban Governance & Decentralization (74th CAA)", "sector": "governance", "order": 28 },
+    { "name": "Food Systems & Cold Chain", "sector": "food", "order": 29 },
+    { "name": "Agricultural Economics & Land Degradation", "sector": "food", "order": 30 },
+    { "name": "Biodiversity & Forest Conservation", "sector": "biodiversity", "order": 31 },
+    { "name": "Biodiversity Economics & Natural Capital", "sector": "biodiversity", "order": 32 }
+  ],
+  "metadata": {
+    "total_references": 176,
+    "total_categories": 32,
+    "last_updated": "2026-01-27",
+    "sectors": [
+      "energy",
+      "buildings",
+      "transport",
+      "air",
+      "waste",
+      "water",
+      "food",
+      "governance",
+      "biodiversity"
+    ],
+    "sector_counts": {
+      "energy": 9,
+      "buildings": 17,
+      "transport": 19,
+      "air": 14,
+      "waste": 32,
+      "water": 18,
+      "food": 11,
+      "governance": 11,
+      "biodiversity": 15
+    },
+    "url_coverage": {
+      "with_urls": 171,
+      "without_urls": 5,
+      "coverage_percentage": 97.2
+    }
+  }
+}
