@@ -9,85 +9,85 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-admin">
-        <div class="nav-brand">
-            <span class="nav-logo">🌱</span>
-            <span class="nav-title">India Progress Monitor</span>
-            <span class="nav-badge">ADMIN</span>
+    <nav class="bg-dark border-b border-gray-700 px-8 py-4 flex justify-between items-center sticky top-0 z-[100]">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🌱</span>
+            <span class="text-lg font-bold text-white">India Progress Monitor</span>
+            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded ml-2">ADMIN</span>
         </div>
-        <div class="nav-links">
-            <a href="admin.html" class="nav-link active">Overview</a>
-            <a href="admin-partners.html" class="nav-link">Partners</a>
-            <a href="admin-funding.html" class="nav-link">Funding</a>
-            <a href="admin-roadmap.html" class="nav-link">Roadmap</a>
-            <button id="logoutBtn" class="nav-link nav-logout" style="display:none;">Logout</button>
+        <div class="flex items-center gap-1">
+            <a href="admin.html" class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-150">Overview</a>
+            <a href="admin-partners.html" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800">Partners</a>
+            <a href="admin-funding.html" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800">Funding</a>
+            <a href="admin-roadmap.html" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800">Roadmap</a>
+            <button id="logoutBtn" class="text-gray-300 font-medium text-sm px-4 py-2 rounded-lg transition-colors duration-150 hover:text-white hover:bg-gray-800 hidden">Logout</button>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="max-w-[1400px] mx-auto px-12 py-12">
         <!-- Admin Header -->
-        <section class="admin-header">
-            <div class="admin-header-content">
+        <section class="flex justify-between items-center mb-12">
+            <div>
                 <h1>Portfolio Management Dashboard</h1>
-                <p class="admin-subtitle">Confidential - Internal Use Only</p>
+                <p class="text-sm text-gray-500 mt-1">Confidential - Internal Use Only</p>
             </div>
-            <div class="admin-header-actions">
-                <button class="btn btn-secondary" id="refreshData">
+            <div class="flex gap-3">
+                <button class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors duration-150 inline-flex items-center gap-2" id="refreshData">
                     <span>↻</span> Refresh Data
                 </button>
-                <button class="btn btn-primary" id="exportReport">
+                <button class="bg-primary text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors duration-150 inline-flex items-center gap-2" id="exportReport">
                     <span>↓</span> Export Report
                 </button>
             </div>
         </section>
 
         <!-- Quick Stats -->
-        <section class="section">
-            <div class="admin-stats-grid">
-                <div class="admin-stat-card">
-                    <div class="admin-stat-icon">🤝</div>
-                    <div class="admin-stat-content">
-                        <span class="admin-stat-value" id="total-partners">24</span>
-                        <span class="admin-stat-label">Partner Organizations</span>
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-3xl mb-3">🤝</div>
+                    <div class="mb-2">
+                        <span class="block text-2xl font-bold text-gray-900 mb-1" id="total-partners">24</span>
+                        <span class="block text-sm text-gray-600">Partner Organizations</span>
                     </div>
-                    <div class="admin-stat-trend trend-up">11 Signed</div>
+                    <div class="text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded inline-block mt-2">11 Signed</div>
                 </div>
-                <div class="admin-stat-card">
-                    <div class="admin-stat-icon">💰</div>
-                    <div class="admin-stat-content">
-                        <span class="admin-stat-value" id="total-budget">₹253-270 Cr</span>
-                        <span class="admin-stat-label">Total Portfolio (3 Years)</span>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-3xl mb-3">💰</div>
+                    <div class="mb-2">
+                        <span class="block text-2xl font-bold text-gray-900 mb-1" id="total-budget">₹253-270 Cr</span>
+                        <span class="block text-sm text-gray-600">Total Portfolio (3 Years)</span>
                     </div>
-                    <div class="admin-stat-trend">Approved</div>
+                    <div class="text-xs text-gray-600 font-medium bg-gray-100 px-2 py-1 rounded inline-block mt-2">Approved</div>
                 </div>
-                <div class="admin-stat-card">
-                    <div class="admin-stat-icon">🏘️</div>
-                    <div class="admin-stat-content">
-                        <span class="admin-stat-value" id="wards-covered">596</span>
-                        <span class="admin-stat-label">Wards with Climate Data</span>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-3xl mb-3">🏘️</div>
+                    <div class="mb-2">
+                        <span class="block text-2xl font-bold text-gray-900 mb-1" id="wards-covered">596</span>
+                        <span class="block text-sm text-gray-600">Wards with Climate Data</span>
                     </div>
-                    <div class="admin-stat-trend trend-up">2 Cities Live</div>
+                    <div class="text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded inline-block mt-2">2 Cities Live</div>
                 </div>
-                <div class="admin-stat-card">
-                    <div class="admin-stat-icon">💸</div>
-                    <div class="admin-stat-content">
-                        <span class="admin-stat-value" id="disbursed">₹0 Cr</span>
-                        <span class="admin-stat-label">Disbursed</span>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-3xl mb-3">💸</div>
+                    <div class="mb-2">
+                        <span class="block text-2xl font-bold text-gray-900 mb-1" id="disbursed">₹0 Cr</span>
+                        <span class="block text-sm text-gray-600">Disbursed</span>
                     </div>
-                    <div class="admin-stat-trend">Q1 Target: ₹50-60 Cr</div>
+                    <div class="text-xs text-gray-600 font-medium bg-gray-100 px-2 py-1 rounded inline-block mt-2">Q1 Target: ₹50-60 Cr</div>
                 </div>
             </div>
         </section>
 
         <!-- Portfolio Allocation -->
-        <section class="section">
-            <h2 class="section-title">Portfolio Allocation</h2>
-            <div class="charts-grid">
-                <div class="chart-card">
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Portfolio Allocation</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3>Budget by Category</h3>
                     <canvas id="budgetChart"></canvas>
                 </div>
-                <div class="chart-card">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3>Year-wise Phasing</h3>
                     <canvas id="phasingChart"></canvas>
                 </div>
@@ -95,18 +95,18 @@
         </section>
 
         <!-- Partner Overview Table -->
-        <section class="section">
-            <h2 class="section-title">Partner Portfolio Overview</h2>
-            <div class="table-container">
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Partner Portfolio Overview</h2>
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                 <table class="admin-table" id="partnerTable">
-                    <thead>
+                    <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>
-                            <th>Organization</th>
-                            <th>Category</th>
-                            <th>Allocation (₹ Cr)</th>
-                            <th>Agreement Status</th>
-                            <th>Q1 Progress</th>
-                            <th>Actions</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Organization</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Category</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Allocation (₹ Cr)</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Agreement Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Q1 Progress</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="partnerTableBody">
@@ -117,8 +117,8 @@
         </section>
 
         <!-- 90-Day Roadmap Summary -->
-        <section class="section">
-            <h2 class="section-title">90-Day Launch Progress</h2>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">90-Day Launch Progress</h2>
             <div class="roadmap-timeline">
                 <div class="timeline-item active">
                     <div class="timeline-marker">1</div>
@@ -166,8 +166,8 @@
         </section>
 
         <!-- Risk Monitoring -->
-        <section class="section">
-            <h2 class="section-title">Risk Monitoring</h2>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Risk Monitoring</h2>
             <div class="risk-grid">
                 <div class="risk-card risk-low">
                     <div class="risk-header">
@@ -201,8 +201,8 @@
         </section>
 
         <!-- NoTF Ward-Level Climate Data -->
-        <section class="section">
-            <h2 class="section-title">NoTF: Ward-Level Climate Data Platform</h2>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">NoTF: Ward-Level Climate Data Platform</h2>
             <div class="funding-categories-grid">
                 <div class="funding-category-card">
                     <div class="funding-category-header">
@@ -271,8 +271,8 @@
         </section>
 
         <!-- Philanthropies & CSR Funders by Sector -->
-        <section class="section">
-            <h2 class="section-title">Philanthropies & CSR Funders by Sector</h2>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Philanthropies & CSR Funders by Sector</h2>
             <div class="funding-categories-grid">
                 <div class="funding-category-card">
                     <div class="funding-category-header">
