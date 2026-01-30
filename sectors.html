@@ -1959,391 +1959,542 @@
         </div>
 
         <!-- NEIGHBOURHOODS SECTOR -->
-        <div class="sector-content-panel hidden" id="waste">
-            <!-- Baseline -->
+<div class="sector-content-panel hidden" id="waste">
+            <!-- 1. BASELINE -->
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Baseline (Current Status)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Waste Generation</h4>
-                        <ul class="text-sm">
-                            <li><strong>162,450 TPD</strong> (65.8 MT/year, +2.8% YoY) <a href="resources.html#ref-cpcb-swm-annual-2024" style="font-size: 0.75rem;">[83,84]</a></li>
-                            <li>Per capita: <strong>0.38 kg/day</strong> (projected 0.75 kg/day by Dec 2026)</li>
-                            <li>250 MT legacy waste at 2,300+ dumpsites <a href="resources.html#ref-mohua-sbm-progress-2024" style="font-size: 0.75rem;">[84]</a></li>
-                            <li>Projected: <strong>172 MT by 2030</strong> (4.3% CAGR), <strong>468 MT by 2050</strong> (7.1x increase) <a href="resources.html#ref-cpcb-swm-annual-2024" style="font-size: 0.75rem;">[83]</a></li>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📊 Baseline: Current Waste System Status</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Waste Generation & Growth</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>160,000 TPD urban waste</strong> (58.4M tonnes/year, 2.8% annual growth) <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li>Per capita: <strong>0.38 kg/day</strong> (projected 0.75 kg/day by 2050) <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>250M tonnes legacy waste</strong> at 2,300+ dumpsites nationwide <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li>Projected: <strong>172M tonnes by 2030</strong> (4.3% CAGR); <strong>468M tonnes by 2050</strong> <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li>Composition: <strong>60% organic</strong>, 15% plastic, 10% paper, 15% other <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Waste Composition (Annual)</h4>
-                        <ul class="text-sm">
-                            <li>MSW: <strong>35.5 MT/year</strong> (57.3%) — 78% segregation, 68% treated scientifically</li>
-                            <li>C&D: <strong>12.4 MT/year</strong> (20%) — 7-8% annual growth</li>
-                            <li>Hazardous: <strong>4.9 MT/year</strong> (7.9%) — 40% unaccounted</li>
-                            <li>Plastic: <strong>3.5 MT/year</strong> (5.6%) — 25-30% recycling rate, EPR mandates</li>
-                            <li>E-waste: <strong>1.1 MT/year</strong> (1.8%) — 6.8% CAGR, fastest growing</li>
-                            <li>Biomedical: <strong>0.1 MT/year</strong> (0.17%) — 50% incineration capacity</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Collection & Segregation Gap</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>70% waste collected</strong> officially (112,000 TPD); 30% unaccounted <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>15-20% household segregation compliance</strong> despite 2016 rules <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li>Only <strong>Pune, Bengaluru, Indore</strong> enforce bulk generator segregation <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>Single-bin collection trucks</strong> mix segregated waste in 60% cities <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li>Self-reported data: <strong>97% collection claimed</strong> vs ground reality 70% <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Official vs Actual Processing</h4>
-                        <ul class="text-sm">
-                            <li><strong>98% D2D collection</strong>, <strong>81% segregation</strong> officially claimed <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" style="font-size: 0.75rem;">[85]</a></li>
-                            <li>Reality: only <strong>68% treated scientifically</strong>, 32% unaccounted <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" style="font-size: 0.75rem;">[93]</a></li>
-                            <li>Digital tracking now in <strong>87% ULBs</strong> — improving data integrity <a href="resources.html#ref-teri-state-waste-management-2023" style="font-size: 0.75rem;">[119]</a></li>
-                            <li>Only Pune, Bengaluru & Indore fully enforce bulk generator rules</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Processing Capacity Deficit</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>42,500 TPD processing capacity</strong> vs 160,000 TPD generated (27% coverage) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26 Climate">[184]</a></li>
+                            <li>Composting: <strong>14,200 TPD</strong>; WtE: <strong>9,800 TPD</strong>; Bio-CNG: <strong>3,200 TPD</strong> <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>4,000+ processing plants</strong> but only 25% operate at capacity <a href="resources.html#ref-ceew-sustainable-swm-2024" class="text-xs text-primary hover:underline" title="CEEW Sustainable SWM 2024">[122]</a></li>
+                            <li><strong>117,500 TPD infrastructure gap</strong> (73% of waste has nowhere to go) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26 Climate">[184]</a></li>
+                            <li>C&D waste: <strong>7,300 TPD capacity</strong> vs 34,000 TPD generation (21% coverage) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26 Climate">[184]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Infrastructure Gap</h4>
-                        <ul class="text-sm">
-                            <li><strong>4,000+</strong> processing plants — only <strong>25%</strong> at capacity <a href="resources.html#ref-ceew-sustainable-swm-2024" style="font-size: 0.75rem;">[122]</a></li>
-                            <li><strong>3,200+</strong> MRFs operational (+28% new facilities) <a href="resources.html#ref-kushaagra-mrf-india-2024" style="font-size: 0.75rem;">[124]</a></li>
-                            <li>Processing: Composting <strong>14,200 TPD</strong>, WTE <strong>9,800 TPD</strong>, Bio-CNG <strong>3,200 TPD</strong></li>
-                            <li><strong>Infrastructure Gap: 135,250 TPD</strong> (generation minus capacity)</li>
-                            <li><strong>2,452</strong> dumpsites vs <strong>645</strong> sanitary landfills (10:1) <a href="resources.html#ref-cwe-landfill-management-2024" style="font-size: 0.75rem;">[123,129]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Specialized Waste Streams</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Plastic: <strong>3.5M tonnes/year</strong>, 25-30% recycling rate (up from 8%) <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li>E-waste: <strong>1.1M tonnes/year</strong>, 6.8% CAGR (fastest growing stream) <a href="resources.html#ref-cpcb-ewaste-annual-2023-24" class="text-xs text-primary hover:underline" title="CPCB E-waste Annual 2023-24">[94]</a></li>
+                            <li>C&D waste: <strong>12.4M tonnes/year</strong>, 7-8% annual growth <a href="resources.html#ref-cpcb-cd-waste-management-2025" class="text-xs text-primary hover:underline" title="CPCB C&D Waste 2025">[95]</a></li>
+                            <li>Hazardous: <strong>4.9M tonnes/year</strong>, 40% unaccounted/illegal dumping <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li>Biomedical: <strong>0.1M tonnes/year</strong>, 50% incineration capacity <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4>Budget Misallocation <a href="resources.html#ref-epw-swm-institutional-framework-2023" style="font-size: 0.75rem;">[120]</a></h4>
-                        <ul class="text-sm">
-                            <li><strong>60-70%</strong> ULB budget on street sweeping</li>
-                            <li><strong>20-30%</strong> on collection & transport</li>
-                            <li><strong>&lt;5%</strong> on treatment & disposal</li>
-                            <li>₹79,000 Cr NGT penalties — mostly uncollected <a href="resources.html#ref-ngt-environmental-compensation-2024" style="font-size: 0.75rem;">[87]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Informal Sector Paradox</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>4M+ informal waste pickers</strong>, &lt;20% integrated with formal systems <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>70-80% plastic recycling</strong> done by informal sector (official systems fail) <a href="resources.html#ref-iwp-informal-plastic-collection-2024" class="text-xs text-primary hover:underline" title="IWP Informal Plastic Collection 2024">[132]</a></li>
+                            <li><strong>₹30,000 Cr/year recyclable value</strong> recovered by informal workers <a href="resources.html#ref-globalrecycling-dry-waste-potential-2024" class="text-xs text-primary hover:underline" title="Global Recycling Dry Waste 2024">[131]</a></li>
+                            <li>Aggregators capture <strong>90% of value</strong>; pickers get 5-10% <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li>Municipal savings: <strong>₹55 Cr/year</strong> from 1.5M pickers (unpaid labor) <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Specialized Streams (2026 Update)</h4>
-                        <ul class="text-sm">
-                            <li>Plastic: <strong>3.5 MT/year</strong>, 25-30% recycling rate (up from 8%) <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" style="font-size: 0.75rem;">[93]</a></li>
-                            <li>E-waste: <strong>1.1 MT/year</strong>, 6.8% CAGR — fastest growing stream <a href="resources.html#ref-cpcb-ewaste-annual-2023-24" style="font-size: 0.75rem;">[94]</a></li>
-                            <li>C&D waste: <strong>12.4 MT/year</strong>, 7-8% annual growth <a href="resources.html#ref-cpcb-cd-waste-management-2025" style="font-size: 0.75rem;">[95]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Budget & Financial Crisis</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>60-70% ULB budget</strong> on street sweeping; &lt;5% on treatment <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li>User fee collection: <strong>&lt;30%</strong> of households pay waste charges <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>₹79,000 Cr NGT penalties</strong> levied on municipalities—mostly uncollected <a href="resources.html#ref-ngt-environmental-compensation-2024" class="text-xs text-primary hover:underline" title="NGT Environmental Compensation 2024">[87]</a></li>
+                            <li>Tipping fees: <strong>₹200-400/tonne</strong> vs ₹800-1200 cost recovery needed <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li>SBM 2.0: <strong>₹30,980 Cr budget</strong> (2021-26) but ULB capacity gap persists <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Informal Sector</h4>
-                        <ul class="text-sm">
-                            <li><strong>4M+</strong> informal waste pickers, &lt;20% integrated <a href="resources.html#ref-ilo-informal-waste-sector-2023" style="font-size: 0.75rem;">[96]</a></li>
-                            <li><strong>70-80%</strong> of plastic recycling by informal sector <a href="resources.html#ref-iwp-informal-plastic-collection-2024" style="font-size: 0.75rem;">[132]</a></li>
-                            <li><strong>₹30,000 Cr/year</strong> potential recycling value <a href="resources.html#ref-globalrecycling-dry-waste-potential-2024" style="font-size: 0.75rem;">[131]</a></li>
-                            <li>Aggregators capture 90% of value; pickers get 5-10%</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">EPR & Extended Producer Responsibility</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>8,500+ manufacturers registered</strong> under EPR for plastic/e-waste <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li>Blockchain EPR: <strong>34 states operational</strong>, 12.4M+ credits traded (USD 187M market) <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>Gaming the system:</strong> Credits traded without actual recycling verification <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li>Plastic ban: <strong>SUP banned 2022</strong> but enforcement theatre—usage continues <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li>Compliance rate: <strong>&lt;40% manufacturers</strong> meet collection targets <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <!-- Waste Flow Cascade -->
-            <div class="bg-gradient-to-br from-green-50 to-transparent border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-green-500">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🗑️</span> The Waste Value Leakage
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">Where 92% of circular value is lost</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Officials claim 97% collection and 70% processing. Reality: 32% unaccounted, 75% plants idle, 8% true circularity. ₹30,000 Cr/year in recyclables goes to landfills.</p>
-
-                <!-- Interactive Sankey Diagram -->
-                <div id="waste-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
-
-                <!-- Key Statistics Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Data Integrity Crisis</h4>
-                        <ul class="text-sm">
-                            <li>"97% collection" claimed — <strong>31.7% unaccounted</strong> (50,655 TPD) <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" style="font-size: 0.7rem;">[85]</a></li>
-                            <li>"70% processing" — reality <strong>"wildly at odds"</strong> <a href="resources.html#ref-teri-state-waste-management-2023" style="font-size: 0.7rem;">[119]</a></li>
-                            <li>Self-reported metrics with zero verification</li>
-                            <li>MoHUA dashboard: cosmetic compliance theater</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Plant Underutilization</h4>
-                        <ul class="text-sm">
-                            <li><strong>4,000+</strong> plants built — only <strong>25%</strong> at capacity <a href="resources.html#ref-ceew-sustainable-swm-2024" style="font-size: 0.7rem;">[122]</a></li>
-                            <li>Tonnage contracts reward collection over diversion</li>
-                            <li>No segregation at source = plant inefficiency</li>
-                            <li>Mumbai: 11K TPD generated vs 5K capacity <a href="resources.html#ref-dte-waste-challenges-2023" style="font-size: 0.7rem;">[121]</a></li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Informal Paradox</h4>
-                        <ul class="text-sm">
-                            <li><strong>4M+</strong> waste pickers do <strong>70-80%</strong> of recycling <a href="resources.html#ref-ilo-informal-waste-sector-2023" style="font-size: 0.7rem;">[96,132]</a></li>
-                            <li>Get <strong>5-10%</strong> of ₹30K Cr value; aggregators take 90%</li>
-                            <li>Formalization via companies excludes them</li>
-                            <li>₹55 Cr/year municipal savings from 1.5M pickers</li>
-                        </ul>
-                    </div>
-                </div>
-                <p style="font-size: 0.75rem; color: #6b7280; margin-top: 1rem;">Data updated January 2026. Sources: CPCB Annual Report 2024-25, MoHUA SBM Dashboard, NITI Aayog Circular Economy Report, TERI Waste Composition Study, IMARC Group, Swachh Survekshan 2024-25.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Shift</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Circular Waste Economy</h4>
-                        <ul class="text-sm">
-                            <li>Zero waste to landfill achieved (&lt;5% residual)</li>
-                            <li>Circular material flows with maximum resource recovery</li>
-                            <li>Waste workers integrated into formal economy (75%)</li>
-                            <li>Differentiated city-tier strategies operational</li>
-                            <li>India as global circular economy leader</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Targets</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Milestones</h4>
-                        <ul class="text-sm">
-                            <li>Get 4,000 existing plants to <strong>100% utilization</strong> <a href="resources.html#ref-ceew-sustainable-swm-2024" style="font-size: 0.75rem;">[122]</a></li>
-                            <li>Flip budget: 5% → <strong>40%+</strong> on treatment <a href="resources.html#ref-epw-swm-institutional-framework-2023" style="font-size: 0.75rem;">[120]</a></li>
-                            <li>Legacy waste: <strong>320 hectares completed</strong>, 156 active remediation projects</li>
-                            <li>Plastic recycling: 25-30% achieved → <strong>50% target</strong></li>
-                            <li>75% informal worker integration (from &lt;20%)</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">SBM 2.0 Targets (2027)</h4>
-                        <ul class="text-sm">
-                            <li>Composting: <strong>+1.25 Lakh TPD</strong> capacity by 2027</li>
-                            <li>Bio-CNG: <strong>12,000 TPD</strong> by 2027 (from 3,200 TPD)</li>
-                            <li>Budget: <strong>Rs. 30,980 Cr</strong> (2021-2026) <a href="resources.html#ref-mohua-sbm-progress-2024" style="font-size: 0.75rem;">[84]</a></li>
-                        </ul>
-                        <p style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Source: <a href="resources.html#ref-mohua-sbm-progress-2024">[84,86,88,119,120,122]</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hidden Dynamics -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-bottom: 1.5rem; border-left: 4px solid #f59e0b; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🔍</span> Hidden Dynamics
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">Why interventions fail</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India has 4,000+ processing plants but only 25% operate at capacity. The problem isn't technology — it's incentives, data integrity, and who captures value.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Data Integrity Crisis</h4>
-                        <ul class="text-sm">
-                            <li><strong>Progress:</strong> Digital tracking in <strong>87% ULBs</strong>, <strong>2,845 facilities</strong> on CPCB OCEMS+</li>
-                            <li><strong>AI segregation:</strong> <strong>156 cities</strong> deployed, 97.2% accuracy, 32% cost reduction</li>
-                            <li><strong>IoT fleet:</strong> <strong>89 cities</strong> live, +24% route efficiency, Rs. 450 Cr fuel savings</li>
-                            <li><strong>Blockchain EPR:</strong> <strong>34 states</strong> operational, 12.4M+ credits traded, USD 187M market</li>
-                            <li><strong>Gap persists:</strong> Self-reported metrics; tonnage contracts still incentivize overreporting</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Perverse Incentive Structure</h4>
-                        <ul class="text-sm">
-                            <li><strong>Tonnage contracts:</strong> Pay per tonne collected, not diverted — incentivizes against reduction</li>
-                            <li><strong>Budget misallocation:</strong> 60-70% to sweeping, &lt;5% to treatment <a href="resources.html#ref-epw-swm-institutional-framework-2023" style="font-size: 0.7rem;">[120]</a></li>
-                            <li><strong>WtE lock-in:</strong> ₹500+ Cr plants need feedstock forever — lobby against recycling</li>
-                            <li><strong>Partner opportunity:</strong> Outcome-based contracts, recycling-first mandates</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Informal Sector Paradox</h4>
-                        <ul class="text-sm">
-                            <li><strong>Hidden truth:</strong> 4M+ informal workers achieve 80% of actual recycling</li>
-                            <li><strong>Formalization backfires:</strong> Company contracts exclude pickers, rates drop</li>
-                            <li><strong>Value extraction:</strong> Aggregators capture 90%; pickers get 5-10%</li>
-                            <li><strong>Partner opportunity:</strong> Picker-owned cooperatives, direct market access</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Lab vs Reality Gap</h4>
-                        <ul class="text-sm">
-                            <li><strong>Segregation theater:</strong> Officials claim 88%; only Pune & Bengaluru enforce</li>
-                            <li><strong>Infrastructure mismatch:</strong> Single-bin trucks negate household segregation</li>
-                            <li><strong>Capacity underutilization:</strong> 4,000 plants at 25% capacity <a href="resources.html#ref-ceew-sustainable-swm-2024" style="font-size: 0.7rem;">[122]</a></li>
-                            <li><strong>Partner opportunity:</strong> End-to-end segregated systems, enforcement tech</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Political Economy</h4>
-                        <ul class="text-sm">
-                            <li><strong>Land mafia nexus:</strong> Dumpsites on valuable land; remediation unlocks real estate</li>
-                            <li><strong>Biomining theater:</strong> Some "remediation" just moves waste elsewhere</li>
-                            <li><strong>Unenforced penalties:</strong> ₹79,000 Cr levied — mostly uncollected <a href="resources.html#ref-ngt-environmental-compensation-2024" style="font-size: 0.7rem;">[87]</a></li>
-                            <li><strong>Partner opportunity:</strong> Independent remediation verification, ring-fenced funds</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Supply Obsession</h4>
-                        <ul class="text-sm">
-                            <li><strong>Wrong metrics:</strong> Count tonnes processed, not waste reduced</li>
-                            <li><strong>Dumpsite proliferation:</strong> 2,452 dumpsites vs 645 sanitary landfills <a href="resources.html#ref-cwe-landfill-management-2024" style="font-size: 0.7rem;">[123]</a></li>
-                            <li><strong>Build before utilize:</strong> New plants while existing at 25% capacity</li>
-                            <li><strong>Partner opportunity:</strong> Outcome metrics, demand-side interventions</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Technology Adoption</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Digital tracking: <strong>87% ULBs enrolled</strong> on CPCB systems (data quality unverified) <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li>AI segregation: <strong>156 cities deployed</strong>, 97.2% accuracy, 32% cost reduction <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li>IoT fleet tracking: <strong>89 cities live</strong>, +24% route efficiency, ₹450 Cr fuel savings <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li>Smart bins: <strong>4,850+ deployed</strong> for fill-level monitoring <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>3,200+ MRFs operational</strong> (+28% new facilities since 2020) <a href="resources.html#ref-kushaagra-mrf-india-2024" class="text-xs text-primary hover:underline" title="Kushaagra MRF India 2024">[124]</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Markers</h3>
-                    <div class="mb-4">
+            <!-- 2. TARGETS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-primary">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Targets: Year 3 Circular Economy Milestones</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Processing Capacity Utilization</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>75% plant capacity utilization</strong> (from 25% baseline)—use what we have first <a href="resources.html#ref-ceew-sustainable-swm-2024" class="text-xs text-primary hover:underline" title="CEEW Sustainable SWM 2024">[122]</a></li>
+                            <li><strong>60,000 TPD new capacity</strong> added: 80% composting/bio-CNG, 20% WtE <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>Bio-CNG: 12,000 TPD</strong> operational (from 3,200 TPD baseline) <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>C&D waste: 15,000 TPD capacity</strong> (from 7,300 TPD)—recycle construction debris <a href="resources.html#ref-cpcb-cd-waste-management-2025" class="text-xs text-primary hover:underline" title="CPCB C&D Waste 2025">[95]</a></li>
+                            <li><strong>&lt;20% waste to landfill</strong> (from 73% baseline)—residual waste only <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Segregation & Collection</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>60% household segregation compliance</strong> (from 15-20% baseline) <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li><strong>100% segregated collection</strong> in 50 pilot cities (no single-bin trucks) <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>85% waste collection coverage</strong> (from 70% baseline)—close the gap <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>Bulk generator compliance: 80%</strong> (hotels, malls, hospitals segregate at source) <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>AI segregation: 300 cities</strong> (from 156 baseline)—automate sorting <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Informal Sector Integration</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>75% waste picker formalization</strong> (from &lt;20% baseline)—dignity + fair wages <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>500 picker cooperatives</strong> operational with direct market access <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>40% value retention</strong> by pickers (from 5-10% baseline)—cut middlemen <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>Social protection coverage: 2M workers</strong> (health, insurance, pension) <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>Recognition in policy:</strong> Waste workers as municipal employees in 20 cities <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Recycling & Circularity</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Plastic recycling: 50%</strong> (from 25-30% baseline)—close the loop <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>E-waste collection: 70%</strong> (from current 30%)—toxic waste off streets <a href="resources.html#ref-cpcb-ewaste-annual-2023-24" class="text-xs text-primary hover:underline" title="CPCB E-waste Annual 2023-24">[94]</a></li>
+                            <li><strong>Organic waste: 90% composted</strong> or bio-CNG (from 30% baseline) <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>MRF coverage: 5,000 facilities</strong> (from 3,200 baseline)—decentralized sorting <a href="resources.html#ref-kushaagra-mrf-india-2024" class="text-xs text-primary hover:underline" title="Kushaagra MRF India 2024">[124]</a></li>
+                            <li><strong>Secondary material market: ₹50,000 Cr/year</strong> (from ₹30,000 Cr baseline) <a href="resources.html#ref-globalrecycling-dry-waste-potential-2024" class="text-xs text-primary hover:underline" title="Global Recycling Dry Waste 2024">[131]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Legacy Waste Remediation</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>500 hectares remediated</strong> (from 320 baseline)—unlock land value <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>300 active remediation projects</strong> (from 156 baseline) <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>50M tonnes legacy waste processed</strong> (20% of 250M tonne backlog) <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>100% leachate treatment</strong> at capped dumpsites (stop groundwater contamination) <a href="resources.html#ref-cwe-landfill-management-2024" class="text-xs text-primary hover:underline" title="CWE Landfill Management 2024">[123]</a></li>
+                            <li><strong>Independent verification</strong> of remediation (no "moving waste elsewhere") <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Budget & Finance Rebalancing</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Budget flip: 40% on treatment</strong> (from &lt;5% baseline)—shift from sweeping <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>User fee collection: 70%</strong> (from &lt;30% baseline)—cost recovery <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Tipping fees: ₹800/tonne</strong> (from ₹200-400 baseline)—full cost recovery <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Outcome-based contracts: 50% of PPPs</strong> (reward diversion, not collection) <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Green bonds: ₹40,000 Cr mobilized</strong> for waste-to-value infrastructure <a href="resources.html#ref-ceew-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="CEEW Circular Economy 2025">[89]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">EPR Enforcement & Accountability</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>EPR compliance: 80%</strong> (from &lt;40% baseline)—manufacturers pay their share <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Verified recycling credits:</strong> Blockchain tracking with on-ground audits <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Plastic ban enforcement:</strong> ₹10,000 fines automated via AI detection <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>E-waste take-back: 15,000+ collection points</strong> by manufacturers <a href="resources.html#ref-cpcb-ewaste-annual-2023-24" class="text-xs text-primary hover:underline" title="CPCB E-waste Annual 2023-24">[94]</a></li>
+                            <li><strong>NGT penalty collection: 50%</strong> (₹40,000 Cr of ₹79,000 Cr backlog) <a href="resources.html#ref-ngt-environmental-compensation-2024" class="text-xs text-primary hover:underline" title="NGT Environmental Compensation 2024">[87]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. SANKEY DIAGRAM -->
+            <div class="bg-gradient-to-br from-purple-50 to-transparent border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-purple-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">🗑️ Waste Flow: Generation to Disposal</h3>
+                <p class="text-sm text-gray-600 italic mb-4">From household generation through collection and segregation to treatment—highlighting where material value is lost</p>
+                <div id="waste-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
+                <p class="text-xs text-gray-500 mt-2">Source: CPCB Annual Report 2024-25, Economic Survey 2025-26 Climate Chapter, TERI Waste Study 2023. Interactive diagram shows 160,000 TPD waste → collection gap → segregation failure → treatment deficit → landfill leakage.</p>
+            </div>
+
+            <!-- 4. HIDDEN DYNAMICS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-amber-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">🔍 Hidden Dynamics: The Systemic Barriers</h3>
+                <p class="text-sm text-gray-600 italic mb-4">India has 4,000+ processing plants but only 25% operate at capacity. The problem isn't technology—it's incentives, ownership confusion, and who captures value from waste.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Ownership & Demands</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>"Waste = municipality's problem":</strong> Citizens expect collection but resist segregation or fees <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>First-mile collection gaps:</strong> 30% waste uncollected—no formal system in slums <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>Bulk generator non-compliance:</strong> Hotels, malls dump mixed waste—only 3 cities enforce penalties <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>Fragmented ownership:</strong> ULBs (collection), State (policy), Centre (rules)—accountability vacuum</li>
+                            <li><strong>No citizen demand:</strong> Waste "out of sight, out of mind"—no electoral pressure for change</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Culture & Narrative</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>"Throwaway culture":</strong> Disposable = convenience—no circular mindset in consumption <a href="resources.html#ref-moefcc-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="MoEFCC Circular Economy 2025">[88]</a></li>
+                            <li><strong>"Pickers = untouchables":</strong> 4M waste workers stigmatized despite doing 80% recycling <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>"Tech will fix it" myth:</strong> AI segregation hyped; household behavior unchanged (15% compliance) <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li><strong>"Cleanliness = sweeping streets":</strong> Swachh Bharat metrics count toilets/sweeping, not waste reduction</li>
+                            <li><strong>"Waste = dirty, recycling = poor":</strong> Middle class won't segregate—"maid's job"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Capacity & Skills</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>ULB technical staff shortage:</strong> Only 20% cities have waste management professionals <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Plant operation incompetence:</strong> 75% plants idle due to lack of trained operators <a href="resources.html#ref-ceew-sustainable-swm-2024" class="text-xs text-primary hover:underline" title="CEEW Sustainable SWM 2024">[122]</a></li>
+                            <li><strong>No waste composition data:</strong> Cities don't audit waste streams—planning by guesswork <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>Enforcement collapse:</strong> Segregation mandates exist; zero inspectors to verify compliance</li>
+                            <li><strong>Contractor dependency:</strong> ULBs outsource everything—lose in-house knowledge and control</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Data & Evidence</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>"97% collection" claimed:</strong> Self-reported by ULBs; ground reality 70%—no verification <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li><strong>Processing data "wildly at odds":</strong> Official stats vs TERI audit show 50% discrepancy <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>Informal sector unquantified:</strong> 4M workers, ₹30K Cr value—not in official statistics <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>No waste audits:</strong> Cities don't track composition, seasonality, or hotspots <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>Digital tracking theatre:</strong> 87% ULBs on CPCB portal but data entry unverified <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Policy & Regulation</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>EPR non-compliance:</strong> &lt;40% manufacturers meet collection targets—no penalty enforcement <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Plastic ban theatre:</strong> SUP banned 2022; no fines levied; usage continues unchecked <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Segregation rules ignored:</strong> 2016 mandate; 8 years later 15% compliance; zero penalties <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li><strong>NGT penalties uncollected:</strong> ₹79,000 Cr levied; &lt;10% recovered—no enforcement mechanism <a href="resources.html#ref-ngt-environmental-compensation-2024" class="text-xs text-primary hover:underline" title="NGT Environmental Compensation 2024">[87]</a></li>
+                            <li><strong>WtE lobby capture:</strong> ₹500+ Cr plants need feedstock forever—undermine recycling targets</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Finance & Capital</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Budget perversity: &lt;5% on treatment:</strong> 70% on sweeping—wrong end of problem <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>User fee non-collection:</strong> &lt;30% households pay—no revenue for services <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Tipping fees below cost:</strong> ₹200-400/tonne charged vs ₹800-1200 needed—plants lose money <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Tonnage contracts perverse incentive:</strong> PPPs paid per tonne collected, not diverted—maximize waste <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Carbon finance untapped:</strong> Landfill gas/WTE can earn ₹5-20 lakh/MW/year—not monetized</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Market & Procurement</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Secondary material markets fragmented:</strong> No aggregation—pickers sell to 100+ middlemen <a href="resources.html#ref-globalrecycling-dry-waste-potential-2024" class="text-xs text-primary hover:underline" title="Global Recycling Dry Waste 2024">[131]</a></li>
+                            <li><strong>EPR credit gaming:</strong> Blockchain shows trades; on-ground recycling unverified <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>No demand for recycled content:</strong> Virgin plastic cheaper—manufacturers won't buy recycled <a href="resources.html#ref-moefcc-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="MoEFCC Circular Economy 2025">[88]</a></li>
+                            <li><strong>E-waste export loophole:</strong> "Refurbished" label hides illegal exports to Africa <a href="resources.html#ref-cpcb-ewaste-annual-2023-24" class="text-xs text-primary hover:underline" title="CPCB E-waste Annual 2023-24">[94]</a></li>
+                            <li><strong>Biomining scams:</strong> Remediation contracts "process" waste by moving it elsewhere</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. SHIFT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-blue-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🌟 Shift: The Transformation Vision</h3>
+                <p class="text-base text-gray-900 mb-4"><strong>Waste systems where prevention is prioritized, materials circulate in closed loops, organics return to soil, informal workers are formalized with dignity, and residual waste approaches zero.</strong></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">What Changes</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>From collection to prevention:</strong> Metrics shift from tonnes processed to tonnes reduced <a href="resources.html#ref-moefcc-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="MoEFCC Circular Economy 2025">[88]</a></li>
+                            <li><strong>From dumping to circularity:</strong> 80% waste diverted—only residual to engineered landfills <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>From informal to formalized:</strong> 3M waste pickers get contracts, social protection, fair prices <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>From sweeping to treatment:</strong> Budget flips—40% on processing, 30% on prevention, 30% on collection <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>From tonnage to outcome contracts:</strong> PPPs rewarded for recycling rates, not collection volume <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Breakthrough Moments</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Segregation becomes norm:</strong> 60% compliance—kids teach parents; social proof cascades <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li><strong>Picker cooperatives thrive:</strong> 500 cooperatives get 40% of ₹50K Cr recycling market value <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>EPR enforcement real:</strong> 80% manufacturers comply; verified recycling—no credit gaming <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Legacy waste unlocks land:</strong> 500 hectares remediated = ₹25,000 Cr real estate value <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>Circular economy visible:</strong> ₹3.5 trillion market by 2030—investors flood waste-to-value sector <a href="resources.html#ref-ceew-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="CEEW Circular Economy 2025">[89]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. MARKERS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-teal-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📈 Markers: Progress Indicators</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">Quantitative Signals</h4>
-                        <ul class="text-sm">
-                            <li>Processing plant capacity utilization (current: 25%, target: 75%+)</li>
-                            <li>AI segregation coverage: <strong>156 cities</strong> (track expansion)</li>
-                            <li>IoT fleet monitoring: <strong>89 cities</strong> (track adoption)</li>
-                            <li>Blockchain EPR: <strong>34 states</strong> (track manufacturer compliance)</li>
-                            <li>Smart bins deployed: <strong>4,850+</strong> (track infrastructure growth)</li>
-                            <li>Budget allocation shift to treatment (from &lt;5%)</li>
-                            <li>Informal worker integration rate (from &lt;20%)</li>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Plant capacity utilization:</strong> 75% target (from 25% baseline)—efficiency over new build <a href="resources.html#ref-ceew-sustainable-swm-2024" class="text-xs text-primary hover:underline" title="CEEW Sustainable SWM 2024">[122]</a></li>
+                            <li><strong>Household segregation compliance:</strong> 60% (from 15-20%)—behavior shift <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></li>
+                            <li><strong>Waste picker formalization:</strong> 75% of 4M workers (from &lt;20%) <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>Plastic recycling rate:</strong> 50% (from 25-30%)—EPR working <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Landfill diversion:</strong> 80% waste treated (from 27% baseline) <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                            <li><strong>Budget reallocation:</strong> 40% on treatment (from &lt;5%)—systemic priority shift <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Bio-CNG output:</strong> 12,000 TPD (from 3,200 TPD)—organic waste valorization <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>Legacy waste remediated:</strong> 500 hectares (from 320)—land reclamation <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
+                    <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">Qualitative Signals</h4>
-                        <ul class="text-sm">
-                            <li>Outcome-based contracts replacing tonnage contracts</li>
-                            <li>Picker cooperatives gaining market share</li>
-                            <li>Independent third-party waste audits adopted</li>
-                            <li>Digital tracking verification (87% ULBs enrolled)</li>
-                            <li>Segregation enforcement with actual penalties</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Strategies</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Addressing Hidden Dynamics</h4>
-                        <ul class="text-sm">
-                            <li><strong>Data Integrity:</strong> Scale AI segregation (156 cities → nationwide); IoT fleet tracking (89 cities → all ULBs)</li>
-                            <li><strong>Perverse Incentives:</strong> Outcome-based contracts; flip budget to treatment</li>
-                            <li><strong>Informal Paradox:</strong> Picker cooperatives; direct market access; value retention</li>
-                            <li><strong>Lab vs Reality:</strong> End-to-end segregated infrastructure; enforcement tech</li>
-                            <li><strong>Political Economy:</strong> Ring-fenced remediation funds; independent oversight</li>
-                            <li><strong>Supply Obsession:</strong> Utilize existing 4,000 plants before building more</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Technology-Enabled Interventions</h4>
-                        <ul class="text-sm">
-                            <li><strong>AI Segregation:</strong> Bengaluru, Hyderabad, Pune models — 97.2% accuracy, 32% cost reduction</li>
-                            <li><strong>Blockchain EPR:</strong> 8,500+ manufacturers registered for producer accountability</li>
-                            <li><strong>IoT Optimization:</strong> Rs. 450 Cr annual fuel savings from route efficiency</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4>System Redesign <a href="resources.html#ref-teri-state-waste-management-2023" style="font-size: 0.7rem;">[119]</a></h4>
-                        <p style="font-size: 0.85rem; color: #4b5563; margin-bottom: 0.5rem;">Current: collect → transport → sort → dump. Should be:</p>
-                        <ol style="font-size: 0.85rem; padding-left: 1.5rem;">
-                            <li><strong>Segregate at source</strong> (with AI-assisted verification)</li>
-                            <li><strong>Process locally</strong> (decentralized MRFs, 3,200+ operational)</li>
-                            <li><strong>Only residual</strong> to sanitary landfill</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Investment & Economic Impact -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-top: 1.5rem; border-left: 4px solid #22c55e;">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Investment & Economic Impact</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Market Size & Investment (2026 Update)</h4>
-                        <ul class="text-sm">
-                            <li><strong>USD 12.84 billion</strong> (2025) → <strong>USD 18.65 billion</strong> (2034) at 4.3% CAGR <a href="resources.html#ref-mordor-waste-management-market-2025" style="font-size: 0.75rem;">[91,101]</a></li>
-                            <li><strong>Rs. 30,980 crore</strong> SBM Urban 2.0 budget (2021-2026) <a href="resources.html#ref-mohua-sbm-progress-2024" style="font-size: 0.75rem;">[84]</a></li>
-                            <li><strong>USD 400M+ PPP pipeline</strong> (West India) — Maharashtra USD 287M <a href="resources.html#ref-iig-waste-pipeline-2025" style="font-size: 0.75rem;">[92]</a></li>
-                            <li><strong>₹20,000 crore</strong> green bonds for waste projects</li>
-                            <li>Carbon credits: <strong>Rs. 5-20 lakh/MW/year</strong> from landfill gas/WTE</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Regional Market Breakdown</h4>
-                        <ul class="text-sm">
-                            <li><strong>West India:</strong> 26.76% market share — mature PPP ecosystems</li>
-                            <li><strong>North India:</strong> 22.15% share, 6.5% CAGR (fastest growing)</li>
-                            <li><strong>South India:</strong> 24.30% share — tech pilot leader</li>
-                            <li><strong>East & Central:</strong> 26.79% share, 2.1% CAGR (slowest)</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">GDP & Economic Benefits</h4>
-                        <ul class="text-sm">
-                            <li><strong>$2 trillion</strong> circular economy value by 2050 <a href="resources.html#ref-moefcc-circular-economy-potential-2025" style="font-size: 0.75rem;">[88,102]</a></li>
-                            <li><strong>₹3.5 trillion/year</strong> circular economy potential by 2030 <a href="resources.html#ref-ceew-circular-economy-potential-2025" style="font-size: 0.75rem;">[89]</a></li>
-                            <li><strong>₹2,460 crore/year</strong> from bio-methanation of 50% wet waste <a href="resources.html#ref-ceew-biomethanation-2024" style="font-size: 0.75rem;">[90]</a></li>
-                            <li><strong>₹1,200 crore/year</strong> savings in collection & transport costs</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Employment Impact</h4>
-                        <ul class="text-sm">
-                            <li><strong>2.4 million jobs</strong> created in waste sector <a href="resources.html#ref-moefcc-circular-economy-potential-2025" style="font-size: 0.75rem;">[88]</a></li>
-                            <li><strong>10 million green jobs</strong> by 2050 across circular economy</li>
-                            <li><strong>1.9 million jobs</strong> from plastic waste recycling by 2047 <a href="resources.html#ref-ceew-green-jobs-waste-2024" style="font-size: 0.75rem;">[100]</a></li>
-                            <li>Formal employment & social protection for 3M+ waste workers</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Environmental Benefits</h4>
-                        <ul class="text-sm">
-                            <li>10+ million tonnes CO₂-eq emissions reduction from bio-methanation <a href="resources.html#ref-ceew-biomethanation-2024" style="font-size: 0.75rem;">[90]</a></li>
-                            <li>Legacy waste remediation: <strong>320 hectares completed</strong></li>
-                            <li>Bio-CNG: <strong>185M m³/year</strong> output, 420K MT CO₂ avoided</li>
-                            <li>Improved public health from dumpsite remediation</li>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Narrative shift:</strong> Media covers "picker cooperatives thrive" not "ULBs fail to collect waste"</li>
+                            <li><strong>Policy enforcement real:</strong> SUP ban fines automated via AI; ₹10K penalties actually levied <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Contract structure change:</strong> 50% of PPPs outcome-based (reward recycling, not tonnage) <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></li>
+                            <li><strong>Community mobilization:</strong> RWAs demand segregated collection—bottom-up pressure</li>
+                            <li><strong>Informal sector recognition:</strong> 20 cities integrate pickers as municipal employees <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                            <li><strong>EPR transparency:</strong> Blockchain credits audited on-ground—gaming exposed <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></li>
+                            <li><strong>Independent verification norm:</strong> Third-party waste audits standard in 100 cities <a href="resources.html#ref-teri-state-waste-management-2023" class="text-xs text-primary hover:underline" title="TERI Waste Management 2023">[119]</a></li>
+                            <li><strong>Circular economy investments:</strong> VC funding floods waste-to-value startups—market signal</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Focus Areas</h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Partner-driven interventions that address hidden dynamics, not add more capacity.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="focus-card">
-                        <div class="focus-card-icon">👷</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Waste Worker Integration</h4>
-                        <p>Hasiru Dala model — formal contracts, social protection, fair prices for 4M+ informal workers</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Informal Paradox</span>
-                        </div>
+            <!-- 7. STRATEGIES -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-indigo-600">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🛠️ Strategies: Intervention Pathways</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Utilize Existing Plants Before Building New</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 4,000+ plants at 25% capacity; 117,500 TPD gap <a href="resources.html#ref-ceew-sustainable-swm-2024" class="text-xs text-primary hover:underline" title="CEEW Sustainable SWM 2024">[122]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Feedstock assurance contracts:</strong> ULBs guarantee segregated waste supply to plants</li>
+                            <li><strong>Operator training programs:</strong> 75% plants idle due to technical incompetence—build capacity</li>
+                            <li><strong>Performance incentives:</strong> Bonus payments for &gt;70% capacity utilization</li>
+                            <li><strong>Segregated collection mandate:</strong> End single-bin trucks—plants need quality feedstock</li>
+                            <li><strong>Target: 75% utilization (from 25%)</strong> = 90,000 TPD capacity unlocked—no new build needed</li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">📋</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Diversion-Based Contracts</h4>
-                        <p>Replace tonnage contracts (rewarding collection) with diversion contracts (rewarding processing)</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Budget Perversity</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Waste Picker Formalization & Cooperatives</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 4M workers do 80% recycling; get 5-10% value <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Hasiru Dala model scale-up:</strong> Picker cooperatives in 100 cities with direct market access</li>
+                            <li><strong>Municipal contracts for cooperatives:</strong> ULBs pay fair wages for segregation/collection services</li>
+                            <li><strong>Social protection coverage:</strong> Health insurance, pension, accident coverage for 2M workers</li>
+                            <li><strong>MRF ownership transfer:</strong> Picker cooperatives operate 500 facilities—value retention</li>
+                            <li><strong>Target: 75% formalization; 40% value share</strong> (from &lt;20%, 5-10%)—equity + efficiency</li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">📊</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Independent Verification</h4>
-                        <p>Third-party audits of 97% collection claims; GPS tracking; weighbridge at processing sites</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Data Integrity</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Outcome-Based Contracts (Not Tonnage)</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> PPPs paid per tonne collected—incentive to maximize waste <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Diversion-based payments:</strong> ₹1,500/tonne recycled vs ₹500/tonne collected</li>
+                            <li><strong>Recycling rate targets:</strong> Contracts require 70% diversion to earn full payment</li>
+                            <li><strong>Waste reduction bonuses:</strong> Pay contractors for reducing per-capita waste generation</li>
+                            <li><strong>Independent verification:</strong> Third-party audits of recycling claims—no self-reporting</li>
+                            <li><strong>Target: 50% of PPPs outcome-based</strong> by Year 3—align incentives with goals</li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🏭</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">MRF Feedstock Assurance</h4>
-                        <p>Address why 4,000+ plants run at 25% capacity — segregation quality, feedstock supply agreements</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: MRF Underutilization</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. EPR Enforcement with Verified Recycling</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> &lt;40% EPR compliance; credit gaming rampant <a href="resources.html#ref-moefcc-plastic-waste-rules-2024" class="text-xs text-primary hover:underline" title="MoEFCC Plastic Waste Rules 2024">[93]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>On-ground audits:</strong> Blockchain EPR credits verified by physical site inspections</li>
+                            <li><strong>Penalty automation:</strong> ₹10 lakh/month fines auto-levied on non-compliant manufacturers</li>
+                            <li><strong>Take-back mandates:</strong> 15,000 collection points by e-waste/battery manufacturers</li>
+                            <li><strong>Recycled content quotas:</strong> 30% recycled plastic mandatory in new packaging by 2028</li>
+                            <li><strong>Target: 80% EPR compliance</strong> (from &lt;40%)—producers pay for end-of-life</li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🤖</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Technology Integration</h4>
-                        <p>AI segregation (156 cities), IoT monitoring (89 cities), Blockchain EPR (34 states) — scaling proven pilots</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Data Integrity</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Budget Flip: Treatment Over Sweeping</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 70% budget on sweeping; &lt;5% on treatment <a href="resources.html#ref-epw-swm-institutional-framework-2023" class="text-xs text-primary hover:underline" title="EPW SWM Framework 2023">[120]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Reallocate 40% to treatment:</strong> Composting, MRFs, bio-CNG plants—shift priorities</li>
+                            <li><strong>User fee collection drive:</strong> 70% collection rate (from &lt;30%)—cost recovery</li>
+                            <li><strong>Tipping fee increase:</strong> ₹800/tonne (from ₹200-400)—full cost recovery for processors</li>
+                            <li><strong>Ring-fence treatment funds:</strong> Earmark SBM grants; no diversion to sweeping</li>
+                            <li><strong>Target: 40% treatment, 30% prevention, 30% collection</strong>—inverse of current 70/25/5</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Segregation Enforcement with AI + Social Pressure</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 15-20% compliance despite 2016 mandate <a href="resources.html#ref-cpcb-swm-consolidated-2020-21" class="text-xs text-primary hover:underline" title="CPCB SWM Consolidated 2020-21">[85]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>AI bin monitoring:</strong> Smart bins detect contamination—instant SMS fines (₹500/violation)</li>
+                            <li><strong>Community champions:</strong> RWA leaders trained; peer pressure cascades—60% compliance target</li>
+                            <li><strong>School curriculum:</strong> Kids learn segregation; teach parents—generational shift</li>
+                            <li><strong>Color-coded infrastructure:</strong> Wet/dry/hazardous bins at every household—no excuse</li>
+                            <li><strong>Target: 60% compliance (from 15-20%)</strong>—behavior change via tech + social norms</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Legacy Waste Remediation with Independent Verification</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 250M tonnes legacy waste; biomining scams rampant <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Third-party oversight:</strong> Independent engineers verify remediation—no "moving waste"</li>
+                            <li><strong>Land value capture:</strong> 50% of unlocked real estate value funds remediation—self-financing</li>
+                            <li><strong>Leachate treatment mandatory:</strong> All capped dumps treat groundwater contamination</li>
+                            <li><strong>Public dashboards:</strong> Monthly satellite imagery shows remediation progress—accountability</li>
+                            <li><strong>Target: 500 hectares remediated</strong> = ₹25,000 Cr land value unlocked + pollution stopped</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. ECONOMIC IMPACT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-rose-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💰 Economic Impact: Costs, Externalities, Opportunities</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Current Costs & Externalities</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Land degradation: ₹15,000 Cr/year</strong> from 2,300+ dumpsites (250M tonnes legacy waste) <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>Health costs: ₹8,000 Cr/year</strong> from dumpsite pollution (respiratory, vector-borne diseases)</li>
+                            <li><strong>Groundwater contamination:</strong> Leachate affects 100M+ people—treatment costs incalculable</li>
+                            <li><strong>Methane emissions: 12 MtCO2e/year</strong> from organic waste dumping <a href="resources.html#ref-ceew-biomethanation-2024" class="text-xs text-primary hover:underline" title="CEEW Biomethanation 2024">[90]</a></li>
+                            <li><strong>Material value lost: ₹30,000 Cr/year</strong> recyclables to landfills <a href="resources.html#ref-globalrecycling-dry-waste-potential-2024" class="text-xs text-primary hover:underline" title="Global Recycling Dry Waste 2024">[131]</a></li>
+                            <li><strong>Informal sector exploitation:</strong> 4M workers generate ₹30K Cr; get ₹3K Cr (10% share) <a href="resources.html#ref-ilo-informal-waste-sector-2023" class="text-xs text-primary hover:underline" title="ILO Informal Waste Sector 2023">[96]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Economic Benefits</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Circular economy value: ₹3.5 trillion/year by 2030</strong> (waste-to-resource transition) <a href="resources.html#ref-ceew-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="CEEW Circular Economy 2025">[89]</a></li>
+                            <li><strong>Bio-CNG revenue: ₹2,460 Cr/year</strong> from 50% wet waste processing <a href="resources.html#ref-ceew-biomethanation-2024" class="text-xs text-primary hover:underline" title="CEEW Biomethanation 2024">[90]</a></li>
+                            <li><strong>Recycling market growth: ₹50,000 Cr/year</strong> (from ₹30K Cr)—formal sector capture <a href="resources.html#ref-globalrecycling-dry-waste-potential-2024" class="text-xs text-primary hover:underline" title="Global Recycling Dry Waste 2024">[131]</a></li>
+                            <li><strong>Legacy waste land unlock: ₹25,000 Cr</strong> real estate value from 500 hectares remediated <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>Carbon credits: ₹5-20 lakh/MW/year</strong> from landfill gas/WtE projects</li>
+                            <li><strong>Collection cost savings: ₹1,200 Cr/year</strong> from IoT route optimization <a href="resources.html#ref-cpcb-swm-annual-2024" class="text-xs text-primary hover:underline" title="CPCB SWM Annual 2024">[83]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Investment Opportunity & Employment</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Market size: USD 12.84 billion (2025) → USD 18.65 billion (2034)</strong> at 4.3% CAGR <a href="resources.html#ref-mordor-waste-management-market-2025" class="text-xs text-primary hover:underline" title="Mordor Waste Market 2025">[91]</a></li>
+                            <li><strong>SBM 2.0 budget: ₹30,980 Cr (2021-26)</strong>—public investment anchor <a href="resources.html#ref-mohua-sbm-progress-2024" class="text-xs text-primary hover:underline" title="MoHUA SBM Progress 2024">[84]</a></li>
+                            <li><strong>Green bonds: ₹40,000 Cr mobilized</strong> for waste-to-value infrastructure <a href="resources.html#ref-ceew-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="CEEW Circular Economy 2025">[89]</a></li>
+                            <li><strong>Employment: 2.4M jobs created</strong> in formal waste sector <a href="resources.html#ref-moefcc-circular-economy-potential-2025" class="text-xs text-primary hover:underline" title="MoEFCC Circular Economy 2025">[88]</a></li>
+                            <li><strong>Plastic recycling jobs: 1.9M by 2047</strong> (circular economy transition) <a href="resources.html#ref-ceew-green-jobs-waste-2024" class="text-xs text-primary hover:underline" title="CEEW Green Jobs Waste 2024">[100]</a></li>
+                            <li><strong>PPP pipeline: USD 400M+ (West India)</strong>—Maharashtra USD 287M <a href="resources.html#ref-iig-waste-pipeline-2025" class="text-xs text-primary hover:underline" title="IIG Waste Pipeline 2025">[92]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. FOCUS AREAS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-orange-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Focus Areas: Partner-Driven Interventions</h3>
+                <p class="text-sm text-gray-600 italic mb-4">Investment opportunities that address hidden dynamics and unlock systemic change—not just add capacity.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-3xl mb-2">👷</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Waste Picker Cooperatives</h4>
+                        <p class="text-sm text-gray-700 mb-2">Hasiru Dala model—formalize 3M workers; 40% value retention; social protection; MRF ownership</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Informal Sector Paradox</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">📋</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Outcome-Based Contracts</h4>
+                        <p class="text-sm text-gray-700 mb-2">Replace tonnage PPPs with diversion-based payments—₹1,500/tonne recycled vs ₹500 collected</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Perverse Incentives</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">📊</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Independent Waste Audits</h4>
+                        <p class="text-sm text-gray-700 mb-2">Third-party verification of 97% collection claims—GPS tracking, weighbridges, satellite monitoring</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Data Integrity Crisis</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🏭</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Plant Utilization Programs</h4>
+                        <p class="text-sm text-gray-700 mb-2">Feedstock assurance + operator training—75% utilization of 4,000 plants before new build</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Capacity Underutilization</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🤖</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">AI Segregation Scale-Up</h4>
+                        <p class="text-sm text-gray-700 mb-2">300 cities (from 156)—97.2% accuracy, 32% cost reduction, instant fine automation</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Lab vs Reality Gap</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">♻️</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">EPR Verified Recycling</h4>
+                        <p class="text-sm text-gray-700 mb-2">On-ground audits of blockchain credits—80% compliance, no gaming, recycled content quotas</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Policy Non-Enforcement</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🌱</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Bio-CNG Plant Network</h4>
+                        <p class="text-sm text-gray-700 mb-2">12,000 TPD capacity—₹2,460 Cr/year revenue, 10M tonnes CO₂ avoided, organic waste valorization</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Supply Obsession</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🏗️</div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Legacy Waste Remediation Oversight</h4>
+                        <p class="text-sm text-gray-700 mb-2">Independent verification; land value capture—500 hectares, ₹25K Cr real estate unlocked</p>
+                        <p class="text-xs text-gray-600 italic">Dynamic: Political Economy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. REGIONAL STRATEGY -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm border-l-4 border-l-red-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🗺️ Regional Strategy: Tier-Based Implementation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Tier 1 Cities (10 metros)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Focus:</strong> Utilize existing 75% of 4,000 plants; scale picker cooperatives; EPR enforcement</li>
+                            <li><strong>Tech:</strong> AI segregation 100% coverage; IoT fleet tracking; blockchain EPR audits</li>
+                            <li><strong>Outcome contracts:</strong> 100% PPPs diversion-based by Year 3</li>
+                            <li><strong>Target:</strong> 80% waste diverted; &lt;20% to engineered landfills</li>
+                            <li><strong>Investment:</strong> ₹15,000 Cr—tech + formalization + legacy remediation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Tier 2 Cities (50 cities)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Focus:</strong> Decentralized MRFs (3,200 → 5,000); bio-CNG for organic waste; bulk generator enforcement</li>
+                            <li><strong>Tech:</strong> Smart bins; digital tracking; AI segregation in 50% cities</li>
+                            <li><strong>Segregation drive:</strong> 60% household compliance via RWA champions + school programs</li>
+                            <li><strong>Target:</strong> 70% waste diverted; close collection gap to 85%</li>
+                            <li><strong>Investment:</strong> ₹10,000 Cr—MRF network + bio-CNG plants + collection infra</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Tier 3/4 Cities (&gt;100 cities)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Focus:</strong> Basic segregated collection; community composting; informal sector integration</li>
+                            <li><strong>Low-tech solutions:</strong> Two-bin system; ward-level MRFs; picker cooperatives</li>
+                            <li><strong>Capacity building:</strong> ULB staff training; enforcement of 2016 rules</li>
+                            <li><strong>Target:</strong> 50% waste diverted; 100% segregated collection (no single-bin trucks)</li>
+                            <li><strong>Investment:</strong> ₹5,000 Cr—collection vehicles + MRFs + training programs</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- WATER SECTOR -->
-        <div class="sector-content-panel hidden" id="water">
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Baseline (Current Status)</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -2763,6 +2914,505 @@
                 </div>
             </div>
         </div>
+<div class="sector-content-panel hidden" id="water">
+            <!-- 1. BASELINE -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📊 Baseline: Current Water Status</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Rural Water Supply (JJM)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>81.31% rural tap connections</strong> (15.7 Cr households covered under JJM) <a href="resources.html#ref-jjm-dashboard-2025" class="text-xs text-primary hover:underline" title="Jal Jeevan Mission Dashboard 2025">[104]</a></li>
+                            <li><strong>₹3.6 Lakh Cr invested</strong> since 2019 (60:40 Centre:State funding) <a href="resources.html#ref-dea-economic-survey-water-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Water">[178]</a></li>
+                            <li>Remaining <strong>18.69% gap</strong> concentrated in UP, Bihar, WB, Jharkhand <a href="resources.html#ref-jjm-dashboard-2025" class="text-xs text-primary hover:underline" title="Jal Jeevan Mission Dashboard 2025">[104]</a></li>
+                            <li><strong>Functionality crisis:</strong> 10-15% taps non-functional within 2 years due to O&M gaps <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li>Source sustainability unclear: <strong>40% JJM schemes</strong> rely on over-exploited aquifers <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Urban Water Supply Crisis</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>70% urban coverage</strong> but only <strong>2-3 hrs/day supply</strong> in 60% cities <a href="resources.html#ref-teri-urban-water-supply-2023" class="text-xs text-primary hover:underline" title="TERI Urban Water Supply 2023">[111]</a></li>
+                            <li>Design: <strong>135 LPCD</strong> (liters per capita per day) vs actual: <strong>70-90 LPCD</strong> <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>40-50% Non-Revenue Water (NRW):</strong> Leaks, theft, unmeasured supply drain budgets <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Tanker economy:</strong> Bengaluru spends ₹500 Cr/year on private water trucks <a href="resources.html#ref-dte-tanker-economy-bangalore-2024" class="text-xs text-primary hover:underline" title="DTE Tanker Economy Bangalore 2024">[146]</a> <a href="resources.html#ref-wateralternatives-mafias-waterscape-2014" class="text-xs text-primary hover:underline" title="Water Alternatives: Mafias Waterscape 2014">[147]</a></li>
+                            <li><strong>Metering: &lt;30%</strong> households billed on consumption; rest flat rates (no conservation incentive) <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Groundwater Depletion</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>89% groundwater extraction</strong> for irrigation; 85% free electricity in Punjab, Haryana <a href="resources.html#ref-iwp-rice-wheat-subsidies-groundwater-2024" class="text-xs text-primary hover:underline" title="IWP Rice-Wheat Subsidies Groundwater 2024">[151]</a></li>
+                            <li><strong>1,186 over-exploited blocks</strong> (30% of assessed units) across 17 states <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li>Water table dropping <strong>1-2 meters/year</strong> in Northwest India <a href="resources.html#ref-nature-groundwater-depletion-food-security-2022" class="text-xs text-primary hover:underline" title="Nature: Groundwater Depletion Food Security 2022">[152]</a></li>
+                            <li><strong>No regulation:</strong> Groundwater abstraction license-free in most states; open-access tragedy <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></li>
+                            <li><strong>25% urban water</strong> from groundwater (unmetered borewells in Bengaluru, Chennai) <a href="resources.html#ref-atree-bengaluru-water-future-2023" class="text-xs text-primary hover:underline" title="ATREE Bengaluru Water Future 2023">[118]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Wastewater Treatment Gap</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>72,368 MLD sewage generated;</strong> only <strong>31,841 MLD treatment capacity</strong> (44% gap) <a href="resources.html#ref-cpcb-stp-inventory-2024" class="text-xs text-primary hover:underline" title="CPCB STP Inventory 2024">[107]</a></li>
+                            <li>Of 1,640 STPs, <strong>522 (32%) non-functional</strong> due to O&M failures, power costs <a href="resources.html#ref-sandrp-non-functional-stp-2025" class="text-xs text-primary hover:underline" title="SANDRP Non-Functional STP 2025">[143]</a></li>
+                            <li><strong>70% sewage untreated</strong> flows into rivers, lakes, groundwater—pollution crisis <a href="resources.html#ref-nmcg-namami-gange-2024" class="text-xs text-primary hover:underline" title="NMCG Namami Gange 2024">[108]</a></li>
+                            <li><strong>&lt;5% treated wastewater reused</strong> (vs Israel 90%, Singapore 40%) <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>Regulatory gap:</strong> Discharge standards weak; industries discharge untreated effluent into STPs <a href="resources.html#ref-dte-water-reuse-roadblocks-2024" class="text-xs text-primary hover:underline" title="DTE Water Reuse Roadblocks 2024">[144]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Utility Financial Distress</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Tariffs recover 30-40% O&M costs</strong> only; capital costs never recovered <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Non-creditworthy utilities:</strong> Cannot borrow for NRW reduction, metering upgrades <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Cross-subsidies fail:</strong> Rich bypass grid via borewells; poor pay high tanker rates <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                            <li><strong>Political tariff freeze:</strong> No increase in 10-15 years in many cities—utilities bankrupt <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>STP operational costs unrecoverable:</strong> Power ₹20-30 Cr/year; no revenue from reuse <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Water-Energy Nexus</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>7% national electricity</strong> consumed by water pumping (surface + groundwater) <a href="resources.html#ref-iea-water-energy-nexus-2024" class="text-xs text-primary hover:underline" title="IEA Water-Energy Nexus 2024">[106]</a></li>
+                            <li><strong>Agricultural pumps:</strong> 21 million energized (85% free/subsidized electricity) <a href="resources.html#ref-iwp-rice-wheat-subsidies-groundwater-2024" class="text-xs text-primary hover:underline" title="IWP Rice-Wheat Subsidies Groundwater 2024">[151]</a></li>
+                            <li><strong>Urban water supply: 3-4% city budgets</strong> on electricity for pumping, treatment <a href="resources.html#ref-iea-water-energy-nexus-2024" class="text-xs text-primary hover:underline" title="IEA Water-Energy Nexus 2024">[106]</a></li>
+                            <li><strong>Wastewater treatment energy-intensive:</strong> ₹5-8/m³ operational cost; makes reuse unviable <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                            <li><strong>NRW = wasted energy:</strong> 40-50% treated water lost → 40-50% pumping energy wasted <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. TARGETS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-primary">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Targets: Year 3 Milestones</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Urban Metering & NRW Reduction</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>10 cities with 80%+ metering</strong> coverage (smart meters with real-time data) <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>NRW reduced to 25%</strong> in pilot cities (from 40-50% baseline) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Consumption-based billing:</strong> 50% households shifted from flat to volumetric tariffs <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Tariff reforms:</strong> 5 utilities achieving 75%+ O&M cost recovery (creditworthy) <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Wastewater Reuse & Circular Economy</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>25% of treated wastewater reused</strong> (vs current 5%)—industrial cooling, horticulture, aquifer recharge <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>100 STPs with dual-pipe systems</strong> supplying reclaimed water to industries, parks <a href="resources.html#ref-dte-water-reuse-roadblocks-2024" class="text-xs text-primary hover:underline" title="DTE Water Reuse Roadblocks 2024">[144]</a></li>
+                            <li><strong>Wastewater pricing:</strong> Reclaimed water sold at ₹15-20/m³ (vs ₹30-40 potable water) <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                            <li><strong>STP operational cost recovery:</strong> 20% via reuse revenue + energy cogeneration <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Groundwater Governance</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>5 states with groundwater abstraction licensing</strong> in over-exploited blocks <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li><strong>200 recharge structures operational</strong> in urban areas (AMRUT 2.0 co-investment) <a href="resources.html#ref-pib-amrut-2-framework-2021" class="text-xs text-primary hover:underline" title="PIB AMRUT 2.0 Framework 2021">[145]</a></li>
+                            <li><strong>Aquifer mapping completed</strong> in 10 cities—real-time water table monitoring <a href="resources.html#ref-cgwb-artificial-recharge-2024" class="text-xs text-primary hover:underline" title="CGWB Artificial Recharge 2024">[117]</a></li>
+                            <li><strong>Rainwater harvesting (RWH) compliance:</strong> 50% new buildings in 20 cities (enforcement via building permits) <a href="resources.html#ref-kgwa-rwh-compliance-2023" class="text-xs text-primary hover:underline" title="KGWA RWH Compliance 2023">[115]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">JJM Functionality Assurance</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>10 states with O&M fund pooling</strong>—panchayat contributions matched by state (sustainability) <a href="resources.html#ref-jjm-dashboard-2025" class="text-xs text-primary hover:underline" title="Jal Jeevan Mission Dashboard 2025">[104]</a></li>
+                            <li><strong>Source sustainability audits:</strong> 30% JJM schemes assessed for aquifer over-extraction <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li><strong>IoT sensor retrofits:</strong> 50,000 village schemes with real-time flow/pressure monitoring <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li><strong>Non-functionality reduced to &lt;5%</strong> via predictive maintenance systems <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Equity & Slum Access</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>100 informal settlements</strong> with piped connections (vs tanker dependence) <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                            <li><strong>Tanker economy shrinkage:</strong> 30% reduction in private water truck sales (Bengaluru pilot) <a href="resources.html#ref-dte-tanker-economy-bangalore-2024" class="text-xs text-primary hover:underline" title="DTE Tanker Economy Bangalore 2024">[146]</a></li>
+                            <li><strong>Lifeline tariff structures:</strong> First 50 LPCD free; progressive pricing above (affordability + conservation) <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                            <li><strong>Gender impact tracking:</strong> Women's water collection time reduced by 50% in JJM villages <a href="resources.html#ref-nfhs-water-sanitation-2021" class="text-xs text-primary hover:underline" title="NFHS Water Sanitation 2021">[109]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Institutional Capacity</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Water regulators established</strong> in 5 states—tariff approval, service quality standards <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>500 WTP/STP operators trained</strong> in energy-efficient operations, reuse systems <a href="resources.html#ref-cpcb-stp-inventory-2024" class="text-xs text-primary hover:underline" title="CPCB STP Inventory 2024">[107]</a></li>
+                            <li><strong>Utility performance benchmarking:</strong> 50 cities publishing NRW, cost recovery, hours of supply data <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Public disclosure portals:</strong> Real-time water quality, supply hours, tariff data in 20 cities <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. SANKEY DIAGRAM -->
+            <div class="bg-gradient-to-br from-purple-50 to-transparent border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-purple-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">💧 Urban Water Cycle: Source to Sink</h3>
+                <p class="text-sm text-gray-600 italic mb-4">From source abstraction through distribution losses to wastewater—showing where efficiency and reuse create leverage</p>
+                <div id="water-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
+                <p class="text-xs text-gray-500 mt-2">Source: CPCB STP Inventory 2024, NIUA Service Benchmarks, World Bank Water Security. Interactive diagram shows water flow → NRW losses → wastewater generation → reuse potential.</p>
+            </div>
+
+            <!-- 4. HIDDEN DYNAMICS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-amber-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">🔍 Hidden Dynamics: The Systemic Barriers</h3>
+                <p class="text-sm text-gray-600 italic mb-4">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Ownership & Demands</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Free/subsidized water expectation:</strong> "Water is a right" → tariff hikes politically toxic; utilities chronically underfunded <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>Groundwater as open access:</strong> No owner → everyone extracts; tragedy of commons in 1,186 over-exploited blocks <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></li>
+                            <li><strong>Fragmented urban governance:</strong> Water supply (ULB), sewage (parastatal), groundwater (state)—no single owner <a href="resources.html#ref-banerjee-urban-self-governance-2021" class="text-xs text-primary hover:underline" title="Banerjee Urban Self-Governance 2021">[149]</a></li>
+                            <li><strong>JJM ownership ambiguity:</strong> Village panchayat "owns" O&M but lacks funds, technical capacity <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li><strong>Tanker mafia vested interests:</strong> Private operators profit from scarcity; resist grid expansion <a href="resources.html#ref-wateralternatives-mafias-waterscape-2014" class="text-xs text-primary hover:underline" title="Water Alternatives: Mafias Waterscape 2014">[147]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Culture & Narrative</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>"Water is free natural resource":</strong> Cultural expectation of free/cheap water blocks tariff reforms needed for sustainability <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>Wastewater stigma:</strong> "Dirty water" narrative prevents acceptance of treated reuse for industry, parks <a href="resources.html#ref-dte-water-reuse-roadblocks-2024" class="text-xs text-primary hover:underline" title="DTE Water Reuse Roadblocks 2024">[144]</a></li>
+                            <li><strong>Metering resistance:</strong> Households see meters as "revenue extraction," not conservation tool <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Monsoon dependence myth:</strong> "Rain will fill tanks" delays conservation action till crisis hits <a href="resources.html#ref-atree-bengaluru-water-future-2023" class="text-xs text-primary hover:underline" title="ATREE Bengaluru Water Future 2023">[118]</a></li>
+                            <li><strong>"Supply-side solution only":</strong> Focus on new dams, interbasin transfers ignores demand management (NRW, reuse) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Capacity & Skills</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>WTP operator training gaps:</strong> 60% operators lack certification; energy efficiency, water quality optimization not taught <a href="resources.html#ref-cpcb-stp-inventory-2024" class="text-xs text-primary hover:underline" title="CPCB STP Inventory 2024">[107]</a></li>
+                            <li><strong>NRW reduction expertise scarce:</strong> Leak detection, pressure management require specialized skills absent in most utilities <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Panchayat O&M capacity zero:</strong> JJM schemes handed over but no training on pump repair, water testing <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li><strong>STP operational complexity:</strong> 32% non-functional STPs due to inability to operate tertiary treatment, handle industrial toxics <a href="resources.html#ref-sandrp-non-functional-stp-2025" class="text-xs text-primary hover:underline" title="SANDRP Non-Functional STP 2025">[143]</a></li>
+                            <li><strong>Tariff modeling skills absent:</strong> Utilities can't design progressive tariffs (lifeline + conservation pricing) <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Data & Evidence</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Per capita consumption unknown:</strong> &lt;30% metering → utilities don't know who uses how much; tariff design impossible <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Aquifer depletion rates unmapped:</strong> Groundwater table data exists but not real-time, not publicly accessible <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li><strong>NRW measurement inconsistent:</strong> Cities self-report 15-20% but audits show 40-50%—underreporting hides problem <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>STP performance data missing:</strong> 1,640 STPs but only 500 report actual vs design flow; efficiency unknown <a href="resources.html#ref-cpcb-stp-inventory-2024" class="text-xs text-primary hover:underline" title="CPCB STP Inventory 2024">[107]</a></li>
+                            <li><strong>JJM functionality not tracked:</strong> 81% tap connections but no IoT data on hours of supply, pressure, quality <a href="resources.html#ref-jjm-dashboard-2025" class="text-xs text-primary hover:underline" title="Jal Jeevan Mission Dashboard 2025">[104]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Policy & Regulation</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Groundwater abstraction unregulated:</strong> License-free extraction in most states; no enforcement in over-exploited blocks <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></li>
+                            <li><strong>Treated wastewater discharge standards weak:</strong> No incentive for tertiary treatment; industries discharge into STPs <a href="resources.html#ref-dte-water-reuse-roadblocks-2024" class="text-xs text-primary hover:underline" title="DTE Water Reuse Roadblocks 2024">[144]</a></li>
+                            <li><strong>RWH mandates unenforced:</strong> 10+ states have laws but no building permit checks; &lt;20% compliance <a href="resources.html#ref-kgwa-rwh-compliance-2023" class="text-xs text-primary hover:underline" title="KGWA RWH Compliance 2023">[115]</a></li>
+                            <li><strong>No water regulator in most states:</strong> Tariffs set politically, not by independent regulator; cost recovery impossible <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>STP O&M standards absent:</strong> No minimum uptime, energy efficiency norms—operators run plants inefficiently <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Finance & Capital</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Tariffs cover 30-40% O&M only:</strong> No capital recovery; utilities depend on grants—non-creditworthy <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>NRW reduction ROI unknown:</strong> Fixing 40% leaks saves ₹100+ Cr/year but utilities can't borrow for pipes <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>STP power costs unrecoverable:</strong> ₹20-30 Cr/year electricity but no revenue from reuse—operations unsustainable <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                            <li><strong>Cross-subsidy model broken:</strong> Rich extract groundwater (bypass tariff); poor pay ₹50-100/tanker <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                            <li><strong>JJM capital-heavy, O&M unfunded:</strong> ₹3.6L Cr capex but no recurring budget for repairs, electricity <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Market & Procurement</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Wastewater reuse market absent:</strong> No buyers at scale for reclaimed water; industries prefer "free" groundwater <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>Decentralized tech supply chains thin:</strong> Modular STPs, smart meters available but procurement specs favor large centralized systems <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                            <li><strong>Tanker economy distorts prices:</strong> ₹500 Cr/year Bengaluru tanker market blocks utility reform incentives <a href="resources.html#ref-dte-tanker-economy-bangalore-2024" class="text-xs text-primary hover:underline" title="DTE Tanker Economy Bangalore 2024">[146]</a></li>
+                            <li><strong>Recharge structure market immature:</strong> No standardized designs; each city reinvents wheel at 3x cost <a href="resources.html#ref-cgwb-artificial-recharge-2024" class="text-xs text-primary hover:underline" title="CGWB Artificial Recharge 2024">[117]</a></li>
+                            <li><strong>Performance contracts rare:</strong> O&M outsourcing on "cost-plus" not "service-level"—no efficiency incentive <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. SHIFT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-blue-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🌟 Shift: The Transformation Vision</h3>
+                <p class="text-base text-gray-900 mb-4"><strong>Water systems where every drop is metered, wastewater is a resource, aquifers are recharged, utilities are creditworthy, and access is equitable.</strong></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">What Changes</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>From flat tariffs to volumetric pricing:</strong> 80% households billed on consumption → conservation incentive built-in <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>From NRW tolerance to zero-loss mindset:</strong> 40% leakage normalized → 25% target with leak detection tech, pressure zones <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>From wastewater disposal to reuse revenue:</strong> STPs as cost centers → revenue generators (industrial sales, aquifer recharge credits) <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>From open-access to regulated groundwater:</strong> 1,186 over-exploited blocks → licensing, real-time monitoring, abstraction caps <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></li>
+                            <li><strong>From grant-dependent to creditworthy utilities:</strong> 30-40% cost recovery → 75%+ (tariff reform + NRW reduction) enables borrowing <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>From tanker dependence to piped equity:</strong> Slums paying ₹50-100/tanker → lifeline tariff (first 50 LPCD free) <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Breakthrough Moments</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Real-time metering transparency:</strong> Every household sees consumption dashboard → 15-20% demand reduction without new supply <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Wastewater-as-commodity market:</strong> Industries buy reclaimed water at ₹15/m³ (vs ₹40 potable)—STP operational costs recovered <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                            <li><strong>Aquifer recharge performance contracts:</strong> Recharge structures paid per million liters recharged (verified by piezometers)—accountability built-in <a href="resources.html#ref-cgwb-artificial-recharge-2024" class="text-xs text-primary hover:underline" title="CGWB Artificial Recharge 2024">[117]</a></li>
+                            <li><strong>Independent water regulators:</strong> Tariff hikes approved based on cost-of-service → depoliticized pricing <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>JJM IoT sensor retrofits:</strong> 50,000 village schemes with predictive maintenance → non-functionality drops from 15% to &lt;5% <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li><strong>Tanker mafia disruption:</strong> 24/7 piped supply + metering → ₹500 Cr Bengaluru tanker market shrinks 30% <a href="resources.html#ref-dte-tanker-economy-bangalore-2024" class="text-xs text-primary hover:underline" title="DTE Tanker Economy Bangalore 2024">[146]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. MARKERS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-teal-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📈 Markers: Progress Indicators</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Quantitative Signals</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>NRW reduction trend:</strong> 40% baseline → 25% target (city-by-city leakage audits) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Metering penetration:</strong> % households with smart meters (80% target) <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Wastewater reuse rate:</strong> 5% baseline → 25% target (MLD reused vs generated) <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>Utility cost recovery ratio:</strong> Tariff revenue ÷ O&M costs (75%+ = creditworthy) <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>Groundwater table stabilization:</strong> Piezometer data in over-exploited blocks (1-2m/year depletion → flat) <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li><strong>STP operational efficiency:</strong> Actual vs design flow (% capacity utilization) + energy per m³ treated <a href="resources.html#ref-cpcb-stp-inventory-2024" class="text-xs text-primary hover:underline" title="CPCB STP Inventory 2024">[107]</a></li>
+                            <li><strong>JJM functionality rate:</strong> % taps with &gt;8 hrs/day supply (IoT sensor verified) <a href="resources.html#ref-jjm-dashboard-2025" class="text-xs text-primary hover:underline" title="Jal Jeevan Mission Dashboard 2025">[104]</a></li>
+                            <li><strong>Tanker economy shrinkage:</strong> Private water truck sales trend (30% reduction target) <a href="resources.html#ref-dte-tanker-economy-bangalore-2024" class="text-xs text-primary hover:underline" title="DTE Tanker Economy Bangalore 2024">[146]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Qualitative Signals</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Tariff reform political feasibility:</strong> Number of ULBs approving volumetric tariffs without backlash <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Wastewater reuse acceptance:</strong> Industries publicly sourcing reclaimed water for cooling, horticulture <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>State regulator establishment:</strong> Number of states with independent water tariff authorities operational <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>Groundwater abstraction licensing uptake:</strong> States enforcing borewell permits in over-exploited blocks <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></li>
+                            <li><strong>Community-led O&M models:</strong> Panchayats successfully pooling funds for JJM scheme sustainability <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li><strong>Utility performance benchmarking transparency:</strong> Cities publishing real-time NRW, supply hours, tariff data <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Slum piped connection expansion:</strong> Informal settlements demanding grid access vs tanker dependence <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                            <li><strong>RWH enforcement via building permits:</strong> Municipalities rejecting approvals for non-compliance <a href="resources.html#ref-kgwa-rwh-compliance-2023" class="text-xs text-primary hover:underline" title="KGWA RWH Compliance 2023">[115]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. STRATEGIES -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-indigo-600">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🛠️ Strategies: Intervention Pathways</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Citywide Smart Metering & NRW Reduction</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 40-50% NRW, &lt;30% metering → utilities don't know consumption, can't price water <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Deploy smart meters at 80% households in 10 cities—real-time consumption dashboards for residents</li>
+                            <li>Leak detection surveys + pressure management zones → reduce NRW from 40% to 25%</li>
+                            <li>Shift from flat tariffs to volumetric pricing (first 50 LPCD lifeline + progressive tiers)</li>
+                            <li>Public disclosure: NRW, hours of supply, tariff benchmarks → peer pressure accountability <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Wastewater-to-Resource Value Chains</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 70% sewage untreated; &lt;5% reused → pollution + missed revenue <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Dual-pipe systems in 100 STPs—supply reclaimed water to industries, parks, aquifer recharge</li>
+                            <li>Wastewater pricing: Sell reclaimed water at ₹15-20/m³ (vs ₹40 potable)—revenue offsets STP operational costs</li>
+                            <li>Performance contracts for STP O&M: Pay operators per m³ reused (not flat fee)—efficiency incentive</li>
+                            <li>Energy cogeneration from sludge: Biogas from anaerobic digesters → offset electricity costs <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Groundwater Governance & Recharge Infrastructure</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 1,186 over-exploited blocks; abstraction unregulated; open-access tragedy <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Groundwater abstraction licensing in 5 states (over-exploited blocks)—borewell permits tied to recharge compliance</li>
+                            <li>Real-time aquifer monitoring: 10 cities with piezometer networks → public water table dashboards</li>
+                            <li>Recharge structure performance contracts: Pay per million liters recharged (sensor-verified)—not lump-sum capex <a href="resources.html#ref-cgwb-artificial-recharge-2024" class="text-xs text-primary hover:underline" title="CGWB Artificial Recharge 2024">[117]</a></li>
+                            <li>RWH enforcement via building permits: Municipalities reject approvals without functional RWH systems <a href="resources.html#ref-kgwa-rwh-compliance-2023" class="text-xs text-primary hover:underline" title="KGWA RWH Compliance 2023">[115]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Utility Creditworthiness via Tariff Reform</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 30-40% cost recovery → utilities non-creditworthy; can't borrow for NRW reduction <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Establish independent water regulators in 5 states—tariff approval based on cost-of-service (depoliticized)</li>
+                            <li>Tariff design workshops: Progressive pricing (lifeline + conservation tiers)—affordability + sustainability</li>
+                            <li>Utility performance contracts: Link grants to 75%+ cost recovery achievement—accountability built-in</li>
+                            <li>Public campaigns: "Pay for water, not for tankers" messaging → shift narrative from "free water right" to "service quality" <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. JJM Functionality Assurance via IoT + O&M Pooling</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 10-15% JJM taps non-functional within 2 years; panchayat O&M capacity zero <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>IoT sensor retrofits: 50,000 village schemes with real-time flow, pressure, quality monitoring → predictive maintenance</li>
+                            <li>O&M fund pooling: Panchayat contributions matched by state (₹2-5 per household/month)—sustainability fund</li>
+                            <li>Mobile repair teams: District-level technicians trained on pump repair, water testing → 24-hour response SLA</li>
+                            <li>Source sustainability audits: 30% JJM schemes assessed for aquifer over-extraction; failing schemes get recharge infrastructure <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Slum Water Equity via Piped Expansion</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> Informal settlements pay ₹50-100/tanker; tanker mafia profits from scarcity <a href="resources.html#ref-wateralternatives-mafias-waterscape-2014" class="text-xs text-primary hover:underline" title="Water Alternatives: Mafias Waterscape 2014">[147]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Piped connections to 100 informal settlements—prepaid smart meters with lifeline tariff (first 50 LPCD free)</li>
+                            <li>Community water committees: Residents co-manage supply, report issues → ownership + accountability</li>
+                            <li>Tanker economy disruption tracking: Monitor private water truck sales reduction (30% target)</li>
+                            <li>Gender impact measurement: Women's water collection time reduction (50% target) in JJM + slum schemes <a href="resources.html#ref-nfhs-water-sanitation-2021" class="text-xs text-primary hover:underline" title="NFHS Water Sanitation 2021">[109]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Water-Energy Efficiency Integration</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 7% national electricity for water pumping; 40% NRW = wasted energy <a href="resources.html#ref-iea-water-energy-nexus-2024" class="text-xs text-primary hover:underline" title="IEA Water-Energy Nexus 2024">[106]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>WTP/STP energy audits: Optimize pumping schedules, aeration systems → 20-30% energy reduction</li>
+                            <li>Solar-powered village schemes: 10,000 JJM pumps solarized → eliminate electricity O&M burden</li>
+                            <li>Pressure management zones: Reduce pumping pressure in low-demand areas → save energy + reduce leaks</li>
+                            <li>NRW-energy co-benefit tracking: 40% leak reduction = 40% pumping energy saved → quantify climate benefits <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. ECONOMIC IMPACT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-rose-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💰 Economic Impact: Costs, Externalities, Opportunities</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Current Costs & Externalities</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>NRW economic loss: ₹20,000+ Cr/year</strong> (40-50% of treated water lost to leaks, theft) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Utility revenue gap: ₹15,000+ Cr/year</strong> (30-40% cost recovery → grant dependence) <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>STP operational deficits: ₹5,000+ Cr/year</strong> (power costs unrecovered; 32% plants non-functional) <a href="resources.html#ref-indiaspend-sewage-treatment-rehaul-2024" class="text-xs text-primary hover:underline" title="IndiaSpend Sewage Treatment Rehaul 2024">[142]</a></li>
+                            <li><strong>Tanker economy: ₹10,000+ Cr/year</strong> (private water trucks; poor pay 10x grid tariff) <a href="resources.html#ref-dte-tanker-economy-bangalore-2024" class="text-xs text-primary hover:underline" title="DTE Tanker Economy Bangalore 2024">[146]</a></li>
+                            <li><strong>Groundwater depletion externality:</strong> Agricultural productivity decline; borewell depths 200m+ (drilling cost ₹5L+) <a href="resources.html#ref-nature-groundwater-depletion-food-security-2022" class="text-xs text-primary hover:underline" title="Nature: Groundwater Depletion Food Security 2022">[152]</a></li>
+                            <li><strong>Untreated sewage pollution:</strong> River cleaning costs (Namami Gange ₹20,000 Cr) + health impacts <a href="resources.html#ref-nmcg-namami-gange-2024" class="text-xs text-primary hover:underline" title="NMCG Namami Gange 2024">[108]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Economic Benefits</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>NRW reduction savings: ₹15,000 Cr/year</strong> (40% → 25% leakage = 15% water + energy saved) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>Wastewater reuse revenue: ₹5,000+ Cr/year</strong> (25% reuse at ₹15/m³ → industrial sales, aquifer credits) <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>Metering-driven conservation: 15-20% demand reduction</strong> → defer ₹50,000+ Cr new source investments <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>Utility creditworthiness unlocks: ₹1 Lakh Cr borrowing</strong> (75% cost recovery → municipal bond access) <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></li>
+                            <li><strong>Groundwater table stabilization:</strong> Avoid ₹10,000+ Cr/year in deeper borewell drilling, crop loss <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li><strong>Gender dividend: 2+ hours/day saved</strong> (women's water collection time → education, livelihoods) <a href="resources.html#ref-nfhs-water-sanitation-2021" class="text-xs text-primary hover:underline" title="NFHS Water Sanitation 2021">[109]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Investment Opportunity</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>AMRUT 2.0: ₹2.77 Lakh Cr</strong> allocated (water supply, sewerage, recharge structures) <a href="resources.html#ref-pib-amrut-2-framework-2021" class="text-xs text-primary hover:underline" title="PIB AMRUT 2.0 Framework 2021">[145]</a></li>
+                            <li><strong>JJM continuation: ₹1+ Lakh Cr</strong> for O&M sustainability, IoT retrofits, source resilience <a href="resources.html#ref-jjm-dashboard-2025" class="text-xs text-primary hover:underline" title="Jal Jeevan Mission Dashboard 2025">[104]</a></li>
+                            <li><strong>NRW reduction ROI: 3-5 years payback</strong> (meter + leak detection capex vs water + energy saved) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>STP reuse infrastructure: ₹10,000 Cr</strong> (dual pipes, tertiary treatment) → ₹5,000 Cr/year revenue <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>Groundwater recharge: ₹5,000 Cr</strong> (200 structures @ ₹25 Cr each) → stabilize ₹10K+ Cr/year losses <a href="resources.html#ref-cgwb-artificial-recharge-2024" class="text-xs text-primary hover:underline" title="CGWB Artificial Recharge 2024">[117]</a></li>
+                            <li><strong>Climate finance eligibility:</strong> Water efficiency, reuse projects qualify for green bonds, concessional loans <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. INVESTMENTS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-orange-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💵 Investments: Capital Allocation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Capex (Capital Expenditure)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Smart metering (10 cities):</strong> ₹2,000 crore (5M meters @ ₹4,000 each; installation, backend systems) <a href="resources.html#ref-niua-service-benchmarks-2024" class="text-xs text-primary hover:underline" title="NIUA Service Benchmarks 2024">[114]</a></li>
+                            <li><strong>NRW reduction infrastructure:</strong> ₹1,500 crore (leak detection, pressure zones, pipe rehabilitation) <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></li>
+                            <li><strong>STP dual-pipe systems (100 plants):</strong> ₹3,000 crore (distribution network for reclaimed water) <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></li>
+                            <li><strong>Groundwater recharge structures (200):</strong> ₹5,000 crore (percolation tanks, injection wells, managed aquifer recharge) <a href="resources.html#ref-cgwb-artificial-recharge-2024" class="text-xs text-primary hover:underline" title="CGWB Artificial Recharge 2024">[117]</a></li>
+                            <li><strong>JJM IoT sensor retrofits (50,000 schemes):</strong> ₹500 crore (flow, pressure, quality sensors + data platforms) <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></li>
+                            <li><strong>Slum piped connections (100 settlements):</strong> ₹1,000 crore (last-mile network, prepaid meters) <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></li>
+                            <li><strong>Total Capex:</strong> ₹13,000 crore (~$1.6B) over 3 years</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Opex (Operational Expenditure)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Meter data management & customer portals:</strong> ₹100 crore/year (cloud infrastructure, helpdesk, billing systems)</li>
+                            <li><strong>NRW monitoring & leak repair teams:</strong> ₹300 crore/year (10 cities; acoustic sensors, rapid response crews)</li>
+                            <li><strong>STP reuse market development:</strong> ₹150 crore/year (dual-pipe O&M, industrial buyer acquisition, quality assurance)</li>
+                            <li><strong>Groundwater monitoring network:</strong> ₹200 crore/year (piezometer maintenance, data portals, compliance audits) <a href="resources.html#ref-cgwb-groundwater-resources-2024" class="text-xs text-primary hover:underline" title="CGWB Groundwater Resources 2024">[15]</a></li>
+                            <li><strong>JJM mobile repair teams:</strong> ₹400 crore/year (district-level technicians, spare parts, water testing kits)</li>
+                            <li><strong>Utility capacity building:</strong> ₹50 crore/year (tariff modeling, regulator training, performance benchmarking)</li>
+                            <li><strong>Total Opex:</strong> ₹1,200 crore/year (~$145M/year)</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic mt-4">Note: Capex recoverable via NRW savings (₹15K Cr/year), wastewater reuse revenue (₹5K Cr/year), and tariff reform (75% cost recovery unlocks borrowing). Opex offset by avoided tanker economy costs (₹10K Cr/year) and deferred new source investments (₹50K+ Cr).</p>
+            </div>
+
+            <!-- 10. FOCUS AREAS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-red-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Focus Areas: Urgency-Ranked Priorities</h3>
+                <p class="text-sm text-gray-600 italic mb-4">Partner-driven interventions addressing hidden dynamics, not adding infrastructure capacity. Ranked by leverage potential and systemic impact.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔴</span>
+                            <h4 class="text-sm font-semibold text-gray-900">URGENT: Utility Tariff Reform & Regulator Establishment</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Establish independent regulators in 5 states; shift tariffs from flat to volumetric with lifeline pricing. <strong>Addresses:</strong> Utility Non-Creditworthiness (30-40% cost recovery)</p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> Without tariff reform, utilities remain grant-dependent, can't borrow for NRW reduction—perpetual infrastructure decay cycle. Depoliticized regulator unlocks ₹1L Cr borrowing capacity. <a href="resources.html#ref-iihs-water-security-2024" class="text-xs text-primary hover:underline" title="IIHS Water Security 2024">[112]</a></p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔴</span>
+                            <h4 class="text-sm font-semibold text-gray-900">URGENT: Citywide Smart Metering & NRW Reduction</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Deploy 80% metering in 10 cities; reduce NRW from 40% to 25% via leak detection + pressure zones. <strong>Addresses:</strong> Water Loss Economic Drain (₹20K Cr/year)</p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> 40% NRW = 40% pumping energy wasted; metering enables volumetric tariffs (conservation incentive). 3-5 year ROI on meter investment via water + energy savings. <a href="resources.html#ref-worldbank-water-security-2022" class="text-xs text-primary hover:underline" title="World Bank Water Security 2022">[105]</a></p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟠</span>
+                            <h4 class="text-sm font-semibold text-gray-900">HIGH: Wastewater-to-Resource Value Chains</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Dual-pipe systems in 100 STPs; sell reclaimed water at ₹15/m³ to industries. <strong>Addresses:</strong> STP Operational Deficits (₹5K Cr/year) + Sewage Pollution</p>
+                        <p class="text-xs text-gray-600"><strong>Why high:</strong> 70% sewage untreated → river pollution; &lt;5% reuse → missed revenue. Reuse market creates STP cost recovery (20% via industrial sales + biogas cogeneration). <a href="resources.html#ref-dte-wastewater-reuse-circularity-2024" class="text-xs text-primary hover:underline" title="DTE Wastewater Reuse Circularity 2024">[148]</a></p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟠</span>
+                            <h4 class="text-sm font-semibold text-gray-900">HIGH: Groundwater Abstraction Licensing & Recharge</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Regulate abstraction in 1,186 over-exploited blocks; deploy 200 recharge structures with performance contracts. <strong>Addresses:</strong> Open-Access Tragedy (water table dropping 1-2m/year)</p>
+                        <p class="text-xs text-gray-600"><strong>Why high:</strong> Unregulated extraction threatens JJM source sustainability (40% schemes rely on over-exploited aquifers). Recharge + licensing stabilize water tables → avoid ₹10K+ Cr/year in deeper borewell costs. <a href="resources.html#ref-cse-dying-wisdom-2024" class="text-xs text-primary hover:underline" title="CSE Dying Wisdom 2024">[116]</a></p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟡</span>
+                            <h4 class="text-sm font-semibold text-gray-900">MEDIUM: JJM Functionality Assurance via IoT + O&M Pooling</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">IoT sensors in 50,000 schemes; panchayat O&M fund pooling matched by state. <strong>Addresses:</strong> JJM Tap Non-Functionality (10-15% within 2 years)</p>
+                        <p class="text-xs text-gray-600"><strong>Why medium:</strong> ₹3.6L Cr capex at risk if schemes fail due to O&M gaps. IoT + pooled funds enable predictive maintenance → reduce non-functionality from 15% to &lt;5%. <a href="resources.html#ref-cse-water-environment-2024" class="text-xs text-primary hover:underline" title="CSE Water Environment 2024">[110]</a></p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟡</span>
+                            <h4 class="text-sm font-semibold text-gray-900">MEDIUM: Slum Piped Connection Expansion</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Piped access to 100 informal settlements; lifeline tariff (first 50 LPCD free) + prepaid meters. <strong>Addresses:</strong> Tanker Economy Inequity (poor pay 10x grid tariff)</p>
+                        <p class="text-xs text-gray-600"><strong>Why medium:</strong> Tanker mafia profits ₹10K Cr/year from scarcity; slums pay ₹50-100/tanker. Piped expansion shrinks tanker market 30% → savings fund grid extension. Gender dividend: 2+ hrs/day saved. <a href="resources.html#ref-wateraid-urban-water-equity-2024" class="text-xs text-primary hover:underline" title="WaterAid Urban Water Equity 2024">[113]</a></p>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟢</span>
+                            <h4 class="text-sm font-semibold text-gray-900">LOWER: Water-Energy Efficiency Integration</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">WTP/STP energy audits; solarize 10,000 JJM pumps; pressure management zones. <strong>Addresses:</strong> Water-Energy Nexus (7% electricity for pumping; 40% NRW = wasted energy)</p>
+                        <p class="text-xs text-gray-600"><strong>Why lower:</strong> Co-benefit of NRW reduction (addressed above); solarization saves ₹1K+ Cr/year electricity O&M but requires JJM functionality first. Energy efficiency secondary to tariff + NRW reforms. <a href="resources.html#ref-iea-water-energy-nexus-2024" class="text-xs text-primary hover:underline" title="IEA Water-Energy Nexus 2024">[106]</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="sector-content-panel hidden" id="notf">
             <!-- Baseline -->
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
