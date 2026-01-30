@@ -1477,7 +1477,7 @@
                             <li><strong>PM2.5 annual average trends</strong> in 130 NCAP cities (20-30% reduction target) <a href="resources.html#ref-cpcb-aq-dashboard-ncap-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard NCAP 2026">[181]</a></li>
                             <li><strong>Sensor network density:</strong> Low-cost sensors per 100K population by city <a href="resources.html#ref-cpcb-aq-dashboard-sensors-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard Sensors 2026">[183]</a></li>
                             <li><strong>NCAP fund utilization vs PM2.5 reduction:</strong> Correlation by state (outcome-based efficiency) <a href="resources.html#ref-cpcb-aq-dashboard-ncap-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard NCAP 2026">[181]</a></li>
-                            <li><strong>Industrial CEMS data completeness:</strong> % stacks with &lt;100 hrs missing data annually <a href="resources.html#ref-ceew-industrial-emissions-2023" class="text-xs text-primary hover:underline" title="CEEW Industrial Emissions">[CEEW]</a></li>
+                            <li><strong>Industrial CEMS data completeness:</strong> % stacks with <100 hrs missing data annually <a href="resources.html#ref-ceew-industrial-emissions-2023" class="text-xs text-primary hover:underline" title="CEEW Industrial Emissions">[CEEW]</a></li>
                             <li><strong>Satellite NO2 trends vs EV penetration:</strong> Correlation in metro cities (TROPOMI validated) <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[80]</a></li>
                             <li><strong>Avoided premature deaths:</strong> Annual tally vs baseline (50K target by Year 3) <a href="resources.html#ref-cpcb-aq-dashboard-health-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard Health 2026">[182]</a></li>
                             <li><strong>Road dust PM2.5 contribution:</strong> % reduction in 10 target cities (30% target) <a href="resources.html#ref-ceew-dust-mitigation-behaviour-2024" class="text-xs text-primary hover:underline" title="CEEW Dust Mitigation Behaviour 2024">[78]</a></li>
@@ -1515,7 +1515,7 @@
                     </div>
                     <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Outcome-Based NCAP Funding</h4>
-                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 67% funds to road dust; 82 cities utilized &lt;40% allocation <a href="resources.html#ref-cpcb-aq-dashboard-ncap-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard NCAP 2026">[181]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 67% funds to road dust; 82 cities utilized <40% allocation <a href="resources.html#ref-cpcb-aq-dashboard-ncap-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard NCAP 2026">[181]</a></p>
                         <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
                         <ul class="text-sm text-gray-700 space-y-1">
                             <li>Shift NCAP funding criteria from "fund utilization" to "PM2.5 reduction achieved"</li>
@@ -1657,7 +1657,7 @@
                             <h4 class="text-sm font-semibold text-gray-900">URGENT: Outcome-Based NCAP Funding</h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-2">Shift funding from "utilization" to "PM2.5 reduction achieved"—reallocate 50% dust funds to source control. <strong>Addresses:</strong> Budget Misallocation (67% to dust)</p>
-                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> ₹19,614 Cr allocated; 82 cities utilized &lt;40%—fixing allocation creates 3x health impact without new funds <a href="resources.html#ref-cpcb-aq-dashboard-ncap-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard NCAP 2026">[181]</a></p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> ₹19,614 Cr allocated; 82 cities utilized <40%—fixing allocation creates 3x health impact without new funds <a href="resources.html#ref-cpcb-aq-dashboard-ncap-2026" class="text-xs text-primary hover:underline" title="CPCB AQ Dashboard NCAP 2026">[181]</a></p>
                     </div>
                     <div class="bg-red-50 border border-red-200 rounded-lg p-4">
                         <div class="flex items-center gap-2 mb-2">
@@ -3480,7 +3480,7 @@
                             "Buses<br>11.5%",
                             "NMT<br>~1%",
                             "Cars: 5% trips<br>92% energy",
-                            "Metro: &lt;1%<br>mode share",
+                            "Metro: <1%<br>mode share",
                             "Buses: Declining<br>best ROI",
                             "Walk/Cycle: 31%<br>down from 42%"
                         ],
@@ -3653,7 +3653,7 @@
 
                 const buildingLayout = {
                     title: {
-                        text: "Building Emissions: 40% embodied (unregulated), 60% operational (ECBC covers &lt;5%)",
+                        text: "Building Emissions: 40% embodied (unregulated), 60% operational (ECBC covers <5%)",
                         font: { size: 16, color: "#374151" }
                     },
                     font: { size: 11, family: "Inter, sans-serif" },

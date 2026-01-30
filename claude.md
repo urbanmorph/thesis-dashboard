@@ -390,6 +390,70 @@ Examples:
 - **Self-documenting**: ID tells you what it references
 - **Grep-friendly**: Can search codebase for specific sources
 
+## Strategic Frameworks
+
+### Theory of Change for Sectoral Transformation
+
+**All 9 sectoral pages follow a 4-stage diagnostic process:**
+
+1. **Diagnose** - Identify hidden dynamics blocking this sector
+2. **Partner** - Map actors already working on solutions
+3. **Remove** - Design targeted interventions to eliminate barriers
+4. **Scale** - Once dynamics are addressed, solutions spread naturally
+
+### 7 Categories of Hidden Dynamics
+
+**Standardized framework used across all sectors:**
+
+| Category | Description | Example Questions |
+|----------|-------------|-------------------|
+| 1. **Ownership & Demands** | Who owns the problem? Do incentives align? | Split incentives in buildings, first-mile waste ownership |
+| 2. **Culture & Narrative** | What beliefs/norms block change? | AC as status symbol, stigma around manual waste sorting |
+| 3. **Capacity & Skills** | What capabilities are missing? | ECBC compliance verification, AC testing labs |
+| 4. **Data & Evidence** | What information gaps exist? | Real-time building energy use, waste composition audits |
+| 5. **Policy & Regulation** | What rules enable/block progress? | Star labeling gaps, RWA governance powers |
+| 6. **Finance & Capital** | What financial barriers exist? | High upfront costs for retrofits, thin margins for aggregators |
+| 7. **Market & Procurement** | What market failures block adoption? | Fragmented supply chains, lack of aggregated demand |
+
+### Thesis for Action: 10-Section Structure
+
+**Every sector page must contain these 10 sections in order:**
+
+| # | Section | Border Color | Purpose | Key Elements |
+|---|---------|--------------|---------|--------------|
+| 1 | **Baseline** | Gray (`border-l-gray-400`) | Current status & trends | 5+ data points with citations |
+| 2 | **Targets** | Primary Green (`border-l-primary`) | Year 3 milestones | 5+ quantitative goals |
+| 3 | **Sankey Diagram** | Purple (`border-l-purple-500`) | Energy/material flow visualization | Interactive D3 diagram with pedagogical subtitle |
+| 4 | **Hidden Dynamics** | Amber (`border-l-amber-500`) | 7-category barrier analysis | 2+ examples per category in responsive grid |
+| 5 | **Shift** | Blue (`border-l-blue-500`) | Transformation vision | Narrative of desired future state |
+| 6 | **Markers** | Teal (`border-l-teal-500`) | Progress indicators | Split: Quantitative (5+) / Qualitative (3+) |
+| 7 | **Strategies** | Indigo (`border-l-indigo-600`) | Intervention pathways | 3-5 strategic approaches with examples |
+| 8 | **Economic Impact** | Rose (`border-l-rose-500`) | Costs vs benefits | 3 subsections: Costs/Externalities/Opportunity |
+| 9 | **Investments** | Orange (`border-l-orange-500`) | Capital requirements | Capex vs Opex split with funding sources |
+| 10 | **Focus Areas** | Red (`border-l-red-500`) | Priority actions | Urgency-ranked with color-coded tags |
+
+### Discovery Methods (Removed from Pages)
+
+**These are now methodology guidance, not user-facing content:**
+
+- **Needle Queries:** Use Grep/Glob for specific file/class/function lookups
+- **Exploration:** Use Task tool with `subagent_type=Explore` for open-ended codebase questions
+- **Data Extraction:** Use specialized agents (Opus for planning, Sonnet for implementation)
+
+### Color-Coding System
+
+**Section-specific left border colors for visual hierarchy:**
+
+```html
+<!-- Example: Hidden Dynamics section -->
+<div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-amber-500">
+  <h3 class="text-xl font-semibold text-gray-900 mb-6">🔍 Hidden Dynamics</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- 7-category cards -->
+  </div>
+</div>
+```
+
 ## Troubleshooting
 
 ### Styles not updating

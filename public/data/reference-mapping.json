@@ -1407,6 +1407,70 @@
       "url": "https://www.orfonline.org/research/greening-the-gdp-valuing-natural-capital-in-india",
       "sector": "biodiversity",
       "category": "Biodiversity Economics & Natural Capital"
+    },
+    {
+      "number": 177,
+      "slug": "ref-dea-economic-survey-agriculture-2026",
+      "citation": "Department of Economic Affairs. (2026). <em>Economic Survey 2025-26: Chapter VI - Agriculture and Allied Sectors</em>. Ministry of Finance.",
+      "url": "https://www.indiabudget.gov.in/economicsurvey/",
+      "sector": "food",
+      "category": "Agriculture & Food Systems Policy"
+    },
+    {
+      "number": 178,
+      "slug": "ref-dea-economic-survey-investment-2026",
+      "citation": "Department of Economic Affairs. (2026). <em>Economic Survey 2025-26: Chapter IX - Investment and Saving</em>. Ministry of Finance.",
+      "url": "https://www.indiabudget.gov.in/economicsurvey/",
+      "sector": "governance",
+      "category": "National Investment & Infrastructure"
+    },
+    {
+      "number": 179,
+      "slug": "ref-dea-economic-survey-climate-2026",
+      "citation": "Department of Economic Affairs. (2026). <em>Economic Survey 2025-26: Chapter X - Sustainable Development and Climate Change</em>. Ministry of Finance.",
+      "url": "https://www.indiabudget.gov.in/economicsurvey/",
+      "sector": "governance",
+      "category": "National Climate Policy & Investment"
+    },
+    {
+      "number": 180,
+      "slug": "ref-dea-economic-survey-urban-2026",
+      "citation": "Department of Economic Affairs. (2026). <em>Economic Survey 2025-26: Chapter XV - Social Infrastructure, Employment and Human Development</em>. Ministry of Finance.",
+      "url": "https://www.indiabudget.gov.in/economicsurvey/",
+      "sector": "governance",
+      "category": "Urban Infrastructure & Social Development"
+    },
+    {
+      "number": 181,
+      "slug": "ref-cpcb-aq-dashboard-ncap-2026",
+      "citation": "Central Pollution Control Board. (2026). <em>India Air Quality Dashboard: NCAP Progress & City Implementation</em>.",
+      "url": "https://airquality.cpcb.gov.in/",
+      "sector": "air",
+      "category": "Air Quality Monitoring & NCAP"
+    },
+    {
+      "number": 182,
+      "slug": "ref-cpcb-aq-dashboard-health-2026",
+      "citation": "Central Pollution Control Board. (2026). <em>India Air Quality Dashboard: Health Impact Assessment</em>.",
+      "url": "https://airquality.cpcb.gov.in/",
+      "sector": "air",
+      "category": "Air Quality Health Impacts"
+    },
+    {
+      "number": 183,
+      "slug": "ref-cpcb-aq-dashboard-sensors-2026",
+      "citation": "Central Pollution Control Board. (2026). <em>India Air Quality Dashboard: CAAQMS Network Coverage</em>.",
+      "url": "https://airquality.cpcb.gov.in/",
+      "sector": "air",
+      "category": "Air Quality Monitoring Infrastructure"
+    },
+    {
+      "number": 184,
+      "slug": "ref-cpcb-aq-dashboard-investment-2026",
+      "citation": "Central Pollution Control Board. (2026). <em>India Air Quality Dashboard: Co-Investment & Infrastructure Funding</em>.",
+      "url": "https://airquality.cpcb.gov.in/",
+      "sector": "air",
+      "category": "Air Quality Investment & Co-Benefits"
     }
   ],
   "categories": [
@@ -1441,12 +1505,20 @@
     { "name": "Food Systems & Cold Chain", "sector": "food", "order": 29 },
     { "name": "Agricultural Economics & Land Degradation", "sector": "food", "order": 30 },
     { "name": "Biodiversity & Forest Conservation", "sector": "biodiversity", "order": 31 },
-    { "name": "Biodiversity Economics & Natural Capital", "sector": "biodiversity", "order": 32 }
+    { "name": "Biodiversity Economics & Natural Capital", "sector": "biodiversity", "order": 32 },
+    { "name": "Agriculture & Food Systems Policy", "sector": "food", "order": 33 },
+    { "name": "National Investment & Infrastructure", "sector": "governance", "order": 34 },
+    { "name": "National Climate Policy & Investment", "sector": "governance", "order": 35 },
+    { "name": "Urban Infrastructure & Social Development", "sector": "governance", "order": 36 },
+    { "name": "Air Quality Monitoring & NCAP", "sector": "air", "order": 37 },
+    { "name": "Air Quality Health Impacts", "sector": "air", "order": 38 },
+    { "name": "Air Quality Monitoring Infrastructure", "sector": "air", "order": 39 },
+    { "name": "Air Quality Investment & Co-Benefits", "sector": "air", "order": 40 }
   ],
   "metadata": {
-    "total_references": 176,
-    "total_categories": 32,
-    "last_updated": "2026-01-27",
+    "total_references": 184,
+    "total_categories": 40,
+    "last_updated": "2026-01-30",
     "sectors": [
       "energy",
       "buildings",
@@ -1462,17 +1534,17 @@
       "energy": 9,
       "buildings": 17,
       "transport": 19,
-      "air": 14,
+      "air": 18,
       "waste": 32,
       "water": 18,
-      "food": 11,
-      "governance": 11,
+      "food": 15,
+      "governance": 15,
       "biodiversity": 15
     },
     "url_coverage": {
-      "with_urls": 171,
+      "with_urls": 179,
       "without_urls": 5,
-      "coverage_percentage": 97.2
+      "coverage_percentage": 97.3
     }
   }
 }
