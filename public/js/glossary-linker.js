@@ -29,7 +29,6 @@ const glossaryTerms = {
     // Buildings
     'IGBC': 'igbc',
     'GRIHA': 'griha',
-    'NoTF': 'notf',
     'ASSURE': 'assure',
     'HPB': 'hpb',
     'Embodied Carbon': 'embodied-carbon',
