@@ -77,752 +77,999 @@
 
         <!-- ENERGY SECTOR -->
         <div class="sector-content-panel block" id="energy">
-            <!-- Baseline -->
+            <!-- 1. BASELINE -->
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Baseline (Current Status)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Energy Consumption</h4>
-                        <ul class="text-sm">
-                            <li>Total primary energy: 900+ Mtoe annually <a href="resources.html#ref-bee-energy-scenario-2024" style="font-size: 0.75rem;">[1,2]</a></li>
-                            <li>89% fossil fuel dependent <a href="resources.html#ref-iea-world-energy-investment-2024" style="font-size: 0.75rem;">[3]</a></li>
-                            <li>Energy intensity: 0.11 kgoe per $ GDP <a href="resources.html#ref-iea-world-energy-investment-2024" style="font-size: 0.75rem;">[3]</a></li>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📊 Baseline: Current Status</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Installed Capacity & Mix</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Total capacity: <strong>452 GW</strong> (Jan 2025) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Coal: <strong>211 GW (47%)</strong>, operating at ~55% capacity factor <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Renewables: <strong>203 GW (45%)</strong> — solar 92 GW, wind 48 GW, hydro 47 GW <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Gas: <strong>25 GW (6%)</strong>, nuclear: <strong>8 GW (2%)</strong> <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Biomass & other: <strong>5 GW (1%)</strong> <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Efficiency Gap</h4>
-                        <ul class="text-sm">
-                            <li>Buildings: Only 5% ECBC compliant <a href="resources.html#ref-bee-ecbc-compliance-2023" style="font-size: 0.75rem;">[5]</a></li>
-                            <li>Agriculture pumps: 30-40% efficiency <a href="resources.html#ref-bee-pat-scheme-2023" style="font-size: 0.75rem;">[17]</a></li>
-                            <li>Cool roofs: &lt;1% penetration <a href="resources.html#ref-nrdc-cool-roofs-2023" style="font-size: 0.75rem;">[7]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Renewable Energy Growth</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Target: <strong>500 GW RE by 2030</strong> (65% of total capacity) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>2024-25 additions: <strong>27 GW solar, 5 GW wind</strong> <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>RE generation share: <strong>21%</strong> (up from 17% in 2020) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Grid integration capacity: <strong>~160 GW RE (35% total)</strong> without major storage <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>RE curtailment: <strong>~3-5%</strong> in high-wind states during low-demand hours <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Circular Economy</h4>
-                        <ul class="text-sm">
-                            <li>Solar waste: &lt;5K tonnes recycled/year <a href="resources.html#ref-ceew-solar-waste-2025" style="font-size: 0.75rem;">[11]</a></li>
-                            <li>No formal battery recycling at scale <a href="resources.html#ref-niti-battery-recycling-2023" style="font-size: 0.75rem;">[13]</a></li>
-                            <li>EPR framework under development <a href="resources.html#ref-ceew-solar-waste-2025" style="font-size: 0.75rem;">[11]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Demand & Distribution</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Annual consumption: <strong>1,625 TWh</strong> (2024-25) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Peak demand: <strong>243 GW</strong> (summer 2025), growing 6-8%/year <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>AT&C losses: <strong>14.8%</strong> (improved from 22% in 2015) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>DISCOM financial health: Cumulative losses <strong>~₹1.1L crore</strong> <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li>Per capita consumption: <strong>1,255 kWh/year</strong> (global avg: 3,300) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Grid Infrastructure</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Transmission lines: <strong>4.6L circuit-km</strong> (765 kV, 400 kV, 220 kV) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Green Energy Corridors: <strong>13 GW transmission capacity</strong> added for RE zones <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Smart meters: <strong>11 crore installed</strong> (target: 25 crore by 2027) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Distribution system: <strong>~70% electromechanical meters</strong> still in use <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Renewable integration: <strong>&lt;5 GW battery storage</strong> operational <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Fossil Fuel Dependencies</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Coal imports: <strong>280 MT/year</strong> (20% of consumption) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>Fossil fuel subsidies: <strong>₹1.2L crore/year</strong> (oil, gas, coal) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Coal plant average age: <strong>~12 years</strong> (global avg: 15 years) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>Stranded asset risk: <strong>~60 GW coal capacity</strong> underutilized (&lt;50% PLF) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>LNG regasification: <strong>48 MTPA capacity,</strong> ~70% utilization <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Decentralized & Emerging</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Rooftop solar: <strong>~12 GW installed</strong> (target: 40 GW by 2026) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>PM Surya Ghar scheme: <strong>1 crore households</strong> target, 300W/household <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Green hydrogen: <strong>0.1 MT production</strong> (target: 5 MT/year by 2030) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>EV charging infra: <strong>~15,000 public stations</strong> (target: 100K by 2030) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>Agricultural pump solarization: <strong>~5L solar pumps</strong> installed <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Shift</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Decarbonized Energy System</h4>
-                        <ul class="text-sm">
-                            <li>Energy demand decoupled from economic growth</li>
-                            <li>Circular material flows for RE infrastructure</li>
-                            <li>Efficiency-first approach embedded in policy</li>
-                            <li>45% emissions intensity reduction achieved</li>
+            <!-- 2. TARGETS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-primary">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Targets: Year 3 Milestones</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Grid Flexibility & Storage</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>10 GW battery storage</strong> operational (2x current capacity) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>5 GW pumped hydro</strong> projects commissioned <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>RE curtailment &lt;1%</strong> in high-wind states (down from 5%) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>50% transmission capacity</strong> for RE-rich zones added (Green Corridors Phase III) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Real-time grid balancing</strong> enabled by 20 crore smart meters <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Targets</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Year 3 Milestones</h4>
-                        <ul class="text-sm">
-                            <li>10 TWh annual energy savings</li>
-                            <li>500K buildings optimized</li>
-                            <li>40K tonnes/year recycling capacity</li>
-                            <li>30+ policies influenced</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Distributed Energy Systems</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>25 GW rooftop solar</strong> deployed (100% YoY growth) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>50L households</strong> under PM Surya Ghar (50% of 1 crore target) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>10 microgrids</strong> operational in off-grid regions <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>2M solar pumps</strong> replacing diesel (agricultural decentralization) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Virtual power plants:</strong> 1 GW aggregated capacity from DERs <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
                         </ul>
-                        <p style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Source: Program targets (config.js)</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Demand-Side Management</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>5 GW peak demand shifted</strong> via time-of-use tariffs <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>10M smart appliances</strong> enrolled in demand response programs <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>50 industrial clusters</strong> adopt thermal energy storage for load shifting <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Agricultural load shifting:</strong> Solar pumps + battery → daytime operation <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>EV charging infrastructure:</strong> 50K public stations with V2G capability <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Fossil Subsidy Reform</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>₹50K crore/year redirected</strong> from fossil subsidies to RE (40% reduction) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Carbon pricing pilot:</strong> 5 states levy ₹500/tonne CO₂ on coal power <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Stranded asset plan:</strong> Early retirement for 20 GW &lt;50% PLF coal plants <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Just transition fund:</strong> ₹10K crore for coal region reskilling <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>No new coal PPAs</strong> signed in 10 states with &gt;150 GW total capacity <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">DISCOM Financial Health</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>AT&C losses &lt;12%</strong> (down from 14.8%) via smart meter rollout <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>50% DISCOMs</strong> achieve ACS ≥ ARR (cost recovery) <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>Open access adoption:</strong> 5 GW capacity under green power trading <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Direct benefit transfer:</strong> 20% of subsidies delivered via DBT (not tariff cross-subsidy) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Tariff rationalization:</strong> 10 states adopt cost-reflective pricing <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Data & Market Infrastructure</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Green hydrogen auctions:</strong> 1 MT/year capacity contracted <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Energy storage obligation:</strong> 5% of RE capacity mandated by 10 states <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Grid code updates:</strong> 50% RE penetration capability certified <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Carbon accounting:</strong> GHG inventory published quarterly by CEA <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Open data platform:</strong> Real-time RE generation and grid load public <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Energy Services Gap - Sankey Visualization -->
+            <!-- 3. SANKEY DIAGRAM -->
             <div class="bg-gradient-to-br from-purple-50 to-transparent border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-purple-500">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">⚡</span> The Energy Services Gap
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">Only 15-20% of primary energy delivers useful services</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India's energy discourse focuses on supply while 80%+ of primary energy never does useful work. This is the largest hidden opportunity.</p>
-
-                <!-- Interactive Sankey Diagram -->
-                <div id="energy-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
-
-                <!-- Key Statistics Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Power Generation</h4>
-                        <ul class="text-sm">
-                            <li>Coal plant efficiency: <strong>35%</strong> (design: 38%) <a href="https://energy.prayaspune.org" style="font-size: 0.7rem;" target="_blank">[Prayas]</a></li>
-                            <li>T&D losses: <strong>17%</strong> (down from 23% in 2014) <a href="https://mospi.gov.in" style="font-size: 0.7rem;" target="_blank">[MoSPI]</a></li>
-                            <li>65% of coal input becomes waste heat</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Cooking</h4>
-                        <ul class="text-sm">
-                            <li>Traditional chulha: <strong>8-10%</strong> efficient <a href="https://www.cwejournal.org" style="font-size: 0.7rem;" target="_blank">[CWE Journal]</a></li>
-                            <li>Improved cookstoves: 16-35% efficient</li>
-                            <li><strong>66%</strong> of households use solid fuel <a href="https://pib.gov.in" style="font-size: 0.7rem;" target="_blank">[Census 2011]</a></li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Agricultural Pumps</h4>
-                        <ul class="text-sm">
-                            <li>Average pump efficiency: <strong>25-30%</strong> <a href="https://beeindia.gov.in" style="font-size: 0.7rem;" target="_blank">[BEE]</a></li>
-                            <li>Star-rated pumps: 40-45% efficient</li>
-                            <li><strong>&lt;2%</strong> of pumps exceed 40% efficiency</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Transport</h4>
-                        <ul class="text-sm">
-                            <li>IC engine efficiency: <strong>20-25%</strong> <a href="https://ourworldindata.org" style="font-size: 0.7rem;" target="_blank">[OWID]</a></li>
-                            <li>Transport exergy efficiency: <strong>21-22%</strong> <a href="https://link.springer.com" style="font-size: 0.7rem;" target="_blank">[Springer]</a></li>
-                            <li>Road = 92% of transport energy <a href="https://ceew.in" style="font-size: 0.7rem;" target="_blank">[CEEW]</a></li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Air Conditioning</h4>
-                        <ul class="text-sm">
-                            <li>Lab test: 35°C; Real summer: <strong>45-50°C</strong> <a href="resources.html#ref-cse-dying-wisdom-2024" style="font-size: 0.7rem;">[116]</a></li>
-                            <li>At 45°C: 5-star AC worse than 1-star rated</li>
-                            <li>Real-world: <strong>17-28% more</strong> power than rated</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Lighting</h4>
-                        <ul class="text-sm">
-                            <li>Incandescent: <strong>~5%</strong> efficient (rest is heat)</li>
-                            <li>LED: <strong>80-90%</strong> less energy <a href="https://pib.gov.in" style="font-size: 0.7rem;" target="_blank">[PIB/UJALA]</a></li>
-                            <li>LED market share: 46% (was 0.3% in 2011)</li>
-                        </ul>
-                    </div>
-                </div>
-                <p style="font-size: 0.75rem; color: #6b7280; margin-top: 1rem;">Sources: MoSPI Energy Statistics 2024, BEE India Energy Scenario 2024, IEA E4 Profile, CEEW Transport Study, CSE AC Study, Prayas Energy</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">⚡ Energy Flow Cascade: From Generation to Useful Service</h3>
+                <p class="text-sm text-gray-600 italic mb-4">Visualizing where energy gets lost in the power system — from fuel input to transmission to distribution to actual useful electricity</p>
+                <div id="energy-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
+                <p class="text-xs text-gray-500 mt-2">Source: Economic Survey 2025-26, CEA Grid Data. Interactive diagram shows energy flow from fuel → generation → transmission → distribution → consumption → useful service.</p>
             </div>
 
-            <!-- Hidden Dynamics - The Real Investment Opportunities -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-bottom: 1.5rem; border-left: 4px solid #f59e0b; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🔍</span> Hidden Dynamics
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">Where the real problems live</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Final-Use Blind Spot</h4>
-                        <ul class="text-sm">
-                            <li><strong>Invisible waste:</strong> Only 15-20% of primary energy delivers useful services — 80%+ lost before reaching end-use</li>
-                            <li><strong>Supply obsession:</strong> Policy measures capacity addition (GW), not services delivered (lumens, p-km, ton-hours)</li>
-                            <li><strong>Measurement gap:</strong> No tracking of useful energy — we measure kWh sold, not outcomes achieved</li>
-                            <li><strong>Investment opportunity:</strong> Energy services framing, outcome-based metrics, exergy accounting</li>
+            <!-- 4. HIDDEN DYNAMICS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-amber-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">🔍 Hidden Dynamics: The Systemic Barriers</h3>
+                <p class="text-sm text-gray-600 italic mb-4">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Ownership & Demands</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Must-run coal PPAs:</strong> 25-year contracts lock DISCOMs into buying coal power regardless of RE availability <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Stranded asset politics:</strong> Early coal retirement politically toxic—workers, state revenues dependent</li>
+                            <li><strong>DISCOM-politician nexus:</strong> Free/cheap power promises drive losses, no accountability for financial health <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>Open access gaming:</strong> Large consumers exit grid, leaving DISCOMs with fixed costs + low revenue base</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Pump Subsidy Trap</h4>
-                        <ul class="text-sm">
-                            <li><strong>Perverse incentives:</strong> Free agricultural power → &lt;2% of 30M pumps exceed 40% efficiency <a href="https://beeindia.gov.in" style="font-size: 0.7rem;" target="_blank">[BEE]</a></li>
-                            <li><strong>Political capture:</strong> Electricity subsidies are electoral currency — 25-40% savings potential untapped</li>
-                            <li><strong>Hidden costs:</strong> 33 TWh/year wasted (₹20K+ Cr); efficiency can't compete with "free"</li>
-                            <li><strong>Investment opportunity:</strong> Income support decoupled from consumption, feeder-level metering, ESCO models</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Culture & Narrative</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>RE = unreliable myth:</strong> 21% RE generation share with &lt;5% curtailment disproves narrative, but persists <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Coal as baseload religion:</strong> Flexible gas/hydro ignored; 55% coal PLF shows excess capacity <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Subsidy = welfare:</strong> Fossil subsidies framed as pro-poor; RE subsidy = rich subsidy</li>
+                            <li><strong>Battery cost fear:</strong> "Storage too expensive"—unaware costs dropped 90% since 2010 <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Labeling Theater</h4>
-                        <ul class="text-sm">
-                            <li><strong>AC testing fraud:</strong> Lab test at 35°C; real summer at 45-50°C → 5-star performs worse than 1-star <a href="resources.html#ref-cse-dying-wisdom-2024" style="font-size: 0.7rem;">[116]</a></li>
-                            <li><strong>Performance gap:</strong> ACs consume 17-28% more power than rated at real temperatures</li>
-                            <li><strong>Standards lag:</strong> India tests for mild climate; ignores ISO hot climate protocol (46°C outside)</li>
-                            <li><strong>Investment opportunity:</strong> Real-world testing protocols, dynamic efficiency ratings, enforcement</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Capacity & Skills</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>SLDC skill gap:</strong> State Load Dispatch Centers lack RE forecasting expertise <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Grid operator inertia:</strong> Trained for thermal scheduling; RE integration requires new protocols</li>
+                            <li><strong>DISCOM engineering deficit:</strong> Staff sized for meter reading, not smart grid management</li>
+                            <li><strong>Installation labor shortage:</strong> Solar/battery installers trained &lt;10% of requirement <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Cooking Energy Tragedy</h4>
-                        <ul class="text-sm">
-                            <li><strong>Massive waste:</strong> 700M people use chulhas at 8-10% efficiency — 90% of fuel wasted as heat/smoke <a href="https://cwejournal.org" style="font-size: 0.7rem;" target="_blank">[CWE]</a></li>
-                            <li><strong>Health toll:</strong> 482,000 deaths/year from household air pollution (2017)</li>
-                            <li><strong>LPG gap:</strong> PMUY distributed connections but refill rates low due to cost</li>
-                            <li><strong>Investment opportunity:</strong> Improved biomass stoves, electric cooking, biogas systems</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Data & Evidence</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>RE curtailment blackbox:</strong> No public data on when/why wind/solar curtailed—grid operator opacity <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>DISCOM loss attribution:</strong> AT&C losses aggregated—can't isolate theft vs. technical loss vs. billing error</li>
+                            <li><strong>Subsidy tracking gap:</strong> ₹1.2L crore fossil subsidy spread across 8 ministries—no consolidated dashboard <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Grid stability mythology:</strong> No real-time RE impact data published—"reliability" claims unfalsifiable</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Generation Bias</h4>
-                        <ul class="text-sm">
-                            <li><strong>Policy asymmetry:</strong> RE gets viability gap funding + RPOs; efficiency gets voluntary programs</li>
-                            <li><strong>Lobbying imbalance:</strong> Solar/wind industry organized (SECI, MNRE); efficiency diffuse, no constituency</li>
-                            <li><strong>Grid planning blind:</strong> CEA projects capacity addition; never models demand reduction scenarios</li>
-                            <li><strong>Investment opportunity:</strong> Negawatt markets, efficiency certificates, demand response as capacity</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Policy & Regulation</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>PPA sanctity paradox:</strong> Coal contracts sacred, but RE PPAs renegotiated when tariffs fall <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Cross-subsidy trap:</strong> Agricultural free power funded by industry tariffs—DISCOMs can't charge cost-reflective prices <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>Storage policy vacuum:</strong> No regulatory framework for battery/storage as asset class—unclear revenue model</li>
+                            <li><strong>RE obligation toothless:</strong> RPO/RESO targets missed; no meaningful penalties for non-compliance <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Thermal Power Lock-in</h4>
-                        <ul class="text-sm">
-                            <li><strong>Stranded efficiency:</strong> Coal plants at 35% efficiency (design 38%) — 65% of fuel wasted <a href="https://energy.prayaspune.org" style="font-size: 0.7rem;" target="_blank">[Prayas]</a></li>
-                            <li><strong>Age penalty:</strong> Efficiency degrades 1-2% for plants &gt;25 years — but kept running for political reasons</li>
-                            <li><strong>Merit order ignored:</strong> Efficient plants underutilized while inefficient plants run for state revenue</li>
-                            <li><strong>Investment opportunity:</strong> Efficiency-based dispatch, accelerated retirement, waste heat recovery</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Finance & Capital</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>DISCOM creditworthiness:</strong> ₹1.1L crore losses = banks won't lend for RE procurement <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>Coal plant sunk costs:</strong> "Too big to fail"—state govts pressure DISCOMs to offtake to avoid NPA write-offs</li>
+                            <li><strong>Rooftop solar upfront barrier:</strong> ₹3L for 3kW system—no consumer finance products at scale <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Green bond gap:</strong> Only 2% of power sector debt green-labeled—no climate risk pricing <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Market & Procurement</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Power exchange illiquidity:</strong> &lt;5% generation traded on exchange—no price discovery for flexibility <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Balancing market absence:</strong> No real-time market for grid balancing—SLDCs manually dispatch</li>
+                            <li><strong>Demand response desert:</strong> No aggregators, no time-of-use pricing for most consumers—zero demand flexibility <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Ancillary services void:</strong> Coal plants paid capacity charges even at 55% PLF—no penalty for inflexibility</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Discovery Methods -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-bottom: 1.5rem; border-left: 4px solid #6366f1;">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🔬</span> Discovery Methods
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">How to surface hidden dynamics</span>
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Follow the Power Bills</h4>
-                        <ul class="text-sm">
-                            <li>Compare metered vs. unmetered consumption by feeder</li>
-                            <li>Track AT&C losses at DISCOM level — reveals theft/inefficiency</li>
-                            <li>Map subsidy flows: who actually benefits?</li>
+            <!-- 5. SHIFT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-blue-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🌟 Shift: The Transformation Vision</h3>
+                <p class="text-base text-gray-900 mb-4"><strong>Energy systems where renewables are dispatchable, grids are intelligent, demand is flexible, and fossil subsidies redirect to clean alternatives.</strong></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">What Changes</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>From curtailment to storage:</strong> RE surplus stored (batteries/hydro), not wasted—dispatchable on demand <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>From supply-follows-demand to demand-follows-supply:</strong> Time-of-use pricing shifts load to solar hours <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>From coal baseload to flexible grid:</strong> Coal plants cycle down during solar peak, battery fills evening gap <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>From subsidy inertia to subsidy swap:</strong> ₹1.2L crore fossil subsidies redirected to RE/storage/efficiency <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>From centralized monopoly to distributed choice:</strong> Rooftop solar + battery = grid independence option</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Real-World Appliance Testing</h4>
-                        <ul class="text-sm">
-                            <li>Field testing of labeled vs. actual appliance performance</li>
-                            <li>Mystery shopping for star-rated products</li>
-                            <li>Consumer complaint analysis</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">ESCO Contract Forensics</h4>
-                        <ul class="text-sm">
-                            <li>Why do ESCO contracts fail? Interview failed projects</li>
-                            <li>Track M&V disputes and resolution patterns</li>
-                            <li>Map split-incentive buildings</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Recycling Chain Mapping</h4>
-                        <ul class="text-sm">
-                            <li>Track end-of-life solar panels and batteries</li>
-                            <li>Informal recycler interviews — actual material flows</li>
-                            <li>EPR certificate vs. physical recycling verification</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Breakthrough Moments</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>First state hits 50% RE integration</strong> without blackouts—proof of concept demolishes "reliability" myth</li>
+                            <li><strong>DISCOMs auction demand response</strong> instead of peaker plants—consumers paid to shift load <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Battery costs &lt; coal peaker capex</strong>—storage becomes default for peak capacity <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Carbon price pilot shows revenue neutrality</strong>—₹500/tonne on coal funds RE jobs, not budget burden</li>
+                            <li><strong>Rooftop solar + EV pairing</strong>—commuters charge at work (solar peak), discharge at home (evening peak)</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Markers</h3>
-                    <div class="mb-4">
+            <!-- 6. MARKERS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-teal-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📈 Markers: Progress Indicators</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">Quantitative Signals</h4>
-                        <ul class="text-sm">
-                            <li>Energy intensity per unit GDP declining</li>
-                            <li>ECBC compliance rates in target states</li>
-                            <li>Recycling facility throughput volumes</li>
-                            <li>Cool roof installations tracked</li>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>RE curtailment rate</strong> by state (target: &lt;1% by Year 3) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Battery storage capacity</strong> vs. 10 GW target (GW installed quarterly) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Coal plant load factor</strong> trajectory—declining PLF = RE displacing coal <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Smart meter rollout</strong> vs. 25 crore target (% coverage) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Rooftop solar CAGR</strong>—track 12 GW → 25 GW pathway <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Fossil subsidy allocation</strong>—year-over-year change from ₹1.2L crore baseline <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>DISCOM AT&C losses</strong>—state-wise tracking toward &lt;12% <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Green hydrogen production</strong> vs. 5 MT/year target <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
+                    <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">Qualitative Signals</h4>
-                        <ul class="text-sm">
-                            <li>State adoption of efficiency mandates</li>
-                            <li>Industry commitment to EPR schemes</li>
-                            <li>Discourse shift toward demand-side solutions</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Strategies</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Addressing Hidden Dynamics</h4>
-                        <ul class="text-sm">
-                            <li><strong>Final-Use Blind Spot:</strong> Shift to energy services metrics (lumens, p-km) not kWh sold</li>
-                            <li><strong>Pump Subsidy Trap:</strong> Decouple income support from consumption; feeder-level metering</li>
-                            <li><strong>Labeling Theater:</strong> Real-world testing at 45°C; dynamic efficiency ratings</li>
-                            <li><strong>Cooking Tragedy:</strong> Scale improved biomass stoves, electric cooking, biogas</li>
-                            <li><strong>Generation Bias:</strong> Create negawatt markets; treat efficiency as capacity</li>
-                            <li><strong>Thermal Lock-in:</strong> Efficiency-based dispatch; accelerate old plant retirement</li>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Grid operator rhetoric shift:</strong> SLDCs discussing "RE integration" not "RE problem"</li>
+                            <li><strong>DISCOM procurement strategy:</strong> RFPs for storage+RE bundled vs. standalone thermal</li>
+                            <li><strong>Policy innovation diffusion:</strong> States replicating energy storage obligations, carbon pricing pilots</li>
+                            <li><strong>Coal sector narrative:</strong> Transition plans published, not denied—just transition funds created <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Consumer awareness:</strong> Time-of-use tariff adoption rates, demand response enrollment</li>
+                            <li><strong>Media framing:</strong> "Subsidy reform" not "subsidy removal"—climate investment narrative</li>
+                            <li><strong>Financial sector behavior:</strong> Banks offering lower rates for green bonds, RE project finance</li>
+                            <li><strong>Regulatory agility:</strong> SERCs updating tariff orders for DER integration, V2G frameworks</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Focus Areas</h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Partner-driven interventions that address hidden dynamics, not add more capacity.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="focus-card">
-                        <div class="focus-card-icon">📊</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Energy Services Framing</h4>
-                        <p>Shift from kWh sold to outcomes delivered — lumens, p-km, ton-hours of cooling</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Final-Use Blind Spot</span>
-                        </div>
+            <!-- 7. STRATEGIES -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-indigo-600">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🛠️ Strategies: Intervention Pathways</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Grid Flexibility Infrastructure</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 3-5% RE curtailment; grid cannot absorb variable generation <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Deploy 10 GW battery storage via viability gap funding (VGF) auctions <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>Commission 5 GW pumped hydro storage (shovel-ready projects prioritized)</li>
+                            <li>Mandate energy storage obligation (ESO): 5% of RE capacity bundled with storage</li>
+                            <li>Green Energy Corridor Phase III: 50% transmission capacity expansion for RE zones</li>
+                            <li>Real-time balancing market: SLDCs procure ancillary services from battery aggregators</li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🔌</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Pump Subsidy Reform</h4>
-                        <p>Decouple income support from consumption; feeder metering; ESCO models for agriculture</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Pump Subsidy Trap</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Demand-Side Flexibility via Smart Grids</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> Zero demand response; peak load grows 6-8%/year <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Accelerate smart meter rollout to 20 crore (80% coverage) via RDSS funds <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Time-of-use tariffs for all metered consumers—higher rates 6-10 PM, lower 10 AM-2 PM</li>
+                            <li>Demand response aggregator licensing: 10 companies enroll 10M smart appliances</li>
+                            <li>Agricultural load shifting: Solar pump + battery → daytime irrigation (free solar hours)</li>
+                            <li>EV charging infrastructure with V2G: 50K public stations as grid batteries <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🌡️</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Real-World Testing</h4>
-                        <p>AC testing at 45°C, not 35°C; dynamic efficiency ratings; enforcement partners</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Labeling Theater</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Fossil Subsidy Swap</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> ₹1.2L crore/year subsidizing fossil fuels <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Phase out ₹50K crore/year coal subsidies → RE development fund (40% reduction over 3 years)</li>
+                            <li>Carbon pricing pilot in 5 states: ₹500/tonne CO₂ on coal generation—revenue to just transition fund <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>Agricultural power subsidy reform: Direct cash transfer replacing free power (pilot in 3 states)</li>
+                            <li>Cross-subsidy rationalization: Industrial tariffs reduced 20%, agricultural tariffs cost-reflective + DBT top-up</li>
+                            <li>Green hydrogen subsidy: ₹10K crore over 3 years to achieve $2/kg production cost <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">⚖️</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Negawatt Markets</h4>
-                        <p>Treat efficiency as generation; create markets for avoided demand</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Generation Bias</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Distributed Energy Resources (DER) Acceleration</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> Rooftop solar stalled at 12 GW; target 40 GW by 2026 <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>PM Surya Ghar financing: ₹30K subsidy/household + 0% EMI loans via PSU banks <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Net metering 2.0: Gross metering with banking for 1 year—resolve DISCOM-consumer disputes</li>
+                            <li>Group net metering for apartments: Single 100kW array serves 50 flats (regulatory framework)</li>
+                            <li>Virtual power plants (VPP): Aggregate 1 GW rooftop solar + home batteries for grid services</li>
+                            <li>Microgrid licensing: 10 off-grid clusters (50-200 households) solar+battery+diesel hybrid</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Stranded Asset Transition Plan</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 60 GW coal capacity at &lt;50% PLF; ₹3L crore sunk cost <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Early retirement scheme: 20 GW coal plants &lt;50% PLF decommissioned; ₹10K crore transition fund <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li>Reskilling program: 50K coal workers trained for solar/wind O&M, battery installation</li>
+                            <li>PPA renegotiation framework: Allow DISCOMs to exit must-run clauses for &lt;40% PLF plants</li>
+                            <li>Coal-to-solar site conversion: Repurpose retired coal plant land/transmission for RE parks</li>
+                            <li>State revenue replacement: Coal cess revenue diverted to RE manufacturing zones in coal states</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. DISCOM Financial Turnaround</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> ₹1.1L crore DISCOM losses; no capital for RE procurement <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Smart meter AT&C reduction: 20 crore meters → 12% AT&C losses (₹20K crore annual savings) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Direct benefit transfer pilot: Subsidies to consumers' bank accounts, not tariff—eliminates leakage</li>
+                            <li>Cost-reflective tariff roadmap: 10 states commit to ACS ≥ ARR within 3 years (SERC-monitored)</li>
+                            <li>Green open access expansion: 5 GW corporate RE procurement—DISCOMs earn wheeling fees</li>
+                            <li>Performance-linked DISCOM incentives: ₹5K crore fund for states achieving AT&C &lt;12% + ACS≥ARR</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Data Infrastructure for Grid Intelligence</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> No real-time RE impact data; curtailment opaque <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Open grid data platform: Real-time RE generation, curtailment, load by state—public API access</li>
+                            <li>RE forecasting systems: SLDC-level 24-hr solar/wind forecasts (90% accuracy target) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li>Fossil subsidy tracker: Consolidated dashboard across ministries—quarterly public reporting</li>
+                            <li>DISCOM performance portal: AT&C, ACS/ARR, tariff gaps by state—citizen-accessible</li>
+                            <li>Carbon accounting integration: CEA publishes quarterly GHG inventory by fuel type <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Investment & Economic Impact -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-top: 1.5rem; border-left: 4px solid #22c55e;">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Investment & Economic Impact</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Investment Required</h4>
-                        <ul class="text-sm">
-                            <li><strong>$394 billion</strong> additional financing for net-zero targets <a href="resources.html#ref-ember-net-zero-gap-2024" style="font-size: 0.75rem;">[Ember]</a></li>
-                            <li><strong>$293 billion</strong> for solar/wind targets (2023-2030) <a href="resources.html#ref-ieefa-re-target-2024" style="font-size: 0.75rem;">[IEEFA]</a></li>
-                            <li><strong>89 Mtoe</strong> energy savings target by 2030 <a href="resources.html#ref-bee-pat-scheme-2023" style="font-size: 0.75rem;">[BEE]</a></li>
-                            <li>Triple energy efficiency investment by 2030 <a href="resources.html#ref-iea-transitioning-road-transport-2024" style="font-size: 0.75rem;">[IEA]</a></li>
+            <!-- 8. ECONOMIC IMPACT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-rose-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💰 Economic Impact: Costs, Externalities, Opportunities</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Current Costs & Externalities</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Fossil subsidies:</strong> ₹1.2L crore/year propping up coal/oil/gas—opportunity cost for RE <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>DISCOM losses:</strong> ₹1.1L crore cumulative debt—taxpayer bailouts every 5-7 years <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>Health externality:</strong> Coal pollution = ₹1.4L crore/year health costs (World Bank estimate) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Stranded asset risk:</strong> ₹3L crore in underutilized coal plants (&lt;50% PLF) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>RE curtailment waste:</strong> 3-5% of RE generation lost = ₹5K crore/year foregone investment value</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">GDP & Economic Benefits</h4>
-                        <ul class="text-sm">
-                            <li><strong>$1 trillion</strong> added to GDP by 2030 via green growth <a href="resources.html#ref-deloitte-climate-investment-2025" style="font-size: 0.75rem;">[Deloitte]</a></li>
-                            <li><strong>50 million jobs</strong> created through green economy <a href="resources.html#ref-wef-green-growth-2023" style="font-size: 0.75rem;">[WEF]</a></li>
-                            <li>Avoid 6.4-10% GDP loss from climate inaction by 2100 <a href="resources.html#ref-deloitte-climate-investment-2025" style="font-size: 0.75rem;">[Deloitte]</a></li>
-                            <li>2.8% GDP saved by preventing agriculture decline <a href="resources.html#ref-wef-green-growth-2023" style="font-size: 0.75rem;">[WEF]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Economic Benefits</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>AT&C reduction:</strong> 14.8% → 12% saves ₹20K crore/year (smart meters) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>RE cost advantage:</strong> Solar ₹2.5/kWh vs. coal ₹4.5/kWh—₹40K crore/year savings at 500 GW <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Avoided coal imports:</strong> 280 MT/year at $120/tonne = $33B forex savings over 10 years <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Job creation:</strong> RE+storage deployment = 1M jobs by 2030 (vs. 300K coal jobs) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Grid reliability gains:</strong> Reduced outages = 2% GDP boost (World Bank productivity metric)</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Quality of Life Benefits</h4>
-                        <ul class="text-sm">
-                            <li>30-50% reduction in building energy costs <a href="resources.html#ref-bee-pat-scheme-2023" style="font-size: 0.75rem;">[BEE]</a></li>
-                            <li>Reduced heat stress through cool roofs (2-7°C) <a href="resources.html#ref-nrdc-cool-roofs-2023" style="font-size: 0.75rem;">[NRDC]</a></li>
-                            <li>Lower electricity bills for households</li>
-                            <li>Improved indoor thermal comfort</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Investment Opportunity</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>₹31 trillion</strong> ($358B) green energy infrastructure by 2030 <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>$150 billion</strong> battery storage market by 2030 (10-20 GW annual additions) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>$20 billion</strong> green hydrogen electrolyzer capacity by 2030 <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>₹2 trillion</strong> rooftop solar market (40 GW target) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>$80 billion</strong> EV charging + V2G infrastructure by 2030 <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. INVESTMENTS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-orange-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💵 Investments: Capital Allocation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Capex (Capital Expenditure)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Battery storage deployment:</strong> ₹80K crore (10 GW @ ₹8 crore/MW) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Pumped hydro storage:</strong> ₹35K crore (5 GW @ ₹7 crore/MW) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Green Energy Corridors III:</strong> ₹25K crore (transmission for RE zones) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Smart meter rollout:</strong> ₹40K crore (20 crore meters @ ₹2,000/meter) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Rooftop solar acceleration:</strong> ₹50K crore (PM Surya Ghar + net metering infra) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>EV charging + V2G:</strong> ₹15K crore (50K stations @ ₹30L/station) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Grid data platform:</strong> ₹500 crore (real-time monitoring, API infrastructure)</li>
+                            <li><strong>Total Capex:</strong> ₹2,45,500 crore (~$30B) over 3 years</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Opex (Operational Expenditure)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Just transition fund:</strong> ₹10K crore/year (coal worker reskilling, state revenue replacement) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>SLDC capacity building:</strong> ₹500 crore/year (RE forecasting training, grid operators) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Demand response incentives:</strong> ₹2K crore/year (consumer payments for load shifting) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>DISCOM performance fund:</strong> ₹5K crore/year (AT&C reduction, cost recovery incentives) <a href="resources.html#ref-dea-economic-survey-investment-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Investment">[178]</a></li>
+                            <li><strong>Subsidy redirection:</strong> ₹50K crore/year (fossil → RE, offset by subsidy phase-out) <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></li>
+                            <li><strong>Data platform maintenance:</strong> ₹200 crore/year (open grid data, DISCOM portal)</li>
+                            <li><strong>Green hydrogen subsidies:</strong> ₹10K crore/year (production cost gap funding) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></li>
+                            <li><strong>Total Opex:</strong> ₹77,700 crore/year (~$9.5B/year)</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic mt-4">Note: 65% of capex (₹1.6L crore) recoverable via storage revenue, wheeling charges, and AT&C savings. Opex largely offset by ₹50K crore/year fossil subsidy redirection. Net fiscal cost &lt;₹30K crore/year (0.1% GDP).</p>
+            </div>
+
+            <!-- 10. FOCUS AREAS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-red-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Focus Areas: Urgency-Ranked Priorities</h3>
+                <p class="text-sm text-gray-600 italic mb-4">Partner-driven interventions addressing hidden dynamics, not adding capacity. Ranked by leverage potential.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔴</span>
+                            <h4 class="text-sm font-semibold text-gray-900">URGENT: Storage Obligation Mandate</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">5% of RE capacity bundled with storage—eliminate curtailment bottleneck. <strong>Addresses:</strong> Grid Flexibility Deficit</p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> 500 GW RE target by 2030 unachievable without storage; current 3-5% curtailment = ₹5K crore/year waste <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔴</span>
+                            <h4 class="text-sm font-semibold text-gray-900">URGENT: Fossil Subsidy Swap Framework</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Redirect ₹50K crore/year from coal subsidies to RE fund—revenue-neutral climate action. <strong>Addresses:</strong> Fossil Lock-in</p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> ₹1.2L crore/year fossil subsidies = 10x RE budget; every year delay locks in coal capacity for 25+ years <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟠</span>
+                            <h4 class="text-sm font-semibold text-gray-900">HIGH: Demand Response Infrastructure</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Time-of-use tariffs + 10M smart appliances—5 GW peak load shifted. <strong>Addresses:</strong> Demand Inflexibility</p>
+                        <p class="text-xs text-gray-600"><strong>Why high:</strong> Cheapest flexibility resource; smart meters already being deployed—just needs tariff + software <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟠</span>
+                            <h4 class="text-sm font-semibold text-gray-900">HIGH: Open Grid Data Platform</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Real-time RE generation, curtailment, load public—end opacity. <strong>Addresses:</strong> Data Blackbox</p>
+                        <p class="text-xs text-gray-600"><strong>Why high:</strong> Low-cost intervention (₹500 crore); enables evidence-based policy, third-party innovation, accountability <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟡</span>
+                            <h4 class="text-sm font-semibold text-gray-900">MEDIUM: Rooftop Solar Financing</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">PM Surya Ghar + 0% EMI loans—25 GW distributed capacity. <strong>Addresses:</strong> Upfront Cost Barrier</p>
+                        <p class="text-xs text-gray-600"><strong>Why medium:</strong> High impact but slower scale-up; requires consumer behavior change + DISCOM net metering cooperation <a href="resources.html#ref-dea-economic-survey-energy-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Energy">[1]</a></p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟡</span>
+                            <h4 class="text-sm font-semibold text-gray-900">MEDIUM: Stranded Asset Transition Plan</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Early retirement for 20 GW &lt;50% PLF coal plants—just transition fund. <strong>Addresses:</strong> Coal Sunk Cost Fallacy</p>
+                        <p class="text-xs text-gray-600"><strong>Why medium:</strong> Politically sensitive; requires state-level negotiation + worker reskilling programs (3-5 year timeline) <a href="resources.html#ref-dea-economic-survey-climate-2026" class="text-xs text-primary hover:underline" title="Economic Survey 2025-26: Climate">[179]</a></p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- TRANSPORT SECTOR -->
         <div class="sector-content-panel hidden" id="transport">
-            <!-- Baseline -->
+            <!-- 1. BASELINE -->
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Baseline (Current Status)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Transport Emissions</h4>
-                        <ul class="text-sm">
-                            <li>13.5% of energy-related emissions <a href="resources.html#ref-niti-transport-energy-outlook-2022" style="font-size: 0.75rem;">[10,21]</a></li>
-                            <li>Road transport: 90% of sector consumption <a href="resources.html#ref-morth-yearbook-2022-23" style="font-size: 0.75rem;">[8]</a></li>
-                            <li>Oil imports: 89% import dependent <a href="resources.html#ref-iea-world-energy-investment-2024" style="font-size: 0.75rem;">[3]</a></li>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📊 Baseline: Current Transport System Status</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Vehicle Fleet & Motorization</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>330M+ total vehicles</strong> (2024, 12% annual growth) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>240M two-wheelers</strong> (73% of fleet); 40M cars (12%) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Vehicle density: <strong>253 per 1000 population</strong> vs global average 182 <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Only <strong>1.5M EVs</strong> sold in 2023 (8% penetration in new 2Ws; 2% in cars) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Avg vehicle age: <strong>11 years</strong> (scrappage policy not enforced) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Urban Mobility</h4>
-                        <ul class="text-sm">
-                            <li>Urban population: 500M (2025) <a href="resources.html#ref-wri-decarbonising-transport-2024" style="font-size: 0.75rem;">[20]</a></li>
-                            <li>Short trips (&lt;5 km): 40% of urban trips <a href="resources.html#ref-itdp-brt-guide-2023" style="font-size: 0.75rem;">[9]</a></li>
-                            <li>Congestion cost: 1.5% of GDP <a href="resources.html#ref-wri-decarbonising-transport-2024" style="font-size: 0.75rem;">[20]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Public Transit Deficit</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>25% modal share</strong> for public transit in metros vs 60% in global cities <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>945 km metro</strong> operational (14 cities); 1,100 km under construction <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li>Only <strong>63 of 4,000+ ULBs</strong> have city bus services (15 buses per lakh population vs 60 global std) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>100% bus subsidy dependency:</strong> No city recovers operational costs from fares <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li>Transit ridership declining: <strong>-8% annually</strong> as vehicle ownership rises <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Public Transit</h4>
-                        <ul class="text-sm">
-                            <li>Metro: 1,035 km in 23 cities <a href="resources.html#ref-mohua-metro-status-2025" style="font-size: 0.75rem;">[22]</a></li>
-                            <li>E-buses: 10,000+ deployed in 50+ cities <a href="resources.html#ref-mhi-fame-bus-status-2024" style="font-size: 0.75rem;">[23]</a></li>
-                            <li>BRT: Limited to few cities (Ahmedabad, Pune) <a href="resources.html#ref-itdp-brt-guide-2023" style="font-size: 0.75rem;">[9]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Active Transport Crisis</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>48% trips are cycling/walking</strong> distance (&lt;5km) but infrastructure missing <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li>Only <strong>200 km cycling lanes</strong> exist across all Indian cities <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>60% pedestrian trips</strong> have no footpath; forced to walk on roads <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>1.5 lakh road deaths/year</strong>; 60% pedestrians/cyclists (10x global rate) <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li>Street design: <strong>&lt;5% road space</strong> for pedestrians vs 40-60% for motorized traffic <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Walking & Cycling Infrastructure</h4>
-                        <ul class="text-sm">
-                            <li>C4C/S4P delivered: 570km (350km footpaths + 220km cycle tracks) in 33 cities <a href="resources.html#ref-mohua-cycles4change-2024" style="font-size: 0.75rem;">[30]</a></li>
-                            <li>Under development: 1,400km NMT infrastructure <a href="resources.html#ref-mohua-cycles4change-2024" style="font-size: 0.75rem;">[30]</a></li>
-                            <li>Only 30% urban roads have dedicated cycle lanes <a href="resources.html#ref-wri-bicycle-sharing-2023" style="font-size: 0.75rem;">[25]</a></li>
-                            <li>Pedestrians: 20% of road fatalities (most vulnerable) <a href="resources.html#ref-itdp-walking-cycling-challenges-2025" style="font-size: 0.75rem;">[29]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Freight & Logistics</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>65% freight by road</strong> vs 30% rail (inverse of global best practice) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>4.8M heavy trucks</strong>; 90% are BS-IV or older (high emissions) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Last-mile delivery: <strong>70% by diesel 3-wheelers</strong> in cities (no EV penetration) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Freight electrification: <strong>&lt;1% trucks,</strong> 5% 3-wheelers <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Logistics cost: <strong>14% GDP</strong> vs 8% global average (inefficiency penalty) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">EV Adoption & Air Quality</h4>
-                        <ul class="text-sm">
-                            <li>EV penetration: ~8% of vehicle sales (2025) <a href="resources.html#ref-ibef-ev-market-2025" style="font-size: 0.75rem;">[81]</a></li>
-                            <li>Target: 30% EV penetration by 2030 <a href="resources.html#ref-ibef-ev-market-2025" style="font-size: 0.75rem;">[81]</a></li>
-                            <li>Proof: 200 ZEVs = 1.1% NO2 reduction (California) <a href="resources.html#ref-eckel-zev-no2-california-2025" style="font-size: 0.75rem;">[80]</a></li>
-                            <li>India projection: 2.88 μg/m³ PM2.5 reduction by 2030 <a href="resources.html#ref-icct-ev-health-impacts-2022" style="font-size: 0.75rem;">[82]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Emissions & Health Burden</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>20-35% urban PM2.5</strong> from vehicles (60-80% at local hotspots) <a href="resources.html#ref-cpcb-dust-mitigation-2017" class="text-xs text-primary hover:underline" title="CPCB Dust Mitigation 2017">[178]</a></li>
+                            <li><strong>290 MtCO2e/year</strong> from transport (12% national emissions; fastest growing sector) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>NO2 exposure: <strong>Delhi 40 µg/m³</strong> vs WHO standard 10 µg/m³ (vehicles primary source) <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                            <li>Health costs: <strong>₹80,000 Cr/year</strong> from vehicular pollution deaths, DALYs <a href="resources.html#ref-cpcb-dust-mitigation-2017" class="text-xs text-primary hover:underline" title="CPCB Dust Mitigation 2017">[178]</a></li>
+                            <li>Congestion penalty: <strong>₹1.5 lakh Cr/year</strong> in lost productivity (Delhi, Mumbai, Bengaluru) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Shift</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Sustainable Urban Mobility</h4>
-                        <ul class="text-sm">
-                            <li>Public transit as preferred mode in cities</li>
-                            <li>Walking and cycling normalized for short trips</li>
-                            <li>Reduced dependence on private vehicles</li>
-                            <li>Oil import dependency significantly reduced</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Targets</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Year 3 Milestones</h4>
-                        <ul class="text-sm">
-                            <li>20B passenger-km shifted to public transit</li>
-                            <li>5 city BRT/TOD plans implemented</li>
-                            <li>500 km cycling infrastructure</li>
-                            <li>10 complete streets projects</li>
-                            <li>15% EV penetration in target states <a href="resources.html#ref-ibef-ev-market-2025" style="font-size: 0.75rem;">[81]</a></li>
-                        </ul>
-                        <p style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Source: Program targets based on <a href="resources.html#ref-itdp-brt-guide-2023">[9,20,24,80]</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobility Investment Gap -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-bottom: 1.5rem; border-left: 4px solid #3b82f6; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🚌</span> The Mobility Investment Gap
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">Where investment goes vs. where people move</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">India invests in roads and metros while buses, walking, and cycling — which move most people — are starved of funds.</p>
-
-                <!-- Interactive Investment Flow Diagram -->
-                <div id="transport-investment-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
-
-                <!-- Key Statistics Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Metro vs Bus Investment</h4>
-                        <ul class="text-sm">
-                            <li>Metro: <strong>54%</strong> of MoHUA budget (2017) <a href="https://shaktifoundation.in" style="font-size: 0.7rem;" target="_blank">[Shakti]</a></li>
-                            <li>Metro investment: <strong>40x</strong> that of BRT <a href="https://shaktifoundation.in" style="font-size: 0.7rem;" target="_blank">[Shakti]</a></li>
-                            <li>But metro carries only <strong>4x</strong> more passengers</li>
-                            <li>BRT: 3,750 passengers per ₹Cr per km — best ROI</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Private vs Public Subsidy</h4>
-                        <ul class="text-sm">
-                            <li>Cars receive <strong>more subsidy</strong> than buses <a href="https://sciencedirect.com" style="font-size: 0.7rem;" target="_blank">[ScienceDirect]</a></li>
-                            <li>Free parking = implicit subsidy worth ₹1000s Cr <a href="https://cdn.cseindia.org" style="font-size: 0.7rem;" target="_blank">[CSE]</a></li>
-                            <li>>40% road space used for parking in many cities</li>
-                            <li>PM E-DRIVE: ₹10,900 Cr for EVs; ₹510 Cr for e-buses</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">NMT Neglect</h4>
-                        <ul class="text-sm">
-                            <li>NMT mode share: <strong>42%→31%</strong> (2001-2011)</li>
-                            <li>Pedestrians: <strong>20%</strong> of road fatalities</li>
-                            <li><strong>53%</strong> of Pune roads lack footpaths <a href="resources.html#ref-itdp-walking-cycling-challenges-2025" style="font-size: 0.7rem;">[29]</a></li>
-                            <li><strong>85%</strong> roads lack NMT safety infrastructure</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Institutional Fragmentation</h4>
-                        <ul class="text-sm">
-                            <li>Only <strong>15 cities</strong> have UMTAs <a href="https://orfonline.org" style="font-size: 0.7rem;" target="_blank">[ORF]</a></li>
-                            <li><strong>6 states</strong> with metros lack statutory UMTAs</li>
-                            <li>Delhi: <strong>10+ agencies</strong>, none accountable</li>
-                            <li>UMTA meetings: 8-12 month gaps on average</li>
-                        </ul>
-                    </div>
-                </div>
-                <p style="font-size: 0.75rem; color: #6b7280; margin-top: 1rem;">Sources: Shakti Foundation, CSE Parking Report, ORF UMTA Study, MoHUA Budget Analysis</p>
-            </div>
-
-            <!-- Transport Modal Split & Efficiency -->
-            <div class="bg-gradient-to-br from-pink-50 to-transparent border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-pink-500">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🚌</span> The Transport Efficiency Gap
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">13.5% of emissions from 4.31% of trips</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Walk/cycle = 50% of trips but zero investment. Public transport = 36% ridership but declining. Private vehicles = 4% of trips but 60%+ of space and emissions.</p>
-
-                <!-- Interactive Sankey Diagram -->
-                <div id="transport-sankey" style="height: 600px; margin-bottom: 1rem;"></div>
-
-                <!-- Key Statistics Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Split Incentives</h4>
-                        <ul class="text-sm">
-                            <li>Free parking worth <strong>₹1000s Cr/year</strong> → Drives car ownership</li>
-                            <li>No congestion charging despite traffic externalities</li>
-                            <li>Property tax doesn't reflect parking value ($25/hr US)</li>
-                            <li>Result: 4% trips take 60% road space</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Active Transport Neglect</h4>
-                        <ul class="text-sm">
-                            <li><strong>50%</strong> of trips are walk/cycle</li>
-                            <li><strong>&lt;1%</strong> of urban transport budget</li>
-                            <li><strong>5%</strong> of road space despite 50% mode share</li>
-                            <li>70% feel unsafe cycling in Indian cities <a href="resources.html#ref-mohua-cycles4change-2024" style="font-size: 0.7rem;">[30]</a></li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Paratransit Paradox</h4>
-                        <ul class="text-sm">
-                            <li><strong>4.31%</strong> of work trips via auto/taxi</li>
-                            <li>More than private cars but zero planning inclusion</li>
-                            <li><strong>10M+</strong> drivers with no social protection</li>
-                            <li>App platforms take 25-30% commission</li>
-                        </ul>
-                    </div>
-                </div>
-                <p style="font-size: 0.75rem; color: #6b7280; margin-top: 1rem;">Sources: Census 2011 Modal Split, CEEW Transport Study, ITDP Paratransit Report, IEA Transport Efficiency</p>
-            </div>
-
-            <!-- Hidden Dynamics - The Real Investment Opportunities -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-bottom: 1.5rem; border-left: 4px solid #f59e0b; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🔍</span> Hidden Dynamics
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">Where the real problems live</span>
-                </h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Parking Subsidy</h4>
-                        <ul class="text-sm">
-                            <li><strong>Hidden subsidy:</strong> Free parking worth ₹1000s Cr/year — parking tariffs far below land values <a href="https://cdn.cseindia.org" style="font-size: 0.7rem;" target="_blank">[CSE]</a></li>
-                            <li><strong>Land allocation:</strong> >40% of road network under on-street parking in many cities <a href="https://cdn.cseindia.org" style="font-size: 0.7rem;" target="_blank">[CSE]</a></li>
-                            <li><strong>Code-driven sprawl:</strong> Mandatory minimums in building codes drive car ownership</li>
-                            <li><strong>Investment opportunity:</strong> Parking pricing, revenue to local services, remove minimums</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Auto Industry Capture</h4>
-                        <ul class="text-sm">
-                            <li><strong>Subsidy asymmetry:</strong> Private cars receive more subsidy than public buses <a href="https://sciencedirect.com" style="font-size: 0.7rem;" target="_blank">[ScienceDirect]</a></li>
-                            <li><strong>PLI imbalance:</strong> Auto PLI saw 713% budget increase; bus investment flat</li>
-                            <li><strong>Narrative control:</strong> "Congestion" framed as road shortage, not car excess</li>
-                            <li><strong>Investment opportunity:</strong> Reframe narrative, shift subsidies to shared mobility</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Gig Worker Extraction</h4>
-                        <ul class="text-sm">
-                            <li><strong>Commission reality:</strong> Ola/Uber take <strong>25-40%</strong>, not 20% guideline cap <a href="https://tiss.ac.in" style="font-size: 0.7rem;" target="_blank">[TISS]</a></li>
-                            <li><strong>Earnings collapse:</strong> Drivers get ₹400 of ₹1000 fare; down 50% from peak <a href="https://theprint.in" style="font-size: 0.7rem;" target="_blank">[ThePrint]</a></li>
-                            <li><strong>Hours trap:</strong> 60% work >12 hrs/day; 31% work >14 hrs <a href="https://tgpwu.org" style="font-size: 0.7rem;" target="_blank">[PAIGAM]</a></li>
-                            <li><strong>Investment opportunity:</strong> Driver cooperatives, platform regulation, welfare boards</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The Last-Mile Failure</h4>
-                        <ul class="text-sm">
-                            <li><strong>Metro islands:</strong> ₹1000s Cr stations with no safe walking access</li>
-                            <li><strong>Footpath reality:</strong> 53% of Pune roads lack footpaths entirely</li>
-                            <li><strong>Cost barrier:</strong> Auto-rickshaws charge ₹50+ to cover 500m — defeats transit</li>
-                            <li><strong>Investment opportunity:</strong> Station area redesign, feeder integration, e-rickshaw fleets</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The EV Transition Trap</h4>
-                        <ul class="text-sm">
-                            <li><strong>Cars first:</strong> FAME covered 55K 4-wheelers vs 10L 2-wheelers — worse emissions/₹ <a href="https://theicct.org" style="font-size: 0.7rem;" target="_blank">[ICCT]</a></li>
-                            <li><strong>Subsidy mismatch:</strong> 2W subsidy ₹15K/kWh; 4W only ₹10K but higher total</li>
-                            <li><strong>Bus afterthought:</strong> PM E-DRIVE: ₹10,900 Cr total; only ₹510 Cr for e-buses</li>
-                            <li><strong>Investment opportunity:</strong> 2W/3W electrification, battery swapping, public charging</li>
-                        </ul>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">The UMTA Illusion</h4>
-                        <ul class="text-sm">
-                            <li><strong>Paper tigers:</strong> 15 UMTAs exist; only Hyderabad has statutory power <a href="https://orfonline.org" style="font-size: 0.7rem;" target="_blank">[ORF]</a></li>
-                            <li><strong>6 metro states</strong> lack statutory UMTAs (Delhi, Karnataka, Gujarat, MP, MH, RJ)</li>
-                            <li><strong>Meeting frequency:</strong> 8-12 month gaps on average; some states had 1-2 meetings total</li>
-                            <li><strong>Investment opportunity:</strong> Legislative backing, financial powers, unified data platforms</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">EV Transition Progress</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>1.5M EVs sold</strong> in 2023 (8% 2W penetration, 2% cars, 5% 3W) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>12,000 public chargers</strong> (0.004 per EV vs 0.1 global standard) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>₹25,938 Cr FAME-II subsidy</strong> (2019-2024); ₹10,900 Cr utilized <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Battery costs: <strong>$130/kWh</strong> (down from $1000 in 2010); target $100/kWh for parity <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li>Satellite validation: <strong>200 EVs = 1.1% NO2 reduction</strong> (California study transferable) <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Discovery Methods -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-bottom: 1.5rem; border-left: 4px solid #6366f1;">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🔬</span> Discovery Methods
-                    <span style="font-size: 0.75rem; font-weight: normal; color: #6b7280; margin-left: auto;">How to surface hidden dynamics</span>
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Value Parking</h4>
-                        <ul class="text-sm">
-                            <li>Calculate land value of free parking per city</li>
-                            <li>Map parking availability vs. transit access</li>
-                            <li>Audit building code parking mandates</li>
+            <!-- 2. TARGETS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-primary">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Targets: Year 3 Milestones</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Public Transit Transformation</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>40% modal share</strong> in 10 target metros (vs 25% baseline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>500 km new metro</strong> operational + 50,000 new city buses added <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>100 cities</strong> with operational bus services (vs 63 baseline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>30 buses per lakh</strong> population target in 10 pilot cities <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Fare box recovery: 60%</strong> operational costs (from 0% baseline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Subsidy Mapping</h4>
-                        <ul class="text-sm">
-                            <li>Compare auto industry subsidies vs. public transit funding</li>
-                            <li>Track fuel subsidy incidence by income group</li>
-                            <li>Calculate true cost of road space per mode</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Active Transport Safety</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>2,000 km protected cycling lanes</strong> in 20 cities (10x baseline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>80% footpath coverage</strong> for all arterial roads in target cities <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>50% reduction</strong> in pedestrian/cyclist road deaths (vs 1.5L baseline) <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>Vision Zero adoption</strong> in 10 metros (zero road death commitment) <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>20% road space reallocation</strong> from cars to pedestrians/cycles <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Last-Mile Audits</h4>
-                        <ul class="text-sm">
-                            <li>Walk from metro stations — document obstructions</li>
-                            <li>Time/cost last-mile options at peak hours</li>
-                            <li>Interview transit non-users: why not?</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">EV Penetration & Charging</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>30% EV penetration</strong> in new 2W sales; 15% cars; 40% 3W <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>100,000 public chargers</strong> deployed (8x baseline); 0.03 per EV ratio <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>5,000 electric buses</strong> in 50 cities (fleet electrification model) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>2.88 µg/m³ PM2.5 reduction</strong> from EV transition (satellite-verified) <a href="resources.html#ref-icct-ev-health-impacts-2022" class="text-xs text-primary hover:underline" title="ICCT EV Health Impacts 2022">[180]</a></li>
+                            <li><strong>₹100/kWh battery cost</strong> achieved (parity threshold) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Driver Economics</h4>
-                        <ul class="text-sm">
-                            <li>Survey auto/cab driver earnings and expenses</li>
-                            <li>Track platform commission changes over time</li>
-                            <li>Map permit allocation and enforcement patterns</li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Freight Modal Shift</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>45% freight by rail</strong> (from 30% baseline); 55% by road <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>10,000 electric trucks</strong> operational (long-haul pilot corridors) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>50% last-mile electric</strong> in 20 cities (3W cargo conversion) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Logistics cost: 11% GDP</strong> (from 14% baseline) via efficiency gains <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Dedicated freight corridors:</strong> 3,000 km operational (decongesting highways) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Emissions & Air Quality</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>15% vehicular PM2.5 reduction</strong> in 10 target cities (satellite-validated) <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                            <li><strong>50 MtCO2e avoided</strong> annually from transit/EV shift (17% baseline reduction) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>NO2 exposure: 25 µg/m³</strong> in Delhi (from 40 baseline) <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                            <li><strong>₹30,000 Cr health costs avoided</strong> from reduced vehicular pollution <a href="resources.html#ref-icct-ev-health-impacts-2022" class="text-xs text-primary hover:underline" title="ICCT EV Health Impacts 2022">[180]</a></li>
+                            <li><strong>Congestion penalty: ₹1 lakh Cr</strong> (from ₹1.5L baseline) via demand management <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Policy & Demand Management</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Congestion pricing</strong> operational in 3 metros (London/Singapore model) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Parking reform:</strong> ₹200/hr peak rates in 10 CBDs (demand curb) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Vehicle scrappage: 5M old vehicles</strong> retired via incentive scheme <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Shared mobility: 20% trips</strong> via app-based ride-sharing in metros <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>TOD policy:</strong> 50% new housing within 1km of transit in 10 cities <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Markers</h3>
-                    <div class="mb-4">
+            <!-- 3. SANKEY DIAGRAM -->
+            <div class="bg-gradient-to-br from-purple-50 to-transparent border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-purple-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">🚗 Transport System Flow: Vehicle Types to Emissions</h3>
+                <p class="text-sm text-gray-600 italic mb-4">Visualizing how 330M+ vehicles across categories generate PM2.5, NO2, and CO2 emissions, creating health burden and climate impacts</p>
+                <div id="transport-sankey" style="height: 500px; margin-bottom: 1rem;"></div>
+                <p class="text-xs text-gray-500 mt-2">Source: NITI Aayog ZEV Roadmap 2022, CPCB Dust Mitigation 2017, MoHUA NMT Policy 2022. Interactive diagram shows vehicle fleet → fuel combustion → pollution types → health/climate outcomes.</p>
+            </div>
+
+            <!-- 4. HIDDEN DYNAMICS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-amber-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">🔍 Hidden Dynamics: The Systemic Barriers</h3>
+                <p class="text-sm text-gray-600 italic mb-4">These systemic issues don't appear in official statistics but determine whether interventions succeed or fail. Investment here creates leverage.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Ownership & Demands</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Car ownership aspiration:</strong> Vehicle = status symbol—policy battles car lobby vs public good <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Transit as last resort:</strong> "Only poor use buses"—middle class demands parking, not transit investment</li>
+                            <li><strong>Fragmented ownership:</strong> Transport (MoRTH), Urban (MoHUA), Rail (MoR)—no single system owner</li>
+                            <li><strong>Auto industry capture:</strong> FAME subsidies benefit manufacturers; user behavior unchanged (12% growth continues)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Culture & Narrative</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>"Cars = development" myth:</strong> GDP growth measured by vehicle sales, not mobility efficiency <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>"Transit is charity" belief:</strong> Buses seen as welfare, not revenue service—subsidy dependency normalized</li>
+                            <li><strong>"Pedestrians don't matter":</strong> 1.5L deaths/year (60% walkers/cyclists) accepted as inevitable <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>"Tech will solve it":</strong> EV hype distracts from transit/land use—330M EVs still = congestion</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. Capacity & Skills</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Transit planning gap:</strong> Only 63 of 4,000+ ULBs have bus services—no in-house capacity to operate <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Street design incompetence:</strong> Engineers trained for vehicle speed, not safety—no pedestrian design curriculum</li>
+                            <li><strong>Enforcement collapse:</strong> Avg 1 traffic cop per 2,000 vehicles—helmet/seatbelt laws unenforced <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>Data blindness:</strong> No city tracks transit ridership, modal share, or trip patterns—planning by hunch</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Data & Evidence</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Modal share unknown:</strong> 25% public transit estimate unverified—no city has origin-destination surveys <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Health-transport disconnect:</strong> ₹80K Cr health costs from vehicles not attributed in road project appraisals <a href="resources.html#ref-icct-ev-health-impacts-2022" class="text-xs text-primary hover:underline" title="ICCT EV Health Impacts 2022">[180]</a></li>
+                            <li><strong>Congestion costs invisible:</strong> ₹1.5L Cr/year loss not tracked—no economic case for demand management <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>EV impact unmonitored:</strong> TROPOMI satellite can verify NO2 reduction but not integrated into policy <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Policy & Regulation</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Parking mandates kill transit:</strong> 2 parking spaces/flat mandatory—guarantees car dependency <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Road widening reflex:</strong> Every congestion problem "solved" by adding lanes—induced demand ignored</li>
+                            <li><strong>No vehicle restraint:</strong> Parking free/cheap; no congestion pricing; vehicle growth unchecked (12% annually) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Scrappage policy toothless:</strong> 11-year avg vehicle age; no mandatory retirement—pollution continues <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. Finance & Capital</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>0% fare box recovery:</strong> Buses 100% subsidy-dependent—no city breaks even; expansion impossible <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Metro cost explosion:</strong> ₹300 Cr/km vs ₹150 Cr global—overbuild + land acquisition delays</li>
+                            <li><strong>FAME subsidy capture:</strong> ₹26K Cr allocated but benefits manufacturers, not users—sales still 8% penetration <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Road budgets car-centric:</strong> 95% funds for highways/flyovers; &lt;5% for cycling/walking infrastructure <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Market & Procurement</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Charging infrastructure chicken-egg:</strong> 12K chargers for 1.5M EVs—range anxiety blocks adoption <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Battery cost barrier:</strong> $130/kWh still 30% above parity ($100)—EVs premium-priced <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Fossil fuel price distortion:</strong> Diesel subsidized for trucks—rail freight uncompetitive (30% vs 65% road) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Used vehicle dumping:</strong> No scrappage enforcement—old high-emission vehicles resold, not retired <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. SHIFT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-blue-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🌟 Shift: The Transformation Vision</h3>
+                <p class="text-base text-gray-900 mb-4"><strong>Mobility where public transit is the first choice, active transport is safe, freight moves by rail, and vehicle emissions approach zero through electrification and shared mobility.</strong></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">What Changes</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>From car-aspiration to transit-pride:</strong> Middle class chooses metro over car—bus ridership rising, not falling <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>From subsidy-dependent to fare-sustainable:</strong> Buses recover 60% opex from fares—expansion self-funded <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>From parking mandates to parking caps:</strong> CBDs charge ₹200/hr; new housing built transit-adjacent, not car-dependent <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>From road widening to road diets:</strong> 20% space reallocated to pedestrians/cycles—speed reduced, safety improved <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>From FAME manufacturer subsidy to user incentive:</strong> EV buyers get charger installation + toll-free lanes—adoption accelerates <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Breakthrough Moments</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Congestion pricing adopted:</strong> Delhi/Mumbai/Bengaluru charge zone entry—₹50K Cr revenue funds metro expansion <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Vision Zero commitment:</strong> 10 metros pledge zero road deaths—street design standards rewritten for safety <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>Freight modal shift policy:</strong> Carbon tax on road freight; rail subsidy—45% freight by rail achieved <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Satellite-verified EV impact:</strong> TROPOMI shows 1.1% NO2 drop per 200 EVs—validates health benefit case <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                            <li><strong>TOD becomes default:</strong> 50% new housing within 1km transit—car dependency designed out <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. MARKERS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-teal-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">📈 Markers: Progress Indicators</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">Quantitative Signals</h4>
-                        <ul class="text-sm">
-                            <li>Public transit ridership growth rates</li>
-                            <li>Modal share data in target cities</li>
-                            <li>Km of dedicated bus/cycle lanes added</li>
-                            <li>States adopting Active Mobility legislation</li>
-                            <li>Satellite NO2 trends correlated with EV uptake <a href="resources.html#ref-eckel-zev-no2-california-2025" style="font-size: 0.75rem;">[80]</a></li>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Public transit modal share:</strong> 40% in 10 target metros (from 25% baseline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Bus ridership trend:</strong> +5% annual growth (vs -8% baseline decline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>EV penetration:</strong> 30% new 2W sales, 15% cars, 40% 3W (vs 8%, 2%, 5% baseline) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Cycling lane km:</strong> 2,000 km in 20 cities (from 200 km baseline) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Road deaths reduction:</strong> 50% drop in pedestrian/cyclist deaths (from 1.5L/year) <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>NO2 satellite tracking:</strong> 1.1% reduction per 200 EVs verified via TROPOMI <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                            <li><strong>Freight rail share:</strong> 45% by rail (from 30% baseline) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Congestion penalty:</strong> ₹1 lakh Cr (from ₹1.5L baseline)—33% reduction <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
-                    <div class="mb-4">
+                    <div>
                         <h4 class="text-sm font-semibold text-gray-900 mb-2">Qualitative Signals</h4>
-                        <ul class="text-sm">
-                            <li>UMTA empowerment with statutory backing</li>
-                            <li>Citizen perception of walking/cycling safety</li>
-                            <li>Political commitment to NMT infrastructure</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Strategies</h3>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Addressing Hidden Dynamics</h4>
-                        <ul class="text-sm">
-                            <li><strong>Parking Subsidy:</strong> Dynamic pricing, remove parking minimums, earmark revenue for transit</li>
-                            <li><strong>Auto Industry Capture:</strong> Reframe narrative; shift subsidies from cars to shared mobility</li>
-                            <li><strong>Gig Worker Extraction:</strong> Driver cooperatives, commission caps, platform welfare boards</li>
-                            <li><strong>Last-Mile Failure:</strong> Station area redesign, safe walking access, feeder integration</li>
-                            <li><strong>EV Transition Trap:</strong> Prioritize 2W/3W/bus electrification over private cars</li>
-                            <li><strong>UMTA Illusion:</strong> Grant statutory power, financial autonomy, unified data platforms</li>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Transit narrative shift:</strong> Media covers "metro overcrowding" not "bus subsidy burden"—demand signal</li>
+                            <li><strong>Parking policy reversal:</strong> 3 metros repeal parking mandates; adopt ₹200/hr CBD pricing <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Vision Zero adoption:</strong> 10 cities officially commit to zero road death target <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>Street design curriculum:</strong> Engineering colleges add pedestrian safety modules (capacity shift)</li>
+                            <li><strong>Community mobilization:</strong> Resident groups demand protected cycling lanes in planning approvals</li>
+                            <li><strong>Corporate fleet electrification:</strong> E-commerce cos pledge 100% EV last-mile delivery by 2026 <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Scrappage enforcement:</strong> States start impounding 15-year+ vehicles; resale market collapses <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>TOD planning default:</strong> New master plans mandate 50% housing within 1km transit <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Investment & Economic Impact -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" style="margin-top: 1.5rem; border-left: 4px solid #22c55e;">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Investment & Economic Impact</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Investment Required</h4>
-                        <ul class="text-sm">
-                            <li><strong>$164 billion/year</strong> for net-zero transport (2023-2030) <a href="resources.html#ref-newclimate-transport-pathways-2024" style="font-size: 0.75rem;">[62]</a></li>
-                            <li><strong>$600-650 billion</strong> for sustainable transport system <a href="resources.html#ref-deloitte-climate-investment-2025" style="font-size: 0.75rem;">[60]</a></li>
-                            <li><strong>$26 billion</strong> allocated for metro expansion <a href="resources.html#ref-knightfrank-infrastructure-2025" style="font-size: 0.75rem;">[63]</a></li>
-                            <li>50,000 e-buses through National Electric Bus Programme <a href="resources.html#ref-knightfrank-infrastructure-2025" style="font-size: 0.75rem;">[63]</a></li>
+            <!-- 7. STRATEGIES -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-indigo-600">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🛠️ Strategies: Intervention Pathways</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">1. Transit-First Policy Package</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 25% modal share; 0% fare recovery; -8% ridership decline <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Deploy 50,000 new buses in 100 cities (30 buses/lakh target); electrify 100% new fleet</li>
+                            <li>Bus priority corridors: dedicated lanes on 500 km arterials—reduce travel time by 30%</li>
+                            <li>Fare reform pilots in 10 cities: dynamic pricing, monthly passes—target 60% recovery</li>
+                            <li>Integrated ticketing: single card for bus/metro/bike-share—reduce friction, boost ridership</li>
+                            <li>Service frequency standards: 5-min peak, 15-min off-peak on trunk routes—reliability drives adoption</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">GDP & Economic Benefits</h4>
-                        <ul class="text-sm">
-                            <li><strong>$25 billion/year</strong> saved if 50% trips &lt;5km shift to cycling <a href="resources.html#ref-teri-cycling-benefits-2019" style="font-size: 0.75rem;">[64]</a></li>
-                            <li><strong>1.6% GDP</strong> savings annually <a href="resources.html#ref-teri-cycling-benefits-2019" style="font-size: 0.75rem;">[64]</a></li>
-                            <li>2-5% GDP lost to congestion in Asian cities <a href="resources.html#ref-wri-decarbonising-transport-2024" style="font-size: 0.75rem;">[20]</a></li>
-                            <li>28-37% road accident reduction via NMT investment <a href="resources.html#ref-wri-decarbonising-transport-2024" style="font-size: 0.75rem;">[20]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2. Vision Zero Street Redesign</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 1.5L deaths/year; 60% pedestrians/cyclists; no footpaths <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>2,000 km protected cycling lanes: physical separation, not paint—Amsterdam standard</li>
+                            <li>Complete streets pilots: 20 cities reallocate 20% road space to pedestrians/cycles</li>
+                            <li>Speed limit reform: 40 km/h default in cities; automated enforcement via cameras</li>
+                            <li>Footpath mandate: 80% coverage on all arterials; tactile paving for blind; street lighting</li>
+                            <li>Street design manuals updated: pedestrian safety as primary criterion, not vehicle speed</li>
                         </ul>
                     </div>
-                    <div class="mb-4">
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Quality of Life Benefits</h4>
-                        <ul class="text-sm">
-                            <li>Walking/cycling: Lower obesity, diabetes, hypertension <a href="resources.html#ref-imperial-walking-cycling-health-2013" style="font-size: 0.75rem;">[71]</a></li>
-                            <li>10-11% reduced all-cause mortality from cycling <a href="resources.html#ref-pnas-global-health-benefits-2025" style="font-size: 0.75rem;">[72]</a></li>
-                            <li>Improved mental well-being & cardiovascular health <a href="resources.html#ref-indiabioscience-sustainable-mobility-2024" style="font-size: 0.75rem;">[73]</a></li>
-                            <li>1M tonnes CO2 avoided annually from cycling shift <a href="resources.html#ref-teri-cycling-benefits-2019" style="font-size: 0.75rem;">[64]</a></li>
-                            <li>EV transition: 16,700-70,400 avoided deaths/year by 2040 <a href="resources.html#ref-icct-ev-health-impacts-2022" style="font-size: 0.75rem;">[82]</a></li>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">3. EV Acceleration via Infrastructure</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 8% 2W penetration; 12K chargers for 1.5M EVs; range anxiety <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>100,000 public chargers deployed: 1 per 3 km in cities; highway corridors every 50 km</li>
+                            <li>Mandate EV charging in new buildings: 20% parking spots; building codes updated</li>
+                            <li>Battery-swap pilots for 2W/3W: 500 swap stations in 10 cities—5-min refuel</li>
+                            <li>FAME subsidy shift: from manufacturer to user—charger installation + toll-free EV lanes</li>
+                            <li>Corporate fleet mandates: 30% EV procurement for govt/PSUs by 2027—demand certainty</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">4. Demand Management Pricing</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> Parking free; no congestion pricing; 12% vehicle growth unchecked <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Congestion pricing pilots: Delhi/Mumbai/Bengaluru charge ₹100-500 zone entry—London model</li>
+                            <li>Parking reform: ₹200/hr peak CBD rates; abolish parking mandates in TOD zones</li>
+                            <li>Vehicle ownership tax: annual ₹10K levy on 2nd+ car—revenue funds transit expansion</li>
+                            <li>Fuel tax escalator: ₹5/liter annual increase earmarked for EV charging infrastructure</li>
+                            <li>Congestion revenue earmarking: 100% to transit/cycling—self-funding virtuous cycle</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">5. Freight Modal Shift Policy</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> 65% freight by road; 30% by rail; 14% GDP logistics cost <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Carbon tax on road freight: ₹50/ton-km (50% exemption for EVs)—rail becomes competitive</li>
+                            <li>Dedicated freight corridors: 3,000 km operational; decongest highways, reduce truck crashes</li>
+                            <li>Last-mile electric 3W mandate: 50% of city deliveries via EV cargo vehicles by 2027</li>
+                            <li>Truck platooning pilots: automated convoys reduce fuel 15% + emissions on 5 corridors</li>
+                            <li>Rail freight subsidy: ₹5K Cr to upgrade terminals, electrify routes—target 45% modal share</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">6. TOD & Land Use Integration</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> New housing car-dependent; parking mandates guarantee sprawl <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>TOD policy mandate: 50% new housing within 1km of metro/bus corridor in 10 metros</li>
+                            <li>Parking mandate repeal: 3 cities abolish minimums; adopt maximums (0.5 spaces/unit in TOD)</li>
+                            <li>Transit land value capture: 50% property tax increase in TOD zones funds metro expansion</li>
+                            <li>Mixed-use zoning reform: residential + commercial within 15-min walk—reduce trip length</li>
+                            <li>Street connectivity standards: max 100m block length; no gated communities in TOD zones</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">7. Satellite-Verified EV Impact Tracking</h4>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Problem:</strong> EV health benefit unmonitored; TROPOMI satellite not integrated <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Intervention:</strong></p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>TROPOMI NO2 monitoring: monthly tracking in 20 cities—validate 1.1% drop per 200 EVs</li>
+                            <li>Integrate satellite data into NCAP: link EV penetration to air quality targets—co-benefit visible</li>
+                            <li>Public dashboard: show NO2 heatmaps overlaid with EV adoption zones—community accountability</li>
+                            <li>Health cost attribution: calculate ₹30K Cr avoided deaths from EV shift—justify subsidy</li>
+                            <li>Policy feedback loop: if NO2 reduction lags EV sales, trigger charging infrastructure audit</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Focus Areas</h3>
-                <p style="color: #4b5563; margin-bottom: 1rem; font-style: italic;">Partner-driven interventions that address hidden dynamics, not add more capacity.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🅿️</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Parking Reform</h4>
-                        <p>Dynamic pricing, remove minimums from building codes, earmark revenue for transit</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Parking Subsidy</span>
-                        </div>
+            <!-- 8. ECONOMIC IMPACT -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-rose-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💰 Economic Impact: Costs, Externalities, Opportunities</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Current Costs & Externalities</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Health burden: ₹80,000 Cr/year</strong> from vehicular PM2.5, NO2 (0.3% GDP) <a href="resources.html#ref-icct-ev-health-impacts-2022" class="text-xs text-primary hover:underline" title="ICCT EV Health Impacts 2022">[180]</a></li>
+                            <li><strong>Congestion penalty: ₹1.5 lakh Cr/year</strong> lost productivity (Delhi, Mumbai, Bengaluru) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Road crashes: ₹3 lakh Cr/year</strong> economic loss (1.5L deaths + injuries) <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>Logistics inefficiency: 6% GDP excess</strong> (14% vs 8% global)—₹13.2L Cr/year <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Transit subsidy drain:</strong> 100% opex dependency; no city breaks even—expansion impossible <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🚶</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Last-Mile Access</h4>
-                        <p>Station area redesign, safe walking access within 500m, feeder integration</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Last-Mile Failure</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Economic Benefits</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>₹30,000 Cr health costs avoided</strong> from 15% vehicular PM2.5 reduction <a href="resources.html#ref-icct-ev-health-impacts-2022" class="text-xs text-primary hover:underline" title="ICCT EV Health Impacts 2022">[180]</a></li>
+                            <li><strong>₹50,000 Cr congestion savings</strong> via 33% penalty reduction (demand management) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>₹1 lakh Cr crash cost reduction</strong> from 50% pedestrian/cyclist death drop <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></li>
+                            <li><strong>₹6.6 lakh Cr logistics savings</strong> from 3% efficiency gain (11% GDP target) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>50 MtCO2e avoided/year:</strong> Climate co-benefit (17% transport emissions baseline) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>₹50,000 Cr congestion revenue:</strong> Self-funding transit expansion from pricing <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">🛺</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Platform Worker Rights</h4>
-                        <p>Driver cooperatives, commission caps, welfare boards, platform regulation</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: Gig Worker Extraction</span>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Investment Opportunity</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Transit expansion ROI: 3x</strong> via congestion savings + health benefits + fare revenue <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>EV subsidy reallocation:</strong> ₹26K Cr FAME to charging infra—unlocks 30% penetration <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Cycling infrastructure: 10:1 ROI</strong> via health + congestion + emissions benefits <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Freight rail electrification:</strong> ₹5K Cr investment → ₹20K Cr logistics cost savings <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>TOD land value capture:</strong> 50% tax increase funds metro—self-financing expansion model <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                        </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-card-icon">⚡</div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-2">2W/3W/Bus Electrification</h4>
-                        <p>Prioritize shared and commercial EVs over private cars; charging infra for fleets</p>
-                        <div class="focus-targets">
-                            <span class="focus-target">Dynamic: EV Transition Trap</span>
+                </div>
+            </div>
+
+            <!-- 9. INVESTMENTS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-orange-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">💵 Investments: Capital Allocation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Capex (Capital Expenditure)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>50,000 electric buses:</strong> ₹1,00,000 crore (₹2 crore per bus; 100 cities) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>500 km metro expansion:</strong> ₹1,50,000 crore (₹300 crore/km; 10 metros)</li>
+                            <li><strong>100,000 public EV chargers:</strong> ₹10,000 crore (₹10 lakh/charger; installation + grid upgrade) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>2,000 km protected cycling lanes:</strong> ₹4,000 crore (₹2 crore/km; 20 cities) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Footpath construction:</strong> ₹6,000 crore (80% arterial coverage; 20 cities)</li>
+                            <li><strong>3,000 km freight corridors:</strong> ₹30,000 crore (rail electrification + terminals) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></li>
+                            <li><strong>Total Capex:</strong> ₹3,00,000 crore (~$37B) over 3 years</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Opex (Operational Expenditure)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Bus operations subsidy:</strong> ₹20,000 crore/year (40% opex; 60% fare recovery target) <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></li>
+                            <li><strong>Metro opex subsidy:</strong> ₹10,000 crore/year (new 500 km; 60% fare recovery)</li>
+                            <li><strong>Charger maintenance:</strong> ₹1,000 crore/year (100K chargers @ ₹10 lakh/charger annually)</li>
+                            <li><strong>Cycling/walking infrastructure maintenance:</strong> ₹500 crore/year (2,000 km + footpaths)</li>
+                            <li><strong>TROPOMI satellite monitoring:</strong> ₹100 crore/year (data licensing, analysis, dashboards) <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></li>
+                            <li><strong>Vision Zero program management:</strong> ₹200 crore/year (training, enforcement, monitoring)</li>
+                            <li><strong>Total Opex:</strong> ₹31,800 crore/year (~$4B/year)</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic mt-4">Note: Capex offset by ₹50K Cr congestion pricing revenue + TOD land value capture. Opex declining as fare recovery improves (60% target). Net economic benefit ₹7.8L Cr/year from health + congestion + crash savings.</p>
+            </div>
+
+            <!-- 10. FOCUS AREAS -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-red-500">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Focus Areas: Urgency-Ranked Priorities</h3>
+                <p class="text-sm text-gray-600 italic mb-4">Partner-driven interventions addressing hidden dynamics, not adding transit capacity alone. Ranked by systemic leverage.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔴</span>
+                            <h4 class="text-sm font-semibold text-gray-900">URGENT: Congestion Pricing + Parking Reform</h4>
                         </div>
+                        <p class="text-sm text-gray-700 mb-2">Implement zone pricing in 3 metros; ₹200/hr CBD parking—generate ₹50K Cr revenue for transit. <strong>Addresses:</strong> Unchecked Vehicle Growth (12% annually)</p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> Every year of delay = 40M+ new vehicles; congestion ₹1.5L Cr loss—pricing creates modal shift + self-funds expansion <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a> <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔴</span>
+                            <h4 class="text-sm font-semibold text-gray-900">URGENT: Vision Zero Street Redesign</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Reallocate 20% road space to pedestrians/cycles; 40 km/h speed limits; protected lanes. <strong>Addresses:</strong> 1.5L Deaths/Year (60% Walkers/Cyclists)</p>
+                        <p class="text-xs text-gray-600"><strong>Why urgent:</strong> 400+ daily preventable deaths—street design kills; safety redesign saves ₹1L Cr crash costs + enables walking/cycling shift <a href="resources.html#ref-mot-road-accidents-india-2024" class="text-xs text-primary hover:underline" title="MoT Road Accidents India 2024">[13]</a></p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟠</span>
+                            <h4 class="text-sm font-semibold text-gray-900">HIGH: Transit Fare Recovery Model</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Dynamic pricing, monthly passes, service frequency standards—target 60% opex recovery. <strong>Addresses:</strong> 100% Subsidy Dependency</p>
+                        <p class="text-xs text-gray-600"><strong>Why high:</strong> 0% fare recovery kills expansion—no city can afford more buses; 60% recovery creates self-funding growth <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟠</span>
+                            <h4 class="text-sm font-semibold text-gray-900">HIGH: EV Charging Infrastructure Blitz</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Deploy 100K public chargers; mandate 20% building parking—solve range anxiety. <strong>Addresses:</strong> Charging Chicken-Egg (12K for 1.5M EVs)</p>
+                        <p class="text-xs text-gray-600"><strong>Why high:</strong> Range anxiety blocks 30% EV adoption target—infrastructure unlocks ₹30K Cr health savings from emissions reduction <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a> <a href="resources.html#ref-icct-ev-health-impacts-2022" class="text-xs text-primary hover:underline" title="ICCT EV Health Impacts 2022">[180]</a></p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟡</span>
+                            <h4 class="text-sm font-semibold text-gray-900">MEDIUM: TOD & Parking Mandate Repeal</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">Abolish parking minimums; mandate 50% housing within 1km transit—design out car dependency. <strong>Addresses:</strong> Car-Centric Land Use</p>
+                        <p class="text-xs text-gray-600"><strong>Why medium:</strong> Affects new development only; 10-year lag to stock turnover—but prevents locking in sprawl for 50 years <a href="resources.html#ref-mohua-nmt-policy-2022" class="text-xs text-primary hover:underline" title="MoHUA NMT Policy 2022">[12]</a></p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟡</span>
+                            <h4 class="text-sm font-semibold text-gray-900">MEDIUM: Freight Modal Shift Carbon Tax</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">₹50/ton-km road freight tax; rail subsidy—target 45% rail share. <strong>Addresses:</strong> 65% Road Freight Dominance</p>
+                        <p class="text-xs text-gray-600"><strong>Why medium:</strong> Requires rail capacity expansion (3-5 years)—but critical for logistics cost reduction (14% to 11% GDP) <a href="resources.html#ref-niti-zero-emission-vehicles-2022" class="text-xs text-primary hover:underline" title="NITI Zero Emission Vehicles 2022">[7]</a></p>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🟢</span>
+                            <h4 class="text-sm font-semibold text-gray-900">FOUNDATIONAL: Satellite EV Impact Monitoring</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2">TROPOMI NO2 tracking; validate 1.1% drop per 200 EVs—link to health cost savings. <strong>Addresses:</strong> EV Benefit Invisibility</p>
+                        <p class="text-xs text-gray-600"><strong>Why foundational:</strong> Creates evidence base for subsidy justification—but doesn't drive adoption alone; pairs with charging infra <a href="resources.html#ref-eckel-zev-no2-california-2025" class="text-xs text-primary hover:underline" title="Eckel ZEV NO2 California 2025">[179]</a></p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- BUILDINGS SECTOR -->
-        <div class="sector-content-panel hidden" id="buildings">
             <!-- 1. BASELINE -->
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-gray-400">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">📊 Baseline: Current Status</h3>
