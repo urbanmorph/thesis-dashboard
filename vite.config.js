@@ -9,6 +9,7 @@ export default defineConfig({
         sectors: resolve(__dirname, 'sectors.html'),
         thesis: resolve(__dirname, 'thesis.html'),
         resources: resolve(__dirname, 'resources.html'),
+        'systems-map': resolve(__dirname, 'systems-map.html'),
         admin: resolve(__dirname, 'admin.html'),
         'admin-partners': resolve(__dirname, 'admin-partners.html'),
         'admin-funding': resolve(__dirname, 'admin-funding.html'),

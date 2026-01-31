@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Sectoral Systems Map - India Progress Monitor</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="bg-white/95 border-b border-gray-200 px-8 py-4 flex justify-between items-center sticky top-0 z-[100] backdrop-blur-sm">
+    <div class="flex items-center gap-2">
+        <span class="text-2xl">🌱</span>
+        <span class="text-lg font-bold text-dark">India Progress Monitor</span>
+    </div>
+    <div class="flex items-center gap-1">
+        <a href="index.html" class="text-dark text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Dashboard</a>
+        <a href="thesis.html" class="text-dark text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Thesis</a>
+        <a href="sectors.html" class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-lg">Sectors</a>
+        <a href="resources.html" class="text-dark text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Resources</a>
+    </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-8 py-12">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-dark to-dark-800 text-white p-16 rounded-xl mb-12">
+        <h1 class="text-5xl mb-4 font-bold leading-tight text-white">Cross-Sectoral Systems Map</h1>
+        <p class="text-lg text-white/90 leading-relaxed mb-4">
+            How paradigm shifts in one sector create ripple effects across others. Explores 16 interdependencies through governance, community, technical, and conditional pathways.
+        </p>
+        <div class="flex gap-4 text-sm">
+            <div class="bg-white/10 px-4 py-2 rounded-lg">
+                <span class="font-bold">8</span> Sectors
+            </div>
+            <div class="bg-white/10 px-4 py-2 rounded-lg">
+                <span class="font-bold">16</span> Cross-Sectoral Links
+            </div>
+            <div class="bg-white/10 px-4 py-2 rounded-lg">
+                <span class="font-bold">4</span> Interdependency Layers
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls Panel -->
+    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Scenario Toggle -->
+            <div>
+                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                    Scenario
+                </label>
+                <div class="flex gap-2">
+                    <button id="scenario-current"
+                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors">
+                        Current State
+                    </button>
+                    <button id="scenario-post"
+                            class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Post-Shift
+                    </button>
+                </div>
+            </div>
+
+            <!-- Layer Filter -->
+            <div>
+                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                    View Layer
+                </label>
+                <div class="flex gap-2">
+                    <button id="layer-all"
+                            class="bg-primary text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors">
+                        All
+                    </button>
+                    <button id="layer-governance"
+                            class="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Governance
+                    </button>
+                    <button id="layer-community"
+                            class="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Community
+                    </button>
+                </div>
+            </div>
+
+            <!-- Link Type Filter -->
+            <div>
+                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                    Show Links
+                </label>
+                <select id="link-filter"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option value="all">All Types</option>
+                    <option value="synergy">Synergies Only</option>
+                    <option value="conflict">Conflicts Only</option>
+                    <option value="cascade">Cascades Only</option>
+                    <option value="shared">Shared Infrastructure</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Level Indicator -->
+        <div class="mt-4 text-sm text-gray-600">
+            <span id="level-indicator" class="font-medium">Level 1: 8 Sectors</span>
+            <span class="ml-4 text-xs italic text-gray-500">
+                Click a node to drill down • Click background to zoom out
+            </span>
+        </div>
+    </div>
+
+    <!-- Main Visualization Container -->
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm mb-8 overflow-hidden">
+        <div id="cy" style="height: 700px; width: 100%;"></div>
+    </div>
+
+    <!-- Legend -->
+    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Legend</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h4 class="text-sm font-medium text-gray-700 mb-3">Node Colors (Layers)</h4>
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-blue-500"></div>
+                        <span><strong>Governance</strong> - Policies, regulations (e.g., free power, MSP, metering mandates)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-green-500"></div>
+                        <span><strong>Community</strong> - Citizen behaviors (e.g., prosumer adoption, waste segregation)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-gray-500"></div>
+                        <span><strong>Technical</strong> - Infrastructure, supply chains (e.g., cold chain, dashboards)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-purple-500"></div>
+                        <span><strong>Conditional</strong> - Context-dependent outcomes (e.g., pump efficiency)</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-sm font-medium text-gray-700 mb-3">Edge Styles (Link Types)</h4>
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-1 bg-green-500"></div>
+                        <span><strong>Synergy</strong> - Positive reinforcement (community behaviors)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-1 bg-red-500"></div>
+                        <span><strong>Conflict</strong> - Contradiction (governance policies)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-1 bg-amber-500"></div>
+                        <span><strong>Cascade</strong> - Multi-sector ripple effect</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-1 bg-gray-400 border-t-2 border-dashed border-gray-600"></div>
+                        <span><strong>Theoretical</strong> - Not yet quantified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guided Tours Section -->
+    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Guided Tours</h3>
+        <p class="text-sm text-gray-600 mb-4">
+            Follow curated narratives through the systems map to understand key cross-sectoral dynamics.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Tour 1 -->
+            <button id="tour-1"
+                    class="bg-gradient-to-br from-blue-50 to-transparent border border-blue-200 rounded-lg p-4 text-left hover:shadow-md transition-shadow">
+                <h4 class="font-semibold text-blue-900 mb-2">
+                    Water-Energy-Food Nexus
+                </h4>
+                <p class="text-xs text-gray-600 mb-3">
+                    How free farm power creates excess water withdrawal, affecting food cropping patterns and groundwater sustainability.
+                </p>
+                <span class="text-xs text-blue-700 font-medium">
+                    4 steps • 2 min
+                </span>
+            </button>
+
+            <!-- Tour 2 -->
+            <button id="tour-2"
+                    class="bg-gradient-to-br from-amber-50 to-transparent border border-amber-200 rounded-lg p-4 text-left hover:shadow-md transition-shadow">
+                <h4 class="font-semibold text-amber-900 mb-2">
+                    The Free Power Trap
+                </h4>
+                <p class="text-xs text-gray-600 mb-3">
+                    Energy efficiency without governance reform creates rebound effects. Shows conditional pathways based on pricing reform.
+                </p>
+                <span class="text-xs text-amber-700 font-medium">
+                    3 steps • 2 min
+                </span>
+            </button>
+
+            <!-- Tour 3 -->
+            <button id="tour-3"
+                    class="bg-gradient-to-br from-green-50 to-transparent border border-green-200 rounded-lg p-4 text-left hover:shadow-md transition-shadow">
+                <h4 class="font-semibold text-green-900 mb-2">
+                    NOTF as System Integrator
+                </h4>
+                <p class="text-xs text-gray-600 mb-3">
+                    How neighbourhood-level ward committees enable cross-sectoral community behaviors (waste, water, energy, transport).
+                </p>
+                <span class="text-xs text-green-700 font-medium">
+                    3 steps • 2 min
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Tour Narration Box (Hidden by default) -->
+    <div id="tour-narration-box" class="hidden bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 rounded-lg p-4 mb-8">
+        <div class="flex items-start justify-between">
+            <div class="flex-1">
+                <p id="tour-narration" class="text-sm text-gray-800"></p>
+            </div>
+            <button id="tour-stop" class="ml-4 text-xs text-gray-500 hover:text-gray-700 font-medium">
+                Stop Tour
+            </button>
+        </div>
+    </div>
+
+    <!-- Insights Panel -->
+    <div id="insights-panel"
+         class="bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            Selected Node Details
+        </h3>
+        <p class="text-sm text-gray-600" id="insights-content">
+            Click a node to see details about its cross-sectoral connections.
+        </p>
+    </div>
+
+    <!-- Link to NOTF -->
+    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            How Community Behaviors Enable These Connections
+        </h3>
+        <p class="text-sm text-gray-600 mb-4">
+            This systems map shows <strong>WHAT</strong> structural interdependencies exist and <strong>WHERE</strong> they occur across 4 layers (governance, community, technical, conditional).
+            To understand <strong>HOW</strong> neighbourhood-level citizen behaviors enable these shifts, visit the Neighbourhoods sector page.
+        </p>
+        <a href="sectors.html#notf"
+           class="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors">
+            View Neighbourhoods Sector →
+        </a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white/80 py-8 px-8 mt-16">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white font-semibold mb-3">India Progress Monitor</h3>
+                <p class="text-sm">Tracking paradigm shifts across 8 critical sectors for sustainable development.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+                <ul class="text-sm space-y-2">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Dashboard</a></li>
+                    <li><a href="thesis.html" class="hover:text-white transition-colors">Thesis</a></li>
+                    <li><a href="sectors.html" class="hover:text-white transition-colors">Sectors</a></li>
+                    <li><a href="resources.html" class="hover:text-white transition-colors">Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-3">About</h3>
+                <p class="text-sm">This dashboard monitors progress toward sustainable development in India through a paradigm shift lens.</p>
+            </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/20 text-center text-sm">
+            <p>&copy; 2026 India Progress Monitor. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="/js/systems-map.js"></script>
+</body>
+</html>
