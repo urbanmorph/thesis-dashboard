@@ -3,7 +3,7 @@
 
 let cy; // Cytoscape instance
 let data; // JSON data
-let currentScenario = 'current';
+let currentScenario = 'postShift'; // Start with Post-Shift to show synergies
 let currentLayer = 'all';
 let currentLinkFilter = 'all';
 let currentLevel = 1;
@@ -99,12 +99,16 @@ function initCytoscape() {
             {
                 selector: 'node[type="focusArea"]',
                 style: {
-                    'width': 60,
-                    'height': 60,
-                    'font-size': 10,
+                    'width': 80,
+                    'height': 80,
+                    'font-size': 12,
+                    'font-weight': 'bold',
                     'label': 'data(label)',
                     'text-wrap': 'wrap',
-                    'text-max-width': 80,
+                    'text-max-width': 100,
+                    'text-valign': 'center',
+                    'text-halign': 'center',
+                    'color': '#ffffff',
                     'border-width': 2
                 }
             },
@@ -130,8 +134,9 @@ function initCytoscape() {
                     'line-color': '#10b981',
                     'target-arrow-color': '#10b981',
                     'target-arrow-shape': 'triangle',
-                    'width': 2,
-                    'curve-style': 'bezier'
+                    'width': 3,
+                    'curve-style': 'bezier',
+                    'opacity': 0.8
                 }
             },
             {
@@ -140,8 +145,9 @@ function initCytoscape() {
                     'line-color': '#ef4444',
                     'target-arrow-color': '#ef4444',
                     'target-arrow-shape': 'triangle',
-                    'width': 2,
-                    'curve-style': 'bezier'
+                    'width': 3,
+                    'curve-style': 'bezier',
+                    'opacity': 0.8
                 }
             },
             {
@@ -150,8 +156,9 @@ function initCytoscape() {
                     'line-color': '#f59e0b',
                     'target-arrow-color': '#f59e0b',
                     'target-arrow-shape': 'triangle',
-                    'width': 2,
-                    'curve-style': 'bezier'
+                    'width': 3,
+                    'curve-style': 'bezier',
+                    'opacity': 0.8
                 }
             },
             {
@@ -160,9 +167,10 @@ function initCytoscape() {
                     'line-color': '#6b7280',
                     'target-arrow-color': '#6b7280',
                     'target-arrow-shape': 'triangle',
-                    'width': 2,
+                    'width': 3,
                     'curve-style': 'bezier',
-                    'line-style': 'dashed'
+                    'line-style': 'dashed',
+                    'opacity': 0.8
                 }
             },
             // Strength styling
@@ -400,7 +408,14 @@ function handleBackgroundClick(evt) {
 function drillDownToLevel2(sectorId) {
     const elements = buildLevel2Elements(sectorId);
 
-    if (elements.filter(e => e.group === 'nodes').length === 0) {
+    const nodes = elements.filter(e => e.group === 'nodes');
+    const edges = elements.filter(e => e.group === 'edges');
+
+    console.log(`Drilling down to ${sectorId}:`);
+    console.log(`  - ${nodes.length} nodes`);
+    console.log(`  - ${edges.length} edges`);
+
+    if (nodes.length === 0) {
         console.log('No focus areas found for sector:', sectorId);
         return;
     }
@@ -408,9 +423,11 @@ function drillDownToLevel2(sectorId) {
     cy.elements().remove();
     cy.add(elements);
 
+    console.log(`Added to Cytoscape: ${cy.nodes().length} nodes, ${cy.edges().length} edges`);
+
     cy.layout({
         name: 'cose',
-        idealEdgeLength: 120,
+        idealEdgeLength: 150,
         nodeOverlap: 20,
         refresh: 20,
         fit: true,
@@ -428,13 +445,29 @@ function drillDownToLevel2(sectorId) {
     }).run();
 
     currentLevel = 2;
+    const sectorName = sectorId.replace('sector-', '').charAt(0).toUpperCase() + sectorId.replace('sector-', '').slice(1);
     document.getElementById('level-indicator').textContent =
-        `Level 2: ${sectorId.replace('sector-', '').charAt(0).toUpperCase() + sectorId.replace('sector-', '').slice(1)} Focus Areas`;
+        `Level 2: ${sectorName} Focus Areas (${edges.length} connections)`;
 
     // Apply current filters
     applyScenario(currentScenario);
     applyLayerFilter(currentLayer);
     applyLinkTypeFilter(currentLinkFilter);
+
+    const visibleEdges = cy.edges().filter(e => !e.hasClass('hidden')).length;
+    console.log(`After scenario filter: ${visibleEdges} visible edges (scenario: ${currentScenario})`);
+
+    if (visibleEdges === 0) {
+        document.getElementById('insights-content').innerHTML = `
+            <p class="text-sm text-amber-600 mb-2">
+                <strong>No connections visible in Current State scenario.</strong>
+            </p>
+            <p class="text-xs text-gray-600">
+                Try toggling to <strong>Post-Shift</strong> scenario above to see synergies and cross-sectoral connections.
+                The Current State shows primarily conflicts and barriers.
+            </p>
+        `;
+    }
 }
 
 function zoomOutToLevel1() {
