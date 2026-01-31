@@ -1,0 +1,610 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2026-01-31",
+    "totalNodes": 32,
+    "totalEdges": 24,
+    "description": "Cross-sectoral interdependencies across 8 sectors with 4 layers: governance, community, technical, conditional"
+  },
+
+  "scenarios": {
+    "current": {
+      "description": "Pre-paradigm shift state (2024 baseline)",
+      "activeEdges": [
+        "edge-001", "edge-002", "edge-003", "edge-004", "edge-005",
+        "edge-006", "edge-007", "edge-008"
+      ],
+      "inactiveEdges": [
+        "edge-020", "edge-021", "edge-022", "edge-023", "edge-024",
+        "edge-025", "edge-026", "edge-027", "edge-028", "edge-029",
+        "edge-030", "edge-031", "edge-032", "edge-033", "edge-034", "edge-035"
+      ]
+    },
+    "postShift": {
+      "description": "After governance and community paradigm shifts enabled",
+      "activeEdges": [
+        "edge-020", "edge-021", "edge-022", "edge-023", "edge-024",
+        "edge-025", "edge-026", "edge-027", "edge-028", "edge-029",
+        "edge-030", "edge-031", "edge-032", "edge-033", "edge-034", "edge-035"
+      ],
+      "inactiveEdges": [
+        "edge-001", "edge-002", "edge-003", "edge-004", "edge-005",
+        "edge-006", "edge-007", "edge-008"
+      ]
+    }
+  },
+
+  "nodes": [
+    {
+      "id": "sector-energy",
+      "label": "Energy",
+      "type": "sector",
+      "level": 1,
+      "description": "Energy sector paradigm shifts",
+      "outboundCount": 4,
+      "inboundCount": 3
+    },
+    {
+      "id": "sector-water",
+      "label": "Water",
+      "type": "sector",
+      "level": 1,
+      "description": "Water sector paradigm shifts",
+      "outboundCount": 2,
+      "inboundCount": 3
+    },
+    {
+      "id": "sector-food",
+      "label": "Food",
+      "type": "sector",
+      "level": 1,
+      "description": "Food sector paradigm shifts",
+      "outboundCount": 2,
+      "inboundCount": 2
+    },
+    {
+      "id": "sector-waste",
+      "label": "Waste",
+      "type": "sector",
+      "level": 1,
+      "description": "Waste sector paradigm shifts",
+      "outboundCount": 2,
+      "inboundCount": 1
+    },
+    {
+      "id": "sector-buildings",
+      "label": "Buildings",
+      "type": "sector",
+      "level": 1,
+      "description": "Buildings sector paradigm shifts",
+      "outboundCount": 1,
+      "inboundCount": 2
+    },
+    {
+      "id": "sector-transport",
+      "label": "Transport",
+      "type": "sector",
+      "level": 1,
+      "description": "Transport sector paradigm shifts",
+      "outboundCount": 1,
+      "inboundCount": 1
+    },
+    {
+      "id": "sector-air",
+      "label": "Air",
+      "type": "sector",
+      "level": 1,
+      "description": "Air quality sector paradigm shifts",
+      "outboundCount": 0,
+      "inboundCount": 3
+    },
+    {
+      "id": "sector-notf",
+      "label": "Neighbourhoods",
+      "type": "sector",
+      "level": 1,
+      "description": "Neighbourhood governance sector - integration layer",
+      "outboundCount": 6,
+      "inboundCount": 0
+    },
+
+    {
+      "id": "energy-free-farm-power",
+      "label": "Free Farm Power Policy",
+      "type": "focusArea",
+      "sector": "energy",
+      "level": 2,
+      "shiftDimension": "Governance",
+      "layer": "governance",
+      "description": "Subsidized/free electricity for agricultural pumping in 8+ states",
+      "currentStatus": "Active - creates rebound effect"
+    },
+    {
+      "id": "water-metering",
+      "label": "Water Metering Mandate",
+      "type": "focusArea",
+      "sector": "water",
+      "level": 2,
+      "shiftDimension": "Governance",
+      "layer": "governance",
+      "description": "MoHUA mandate for volumetric billing in 100 cities",
+      "currentStatus": "15 cities metered, 85 to go"
+    },
+    {
+      "id": "food-msp-rice-wheat",
+      "label": "MSP for Rice/Wheat",
+      "type": "focusArea",
+      "sector": "food",
+      "level": 2,
+      "shiftDimension": "Governance",
+      "layer": "governance",
+      "description": "Minimum Support Price incentivizes water-intensive crops",
+      "currentStatus": "₹2,203/quintal (wheat), ₹2,300/quintal (paddy)"
+    },
+    {
+      "id": "energy-prosumer",
+      "label": "Prosumer Households",
+      "type": "focusArea",
+      "sector": "energy",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "50L rooftop solar households with net metering",
+      "currentStatus": "2% households (need 3% critical mass)"
+    },
+    {
+      "id": "water-conservation",
+      "label": "Metering Compliance",
+      "type": "focusArea",
+      "sector": "water",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "Household compliance with metered billing",
+      "currentStatus": "<20% compliance"
+    },
+    {
+      "id": "waste-segregation",
+      "label": "At-Source Segregation",
+      "type": "focusArea",
+      "sector": "waste",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "Household compliance with wet/dry/hazardous segregation",
+      "currentStatus": "15-20% compliance"
+    },
+    {
+      "id": "buildings-rating-demand",
+      "label": "Energy Rating Demand",
+      "type": "focusArea",
+      "sector": "buildings",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "Buyers demand BEE star ratings before purchase",
+      "currentStatus": "<1% demand"
+    },
+    {
+      "id": "transport-nmt-shift",
+      "label": "NMT Mode Shift",
+      "type": "focusArea",
+      "sector": "transport",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "30-40% trips shift to cycling/walking",
+      "currentStatus": "<2% cycling infrastructure"
+    },
+    {
+      "id": "air-household-combustion",
+      "label": "Clean Cooking Adoption",
+      "type": "focusArea",
+      "sector": "air",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "Phase out biomass/coal for cooking/heating",
+      "currentStatus": "~180M households use solid fuels"
+    },
+    {
+      "id": "notf-ward-committees",
+      "label": "Ward Sabha Participation",
+      "type": "focusArea",
+      "sector": "notf",
+      "level": 2,
+      "shiftDimension": "Agency",
+      "layer": "community",
+      "description": "Resident attendance in ward committee meetings",
+      "currentStatus": "<2% attendance, <30% functional"
+    },
+    {
+      "id": "notf-coordination",
+      "label": "Cross-Sectoral Coordination",
+      "type": "focusArea",
+      "sector": "notf",
+      "level": 2,
+      "shiftDimension": "Systems",
+      "layer": "community",
+      "description": "Ward-level systems thinking across sectors",
+      "currentStatus": "18 silos, no coordination mechanism"
+    },
+    {
+      "id": "food-cold-chain",
+      "label": "Cold Chain Infrastructure",
+      "type": "focusArea",
+      "sector": "food",
+      "level": 2,
+      "shiftDimension": "Systems",
+      "layer": "technical",
+      "description": "Refrigerated transport/storage to prevent 40% post-harvest loss",
+      "currentStatus": "Inadequate cold chain"
+    },
+    {
+      "id": "notf-ward-dashboards",
+      "label": "Ward Dashboards",
+      "type": "focusArea",
+      "sector": "notf",
+      "level": 2,
+      "shiftDimension": "Data",
+      "layer": "technical",
+      "description": "Single monitoring platform for air, water, waste, energy",
+      "currentStatus": "Not deployed"
+    },
+    {
+      "id": "air-sensor-network",
+      "label": "CAAQMS Network",
+      "type": "focusArea",
+      "sector": "air",
+      "level": 2,
+      "shiftDimension": "Data",
+      "layer": "technical",
+      "description": "500+ air quality monitoring stations across 280 cities",
+      "currentStatus": "500+ operational"
+    },
+    {
+      "id": "energy-pump-efficiency",
+      "label": "Pump Efficiency (Conditional)",
+      "type": "focusArea",
+      "sector": "energy",
+      "level": 2,
+      "shiftDimension": "Conditional",
+      "layer": "conditional",
+      "description": "3.5L efficient pumps - outcome depends on pricing reform",
+      "currentStatus": "Deployed without pricing reform"
+    },
+    {
+      "id": "food-biodiversity-productivity",
+      "label": "Biodiversity-Productivity Tradeoff",
+      "type": "focusArea",
+      "sector": "food",
+      "level": 2,
+      "shiftDimension": "Conditional",
+      "layer": "conditional",
+      "description": "Agroecology vs conventional farming productivity",
+      "currentStatus": "MSP incentives favor monocultures"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": "edge-001",
+      "source": "energy-pump-efficiency",
+      "target": "water-metering",
+      "type": "conflict",
+      "layer": "conditional",
+      "strength": "quantified",
+      "scenario": "current",
+      "description": "Efficient pumps without pricing reform create rebound effect - lower cost increases usage",
+      "quantification": "40% NRW correlation with free power states",
+      "citation": "Energy-Water nexus analysis"
+    },
+    {
+      "id": "edge-002",
+      "source": "energy-free-farm-power",
+      "target": "water-metering",
+      "type": "conflict",
+      "layer": "governance",
+      "strength": "quantified",
+      "scenario": "current",
+      "description": "Free power enables excess withdrawal - metering can't fix without pricing",
+      "quantification": "Punjab/Haryana: free power = 40% excess withdrawal",
+      "citation": "ref-mohua-water-supply-2024"
+    },
+    {
+      "id": "edge-003",
+      "source": "food-msp-rice-wheat",
+      "target": "water-metering",
+      "type": "conflict",
+      "layer": "governance",
+      "strength": "quantified",
+      "scenario": "current",
+      "description": "MSP incentivizes water-intensive crops despite scarcity",
+      "quantification": "Rice: 3,000-5,000L/kg water vs millets 300-400L/kg",
+      "citation": "ref-fao-food-loss-waste-2023"
+    },
+    {
+      "id": "edge-020",
+      "source": "water-metering",
+      "target": "energy-prosumer",
+      "type": "synergy",
+      "layer": "governance",
+      "strength": "quantified",
+      "scenario": "postShift",
+      "description": "Transparent water billing makes pumping cost visible - incentivizes efficiency",
+      "quantification": "100 cities metered = 40% energy savings potential",
+      "citation": "ref-mohua-water-supply-2024"
+    },
+    {
+      "id": "edge-021",
+      "source": "energy-prosumer",
+      "target": "water-conservation",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "quantified",
+      "scenario": "postShift",
+      "description": "Rooftop solar enables rainwater harvesting systems (dual use)",
+      "quantification": "50L prosumer households = potential 50L rainwater collectors",
+      "citation": "ref-mnre-rooftop-solar-2024"
+    },
+    {
+      "id": "edge-022",
+      "source": "waste-segregation",
+      "target": "notf-coordination",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward committees coordinate segregation training",
+      "quantification": "Target: 15% → 80% segregation compliance",
+      "citation": "NOTF Focus Area #1"
+    },
+    {
+      "id": "edge-023",
+      "source": "waste-segregation",
+      "target": "food-cold-chain",
+      "type": "cascade",
+      "layer": "technical",
+      "strength": "quantified",
+      "scenario": "postShift",
+      "description": "Segregated organic waste enables composting for parks/farms",
+      "quantification": "80% segregation = 15% disposal reduction + soil enrichment",
+      "citation": "ref-cpcb-swm-consolidated-2020-21"
+    },
+    {
+      "id": "edge-024",
+      "source": "buildings-rating-demand",
+      "target": "energy-prosumer",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Buyer demand for ratings triggers market transformation threshold",
+      "quantification": "10% buyer demand = tipping point for developer behavior",
+      "citation": "ref-bee-star-labeling-2024"
+    },
+    {
+      "id": "edge-025",
+      "source": "transport-nmt-shift",
+      "target": "air-household-combustion",
+      "type": "cascade",
+      "layer": "community",
+      "strength": "quantified",
+      "scenario": "postShift",
+      "description": "Cycling/walking reduces transport emissions + health co-benefits",
+      "quantification": "30-40% NMT trips = 20% PM2.5 reduction potential",
+      "citation": "ref-mohua-nmt-policy-2024"
+    },
+    {
+      "id": "edge-026",
+      "source": "air-household-combustion",
+      "target": "energy-prosumer",
+      "type": "cascade",
+      "layer": "community",
+      "strength": "quantified",
+      "scenario": "postShift",
+      "description": "Clean cooking reduces PM2.5 + energy efficiency gains",
+      "quantification": "180M households transition = 30% residential PM2.5 reduction",
+      "citation": "ref-cpcb-namp-2024"
+    },
+    {
+      "id": "edge-027",
+      "source": "notf-ward-committees",
+      "target": "waste-segregation",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward sabhas enable hyperlocal nudging/enforcement",
+      "quantification": "30% functional committees = 60% segregation compliance",
+      "citation": "ref-janaagraha-city-systems-report-2022"
+    },
+    {
+      "id": "edge-028",
+      "source": "notf-ward-committees",
+      "target": "water-conservation",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward sabhas monitor compliance with metering/conservation",
+      "quantification": "Community monitoring = 15-20% usage reduction",
+      "citation": "ref-mohua-water-supply-2024"
+    },
+    {
+      "id": "edge-029",
+      "source": "notf-ward-committees",
+      "target": "transport-nmt-shift",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward sabhas prioritize NMT infrastructure in participatory budgets",
+      "quantification": "15% PB allocation = cycling lane funding",
+      "citation": "ref-pria-participatory-budgeting-india-2024"
+    },
+    {
+      "id": "edge-030",
+      "source": "notf-coordination",
+      "target": "waste-segregation",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Coordination hubs close loops - segregation connects to composting",
+      "quantification": "Systems thinking training = integrated waste-food-parks loop",
+      "citation": "ref-mohua-74th-amendment-implementation-2023"
+    },
+    {
+      "id": "edge-031",
+      "source": "notf-coordination",
+      "target": "water-conservation",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Coordination monitors water-energy nexus at ward level",
+      "quantification": "Joint dashboards track pumping savings from conservation",
+      "citation": "ref-janaagraha-city-systems-report-2022"
+    },
+    {
+      "id": "edge-032",
+      "source": "notf-ward-dashboards",
+      "target": "air-sensor-network",
+      "type": "shared",
+      "layer": "technical",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward dashboards integrate CAAQMS data for hyperlocal visibility",
+      "quantification": "Single platform = cross-sectoral accountability",
+      "citation": "ref-janaagraha-city-systems-report-2022"
+    },
+    {
+      "id": "edge-033",
+      "source": "notf-ward-dashboards",
+      "target": "water-metering",
+      "type": "shared",
+      "layer": "technical",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward dashboards show real-time water usage + pumping energy",
+      "quantification": "Visibility enables community-level conservation campaigns",
+      "citation": "ref-mohua-water-supply-2024"
+    },
+    {
+      "id": "edge-034",
+      "source": "notf-coordination",
+      "target": "buildings-rating-demand",
+      "type": "synergy",
+      "layer": "community",
+      "strength": "theoretical",
+      "scenario": "postShift",
+      "description": "Ward committees educate residents on building energy efficiency",
+      "quantification": "Civic education campaigns = buyer awareness",
+      "citation": "ref-pria-participatory-budgeting-india-2024"
+    },
+    {
+      "id": "edge-035",
+      "source": "food-cold-chain",
+      "target": "waste-segregation",
+      "type": "cascade",
+      "layer": "technical",
+      "strength": "quantified",
+      "scenario": "postShift",
+      "description": "Better cold chain reduces food waste at source",
+      "quantification": "40% loss reduction = less organic waste for segregation",
+      "citation": "ref-fao-food-loss-waste-2023"
+    }
+  ],
+
+  "tours": [
+    {
+      "id": "tour-1",
+      "title": "Water-Energy-Food Nexus",
+      "steps": [
+        {
+          "nodeId": "energy-free-farm-power",
+          "focusNodes": ["energy-free-farm-power", "water-metering"],
+          "highlightEdges": ["edge-002"],
+          "narration": "Free farm power enables excess water withdrawal. Metering alone can't fix this without pricing reform.",
+          "duration": 4000
+        },
+        {
+          "nodeId": "food-msp-rice-wheat",
+          "focusNodes": ["food-msp-rice-wheat", "water-metering"],
+          "highlightEdges": ["edge-003"],
+          "narration": "MSP for rice/wheat incentivizes water-intensive crops despite scarcity. Governance conflict.",
+          "duration": 4000
+        },
+        {
+          "nodeId": "water-metering",
+          "focusNodes": ["water-metering", "energy-prosumer"],
+          "highlightEdges": ["edge-020"],
+          "narration": "POST-SHIFT: Transparent water billing makes pumping costs visible, incentivizing efficiency.",
+          "duration": 4000
+        },
+        {
+          "nodeId": "energy-prosumer",
+          "focusNodes": ["energy-prosumer", "water-conservation"],
+          "highlightEdges": ["edge-021"],
+          "narration": "Rooftop solar prosumers also collect rainwater - dual infrastructure synergy.",
+          "duration": 4000
+        }
+      ]
+    },
+    {
+      "id": "tour-2",
+      "title": "The Free Power Trap",
+      "steps": [
+        {
+          "nodeId": "energy-pump-efficiency",
+          "focusNodes": ["energy-pump-efficiency", "water-metering"],
+          "highlightEdges": ["edge-001"],
+          "narration": "CURRENT: Efficient pumps without pricing reform = rebound effect. Lower cost → more usage.",
+          "duration": 4000
+        },
+        {
+          "nodeId": "energy-free-farm-power",
+          "focusNodes": ["energy-free-farm-power", "water-metering"],
+          "highlightEdges": ["edge-002"],
+          "narration": "Free power policy creates 40% excess withdrawal in Punjab/Haryana.",
+          "duration": 4000
+        },
+        {
+          "nodeId": "water-metering",
+          "focusNodes": ["water-metering", "energy-prosumer"],
+          "highlightEdges": ["edge-020"],
+          "narration": "POST-SHIFT: Pricing reform + metering reverses the trap - efficiency enables conservation.",
+          "duration": 4000
+        }
+      ]
+    },
+    {
+      "id": "tour-3",
+      "title": "NOTF as System Integrator",
+      "steps": [
+        {
+          "nodeId": "notf-ward-committees",
+          "focusNodes": ["notf-ward-committees", "waste-segregation", "water-conservation", "transport-nmt-shift"],
+          "highlightEdges": ["edge-027", "edge-028", "edge-029"],
+          "narration": "Ward sabhas enable cross-sectoral behaviors: segregation, water conservation, NMT infrastructure.",
+          "duration": 5000
+        },
+        {
+          "nodeId": "notf-coordination",
+          "focusNodes": ["notf-coordination", "waste-segregation", "water-conservation"],
+          "highlightEdges": ["edge-030", "edge-031"],
+          "narration": "Coordination hubs close loops (segregation → composting) and monitor nexuses (water → energy).",
+          "duration": 5000
+        },
+        {
+          "nodeId": "notf-ward-dashboards",
+          "focusNodes": ["notf-ward-dashboards", "air-sensor-network", "water-metering"],
+          "highlightEdges": ["edge-032", "edge-033"],
+          "narration": "Ward dashboards integrate CAAQMS, water metering - single platform for systems visibility.",
+          "duration": 5000
+        }
+      ]
+    }
+  ]
+}
