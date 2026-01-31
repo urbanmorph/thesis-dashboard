@@ -50,14 +50,16 @@ function initCytoscape() {
                 style: {
                     'background-color': '#e5e7eb',
                     'label': 'data(label)',
-                    'width': 80,
-                    'height': 80,
-                    'font-size': 14,
+                    'width': 100,
+                    'height': 100,
+                    'font-size': 11,
                     'font-weight': 'bold',
                     'text-valign': 'center',
                     'text-halign': 'center',
+                    'text-wrap': 'wrap',
+                    'text-max-width': 90,
                     'color': '#111827',
-                    'border-width': 2,
+                    'border-width': 3,
                     'border-color': '#9ca3af'
                 }
             },
@@ -107,6 +109,21 @@ function initCytoscape() {
                 }
             },
             // Edge styles by type
+            {
+                selector: 'edge[type="aggregate"]',
+                style: {
+                    'line-color': '#6b7280',
+                    'target-arrow-color': '#6b7280',
+                    'target-arrow-shape': 'triangle',
+                    'width': 'data(weight)',
+                    'curve-style': 'bezier',
+                    'label': 'data(label)',
+                    'font-size': 10,
+                    'text-background-color': '#ffffff',
+                    'text-background-opacity': 0.8,
+                    'text-background-padding': 3
+                }
+            },
             {
                 selector: 'edge[type="synergy"]',
                 style: {
@@ -208,22 +225,79 @@ function initCytoscape() {
 function buildLevel1Elements() {
     const elements = [];
 
-    // Add sector nodes
+    // Add sector nodes with connection counts
     const sectorNodes = data.nodes.filter(n => n.type === 'sector');
     sectorNodes.forEach(node => {
+        const sectorName = node.id.replace('sector-', '');
+
+        // Count connections for this sector
+        const focusAreaIds = data.nodes
+            .filter(n => n.sector === sectorName && n.level === 2)
+            .map(n => n.id);
+
+        const connectionCount = data.edges.filter(e =>
+            focusAreaIds.includes(e.source) || focusAreaIds.includes(e.target)
+        ).length;
+
         elements.push({
             group: 'nodes',
             data: {
                 id: node.id,
-                label: node.label,
+                label: `${node.label}\n(${connectionCount} links)`,
                 type: node.type,
                 level: node.level,
-                description: node.description
+                description: node.description,
+                connectionCount: connectionCount
             }
         });
     });
 
-    // No edges at Level 1 (just showing sectors)
+    // Add aggregated sector-to-sector edges
+    const sectorEdges = new Map(); // key: "source-target", value: count
+
+    data.edges.forEach(edge => {
+        // Find which sectors the source and target belong to
+        const sourceNode = data.nodes.find(n => n.id === edge.source);
+        const targetNode = data.nodes.find(n => n.id === edge.target);
+
+        if (sourceNode && targetNode && sourceNode.sector && targetNode.sector) {
+            const sourceSector = `sector-${sourceNode.sector}`;
+            const targetSector = `sector-${targetNode.sector}`;
+
+            // Only create edges between different sectors
+            if (sourceSector !== targetSector) {
+                const edgeKey = `${sourceSector}-${targetSector}`;
+                const reverseKey = `${targetSector}-${sourceSector}`;
+
+                // Check if reverse edge already exists (to avoid duplicates)
+                if (sectorEdges.has(reverseKey)) {
+                    sectorEdges.set(reverseKey, sectorEdges.get(reverseKey) + 1);
+                } else {
+                    sectorEdges.set(edgeKey, (sectorEdges.get(edgeKey) || 0) + 1);
+                }
+            }
+        }
+    });
+
+    // Add aggregated edges to elements
+    let edgeIndex = 0;
+    sectorEdges.forEach((count, edgeKey) => {
+        const [source, target] = edgeKey.split('-').slice(0, 2);
+        const fullSource = `sector-${source}`;
+        const fullTarget = `sector-${target}`;
+
+        elements.push({
+            group: 'edges',
+            data: {
+                id: `sector-edge-${edgeIndex++}`,
+                source: fullSource,
+                target: fullTarget,
+                type: 'aggregate',
+                label: `${count}`,
+                weight: count
+            }
+        });
+    });
 
     return elements;
 }
@@ -236,8 +310,25 @@ function buildLevel2Elements(sectorId) {
         n.sector === sectorId.replace('sector-', '') && n.level === 2
     );
 
-    // Add focus area nodes
-    focusAreas.forEach(node => {
+    // Get edges involving these focus areas
+    const focusAreaIds = focusAreas.map(fa => fa.id);
+    const relevantEdges = data.edges.filter(e =>
+        focusAreaIds.includes(e.source) || focusAreaIds.includes(e.target)
+    );
+
+    // Collect all connected node IDs (including cross-sectoral ones)
+    const connectedNodeIds = new Set(focusAreaIds);
+    relevantEdges.forEach(edge => {
+        connectedNodeIds.add(edge.source);
+        connectedNodeIds.add(edge.target);
+    });
+
+    // Add all connected nodes (both from this sector and connected sectors)
+    const allConnectedNodes = data.nodes.filter(n =>
+        connectedNodeIds.has(n.id) && n.level === 2
+    );
+
+    allConnectedNodes.forEach(node => {
         elements.push({
             group: 'nodes',
             data: {
@@ -254,12 +345,7 @@ function buildLevel2Elements(sectorId) {
         });
     });
 
-    // Get edges involving these focus areas
-    const focusAreaIds = focusAreas.map(fa => fa.id);
-    const relevantEdges = data.edges.filter(e =>
-        focusAreaIds.includes(e.source) || focusAreaIds.includes(e.target)
-    );
-
+    // Add edges
     relevantEdges.forEach(edge => {
         elements.push({
             group: 'edges',
