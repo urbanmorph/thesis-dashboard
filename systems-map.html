@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross-Sectoral Systems Map - India Progress Monitor</title>
+    <title>End-Use Efficiency Mandate: Cross-Sectoral Systems Map - India Progress Monitor</title>
     <link rel="stylesheet" href="/css/main.css">
-    <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body class="bg-gray-50">
 
@@ -26,347 +26,178 @@
 </nav>
 
 <main class="max-w-7xl mx-auto px-8 py-12">
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-dark to-dark-800 text-white p-16 rounded-xl mb-12">
-        <h1 class="text-5xl mb-4 font-bold leading-tight text-white">Cross-Sectoral Systems Map</h1>
-        <p class="text-lg text-white/90 leading-relaxed mb-4">
-            How paradigm shifts in one sector create ripple effects across others. Explores 16 interdependencies through governance, community, technical, and conditional pathways.
-        </p>
-        <div class="flex gap-4 text-sm">
-            <div class="bg-white/10 px-4 py-2 rounded-lg">
-                <span class="font-bold">8</span> Sectors
+    <!-- Page Header -->
+    <section class="mb-6">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">📊 Cross-Sectoral Systems Maps</h1>
+        <p class="text-sm md:text-base text-gray-600">Explore how focus area interventions cascade across sectors through multiple interdependency layers</p>
+    </section>
+
+    <!-- Compact Map Selector -->
+    <section class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 shadow-sm mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+            <!-- Sector Selector -->
+            <div>
+                <label class="block text-xs font-medium text-gray-700 mb-1">Sector</label>
+                <select id="sector-select" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <!-- Populated by JavaScript -->
+                </select>
             </div>
-            <div class="bg-white/10 px-4 py-2 rounded-lg">
-                <span class="font-bold">16</span> Cross-Sectoral Links
+
+            <!-- Priority Selector -->
+            <div>
+                <label class="block text-xs font-medium text-gray-700 mb-1">Priority</label>
+                <select id="priority-select" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <!-- Populated by JavaScript -->
+                </select>
             </div>
-            <div class="bg-white/10 px-4 py-2 rounded-lg">
-                <span class="font-bold">4</span> Interdependency Layers
+
+            <!-- Map Selector -->
+            <div class="md:col-span-1">
+                <label class="block text-xs font-medium text-gray-700 mb-1">Focus Area</label>
+                <select id="map-select" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <!-- Populated by JavaScript -->
+                </select>
             </div>
         </div>
     </section>
 
-    <!-- Controls Panel -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Scenario Toggle -->
-            <div>
-                <label class="text-sm font-medium text-gray-700 mb-2 block">
-                    Scenario
-                </label>
-                <div class="flex gap-2">
-                    <button id="scenario-current"
-                            class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
-                        Current State
-                    </button>
-                    <button id="scenario-post"
-                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors">
-                        Post-Shift
-                    </button>
+    <!-- Visualization Container -->
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm mb-6 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4 md:p-6">
+            <!-- Visualization -->
+            <div class="lg:col-span-2">
+                <div id="radial-viz" class="flex justify-center"></div>
+                <div id="table-viz" class="hidden overflow-x-auto">
+                    <table class="w-full text-xs md:text-sm">
+                        <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                            <tr>
+                                <th class="px-3 py-2 text-left font-semibold text-gray-700">Source</th>
+                                <th class="px-3 py-2 text-left font-semibold text-gray-700">Target</th>
+                                <th class="px-3 py-2 text-left font-semibold text-gray-700">Type</th>
+                                <th class="px-3 py-2 text-left font-semibold text-gray-700">Layer</th>
+                                <th class="px-3 py-2 text-right font-semibold text-gray-700">Magnitude</th>
+                                <th class="px-3 py-2 text-left font-semibold text-gray-700">Quantification</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Rows populated by JavaScript -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <!-- Layer Filter -->
-            <div>
-                <label class="text-sm font-medium text-gray-700 mb-2 block">
-                    View Layer
-                </label>
-                <div class="flex gap-2">
-                    <button id="layer-all"
-                            class="bg-primary text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors">
-                        All
+            <!-- Legend & Guide -->
+            <div class="lg:col-span-1 space-y-4">
+                <!-- View Toggle (Minimal) -->
+                <div class="flex gap-2 p-2 bg-gray-50 rounded-lg">
+                    <button id="view-radial" class="flex-1 bg-primary text-white px-3 py-2 rounded text-xs font-medium transition-all">
+                        Network
                     </button>
-                    <button id="layer-governance"
-                            class="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
-                        Governance
-                    </button>
-                    <button id="layer-community"
-                            class="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
-                        Community
+                    <button id="view-table" class="flex-1 bg-white text-gray-700 px-3 py-2 rounded text-xs font-medium hover:bg-gray-100 transition-all">
+                        Table
                     </button>
                 </div>
-            </div>
-
-            <!-- Link Type Filter -->
-            <div>
-                <label class="text-sm font-medium text-gray-700 mb-2 block">
-                    Show Links
-                </label>
-                <select id="link-filter"
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
-                    <option value="all">All Types</option>
-                    <option value="synergy">Synergies Only</option>
-                    <option value="conflict">Conflicts Only</option>
-                    <option value="cascade">Cascades Only</option>
-                    <option value="shared">Shared Infrastructure</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Level Indicator -->
-        <div class="mt-4 text-sm text-gray-600">
-            <span id="level-indicator" class="font-medium">Level 1: 8 Sectors</span>
-            <span class="ml-4 text-xs italic text-gray-500">
-                Click a node to drill down • Click background to zoom out
-            </span>
-        </div>
-    </div>
-
-    <!-- View Switcher -->
-    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm mb-8">
-        <div class="flex gap-2">
-            <button id="view-network" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
-                Network View
-            </button>
-            <button id="view-table" class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium">
-                Table View
-            </button>
-        </div>
-    </div>
-
-    <!-- Network Visualization Container -->
-    <div id="network-container" class="bg-white border border-gray-200 rounded-lg shadow-sm mb-8 overflow-hidden">
-        <div id="cy" style="height: 700px; width: 100%;"></div>
-    </div>
-
-    <!-- Table View Container -->
-    <div id="table-container" class="hidden bg-white border border-gray-200 rounded-lg shadow-sm mb-8 overflow-hidden">
-        <!-- Search & Filters -->
-        <div class="p-4 border-b border-gray-200">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <!-- Search -->
                 <div>
-                    <label class="text-sm font-medium text-gray-700 mb-2 block">Search</label>
-                    <input id="table-search"
-                           type="text"
-                           placeholder="Search relationships..."
-                           class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm">
-                </div>
-
-                <!-- Filter by Type -->
-                <div>
-                    <label class="text-sm font-medium text-gray-700 mb-2 block">Filter by Type</label>
-                    <div class="flex gap-2 flex-wrap">
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-synergy" checked class="rounded">
-                            <span class="text-green-700">Synergy</span>
-                        </label>
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-conflict" checked class="rounded">
-                            <span class="text-red-700">Conflict</span>
-                        </label>
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-cascade" checked class="rounded">
-                            <span class="text-amber-700">Cascade</span>
-                        </label>
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-shared" checked class="rounded">
-                            <span class="text-gray-700">Shared</span>
-                        </label>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-3">Relationship Types</h3>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-0.5 bg-green-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Synergy <span id="synergy-count" class="text-gray-500">(8)</span> <span id="synergy-avg" class="text-gray-400">• Avg: 43.6</span></div>
+                                <div class="text-gray-600">Positive reinforcement, mutual benefits</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-0.5 bg-red-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Conflict <span id="conflict-count" class="text-gray-500">(3)</span> <span id="conflict-avg" class="text-gray-400">• Avg: 36.7</span></div>
+                                <div class="text-gray-600">Barriers, tensions, challenges</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-0.5 bg-amber-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Cascade <span id="cascade-count" class="text-gray-500">(2)</span> <span id="cascade-avg" class="text-gray-400">• Avg: 52.0</span></div>
+                                <div class="text-gray-600">Self-reinforcing loops, feedback</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-0.5 bg-purple-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Conditional <span id="conditional-count" class="text-gray-500">(3)</span> <span id="conditional-avg" class="text-gray-400">• Avg: 38.3</span></div>
+                                <div class="text-gray-600">Depends on policy prerequisites</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-0.5 border-t-2 border-dashed border-gray-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Indirect <span id="indirect-count" class="text-gray-500">(10)</span> <span id="indirect-avg" class="text-gray-400">• Avg: 30.0</span></div>
+                                <div class="text-gray-600">Secondary, downstream effects</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Filter by Layer -->
-                <div>
-                    <label class="text-sm font-medium text-gray-700 mb-2 block">Filter by Layer</label>
-                    <div class="flex gap-2 flex-wrap">
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-governance" checked class="rounded">
-                            <span class="text-blue-700">Governance</span>
-                        </label>
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-community" checked class="rounded">
-                            <span class="text-green-700">Community</span>
-                        </label>
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-technical" checked class="rounded">
-                            <span class="text-gray-700">Technical</span>
-                        </label>
-                        <label class="flex items-center gap-1 text-sm">
-                            <input type="checkbox" id="filter-conditional" checked class="rounded">
-                            <span class="text-purple-700">Conditional</span>
-                        </label>
+                <div class="border-t border-gray-200 pt-4">
+                    <h3 class="text-sm font-semibold text-gray-900 mb-3">Interdependency Layers</h3>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex items-start gap-2">
+                            <div class="w-3 h-3 rounded-full bg-blue-500 mt-0.5 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Governance</div>
+                                <div class="text-gray-600">Policy, regulatory frameworks</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-3 h-3 rounded-full bg-green-500 mt-0.5 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Community</div>
+                                <div class="text-gray-600">Social, behavioral factors</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-3 h-3 rounded-full bg-gray-600 mt-0.5 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Technical</div>
+                                <div class="text-gray-600">Infrastructure, technology</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-3 h-3 rounded-full bg-gray-400 mt-0.5 flex-shrink-0"></div>
+                            <div>
+                                <div class="font-medium text-gray-900">Shared Externality</div>
+                                <div class="text-gray-600">Co-benefits, spillovers</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Results Count -->
-            <div class="text-sm text-gray-600">
-                Showing <span id="results-count" class="font-bold">16</span> of 16 relationships
-            </div>
-        </div>
-
-        <!-- Table -->
-        <div class="overflow-x-auto">
-            <table id="systems-table" class="w-full text-sm">
-                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
-                    <tr>
-                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="source">
-                            Source <span class="sort-icon text-gray-400">⇅</span>
-                        </th>
-                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="target">
-                            Target <span class="sort-icon text-gray-400">⇅</span>
-                        </th>
-                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="type">
-                            Type <span class="sort-icon text-gray-400">⇅</span>
-                        </th>
-                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="layer">
-                            Layer <span class="sort-icon text-gray-400">⇅</span>
-                        </th>
-                        <th class="px-4 py-3 text-right font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="magnitude">
-                            Magnitude <span class="sort-icon text-gray-400">⇅</span>
-                        </th>
-                        <th class="px-4 py-3 text-left font-semibold text-gray-700">
-                            Quantification
-                        </th>
-                        <th class="px-4 py-3 text-left font-semibold text-gray-700">
-                            Citation
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <!-- Rows populated by JavaScript -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Legend -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8">
-        <h3 class="text-lg font-semibold text-gray-900 mb-4">Legend</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-                <h4 class="text-sm font-medium text-gray-700 mb-3">Node Colors (Layers)</h4>
-                <div class="space-y-2 text-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-6 h-6 rounded-full bg-blue-500"></div>
-                        <span><strong>Governance</strong> - Policies, regulations (e.g., free power, MSP, metering mandates)</span>
+                <div class="border-t border-gray-200 pt-4">
+                    <h3 class="text-sm font-semibold text-gray-900 mb-3">Controls</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2 text-xs cursor-pointer">
+                            <input type="checkbox" id="toggle-indirect-checkbox" class="rounded" checked>
+                            <span>Show Indirect Links</span>
+                        </label>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-6 h-6 rounded-full bg-green-500"></div>
-                        <span><strong>Community</strong> - Citizen behaviors (e.g., prosumer adoption, waste segregation)</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-6 h-6 rounded-full bg-gray-500"></div>
-                        <span><strong>Technical</strong> - Infrastructure, supply chains (e.g., cold chain, dashboards)</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-6 h-6 rounded-full bg-purple-500"></div>
-                        <span><strong>Conditional</strong> - Context-dependent outcomes (e.g., pump efficiency)</span>
+                    <div class="mt-3 text-xs text-gray-600 space-y-1">
+                        <div>💡 <strong>Hover:</strong> View details + citations</div>
+                        <div>💡 <strong>Scroll:</strong> Zoom in/out</div>
+                        <div>💡 <strong>Arc thickness:</strong> Relationship magnitude</div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h4 class="text-sm font-medium text-gray-700 mb-3">Edge Styles (Link Types)</h4>
-                <div class="space-y-2 text-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-1 bg-green-500"></div>
-                        <span><strong>Synergy</strong> - Positive reinforcement (community behaviors)</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-1 bg-red-500"></div>
-                        <span><strong>Conflict</strong> - Contradiction (governance policies)</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-1 bg-amber-500"></div>
-                        <span><strong>Cascade</strong> - Multi-sector ripple effect</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-1 bg-gray-400 border-t-2 border-dashed border-gray-600"></div>
-                        <span><strong>Theoretical</strong> - Not yet quantified</span>
-                    </div>
+
+                <!-- Sector CTA -->
+                <div class="border-t border-gray-200 pt-4">
+                    <a href="sectors.html#energy" id="sector-cta-link" class="block bg-primary text-white px-3 py-2 rounded text-xs font-medium hover:bg-primary-dark transition-colors text-center">
+                        View Energy Sector →
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Guided Tours Section -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8">
-        <h3 class="text-lg font-semibold text-gray-900 mb-4">Guided Tours</h3>
-        <p class="text-sm text-gray-600 mb-4">
-            Follow curated narratives through the systems map to understand key cross-sectoral dynamics.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Tour 1 -->
-            <button id="tour-1"
-                    class="bg-gradient-to-br from-blue-50 to-transparent border border-blue-200 rounded-lg p-4 text-left hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-blue-900 mb-2">
-                    Water-Energy-Food Nexus
-                </h4>
-                <p class="text-xs text-gray-600 mb-3">
-                    How free farm power creates excess water withdrawal, affecting food cropping patterns and groundwater sustainability.
-                </p>
-                <span class="text-xs text-blue-700 font-medium">
-                    4 steps • 2 min
-                </span>
-            </button>
 
-            <!-- Tour 2 -->
-            <button id="tour-2"
-                    class="bg-gradient-to-br from-amber-50 to-transparent border border-amber-200 rounded-lg p-4 text-left hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-amber-900 mb-2">
-                    The Free Power Trap
-                </h4>
-                <p class="text-xs text-gray-600 mb-3">
-                    Energy efficiency without governance reform creates rebound effects. Shows conditional pathways based on pricing reform.
-                </p>
-                <span class="text-xs text-amber-700 font-medium">
-                    3 steps • 2 min
-                </span>
-            </button>
-
-            <!-- Tour 3 -->
-            <button id="tour-3"
-                    class="bg-gradient-to-br from-green-50 to-transparent border border-green-200 rounded-lg p-4 text-left hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-green-900 mb-2">
-                    NOTF as System Integrator
-                </h4>
-                <p class="text-xs text-gray-600 mb-3">
-                    How neighbourhood-level ward committees enable cross-sectoral community behaviors (waste, water, energy, transport).
-                </p>
-                <span class="text-xs text-green-700 font-medium">
-                    3 steps • 2 min
-                </span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Tour Narration Box (Hidden by default) -->
-    <div id="tour-narration-box" class="hidden bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 rounded-lg p-4 mb-8">
-        <div class="flex items-start justify-between">
-            <div class="flex-1">
-                <p id="tour-narration" class="text-sm text-gray-800"></p>
-            </div>
-            <button id="tour-stop" class="ml-4 text-xs text-gray-500 hover:text-gray-700 font-medium">
-                Stop Tour
-            </button>
-        </div>
-    </div>
-
-    <!-- Insights Panel -->
-    <div id="insights-panel"
-         class="bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 rounded-lg p-6 mb-8">
-        <h3 class="text-lg font-semibold text-gray-900 mb-3">
-            Selected Node Details
-        </h3>
-        <p class="text-sm text-gray-600" id="insights-content">
-            Click a node to see details about its cross-sectoral connections.
-        </p>
-    </div>
-
-    <!-- Link to NOTF -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-        <h3 class="text-lg font-semibold text-gray-900 mb-3">
-            How Community Behaviors Enable These Connections
-        </h3>
-        <p class="text-sm text-gray-600 mb-4">
-            This systems map shows <strong>WHAT</strong> structural interdependencies exist and <strong>WHERE</strong> they occur across 4 layers (governance, community, technical, conditional).
-            To understand <strong>HOW</strong> neighbourhood-level citizen behaviors enable these shifts, visit the Neighbourhoods sector page.
-        </p>
-        <a href="sectors.html#notf"
-           class="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors">
-            View Neighbourhoods Sector →
-        </a>
-    </div>
 </main>
 
 <!-- Footer -->
@@ -397,6 +228,6 @@
     </div>
 </footer>
 
-<script type="module" src="/js/systems-map.js"></script>
+<script type="module" src="/js/systems-map-controller.js"></script>
 </body>
 </html>

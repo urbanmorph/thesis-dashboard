@@ -1,0 +1,170 @@
+{
+  "title": "DISCOM Financial Turnaround: Cross-Sectoral Systems Map",
+  "description": "Smart meter AT&C <12% + cost-reflective tariffs + DBT subsidies in 10 states",
+  "nodes": [
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Smart meter AT&C <12% + cost-reflective tariffs + DBT subsidies in 10 states",
+      "color": "#eab308",
+      "isCentralNode": true
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Buildings sector dependencies",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Water sector dependencies",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industry sector dependencies",
+      "color": "#f97316"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Transport sector dependencies",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban",
+      "description": "Urban sector dependencies",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Neighbourhoods sector dependencies",
+      "color": "#ec4899"
+    },
+    {
+      "id": "air",
+      "label": "Air",
+      "description": "Air sector dependencies",
+      "color": "#64748b"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "energy",
+      "target": "buildings",
+      "value": 45,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Positive impact on buildings sector via energy intervention",
+      "citation": "Thesis: Buildings synergies"
+    },
+    {
+      "id": 2,
+      "source": "energy",
+      "target": "water",
+      "value": 50,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Positive impact on water sector via energy intervention",
+      "citation": "Thesis: Water synergies"
+    },
+    {
+      "id": 3,
+      "source": "energy",
+      "target": "industry",
+      "value": 55,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Positive impact on industry sector via energy intervention",
+      "citation": "Thesis: Industry synergies"
+    },
+    {
+      "id": 4,
+      "source": "energy",
+      "target": "transport",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Positive impact on transport sector via energy intervention",
+      "citation": "Thesis: Transport synergies"
+    },
+    {
+      "id": 5,
+      "source": "air",
+      "target": "energy",
+      "value": 35,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Barrier from air sector implementation challenges",
+      "citation": "Thesis: Air barriers"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 40,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Barrier from neighbourhoods sector implementation challenges",
+      "citation": "Thesis: Neighbourhoods barriers"
+    },
+    {
+      "id": 7,
+      "source": "energy",
+      "target": "buildings",
+      "value": 50,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Cascading effects through buildings sector",
+      "citation": "Thesis: Buildings cascades"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "energy",
+      "value": 60,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Conditional dependencies on water sector reforms",
+      "citation": "Thesis: Policy dependencies"
+    },
+    {
+      "id": 9,
+      "source": "buildings",
+      "target": "water",
+      "value": 30,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Indirect effects between buildings and water",
+      "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "id": 10,
+      "source": "water",
+      "target": "industry",
+      "value": 33,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Indirect effects between water and industry",
+      "citation": "Thesis: Cross-sectoral cascades"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

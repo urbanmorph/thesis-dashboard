@@ -1,0 +1,28 @@
+{
+  "title": "Demand Response Infrastructure: Cross-Sectoral Systems Map",
+  "description": "ToU tariffs, demand response aggregators, and smart appliance enrollments to shift 5 GW peak demand",
+  "nodes": [
+    {"id": "energy", "label": "Energy", "description": "Demand Response: ToU tariffs + 10M smart appliances", "color": "#eab308", "isCentralNode": true},
+    {"id": "buildings", "label": "Buildings", "description": "Smart HVAC, automated load shifting", "color": "#3b82f6"},
+    {"id": "water", "label": "Water", "description": "Agricultural pumping shifted to solar hours", "color": "#06b6d4"},
+    {"id": "industry", "label": "Industry", "description": "Flexible industrial loads", "color": "#f97316"},
+    {"id": "transport", "label": "Transport", "description": "EV charging optimization", "color": "#8b5cf6"},
+    {"id": "urban", "label": "Urban Development", "description": "Municipal load management", "color": "#ec4899"},
+    {"id": "neighbourhoods", "label": "Neighbourhoods", "description": "Community demand response", "color": "#ec4899"},
+    {"id": "air", "label": "Air Quality", "description": "Peak plant emissions reduction", "color": "#64748b"}
+  ],
+  "links": [
+    {"id": 1, "source": "energy", "target": "buildings", "value": 55, "type": "synergy", "layer": "technical", "quantification": "Smart HVAC load shifting → 30% peak reduction in commercial buildings", "citation": "Thesis: Demand response"},
+    {"id": 2, "source": "energy", "target": "water", "value": 60, "type": "synergy", "layer": "governance", "quantification": "Agricultural pump shift to daytime solar → 20% reduction in evening peak", "citation": "Thesis: Water-energy nexus"},
+    {"id": 3, "source": "energy", "target": "industry", "value": 50, "type": "synergy", "layer": "technical", "quantification": "Industrial load flexibility → 2 GW peak shaving potential", "citation": "Thesis: Industrial flexibility"},
+    {"id": 4, "source": "energy", "target": "transport", "value": 45, "type": "synergy", "layer": "technical", "quantification": "EV charging optimized for solar hours → grid integration", "citation": "Thesis: EV grid integration"},
+    {"id": 5, "source": "energy", "target": "air", "value": 40, "type": "synergy", "layer": "shared", "quantification": "Peak shifting → less peaker plant operation → PM2.5 reduction", "citation": "Thesis: Air quality co-benefits"},
+    {"id": 6, "source": "buildings", "target": "energy", "value": 35, "type": "conflict", "layer": "community", "quantification": "Smart device adoption barrier → privacy concerns + upfront costs", "citation": "Thesis: Technology adoption"},
+    {"id": 7, "source": "water", "target": "energy", "value": 40, "type": "conditional", "layer": "governance", "quantification": "Requires smart meters + ToU tariffs + farmer education", "citation": "Thesis: Policy dependencies"},
+    {"id": 8, "source": "energy", "target": "neighbourhoods", "value": 38, "type": "cascade", "layer": "community", "quantification": "Demand response → community awareness → behavioral change → further savings", "citation": "Thesis: Community engagement"},
+    {"id": 9, "source": "transport", "target": "urban", "value": 30, "type": "indirect", "layer": "technical", "quantification": "Via managed charging: Less grid stress → deferred infrastructure upgrades", "citation": "Thesis: Urban infrastructure"},
+    {"id": 10, "source": "industry", "target": "air", "value": 35, "type": "indirect", "layer": "shared", "quantification": "Via load shifting: Industrial processes during solar hours → coal plant avoidance", "citation": "Thesis: Industrial air quality"}
+  ],
+  "typeColors": {"synergy": "#10b981", "conflict": "#ef4444", "cascade": "#f59e0b", "conditional": "#a855f7", "indirect": "#6b7280"},
+  "layerColors": {"governance": "#3b82f6", "community": "#10b981", "technical": "#6b7280", "shared": "#64748b"}
+}
