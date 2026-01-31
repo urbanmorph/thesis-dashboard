@@ -415,22 +415,275 @@ Examples:
 | 6. **Finance & Capital** | What financial barriers exist? | High upfront costs for retrofits, thin margins for aggregators |
 | 7. **Market & Procurement** | What market failures block adoption? | Fragmented supply chains, lack of aggregated demand |
 
+### Paradigm Shift Framework
+
+**Paradigm shifts are the FUNDAMENTAL LENS for all sectoral analysis.**
+
+#### Why Paradigm Shifts vs Interventions?
+
+Traditional approaches track **interventions** (solar GW installed, AQI measurements, ECBC buildings). Paradigm shift approach tracks the **CAUSES** that enable interventions (prosumer mindset, health-AQ visibility, buyer demand for efficiency).
+
+**The Causal Chain:**
+```
+Paradigm Shift → Removes Hidden Dynamic → Enables Strategy → Produces Intervention → Creates Outcome
+```
+
+**Example from Buildings:**
+1. **Shift 3**: Passive owners → Active demanders (paradigm change)
+2. **Removes**: Split incentives (developers minimize cost, buyers pay bills)
+3. **Enables**: Energy disclosure at transaction (strategy)
+4. **Produces**: Mandatory EPCs for sale/rent (intervention)
+5. **Creates**: 30% building energy intensity reduction (outcome)
+
+#### Why Paradigm Shifts Are Superior Predictors
+
+1. **Durability**: Persist beyond policy changes; self-reinforcing
+2. **Scalability**: One shift enables multiple interventions
+3. **Systemic**: Address root causes, not symptoms
+4. **Leading indicators**: Signal transformation before outcomes appear
+
+#### The 6 Universal Paradigm Shift Dimensions
+
+**These apply to ANY sector:**
+
+| Dimension | Question | Examples |
+|-----------|----------|----------|
+| 1. **Ontological** | What is the sector FOR? | Buildings: Human comfort → Living ecosystems<br>Energy: kWh sold → Reliable access<br>Air: Invisible externality → Visible health commons |
+| 2. **Reframing** | How do we TALK about it? | Buildings: Problem contributors → Solution mediums<br>Energy: Coal necessity → Managed transition<br>Air: Monitoring → Solving at source |
+| 3. **Agency** | Who DRIVES change? | Buildings: Passive owners → Active demanders<br>Energy: Passive consumers → Active prosumers<br>Air: Passive victims → Active protectors |
+| 4. **Governance** | How are DECISIONS made? | Buildings: Top-down mandates → Collective action<br>Energy: DISCOM monopoly → Open market<br>Air: City silos → Airshed coordination |
+| 5. **Time Horizon** | Optimize for WHEN? | Buildings: Construction cost → Lifecycle value<br>Energy: Peak adequacy → System flexibility<br>Air: Crisis response → Prevention |
+| 6. **Objectives** | What do we MEASURE? | Buildings: Carbon only → Multi-dimensional systems<br>Energy: Supply-side → Demand-side optimization<br>Air: PM2.5 only → Multi-pollutant + health |
+
+#### How to Identify Paradigm Shifts for a Sector
+
+**Process:**
+1. Read Section 4 (Hidden Dynamics) - identify the 7-category barriers
+2. For each dimension (1-6), ask: "What fundamental belief blocks progress?"
+3. Define the OLD paradigm (current dominant mindset)
+4. Define the NEW paradigm (transformational mindset)
+5. Identify the **Breakthrough Moment** - when is the shift irreversible?
+6. Map which Hidden Dynamics this shift addresses
+
+**Template:**
+```
+Shift [N]: [OLD PARADIGM] → [NEW PARADIGM]
+
+What This Looks Like:
+- Example 1 (concrete manifestation)
+- Example 2 (concrete manifestation)
+- Example 3 (concrete manifestation)
+
+Breakthrough Moment:
+When [SPECIFIC SIGNAL] happens, this shift becomes irreversible.
+
+Addresses Hidden Dynamic: [Category X] - [Specific barrier]
+```
+
+#### Breakthrough Moments
+
+**Definition**: An irreversibility signal - once this happens, the paradigm shift cannot be undone.
+
+**Characteristics:**
+- **Tangible**: Can be observed/measured
+- **Tipping point**: Creates self-reinforcing feedback loop
+- **Market/cultural**: Often non-policy triggers
+- **Specific**: Not vague ("awareness increases") but concrete ("50% of buyers ask for EPC")
+
+**Examples:**
+- Buildings: "When 50% of buyers ask for energy performance certificates before purchase"
+- Energy: "When DISCOMs compete on reliability metrics, not just tariff"
+- Air: "When real estate prices reflect AQI differentials (₹500/sqft premium for <50 AQI zones)"
+
+#### Section 5 (SHIFT) Structure
+
+**HTML Template:**
+```html
+<div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-blue-500">
+  <h3 class="text-xl font-semibold text-gray-900 mb-6">🌟 Shift: The Six Paradigm Transformations</h3>
+
+  <!-- Shift 1 -->
+  <div class="mb-6 pb-6 border-b border-gray-200">
+    <div class="flex items-start gap-4">
+      <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+      <div class="flex-1">
+        <h4 class="text-lg font-semibold text-gray-900 mb-3">Ontological: [OLD] → [NEW]</h4>
+        <p class="text-sm text-gray-700 mb-4">[1-2 sentence explanation of shift]</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <!-- What This Looks Like -->
+          <div class="bg-gray-50 rounded-lg p-3">
+            <p class="text-xs font-semibold text-gray-700 mb-2">What This Looks Like</p>
+            <ul class="text-xs text-gray-600 space-y-1">
+              <li>• Example 1 with data <a href="resources.html#ref-slug">[N]</a></li>
+              <li>• Example 2 with data <a href="resources.html#ref-slug">[N]</a></li>
+              <li>• Example 3 with data <a href="resources.html#ref-slug">[N]</a></li>
+            </ul>
+          </div>
+
+          <!-- Breakthrough Moment -->
+          <div class="bg-blue-50 rounded-lg p-3">
+            <p class="text-xs font-semibold text-blue-700 mb-2">Breakthrough Moment</p>
+            <p class="text-xs text-gray-700">[Specific irreversibility signal]</p>
+          </div>
+        </div>
+
+        <p class="text-xs text-gray-500 italic">
+          <strong>Addresses Hidden Dynamic:</strong> [Category] - [Specific barrier from Section 4]
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repeat for Shifts 2-6 -->
+</div>
+```
+
+**Critical Requirements:**
+- All 6 shifts must be present
+- Each shift must address at least one Hidden Dynamic from Section 4
+- Numbered badges (1-6) with consistent styling
+- Two-column grid: "What This Looks Like" + "Breakthrough Moment"
+- Citations for all data points
+- Map to Hidden Dynamics explicitly
+
+#### Section 6 (MARKERS) - Tracking Paradigm Shift Progress
+
+**Three types of markers:**
+
+1. **Leading Indicators**: Early signals of paradigm shift (appear 1-3 years before outcomes)
+   - Example: "% of tenders mentioning lifecycle cost analysis" (Buildings)
+   - Example: "Number of prosumer tariff applications" (Energy)
+
+2. **Lagging Indicators**: Confirmation that shift has occurred (outcome-based)
+   - Example: "Buildings with EPC ratings at time of sale" (Buildings)
+   - Example: "Grid flexibility capacity (GW)" (Energy)
+
+3. **Discourse Markers**: Changes in how sector is discussed (narrative/cultural)
+   - Example: "Media mentions of 'living buildings' vs 'green buildings'" (Buildings)
+   - Example: "Use of 'energy service' vs 'electricity supply' in policy docs" (Energy)
+
+**HTML Structure:**
+```html
+<div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-teal-500">
+  <h3>📊 Markers: How We Track Transformation</h3>
+
+  <div class="mb-6">
+    <h4 class="font-semibold mb-3">Leading Indicators (Early Signals)</h4>
+    <ul class="space-y-2">
+      <li>• [Indicator 1] <a href="...">[N]</a></li>
+      <!-- 5+ indicators -->
+    </ul>
+  </div>
+
+  <div class="mb-6">
+    <h4 class="font-semibold mb-3">Lagging Indicators (Confirmation)</h4>
+    <ul class="space-y-2">
+      <li>• [Indicator 1] <a href="...">[N]</a></li>
+      <!-- 5+ indicators -->
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-semibold mb-3">Discourse Markers (Narrative Change)</h4>
+    <ul class="space-y-2">
+      <li>• [Marker 1]</li>
+      <!-- 3+ markers -->
+    </ul>
+  </div>
+</div>
+```
+
+#### Section 7 (STRATEGIES) - Shift-Enabling Power
+
+**Strategies are evaluated by HOW MUCH they enable paradigm shifts, not just direct impact.**
+
+**Three tiers:**
+
+1. **High Leverage** (🔥 High Shift-Enabling Power)
+   - Directly triggers 2+ paradigm shifts
+   - Creates irreversibility
+   - Example: "Mandatory energy disclosure at transaction" → Enables Shifts 3 (Agency) + 5 (Time Horizon)
+
+2. **Medium Leverage** (⚡ Medium Shift-Enabling Power)
+   - Enables 1 paradigm shift
+   - Reinforces existing shift momentum
+   - Example: "ECBC-compliant new construction" → Enables Shift 6 (Objectives)
+
+3. **Foundational** (🧱 Foundational)
+   - Necessary but insufficient alone
+   - Supports shift environment
+   - Example: "Training programs for energy auditors" → Supports capacity for all shifts
+
+**HTML Structure:**
+```html
+<div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-indigo-600">
+  <h3>🎯 Strategies: Interventions Organized by Shift-Enabling Power</h3>
+
+  <div class="mb-6">
+    <h4>🔥 High Leverage (Direct Shift Triggers)</h4>
+    <ul>
+      <li><strong>[Strategy]</strong> - [Description] <a href="...">[N]</a>
+        <br><span class="text-xs text-gray-500">→ Enables Shifts [1, 3]: [Explanation]</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Medium and Foundational sections -->
+</div>
+```
+
+**Key Rule**: EVERY strategy must explicitly state which shift(s) it enables.
+
+#### Section 10 (FOCUS AREAS) - Urgency + Shift-Enabling Potential
+
+**Prioritization criteria:**
+1. **Urgency**: Decision windows closing (policy cycles, infrastructure lock-in)
+2. **Shift-Enabling**: Does it trigger irreversible paradigm shifts?
+3. **Data-Driven**: Evidence that window is now
+
+**HTML Structure:**
+```html
+<div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-8 border-l-4 border-l-red-500">
+  <h3>🎯 Focus Areas: Where to Act Now (Urgency-Ranked)</h3>
+
+  <div class="space-y-4">
+    <div class="border-l-4 border-l-red-600 pl-4">
+      <div class="flex items-start justify-between mb-2">
+        <h4 class="font-semibold">[Focus Area 1]</h4>
+        <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-semibold">CRITICAL</span>
+      </div>
+      <p class="text-sm text-gray-700 mb-2">[Why urgent - specific decision window]</p>
+      <p class="text-xs text-gray-500">
+        <strong>Shift-Enabling:</strong> Triggers Shifts [N, N] if acted upon in [timeframe]
+      </p>
+      <p class="text-xs text-gray-500">
+        <strong>Evidence:</strong> [Data point showing urgency] <a href="...">[N]</a>
+      </p>
+    </div>
+
+    <!-- Repeat for HIGH, MEDIUM priority areas -->
+  </div>
+</div>
+```
+
 ### Thesis for Action: 10-Section Structure
 
-**Every sector page must contain these 10 sections in order:**
+**Every sector page must contain these 9 sections in order (Section 2 TARGETS has been removed):**
 
 | # | Section | Border Color | Purpose | Key Elements |
 |---|---------|--------------|---------|--------------|
 | 1 | **Baseline** | Gray (`border-l-gray-400`) | Current status & trends | 5+ data points with citations |
-| 2 | **Targets** | Primary Green (`border-l-primary`) | Year 3 milestones | 5+ quantitative goals |
-| 3 | **Sankey Diagram** | Purple (`border-l-purple-500`) | Energy/material flow visualization | Interactive D3 diagram with pedagogical subtitle |
+| 3 | **Sankey Diagram** | Purple (`border-l-purple-500`) | Energy/material flow visualization | Interactive Plotly diagram with pedagogical subtitle |
 | 4 | **Hidden Dynamics** | Amber (`border-l-amber-500`) | 7-category barrier analysis | 2+ examples per category in responsive grid |
-| 5 | **Shift** | Blue (`border-l-blue-500`) | Transformation vision | Narrative of desired future state |
-| 6 | **Markers** | Teal (`border-l-teal-500`) | Progress indicators | Split: Quantitative (5+) / Qualitative (3+) |
-| 7 | **Strategies** | Indigo (`border-l-indigo-600`) | Intervention pathways | 3-5 strategic approaches with examples |
+| 5 | **Shift** | Blue (`border-l-blue-500`) | **6 Paradigm Shifts** | See Paradigm Shift Framework above |
+| 6 | **Markers** | Teal (`border-l-teal-500`) | Progress indicators | Leading/Lagging/Discourse split (5+/5+/3+) |
+| 7 | **Strategies** | Indigo (`border-l-indigo-600`) | Shift-enabling interventions | High/Medium/Foundational leverage with explicit shift mapping |
 | 8 | **Economic Impact** | Rose (`border-l-rose-500`) | Costs vs benefits | 3 subsections: Costs/Externalities/Opportunity |
 | 9 | **Investments** | Orange (`border-l-orange-500`) | Capital requirements | Capex vs Opex split with funding sources |
-| 10 | **Focus Areas** | Red (`border-l-red-500`) | Priority actions | Urgency-ranked with color-coded tags |
+| 10 | **Focus Areas** | Red (`border-l-red-500`) | Urgency + Shift-Enabling | Ranked by decision windows + paradigm shift potential |
+
+**Note**: Section 2 (TARGETS) was removed from all sectors. Section numbering now skips from 1 → 3.
 
 ### Discovery Methods (Removed from Pages)
 
