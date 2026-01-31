@@ -253,7 +253,7 @@ function buildLevel1Elements() {
     });
 
     // Add aggregated sector-to-sector edges
-    const sectorEdges = new Map(); // key: "source-target", value: count
+    const sectorEdges = new Map(); // key: "source|target", value: count
 
     data.edges.forEach(edge => {
         // Find which sectors the source and target belong to
@@ -266,8 +266,8 @@ function buildLevel1Elements() {
 
             // Only create edges between different sectors
             if (sourceSector !== targetSector) {
-                const edgeKey = `${sourceSector}-${targetSector}`;
-                const reverseKey = `${targetSector}-${sourceSector}`;
+                const edgeKey = `${sourceSector}|${targetSector}`;
+                const reverseKey = `${targetSector}|${sourceSector}`;
 
                 // Check if reverse edge already exists (to avoid duplicates)
                 if (sectorEdges.has(reverseKey)) {
@@ -282,16 +282,14 @@ function buildLevel1Elements() {
     // Add aggregated edges to elements
     let edgeIndex = 0;
     sectorEdges.forEach((count, edgeKey) => {
-        const [source, target] = edgeKey.split('-').slice(0, 2);
-        const fullSource = `sector-${source}`;
-        const fullTarget = `sector-${target}`;
+        const [source, target] = edgeKey.split('|');
 
         elements.push({
             group: 'edges',
             data: {
                 id: `sector-edge-${edgeIndex++}`,
-                source: fullSource,
-                target: fullTarget,
+                source: source,
+                target: target,
                 type: 'aggregate',
                 label: `${count}`,
                 weight: count
