@@ -5,7 +5,7 @@
     {
       "id": "energy",
       "label": "Energy",
-      "description": "End-Use Efficiency Mandate: Motors 30%→70%, Pumps 35%→75%, BEE 5-star procurement",
+      "description": "End-Use Efficiency Mandate: Motors 30%\u219270%, Pumps 35%\u219275%, BEE 5-star procurement",
       "color": "#eab308",
       "isCentralNode": true
     },
@@ -56,6 +56,12 @@
       "label": "Urban Development",
       "description": "Municipal energy bills, fiscal space, street lighting",
       "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Ecosystem health, habitat conservation, species protection",
+      "color": "#059669"
     }
   ],
   "links": [
@@ -66,7 +72,7 @@
       "value": 35,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "Efficient HVAC/appliances → 30-40% lower operational energy; reduces building energy intensity 150 → 90 kWh/m²/year",
+      "quantification": "Efficient HVAC/appliances \u2192 30-40% lower operational energy; reduces building energy intensity 150 \u2192 90 kWh/m\u00b2/year",
       "citation": "Thesis: ECBC compliance analysis"
     },
     {
@@ -76,7 +82,7 @@
       "value": 54,
       "type": "synergy",
       "layer": "governance",
-      "quantification": "Irrigation pump efficiency 35% → 75% = 54% energy cost reduction for farmers; enables water pricing reform",
+      "quantification": "Irrigation pump efficiency 35% \u2192 75% = 54% energy cost reduction for farmers; enables water pricing reform",
       "citation": "Thesis: Water-energy nexus"
     },
     {
@@ -86,7 +92,7 @@
       "value": 40,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "Cold chain refrigeration efficiency → 40% lower operational cost; spoilage 40% → 15% becomes feasible",
+      "quantification": "Cold chain refrigeration efficiency \u2192 40% lower operational cost; spoilage 40% \u2192 15% becomes feasible",
       "citation": "Thesis: Cold chain analysis"
     },
     {
@@ -96,7 +102,7 @@
       "value": 12,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "EV motor efficiency 85% → 95% = 12% range improvement per kWh; range anxiety reduced",
+      "quantification": "EV motor efficiency 85% \u2192 95% = 12% range improvement per kWh; range anxiety reduced",
       "citation": "Thesis: EV transition"
     },
     {
@@ -106,7 +112,7 @@
       "value": 57,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "Industrial motors 30% → 70% efficiency = 57% energy cost reduction; 120 TWh/year saved = 60 GW avoided",
+      "quantification": "Industrial motors 30% \u2192 70% efficiency = 57% energy cost reduction; 120 TWh/year saved = 60 GW avoided",
       "citation": "Thesis: Industrial efficiency"
     },
     {
@@ -126,7 +132,7 @@
       "value": 40,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "Waste processing energy costs 40% reduction via efficient motors; processing capacity 100 → 180 MT/year",
+      "quantification": "Waste processing energy costs 40% reduction via efficient motors; processing capacity 100 \u2192 180 MT/year",
       "citation": "Thesis: Waste management"
     },
     {
@@ -136,7 +142,7 @@
       "value": 35,
       "type": "synergy",
       "layer": "governance",
-      "quantification": "Municipal energy bills (street lighting, water pumps, sewage) 30-40% reduction; ₹10K Cr/year fiscal space",
+      "quantification": "Municipal energy bills (street lighting, water pumps, sewage) 30-40% reduction; \u20b910K Cr/year fiscal space",
       "citation": "Thesis: ULB finance"
     },
     {
@@ -156,7 +162,7 @@
       "value": 75,
       "type": "conflict",
       "layer": "community",
-      "quantification": "Pump replacement resistance: 20M agricultural pumps need replacement at ₹50K-1L each; farmers lack capital",
+      "quantification": "Pump replacement resistance: 20M agricultural pumps need replacement at \u20b950K-1L each; farmers lack capital",
       "citation": "Thesis: Agricultural finance"
     },
     {
@@ -176,7 +182,7 @@
       "value": 50,
       "type": "cascade",
       "layer": "governance",
-      "quantification": "Lower energy demand → less capacity needed → lower tariffs → more ECBC adoption → further demand reduction (positive feedback)",
+      "quantification": "Lower energy demand \u2192 less capacity needed \u2192 lower tariffs \u2192 more ECBC adoption \u2192 further demand reduction (positive feedback)",
       "citation": "Thesis: ECBC economics"
     },
     {
@@ -186,7 +192,7 @@
       "value": 60,
       "type": "cascade",
       "layer": "governance",
-      "quantification": "Efficient pumps → lower farm energy cost → water pricing viable → less groundwater stress → less pumping needed (resource preservation)",
+      "quantification": "Efficient pumps \u2192 lower farm energy cost \u2192 water pricing viable \u2192 less groundwater stress \u2192 less pumping needed (resource preservation)",
       "citation": "Thesis: Groundwater management"
     },
     {
@@ -226,7 +232,7 @@
       "value": 35,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via efficient pumps: Better water availability for irrigation → 15-20% increase in crop yields for water-intensive crops; enables horticultural expansion",
+      "quantification": "Via efficient pumps: Better water availability for irrigation \u2192 15-20% increase in crop yields for water-intensive crops; enables horticultural expansion",
       "citation": "Thesis: Water-food cascade"
     },
     {
@@ -236,7 +242,7 @@
       "value": 25,
       "type": "indirect",
       "layer": "shared",
-      "quantification": "Via efficient motors: Reduced waste heat from vehicles → 2-3°C lower urban heat island effect in high-density areas; improves thermal comfort",
+      "quantification": "Via efficient motors: Reduced waste heat from vehicles \u2192 2-3\u00b0C lower urban heat island effect in high-density areas; improves thermal comfort",
       "citation": "Thesis: Urban thermal analysis"
     },
     {
@@ -246,7 +252,7 @@
       "value": 20,
       "type": "indirect",
       "layer": "shared",
-      "quantification": "Via reduced pumping: Less groundwater extraction → fewer diesel pump sets running → reduced PM2.5 and NOx emissions in rural areas",
+      "quantification": "Via reduced pumping: Less groundwater extraction \u2192 fewer diesel pump sets running \u2192 reduced PM2.5 and NOx emissions in rural areas",
       "citation": "Thesis: Agricultural air quality"
     },
     {
@@ -256,7 +262,7 @@
       "value": 30,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via efficient HVAC: Less building waste heat → reduced urban heat island → 1-2°C cooling in dense neighborhoods; co-benefit of energy efficiency",
+      "quantification": "Via efficient HVAC: Less building waste heat \u2192 reduced urban heat island \u2192 1-2\u00b0C cooling in dense neighborhoods; co-benefit of energy efficiency",
       "citation": "Thesis: Building thermal externalities"
     },
     {
@@ -266,7 +272,7 @@
       "value": 45,
       "type": "indirect",
       "layer": "shared",
-      "quantification": "Via reduced energy demand: 120 TWh industrial savings → 60 MT coal avoided → 30% reduction in industrial zone PM2.5 concentrations",
+      "quantification": "Via reduced energy demand: 120 TWh industrial savings \u2192 60 MT coal avoided \u2192 30% reduction in industrial zone PM2.5 concentrations",
       "citation": "Thesis: Industrial air quality co-benefits"
     },
     {
@@ -276,7 +282,7 @@
       "value": 20,
       "type": "indirect",
       "layer": "community",
-      "quantification": "Via cold chain: Reduced spoilage → fresher produce in cities → better nutrition outcomes; 25% reduction in foodborne illness in urban areas",
+      "quantification": "Via cold chain: Reduced spoilage \u2192 fresher produce in cities \u2192 better nutrition outcomes; 25% reduction in foodborne illness in urban areas",
       "citation": "Thesis: Urban food security"
     },
     {
@@ -286,7 +292,7 @@
       "value": 15,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via improved water availability: Less water stress → more reliable building water supply → reduced need for energy-intensive water storage/pumping",
+      "quantification": "Via improved water availability: Less water stress \u2192 more reliable building water supply \u2192 reduced need for energy-intensive water storage/pumping",
       "citation": "Thesis: Building-water nexus"
     },
     {
@@ -296,7 +302,7 @@
       "value": 40,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via efficient cold storage motors: Industrial cold chain energy costs -40% → enables food processing expansion in rural areas → local value addition",
+      "quantification": "Via efficient cold storage motors: Industrial cold chain energy costs -40% \u2192 enables food processing expansion in rural areas \u2192 local value addition",
       "citation": "Thesis: Food processing decentralization"
     },
     {
@@ -306,7 +312,7 @@
       "value": 35,
       "type": "indirect",
       "layer": "shared",
-      "quantification": "Via reduced HVAC energy: 40M households 30% savings → 15 TWh avoided → 7.5 MT coal not burned → PM2.5 reduction in urban airsheds",
+      "quantification": "Via reduced HVAC energy: 40M households 30% savings \u2192 15 TWh avoided \u2192 7.5 MT coal not burned \u2192 PM2.5 reduction in urban airsheds",
       "citation": "Thesis: Residential air quality co-benefits"
     },
     {
@@ -316,8 +322,38 @@
       "value": 50,
       "type": "indirect",
       "layer": "shared",
-      "quantification": "Via efficient EVs: 12% range improvement → faster EV adoption → 2M EVs by 2030 → 20% reduction in urban transport NOx emissions",
+      "quantification": "Via efficient EVs: 12% range improvement \u2192 faster EV adoption \u2192 2M EVs by 2030 \u2192 20% reduction in urban transport NOx emissions",
       "citation": "Thesis: EV air quality benefits"
+    },
+    {
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 48,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "100 GW avoided capacity \u2192 prevents ecosystem disruption from power plant construction/operation",
+      "citation": "Thesis: Avoided infrastructure impacts",
+      "id": 27
+    },
+    {
+      "source": "buildings",
+      "target": "food",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via urban cooling: Efficient HVAC \u2192 reduced urban heat \u2192 less food spoilage in urban markets",
+      "citation": "Thesis: Urban heat-food cascade",
+      "id": 28
+    },
+    {
+      "source": "transport",
+      "target": "food",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via cold chain: Efficient refrigerated transport \u2192 15-20% reduction in spoilage during distribution",
+      "citation": "Thesis: Transport-food nexus",
+      "id": 29
     }
   ],
   "typeColors": {

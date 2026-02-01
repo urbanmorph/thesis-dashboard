@@ -50,6 +50,12 @@
       "label": "Buildings",
       "description": "Buildings sector dependencies",
       "color": "#3b82f6"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Agricultural production, cold chain, food security",
+      "color": "#10b981"
     }
   ],
   "links": [
@@ -162,6 +168,26 @@
       "layer": "technical",
       "quantification": "Indirect effects between water and transport",
       "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "source": "energy",
+      "target": "food",
+      "value": 55,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Food processing motors 30%\u219270% efficiency \u2192 40% lower operational costs \u2192 rural food processing viability",
+      "citation": "Thesis: Food processing efficiency",
+      "id": 12
+    },
+    {
+      "source": "industry",
+      "target": "food",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via cold chain efficiency: Industrial refrigeration savings \u2192 enables decentralized food processing \u2192 local value addition",
+      "citation": "Thesis: Food value chain",
+      "id": 13
     }
   ],
   "typeColors": {

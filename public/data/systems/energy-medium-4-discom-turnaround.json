@@ -50,6 +50,12 @@
       "label": "Air",
       "description": "Air sector dependencies",
       "color": "#64748b"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Agricultural production, cold chain, food security",
+      "color": "#10b981"
     }
   ],
   "links": [
@@ -152,6 +158,26 @@
       "layer": "shared",
       "quantification": "Indirect effects between water and industry",
       "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "source": "energy",
+      "target": "food",
+      "value": 42,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires DBT for agricultural subsidies + smart meters \u2192 transparent pricing \u2192 better irrigation management",
+      "citation": "Thesis: Agricultural subsidy reform",
+      "id": 11
+    },
+    {
+      "source": "water",
+      "target": "food",
+      "value": 38,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via tariff reform: Cost-reflective pricing \u2192 efficient irrigation \u2192 water conservation \u2192 sustainable agriculture",
+      "citation": "Thesis: Water pricing impacts",
+      "id": 12
     }
   ],
   "typeColors": {

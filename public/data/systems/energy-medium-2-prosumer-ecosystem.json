@@ -50,6 +50,12 @@
       "label": "Air",
       "description": "Air sector dependencies",
       "color": "#64748b"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Ecosystem health, habitat conservation, species protection",
+      "color": "#059669"
     }
   ],
   "links": [
@@ -152,6 +158,26 @@
       "layer": "shared",
       "quantification": "Indirect effects between neighbourhoods and urban",
       "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "50L rooftop installations \u2192 distributed solar reduces large-scale land conversion pressure",
+      "citation": "Thesis: Distributed RE benefits",
+      "id": 11
+    },
+    {
+      "source": "buildings",
+      "target": "neighbourhoods",
+      "value": 42,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via rooftop solar: Community energy awareness \u2192 behavioral change \u2192 further efficiency adoption",
+      "citation": "Thesis: Community energy culture",
+      "id": 12
     }
   ],
   "typeColors": {

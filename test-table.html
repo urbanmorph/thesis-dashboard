@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Table View</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="bg-gray-50 p-8">
+    <h1 class="text-2xl font-bold mb-4">Systems Map Table View Test</h1>
+
+    <!-- Table View Container -->
+    <div id="table-container" class="bg-white border border-gray-200 rounded-lg shadow-sm mb-8 overflow-hidden">
+        <!-- Search & Filters -->
+        <div class="p-4 border-b border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <!-- Search -->
+                <div>
+                    <label class="text-sm font-medium text-gray-700 mb-2 block">Search</label>
+                    <input id="table-search"
+                           type="text"
+                           placeholder="Search relationships..."
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                </div>
+
+                <!-- Filter by Type -->
+                <div>
+                    <label class="text-sm font-medium text-gray-700 mb-2 block">Filter by Type</label>
+                    <div class="flex gap-2 flex-wrap">
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-synergy" checked class="rounded">
+                            <span class="text-green-700">Synergy</span>
+                        </label>
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-conflict" checked class="rounded">
+                            <span class="text-red-700">Conflict</span>
+                        </label>
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-cascade" checked class="rounded">
+                            <span class="text-amber-700">Cascade</span>
+                        </label>
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-shared" checked class="rounded">
+                            <span class="text-gray-700">Shared</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter by Layer -->
+                <div>
+                    <label class="text-sm font-medium text-gray-700 mb-2 block">Filter by Layer</label>
+                    <div class="flex gap-2 flex-wrap">
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-governance" checked class="rounded">
+                            <span class="text-blue-700">Governance</span>
+                        </label>
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-community" checked class="rounded">
+                            <span class="text-green-700">Community</span>
+                        </label>
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-technical" checked class="rounded">
+                            <span class="text-gray-700">Technical</span>
+                        </label>
+                        <label class="flex items-center gap-1 text-sm">
+                            <input type="checkbox" id="filter-conditional" checked class="rounded">
+                            <span class="text-purple-700">Conditional</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Count -->
+            <div class="text-sm text-gray-600">
+                Showing <span id="results-count" class="font-bold">16</span> of 16 relationships
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+            <table id="systems-table" class="w-full text-sm">
+                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                    <tr>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="source">
+                            Source <span class="sort-icon text-gray-400">⇅</span>
+                        </th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="target">
+                            Target <span class="sort-icon text-gray-400">⇅</span>
+                        </th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="type">
+                            Type <span class="sort-icon text-gray-400">⇅</span>
+                        </th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="layer">
+                            Layer <span class="sort-icon text-gray-400">⇅</span>
+                        </th>
+                        <th class="px-4 py-3 text-right font-semibold text-gray-700 cursor-pointer hover:bg-gray-100" data-sort="magnitude">
+                            Magnitude <span class="sort-icon text-gray-400">⇅</span>
+                        </th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-700">
+                            Quantification
+                        </th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-700">
+                            Citation
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module">
+        import { TableVisualization } from '/js/d3-table-viz.js';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('/data/systems-map.json');
+                const data = await response.json();
+
+                const tableViz = new TableVisualization(data);
+                tableViz.render();
+                tableViz.attachEventHandlers();
+
+                console.log('Table visualization initialized');
+                console.log('Data rows:', tableViz.tableData.length);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>

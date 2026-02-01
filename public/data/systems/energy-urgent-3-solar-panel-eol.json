@@ -5,7 +5,7 @@
     {
       "id": "energy",
       "label": "Energy",
-      "description": "Solar Panel EOL: 299 recycling facilities (₹4,274 Cr) by 2047, 340 kt waste by 2030",
+      "description": "Solar Panel EOL: 299 recycling facilities (\u20b94,274 Cr) by 2047, 340 kt waste by 2030",
       "color": "#eab308",
       "isCentralNode": true
     },
@@ -56,6 +56,12 @@
       "label": "Transport",
       "description": "Reverse logistics, collection infrastructure",
       "color": "#8b5cf6"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Ecosystem health, habitat conservation, species protection",
+      "color": "#059669"
     }
   ],
   "links": [
@@ -66,7 +72,7 @@
       "value": 60,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "60% silicon, 85% silver recovery → reduces virgin material dependency; enables domestic manufacturing resilience",
+      "quantification": "60% silicon, 85% silver recovery \u2192 reduces virgin material dependency; enables domestic manufacturing resilience",
       "citation": "Thesis: Material circularity"
     },
     {
@@ -76,7 +82,7 @@
       "value": 70,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "340 kt waste by 2030 → controlled recycling vs landfill; E-waste Rules 2022 enforcement critical",
+      "quantification": "340 kt waste by 2030 \u2192 controlled recycling vs landfill; E-waste Rules 2022 enforcement critical",
       "citation": "Thesis: E-waste management"
     },
     {
@@ -86,7 +92,7 @@
       "value": 50,
       "type": "synergy",
       "layer": "community",
-      "quantification": "Rooftop solar EOL → building-integrated collection points; enables residential circular economy participation",
+      "quantification": "Rooftop solar EOL \u2192 building-integrated collection points; enables residential circular economy participation",
       "citation": "Thesis: Building circularity"
     },
     {
@@ -96,7 +102,7 @@
       "value": 45,
       "type": "synergy",
       "layer": "governance",
-      "quantification": "Collection centers in 100 cities → integrates with municipal waste management; 299 facilities nationwide",
+      "quantification": "Collection centers in 100 cities \u2192 integrates with municipal waste management; 299 facilities nationwide",
       "citation": "Thesis: Urban waste integration"
     },
     {
@@ -106,7 +112,7 @@
       "value": 35,
       "type": "synergy",
       "layer": "shared",
-      "quantification": "Prevents heavy metal leaching → protects groundwater; recycling vs landfilling safeguards water quality",
+      "quantification": "Prevents heavy metal leaching \u2192 protects groundwater; recycling vs landfilling safeguards water quality",
       "citation": "Thesis: Water pollution prevention"
     },
     {
@@ -126,7 +132,7 @@
       "value": 38,
       "type": "synergy",
       "layer": "community",
-      "quantification": "Community solar projects → local EOL management; neighborhood awareness of material cycles",
+      "quantification": "Community solar projects \u2192 local EOL management; neighborhood awareness of material cycles",
       "citation": "Thesis: Community energy"
     },
     {
@@ -146,7 +152,7 @@
       "value": 40,
       "type": "conflict",
       "layer": "community",
-      "quantification": "Collection infrastructure barrier: 299 centers need ₹4,274 Cr capex; municipal budgets strained",
+      "quantification": "Collection infrastructure barrier: 299 centers need \u20b94,274 Cr capex; municipal budgets strained",
       "citation": "Thesis: Urban infrastructure finance"
     },
     {
@@ -166,7 +172,7 @@
       "value": 48,
       "type": "cascade",
       "layer": "technical",
-      "quantification": "Recycling infrastructure → domestic material supply → manufacturing cost reduction → more domestic production",
+      "quantification": "Recycling infrastructure \u2192 domestic material supply \u2192 manufacturing cost reduction \u2192 more domestic production",
       "citation": "Thesis: Industrial cascades"
     },
     {
@@ -186,7 +192,7 @@
       "value": 45,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via material recovery: Recycling facilities → high-purity silicon → manufacturing feedstock at reduced cost",
+      "quantification": "Via material recovery: Recycling facilities \u2192 high-purity silicon \u2192 manufacturing feedstock at reduced cost",
       "citation": "Thesis: Material economics"
     },
     {
@@ -196,7 +202,7 @@
       "value": 40,
       "type": "indirect",
       "layer": "governance",
-      "quantification": "Via integrated waste management: Solar collection → leverages existing infrastructure → lower collection costs",
+      "quantification": "Via integrated waste management: Solar collection \u2192 leverages existing infrastructure \u2192 lower collection costs",
       "citation": "Thesis: Infrastructure synergies"
     },
     {
@@ -206,7 +212,7 @@
       "value": 30,
       "type": "indirect",
       "layer": "community",
-      "quantification": "Via residential participation: Building-level collection → neighborhood circular economy awareness",
+      "quantification": "Via residential participation: Building-level collection \u2192 neighborhood circular economy awareness",
       "citation": "Thesis: Community participation"
     },
     {
@@ -216,7 +222,7 @@
       "value": 35,
       "type": "indirect",
       "layer": "shared",
-      "quantification": "Via proper recycling: Prevents toxic emissions from informal e-waste burning → air quality improvement",
+      "quantification": "Via proper recycling: Prevents toxic emissions from informal e-waste burning \u2192 air quality improvement",
       "citation": "Thesis: Air quality co-benefits"
     },
     {
@@ -226,7 +232,7 @@
       "value": 25,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via reverse logistics: Collection network → urban freight optimization → reduced transport costs",
+      "quantification": "Via reverse logistics: Collection network \u2192 urban freight optimization \u2192 reduced transport costs",
       "citation": "Thesis: Urban logistics"
     },
     {
@@ -236,8 +242,38 @@
       "value": 28,
       "type": "indirect",
       "layer": "community",
-      "quantification": "Via community engagement: Local awareness → higher recycling participation rates → waste reduction",
+      "quantification": "Via community engagement: Local awareness \u2192 higher recycling participation rates \u2192 waste reduction",
       "citation": "Thesis: Community waste management"
+    },
+    {
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 45,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Panel decommissioning enables land restoration; 299 facilities can integrate habitat corridors",
+      "citation": "Thesis: Solar land use",
+      "id": 19
+    },
+    {
+      "source": "biodiversity",
+      "target": "energy",
+      "value": 35,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Solar farm land conversion affects 2-3 ha/MW; conflicts with agricultural/forest land",
+      "citation": "Thesis: RE land use conflicts",
+      "id": 20
+    },
+    {
+      "source": "waste",
+      "target": "neighbourhoods",
+      "value": 32,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via recycling infrastructure: Local collection centers \u2192 community circular economy awareness",
+      "citation": "Thesis: Waste-community engagement",
+      "id": 21
     }
   ],
   "typeColors": {

@@ -50,6 +50,18 @@
       "label": "Air Quality",
       "description": "Reduced mining emissions, recycling facility air quality",
       "color": "#64748b"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Ecosystem health, habitat conservation, species protection",
+      "color": "#059669"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Agricultural production, cold chain, food security",
+      "color": "#10b981"
     }
   ],
   "links": [
@@ -60,7 +72,7 @@
       "value": 65,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "40% lithium from recycling by 2030 → reduces import dependency by $2B/year; enables domestic battery manufacturing resilience",
+      "quantification": "40% lithium from recycling by 2030 \u2192 reduces import dependency by $2B/year; enables domestic battery manufacturing resilience",
       "citation": "Thesis: Material circularity"
     },
     {
@@ -70,7 +82,7 @@
       "value": 70,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "EV battery EOL → 60% collection → 128 GWh recycling capacity; enables EV circular economy at scale",
+      "quantification": "EV battery EOL \u2192 60% collection \u2192 128 GWh recycling capacity; enables EV circular economy at scale",
       "citation": "Thesis: EV value chain"
     },
     {
@@ -80,7 +92,7 @@
       "value": 45,
       "type": "synergy",
       "layer": "governance",
-      "quantification": "Collection centers in 100 cities → urban battery waste -80%; integrates with municipal waste management systems",
+      "quantification": "Collection centers in 100 cities \u2192 urban battery waste -80%; integrates with municipal waste management systems",
       "citation": "Thesis: Urban waste integration"
     },
     {
@@ -90,7 +102,7 @@
       "value": 55,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "Hazardous battery waste → controlled recycling vs landfill; prevents 58.88 GWh toxic waste by 2030",
+      "quantification": "Hazardous battery waste \u2192 controlled recycling vs landfill; prevents 58.88 GWh toxic waste by 2030",
       "citation": "Thesis: Hazardous waste management"
     },
     {
@@ -100,7 +112,7 @@
       "value": 40,
       "type": "synergy",
       "layer": "shared",
-      "quantification": "Recycling vs mining: 70% less GHG emissions; avoids 5 MT CO₂ from virgin material extraction",
+      "quantification": "Recycling vs mining: 70% less GHG emissions; avoids 5 MT CO\u2082 from virgin material extraction",
       "citation": "Thesis: Lifecycle emissions"
     },
     {
@@ -110,7 +122,7 @@
       "value": 60,
       "type": "synergy",
       "layer": "technical",
-      "quantification": "2M EVs by 2030 → 58.88 GWh battery waste → creates recycling supply chain; EOL batteries enable grid storage reuse",
+      "quantification": "2M EVs by 2030 \u2192 58.88 GWh battery waste \u2192 creates recycling supply chain; EOL batteries enable grid storage reuse",
       "citation": "Thesis: Second-life batteries"
     },
     {
@@ -130,7 +142,7 @@
       "value": 35,
       "type": "conflict",
       "layer": "community",
-      "quantification": "Collection infrastructure barrier: 100 centers need ₹500 Cr capex; municipal budgets strained; NIMBY resistance to recycling facilities",
+      "quantification": "Collection infrastructure barrier: 100 centers need \u20b9500 Cr capex; municipal budgets strained; NIMBY resistance to recycling facilities",
       "citation": "Thesis: Urban infrastructure finance"
     },
     {
@@ -150,7 +162,7 @@
       "value": 30,
       "type": "cascade",
       "layer": "community",
-      "quantification": "Residential battery storage EOL → collection points in buildings → neighborhood reverse logistics → circular economy awareness",
+      "quantification": "Residential battery storage EOL \u2192 collection points in buildings \u2192 neighborhood reverse logistics \u2192 circular economy awareness",
       "citation": "Thesis: Community circular economy"
     },
     {
@@ -160,7 +172,7 @@
       "value": 25,
       "type": "synergy",
       "layer": "shared",
-      "quantification": "Prevents groundwater contamination: Battery landfilling → heavy metal leaching; recycling protects 50M urban water users",
+      "quantification": "Prevents groundwater contamination: Battery landfilling \u2192 heavy metal leaching; recycling protects 50M urban water users",
       "citation": "Thesis: Water pollution prevention"
     },
     {
@@ -170,7 +182,7 @@
       "value": 45,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via recycled materials: Lower battery manufacturing costs → 15% cheaper EVs → faster adoption; closes loop from EOL to new vehicle",
+      "quantification": "Via recycled materials: Lower battery manufacturing costs \u2192 15% cheaper EVs \u2192 faster adoption; closes loop from EOL to new vehicle",
       "citation": "Thesis: EV cost reduction"
     },
     {
@@ -180,7 +192,7 @@
       "value": 35,
       "type": "indirect",
       "layer": "community",
-      "quantification": "Via collection network: EV service centers → battery drop-off points → urban reverse logistics infrastructure emerges",
+      "quantification": "Via collection network: EV service centers \u2192 battery drop-off points \u2192 urban reverse logistics infrastructure emerges",
       "citation": "Thesis: Urban logistics"
     },
     {
@@ -190,7 +202,7 @@
       "value": 50,
       "type": "indirect",
       "layer": "technical",
-      "quantification": "Via material recovery: Recycling facilities → high-purity lithium/cobalt → manufacturing feedstock at 60% cost of virgin materials",
+      "quantification": "Via material recovery: Recycling facilities \u2192 high-purity lithium/cobalt \u2192 manufacturing feedstock at 60% cost of virgin materials",
       "citation": "Thesis: Material economics"
     },
     {
@@ -200,7 +212,7 @@
       "value": 40,
       "type": "indirect",
       "layer": "governance",
-      "quantification": "Via integrated waste management: Battery collection → leverages existing municipal waste infrastructure → 30% lower collection costs",
+      "quantification": "Via integrated waste management: Battery collection \u2192 leverages existing municipal waste infrastructure \u2192 30% lower collection costs",
       "citation": "Thesis: Infrastructure synergies"
     },
     {
@@ -210,8 +222,28 @@
       "value": 20,
       "type": "indirect",
       "layer": "community",
-      "quantification": "Via residential participation: Building-level collection → neighborhood engagement → 25% higher recycling rates in dense areas",
+      "quantification": "Via residential participation: Building-level collection \u2192 neighborhood engagement \u2192 25% higher recycling rates in dense areas",
       "citation": "Thesis: Community participation"
+    },
+    {
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 55,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "40% lithium from recycling \u2192 reduces mining in biodiversity hotspots (Chile, Australia)",
+      "citation": "Thesis: Mining impacts",
+      "id": 17
+    },
+    {
+      "source": "energy",
+      "target": "food",
+      "value": 35,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Second-life EV batteries \u2192 off-grid cold storage \u2192 25% reduction in post-harvest losses",
+      "citation": "Thesis: Battery reuse applications",
+      "id": 18
     }
   ],
   "typeColors": {
