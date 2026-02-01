@@ -4,7 +4,53 @@
 
 The Systems Map page visualizes cross-sectoral dependencies for focus areas across 9 sectors. It uses a scalable architecture with a master catalog and individual map data files.
 
-**Current Status:** Phase 1 complete - 11 Energy sector maps implemented
+**Current Status:** Phase 1 complete - 11 Energy sector maps implemented, Phase 2 in progress - 2 of 7 Transport sector maps implemented
+
+## ⚠️ CRITICAL: Keeping Systems Maps Synchronized
+
+**IMPORTANT:** The Intersections page and the Sectors page must stay synchronized. Whenever you make changes to focus areas in `sectors.html`, you MUST update the corresponding systems maps:
+
+### When to Update Systems Maps:
+
+1. **Focus area added/removed in sectors.html**
+   - Add/remove corresponding map entry in `/public/data/systems-map.json`
+   - Create/delete the map data file in `/public/data/systems/`
+   - Update `totalMaps` count in catalog metadata
+
+2. **Focus area priority changed** (e.g., URGENT → HIGH)
+   - Update `priority` field in catalog entry
+   - Rename map file to match new priority (e.g., `energy-urgent-3` → `energy-high-3`)
+   - Update `dataFile` path in catalog
+
+3. **Focus area description/data changed**
+   - Update `description` field in catalog entry
+   - Update node descriptions and link quantifications in map data file
+   - Ensure cross-sectoral relationships reflect new data points
+
+4. **New cross-sectoral relationships discovered**
+   - Add new links to the map data file
+   - Update `stats` in catalog entry (relationship counts)
+   - Ensure total relationships stay within 8-15 range
+
+5. **Sector baseline data updated** (e.g., new emissions figures)
+   - Review all map quantifications for that sector
+   - Update numerical values in link `quantification` fields
+   - Update `citation` references if sources change
+
+### Sync Checklist:
+
+- [ ] Does the focus area exist in both `sectors.html` AND the systems map catalog?
+- [ ] Do the titles match exactly between both pages?
+- [ ] Do the descriptions align (allowing for length differences)?
+- [ ] Do the priority labels match (🔴 URGENT, 🟠 HIGH, 🟡 MEDIUM, 🟢 FOUNDATIONAL)?
+- [ ] Are the quantified impacts in the systems map consistent with the focus area's stated goals?
+- [ ] Have new "Addresses" items in sectors.html been reflected as conflict/barrier relationships?
+- [ ] Have new "Enables" items in sectors.html been reflected as synergy/cascade relationships?
+
+**Location of Files:**
+- Sector focus areas: `/sectors.html` (search for "🎯 Focus Areas")
+- Systems map catalog: `/public/data/systems-map.json`
+- Individual maps: `/public/data/systems/*.json`
 
 ## Data Architecture
 
