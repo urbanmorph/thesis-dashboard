@@ -56,7 +56,7 @@
       "focusAreaCount": 7
     },
     {
-      "id": "neighbourhoods",
+      "id": "notf",
       "name": "Neighbourhoods",
       "icon": "🏘️",
       "color": "#ec4899",
@@ -804,7 +804,7 @@
     },
     {
       "id": "neighbourhoods-urgent-1-slum-tenure",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "Ward Dashboard Deployment",
       "description": "Real-time service data in 100 wards",
       "priority": "urgent",
@@ -817,7 +817,7 @@
     },
     {
       "id": "neighbourhoods-urgent-2-heat-action-plans",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "Participatory Budgeting Scale-Up",
       "description": "20 cities; 15% budget allocation",
       "priority": "urgent",
@@ -830,7 +830,7 @@
     },
     {
       "id": "neighbourhoods-high-1-community-budgeting",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "Ward Committee Activation",
       "description": "5,000 members trained; 500 facilitators deployed",
       "priority": "high",
@@ -843,7 +843,7 @@
     },
     {
       "id": "neighbourhoods-high-2-street-vendor-zones",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "RWA Accountability Framework",
       "description": "Model legislation in 5 states",
       "priority": "high",
@@ -856,7 +856,7 @@
     },
     {
       "id": "neighbourhoods-medium-1-community-solar",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "Community Service Co-Production",
       "description": "500 park agreements; 100 waste programs",
       "priority": "medium",
@@ -869,7 +869,7 @@
     },
     {
       "id": "neighbourhoods-medium-2-playstreets",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "Grievance Redressal Transformation",
       "description": "Ward-level committees; 7-day resolution target",
       "priority": "medium",
@@ -882,7 +882,7 @@
     },
     {
       "id": "neighbourhoods-foundational-1-digital-commons",
-      "sectorId": "neighbourhoods",
+      "sectorId": "notf",
       "title": "Hyperlocal Civic Education",
       "description": "100 schools; 10,000 residents budget literacy training",
       "priority": "foundational",
