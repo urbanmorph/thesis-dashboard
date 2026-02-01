@@ -94,7 +94,7 @@
     {
       "id": 6,
       "source": "urban",
-      "target":="waste",
+      "target": "waste",
       "value": 55,
       "type": "conflict",
       "layer": "technical",
