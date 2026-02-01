@@ -6694,7 +6694,56 @@
                 Plotly.newPlot('neighbourhoods-sankey', [notfData], notfLayout, {responsive: true});
             }
 
-            // 8. WATER REUSE GAP (Bar chart, not Sankey)
+            // 8. BIODIVERSITY NATURAL CAPITAL CASCADE
+            if (document.getElementById('biodiversity-sankey')) {
+                const biodiversityData = {
+                    type: "sankey",
+                    orientation: "h",
+                    node: {
+                        pad: 15,
+                        thickness: 30,
+                        line: { color: "white", width: 2 },
+                        label: [
+                            "Forest Cover<br>7.13 Lakh km²",
+                            "Tree Cover<br>1.02 Lakh km²",
+                            "Wetlands<br>7.57 Lakh ha",
+                            "Carbon Sequestration<br>300 MT/yr",
+                            "Water Regulation<br>~60% catchments",
+                            "Food Security<br>200M+ depend",
+                            "GDP Value<br>₹8-10L Cr/yr",
+                            "Lost to Degradation<br>₹2L Cr/yr",
+                            "Realized Value<br>₹6-8L Cr/yr",
+                            "Policy Blind Spot<br>Not in GDP"
+                        ],
+                        color: ["#059669", "#10b981", "#06b6d4", "#22c55e", "#3b82f6", "#f59e0b",
+                                "#8b5cf6", "#dc2626", "#eab308", "#6b7280"]
+                    },
+                    link: {
+                        source: [0, 1, 2, 3, 4, 5, 6, 6, 8],
+                        target: [3, 4, 5, 6, 6, 6, 7, 8, 9],
+                        value: [150, 100, 50, 300, 250, 200, 200, 600, 600],
+                        color: ["rgba(34, 197, 94, 0.3)", "rgba(59, 130, 246, 0.3)",
+                                "rgba(245, 158, 11, 0.3)", "rgba(139, 92, 246, 0.3)",
+                                "rgba(139, 92, 246, 0.3)", "rgba(139, 92, 246, 0.3)",
+                                "rgba(220, 38, 38, 0.4)", "rgba(234, 179, 8, 0.4)",
+                                "rgba(107, 114, 128, 0.4)"]
+                    }
+                };
+
+                const biodiversityLayout = {
+                    title: {
+                        text: "Natural Capital Cascade: ₹2L Cr/yr lost to degradation, ₹6-8L Cr invisible to GDP",
+                        font: { size: 14, color: "#374151" }
+                    },
+                    font: { size: 11, family: "Inter, sans-serif" },
+                    margin: { l: 20, r: 20, t: 60, b: 20 },
+                    paper_bgcolor: '#ecfdf5'
+                };
+
+                Plotly.newPlot('biodiversity-sankey', [biodiversityData], biodiversityLayout, {responsive: true});
+            }
+
+            // 9. WATER REUSE GAP (Bar chart, not Sankey)
             if (document.getElementById('water-reuse-gap-chart')) {
                 const reuseData = [{
                     x: ['States WITH<br>reuse policy', 'States WITHOUT<br>reuse policy'],
