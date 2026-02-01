@@ -87,10 +87,15 @@ class SystemsMapController {
       `<option value="${map.id}">${map.emoji} ${map.title} - ${map.stats.directRelationships} Direct, ${map.stats.indirectRelationships} Indirect</option>`
     ).join('');
 
-    if (maps.length > 0 && !this.currentMap) {
-      select.value = maps[0].id;
-    } else if (this.currentMap) {
-      select.value = this.currentMap.id;
+    // Only restore current map if it belongs to the selected sector
+    const currentMapInSector = this.currentMap && this.currentMap.sectorId === this.selectedSector;
+
+    if (maps.length > 0) {
+      if (currentMapInSector && maps.find(m => m.id === this.currentMap.id)) {
+        select.value = this.currentMap.id;
+      } else {
+        select.value = maps[0].id;
+      }
     }
   }
 
