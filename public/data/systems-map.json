@@ -1,10 +1,10 @@
 {
   "meta": {
-    "version": "2.0",
-    "lastUpdated": "2026-01-31",
-    "totalMaps": 11,
-    "totalSectors": 1,
-    "description": "Systems map catalog - Phase 1: Energy sector"
+    "version": "2.1",
+    "lastUpdated": "2026-02-01",
+    "totalMaps": 18,
+    "totalSectors": 2,
+    "description": "Systems map catalog - Phase 1: Energy sector (11 maps), Phase 2: Transport sector (7 maps)"
   },
   "sectors": [
     {
@@ -14,6 +14,14 @@
       "color": "#eab308",
       "gradient": "from-amber-600 to-amber-700",
       "focusAreaCount": 11
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "icon": "🚗",
+      "color": "#8b5cf6",
+      "gradient": "from-purple-600 to-purple-700",
+      "focusAreaCount": 7
     }
   ],
   "maps": [
@@ -247,6 +255,153 @@
       },
       "shiftsEnabled": ["#4 Market Opening", "#5 Time Horizon: Flexibility"],
       "hiddenDynamicsAddressed": ["Exchange illiquidity", "No balancing market", "Ancillary services void"]
+    },
+    {
+      "id": "transport-urgent-1-congestion-pricing",
+      "sectorId": "transport",
+      "title": "Congestion Pricing + Parking Reform",
+      "description": "Zone pricing in 3 metros + ₹200/hr CBD parking → ₹50K Cr revenue for transit",
+      "priority": "urgent",
+      "priorityOrder": 1,
+      "emoji": "🚗",
+      "dataFile": "/data/systems/transport-urgent-1-congestion-pricing.json",
+      "stats": {
+        "directRelationships": 12,
+        "indirectRelationships": 6,
+        "synergies": 7,
+        "conflicts": 3,
+        "cascades": 2,
+        "conditionals": 2,
+        "sectors": 8
+      },
+      "shiftsEnabled": ["#6 Objectives: Mobility-as-a-Service", "#4 Market Opening"],
+      "hiddenDynamicsAddressed": ["Unchecked vehicle growth (12% annually)", "Congestion ₹1.5L Cr loss", "Transit subsidy gap"]
+    },
+    {
+      "id": "transport-urgent-2-vision-zero",
+      "sectorId": "transport",
+      "title": "Vision Zero Street Redesign",
+      "description": "20% road space to pedestrians/cycles + 40 km/h limits + protected lanes",
+      "priority": "urgent",
+      "priorityOrder": 2,
+      "emoji": "🚶",
+      "dataFile": "/data/systems/transport-urgent-2-vision-zero.json",
+      "stats": {
+        "directRelationships": 11,
+        "indirectRelationships": 5,
+        "synergies": 6,
+        "conflicts": 3,
+        "cascades": 1,
+        "conditionals": 1,
+        "sectors": 7
+      },
+      "shiftsEnabled": ["#6 Objectives: Safety-First Design", "#1 Ontological: Human-Centered"],
+      "hiddenDynamicsAddressed": ["1.5L deaths/year (60% walkers/cyclists)", "₹1L Cr crash costs", "Car-centric design"]
+    },
+    {
+      "id": "transport-high-1-transit-fare-recovery",
+      "sectorId": "transport",
+      "title": "Transit Fare Recovery Model",
+      "description": "Dynamic pricing + monthly passes + service frequency standards → 60% opex recovery",
+      "priority": "high",
+      "priorityOrder": 1,
+      "emoji": "🚌",
+      "dataFile": "/data/systems/transport-high-1-transit-fare-recovery.json",
+      "stats": {
+        "directRelationships": 10,
+        "indirectRelationships": 5,
+        "synergies": 6,
+        "conflicts": 2,
+        "cascades": 1,
+        "conditionals": 1,
+        "sectors": 7
+      },
+      "shiftsEnabled": ["#4 Market Opening", "#6 Objectives: Service Quality"],
+      "hiddenDynamicsAddressed": ["100% subsidy dependency", "No city can afford expansion", "Service quality crisis"]
+    },
+    {
+      "id": "transport-high-2-ev-charging-blitz",
+      "sectorId": "transport",
+      "title": "EV Charging Infrastructure Blitz",
+      "description": "Deploy 100K public chargers + mandate 20% building parking → solve range anxiety",
+      "priority": "high",
+      "priorityOrder": 2,
+      "emoji": "🔌",
+      "dataFile": "/data/systems/transport-high-2-ev-charging-blitz.json",
+      "stats": {
+        "directRelationships": 11,
+        "indirectRelationships": 6,
+        "synergies": 7,
+        "conflicts": 2,
+        "cascades": 1,
+        "conditionals": 2,
+        "sectors": 8
+      },
+      "shiftsEnabled": ["#2 Renewable Energy Scale", "#6 Objectives: Zero Emissions"],
+      "hiddenDynamicsAddressed": ["Charging chicken-egg (12K for 1.5M EVs)", "Range anxiety blocks 30% adoption", "₹30K Cr health savings"]
+    },
+    {
+      "id": "transport-medium-1-tod-parking-repeal",
+      "sectorId": "transport",
+      "title": "TOD & Parking Mandate Repeal",
+      "description": "Abolish parking minimums + mandate 50% housing within 1km transit",
+      "priority": "medium",
+      "priorityOrder": 1,
+      "emoji": "🏢",
+      "dataFile": "/data/systems/transport-medium-1-tod-parking-repeal.json",
+      "stats": {
+        "directRelationships": 9,
+        "indirectRelationships": 4,
+        "synergies": 5,
+        "conflicts": 2,
+        "cascades": 1,
+        "conditionals": 2,
+        "sectors": 6
+      },
+      "shiftsEnabled": ["#6 Objectives: Transit-Oriented Development", "#1 Ontological: Urban Form"],
+      "hiddenDynamicsAddressed": ["Car-centric land use", "10-year lag to stock turnover", "Locking in sprawl for 50 years"]
+    },
+    {
+      "id": "transport-medium-2-freight-modal-shift",
+      "sectorId": "transport",
+      "title": "Freight Modal Shift Carbon Tax",
+      "description": "₹50/ton-km road freight tax + rail subsidy → target 45% rail share",
+      "priority": "medium",
+      "priorityOrder": 2,
+      "emoji": "🚛",
+      "dataFile": "/data/systems/transport-medium-2-freight-modal-shift.json",
+      "stats": {
+        "directRelationships": 10,
+        "indirectRelationships": 5,
+        "synergies": 6,
+        "conflicts": 2,
+        "cascades": 1,
+        "conditionals": 1,
+        "sectors": 7
+      },
+      "shiftsEnabled": ["#6 Objectives: Logistics Efficiency", "#4 Market Opening"],
+      "hiddenDynamicsAddressed": ["65% road freight dominance", "Logistics cost 14% → 11% GDP", "Rail capacity gap"]
+    },
+    {
+      "id": "transport-foundational-1-satellite-ev-monitoring",
+      "sectorId": "transport",
+      "title": "Satellite EV Impact Monitoring",
+      "description": "TROPOMI NO2 tracking + validate 1.1% drop per 200 EVs → link to health savings",
+      "priority": "foundational",
+      "priorityOrder": 1,
+      "emoji": "🛰️",
+      "dataFile": "/data/systems/transport-foundational-1-satellite-ev-monitoring.json",
+      "stats": {
+        "directRelationships": 8,
+        "indirectRelationships": 4,
+        "synergies": 5,
+        "conflicts": 1,
+        "cascades": 1,
+        "conditionals": 1,
+        "sectors": 6
+      },
+      "shiftsEnabled": ["#5 Data Transparency", "#6 Objectives: Evidence-Based Policy"],
+      "hiddenDynamicsAddressed": ["EV benefit invisibility", "No health savings quantification", "Subsidy justification gap"]
     }
   ]
 }

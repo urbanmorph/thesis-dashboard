@@ -1,0 +1,250 @@
+{
+  "title": "Congestion Pricing + Parking Reform: Cross-Sectoral Systems Map",
+  "description": "Cross-sectoral dependencies showing how zone pricing in 3 metros and CBD parking reform affects and is affected by other sectors",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Congestion Pricing: Zone pricing in 3 metros + ₹200/hr CBD parking → ₹50K Cr revenue for transit",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "PM2.5 reduction, NOx emissions, health outcomes",
+      "color": "#64748b"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Transport fuel consumption, EV charging infrastructure",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Transit infrastructure, public space allocation, revenue generation",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Local mobility patterns, car dependency, community resistance",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Logistics costs, business operations, freight movement",
+      "color": "#f97316"
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Parking infrastructure, real estate values, TOD patterns",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban green space, pollution impacts on ecosystems",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "40M fewer vehicle entries/year in congestion zones → 30% reduction in urban transport NOx emissions → 8K deaths/year avoided",
+      "citation": "Thesis: Transport air quality co-benefits"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "energy",
+      "value": 45,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Modal shift reduces fuel consumption by 25% in priced zones → 15 MT fuel saved/year → enables EV charging infrastructure investment",
+      "citation": "Thesis: Transport-energy nexus"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "₹50K Cr/year revenue from pricing → funds 500 km new metro + 10K electric buses → transit expansion becomes self-funding",
+      "citation": "Thesis: Transit fare recovery"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 50,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "20% road space reallocation → 500 km walkable streets + 300 km protected cycle lanes → 40% increase in active mobility",
+      "citation": "Thesis: Neighbourhood walkability"
+    },
+    {
+      "id": 5,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 55,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Car owner resistance: 40M middle-class vehicle owners oppose pricing → political backlash risk → requires phased rollout + exemptions",
+      "citation": "Thesis: Congestion pricing political economy"
+    },
+    {
+      "id": 6,
+      "source": "industry",
+      "target": "transport",
+      "value": 45,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Business lobby resistance: CBD parking costs → ₹2K/month per employee → companies threaten relocation → exemption pressure",
+      "citation": "Thesis: Commercial parking reform barriers"
+    },
+    {
+      "id": 7,
+      "source": "buildings",
+      "target": "transport",
+      "value": 40,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Stranded parking infrastructure: ₹15L Cr invested in building parking → reduced utilization → developer opposition to mandate repeal",
+      "citation": "Thesis: Parking infrastructure lock-in"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "air",
+      "value": 60,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Pricing → modal shift to public transit → reduced road congestion → 25% faster bus speeds → more ridership → further vehicle reduction (positive feedback)",
+      "citation": "Thesis: Transit virtuous cycle"
+    },
+    {
+      "id": 9,
+      "source": "transport",
+      "target": "urban",
+      "value": 55,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Transit revenue → better service frequency → increased ridership → TOD investment → density near stations → less car dependency (virtuous cycle)",
+      "citation": "Thesis: TOD cascade effects"
+    },
+    {
+      "id": 10,
+      "source": "urban",
+      "target": "transport",
+      "value": 50,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires transit alternatives: Pricing only viable with 80% metro/bus coverage → infrastructure must precede pricing by 18 months",
+      "citation": "Thesis: Transit-first sequencing"
+    },
+    {
+      "id": 11,
+      "source": "energy",
+      "target": "transport",
+      "value": 45,
+      "type": "conditional",
+      "layer": "technical",
+      "quantification": "Requires pricing technology: Smart tolling + payment systems + enforcement cameras → ₹5K Cr infrastructure investment needed",
+      "citation": "Thesis: Congestion pricing technology requirements"
+    },
+    {
+      "id": 12,
+      "source": "transport",
+      "target": "industry",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via reduced congestion: 25% faster peak-hour travel → logistics cost reduction 14% → 11% of GDP → improves competitiveness",
+      "citation": "Thesis: Congestion-logistics nexus"
+    },
+    {
+      "id": 13,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via transit revenue: Better bus frequency → 40% ridership increase → reduced local traffic → safer streets for children",
+      "citation": "Thesis: Transit service quality impacts"
+    },
+    {
+      "id": 14,
+      "source": "air",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via emissions reduction: 30% lower NOx → reduced acid deposition → urban tree health improvement → pollinator habitat recovery",
+      "citation": "Thesis: Air-biodiversity cascade"
+    },
+    {
+      "id": 15,
+      "source": "energy",
+      "target": "air",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via fuel savings: 15 MT fuel reduction → lower refinery throughput → reduced refinery emissions → regional air quality improvement",
+      "citation": "Thesis: Fuel-air quality linkage"
+    },
+    {
+      "id": 16,
+      "source": "urban",
+      "target": "buildings",
+      "value": 45,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via TOD investment: Transit accessibility premium → 20% higher real estate values near metro → drives green building certification demand",
+      "citation": "Thesis: Transit-real estate nexus"
+    },
+    {
+      "id": 17,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 30,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via walkability: 40% increase in active mobility → reduced short-distance car trips → 15% reduction in hyperlocal PM2.5 hotspots",
+      "citation": "Thesis: Walkability air quality co-benefits"
+    },
+    {
+      "id": 18,
+      "source": "transport",
+      "target": "biodiversity",
+      "value": 35,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Road space reallocation → 500 km urban tree planting corridors → habitat connectivity improvement in city ecosystems",
+      "citation": "Thesis: Green infrastructure co-benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

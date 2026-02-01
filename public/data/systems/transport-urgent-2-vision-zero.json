@@ -1,0 +1,240 @@
+{
+  "title": "Vision Zero Street Redesign: Cross-Sectoral Systems Map",
+  "description": "Cross-sectoral dependencies showing how reallocating 20% road space to pedestrians/cycles and implementing 40 km/h speed limits affects other sectors",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Vision Zero: 20% road space to pedestrians/cycles + 40 km/h speed limits + protected lanes",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "PM2.5 reduction, emissions from active mobility shift",
+      "color": "#64748b"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Street safety, walkability, community mobility patterns",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Public space design, street infrastructure, land use patterns",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Freight movement, delivery logistics, commercial operations",
+      "color": "#f97316"
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Bike parking, delivery access, street-facing retail",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban green corridors, street trees, habitat connectivity",
+      "color": "#059669"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Local food markets, walkable food access, delivery logistics",
+      "color": "#10b981"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 75,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Protected lanes + speed limits → 90K deaths prevented over 10 years → 60% reduction in pedestrian/cyclist fatalities",
+      "citation": "Thesis: Vision Zero safety impacts"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "air",
+      "value": 50,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Safer walking/cycling → 30% modal shift for <5km trips → 20 MT fuel saved/year → PM2.5 reduction in residential areas",
+      "citation": "Thesis: Active mobility air quality"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "urban",
+      "value": 55,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "20% road space reallocation → 2,500 km² public space reclaimed → street plazas, markets, green corridors become viable",
+      "citation": "Thesis: Street space reallocation benefits"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Protected cycle lanes → 500 km green street corridors → urban tree canopy + habitat connectivity for birds and pollinators",
+      "citation": "Thesis: Green infrastructure co-benefits"
+    },
+    {
+      "id": 5,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 50,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Speed limit resistance: 40% of drivers oppose 40 km/h limits → enforcement challenges → requires 10K speed cameras + ₹500 fines",
+      "citation": "Thesis: Speed limit political economy"
+    },
+    {
+      "id": 6,
+      "source": "industry",
+      "target": "transport",
+      "value": 45,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Freight operator pushback: Protected lanes reduce truck lane capacity by 20% → delivery time increase → logistics cost +5%",
+      "citation": "Thesis: Freight-cycling infrastructure conflict"
+    },
+    {
+      "id": 7,
+      "source": "buildings",
+      "target": "transport",
+      "value": 35,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Delivery access disruption: Curbside loading zones reduced → building service access affected → requires off-peak delivery windows",
+      "citation": "Thesis: Building access redesign challenges"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Safer streets → more children walking to school → parents feel confident → cycling adoption increases → further traffic calming demand",
+      "citation": "Thesis: Safety virtuous cycle"
+    },
+    {
+      "id": 9,
+      "source": "transport",
+      "target": "urban",
+      "value": 50,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires enforcement infrastructure: 10K speed cameras + automated fines + 5K traffic wardens → ₹8K Cr investment needed",
+      "citation": "Thesis: Vision Zero enforcement requirements"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via walking adoption: 30% modal shift for short trips → reduced cold-start emissions → 15% PM2.5 reduction in residential zones",
+      "citation": "Thesis: Short-trip emissions impact"
+    },
+    {
+      "id": 11,
+      "source": "urban",
+      "target": "food",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via walkable streets: 2,500 km² public space → street markets viable → local food retail +25% → fresh food access improves",
+      "citation": "Thesis: Walkability-food access nexus"
+    },
+    {
+      "id": 12,
+      "source": "transport",
+      "target": "buildings",
+      "value": 45,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via cycling adoption: 30% mode shift → bike parking demand surge → 500K new cycle stands + building code updates required",
+      "citation": "Thesis: Cycling infrastructure cascade"
+    },
+    {
+      "id": 13,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via pedestrianization: Safer streets → foot traffic +40% → local business viability → neighborhood economic revitalization",
+      "citation": "Thesis: Pedestrianization economic impacts"
+    },
+    {
+      "id": 14,
+      "source": "air",
+      "target": "biodiversity",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via emissions reduction: Lower PM2.5 → healthier street trees → 20% increase in urban canopy survival → bird habitat improvement",
+      "citation": "Thesis: Air quality-biodiversity cascade"
+    },
+    {
+      "id": 15,
+      "source": "transport",
+      "target": "food",
+      "value": 35,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Walkable streets → 40% more foot traffic → farmers markets + street vendors viable → local food access +25%",
+      "citation": "Thesis: Walkability-food retail nexus"
+    },
+    {
+      "id": 16,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via green corridors: Protected cycle lanes with tree planting → 500 km habitat connectivity → pollinator migration routes restored",
+      "citation": "Thesis: Urban habitat connectivity"
+    },
+    {
+      "id": 17,
+      "source": "buildings",
+      "target": "neighbourhoods",
+      "value": 30,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via bike infrastructure: Buildings add cycle parking → 20% increase in cycling → reduced neighborhood traffic congestion",
+      "citation": "Thesis: Building cycling infrastructure impacts"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}
