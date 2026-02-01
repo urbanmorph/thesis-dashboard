@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Maps Loading</title>
+</head>
+<body>
+    <h1>Maps Loading Test</h1>
+    <div id="results"></div>
+
+    <script type="module">
+        const results = document.getElementById('results');
+
+        async function testMapLoading() {
+            results.innerHTML = '<p>Loading catalog...</p>';
+
+            try {
+                // Load catalog
+                const catalogRes = await fetch('/data/systems-map.json');
+                const catalog = await catalogRes.json();
+
+                results.innerHTML += `<p>✅ Catalog loaded: ${catalog.maps.length} maps</p>`;
+
+                // Test loading one map from each sector
+                const testMaps = [
+                    'energy-urgent-1-end-use-efficiency',
+                    'transport-urgent-1-congestion-pricing',
+                    'buildings-urgent-1-tpa-ecosystem',
+                    'air-urgent-1-ncap-outcome-funding',
+                    'water-urgent-1-groundwater-markets',
+                    'waste-urgent-1-epr-traceability',
+                    'neighbourhoods-urgent-1-slum-tenure',
+                    'biodiversity-urgent-1-eco-sensitive-zones'
+                ];
+
+                for (const mapId of testMaps) {
+                    const mapMeta = catalog.maps.find(m => m.id === mapId);
+                    if (!mapMeta) {
+                        results.innerHTML += `<p>❌ ${mapId}: Not found in catalog</p>`;
+                        continue;
+                    }
+
+                    try {
+                        const res = await fetch(mapMeta.dataFile);
+                        if (!res.ok) {
+                            results.innerHTML += `<p>❌ ${mapId}: HTTP ${res.status}</p>`;
+                            continue;
+                        }
+
+                        const data = await res.json();
+                        results.innerHTML += `<p>✅ ${mapId}: Loaded successfully (${data.nodes.length} nodes, ${data.links.length} links)</p>`;
+                    } catch (error) {
+                        results.innerHTML += `<p>❌ ${mapId}: ${error.message}</p>`;
+                    }
+                }
+
+            } catch (error) {
+                results.innerHTML += `<p>❌ Failed to load catalog: ${error.message}</p>`;
+            }
+        }
+
+        testMapLoading();
+    </script>
+</body>
+</html>
