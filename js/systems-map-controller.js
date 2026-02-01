@@ -102,8 +102,13 @@ class SystemsMapController {
   }
 
   async loadMap(mapId) {
+    console.log('loadMap called with mapId:', mapId);
     const mapMeta = this.catalog.maps.find(m => m.id === mapId);
-    if (!mapMeta) return;
+    if (!mapMeta) {
+      console.log('Map not found:', mapId);
+      return;
+    }
+    console.log('Loading map:', mapMeta.title, 'for sector:', mapMeta.sectorId);
 
     // Check cache first
     if (!this.cache.has(mapId)) {
@@ -129,9 +134,19 @@ class SystemsMapController {
 
   updateSectorCTA() {
     const link = document.getElementById('sector-cta-link');
-    if (!link || !this.currentMap) return;
+    if (!link || !this.currentMap) {
+      console.log('updateSectorCTA: Missing link or currentMap', { link, currentMap: this.currentMap });
+      return;
+    }
 
     const sector = this.catalog.sectors.find(s => s.id === this.currentMap.sectorId);
+    console.log('updateSectorCTA:', {
+      sectorId: this.currentMap.sectorId,
+      sector,
+      newHref: `sectors.html#${sector?.id}`,
+      newText: `View ${sector?.name} Sector →`
+    });
+
     if (sector) {
       link.href = `sectors.html#${sector.id}`;
       link.textContent = `View ${sector.name} Sector →`;
