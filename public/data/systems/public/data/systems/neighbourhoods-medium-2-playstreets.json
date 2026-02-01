@@ -1,0 +1,158 @@
+{
+  "title": "Playstreets + 15-Minute Neighbourhoods: Cross-Sectoral Systems Map",
+  "description": "Weekly car-free streets + walkable access to services within 15 minutes",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Playstreets: Weekly car-free + 15-minute walkable access",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Active mobility, pedestrian infrastructure, car dependence",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Mixed-use zoning, local service access, city planning",
+      "color": "#ec4899"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Traffic emissions, pedestrian exposure",
+      "color": "#64748b"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Street greenery, urban nature access",
+      "color": "#059669"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Transport energy, urban heat island",
+      "color": "#eab308"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 70,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Car-free streets → pedestrian trips +40% → vehicle km -15% in affected neighborhoods → ₹5K Cr congestion cost savings",
+      "citation": "Thesis: Playstreets mobility benefits"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "15-minute access → local retail footfall +30% → ₹10K Cr neighborhood economy growth → community self-sufficiency",
+      "citation": "Thesis: 15-minute neighborhood economics"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Traffic reduction → NO2 exposure -25% on playstreets → childhood asthma -18% → ₹2K Cr health savings",
+      "citation": "Thesis: Playstreets air quality benefits"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Street reclamation → parklets/greenery → urban tree cover +10% → ₹3K Cr ecosystem services + cooling benefits",
+      "citation": "Thesis: Playstreets green infrastructure"
+    },
+    {
+      "id": 5,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Car owner resistance: Vehicle restrictions → perceived mobility loss → political opposition → phased 5-year rollout needed",
+      "citation": "Thesis: Playstreets political barriers"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Zoning reform required: 15-minute access needs mixed-use → Euclidean zoning repeal → ₹5K Cr land value disruption",
+      "citation": "Thesis: Mixed-use zoning challenges"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 68,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Walkability → active mobility culture → cycling +50% → car ownership declines → street space freed (reinforcing)",
+      "citation": "Thesis: Playstreets modal shift cascade"
+    },
+    {
+      "id": 8,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 58,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires transit integration: 15-minute neighborhoods only viable with public transport backbone → ₹20K Cr metro/BRT prerequisite",
+      "citation": "Thesis: Transit-local access linkage"
+    },
+    {
+      "id": 9,
+      "source": "air",
+      "target": "energy",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via temperature: Less asphalt heat → urban cooling 1°C → AC demand -8% → 5 TWh/year energy savings",
+      "citation": "Thesis: Green street cooling cascade"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via wellbeing: Nature access → mental health improves → community cohesion +20% → ₹1K Cr health benefits",
+      "citation": "Thesis: Urban nature wellbeing impacts"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

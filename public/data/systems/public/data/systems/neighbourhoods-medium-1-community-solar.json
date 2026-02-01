@@ -1,0 +1,158 @@
+{
+  "title": "Community Solar Cooperatives: Cross-Sectoral Systems Map",
+  "description": "Rooftop solar aggregation for 100K apartment complexes + net metering",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community Solar: Rooftop aggregation for 100K complexes",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Distributed generation, grid integration, RE penetration",
+      "color": "#eab308"
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Rooftop infrastructure, residential solar",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City energy planning, cooperative governance",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Solar manufacturing, installation services",
+      "color": "#f97316"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Coal displacement, grid emissions reduction",
+      "color": "#64748b"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 72,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Community solar → 100K complexes × 50 kW → 5 GW rooftop capacity → 10 TWh/year generation → grid RE penetration +3%",
+      "citation": "Thesis: Community solar generation potential"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "buildings",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Cooperative model → upfront cost pooled → ₹3L/household avoided → solar access democratized → 50M residents benefit",
+      "citation": "Thesis: Community solar affordability"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Neighborhood ownership → ₹50K Cr energy assets localized → municipal energy autonomy +30% → resilience improves",
+      "citation": "Thesis: Community energy sovereignty"
+    },
+    {
+      "id": 4,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "DISCOM resistance: Net metering threatens revenue → ₹10K Cr utility losses → lobbying to cap community solar → regulatory barriers",
+      "citation": "Thesis: Community solar utility opposition"
+    },
+    {
+      "id": 5,
+      "source": "buildings",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Cooperative governance challenges: Resident agreement needed → 60% complexes have disputes → ₹2K Cr mediation/legal costs",
+      "citation": "Thesis: Community solar governance friction"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 68,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Coal displacement → 10 TWh clean generation → 8 MT CO₂ avoided → air quality improves → community health benefits (reinforcing)",
+      "citation": "Thesis: Community solar air quality cascade"
+    },
+    {
+      "id": 7,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 58,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires virtual net metering: Community solar only viable if credits shareable → state regulatory reforms prerequisite",
+      "citation": "Thesis: Virtual net metering requirements"
+    },
+    {
+      "id": 8,
+      "source": "industry",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via local employment: Solar installation cooperatives → 50K jobs created → ₹8K Cr wage benefits in communities",
+      "citation": "Thesis: Community solar employment cascade"
+    },
+    {
+      "id": 9,
+      "source": "buildings",
+      "target": "energy",
+      "value": 38,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via efficiency pairing: Solar incentivizes retrofits → insulation/cool roofs → 20% energy savings → grid impact reduced further",
+      "citation": "Thesis: Solar-efficiency co-optimization"
+    },
+    {
+      "id": 10,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via health: Coal PM2.5 reduction → respiratory disease -15% → community productivity +5% → ₹3K Cr economic benefits",
+      "citation": "Thesis: Air quality productivity cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "title": "Neighbourhood Digital Commons: Cross-Sectoral Systems Map",
+  "description": "Open data platforms for local air/water/waste monitoring + civic apps",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Digital Commons: Open data platforms for local monitoring + civic apps",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City governance, data transparency, digital infrastructure",
+      "color": "#ec4899"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Hyperlocal monitoring, community sensors",
+      "color": "#64748b"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Water quality tracking, leak detection",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Collection tracking, complaint systems",
+      "color": "#84cc16"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Consumption transparency, outage reporting",
+      "color": "#eab308"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Traffic data, transit tracking, parking",
+      "color": "#8b5cf6"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Data transparency → municipal accountability improves → grievance resolution 30 days→5 days → ₹5K Cr governance efficiency",
+      "citation": "Thesis: Digital commons accountability"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Hyperlocal sensors → 1000 communities track PM2.5 → pollution hotspots exposed → ₹2K Cr targeted enforcement enabled",
+      "citation": "Thesis: Community air monitoring"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 62,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Leak detection apps → community reports reduce water loss 40%→20% → ₹8K Cr municipal savings annually",
+      "citation": "Thesis: Civic water monitoring benefits"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 60,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Collection tracking → missed pickups reported in real-time → coverage 70%→95% → ₹3K Cr service improvement",
+      "citation": "Thesis: Waste tracking accountability"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 58,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Data reveals failures: 60% wards have service gaps exposed → political embarrassment → resistance to transparency",
+      "citation": "Thesis: Digital commons political resistance"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 68,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Civic engagement → participation grows → data quality improves → better governance → more engagement (reinforcing)",
+      "citation": "Thesis: Digital commons virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 55,
+      "type": "conditional",
+      "layer": "technical",
+      "quantification": "Requires smart infrastructure: Digital commons only effective with IoT sensors + broadband → ₹10K Cr connectivity investment prerequisite",
+      "citation": "Thesis: Digital infrastructure requirements"
+    },
+    {
+      "id": 8,
+      "source": "air",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via enforcement: Community data → pollution violators identified → ₹1K Cr fines collected → municipal revenue improves",
+      "citation": "Thesis: Community monitoring enforcement cascade"
+    },
+    {
+      "id": 9,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via savings: Leak reduction → water bills -20% → household savings ₹500/month → ₹5K Cr consumer benefits",
+      "citation": "Thesis: Water efficiency consumer cascade"
+    },
+    {
+      "id": 10,
+      "source": "transport",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via traffic data: Community reports congestion → infrastructure prioritization improves → ₹3K Cr investment optimization",
+      "citation": "Thesis: Civic transport data benefits"
+    },
+    {
+      "id": 11,
+      "source": "waste",
+      "target": "air",
+      "value": 32,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via collection: Tracking eliminates missed pickups → open burning -60% → PM2.5 reduction → health benefits",
+      "citation": "Thesis: Waste-air quality cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

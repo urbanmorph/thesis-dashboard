@@ -1,0 +1,158 @@
+{
+  "title": "TOD & Parking Mandate Repeal: Cross-Sectoral Systems Map",
+  "description": "Abolish parking minimums + mandate 50% housing within 1km transit",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "TOD & Parking Repeal: 50% housing within 1km transit, abolish parking minimums",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Development patterns, parking infrastructure, construction costs",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Land use, density patterns, real estate values",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Walkability, community design, local mobility",
+      "color": "#ec4899"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Transport energy demand, modal shift impacts",
+      "color": "#eab308"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban sprawl, habitat preservation, green space",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "buildings",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Parking repeal → 20% construction cost reduction → ₹10L/unit savings → affordable housing becomes viable",
+      "citation": "Thesis: Parking cost burden"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "urban",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "TOD mandate → 50% new housing near transit → reduces urban sprawl by 30% → compact city development",
+      "citation": "Thesis: TOD anti-sprawl effects"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Less parking → 20% more ground-floor retail → walkable neighborhoods → 40% increase in foot traffic",
+      "citation": "Thesis: Parking-walkability nexus"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "energy",
+      "value": 50,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Transit-oriented living → 40% fewer car trips → 12 MT fuel saved annually → reduces transport energy demand",
+      "citation": "Thesis: TOD energy savings"
+    },
+    {
+      "id": 5,
+      "source": "buildings",
+      "target": "transport",
+      "value": 55,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Developer resistance: Parking drives sales → buyers demand parking → market pressure against mandate repeal",
+      "citation": "Thesis: Parking real estate politics"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 50,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Car owner pushback: 10-year lag to stock turnover → existing residents resist parking reduction → NIMBYism",
+      "citation": "Thesis: Parking reform resistance"
+    },
+    {
+      "id": 7,
+      "source": "transport",
+      "target": "urban",
+      "value": 60,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "TOD → density → walkability → less car dependency → more TOD demand → virtuous cycle of compact development",
+      "citation": "Thesis: TOD virtuous cycle"
+    },
+    {
+      "id": 8,
+      "source": "urban",
+      "target": "transport",
+      "value": 65,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires transit quality: TOD only works with <10 min frequency + <500m walk distance → infrastructure before mandate",
+      "citation": "Thesis: Transit-first TOD sequencing"
+    },
+    {
+      "id": 9,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via anti-sprawl: 30% less sprawl → preserved peri-urban forests → habitat conservation → biodiversity protection",
+      "citation": "Thesis: TOD biodiversity benefits"
+    },
+    {
+      "id": 10,
+      "source": "buildings",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via cost savings: ₹10L/unit savings → affordable housing → economic diversity → inclusive neighborhoods",
+      "citation": "Thesis: Parking-affordability nexus"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

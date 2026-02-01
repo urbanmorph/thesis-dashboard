@@ -1,0 +1,152 @@
+{
+  "title": "Agricultural Pollinator Corridors: Cross-Sectoral Systems Map",
+  "description": "10% farm edge native flowering plants for bee/butterfly conservation",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Pollinator Corridors: 10% farm edge native flowering plants",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Crop yields, pollination services, farm productivity",
+      "color": "#10b981"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Rural livelihoods, farm incomes, community ecology",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Pesticide use, agrochemical sector",
+      "color": "#f97316"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Irrigation practices, farm water use",
+      "color": "#06b6d4"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 75,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Pollinator corridors → bee populations +60% → crop yields +25% for pollinator-dependent crops (₹20K Cr value: fruits, vegetables, oilseeds)",
+      "citation": "Thesis: Pollinator agricultural benefits"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Farm edge habitats → honey production +40% → ₹3K Cr rural income diversification → apiculture livelihoods",
+      "citation": "Thesis: Pollinator livelihood benefits"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "industry",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Natural pest control → pesticide use -30% → ₹5K Cr agrochemical savings + soil health improvement",
+      "citation": "Thesis: Pollinator pest control services"
+    },
+    {
+      "id": 4,
+      "source": "food",
+      "target": "biodiversity",
+      "value": 58,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Land opportunity cost: 10% edge land (14M ha) out of production → ₹8K Cr foregone crop revenue → farmer resistance",
+      "citation": "Thesis: Pollinator corridor land costs"
+    },
+    {
+      "id": 5,
+      "source": "industry",
+      "target": "biodiversity",
+      "value": 62,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Pesticide sector opposition: Natural pest control threatens ₹15K Cr agrochemical market → industry lobbying against corridors",
+      "citation": "Thesis: Agrochemical sector resistance"
+    },
+    {
+      "id": 6,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 70,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Yield increase → farm incomes rise → pollinator habitat investment grows → biodiversity improves further (reinforcing)",
+      "citation": "Thesis: Pollinator-yield virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "food",
+      "target": "biodiversity",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires pesticide regulation: Corridors only effective with neonicotinoid ban → agrochemical policy reform prerequisite",
+      "citation": "Thesis: Pesticide reform requirements"
+    },
+    {
+      "id": 8,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via yields: 25% crop increase → farm incomes +₹50K/ha → rural prosperity improves → migration to cities declines",
+      "citation": "Thesis: Pollinator income cascade"
+    },
+    {
+      "id": 9,
+      "source": "water",
+      "target": "food",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via soil health: Native plants → organic matter +15% → water retention improves → irrigation needs -10%",
+      "citation": "Thesis: Pollinator water efficiency benefits"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via honey income: Apiculture revenue → community values pollinators → habitat protection norms strengthen",
+      "citation": "Thesis: Livelihood-conservation linkage"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

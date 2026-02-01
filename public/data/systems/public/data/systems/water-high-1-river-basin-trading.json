@@ -1,0 +1,158 @@
+{
+  "title": "River Basin Water Trading Pilots: Cross-Sectoral Systems Map",
+  "description": "Inter-state water allocation markets in Cauvery, Krishna basins",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "River Basin Trading: Inter-state water allocation markets",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Irrigation allocation, inter-basin crop choices",
+      "color": "#10b981"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Hydropower generation, reservoir management",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City water supply, municipal demand",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Inter-state equity, community water rights",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Environmental flows, riparian ecosystems",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "food",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Trading enables water shift → Karnataka sells 2 BCM to Tamil Nadu (₹5K Cr) → incentive to reduce sugarcane (10K L/kg) → crop diversification",
+      "citation": "Thesis: Basin trading crop efficiency"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "urban",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Cities buy upstream water rights → Bangalore secures 1 BCM from farmers → ₹3K Cr supply investment avoided → urban water security",
+      "citation": "Thesis: Urban basin water access"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "energy",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Trading optimizes releases → hydropower timing aligned with demand → 10% generation value increase → ₹500 Cr/year revenue",
+      "citation": "Thesis: Basin trading energy optimization"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 70,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Inter-state disputes intensify → Cauvery Tribunal conflicts → political resistance to trading → 10-year implementation gridlock",
+      "citation": "Thesis: Basin trading political barriers"
+    },
+    {
+      "id": 5,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 58,
+      "type": "conflict",
+      "layer": "shared",
+      "quantification": "Environmental flow neglect: Trading prioritizes consumptive use → 30% minimum flow requirement ignored → ecosystem degradation",
+      "citation": "Thesis: Basin trading environmental risks"
+    },
+    {
+      "id": 6,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Trading transparency → water allocation data public → community monitors equity → institutional trust grows (reinforcing)",
+      "citation": "Thesis: Basin trading transparency cycle"
+    },
+    {
+      "id": 7,
+      "source": "water",
+      "target": "biodiversity",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires environmental flow quotas: Trading only sustainable with 20% minimum flow reserved → ecosystem protection prerequisite",
+      "citation": "Thesis: Environmental flow safeguards"
+    },
+    {
+      "id": 8,
+      "source": "food",
+      "target": "energy",
+      "value": 38,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via irrigation efficiency: Trading → drip adoption → 40% water savings → more reservoir storage → hydropower reliability improves",
+      "citation": "Thesis: Irrigation-hydropower cascade"
+    },
+    {
+      "id": 9,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via rural compensation: Cities pay farmers for water → ₹10K/ha revenue → rural livelihoods sustained → urban-rural equity improves",
+      "citation": "Thesis: Basin trading rural benefits"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via ecosystem services: Environmental flows → wetland restoration → migratory bird habitat → pollination services → crop yields +5%",
+      "citation": "Thesis: Ecosystem-agriculture co-benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

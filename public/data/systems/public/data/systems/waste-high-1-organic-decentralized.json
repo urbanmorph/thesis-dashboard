@@ -1,0 +1,158 @@
+{
+  "title": "Decentralized Organic Waste Processing: Cross-Sectoral Systems Map",
+  "description": "Ward-level biogas/composting plants for 100% organic diversion",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Decentralized Organic Processing: Ward-level biogas/composting",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Biogas generation, distributed energy",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal infrastructure, ward governance",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community composting, local participation",
+      "color": "#ec4899"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Urban farming, soil health, peri-urban agriculture",
+      "color": "#10b981"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Landfill methane, transport emissions",
+      "color": "#64748b"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "energy",
+      "value": 68,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Organic waste (60% of total) → 5 BCM biogas/year → 50 TWh energy → replaces LPG in 10M households → ₹20K Cr fossil fuel savings",
+      "citation": "Thesis: Organic waste energy potential"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "urban",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Decentralized processing → transport costs -60% (no long-haul to landfills) → ₹8K Cr municipal savings → ward-level sustainability",
+      "citation": "Thesis: Decentralized waste cost savings"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "food",
+      "value": 62,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Compost production → 20 MT/year organic fertilizer → peri-urban farming input costs -30% → ₹5K Cr agricultural savings",
+      "citation": "Thesis: Organic waste compost value"
+    },
+    {
+      "id": 4,
+      "source": "waste",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Community ownership → ward composting cooperatives → 100K jobs created → ₹12K/month wages → local circular economy",
+      "citation": "Thesis: Community waste employment"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "waste",
+      "value": 58,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Land scarcity: Ward-level plants need 0.5 ha each → 10K wards × 0.5 ha → urban land unavailable → siting challenges",
+      "citation": "Thesis: Decentralized waste land constraints"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 52,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "NIMBY resistance: Communities oppose local plants → odor/pest concerns → ₹500 Cr/year in technology upgrades + community engagement",
+      "citation": "Thesis: Waste facility NIMBY"
+    },
+    {
+      "id": 7,
+      "source": "waste",
+      "target": "air",
+      "value": 70,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Landfill diversion → methane emissions -80% → 40 MT CO₂e avoided → climate benefits → policy support grows (reinforcing)",
+      "citation": "Thesis: Organic waste climate cascade"
+    },
+    {
+      "id": 8,
+      "source": "waste",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conditional",
+      "layer": "community",
+      "quantification": "Requires segregation compliance: Decentralized processing only works with 90% source separation → behavior change prerequisite",
+      "citation": "Thesis: Decentralized waste segregation needs"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via biogas distribution: Community cooking gas access → LPG costs saved ₹500/month/household → energy affordability improves",
+      "citation": "Thesis: Biogas household benefits"
+    },
+    {
+      "id": 10,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via urban farming: Compost enables local vegetable production → food security improves → ₹3K Cr household food savings",
+      "citation": "Thesis: Compost food security cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

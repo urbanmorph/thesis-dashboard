@@ -1,0 +1,158 @@
+{
+  "title": "Rainwater Harvesting Enforcement: Cross-Sectoral Systems Map",
+  "description": "Mandatory RWH for buildings >500 sq.m with occupancy certificate linkage",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Rainwater Harvesting: Mandatory for buildings >500 sq.m",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Building codes, construction compliance",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City water resilience, stormwater management",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community water access, groundwater commons",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban aquifers, groundwater ecosystems",
+      "color": "#059669"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Construction sector, RWH equipment manufacturing",
+      "color": "#f97316"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "100% enforcement → 5M buildings capture 10 BCM/year → urban groundwater recharge +40% → aquifer recovery in 102 cities",
+      "citation": "Thesis: RWH urban recharge potential"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "buildings",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "OC linkage → RWH compliance 30%→95% → ₹15K Cr investment in harvesting infrastructure → construction code credibility restored",
+      "citation": "Thesis: RWH enforcement effectiveness"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Recharge → community well levels rise 3m → water access improves → ₹5K Cr household tanker costs avoided",
+      "citation": "Thesis: RWH community benefits"
+    },
+    {
+      "id": 4,
+      "source": "water",
+      "target": "industry",
+      "value": 58,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "RWH mandate → ₹8K Cr/year equipment market → manufacturing sector growth → 50K jobs created in fabrication/installation",
+      "citation": "Thesis: RWH industrial opportunity"
+    },
+    {
+      "id": 5,
+      "source": "buildings",
+      "target": "water",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Developer resistance: RWH adds ₹2L/building cost → profit margins squeezed → lobbying against enforcement → policy dilution pressure",
+      "citation": "Thesis: RWH construction opposition"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "water",
+      "value": 52,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Inspection capacity gap: Need 10K building inspectors; have 2K → enforcement bottleneck → 60% non-compliance persists",
+      "citation": "Thesis: RWH enforcement capacity"
+    },
+    {
+      "id": 7,
+      "source": "water",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Aquifer recharge → groundwater ecosystems revive → urban wetlands expand → biodiversity increases (reinforcing)",
+      "citation": "Thesis: RWH biodiversity cascade"
+    },
+    {
+      "id": 8,
+      "source": "buildings",
+      "target": "water",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires retrofit mandates: New construction alone insufficient → must include 30M existing buildings → phased 10-year retrofit program needed",
+      "citation": "Thesis: RWH retrofit requirements"
+    },
+    {
+      "id": 9,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via flood reduction: RWH captures stormwater → urban flooding -25% → ₹3K Cr disaster damage avoided → community resilience",
+      "citation": "Thesis: RWH flood co-benefits"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 32,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via ecosystem services: Wetland revival → urban cooling +1.5°C → heat stress reduction → ₹500 Cr health savings",
+      "citation": "Thesis: RWH urban cooling cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

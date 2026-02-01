@@ -1,0 +1,174 @@
+{
+  "title": "Eco-Sensitive Zone Enforcement: Cross-Sectoral Systems Map",
+  "description": "1km buffer enforcement around 670 protected areas + no-development zones",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "ESZ Enforcement: 1km buffer around 670 protected areas",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City expansion, infrastructure planning, land use",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Mining, manufacturing, infrastructure projects",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Fringe communities, eco-tourism livelihoods",
+      "color": "#ec4899"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Watershed protection, aquifer recharge",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Forest air filtration, ecosystem services",
+      "color": "#64748b"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Highway expansion, habitat fragmentation",
+      "color": "#8b5cf6"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "ESZ enforcement → 67,000 km² development-free → habitat connectivity preserved → tiger populations stable 3000→3500 (reinforcing)",
+      "citation": "Thesis: ESZ biodiversity protection"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 70,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Watershed protection → 40% of India's rivers originate in protected forests → 200 BCM/year flow sustained → ₹20K Cr water security",
+      "citation": "Thesis: Forest-water nexus"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Forest preservation → 300 MT CO₂/year sequestration + PM2.5 filtration → ₹15K Cr climate/health benefits",
+      "citation": "Thesis: Forest air quality services"
+    },
+    {
+      "id": 4,
+      "source": "industry",
+      "target": "biodiversity",
+      "value": 72,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Mining opposition: ESZ blocks ₹50K Cr coal/mineral projects → industry lobbying → SC litigation → enforcement dilution pressure",
+      "citation": "Thesis: ESZ mining conflicts"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "City expansion limits: ESZ restricts 500 cities → ₹30K Cr real estate value affected → political resistance to compliance",
+      "citation": "Thesis: ESZ urban growth constraints"
+    },
+    {
+      "id": 6,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 68,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Ecotourism → 5M visitors/year → ₹8K Cr rural incomes → community conservation incentives grow (reinforcing)",
+      "citation": "Thesis: ESZ ecotourism virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "transport",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "conditional",
+      "layer": "technical",
+      "quantification": "Requires wildlife corridors: ESZ only effective with overpasses/underpasses for highways → ₹5K Cr infrastructure prerequisite",
+      "citation": "Thesis: Highway wildlife mitigation"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via watershed protection: Forest conservation → city water supply reliability +30% → ₹10K Cr infrastructure savings",
+      "citation": "Thesis: Forest-urban water cascade"
+    },
+    {
+      "id": 9,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via carbon sequestration: Forest preservation → climate regulation → heat stress reduction → ₹3K Cr health benefits",
+      "citation": "Thesis: Forest climate health cascade"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via livelihoods: Ecotourism income → poaching declines → wildlife populations recover → habitat value increases",
+      "citation": "Thesis: Livelihood-conservation linkage"
+    },
+    {
+      "id": 11,
+      "source": "industry",
+      "target": "urban",
+      "value": 32,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via development pressure: Mining blocked → industrial relocation to non-ESZ areas → urban sprawl concentration increases",
+      "citation": "Thesis: ESZ development displacement"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

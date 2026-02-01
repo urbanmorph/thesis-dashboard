@@ -1,0 +1,174 @@
+{
+  "title": "EPR Digital Traceability Platform: Cross-Sectoral Systems Map",
+  "description": "Blockchain-based producer responsibility verification for plastic/e-waste",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "EPR Traceability: Blockchain verification for plastic/e-waste",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Packaging producers, electronics manufacturers",
+      "color": "#f97316"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal waste systems, enforcement capacity",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Informal recyclers, waste picker livelihoods",
+      "color": "#ec4899"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Waste burning emissions, landfill fires",
+      "color": "#64748b"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Leachate pollution, plastic in water bodies",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Marine plastic pollution, ecosystem contamination",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "industry",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Traceability → 100% EPR compliance verification (vs. 40% self-reported) → ₹15K Cr in recycling investments triggered → circular economy accountability",
+      "citation": "Thesis: EPR traceability effectiveness"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "neighbourhoods",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Formal recycler integration → 2M waste pickers gain EPR contracts → ₹20K/month wages (vs. ₹8K informal) → livelihood formalization",
+      "citation": "Thesis: EPR waste picker integration"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "air",
+      "value": 62,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Plastic recovery → 60% reduction in waste burning → PM2.5 from open fires -40% → ₹5K Cr health benefits annually",
+      "citation": "Thesis: EPR air quality benefits"
+    },
+    {
+      "id": 4,
+      "source": "waste",
+      "target": "water",
+      "value": 58,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "E-waste collection → 70% toxic leachate prevention → groundwater contamination avoided → ₹3K Cr remediation costs saved",
+      "citation": "Thesis: EPR water protection"
+    },
+    {
+      "id": 5,
+      "source": "industry",
+      "target": "waste",
+      "value": 68,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Producer resistance: Traceability exposes 60% non-compliance → ₹20K Cr compliance costs → lobbying to weaken enforcement",
+      "citation": "Thesis: EPR industry opposition"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "waste",
+      "value": 55,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Digital infrastructure gap: Blockchain EPR needs municipal IT capacity → ₹2K Cr investment + 3-year capacity building",
+      "citation": "Thesis: EPR technology barriers"
+    },
+    {
+      "id": 7,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 70,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Plastic recovery → marine pollution -50% → ecosystem health improves → fisheries recover → economic benefits reinforce compliance (virtuous)",
+      "citation": "Thesis: EPR biodiversity cascade"
+    },
+    {
+      "id": 8,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 52,
+      "type": "conditional",
+      "layer": "community",
+      "quantification": "Requires social security integration: Waste picker EPR participation only sustainable with health insurance + pension → ESIC/PF coverage prerequisite",
+      "citation": "Thesis: Waste picker social protection"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via compliance funding: EPR fees → ₹10K Cr for municipal recycling infrastructure → city waste management capacity improves",
+      "citation": "Thesis: EPR municipal funding cascade"
+    },
+    {
+      "id": 10,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via burning reduction: PM2.5 decline → respiratory health improves → community productivity +8% → economic co-benefits",
+      "citation": "Thesis: EPR health-productivity cascade"
+    },
+    {
+      "id": 11,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via marine recovery: Coastal fisheries rebound → fishing community incomes +25% → livelihood resilience improves",
+      "citation": "Thesis: Marine plastic-fisheries linkage"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

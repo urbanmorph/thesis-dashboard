@@ -1,0 +1,158 @@
+{
+  "title": "Smart Irrigation Subsidy Shift: Cross-Sectoral Systems Map",
+  "description": "Replace flat electricity subsidy with drip/sprinkler capital grants",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Smart Irrigation: Drip/sprinkler subsidy replacing electricity subsidy",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Irrigation efficiency, crop productivity",
+      "color": "#10b981"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Agricultural electricity, pump subsidies",
+      "color": "#eab308"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Farm livelihoods, rural economics",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Peri-urban farming, municipal water supply",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Aquifer ecosystems, groundwater-dependent species",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "food",
+      "value": 72,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Drip adoption → 40% irrigation water savings vs. flood → 30M ha coverage → 40 BCM/year freshwater freed → sustainable agriculture",
+      "citation": "Thesis: Smart irrigation water savings"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "energy",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Subsidy shift → ₹50K Cr/year flat subsidy → ₹20K Cr drip grants → ₹30K Cr fiscal savings + 25 TWh pump energy reduction",
+      "citation": "Thesis: Irrigation subsidy reallocation"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Efficiency gains → crop yields +15% with drip (precise water-nutrient delivery) → farm incomes +₹20K/ha → rural prosperity",
+      "citation": "Thesis: Smart irrigation productivity"
+    },
+    {
+      "id": 4,
+      "source": "food",
+      "target": "water",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Farmer resistance: Subsidy removal seen as cost burden → political backlash → Punjab/Haryana delay implementation → 5-year transition needed",
+      "citation": "Thesis: Irrigation subsidy political economy"
+    },
+    {
+      "id": 5,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 55,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Smallholder access: Drip systems cost ₹80K/ha → small farmers (60% of holdings) can't afford → subsidy must cover 90% to ensure equity",
+      "citation": "Thesis: Smart irrigation equity barriers"
+    },
+    {
+      "id": 6,
+      "source": "water",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Reduced extraction → aquifer recovery → wetland revival → biodiversity increases → ecosystem services grow (reinforcing)",
+      "citation": "Thesis: Irrigation-biodiversity cascade"
+    },
+    {
+      "id": 7,
+      "source": "energy",
+      "target": "water",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires metered pricing: Drip adoption only sustained if flat tariffs end → agricultural metering prerequisite → AMI infrastructure needed",
+      "citation": "Thesis: Irrigation pricing reform linkage"
+    },
+    {
+      "id": 8,
+      "source": "food",
+      "target": "energy",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via pump reduction: 40% water savings → 25 TWh pump energy freed → grid capacity available for RE integration",
+      "citation": "Thesis: Irrigation-energy nexus"
+    },
+    {
+      "id": 9,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via peri-urban efficiency: Drip → municipal water pressure reduced → ₹5K Cr city supply infrastructure savings",
+      "citation": "Thesis: Peri-urban irrigation benefits"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via ecosystem recovery: Aquifer restoration → soil moisture improves → rainfed agriculture productivity +8% → climate resilience",
+      "citation": "Thesis: Ecosystem-agriculture feedback"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

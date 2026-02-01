@@ -1,0 +1,158 @@
+{
+  "title": "Hyperlocal Community Sensing: Cross-Sectoral Systems Map",
+  "description": "1000-sensor low-cost network + citizen science for intra-city hotspots",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Hyperlocal Sensing: 1000-sensor low-cost network + citizen science",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community monitoring, local awareness, grassroots action",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Micro-planning, street-level interventions",
+      "color": "#ec4899"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Traffic hotspots, street canyon pollution",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial fence-line monitoring, local emissions",
+      "color": "#f97316"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Waste burning detection, local pollution sources",
+      "color": "#84cc16"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 70,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Community ownership → 1000 sensors deployed by residents → 100m resolution vs. 10km regulatory monitors → intra-city inequality exposed (3x variation)",
+      "citation": "Thesis: Hyperlocal data democratization"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "transport",
+      "value": 62,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Traffic hotspot identification → 40 high-NO2 intersections mapped → targeted signal timing changes → 15% localized pollution reduction for ₹5L investment",
+      "citation": "Thesis: Hyperlocal transport interventions"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "industry",
+      "value": 58,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Fence-line monitoring → 18 factories exceeding limits identified → community complaints validated → ₹50 Cr penalties issued",
+      "citation": "Thesis: Community industrial enforcement"
+    },
+    {
+      "id": 4,
+      "source": "air",
+      "target": "waste",
+      "value": 55,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Waste fire real-time alerts → 200 burning events detected/year → community firefighting response time 15 min vs. 4 hours → 60% PM2.5 spike reduction",
+      "citation": "Thesis: Hyperlocal waste fire response"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "air",
+      "value": 48,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Data quality concerns: Low-cost sensors ±30% accuracy → regulatory acceptance resisted → calibration protocols needed → 2-year validation period",
+      "citation": "Thesis: Sensor calibration challenges"
+    },
+    {
+      "id": 6,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 65,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Local data → community action → pollution improves → sensor credibility grows → more neighbourhoods demand sensors (reinforcing adoption)",
+      "citation": "Thesis: Hyperlocal monitoring virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 50,
+      "type": "conditional",
+      "layer": "community",
+      "quantification": "Requires digital literacy: Community sensing only effective with 50% smartphone penetration + data visualization apps → capacity building prerequisite",
+      "citation": "Thesis: Digital access prerequisites"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via micro-planning: Hotspot data → street redesigns → 25 car-free zones created → pedestrian PM2.5 exposure -40%",
+      "citation": "Thesis: Hyperlocal urban planning cascade"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via compliance: Fence-line pressure → industrial controls installed → local health improves → community monitoring trust in institutions grows",
+      "citation": "Thesis: Community-industry accountability"
+    },
+    {
+      "id": 10,
+      "source": "waste",
+      "target": "urban",
+      "value": 30,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via enforcement: Fire detection data → municipal waste collection improves → ₹100 Cr infrastructure upgrades → systemic fire prevention",
+      "citation": "Thesis: Hyperlocal waste system improvements"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "title": "Open Water Data Platform: Cross-Sectoral Systems Map",
+  "description": "Real-time groundwater, river flow, reservoir data portal + API access",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Open Water Data: Real-time groundwater, flow, reservoir portal",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City water planning, municipal management",
+      "color": "#ec4899"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Irrigation planning, crop choices",
+      "color": "#10b981"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial water sourcing, risk management",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community water rights, local monitoring",
+      "color": "#ec4899"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Hydropower forecasting, cooling water management",
+      "color": "#eab308"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Environmental flow monitoring, ecosystem health",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "urban",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Real-time data → cities optimize supply-demand matching → 15% water use efficiency → ₹8K Cr infrastructure investment avoided",
+      "citation": "Thesis: Water data urban planning"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "food",
+      "value": 65,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Groundwater data → farmers shift crops based on availability → 20% reduction in water-intensive rice in stressed aquifers → sustainable irrigation",
+      "citation": "Thesis: Water data agricultural adaptation"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "industry",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Supply transparency → industries plan sourcing/recycling → ₹10K Cr water risk reduction → investment certainty improves",
+      "citation": "Thesis: Water data industrial planning"
+    },
+    {
+      "id": 4,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Data democratization → communities monitor local extraction → over-pumping accountability → ₹2K Cr grassroots enforcement",
+      "citation": "Thesis: Water data community empowerment"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "water",
+      "value": 55,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Data reveals governance failures: 40% cities over-extracting groundwater exposed → political embarrassment → resistance to transparency",
+      "citation": "Thesis: Water data political resistance"
+    },
+    {
+      "id": 6,
+      "source": "water",
+      "target": "energy",
+      "value": 58,
+      "type": "cascade",
+      "layer": "technical",
+      "quantification": "Reservoir data → hydropower forecasting accuracy +30% → grid integration improves → RE penetration increases (reinforcing)",
+      "citation": "Thesis: Water data energy optimization"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires sensor infrastructure: Open data only useful with 10K monitoring stations → ₹5K Cr IoT deployment prerequisite",
+      "citation": "Thesis: Water data infrastructure needs"
+    },
+    {
+      "id": 8,
+      "source": "food",
+      "target": "energy",
+      "value": 38,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via irrigation optimization: Data-driven crop shifts → 15% pump energy savings → 12 TWh/year freed → grid flexibility",
+      "citation": "Thesis: Water data energy cascade"
+    },
+    {
+      "id": 9,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via environmental flow transparency: Communities track river health → advocacy for minimum flows → wetland protection → ecosystem services",
+      "citation": "Thesis: Water data ecosystem advocacy"
+    },
+    {
+      "id": 10,
+      "source": "industry",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via risk disclosure: Data exposes industrial over-extraction → regulatory enforcement → municipal water security improves",
+      "citation": "Thesis: Water data accountability cascade"
+    },
+    {
+      "id": 11,
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via hydropower optimization: Data-driven releases → environmental flow windows protected → fish migration success +25%",
+      "citation": "Thesis: Hydropower-biodiversity data benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

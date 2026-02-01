@@ -1,0 +1,164 @@
+{
+  "title": "Real-Time Source Attribution: Cross-Sectoral Systems Map",
+  "description": "Chemical mass balance + receptor modeling for sector-specific action",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Source Attribution: Real-time chemical mass balance modeling",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Vehicle emissions, traffic management",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Manufacturing emissions, process controls",
+      "color": "#f97316"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Power plants, residential heating",
+      "color": "#eab308"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Waste burning, landfill fires",
+      "color": "#84cc16"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Construction dust, city planning",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community awareness, local action",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "transport",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Attribution reveals transport 35% of PM2.5 (vs. 20% assumed) → targeted vehicle restrictions → 10 µg/m³ reduction vs. 3 µg/m³ with generic action",
+      "citation": "Thesis: Source-specific effectiveness"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "industry",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Real-time data → industrial hotspot identification → 18 steel plants account for 45% SO2 → focused enforcement cuts monitoring costs 70%",
+      "citation": "Thesis: Hotspot prioritization"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "waste",
+      "value": 58,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Biomass burning signature detection → 28% PM2.5 from waste fires → satellite integration tracks illegal burning → ₹200 Cr fire prevention targeted",
+      "citation": "Thesis: Waste fire attribution"
+    },
+    {
+      "id": 4,
+      "source": "air",
+      "target": "urban",
+      "value": 50,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Construction dust quantified at 15% PM2.5 → mandatory dust controls on 500 sites → ₹50 Cr enforcement ROI",
+      "citation": "Thesis: Construction source contribution"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "air",
+      "value": 55,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Attribution infrastructure lag: Real-time CMB needs ₹100 Cr speciation network (15 cities) → 3-year deployment → interim policy uncertainty",
+      "citation": "Thesis: Attribution infrastructure gap"
+    },
+    {
+      "id": 6,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Source data → community identifies local polluters → hyperlocal action → health improves → demand for data grows (reinforcing)",
+      "citation": "Thesis: Attribution transparency cycle"
+    },
+    {
+      "id": 7,
+      "source": "air",
+      "target": "energy",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires regional modeling: Source attribution only accurate with airshed-scale transport modeling → CAMS/WRF integration prerequisite",
+      "citation": "Thesis: Attribution modeling needs"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via targeted action: Vehicle curbs in high-contribution zones → 18% NO2 reduction → asthma hospitalizations -22% in affected areas",
+      "citation": "Thesis: Targeted transport health benefits"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "energy",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via fuel switching: Attribution shows coal contribution → industrial gas/electricity shift → 12% fuel energy efficiency gain",
+      "citation": "Thesis: Attribution-driven fuel choice"
+    },
+    {
+      "id": 10,
+      "source": "waste",
+      "target": "urban",
+      "value": 30,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via enforcement: Fire tracking → municipal accountability → waste management budgets +30% → collection infrastructure improves",
+      "citation": "Thesis: Attribution accountability cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

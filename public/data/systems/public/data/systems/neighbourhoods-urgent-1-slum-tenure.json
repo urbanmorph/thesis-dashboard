@@ -1,0 +1,174 @@
+{
+  "title": "Slum Land Tenure + Service Access: Cross-Sectoral Systems Map",
+  "description": "Property rights for 65M slum residents → infrastructure investment unlock",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Slum Tenure: Property rights for 65M residents",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City planning, housing policy, service delivery",
+      "color": "#ec4899"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Piped water access, sanitation infrastructure",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Electricity metering, grid formalization",
+      "color": "#eab308"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Waste collection, sanitation services",
+      "color": "#84cc16"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Indoor air pollution, cooking fuel transitions",
+      "color": "#64748b"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Mobility access, last-mile connectivity",
+      "color": "#8b5cf6"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Tenure security → ₹50K Cr infrastructure investment unlocked → 65M slum residents gain legal access to services → urbanization formalized",
+      "citation": "Thesis: Slum tenure infrastructure unlock"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Property rights → piped water connections viable → 80% slum households gain access (vs. 30% informal) → ₹10K Cr tanker costs avoided",
+      "citation": "Thesis: Tenure water access benefits"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 68,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Formalization → metered electricity → theft reduction 60%→20% → ₹15K Cr DISCOM revenue recovery → grid investment enabled",
+      "citation": "Thesis: Slum energy formalization"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 62,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Service access → waste collection coverage 40%→95% → ₹3K Cr municipal expenditure justified → open dumping eliminated",
+      "citation": "Thesis: Tenure waste collection"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Political resistance: Tenure threatens slum vote banks → politicians oppose formalization → 10-year implementation gridlock",
+      "citation": "Thesis: Slum tenure political economy"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 60,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "LPG access → cooking fuel shift from biomass → indoor PM2.5 -70% → respiratory disease -40% → health-tenure virtuous cycle",
+      "citation": "Thesis: Tenure indoor air quality cascade"
+    },
+    {
+      "id": 7,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires inclusive planning: Tenure only sustainable with in-situ upgrades → ₹30K Cr slum redevelopment (no displacement) prerequisite",
+      "citation": "Thesis: In-situ upgrade requirements"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "air",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via sanitation: Piped water → toilet use increases → open defecation waste burning -80% → air quality improves",
+      "citation": "Thesis: Water-air sanitation linkage"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 42,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via affordability: Metered electricity ₹5/kWh (vs. ₹15 informal) → household energy costs -60% → ₹8K Cr consumer savings",
+      "citation": "Thesis: Energy formalization affordability"
+    },
+    {
+      "id": 10,
+      "source": "transport",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via connectivity: Tenure enables transit investments → 500 bus routes extended to slums → ₹5K Cr mobility infrastructure",
+      "citation": "Thesis: Tenure transport integration"
+    },
+    {
+      "id": 11,
+      "source": "waste",
+      "target": "air",
+      "value": 38,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via collection: Open burning -90% → PM2.5 decline → respiratory hospitalizations -30% → ₹2K Cr health savings",
+      "citation": "Thesis: Waste collection air benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

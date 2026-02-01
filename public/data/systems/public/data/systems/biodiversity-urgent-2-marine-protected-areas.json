@@ -1,0 +1,158 @@
+{
+  "title": "Marine Protected Area Expansion: Cross-Sectoral Systems Map",
+  "description": "Scale MPAs from 0.5% to 10% of EEZ + no-take zones enforcement",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Marine Protected Areas: Expand 0.5%→10% of EEZ",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Fisheries productivity, coastal livelihoods",
+      "color": "#10b981"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Coastal communities, fishing economies",
+      "color": "#ec4899"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Coastal water quality, nutrient cycling",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Offshore oil/gas, shipping, coastal development",
+      "color": "#f97316"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Marine plastic pollution, coastal dumping",
+      "color": "#84cc16"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 70,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "MPA expansion → fish biomass +150% in no-take zones → spillover effect → adjacent fisheries catch +30% → ₹10K Cr fishing revenue",
+      "citation": "Thesis: MPA fisheries benefits"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Coral reef protection → nutrient cycling preserved → coastal water quality improves → ₹5K Cr ecosystem service value",
+      "citation": "Thesis: MPA water quality benefits"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Marine tourism → 10M coastal visitors/year → ₹15K Cr ecotourism revenue → fishing community diversification",
+      "citation": "Thesis: MPA tourism livelihoods"
+    },
+    {
+      "id": 4,
+      "source": "industry",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Offshore oil/gas blocks: MPAs restrict ₹40K Cr exploration → energy sector lobbying → MPA designation delayed 5+ years",
+      "citation": "Thesis: MPA extractive industry conflicts"
+    },
+    {
+      "id": 5,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Fishing restrictions: No-take zones displace 500K fishers → short-term income loss → compensation ₹5K Cr needed for acceptance",
+      "citation": "Thesis: MPA fishing displacement"
+    },
+    {
+      "id": 6,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 68,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Fish recovery → higher catch → fishing pressure reduces → stocks stabilize → long-term sustainability (reinforcing)",
+      "citation": "Thesis: MPA fisheries virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires community co-management: MPAs only sustainable with fisher involvement → village-level governance prerequisite",
+      "citation": "Thesis: Community MPA management"
+    },
+    {
+      "id": 8,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via plastic reduction: MPA awareness → coastal waste management improves → marine pollution -30% → ecosystem recovery",
+      "citation": "Thesis: MPA waste reduction cascade"
+    },
+    {
+      "id": 9,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 42,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via catch increases: Spillover fisheries → coastal incomes +25% → poverty reduction → community support for MPAs grows",
+      "citation": "Thesis: Fisheries livelihood cascade"
+    },
+    {
+      "id": 10,
+      "source": "water",
+      "target": "food",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via water quality: Nutrient cycling → fish habitat improves → juvenile survival +40% → stock recruitment increases",
+      "citation": "Thesis: Water quality fisheries linkage"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

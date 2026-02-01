@@ -1,0 +1,200 @@
+{
+  "title": "Coal Transition Plan: Cross-Sectoral Systems Map",
+  "description": "Early retirement 20 GW coal plants + \u20b910K Cr/year just transition fund",
+  "nodes": [
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Early retirement 20 GW coal plants + \u20b910K Cr/year just transition fund",
+      "color": "#eab308",
+      "isCentralNode": true
+    },
+    {
+      "id": "air",
+      "label": "Air",
+      "description": "Air sector dependencies",
+      "color": "#64748b"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Water sector dependencies",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industry sector dependencies",
+      "color": "#f97316"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Transport sector dependencies",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban",
+      "description": "Urban sector dependencies",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Neighbourhoods sector dependencies",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Ecosystem health, habitat conservation, species protection",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "energy",
+      "target": "air",
+      "value": 45,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Positive impact on air sector via energy intervention",
+      "citation": "Thesis: Air synergies"
+    },
+    {
+      "id": 2,
+      "source": "energy",
+      "target": "water",
+      "value": 50,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Positive impact on water sector via energy intervention",
+      "citation": "Thesis: Water synergies"
+    },
+    {
+      "id": 3,
+      "source": "energy",
+      "target": "industry",
+      "value": 55,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Positive impact on industry sector via energy intervention",
+      "citation": "Thesis: Industry synergies"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 35,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Barrier from neighbourhoods sector implementation challenges",
+      "citation": "Thesis: Neighbourhoods barriers"
+    },
+    {
+      "id": 5,
+      "source": "energy",
+      "target": "air",
+      "value": 50,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Cascading effects through air sector",
+      "citation": "Thesis: Air cascades"
+    },
+    {
+      "id": 6,
+      "source": "water",
+      "target": "energy",
+      "value": 60,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Conditional dependencies on water sector reforms",
+      "citation": "Thesis: Policy dependencies"
+    },
+    {
+      "id": 7,
+      "source": "air",
+      "target": "water",
+      "value": 30,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Indirect effects between air and water",
+      "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "industry",
+      "value": 33,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Indirect effects between water and industry",
+      "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "transport",
+      "value": 36,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Indirect effects between industry and transport",
+      "citation": "Thesis: Cross-sectoral cascades"
+    },
+    {
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "20 GW coal retirement \u2192 reduced mining footprint \u2192 ecosystem recovery in mining regions",
+      "citation": "Thesis: Coal ecosystem impacts",
+      "id": 10
+    },
+    {
+      "source": "energy",
+      "target": "biodiversity",
+      "value": 50,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Emissions reduction \u2192 less acid rain \u2192 forest/aquatic ecosystem health improvement",
+      "citation": "Thesis: Emissions-biodiversity cascade",
+      "id": 11
+    },
+    {
+      "source": "air",
+      "target": "biodiversity",
+      "value": 45,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via emissions reduction: Better air quality \u2192 healthier ecosystems \u2192 pollinator populations recover",
+      "citation": "Thesis: Air-biodiversity cascade",
+      "id": 12
+    },
+    {
+      "source": "water",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via mining reduction: Less coal mining \u2192 reduced water contamination \u2192 aquatic ecosystem health",
+      "citation": "Thesis: Water-biodiversity impacts",
+      "id": 13
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

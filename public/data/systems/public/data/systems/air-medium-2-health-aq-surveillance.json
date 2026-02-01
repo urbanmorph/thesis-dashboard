@@ -1,0 +1,158 @@
+{
+  "title": "Health-AQ Surveillance Integration: Cross-Sectoral Systems Map",
+  "description": "Link PM2.5 data to hospital admissions for evidence-based intervention",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Health-AQ Surveillance: PM2.5 linked to hospital admissions data",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community health outcomes, disease burden",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Health infrastructure, city health planning",
+      "color": "#ec4899"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Traffic exposure, mobility health impacts",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Power sector health externalities",
+      "color": "#eab308"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial exposure risks, occupational health",
+      "color": "#f97316"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 75,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Evidence linkage → 10 µg/m³ PM2.5 = 8% respiratory hospitalizations → mortality burden quantified at ₹50K Cr/year → policy urgency justified",
+      "citation": "Thesis: Health evidence for action"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "urban",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Hospital data integration → 102 cities map health hotspots → AQ action prioritized in high-burden wards → ₹2K Cr health-targeted investments",
+      "citation": "Thesis: Health-based prioritization"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "transport",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "NO2-asthma correlation exposed → traffic restrictions near schools → 25% childhood asthma reduction in intervention zones → ₹300 Cr health savings",
+      "citation": "Thesis: Transport health targeting"
+    },
+    {
+      "id": 4,
+      "source": "air",
+      "target": "energy",
+      "value": 55,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Coal plant health costs quantified → ₹8K Cr/year in SO2-related diseases → economic case for early retirement → 5 GW plant closures accelerated",
+      "citation": "Thesis: Energy health externality pricing"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "air",
+      "value": 50,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Data linkage barriers: Health privacy laws prevent PM2.5-hospital record integration → anonymization protocols needed → 3-year regulatory approval",
+      "citation": "Thesis: Health data privacy constraints"
+    },
+    {
+      "id": 6,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 68,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Health validation → community trusts AQ data → behavioral change (mask use, indoor purifiers) → exposure reduction → health improves (reinforcing)",
+      "citation": "Thesis: Health surveillance virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires sentinel hospital network: Surveillance only works with 500 hospitals reporting standardized data → ICMR integration prerequisite",
+      "citation": "Thesis: Sentinel network requirements"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 42,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via intervention: Traffic curbs → NO2 declines → asthma ER visits -18% → school attendance improves → educational outcomes cascade",
+      "citation": "Thesis: Health-education co-benefits"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "urban",
+      "value": 38,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via liability: Health cost data → plant operators face ₹5K Cr litigation → insurance premiums rise → financial incentive for compliance",
+      "citation": "Thesis: Health liability cascade"
+    },
+    {
+      "id": 10,
+      "source": "industry",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via fence-line exposure: Worker health records show occupational risk → community proximity concerns validated → industrial buffer zone enforcement",
+      "citation": "Thesis: Occupational-community health link"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

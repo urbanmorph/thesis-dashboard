@@ -1,0 +1,158 @@
+{
+  "title": "Waste-to-Energy Plant Moratorium: Cross-Sectoral Systems Map",
+  "description": "Redirect ₹30K Cr W2E investments to recycling + composting infrastructure",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "W2E Moratorium: Redirect investments to recycling + composting",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Power generation, renewable energy",
+      "color": "#eab308"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Recycling sector, material recovery",
+      "color": "#f97316"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Incineration emissions, pollution",
+      "color": "#64748b"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal waste policy, infrastructure investment",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community health, waste picker livelihoods",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "industry",
+      "value": 72,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Investment shift → ₹30K Cr W2E funds → recycling infrastructure → 80% material recovery vs. 20% W2E destruction → circular economy",
+      "citation": "Thesis: W2E moratorium recycling benefits"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "air",
+      "value": 68,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Incineration avoided → dioxin/furan emissions eliminated → cancer risk -60% in adjacent areas → ₹5K Cr health benefits",
+      "citation": "Thesis: W2E air quality impacts"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "neighbourhoods",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Recycling economy → 2M waste picker jobs protected (vs. W2E feedstock monopoly) → ₹15K/month wages → livelihood preservation",
+      "citation": "Thesis: W2E employment impacts"
+    },
+    {
+      "id": 4,
+      "source": "energy",
+      "target": "waste",
+      "value": 70,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Power sector opposition: W2E lobby (₹40K Cr investments at risk) → political pressure to continue → renewable energy classification contested",
+      "citation": "Thesis: W2E industry resistance"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "waste",
+      "value": 58,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Municipal dependency: Cities contracted to supply 1000 TPD to W2E plants → penalty clauses → lock-in prevents recycling shift",
+      "citation": "Thesis: W2E contract lock-in"
+    },
+    {
+      "id": 6,
+      "source": "waste",
+      "target": "energy",
+      "value": 60,
+      "type": "cascade",
+      "layer": "technical",
+      "quantification": "Moratorium → RE investment clarity → ₹30K Cr shifts to actual renewables (solar/wind) → grid decarbonization accelerates (reinforcing)",
+      "citation": "Thesis: Investment redirection cascade"
+    },
+    {
+      "id": 7,
+      "source": "industry",
+      "target": "waste",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires EPR strengthening: Recycling infrastructure only viable if producers fund material recovery → EPR fee escalation prerequisite",
+      "citation": "Thesis: W2E alternative financing needs"
+    },
+    {
+      "id": 8,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 42,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via pollution reduction: Dioxin elimination → respiratory disease -40% → productivity gains → ₹3K Cr economic benefits",
+      "citation": "Thesis: W2E health-productivity cascade"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "urban",
+      "value": 38,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via material sales: Recycling revenue → municipal tipping fees +₹500/ton → ₹5K Cr/year fiscal benefits vs. W2E gate fees",
+      "citation": "Thesis: Recycling fiscal advantages"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via advocacy: Waste picker cooperatives demand recycling infrastructure → political pressure → municipal policy shift toward circularity",
+      "citation": "Thesis: Community policy influence"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "title": "Landfill Mining + Land Reclamation: Cross-Sectoral Systems Map",
+  "description": "Excavate legacy dumps for material recovery + land value restoration",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Landfill Mining: Excavate legacy dumps for recovery + reclamation",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Land value, city planning, real estate",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Material recovery, recycling markets",
+      "color": "#f97316"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Landfill fires, methane emissions",
+      "color": "#64748b"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Leachate contamination, groundwater pollution",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Ecosystem restoration, land rehabilitation",
+      "color": "#059669"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community health, land access",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "urban",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Land reclamation → 50K ha dumps restored → ₹5L Cr urban land value unlocked → real estate/parks/infrastructure development",
+      "citation": "Thesis: Landfill mining land value"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "industry",
+      "value": 62,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Material recovery → 30% recyclables, 40% soil-like refuse → ₹10K Cr material value + ₹5K Cr compost market",
+      "citation": "Thesis: Landfill mining material recovery"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "air",
+      "value": 68,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Fire elimination → PM2.5 hotspots removed → respiratory hospitalizations -40% in adjacent areas → ₹2K Cr health benefits",
+      "citation": "Thesis: Landfill fire health impacts"
+    },
+    {
+      "id": 4,
+      "source": "waste",
+      "target": "water",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Leachate source removal → groundwater contamination stops → 500M m³/year aquifer recovery → ₹3K Cr remediation avoided",
+      "citation": "Thesis: Landfill leachate prevention"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "waste",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Mining costs: ₹20K Cr to excavate 200 MT legacy waste → municipal budgets insufficient → PPP/central funding required",
+      "citation": "Thesis: Landfill mining financing gap"
+    },
+    {
+      "id": 6,
+      "source": "industry",
+      "target": "waste",
+      "value": 52,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Material quality: Legacy waste 70% contaminated/degraded → low recyclability → recovery economics marginal without subsidy",
+      "citation": "Thesis: Landfill waste quality challenges"
+    },
+    {
+      "id": 7,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 70,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Restoration → native species reintroduced → ecosystem services recover → carbon sequestration → climate benefits (reinforcing)",
+      "citation": "Thesis: Landfill restoration ecology cascade"
+    },
+    {
+      "id": 8,
+      "source": "urban",
+      "target": "waste",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires land use planning: Mining only viable if reclaimed land designated for high-value use → master plan integration prerequisite",
+      "citation": "Thesis: Landfill land use planning linkage"
+    },
+    {
+      "id": 9,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via fire elimination: PM2.5 reduction → property values near dumps increase 30% → community wealth improves",
+      "citation": "Thesis: Air quality real estate impacts"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via urban greening: Restored dump land → parks/green corridors → recreation access → ₹1K Cr health/wellbeing benefits",
+      "citation": "Thesis: Green space community benefits"
+    },
+    {
+      "id": 11,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via groundwater recovery: Leachate elimination → well water safe → community water security improves → ₹500 Cr treatment savings",
+      "citation": "Thesis: Groundwater quality community impacts"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

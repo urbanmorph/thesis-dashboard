@@ -1,0 +1,164 @@
+{
+  "title": "Outcome-Based NCAP Funding: Cross-Sectoral Systems Map",
+  "description": "Link city air quality fund releases to PM2.5/NO2 target achievement",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Outcome-Based NCAP: Fund releases tied to PM2.5/NO2 targets",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal planning, city governance, infrastructure",
+      "color": "#ec4899"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Power sector emissions, industrial energy use",
+      "color": "#eab308"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Vehicle emissions, mobility infrastructure",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Manufacturing emissions, compliance incentives",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community health, local action, awareness",
+      "color": "#ec4899"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Waste burning, landfill fires, pollution sources",
+      "color": "#84cc16"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "urban",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Outcome incentives → cities prioritize AQ action → ₹4400 Cr NCAP funds unlocked via 30% PM2.5 reduction → municipal accountability shifts from activity-based to results-based",
+      "citation": "Thesis: NCAP accountability reforms"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "transport",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Performance pressure → cities deploy EVs/transit faster → 40% vehicle emissions cut needed for PM2.5 targets → 500K EVs deployed ahead of schedule in 102 cities",
+      "citation": "Thesis: NCAP transport acceleration"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "energy",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Target pressure → cities demand industrial compliance → 30% coal plant load reduction in non-attainment cities → 15 GW capacity shifted to cleaner fuels",
+      "citation": "Thesis: NCAP-energy nexus"
+    },
+    {
+      "id": 4,
+      "source": "air",
+      "target": "industry",
+      "value": 55,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Fund access → cities enforce CEMS compliance → 60% industrial emissions gap addressed → ₹20K Cr in industrial controls deployed",
+      "citation": "Thesis: NCAP industrial enforcement"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "air",
+      "value": 50,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Measurement gaming: Cities relocate monitors from hotspots → 20% lower readings → false target achievement → fund release without real improvement",
+      "citation": "Thesis: NCAP gaming risks"
+    },
+    {
+      "id": 6,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Target achievement → health improvements → community demand for sustained action → political support grows → reinforcing accountability cycle",
+      "citation": "Thesis: NCAP virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "air",
+      "target": "waste",
+      "value": 45,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires waste fire monitoring: Outcome funding only effective if satellite hotspot data integrated → real-time waste burning tracking prerequisite",
+      "citation": "Thesis: NCAP data integration needs"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via NO2 reduction: EV deployment → 25% NO2 decline → respiratory hospitalizations -18% → ₹500 Cr/year health savings",
+      "citation": "Thesis: Transport health cascade"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via SO2 reduction: Coal plant controls → PM2.5 precursor cut → chronic disease burden -12% in power corridors",
+      "citation": "Thesis: Energy health impacts"
+    },
+    {
+      "id": 10,
+      "source": "industry",
+      "target": "energy",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via efficiency: Industrial CEMS enforcement → process optimization → 10% energy savings → grid demand reduction",
+      "citation": "Thesis: Industry-energy efficiency link"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

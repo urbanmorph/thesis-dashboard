@@ -1,0 +1,184 @@
+{
+  "title": "Natural Capital Accounting Integration: Cross-Sectoral Systems Map",
+  "description": "Include ecosystem services (₹125L Cr/year) in national GDP accounting",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Natural Capital Accounting: Ecosystem services in GDP (₹125L Cr/year)",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Infrastructure planning, cost-benefit analysis, policy evaluation",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Corporate reporting, supply chain impacts, natural capital risk",
+      "color": "#f97316"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Watershed services, water purification, flood control",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Carbon sequestration, air filtration, climate regulation",
+      "color": "#64748b"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Pollination, soil formation, pest control services",
+      "color": "#10b981"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Recreation, wellbeing, cultural ecosystem services",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Natural capital in GDP → infrastructure BCAs include ₹125L Cr ecosystem costs → ₹50K Cr destructive projects rejected",
+      "citation": "Thesis: Natural capital policy integration"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "industry",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Corporate accounting → ₹100K Cr natural capital liabilities disclosed → investor risk assessment improves → ₹20K Cr green finance shift",
+      "citation": "Thesis: Corporate natural capital reporting"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Watershed services valued → ₹40L Cr/year water purification recognized → forest conservation investment justified",
+      "citation": "Thesis: Water ecosystem service valuation"
+    },
+    {
+      "id": 4,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 62,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Carbon accounting → 300 MT/year sequestration = ₹30L Cr value → deforestation costs internalized",
+      "citation": "Thesis: Carbon sequestration valuation"
+    },
+    {
+      "id": 5,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 60,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Pollination services → ₹20L Cr/year value explicit → agricultural biodiversity protection incentivized",
+      "citation": "Thesis: Pollination service economics"
+    },
+    {
+      "id": 6,
+      "source": "industry",
+      "target": "biodiversity",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Liability exposure: Natural capital accounting reveals ₹50K Cr corporate damages → industry opposes disclosure requirements",
+      "citation": "Thesis: Natural capital accounting resistance"
+    },
+    {
+      "id": 7,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 70,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "GDP integration → policy priorities shift → conservation budgets increase → ecosystem health improves (reinforcing)",
+      "citation": "Thesis: Natural capital policy cascade"
+    },
+    {
+      "id": 8,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 58,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires valuation standards: Accounting only credible with SEEA framework adoption → ₹5K Cr data infrastructure prerequisite",
+      "citation": "Thesis: Ecosystem accounting standards"
+    },
+    {
+      "id": 9,
+      "source": "water",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via forest value: Watershed accounting → city water supply protection prioritized → ₹10K Cr upstream conservation investments",
+      "citation": "Thesis: Watershed accounting urban benefits"
+    },
+    {
+      "id": 10,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via pollinator value: Accounting → farmer biodiversity stewardship payments → ₹5K Cr rural income support justified",
+      "citation": "Thesis: Ecosystem service payment cascade"
+    },
+    {
+      "id": 11,
+      "source": "air",
+      "target": "industry",
+      "value": 35,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via carbon pricing: Sequestration value → deforestation carbon tax ₹10K/ton → logging sector costs internalized",
+      "citation": "Thesis: Carbon accounting industry impacts"
+    },
+    {
+      "id": 12,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 32,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via recreation value: Cultural services (₹8L Cr/year) recognized → community park investments justified → green access improves",
+      "citation": "Thesis: Cultural ecosystem service recognition"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

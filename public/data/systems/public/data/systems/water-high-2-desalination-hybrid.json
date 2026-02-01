@@ -1,0 +1,158 @@
+{
+  "title": "Desalination-RE Hybrid Facilities: Cross-Sectoral Systems Map",
+  "description": "Solar-powered coastal desalination for Chennai, Vishakhapatnam, Mumbai",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Desalination-RE Hybrid: Solar-powered coastal plants",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Solar generation, desalination energy demand",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Coastal city water security, infrastructure",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial water demand, manufacturing relocation",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Urban water access, affordability, equity",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Marine ecosystems, brine discharge impacts",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "energy",
+      "value": 70,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Solar desalination → 3 kWh/m³ energy use offset by dedicated 500 MW solar → zero marginal grid impact → sustainable water-energy pathway",
+      "citation": "Thesis: Desalination-RE integration"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "urban",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Coastal supply → Chennai/Mumbai add 1 BCM/year capacity → freshwater stress -40% → ₹10K Cr supply security",
+      "citation": "Thesis: Desalination urban resilience"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "industry",
+      "value": 62,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Industrial water availability → coastal manufacturing viable → ₹20K Cr industrial investments in water-scarce zones → economic clustering",
+      "citation": "Thesis: Desalination industrial enablement"
+    },
+    {
+      "id": 4,
+      "source": "water",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Affordability barrier: Desalinated water costs ₹60/m³ vs. ₹20/m³ conventional → low-income access challenges → ₹5K Cr subsidy needed",
+      "citation": "Thesis: Desalination cost equity"
+    },
+    {
+      "id": 5,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 58,
+      "type": "conflict",
+      "layer": "shared",
+      "quantification": "Brine discharge: 1 BCM desalination → 500M m³/year hypersaline brine → marine ecosystem stress → coral/fish mortality within 5km radius",
+      "citation": "Thesis: Desalination marine impacts"
+    },
+    {
+      "id": 6,
+      "source": "water",
+      "target": "energy",
+      "value": 60,
+      "type": "cascade",
+      "layer": "technical",
+      "quantification": "Demand flexibility → desalination load-shifts to solar hours → grid balancing service → RE integration improves (reinforcing)",
+      "citation": "Thesis: Desalination grid services"
+    },
+    {
+      "id": 7,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 52,
+      "type": "conditional",
+      "layer": "shared",
+      "quantification": "Requires brine management: Desalination only sustainable with dilution/evaporation ponds → ₹2K Cr environmental infrastructure prerequisite",
+      "citation": "Thesis: Brine disposal requirements"
+    },
+    {
+      "id": 8,
+      "source": "energy",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via solar capacity: 500 MW dedicated plant → excess generation during low water demand → urban electricity supply +5%",
+      "citation": "Thesis: Desalination energy co-benefits"
+    },
+    {
+      "id": 9,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via supply security: Desalination → drought resilience → slum water tanker dependence -60% → ₹3K Cr household savings",
+      "citation": "Thesis: Desalination equity benefits"
+    },
+    {
+      "id": 10,
+      "source": "industry",
+      "target": "urban",
+      "value": 32,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via employment: Coastal industrial growth → 500K jobs → urban migration → water demand increases → feedback loop",
+      "citation": "Thesis: Industrial water demand cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

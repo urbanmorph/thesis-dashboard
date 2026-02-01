@@ -1,0 +1,168 @@
+{
+  "title": "Waste Segregation + User Fee Linkage: Cross-Sectoral Systems Map",
+  "description": "Differential pricing for mixed vs. segregated waste collection",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Segregation-User Fees: Differential pricing for mixed vs. segregated",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Household behavior, community compliance",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal waste systems, collection infrastructure",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Recycling sector, material recovery facilities",
+      "color": "#f97316"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Landfill emissions, waste transport pollution",
+      "color": "#64748b"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Landfill footprint, ecosystem contamination",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "neighbourhoods",
+      "value": 72,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Price incentive → segregation compliance 30%→80% → households save ₹200/month on lower fees → behavioral shift to source separation",
+      "citation": "Thesis: User fee segregation incentives"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "urban",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Segregated collection → processing efficiency +50% → ₹8K Cr municipal waste management costs avoided → fiscal sustainability",
+      "citation": "Thesis: Segregation cost efficiency"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "industry",
+      "value": 65,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Clean material streams → recycling sector feedstock quality improves → 60% recovery rate (vs. 20% mixed) → ₹12K Cr circular economy market",
+      "citation": "Thesis: Segregation recycling quality"
+    },
+    {
+      "id": 4,
+      "source": "waste",
+      "target": "air",
+      "value": 60,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Organic waste diversion → composting replaces landfilling → 40% methane emissions avoided → 5 MT CO₂e reduction annually",
+      "citation": "Thesis: Segregation air benefits"
+    },
+    {
+      "id": 5,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 62,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Equity concerns: User fees burden low-income households → ₹500/month cost vs. ₹8K/month income → affordability subsidies needed",
+      "citation": "Thesis: Waste fee equity challenges"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target":="waste",
+      "value": 55,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Collection infrastructure gap: Dual-bin system needs ₹5K Cr vehicle fleet + door-to-door coverage → 5-year rollout period",
+      "citation": "Thesis: Segregation infrastructure constraints"
+    },
+    {
+      "id": 7,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 58,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Landfill diversion → land footprint -60% → habitat degradation avoided → ecosystem recovery → biodiversity increases (reinforcing)",
+      "citation": "Thesis: Segregation biodiversity cascade"
+    },
+    {
+      "id": 8,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 50,
+      "type": "conditional",
+      "layer": "community",
+      "quantification": "Requires behavior change infrastructure: User fees only effective with education campaigns + bin availability → ₹500 Cr awareness prerequisite",
+      "citation": "Thesis: Segregation behavior change needs"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via recycling growth: Material recovery → ₹10K Cr sector investments → municipal tipping fees revenue +30% → fiscal space",
+      "citation": "Thesis: Recycling fiscal cascade"
+    },
+    {
+      "id": 10,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via landfill reduction: Methane emissions -40% → GHG mitigation → climate resilience → community heat stress reduction",
+      "citation": "Thesis: Waste-climate-health cascade"
+    },
+    {
+      "id": 11,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via land recovery: 60% landfill footprint reduction → 50K ha land available for urban green space → ecosystem services improve",
+      "citation": "Thesis: Land recovery urban benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

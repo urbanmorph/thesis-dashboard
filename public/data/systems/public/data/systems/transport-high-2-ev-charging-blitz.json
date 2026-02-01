@@ -1,0 +1,200 @@
+{
+  "title": "EV Charging Infrastructure Blitz: Cross-Sectoral Systems Map",
+  "description": "100K public chargers + 20% building parking mandate to solve range anxiety",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "EV Charging Blitz: 100K public chargers, 20% building parking mandate",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Grid capacity, renewable integration, peak load management",
+      "color": "#eab308"
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Parking infrastructure, electrical capacity, building codes",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Emissions reduction from EV adoption",
+      "color": "#64748b"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Street infrastructure, land use, public space",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "EV manufacturing, battery supply chains",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Charging accessibility, equity, community adoption",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Lithium mining impacts, ecosystem protection",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "100K chargers enable 5M EVs by 2030 → 20% urban transport electrified → 30% NOx reduction → ₹30K Cr health savings",
+      "citation": "Thesis: EV air quality benefits"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "energy",
+      "value": 70,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Smart charging enables solar integration → charge during daytime surplus → reduces grid evening peak by 15 GW",
+      "citation": "Thesis: EV-solar synergy"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "buildings",
+      "value": 55,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "20% parking mandate → 2M building chargers → enables residential EV adoption without public charging dependency",
+      "citation": "Thesis: Building EV infrastructure"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "urban",
+      "value": 45,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Curbside chargers repurpose 10% parking spaces → generates ₹5K Cr/year revenue → funds pedestrian infrastructure",
+      "citation": "Thesis: Charging revenue reuse"
+    },
+    {
+      "id": 5,
+      "source": "energy",
+      "target": "transport",
+      "value": 60,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Grid capacity gap: 100K chargers need 10 GW capacity → requires ₹50K Cr grid upgrades → 3-year infrastructure lag",
+      "citation": "Thesis: Grid EV readiness gap"
+    },
+    {
+      "id": 6,
+      "source": "buildings",
+      "target": "transport",
+      "value": 50,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Retrofit resistance: Existing buildings lack electrical capacity → 20M apartments need panel upgrades at ₹2L each",
+      "citation": "Thesis: Building electrical constraints"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 45,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Charging equity gap: 80% chargers in affluent areas → low-income neighborhoods underserved → reinforces mobility inequality",
+      "citation": "Thesis: EV charging inequity"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "energy",
+      "value": 60,
+      "type": "cascade",
+      "layer": "technical",
+      "quantification": "Chargers → more EVs → higher demand for RE → battery storage viable → grid flexibility increases (positive feedback)",
+      "citation": "Thesis: EV-RE virtuous cycle"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "transport",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires renewable integration: Charging infrastructure only sustainable with 60%+ RE → coal-powered EVs negate air quality benefits",
+      "citation": "Thesis: EV-RE dependency"
+    },
+    {
+      "id": 10,
+      "source": "transport",
+      "target": "industry",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via EV demand: 5M EVs → battery manufacturing scale-up → ₹1L Cr investment → 500K jobs in battery sector",
+      "citation": "Thesis: EV industrial cascade"
+    },
+    {
+      "id": 11,
+      "source": "industry",
+      "target": "biodiversity",
+      "value": 50,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via battery demand: Lithium mining expansion → habitat disruption in Chile/Australia → requires recycling (40% lithium from recycling by 2030)",
+      "citation": "Thesis: Battery mining impacts"
+    },
+    {
+      "id": 12,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via emissions reduction: 30% NOx cut → respiratory illness -20% → children's school attendance improves → community health benefits",
+      "citation": "Thesis: Air-health cascade"
+    },
+    {
+      "id": 13,
+      "source": "transport",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Reduced fossil fuel demand → less oil extraction → offshore drilling pressure reduced → marine ecosystem protection",
+      "citation": "Thesis: EV biodiversity co-benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

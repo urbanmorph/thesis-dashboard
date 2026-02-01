@@ -1,0 +1,158 @@
+{
+  "title": "Designated Street Vendor Zones: Cross-Sectoral Systems Map",
+  "description": "Formalize 10M vendors with infrastructure + social security access",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Street Vendor Zones: Formalize 10M vendors + infrastructure",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City planning, public space management",
+      "color": "#ec4899"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Pedestrian flow, street accessibility",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Street food safety, local food access",
+      "color": "#10b981"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Vending waste management, street cleanliness",
+      "color": "#84cc16"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Street lighting, vendor electricity access",
+      "color": "#eab308"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Formalization → 10M vendors gain legal status → ₹50K Cr informal economy recognized → municipal tax base +₹5K Cr/year",
+      "citation": "Thesis: Vendor formalization benefits"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "food",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Food safety infrastructure → hygiene compliance 30%→80% → street food illnesses -60% → ₹3K Cr health cost savings",
+      "citation": "Thesis: Street vendor food safety"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 62,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Designated zones → waste management integrated → street litter -50% → ₹2K Cr municipal cleaning cost reduction",
+      "citation": "Thesis: Vendor zone waste benefits"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 58,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Formal electricity → vendors switch from kerosene/generators → ₹5K Cr household savings + air quality improvement",
+      "citation": "Thesis: Vendor electrification benefits"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Space allocation conflict: Vendors need 1% urban land; available 0.3% → ₹10K Cr land acquisition/rezoning required",
+      "citation": "Thesis: Vendor land constraints"
+    },
+    {
+      "id": 6,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Pedestrian flow disruption: Vendor zones reduce sidewalk width → accessibility concerns → ₹3K Cr infrastructure redesign needed",
+      "citation": "Thesis: Vendor-pedestrian conflicts"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 68,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Formalization → social security access → ESIC/PF coverage → vendor health improves → productivity increases (reinforcing)",
+      "citation": "Thesis: Vendor formalization virtuous cycle"
+    },
+    {
+      "id": 8,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires pedestrianization: Vendor zones only sustainable in car-free streets → ₹20K Cr street redesign prerequisite",
+      "citation": "Thesis: Vendor zone pedestrian infrastructure"
+    },
+    {
+      "id": 9,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via affordability: Street food ₹30/meal (vs. ₹150 restaurant) → low-income nutrition access → food security improves",
+      "citation": "Thesis: Street food affordability benefits"
+    },
+    {
+      "id": 10,
+      "source": "waste",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via waste reduction: Integrated management → municipal collection efficiency +20% → ₹1K Cr cost savings",
+      "citation": "Thesis: Vendor waste optimization cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

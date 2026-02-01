@@ -1,0 +1,174 @@
+{
+  "title": "Stubble Residue Value Chains: Cross-Sectoral Systems Map",
+  "description": "Bio-CNG/biochar markets + in-situ decomposition subsidy for farm burning",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Stubble Value Chains: Bio-CNG/biochar + in-situ decomposition",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Crop residue management, farm economics",
+      "color": "#10b981"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Bio-CNG production, biomass energy",
+      "color": "#eab308"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Agricultural waste circularity, composting",
+      "color": "#84cc16"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Biochar manufacturing, biomass supply chains",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Rural-urban health burden, farm livelihoods",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City biomass energy demand, waste-to-energy",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "food",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Residue value chains → ₹2K/acre revenue vs. ₹1K/acre burning cost → economic incentive shift → 60% stubble burning eliminated in Punjab/Haryana",
+      "citation": "Thesis: Stubble economics transformation"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "energy",
+      "value": 65,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Bio-CNG from 23 MT stubble → 5 BCM gas (5% of CNG demand) → ₹15K Cr market → sustainable biomass energy pathway",
+      "citation": "Thesis: Stubble bioenergy potential"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "waste",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "In-situ decomposition → 30% organic carbon returned to soil vs. 0% with burning → soil health improves → farm productivity +8%",
+      "citation": "Thesis: Stubble circularity benefits"
+    },
+    {
+      "id": 4,
+      "source": "air",
+      "target": "industry",
+      "value": 55,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Biochar market creation → 5 MT stubble → ₹3K Cr carbon sequestration credits → industrial demand for agricultural waste",
+      "citation": "Thesis: Stubble industrial value"
+    },
+    {
+      "id": 5,
+      "source": "food",
+      "target": "air",
+      "value": 58,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Harvest timing conflict: Residue collection delays next crop planting → 10-day window loss → farmers resist unless compensated ₹5K/acre",
+      "citation": "Thesis: Stubble collection timing barrier"
+    },
+    {
+      "id": 6,
+      "source": "industry",
+      "target": "air",
+      "value": 50,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Supply chain gap: Bio-CNG plants need year-round feedstock; stubble seasonal → storage infrastructure ₹10K Cr investment needed",
+      "citation": "Thesis: Stubble seasonality challenge"
+    },
+    {
+      "id": 7,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Burning eliminated → PM2.5 winter spikes -40% → health improves → farm community pride increases → cultural shift reinforces (virtuous)",
+      "citation": "Thesis: Stubble health-culture cycle"
+    },
+    {
+      "id": 8,
+      "source": "food",
+      "target": "air",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires MSP decoupling: Value chains only work if crop choice diversifies → rice MSP reform prerequisite → water-intensive farming shift needed",
+      "citation": "Thesis: Stubble-crop policy linkage"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via bio-CNG: 5 BCM gas → city bus fleets (5000 buses) → urban NO2 reduction → transport-energy-air cascade",
+      "citation": "Thesis: Stubble urban energy benefits"
+    },
+    {
+      "id": 10,
+      "source": "waste",
+      "target": "food",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via soil health: Decomposition → organic matter +2% → fertilizer use -15% → farm input costs decline → economic co-benefit",
+      "citation": "Thesis: Stubble soil fertility cascade"
+    },
+    {
+      "id": 11,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 30,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via health equity: Rural burning health burden (₹2K Cr/year) avoided → urban-rural health gap narrows → regional solidarity improves",
+      "citation": "Thesis: Stubble health equity effects"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

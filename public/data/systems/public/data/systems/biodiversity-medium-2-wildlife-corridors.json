@@ -1,0 +1,158 @@
+{
+  "title": "National Wildlife Corridor Network: Cross-Sectoral Systems Map",
+  "description": "Designate 100 corridors connecting 670 protected areas for species migration",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Wildlife Corridors: 100 corridors connecting 670 protected areas",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Highway design, wildlife crossings, infrastructure",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City expansion, land use planning, development control",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Human-wildlife conflict, community livelihoods",
+      "color": "#ec4899"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Crop damage, livestock predation, farm compensation",
+      "color": "#10b981"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Riparian corridors, watershed connectivity",
+      "color": "#06b6d4"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Corridor designation → 10M ha connectivity preserved → genetic diversity maintained → species extinction risk -40%",
+      "citation": "Thesis: Wildlife corridor conservation benefits"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "transport",
+      "value": 65,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Wildlife crossings → 200 overpasses/underpasses → animal-vehicle collisions -60% → ₹2K Cr accident costs avoided",
+      "citation": "Thesis: Wildlife crossing safety benefits"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 62,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Riparian corridor protection → watershed connectivity → river flow regulation → ₹5K Cr ecosystem service value",
+      "citation": "Thesis: Corridor watershed benefits"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Human-wildlife conflict: Corridors increase elephant/leopard encounters → ₹3K Cr crop damage + 500 deaths/year → community opposition",
+      "citation": "Thesis: Wildlife corridor human costs"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Development restrictions: Corridors limit city expansion → ₹20K Cr real estate value affected → political resistance",
+      "citation": "Thesis: Corridor urban growth constraints"
+    },
+    {
+      "id": 6,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 68,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Ecotourism → corridor wildlife viewing → ₹8K Cr rural income → community support for conservation grows (reinforcing)",
+      "citation": "Thesis: Corridor ecotourism virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "food",
+      "target": "biodiversity",
+      "value": 58,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires compensation fund: Corridors only viable with ₹5K Cr/year crop damage insurance → farmer acceptance prerequisite",
+      "citation": "Thesis: Wildlife damage compensation needs"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via highway design: Wildlife crossings → infrastructure costs +10% → ₹15K Cr additional investment needed",
+      "citation": "Thesis: Corridor infrastructure costs"
+    },
+    {
+      "id": 9,
+      "source": "neighbourhoods",
+      "target": "food",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via conflict mitigation: Electric fencing → crop damage -50% → farm incomes protected → ₹2K Cr agricultural savings",
+      "citation": "Thesis: Conflict mitigation agricultural benefits"
+    },
+    {
+      "id": 10,
+      "source": "water",
+      "target": "biodiversity",
+      "value": 38,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via riparian zones: Watershed protection → aquatic connectivity → fish migration restored → freshwater biodiversity +30%",
+      "citation": "Thesis: Corridor aquatic benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

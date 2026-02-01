@@ -1,0 +1,158 @@
+{
+  "title": "Wetland Restoration Fund: Cross-Sectoral Systems Map",
+  "description": "₹10K Cr restoration fund for 1M ha degraded wetlands + Ramsar compliance",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Wetland Restoration: ₹10K Cr fund for 1M ha degraded wetlands",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Groundwater recharge, flood control, water purification",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Fisheries, aquaculture, irrigation buffer",
+      "color": "#10b981"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Carbon sequestration, climate regulation",
+      "color": "#64748b"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community livelihoods, disaster resilience",
+      "color": "#ec4899"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City water supply, flood management, real estate",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 75,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Wetland restoration → 50 BCM/year groundwater recharge + flood attenuation → ₹15K Cr water security + disaster prevention",
+      "citation": "Thesis: Wetland water benefits"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "food",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Wetland fisheries → 5 MT/year fish production (vs. 1 MT degraded) → ₹8K Cr fishing community income",
+      "citation": "Thesis: Wetland fisheries productivity"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 62,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Carbon sequestration → 100 MT CO₂/year (wetlands 5x forests) → ₹10K Cr climate mitigation value",
+      "citation": "Thesis: Wetland carbon storage"
+    },
+    {
+      "id": 4,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Flood protection → cyclone/monsoon damage -40% → ₹12K Cr disaster losses avoided → coastal community resilience",
+      "citation": "Thesis: Wetland disaster buffer"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Real estate encroachment: 40% wetlands lost to urbanization → ₹30K Cr development value → restoration opposed by builders",
+      "citation": "Thesis: Wetland urban conflicts"
+    },
+    {
+      "id": 6,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 70,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Recharge → aquifer recovery → city water supply improves → wetland protection investment grows (reinforcing)",
+      "citation": "Thesis: Wetland water virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires land tenure clarity: Restoration only sustainable with wetland ownership rights → community/state demarcation prerequisite",
+      "citation": "Thesis: Wetland tenure requirements"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "urban",
+      "value": 42,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via recharge: 50 BCM aquifer recovery → city water supply +30% → ₹8K Cr desalination/transport infrastructure avoided",
+      "citation": "Thesis: Wetland urban water cascade"
+    },
+    {
+      "id": 9,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via fisheries: 5 MT production → 500K fishing jobs → ₹5K Cr coastal livelihoods sustained",
+      "citation": "Thesis: Wetland fisheries employment"
+    },
+    {
+      "id": 10,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via climate regulation: Carbon storage → global warming mitigation → heat stress reduction → ₹2K Cr health benefits",
+      "citation": "Thesis: Wetland climate health cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "title": "Mandatory Wastewater Reuse Targets: Cross-Sectoral Systems Map",
+  "description": "80% treated wastewater reuse for non-potable urban + industrial uses",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Wastewater Reuse: 80% recycling target for non-potable uses",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City water systems, sewage treatment infrastructure",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial cooling, process water demand",
+      "color": "#f97316"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Power plant cooling, treatment energy use",
+      "color": "#eab308"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Peri-urban farming, treated water irrigation",
+      "color": "#10b981"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Urban parks, community green spaces, water access",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "River flow restoration, aquatic ecosystems",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "urban",
+      "value": 72,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "80% reuse → 15 BCM/year wastewater recycled → freshwater demand -30% in cities → ₹20K Cr new supply infrastructure avoided",
+      "citation": "Thesis: Wastewater reuse urban benefits"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "industry",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Mandatory reuse → industries source 60% water from STPs → ₹8K Cr treatment plant upgrades → circular water economy",
+      "citation": "Thesis: Industrial wastewater dependence"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "energy",
+      "value": 62,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Power plant cooling via treated water → 5 BCM freshwater freed → reservoir levels stabilize → hydropower generation +8%",
+      "citation": "Thesis: Energy-water reuse nexus"
+    },
+    {
+      "id": 4,
+      "source": "water",
+      "target": "food",
+      "value": 58,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Peri-urban irrigation with treated water → 2M ha vegetable farming sustained → ₹15K Cr agricultural output → food-water circularity",
+      "citation": "Thesis: Agricultural wastewater reuse"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "water",
+      "value": 60,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Treatment capacity gap: Need 25 BCM/year capacity; have 10 BCM → ₹50K Cr STP investment → 7-year infrastructure buildout",
+      "citation": "Thesis: STP capacity constraints"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 52,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Stigma barrier: Public resistance to treated water in parks → perceived contamination risk → education campaigns needed → cultural acceptance lag",
+      "citation": "Thesis: Wastewater reuse stigma"
+    },
+    {
+      "id": 7,
+      "source": "water",
+      "target": "biodiversity",
+      "value": 65,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Reduced freshwater extraction → river flows sustained → fish populations recover → wetland ecosystems expand (reinforcing)",
+      "citation": "Thesis: Wastewater-biodiversity cascade"
+    },
+    {
+      "id": 8,
+      "source": "industry",
+      "target": "water",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires dual piping infrastructure: Reuse mandates only work with separate distribution → ₹15K Cr pipeline network prerequisite",
+      "citation": "Thesis: Dual piping requirements"
+    },
+    {
+      "id": 9,
+      "source": "urban",
+      "target": "energy",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via treatment: STP energy use 0.5 kWh/m³ → 7.5 TWh/year demand → but avoids 15 TWh pumping from distant sources → net savings",
+      "citation": "Thesis: Wastewater energy tradeoffs"
+    },
+    {
+      "id": 10,
+      "source": "food",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via peri-urban farming: Treated water irrigation → local vegetable supply → food security improves → ₹5K Cr consumer savings",
+      "citation": "Thesis: Wastewater food security benefits"
+    },
+    {
+      "id": 11,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via ecosystem services: River flow restoration → urban cooling +2°C → heat stress reduction → ₹500 Cr health savings",
+      "citation": "Thesis: River ecosystem urban co-benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

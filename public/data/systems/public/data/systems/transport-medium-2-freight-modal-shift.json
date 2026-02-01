@@ -1,0 +1,174 @@
+{
+  "title": "Freight Modal Shift Carbon Tax: Cross-Sectoral Systems Map",
+  "description": "₹50/ton-km road freight tax + rail subsidy targeting 45% rail share",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Freight Modal Shift: ₹50/ton-km road tax, rail subsidy, 45% rail target",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Logistics costs, supply chain efficiency, competitiveness",
+      "color": "#f97316"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Freight emissions, highway corridor pollution",
+      "color": "#64748b"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Diesel consumption, rail electrification",
+      "color": "#eab308"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Perishable goods logistics, cold chain, market access",
+      "color": "#10b981"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Truck congestion, highway infrastructure, last-mile delivery",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Highway ecology, wildlife corridors, roadkill impacts",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "industry",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Rail shift reduces logistics cost 14% → 11% of GDP → ₹2L Cr/year savings → improves export competitiveness",
+      "citation": "Thesis: Freight logistics efficiency"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "air",
+      "value": 60,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "45% rail share → 100M tonnes off roads → 40% reduction in highway corridor PM2.5 and NOx emissions",
+      "citation": "Thesis: Freight air quality benefits"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "energy",
+      "value": 55,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Rail 4x more fuel-efficient → modal shift saves 25 MT diesel/year → reduces import bill by ₹1.5L Cr",
+      "citation": "Thesis: Rail energy efficiency"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "urban",
+      "value": 50,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Fewer trucks → 30% reduction in highway congestion → improves urban periphery traffic flow → reduces logistics time by 15%",
+      "citation": "Thesis: Truck congestion relief"
+    },
+    {
+      "id": 5,
+      "source": "industry",
+      "target": "transport",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Freight lobby resistance: ₹50/ton-km tax → trucking industry ₹50K Cr revenue loss → political pressure against implementation",
+      "citation": "Thesis: Trucking lobby power"
+    },
+    {
+      "id": 6,
+      "source": "transport",
+      "target": "food",
+      "value": 45,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Rail capacity gap: Perishable goods need cold chain + speed → rail infrastructure lags → forces road dependence for food",
+      "citation": "Thesis: Rail cold chain gap"
+    },
+    {
+      "id": 7,
+      "source": "transport",
+      "target": "industry",
+      "value": 60,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Carbon tax → rail shift → rail infrastructure investment → better service → more freight shifts (reinforcing cycle)",
+      "citation": "Thesis: Rail investment virtuous cycle"
+    },
+    {
+      "id": 8,
+      "source": "energy",
+      "target": "transport",
+      "value": 55,
+      "type": "conditional",
+      "layer": "technical",
+      "quantification": "Requires rail capacity expansion: Modal shift needs 50% more rail freight capacity → ₹3L Cr investment → 5-year buildout",
+      "citation": "Thesis: Rail capacity prerequisites"
+    },
+    {
+      "id": 9,
+      "source": "air",
+      "target": "biodiversity",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via emissions reduction: Lower NOx → reduced acid deposition → forest health improves → ecosystem resilience",
+      "citation": "Thesis: Air-biodiversity cascade"
+    },
+    {
+      "id": 10,
+      "source": "urban",
+      "target": "food",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via congestion relief: Faster logistics → 15% reduction in food spoilage during transport → fresher produce in cities",
+      "citation": "Thesis: Logistics-food quality nexus"
+    },
+    {
+      "id": 11,
+      "source": "transport",
+      "target": "biodiversity",
+      "value": 45,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Fewer highway trucks → 50% reduction in wildlife roadkill → corridor restoration becomes viable → habitat connectivity",
+      "citation": "Thesis: Highway biodiversity impacts"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

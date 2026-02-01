@@ -1,0 +1,158 @@
+{
+  "title": "Urban Biodiversity Mandates: Cross-Sectoral Systems Map",
+  "description": "30% tree canopy + native species requirements for cities >1M population",
+  "nodes": [
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban Biodiversity: 30% tree canopy + native species for cities >1M",
+      "color": "#059669",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City planning, green infrastructure, land use",
+      "color": "#ec4899"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Urban heat island, air filtration, temperature regulation",
+      "color": "#64748b"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Stormwater management, groundwater recharge",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community wellbeing, nature access, recreation",
+      "color": "#ec4899"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Cooling energy demand, urban microclimate",
+      "color": "#eab308"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "biodiversity",
+      "target": "urban",
+      "value": 72,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "30% canopy mandate → 53 cities plant 50M trees → ₹20K Cr green infrastructure investment → urban ecosystems restored",
+      "citation": "Thesis: Urban biodiversity targets"
+    },
+    {
+      "id": 2,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 68,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Tree canopy → 3-5°C urban cooling + PM2.5 filtration (20kg/tree/year) → ₹10K Cr health/energy benefits annually",
+      "citation": "Thesis: Urban forest air benefits"
+    },
+    {
+      "id": 3,
+      "source": "biodiversity",
+      "target": "water",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Green infrastructure → stormwater runoff -40% → urban flooding reduction → ₹8K Cr disaster damage avoided",
+      "citation": "Thesis: Urban trees water benefits"
+    },
+    {
+      "id": 4,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 62,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Nature access → mental health improves +30% → ₹5K Cr health savings + property values +15% near green spaces",
+      "citation": "Thesis: Urban biodiversity wellbeing"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Land scarcity: 30% canopy needs 150K ha in 53 cities → real estate opportunity cost ₹50K Cr → developer resistance",
+      "citation": "Thesis: Urban greening land constraints"
+    },
+    {
+      "id": 6,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 70,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Cooling → AC demand reduction → energy savings → less fossil generation → air quality improves further (reinforcing)",
+      "citation": "Thesis: Urban forest cooling cascade"
+    },
+    {
+      "id": 7,
+      "source": "urban",
+      "target": "biodiversity",
+      "value": 58,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires native species mandate: Biodiversity benefits only with indigenous trees → exotic species ban + nursery capacity prerequisite",
+      "citation": "Thesis: Native species requirements"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via groundwater: Tree root zones → aquifer recharge +20% → city water security improves → ₹3K Cr supply savings",
+      "citation": "Thesis: Urban forest water cascade"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via cooling: 5°C temperature reduction → heat-related deaths -40% → vulnerable community resilience improves",
+      "citation": "Thesis: Urban cooling equity benefits"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via stewardship: Community park engagement → tree survival +50% → urban forest sustainability improves",
+      "citation": "Thesis: Community stewardship cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

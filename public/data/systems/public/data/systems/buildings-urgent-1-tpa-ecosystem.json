@@ -1,0 +1,174 @@
+{
+  "title": "TPA Ecosystem Replication: Cross-Sectoral Systems Map",
+  "description": "Telangana TPA model to 5 states—link OC to ECBC compliance",
+  "nodes": [
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "TPA Ecosystem: Telangana model to 5 states, OC-ECBC linkage",
+      "color": "#3b82f6",
+      "isCentralNode": true
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Building energy consumption, HVAC efficiency, peak load",
+      "color": "#eab308"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Construction dust, operational emissions, urban heat",
+      "color": "#64748b"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Real estate compliance, municipal enforcement, OC process",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Construction industry, material suppliers, HVAC manufacturers",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Building stock quality, thermal comfort, community wellbeing",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Material extraction impacts, embodied carbon, resource use",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "buildings",
+      "target": "energy",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "ECBC enforcement via TPA → 30-40% operational energy reduction → 50 TWh/year saved → 25 GW peak load avoided",
+      "citation": "Thesis: ECBC energy savings"
+    },
+    {
+      "id": 2,
+      "source": "buildings",
+      "target": "urban",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "OC-ECBC linkage → 90% compliance (up from 30%) → enforcement becomes systematic vs discretionary → rule of law",
+      "citation": "Thesis: TPA enforcement mechanism"
+    },
+    {
+      "id": 3,
+      "source": "buildings",
+      "target": "air",
+      "value": 55,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Energy efficiency → 50 TWh savings → 25 MT coal avoided → 15% reduction in power sector PM2.5 emissions",
+      "citation": "Thesis: Building air quality co-benefits"
+    },
+    {
+      "id": 4,
+      "source": "buildings",
+      "target": "neighbourhoods",
+      "value": 50,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Better building design → passive cooling + natural ventilation → 3-5°C indoor temperature reduction → thermal comfort",
+      "citation": "Thesis: ECBC comfort benefits"
+    },
+    {
+      "id": 5,
+      "source": "industry",
+      "target": "buildings",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Builder resistance: ECBC adds 5-10% cost → ₹5-10L/unit → developer margins squeezed → lobbying against enforcement",
+      "citation": "Thesis: Builder ECBC opposition"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "buildings",
+      "value": 45,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Municipal capacity gap: TPA needs ₹50L Cr investment + skilled auditors → 5-state rollout requires 3-year capacity building",
+      "citation": "Thesis: TPA capacity constraints"
+    },
+    {
+      "id": 7,
+      "source": "buildings",
+      "target": "energy",
+      "value": 60,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Enforcement → compliance → energy savings → lower bills → market demand for efficient buildings → virtuous cycle",
+      "citation": "Thesis: ECBC market transformation"
+    },
+    {
+      "id": 8,
+      "source": "urban",
+      "target": "buildings",
+      "value": 70,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires state political will: TPA only works with OC linkage + penalties → needs chief minister support → 5 champion states first",
+      "citation": "Thesis: TPA political prerequisites"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "air",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via coal avoidance: 25 MT less coal → reduced mining footprint → ecosystem recovery in coal regions",
+      "citation": "Thesis: Coal-biodiversity cascade"
+    },
+    {
+      "id": 10,
+      "source": "buildings",
+      "target": "biodiversity",
+      "value": 45,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Energy efficiency → less embodied energy in operations → reduces lifecycle material throughput → resource conservation",
+      "citation": "Thesis: Building material efficiency"
+    },
+    {
+      "id": 11,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via reduced HVAC: Better passive design → 40% less AC usage → lower urban heat island → improved local air quality",
+      "citation": "Thesis: Building-heat-air nexus"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

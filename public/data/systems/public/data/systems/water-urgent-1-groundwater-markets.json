@@ -1,0 +1,174 @@
+{
+  "title": "Groundwater Markets + Aquifer Recharge Credits: Cross-Sectoral Systems Map",
+  "description": "Tradeable extraction rights + incentive payments for managed recharge",
+  "nodes": [
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Groundwater Markets: Tradeable rights + recharge credits",
+      "color": "#06b6d4",
+      "isCentralNode": true
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Irrigation demand, crop water use, farm economics",
+      "color": "#10b981"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Pump energy use, electricity subsidies",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City water supply, municipal recharge infrastructure",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Rural-urban water equity, community wells",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial water demand, recycling incentives",
+      "color": "#f97316"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Wetland health, aquifer ecosystems",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "water",
+      "target": "food",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Tradeable rights → farmers sell 30% extraction quota → ₹15K/ha revenue → crop diversification from rice (4000L/kg) to pulses (900L/kg) → 60% water savings",
+      "citation": "Thesis: Groundwater market water savings"
+    },
+    {
+      "id": 2,
+      "source": "water",
+      "target": "energy",
+      "value": 65,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Reduced pumping → 30% lower groundwater extraction → 20 TWh/year pump energy saved → ₹12K Cr subsidy reduction → fiscal space freed",
+      "citation": "Thesis: Groundwater-energy nexus"
+    },
+    {
+      "id": 3,
+      "source": "water",
+      "target": "urban",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Recharge credits → cities invest ₹5K Cr in managed aquifer recharge → urban water security improves → 500M m³/year recharge achieved",
+      "citation": "Thesis: Urban recharge incentives"
+    },
+    {
+      "id": 4,
+      "source": "water",
+      "target": "industry",
+      "value": 58,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Market pricing → industrial water costs ₹50/m³ (vs. ₹5/m³ unregulated) → 40% recycling adoption → freshwater demand reduction",
+      "citation": "Thesis: Industrial water pricing"
+    },
+    {
+      "id": 5,
+      "source": "food",
+      "target": "water",
+      "value": 62,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Farmer resistance: Rights cap limits extraction → perceived livelihood threat → political opposition in Punjab/Haryana → 5-year implementation delay",
+      "citation": "Thesis: Groundwater rights political economy"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 55,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Equity concerns: Large farmers buy rights from small holders → concentration of water access → 30% smallholders exit agriculture → rural displacement",
+      "citation": "Thesis: Groundwater market equity"
+    },
+    {
+      "id": 7,
+      "source": "water",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Aquifer recovery → water tables rise 5m → wetland revival → migratory bird populations +40% → ecosystem health cascade (reinforcing)",
+      "citation": "Thesis: Groundwater-biodiversity cascade"
+    },
+    {
+      "id": 8,
+      "source": "water",
+      "target": "food",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires metering infrastructure: Markets only work with 100% extraction monitoring → ₹10K Cr smart meter installation prerequisite",
+      "citation": "Thesis: Groundwater metering requirements"
+    },
+    {
+      "id": 9,
+      "source": "food",
+      "target": "energy",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via crop shift: Rice → pulses → 60% irrigation reduction → 12 TWh pump energy saved → grid capacity freed for RE integration",
+      "citation": "Thesis: Crop-energy water cascade"
+    },
+    {
+      "id": 10,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via recharge: Urban MAR → aquifer recovery → rural well revival → community water security improves → urban-rural solidarity",
+      "citation": "Thesis: Urban-rural water benefits"
+    },
+    {
+      "id": 11,
+      "source": "industry",
+      "target": "urban",
+      "value": 38,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via recycling: Industrial water reuse → municipal supply pressure reduced → ₹3K Cr infrastructure investment avoided",
+      "citation": "Thesis: Industrial water efficiency co-benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "title": "Construction & Demolition Waste Mandates: Cross-Sectoral Systems Map",
+  "description": "30% recycled aggregate quota in public procurement + demolition plans",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "C&D Waste: 30% recycled aggregate quota + demolition plans",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Construction practices, demolition protocols",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Infrastructure projects, public procurement",
+      "color": "#ec4899"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Aggregate production, recycling facilities",
+      "color": "#f97316"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Construction dust, demolition emissions",
+      "color": "#64748b"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Mining impacts, quarry ecosystems",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "buildings",
+      "value": 70,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Demolition plans → 70% material recovery (vs. 10% dump-and-build) → 150 MT/year C&D waste diverted → circular construction",
+      "citation": "Thesis: C&D recovery potential"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "urban",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "30% recycled aggregate quota → ₹15K Cr public works demand → market pull for C&D recycling → infrastructure sustainability",
+      "citation": "Thesis: Recycled aggregate procurement"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "industry",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Mandate creates market → ₹10K Cr C&D recycling sector investment → 100 processing plants → 500K jobs created",
+      "citation": "Thesis: C&D industrial growth"
+    },
+    {
+      "id": 4,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 62,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Virgin aggregate demand -30% → mining footprint reduction → 20K ha quarry land spared → ecosystem preservation",
+      "citation": "Thesis: C&D mining impact reduction"
+    },
+    {
+      "id": 5,
+      "source": "buildings",
+      "target": "waste",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Demolition cost increase: Selective dismantling 40% slower/costlier vs. bulldozing → developer resistance → policy dilution pressure",
+      "citation": "Thesis: C&D compliance costs"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "waste",
+      "value": 55,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Quality perception barrier: Engineers resist recycled aggregate → strength concerns → BIS standards clarification + 5-year acceptance period",
+      "citation": "Thesis: Recycled aggregate acceptance"
+    },
+    {
+      "id": 7,
+      "source": "waste",
+      "target": "air",
+      "value": 58,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Recycling → less demolition dust + quarrying emissions → PM2.5 reduction → health improves → compliance support grows (reinforcing)",
+      "citation": "Thesis: C&D air quality cascade"
+    },
+    {
+      "id": 8,
+      "source": "buildings",
+      "target": "waste",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires design for deconstruction: Recovery only viable with modular building codes → structural engineering reforms prerequisite",
+      "citation": "Thesis: Design for disassembly needs"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "urban",
+      "value": 40,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via cost reduction: Recycled aggregate 20% cheaper (at scale) → municipal infrastructure budgets stretch 15% further",
+      "citation": "Thesis: C&D cost benefits"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via mining reduction: Quarry blasting emissions -30% → local air quality improves → respiratory health benefits in mining zones",
+      "citation": "Thesis: Mining-air quality linkage"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

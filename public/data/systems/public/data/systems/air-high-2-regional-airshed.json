@@ -1,0 +1,164 @@
+{
+  "title": "Regional Airshed Governance: Cross-Sectoral Systems Map",
+  "description": "Delhi-NCR/Mumbai-Pune joint action authorities for transboundary pollution",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Regional Airshed: Joint governance for transboundary pollution",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Multi-city coordination, metropolitan planning",
+      "color": "#ec4899"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Regional mobility, interstate freight",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Regional grids, power plant siting",
+      "color": "#eab308"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Industrial clusters, cross-state manufacturing",
+      "color": "#f97316"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Inter-city equity, health burden distribution",
+      "color": "#ec4899"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Regional waste management, landfill placement",
+      "color": "#84cc16"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "urban",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Airshed authority → coordinated action across NCR (28M people) → 40% PM2.5 from transport addressed regionally vs. 15% with city-only action",
+      "citation": "Thesis: Regional governance effectiveness"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "transport",
+      "value": 65,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Interstate coordination → unified truck restrictions → 30% freight NO2 reduction vs. 8% with city-level policy (border leakage eliminated)",
+      "citation": "Thesis: Transport airshed benefits"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "industry",
+      "value": 62,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Regional standards prevent pollution havens → industries can't relocate 50km to evade controls → 25% compliance improvement",
+      "citation": "Thesis: Industrial airshed enforcement"
+    },
+    {
+      "id": 4,
+      "source": "air",
+      "target": "energy",
+      "value": 58,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Airshed-scale planning → coal plant siting considers cumulative burden → 3 plants relocated outside NCR → 8 µg/m³ regional benefit",
+      "citation": "Thesis: Energy airshed planning"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "air",
+      "value": 60,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Jurisdictional resistance: States oppose ceding authority → constitutional barriers → 5-year political negotiation for enabling legislation",
+      "citation": "Thesis: Airshed governance barriers"
+    },
+    {
+      "id": 6,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Regional action → upwind cities reduce emissions → downwind health improves → cross-city solidarity grows → political support for cooperation (reinforcing)",
+      "citation": "Thesis: Airshed solidarity cycle"
+    },
+    {
+      "id": 7,
+      "source": "urban",
+      "target": "air",
+      "value": 50,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires revenue-sharing model: Cooperation only works with compensatory transfers → upwind cities need ₹500 Cr/year for action costs",
+      "citation": "Thesis: Airshed fiscal mechanism"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "energy",
+      "value": 38,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via freight electrification: Regional EV corridors → 40% truck electrification → 2 GW regional charging load → grid coordination needed",
+      "citation": "Thesis: Airshed transport-energy nexus"
+    },
+    {
+      "id": 9,
+      "source": "waste",
+      "target": "urban",
+      "value": 35,
+      "type": "indirect",
+      "layer": "governance",
+      "quantification": "Via regional landfills: Airshed authority → joint waste facilities → 50% reduction in city-level landfill fires → PM2.5 hotspot elimination",
+      "citation": "Thesis: Regional waste infrastructure"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 32,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via equity advocacy: Regional health data exposes disparities → low-income upwind areas demand compensation → redistributive mechanisms emerge",
+      "citation": "Thesis: Airshed equity pressures"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

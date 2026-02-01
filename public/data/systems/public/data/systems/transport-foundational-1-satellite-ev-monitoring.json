@@ -1,0 +1,148 @@
+{
+  "title": "Satellite EV Impact Monitoring: Cross-Sectoral Systems Map",
+  "description": "TROPOMI NO2 tracking validating 1.1% drop per 200 EVs to link health savings",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Satellite EV Monitoring: TROPOMI NO2 tracking, 1.1% drop per 200 EVs",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "NO2 tracking, health outcomes, emissions quantification",
+      "color": "#64748b"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "EV subsidy justification, renewable integration",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Policy design, monitoring infrastructure, evidence-based planning",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Hyperlocal air quality, community health tracking",
+      "color": "#ec4899"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban ecosystem health, pollution impacts",
+      "color": "#059669"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Satellite validation: 200 EVs = 1.1% NO2 reduction → quantifies ₹30K Cr health benefits → evidence for subsidy justification",
+      "citation": "Thesis: TROPOMI EV validation"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "energy",
+      "value": 50,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Evidence links EV subsidies to health outcomes → ₹10K Cr FAME subsidy justified by ₹30K Cr health savings → ROI demonstration",
+      "citation": "Thesis: EV subsidy ROI"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "urban",
+      "value": 45,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Real-time NO2 data → evidence-based policy design → targeted EV deployment in high-pollution corridors → optimizes impact",
+      "citation": "Thesis: Evidence-based EV policy"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Hyperlocal NO2 tracking → ward-level health improvements visible → community buy-in for EV adoption → social mobilization",
+      "citation": "Thesis: Community EV awareness"
+    },
+    {
+      "id": 5,
+      "source": "air",
+      "target": "transport",
+      "value": 35,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Attribution challenge: TROPOMI 1km² resolution → hard to isolate EV impact from other factors → requires ground-truthing",
+      "citation": "Thesis: Satellite attribution limits"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "transport",
+      "value": 50,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires baseline data: Need 3-year pre-EV NO2 baseline → monitoring infrastructure before validation → data infrastructure first",
+      "citation": "Thesis: EV monitoring prerequisites"
+    },
+    {
+      "id": 7,
+      "source": "transport",
+      "target": "air",
+      "value": 55,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Evidence → policy → more EVs → better air → health improvements → political support → stronger policies (reinforcing)",
+      "citation": "Thesis: EV evidence virtuous cycle"
+    },
+    {
+      "id": 8,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via health tracking: NO2 reduction → respiratory illness -15% → school attendance improves → community wellbeing",
+      "citation": "Thesis: Air-health cascade"
+    },
+    {
+      "id": 9,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 30,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via emissions reduction: Better air quality → urban tree health +20% → pollinator habitat improves → ecosystem recovery",
+      "citation": "Thesis: Urban air-biodiversity nexus"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

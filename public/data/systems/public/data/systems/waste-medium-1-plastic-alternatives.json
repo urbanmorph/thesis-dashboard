@@ -1,0 +1,158 @@
+{
+  "title": "Single-Use Plastic Alternatives Subsidy: Cross-Sectoral Systems Map",
+  "description": "Capital grants for bagasse/bamboo packaging manufacturing",
+  "nodes": [
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Plastic Alternatives: Bagasse/bamboo packaging subsidies",
+      "color": "#84cc16",
+      "isCentralNode": true
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Packaging manufacturing, bioplastics sector",
+      "color": "#f97316"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Agricultural residues, bamboo cultivation",
+      "color": "#10b981"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Marine plastic pollution, ecosystem contamination",
+      "color": "#059669"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal procurement, waste management",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Consumer behavior, affordability",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "waste",
+      "target": "industry",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Subsidy → ₹10K Cr bioplastics investment → 500 plants → bagasse/bamboo packaging market share 10%→40% → plastic displacement",
+      "citation": "Thesis: Plastic alternatives market growth"
+    },
+    {
+      "id": 2,
+      "source": "waste",
+      "target": "food",
+      "value": 65,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Agricultural residue value → sugarcane bagasse ₹3K/ton revenue → farm income diversification → ₹5K Cr rural benefits",
+      "citation": "Thesis: Bagasse packaging farm income"
+    },
+    {
+      "id": 3,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Plastic reduction → marine pollution -50% → ocean ecosystem recovery → fisheries productivity +20% → ₹8K Cr economic value",
+      "citation": "Thesis: Plastic alternatives marine benefits"
+    },
+    {
+      "id": 4,
+      "source": "waste",
+      "target": "urban",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Biodegradable packaging → municipal composting efficiency +40% → ₹3K Cr waste processing cost savings",
+      "citation": "Thesis: Biodegradable packaging municipal benefits"
+    },
+    {
+      "id": 5,
+      "source": "industry",
+      "target": "waste",
+      "value": 62,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Plastic lobby resistance: Petrochemical sector (₹50K Cr) opposes displacement → lobbying against subsidies → policy dilution pressure",
+      "citation": "Thesis: Plastic industry opposition"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 55,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Affordability barrier: Bioplastics 30% costlier → low-income consumers resist → subsidy must cover price gap",
+      "citation": "Thesis: Plastic alternatives cost challenges"
+    },
+    {
+      "id": 7,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 65,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Marine recovery → coastal tourism rebounds → ₹10K Cr revenue → political support for plastic ban grows (reinforcing)",
+      "citation": "Thesis: Marine biodiversity economic cascade"
+    },
+    {
+      "id": 8,
+      "source": "food",
+      "target": "waste",
+      "value": 52,
+      "type": "conditional",
+      "layer": "technical",
+      "quantification": "Requires supply chain development: Alternatives only scalable with residue aggregation infrastructure → ₹2K Cr collection network prerequisite",
+      "citation": "Thesis: Biomass supply chain needs"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via employment: Bioplastics manufacturing → 200K rural jobs → livelihood diversification → ₹5K Cr wage benefits",
+      "citation": "Thesis: Plastic alternatives employment cascade"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via fisheries: Marine plastic reduction → fish catch +15% → coastal community incomes improve → ₹3K Cr fisheries benefits",
+      "citation": "Thesis: Marine health fisheries linkage"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

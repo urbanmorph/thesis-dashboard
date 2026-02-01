@@ -1,0 +1,184 @@
+{
+  "title": "Transit Fare Recovery Model: Cross-Sectoral Systems Map",
+  "description": "Dynamic pricing + monthly passes + service frequency standards targeting 60% opex recovery",
+  "nodes": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Transit Fare Recovery: Dynamic pricing, monthly passes, 60% opex recovery target",
+      "color": "#8b5cf6",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Transit expansion, fiscal sustainability, service quality",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Transit accessibility, mobility patterns, affordability",
+      "color": "#ec4899"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Fuel consumption, modal shift impacts",
+      "color": "#eab308"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Emissions from transport modal shift",
+      "color": "#64748b"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Commuter patterns, business operations",
+      "color": "#f97316"
+    },
+    {
+      "id": "food",
+      "label": "Food & Agriculture",
+      "description": "Market access, distribution logistics",
+      "color": "#10b981"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "transport",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "60% opex recovery → ₹15K Cr/year self-funding → enables expansion without subsidy dependence → 500 new buses/year sustainable",
+      "citation": "Thesis: Transit fare recovery"
+    },
+    {
+      "id": 2,
+      "source": "transport",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Monthly passes + service frequency → 40% ridership increase → better connectivity for underserved wards → mobility equity",
+      "citation": "Thesis: Transit accessibility"
+    },
+    {
+      "id": 3,
+      "source": "transport",
+      "target": "energy",
+      "value": 45,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Modal shift from cars to buses → 30% fuel savings per passenger-km → 10 MT fuel saved annually in metro cities",
+      "citation": "Thesis: Transport energy efficiency"
+    },
+    {
+      "id": 4,
+      "source": "transport",
+      "target": "air",
+      "value": 50,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Increased ridership → 25% fewer private vehicles → 15% reduction in urban transport NOx emissions",
+      "citation": "Thesis: Transit air quality benefits"
+    },
+    {
+      "id": 5,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 60,
+      "type": "conflict",
+      "layer": "community",
+      "quantification": "Affordability resistance: Fare increases hit low-income riders → political backlash → requires lifeline tariffs for bottom 40%",
+      "citation": "Thesis: Transit affordability politics"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "transport",
+      "value": 45,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Political pressure for free transit: Election promises undermine fare recovery → states override pricing → fiscal sustainability threatened",
+      "citation": "Thesis: Transit political economy"
+    },
+    {
+      "id": 7,
+      "source": "transport",
+      "target": "urban",
+      "value": 65,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Fare recovery → reinvestment in service → better frequency → more ridership → higher revenue → virtuous cycle of improvement",
+      "citation": "Thesis: Transit virtuous cycle"
+    },
+    {
+      "id": 8,
+      "source": "urban",
+      "target": "transport",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires service quality first: Pricing only viable with <10 min frequency + clean buses + safety → infrastructure before pricing",
+      "citation": "Thesis: Service-price sequencing"
+    },
+    {
+      "id": 9,
+      "source": "transport",
+      "target": "industry",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via reliable transit: Predictable commutes → reduced absenteeism → 5% productivity gain in industrial zones near transit",
+      "citation": "Thesis: Transit-productivity nexus"
+    },
+    {
+      "id": 10,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via transit expansion: Better service → TOD investment → neighborhood densification → local business viability",
+      "citation": "Thesis: Transit-led development"
+    },
+    {
+      "id": 11,
+      "source": "neighbourhoods",
+      "target": "food",
+      "value": 30,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via mobility: Improved transit → market access for farmers → fresher produce in cities → reduced spoilage in distribution",
+      "citation": "Thesis: Transit-food access nexus"
+    },
+    {
+      "id": 12,
+      "source": "energy",
+      "target": "air",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via fuel savings: 10 MT less fuel → reduced refinery throughput → lower industrial emissions → regional air quality improvement",
+      "citation": "Thesis: Fuel-air cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

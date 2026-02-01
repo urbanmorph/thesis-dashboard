@@ -1,0 +1,158 @@
+{
+  "title": "Participatory Community Budgeting: Cross-Sectoral Systems Map",
+  "description": "Ward committees allocate 20% of municipal budgets via citizen vote",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Participatory Budgeting: Ward committees allocate 20% municipal funds",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Municipal governance, budget allocation, accountability",
+      "color": "#ec4899"
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "description": "Local mobility, street infrastructure, safety",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Community waste management, sanitation priorities",
+      "color": "#84cc16"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban green spaces, community parks",
+      "color": "#059669"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Local water infrastructure, drainage priorities",
+      "color": "#06b6d4"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Citizen participation → ₹40K Cr municipal budgets (20%) democratized → accountability improves → corruption perception -30%",
+      "citation": "Thesis: Participatory budgeting governance"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "transport",
+      "value": 65,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Community priorities → 60% allocations to sidewalks/street lights (vs. 20% top-down) → pedestrian safety +40% → walkability improves",
+      "citation": "Thesis: Participatory transport prioritization"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "waste",
+      "value": 62,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Local knowledge → waste collection routes optimized → coverage 70%→95% → ₹2K Cr municipal efficiency gains",
+      "citation": "Thesis: Community waste optimization"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 60,
+      "type": "synergy",
+      "layer": "community",
+      "quantification": "Green space demand → 40% budget allocations to parks (vs. 10% technocratic) → urban tree cover +15% → ₹3K Cr ecosystem services",
+      "citation": "Thesis: Participatory green infrastructure"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 58,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Bureaucratic resistance: Officials oppose devolution → expertise concerns → 5-year capacity building needed → implementation lag",
+      "citation": "Thesis: Participatory budgeting resistance"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 68,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "Participation → civic engagement grows → voter turnout +20% → political accountability increases (reinforcing democracy)",
+      "citation": "Thesis: Participatory governance virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 52,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires digital infrastructure: Participatory budgeting only scalable with e-voting platforms → ₹1K Cr civic tech investment prerequisite",
+      "citation": "Thesis: Digital participation infrastructure"
+    },
+    {
+      "id": 8,
+      "source": "transport",
+      "target": "biodiversity",
+      "value": 38,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via walkability: Sidewalk investments → car dependence -15% → road space reclaimed for street trees → urban canopy expands",
+      "citation": "Thesis: Transport-green space linkage"
+    },
+    {
+      "id": 9,
+      "source": "waste",
+      "target": "water",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via drainage: Community identifies solid waste blocking drains → targeted cleaning → flooding -40% → ₹2K Cr disaster avoided",
+      "citation": "Thesis: Waste-drainage integration"
+    },
+    {
+      "id": 10,
+      "source": "biodiversity",
+      "target": "neighbourhoods",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via parks: Green space access → mental health improves → community wellbeing +25% → ₹1K Cr health benefits",
+      "citation": "Thesis: Green space wellbeing benefits"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

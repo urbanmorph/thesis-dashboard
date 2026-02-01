@@ -1,0 +1,174 @@
+{
+  "title": "Community Heat Action Plans: Cross-Sectoral Systems Map",
+  "description": "Localized cooling centers + early warning for 500 vulnerable wards",
+  "nodes": [
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Heat Action Plans: Cooling centers + early warning for 500 wards",
+      "color": "#ec4899",
+      "isCentralNode": true
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City heat planning, infrastructure adaptation",
+      "color": "#ec4899"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Urban heat island, temperature extremes",
+      "color": "#64748b"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Cooling energy demand, AC access",
+      "color": "#eab308"
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Cooling centers, thermal comfort infrastructure",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Urban tree cover, green infrastructure",
+      "color": "#059669"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Cooling water demand, heat stress hydration",
+      "color": "#06b6d4"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 72,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Ward-level planning → 500 cooling centers (schools/libraries) → 10M vulnerable residents access during heat waves → ₹3K Cr avoided heat deaths",
+      "citation": "Thesis: Heat action plan mortality prevention"
+    },
+    {
+      "id": 2,
+      "source": "neighbourhoods",
+      "target": "air",
+      "value": 65,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Early warning → behavioral adaptation (reduce outdoor work) → heat exposure -40% → productivity loss avoided ₹8K Cr/year",
+      "citation": "Thesis: Heat warning productivity benefits"
+    },
+    {
+      "id": 3,
+      "source": "neighbourhoods",
+      "target": "energy",
+      "value": 60,
+      "type": "synergy",
+      "layer": "technical",
+      "quantification": "Cooling centers → shared AC access → individual household AC adoption delayed → peak demand 5 GW lower than BAU",
+      "citation": "Thesis: Cooling center demand reduction"
+    },
+    {
+      "id": 4,
+      "source": "neighbourhoods",
+      "target": "buildings",
+      "value": 58,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Public building retrofits → cool roofs + ventilation → 3°C temperature reduction → ₹2K Cr infrastructure upgrades",
+      "citation": "Thesis: Heat action building adaptation"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "neighbourhoods",
+      "value": 55,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Funding gap: Heat plans need ₹5K Cr; municipal budgets insufficient → central/state support required → 3-year financing delay",
+      "citation": "Thesis: Heat action plan financing"
+    },
+    {
+      "id": 6,
+      "source": "neighbourhoods",
+      "target": "biodiversity",
+      "value": 68,
+      "type": "cascade",
+      "layer": "shared",
+      "quantification": "Tree planting → urban canopy +20% → neighborhood cooling → heat stress declines → green space demand grows (reinforcing)",
+      "citation": "Thesis: Heat-greenery virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "neighbourhoods",
+      "target": "water",
+      "value": 52,
+      "type": "conditional",
+      "layer": "technical",
+      "quantification": "Requires hydration infrastructure: Heat plans only effective with 1000 public water points → ₹500 Cr drinking fountain network prerequisite",
+      "citation": "Thesis: Heat hydration infrastructure"
+    },
+    {
+      "id": 8,
+      "source": "air",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via UHI reduction: Tree cover → 3°C cooling → heat-sensitive species survival improves → urban biodiversity +15%",
+      "citation": "Thesis: Urban cooling biodiversity benefits"
+    },
+    {
+      "id": 9,
+      "source": "energy",
+      "target": "neighbourhoods",
+      "value": 38,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via peak reduction: Cooling centers → grid stability → power outages -30% during heat waves → community resilience",
+      "citation": "Thesis: Peak reduction reliability benefits"
+    },
+    {
+      "id": 10,
+      "source": "buildings",
+      "target": "energy",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via thermal design: Cool roofs on 500 centers → passive cooling → AC load -50% → ₹500 Cr energy savings",
+      "citation": "Thesis: Building efficiency cooling cascade"
+    },
+    {
+      "id": 11,
+      "source": "biodiversity",
+      "target": "air",
+      "value": 32,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via evapotranspiration: Trees → humidity increases → ozone formation -10% → air quality co-benefits",
+      "citation": "Thesis: Urban forest air quality impacts"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

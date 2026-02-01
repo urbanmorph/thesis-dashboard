@@ -1,0 +1,174 @@
+{
+  "title": "Embodied Carbon LCA Mandates: Cross-Sectoral Systems Map",
+  "description": "Whole-life carbon accounting for public buildings >10K sq.ft",
+  "nodes": [
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "description": "Embodied Carbon Mandates: LCA for public buildings >10K sq.ft",
+      "color": "#3b82f6",
+      "isCentralNode": true
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Cement, steel, construction materials, supply chains",
+      "color": "#f97316"
+    },
+    {
+      "id": "biodiversity",
+      "label": "Biodiversity",
+      "description": "Material extraction, habitat disruption, mining impacts",
+      "color": "#059669"
+    },
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Industrial emissions, cement kiln pollution",
+      "color": "#64748b"
+    },
+    {
+      "id": "waste",
+      "label": "Waste",
+      "description": "Construction waste, material circularity, recycling",
+      "color": "#84cc16"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Industrial energy for materials, production emissions",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "Building codes, procurement standards, policy enforcement",
+      "color": "#ec4899"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "buildings",
+      "target": "industry",
+      "value": 75,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "LCA mandates → low-carbon cement/steel procurement → 40% embodied carbon reduction → 120 MT CO₂ avoided by 2030",
+      "citation": "Thesis: Embodied carbon reduction"
+    },
+    {
+      "id": 2,
+      "source": "buildings",
+      "target": "waste",
+      "value": 60,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Lifecycle thinking → design for deconstruction → 70% material recovery vs 10% demolition waste → circular construction",
+      "citation": "Thesis: Building circularity"
+    },
+    {
+      "id": 3,
+      "source": "buildings",
+      "target": "air",
+      "value": 55,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Reduced cement demand → 30% less kiln emissions → PM2.5 reduction in industrial zones → health benefits",
+      "citation": "Thesis: Cement air quality impacts"
+    },
+    {
+      "id": 4,
+      "source": "buildings",
+      "target": "biodiversity",
+      "value": 50,
+      "type": "synergy",
+      "layer": "shared",
+      "quantification": "Lower material extraction → 40% reduction in limestone/iron ore mining → habitat preservation in mining regions",
+      "citation": "Thesis: Mining biodiversity impacts"
+    },
+    {
+      "id": 5,
+      "source": "industry",
+      "target": "buildings",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Cement/steel lobby resistance: Low-carbon alternatives 20% more expensive → industry opposes mandates → political pressure",
+      "citation": "Thesis: Material industry opposition"
+    },
+    {
+      "id": 6,
+      "source": "urban",
+      "target": "buildings",
+      "value": 55,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "LCA capacity gap: India lacks embodied carbon database → need 3-year baseline data development → infrastructure before enforcement",
+      "citation": "Thesis: LCA data infrastructure gap"
+    },
+    {
+      "id": 7,
+      "source": "buildings",
+      "target": "industry",
+      "value": 70,
+      "type": "cascade",
+      "layer": "governance",
+      "quantification": "LCA mandates → green material demand → industry scales production → costs drop → market transformation (virtuous cycle)",
+      "citation": "Thesis: Green materials market cascade"
+    },
+    {
+      "id": 8,
+      "source": "buildings",
+      "target": "waste",
+      "value": 60,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires recycled content markets: LCA only effective with 30% recycled steel/aggregate quotas → circular economy infrastructure first",
+      "citation": "Thesis: Circularity prerequisites"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "energy",
+      "value": 45,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via material efficiency: 40% less cement → reduced industrial energy demand → 20 TWh/year savings → grid capacity freed",
+      "citation": "Thesis: Material-energy nexus"
+    },
+    {
+      "id": 10,
+      "source": "waste",
+      "target": "biodiversity",
+      "value": 40,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via recycling: 70% material recovery → less virgin extraction → mining footprint reduction → ecosystem preservation",
+      "citation": "Thesis: Waste-biodiversity linkage"
+    },
+    {
+      "id": 11,
+      "source": "air",
+      "target": "energy",
+      "value": 35,
+      "type": "indirect",
+      "layer": "shared",
+      "quantification": "Via industrial efficiency: Lower cement production → coal-fired kilns reduced → power sector emissions decline",
+      "citation": "Thesis: Industrial air-energy cascade"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}

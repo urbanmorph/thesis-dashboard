@@ -1,0 +1,158 @@
+{
+  "title": "Industrial CEMS Third-Party Audits: Cross-Sectoral Systems Map",
+  "description": "Independent verification of Continuous Emissions Monitoring Systems data",
+  "nodes": [
+    {
+      "id": "air",
+      "label": "Air Quality",
+      "description": "Industrial CEMS Audits: Third-party verification of emissions data",
+      "color": "#64748b",
+      "isCentralNode": true
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Manufacturing compliance, emissions controls",
+      "color": "#f97316"
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "Coal plants, industrial energy, power sector",
+      "color": "#eab308"
+    },
+    {
+      "id": "urban",
+      "label": "Urban Development",
+      "description": "City enforcement, regulatory capacity",
+      "color": "#ec4899"
+    },
+    {
+      "id": "neighbourhoods",
+      "label": "Neighbourhoods",
+      "description": "Community exposure, local health impacts",
+      "color": "#ec4899"
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "description": "Industrial water use, pollution controls",
+      "color": "#06b6d4"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": "air",
+      "target": "industry",
+      "value": 70,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Third-party audits → 60% reduction in CEMS data manipulation → real emissions 2.5x reported levels exposed → ₹15K Cr in control investments triggered",
+      "citation": "Thesis: CEMS audit effectiveness"
+    },
+    {
+      "id": 2,
+      "source": "air",
+      "target": "energy",
+      "value": 68,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Coal plant verification → FGD/ESP performance validated → 40% SO2/PM reduction vs. pre-audit baseline → 5 MT coal emissions prevented",
+      "citation": "Thesis: Power sector CEMS compliance"
+    },
+    {
+      "id": 3,
+      "source": "air",
+      "target": "urban",
+      "value": 55,
+      "type": "synergy",
+      "layer": "governance",
+      "quantification": "Independent data → cities issue credible penalties → ₹500 Cr/year fines collected (vs ₹50 Cr with self-reporting) → enforcement credibility restored",
+      "citation": "Thesis: CEMS audit enforcement boost"
+    },
+    {
+      "id": 4,
+      "source": "industry",
+      "target": "air",
+      "value": 65,
+      "type": "conflict",
+      "layer": "governance",
+      "quantification": "Industry resistance: Audits reveal 60% non-compliance → ₹20K Cr retrofit costs → lobbying to weaken standards → political pushback",
+      "citation": "Thesis: CEMS audit opposition"
+    },
+    {
+      "id": 5,
+      "source": "urban",
+      "target": "air",
+      "value": 50,
+      "type": "conflict",
+      "layer": "technical",
+      "quantification": "Auditor capacity gap: Need 500 certified auditors; have 80 → 5-year training lag → enforcement bottleneck until 2030",
+      "citation": "Thesis: CEMS auditor shortage"
+    },
+    {
+      "id": 6,
+      "source": "air",
+      "target": "neighbourhoods",
+      "value": 60,
+      "type": "cascade",
+      "layer": "community",
+      "quantification": "Compliance → emissions cut → health improves → community trust in regulation grows → demand for enforcement increases (reinforcing)",
+      "citation": "Thesis: CEMS compliance virtuous cycle"
+    },
+    {
+      "id": 7,
+      "source": "industry",
+      "target": "air",
+      "value": 55,
+      "type": "conditional",
+      "layer": "governance",
+      "quantification": "Requires penalty escalation: Audits only effective if penalties exceed compliance costs → ₹10 Cr minimum fine needed vs. current ₹50L cap",
+      "citation": "Thesis: CEMS penalty structure"
+    },
+    {
+      "id": 8,
+      "source": "energy",
+      "target": "water",
+      "value": 35,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via FGD installation: SO2 controls require wet scrubbers → 30% increase in plant water use → water-energy nexus intensifies",
+      "citation": "Thesis: Pollution control water demands"
+    },
+    {
+      "id": 9,
+      "source": "industry",
+      "target": "energy",
+      "value": 40,
+      "type": "indirect",
+      "layer": "technical",
+      "quantification": "Via efficiency gains: Compliance forces process optimization → 8% industrial energy savings → grid demand reduction",
+      "citation": "Thesis: Compliance-efficiency co-benefits"
+    },
+    {
+      "id": 10,
+      "source": "neighbourhoods",
+      "target": "urban",
+      "value": 30,
+      "type": "indirect",
+      "layer": "community",
+      "quantification": "Via health data: Hospital admissions decline → community validates audit effectiveness → political support for enforcement grows",
+      "citation": "Thesis: Health validation of CEMS"
+    }
+  ],
+  "typeColors": {
+    "synergy": "#10b981",
+    "conflict": "#ef4444",
+    "cascade": "#f59e0b",
+    "conditional": "#a855f7",
+    "indirect": "#6b7280"
+  },
+  "layerColors": {
+    "governance": "#3b82f6",
+    "community": "#10b981",
+    "technical": "#6b7280",
+    "shared": "#64748b"
+  }
+}
