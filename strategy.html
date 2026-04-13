@@ -61,6 +61,56 @@
             max-width: 600px;
             margin-bottom: 1.5rem;
         }
+        /* Portfolio stats */
+        .portfolio-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        .stat-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #6ee7b7;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .stat-sep {
+            color: rgba(255,255,255,0.2);
+            font-size: 1.25rem;
+            user-select: none;
+        }
+        .stat-progress-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .stat-progress-track {
+            height: 4px;
+            width: 80px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        .stat-progress-bar {
+            height: 100%;
+            background: #6ee7b7;
+            border-radius: 999px;
+        }
+        .stat-progress-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+        }
+
         .strategies {
             display: flex;
             gap: 0.75rem;
@@ -74,6 +124,14 @@
             font-size: 0.85rem;
             font-weight: 500;
             color: white;
+        }
+        .strategy-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 0.5rem;
         }
         .strategy-pill .num {
             color: #6ee7b7;
@@ -320,11 +378,26 @@
         <div class="header-label">Urban &amp; Beyond Thesis</div>
         <h1>Shift cities from consumers to climate-conscious, participatory, resilient cities</h1>
         <p>This ambitious shift is aided by 4 strategies under the POESI framework, led by NOTF and coordinated by Socratus.</p>
+        <div class="portfolio-stats">
+            <div class="stat-item"><span class="stat-value">8</span> <span class="stat-label">active partners</span></div>
+            <span class="stat-sep">|</span>
+            <div class="stat-item"><span class="stat-value">130 Cr</span> <span class="stat-label">committed over 3 years</span></div>
+            <span class="stat-sep">|</span>
+            <div class="stat-item">
+                <span class="stat-value">38 Cr</span> <span class="stat-label">disbursed</span>
+                <div class="stat-progress-wrap">
+                    <div class="stat-progress-track"><div class="stat-progress-bar" style="width: 29.2%"></div></div>
+                    <span class="stat-progress-label">29% deployed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="strategy-label">POESI Framework — Strategies</div>
         <div class="strategies">
-            <div class="strategy-pill"><span class="num">1</span>Place-based ownership</div>
-            <div class="strategy-pill"><span class="num">2</span>Enable actors to act locally</div>
-            <div class="strategy-pill"><span class="num">3</span>Internationality &amp; adjacency</div>
-            <div class="strategy-pill"><span class="num">4</span>Knowledge available &amp; used (PDGI)</div>
+            <div class="strategy-pill">Place-based ownership</div>
+            <div class="strategy-pill">Enable actors to act locally</div>
+            <div class="strategy-pill">Internationality &amp; adjacency</div>
+            <div class="strategy-pill">Knowledge available &amp; used (PDGI)</div>
         </div>
     </div>
 </header>
