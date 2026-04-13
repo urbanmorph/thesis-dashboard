@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -198,6 +199,9 @@
             display: flex;
             align-items: flex-start;
             border-right: 3px solid;
+        }
+        .tl-row-label i {
+            margin-top: 0.2rem;
         }
         .tl-cell {
             background: white;
@@ -394,10 +398,10 @@
 
         <div class="strategy-label">POESI Framework — Strategies</div>
         <div class="strategies">
-            <div class="strategy-pill">Place-based ownership</div>
-            <div class="strategy-pill">Enable actors to act locally</div>
-            <div class="strategy-pill">Intersectionality &amp; adjacency</div>
-            <div class="strategy-pill">Knowledge available &amp; used (PDGI)</div>
+            <div class="strategy-pill"><i class="fa-solid fa-location-dot" style="opacity:0.6;margin-right:0.4rem;"></i>Place-based ownership</div>
+            <div class="strategy-pill"><i class="fa-solid fa-people-group" style="opacity:0.6;margin-right:0.4rem;"></i>Enable actors to act locally</div>
+            <div class="strategy-pill"><i class="fa-solid fa-circle-nodes" style="opacity:0.6;margin-right:0.4rem;"></i>Intersectionality &amp; adjacency</div>
+            <div class="strategy-pill"><i class="fa-solid fa-book-open" style="opacity:0.6;margin-right:0.4rem;"></i>Knowledge available &amp; used (PDGI)</div>
         </div>
     </div>
 </header>
@@ -419,7 +423,7 @@
         <div class="tl-header">12 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span></div></div>
 
         <!-- Row 1: Deepening -->
-        <div class="tl-row-label border-blue">Deepening at a place &amp; spreading geographically</div>
+        <div class="tl-row-label border-blue"><i class="fa-solid fa-map-location-dot" style="color:#3b82f6;margin-right:0.4rem;"></i>Deepening at a place &amp; spreading geographically</div>
         <div class="tl-cell" data-period="Current">
             <ul>
                 <li>Bengaluru outreach to build community base</li>
@@ -451,7 +455,7 @@
         </div>
 
         <!-- Row 2: Embedding themes -->
-        <div class="tl-row-label border-amber">Embedding themes for action</div>
+        <div class="tl-row-label border-amber"><i class="fa-solid fa-layer-group" style="color:#f59e0b;margin-right:0.4rem;"></i>Embedding themes for action</div>
         <div class="tl-cell" data-period="Current">
             <ul>
                 <li>Citizen action artefact: <a href="http://oaq.notf.in" target="_blank" style="color:#3b82f6;">oaq.notf.in</a></li>
@@ -482,7 +486,7 @@
         </div>
 
         <!-- Row 3: Sense making -->
-        <div class="tl-row-label border-violet">Sense-making, ownership &amp; storytelling</div>
+        <div class="tl-row-label border-violet"><i class="fa-solid fa-bullhorn" style="color:#8b5cf6;margin-right:0.4rem;"></i>Sense-making, ownership &amp; storytelling</div>
         <div class="tl-cell" data-period="Current">
             <ul>
                 <li><span class="metric">47 stories</span> on NOTF platform</li>
@@ -525,13 +529,13 @@
 
     <div class="timeline-grid">
         <div class="tl-header">Theme</div>
-        <div class="tl-header">Current</div>
-        <div class="tl-header">3 Months</div>
-        <div class="tl-header">6 Months</div>
-        <div class="tl-header">12 Months</div>
+        <div class="tl-header">Current<div class="time-dots"><span class="time-dot active"></span><span class="time-dot"></span><span class="time-dot"></span><span class="time-dot"></span></div></div>
+        <div class="tl-header">3 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot"></span><span class="time-dot"></span></div></div>
+        <div class="tl-header">6 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot"></span></div></div>
+        <div class="tl-header">12 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span></div></div>
 
         <!-- Energy -->
-        <div class="tl-row-label border-amber">Energy</div>
+        <div class="tl-row-label border-amber"><i class="fa-solid fa-bolt" style="color:#f59e0b;margin-right:0.4rem;"></i>Energy</div>
         <div class="tl-cell" data-period="Current">
             <ul>
                 <li>Understanding who addresses what elements of energy</li>
@@ -548,7 +552,7 @@
         <div class="tl-cell" data-period="12 Months"><ul><li style="color:#94a3b8;font-style:italic;">To be defined</li></ul></div>
 
         <!-- Waste -->
-        <div class="tl-row-label border-emerald">Waste</div>
+        <div class="tl-row-label border-emerald"><i class="fa-solid fa-recycle" style="color:#10b981;margin-right:0.4rem;"></i>Waste</div>
         <div class="tl-cell" data-period="Current">
             <ul>
                 <li>Waste canvas being developed (V0.0)</li>
@@ -579,7 +583,7 @@
         </div>
 
         <!-- Water -->
-        <div class="tl-row-label border-cyan">Water</div>
+        <div class="tl-row-label border-cyan"><i class="fa-solid fa-droplet" style="color:#06b6d4;margin-right:0.4rem;"></i>Water</div>
         <div class="tl-cell" data-period="Current">
             <ul>
                 <li>Aligning actors around water</li>
@@ -613,7 +617,7 @@
         <!-- Air Quality -->
         <div class="theme-card">
             <div class="theme-card-header bg-sky">
-                Air Quality
+                <i class="fa-solid fa-wind" style="margin-right:0.4rem;"></i>Air Quality
                 <a href="https://oaq.notf.in/" target="_blank" class="artefact">oaq.notf.in</a>
             </div>
             <div class="theme-card-body">
@@ -662,7 +666,7 @@
         <!-- Waste -->
         <div class="theme-card">
             <div class="theme-card-header bg-amber">
-                Waste
+                <i class="fa-solid fa-recycle" style="margin-right:0.4rem;"></i>Waste
             </div>
             <div class="theme-card-body">
                 <div class="role-section">
@@ -704,7 +708,7 @@
         <!-- Water (placeholder - partners to be mapped) -->
         <div class="theme-card">
             <div class="theme-card-header bg-teal">
-                Water
+                <i class="fa-solid fa-droplet" style="margin-right:0.4rem;"></i>Water
             </div>
             <div class="theme-card-body">
                 <div class="role-section">
