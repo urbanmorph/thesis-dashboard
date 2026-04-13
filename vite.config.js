@@ -16,6 +16,7 @@ export default defineConfig({
         'admin-funders': resolve(__dirname, 'admin-funders.html'),
         'admin-roadmap': resolve(__dirname, 'admin-roadmap.html'),
         login: resolve(__dirname, 'login.html'),
+        strategy: resolve(__dirname, 'strategy.html'),
       },
     },
   },
