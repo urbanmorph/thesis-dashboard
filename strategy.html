@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Strategy Roadmap | Rainmatter Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: white;
+            padding: 3rem 2rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 50%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .header-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .header-label {
+            display: inline-block;
+            background: rgba(16,185,129,0.2);
+            border: 1px solid rgba(16,185,129,0.3);
+            color: #6ee7b7;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+        .header h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            max-width: 700px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+        .strategies {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .strategy-pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+        }
+        .strategy-pill .num {
+            color: #6ee7b7;
+            font-weight: 700;
+            margin-right: 0.35rem;
+        }
+
+        /* Main content */
+        .content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Section headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 1.25rem;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .section-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+        }
+        .badge-notf { background: #dbeafe; color: #1d4ed8; }
+        .badge-themes { background: #fce7f3; color: #be185d; }
+        .section-sub {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Timeline grid */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 200px repeat(4, 1fr);
+            gap: 1px;
+            background: #e2e8f0;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .tl-header {
+            background: #0f172a;
+            color: white;
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .tl-header:first-child { text-align: left; }
+        .tl-row-label {
+            background: #f1f5f9;
+            padding: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            border-right: 3px solid;
+        }
+        .tl-cell {
+            background: white;
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: #475569;
+            line-height: 1.5;
+            transition: background 0.15s;
+        }
+        .tl-cell:hover { background: #f8fafc; }
+        .tl-cell ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tl-cell li {
+            padding: 0.3rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .tl-cell li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #cbd5e1;
+        }
+        .tl-cell .highlight {
+            background: #ecfdf5;
+            color: #065f46;
+            font-weight: 500;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+        }
+        .tl-cell .metric {
+            background: #eff6ff;
+            color: #1e40af;
+            font-weight: 600;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+        }
+        .border-blue { border-color: #3b82f6; }
+        .border-amber { border-color: #f59e0b; }
+        .border-violet { border-color: #8b5cf6; }
+        .border-emerald { border-color: #10b981; }
+        .border-rose { border-color: #f43f5e; }
+        .border-cyan { border-color: #06b6d4; }
+
+        /* Partner network */
+        .theme-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+        .theme-card {
+            background: white;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .theme-card-header {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .theme-card-header .artefact {
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            color: white;
+        }
+        .theme-card-header .artefact:hover { background: rgba(255,255,255,0.3); }
+        .bg-sky { background: linear-gradient(135deg, #0284c7, #0369a1); }
+        .bg-amber { background: linear-gradient(135deg, #d97706, #b45309); }
+        .bg-teal { background: linear-gradient(135deg, #0d9488, #0f766e); }
+        .theme-card-body { padding: 1.25rem; }
+        .role-section { margin-bottom: 1rem; }
+        .role-section:last-child { margin-bottom: 0; }
+        .role-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #94a3b8;
+            margin-bottom: 0.4rem;
+        }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 0.35rem;
+            font-weight: 500;
+        }
+        .tag-partner { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+        .tag-funder { background: #fefce8; color: #854d0e; border: 1px solid #fde68a; }
+        .tag-orchestrator { background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 3rem;
+        }
+
+        /* Time indicator dots */
+        .time-dots {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.25rem;
+        }
+        .time-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+        }
+        .time-dot.active { background: #6ee7b7; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .timeline-grid {
+                grid-template-columns: 140px repeat(4, 1fr);
+            }
+            .header h1 { font-size: 1.75rem; }
+            .theme-cards { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .timeline-grid {
+                display: block;
+            }
+            .tl-header { display: none; }
+            .tl-row-label {
+                border-right: none;
+                border-left: 3px solid;
+                font-size: 0.9rem;
+                padding: 0.75rem 1rem;
+            }
+            .tl-cell {
+                padding: 0.75rem 1rem;
+                border-left: 1px solid #e2e8f0;
+            }
+            .tl-cell::before {
+                content: attr(data-period);
+                display: block;
+                font-size: 0.7rem;
+                font-weight: 600;
+                color: #94a3b8;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin-bottom: 0.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-inner">
+        <div class="header-label">Urban &amp; Beyond Thesis</div>
+        <h1>Shift cities from consumers to climate-conscious, participatory, resilient cities</h1>
+        <p>This ambitious shift is aided by 4 strategies under the POESI framework, led by NOTF and coordinated by Socratus.</p>
+        <div class="strategies">
+            <div class="strategy-pill"><span class="num">1</span>Place-based ownership</div>
+            <div class="strategy-pill"><span class="num">2</span>Enable actors to act locally</div>
+            <div class="strategy-pill"><span class="num">3</span>Internationality &amp; adjacency</div>
+            <div class="strategy-pill"><span class="num">4</span>Knowledge available &amp; used (PDGI)</div>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+
+    <!-- NOTF Roadmap -->
+    <div class="section-header">
+        <h2>NOTF Strategy Roadmap</h2>
+        <span class="section-badge badge-notf">Strategy 1: Place-based Ownership</span>
+    </div>
+    <p class="section-sub">RF-driven framework owned and coordinated by Socratus. Timelines show progression from current state to 12-month targets.</p>
+
+    <div class="timeline-grid">
+        <div class="tl-header">Focus Area</div>
+        <div class="tl-header">Current<div class="time-dots"><span class="time-dot active"></span><span class="time-dot"></span><span class="time-dot"></span><span class="time-dot"></span></div></div>
+        <div class="tl-header">3 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot"></span><span class="time-dot"></span></div></div>
+        <div class="tl-header">6 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot"></span></div></div>
+        <div class="tl-header">12 Months<div class="time-dots"><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span><span class="time-dot active"></span></div></div>
+
+        <!-- Row 1: Deepening -->
+        <div class="tl-row-label border-blue">Deepening at a place &amp; spreading geographically</div>
+        <div class="tl-cell" data-period="Current">
+            <ul>
+                <li>Bengaluru outreach to build community base</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="3 Months">
+            <ul>
+                <li>Bengaluru convening for network action</li>
+                <li>Councillors library enabled</li>
+                <li>Build more CBO membership; onboard 1 actor from state, market, and society in 1 neighbourhood</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="6 Months">
+            <ul>
+                <li><span class="metric">3 cities</span> presence</li>
+                <li>2 Cohorts of Elected Representatives</li>
+                <li>NOTF platform in each of <span class="metric">5 corporations</span></li>
+                <li>Identify anchor partners in <span class="metric">10 target cities</span> (Mumbai, Bhubaneswar, Pune, Chennai, Ahmedabad, Shillong, Delhi, Kochi, Hyderabad)</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="12 Months">
+            <ul>
+                <li>NOTF platform active in <span class="metric">5+ cities</span> beyond Bangalore</li>
+                <li>Move from supply-driven to demand-driven</li>
+                <li>Every neighbourhood has diverse actor types (state, market, society)</li>
+                <li><span class="metric">300 members</span> on NOTF platform</li>
+                <li>Champions form new groups within neighbourhoods</li>
+            </ul>
+        </div>
+
+        <!-- Row 2: Embedding themes -->
+        <div class="tl-row-label border-amber">Embedding themes for action</div>
+        <div class="tl-cell" data-period="Current">
+            <ul>
+                <li>Citizen action artefact: <a href="http://oaq.notf.in" target="_blank" style="color:#3b82f6;">oaq.notf.in</a></li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="3 Months">
+            <ul>
+                <li>Community ownership of AQI</li>
+                <li>Attention to urban biodiversity</li>
+                <li><span class="metric">24 solution providers</span> across themes</li>
+                <li>Special Committee: RF, BPAC, Jana &amp; WRI monthly cadence on 16th commission finance</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="6 Months">
+            <ul>
+                <li>Source &amp; impact attribution for Air Quality</li>
+                <li>Identify missing themes, call for solution providers</li>
+                <li>BPAC Tactical: Air, BCLIP, Civic engagement with universities</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="12 Months">
+            <ul>
+                <li><span class="highlight">OAQ mainstreamed</span></li>
+                <li>Community ownership built; ~1000 aligned on platform</li>
+                <li>RF focuses solely on strengthening this</li>
+                <li>Target <span class="metric">50 solution providers</span> platformized on NOTF</li>
+            </ul>
+        </div>
+
+        <!-- Row 3: Sense making -->
+        <div class="tl-row-label border-violet">Sense-making, ownership &amp; storytelling</div>
+        <div class="tl-cell" data-period="Current">
+            <ul>
+                <li><span class="metric">47 stories</span> on NOTF platform</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="3 Months">
+            <ul>
+                <li>Aligning climate plans to ward level</li>
+                <li>Start talking to CBOs to share their stories</li>
+                <li>1 workshop on storytelling methods</li>
+                <li>1 documented story per corporation</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="6 Months">
+            <ul>
+                <li>Mainstream community ownership on AQ in 1 city</li>
+                <li><span class="metric">10 CBOs</span> trained for storytelling</li>
+                <li>Platform/channel for orgs to share stories (social media + Citizen Matters)</li>
+                <li>Ready-to-use templates for stories, captions, video scripts</li>
+                <li>Identify intersections with Proximity Project (WCAP, BESTx, BAF, BIAL)</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="12 Months">
+            <ul>
+                <li><span class="highlight">AQI mainstreamed</span> in other cities</li>
+                <li>ERs using resources for local engagement</li>
+                <li>CBOs share narratives on NOTF independently</li>
+                <li>Stories across all 5 corporations documented &amp; public</li>
+                <li>Proximity-based engagement becomes routine onboarding mechanism</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Thematic Chases -->
+    <div class="section-header" style="margin-top:3rem;">
+        <h2>Thematic Chases</h2>
+        <span class="section-badge badge-themes">Cross-cutting Themes</span>
+    </div>
+    <p class="section-sub">Sector-specific strategies developing canvases and partnerships across Energy, Waste, and Water.</p>
+
+    <div class="timeline-grid">
+        <div class="tl-header">Theme</div>
+        <div class="tl-header">Current</div>
+        <div class="tl-header">3 Months</div>
+        <div class="tl-header">6 Months</div>
+        <div class="tl-header">12 Months</div>
+
+        <!-- Energy -->
+        <div class="tl-row-label border-amber">Energy</div>
+        <div class="tl-cell" data-period="Current">
+            <ul>
+                <li>Understanding who addresses what elements of energy</li>
+                <li>Spoke to Prayas: willing to share info but not engage directly in interventions</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="3 Months">
+            <ul>
+                <li>Explore energy work by all partners: CEEW, WRI, CEED etc.</li>
+                <li>Focus on narratives only for now</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="6 Months"><ul><li style="color:#94a3b8;font-style:italic;">To be defined</li></ul></div>
+        <div class="tl-cell" data-period="12 Months"><ul><li style="color:#94a3b8;font-style:italic;">To be defined</li></ul></div>
+
+        <!-- Waste -->
+        <div class="tl-row-label border-emerald">Waste</div>
+        <div class="tl-cell" data-period="Current">
+            <ul>
+                <li>Waste canvas being developed (V0.0)</li>
+                <li>V1.0 strategy for internal RF thesis/ToC in waste coming soon</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="3 Months">
+            <ul>
+                <li>Release V1.0 of the map</li>
+                <li>Open invitation to contributors with data</li>
+                <li>April in-person convening to build V1</li>
+                <li>Socialize canvas with funders</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="6 Months">
+            <ul>
+                <li>Build co-pool based on canvas</li>
+                <li>Devise grant-making strategies for the sector</li>
+                <li>Move from canvas to strategy execution</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="12 Months">
+            <ul>
+                <li>Discovery of canvas value &amp; lessons learnt</li>
+                <li>Design and strategy validation (ground truthing)</li>
+                <li>Artefacts serve accountability &amp; ownership for communities</li>
+            </ul>
+        </div>
+
+        <!-- Water -->
+        <div class="tl-row-label border-cyan">Water</div>
+        <div class="tl-cell" data-period="Current">
+            <ul>
+                <li>Aligning actors around water</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="3 Months">
+            <ul>
+                <li>Starting with Urban water systems only</li>
+                <li>Talking to Biome (IUWM), Tags Forum (backwaters), Ecosttava (river ecosystems)</li>
+                <li>RF internal: map water canvas bottom-up</li>
+                <li>Focus: efficiency, reuse, groundwater recharge in urban context</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="6 Months">
+            <ul>
+                <li>Present map to Arghyam (keen to revive urban water portfolio)</li>
+                <li>Infosys, ITC, Sattva &amp; Arghyam to align on water strategy</li>
+                <li>Design tactical funding as one team</li>
+            </ul>
+        </div>
+        <div class="tl-cell" data-period="12 Months"><ul><li style="color:#94a3b8;font-style:italic;">To be defined</li></ul></div>
+    </div>
+
+    <!-- Partner Network -->
+    <div class="section-header" style="margin-top:3rem;">
+        <h2>Partner &amp; Funder Network</h2>
+    </div>
+    <p class="section-sub">Roles, partners, and funders organized by thematic area.</p>
+
+    <div class="theme-cards">
+        <!-- Air Quality -->
+        <div class="theme-card">
+            <div class="theme-card-header bg-sky">
+                Air Quality
+                <a href="https://oaq.notf.in/" target="_blank" class="artefact">oaq.notf.in</a>
+            </div>
+            <div class="theme-card-body">
+                <div class="role-section">
+                    <div class="role-label">Orchestrator</div>
+                    <div class="tag-list"><span class="tag tag-orchestrator">Rainmatter Foundation</span></div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Partners</div>
+                    <div class="tag-list">
+                        <span class="tag tag-partner">Aurassure</span>
+                        <span class="tag tag-partner">Urban Emissions</span>
+                        <span class="tag tag-partner">Envirocatalysts</span>
+                        <span class="tag tag-partner">Respirer</span>
+                        <span class="tag tag-partner">IIT Delhi</span>
+                        <span class="tag tag-partner">IIT Kanpur</span>
+                        <span class="tag tag-partner">CPCB</span>
+                        <span class="tag tag-partner">CSTEP</span>
+                        <span class="tag tag-partner">BPAC</span>
+                        <span class="tag tag-partner">OpenAQ</span>
+                        <span class="tag tag-partner">Saahas</span>
+                        <span class="tag tag-partner">APAG</span>
+                        <span class="tag tag-partner">CEEW</span>
+                        <span class="tag tag-partner">Asar</span>
+                        <span class="tag tag-partner">Samaaj</span>
+                        <span class="tag tag-partner">Tarkam</span>
+                        <span class="tag tag-partner">Earthmetry</span>
+                    </div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Funders</div>
+                    <div class="tag-list">
+                        <span class="tag tag-funder">Co-efficient Giving</span>
+                        <span class="tag tag-funder">Clean Air Fund</span>
+                        <span class="tag tag-funder">Nandan Reddy</span>
+                        <span class="tag tag-funder">Google</span>
+                    </div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Key Activity</div>
+                    <div style="font-size:0.8rem;color:#475569;">200-300 sensors procurement for Bangalore + Opex of Airview+ program. 800 sensors Capex already funded by Google.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waste -->
+        <div class="theme-card">
+            <div class="theme-card-header bg-amber">
+                Waste
+            </div>
+            <div class="theme-card-body">
+                <div class="role-section">
+                    <div class="role-label">Orchestrator</div>
+                    <div class="tag-list"><span class="tag tag-orchestrator">Rainmatter Foundation</span></div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Partners</div>
+                    <div class="tag-list">
+                        <span class="tag tag-partner">Desta</span>
+                        <span class="tag tag-partner">Socratus</span>
+                        <span class="tag tag-partner">Saahas</span>
+                        <span class="tag tag-partner">Saahas Zero Waste</span>
+                        <span class="tag tag-partner">Waste Warriors</span>
+                        <span class="tag tag-partner">Reap Benefit</span>
+                        <span class="tag tag-partner">EcoSattva</span>
+                        <span class="tag tag-partner">CSTEP</span>
+                        <span class="tag tag-partner">Plan Foundation</span>
+                        <span class="tag tag-partner">UTIF</span>
+                        <span class="tag tag-partner">CEEW</span>
+                        <span class="tag tag-partner">Recyclink</span>
+                        <span class="tag tag-partner">Fish-India</span>
+                        <span class="tag tag-partner">Borda</span>
+                        <span class="tag tag-partner">Janagraha</span>
+                    </div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Funders</div>
+                    <div class="tag-list">
+                        <span class="tag tag-funder">Tata Trusts</span>
+                        <span class="tag tag-funder">SBI</span>
+                        <span class="tag tag-funder">HUL</span>
+                        <span class="tag tag-funder">Villigro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water (placeholder - partners to be mapped) -->
+        <div class="theme-card">
+            <div class="theme-card-header bg-teal">
+                Water
+            </div>
+            <div class="theme-card-body">
+                <div class="role-section">
+                    <div class="role-label">Orchestrator</div>
+                    <div class="tag-list"><span class="tag tag-orchestrator">Rainmatter Foundation</span></div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Partners (in discussion)</div>
+                    <div class="tag-list">
+                        <span class="tag tag-partner">Biome</span>
+                        <span class="tag tag-partner">Tags Forum</span>
+                        <span class="tag tag-partner">Ecosttava</span>
+                    </div>
+                </div>
+                <div class="role-section">
+                    <div class="role-label">Funders (interested)</div>
+                    <div class="tag-list">
+                        <span class="tag tag-funder">Arghyam</span>
+                        <span class="tag tag-funder">Infosys</span>
+                        <span class="tag tag-funder">ITC</span>
+                        <span class="tag tag-funder">Sattva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Urban &amp; Beyond Thesis Strategy Roadmap &middot; Rainmatter Foundation &middot; POESI Framework
+</div>
+
+</body>
+</html>
