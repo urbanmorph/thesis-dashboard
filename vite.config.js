@@ -4,19 +4,10 @@ import { resolve } from 'path'
 export default defineConfig({
   build: {
     rollupOptions: {
+      // the site is these two pages only: the operating-model tree (landing) + the field guide
       input: {
         main: resolve(__dirname, 'index.html'),
-        sectors: resolve(__dirname, 'sectors.html'),
-        thesis: resolve(__dirname, 'thesis.html'),
-        resources: resolve(__dirname, 'resources.html'),
-        'systems-map': resolve(__dirname, 'systems-map.html'),
-        admin: resolve(__dirname, 'admin.html'),
-        'admin-partners': resolve(__dirname, 'admin-partners.html'),
-        'admin-funding': resolve(__dirname, 'admin-funding.html'),
-        'admin-funders': resolve(__dirname, 'admin-funders.html'),
-        'admin-roadmap': resolve(__dirname, 'admin-roadmap.html'),
-        login: resolve(__dirname, 'login.html'),
-        strategy: resolve(__dirname, 'strategy.html'),
+        'field-guide': resolve(__dirname, 'field-guide.html'),
       },
     },
   },

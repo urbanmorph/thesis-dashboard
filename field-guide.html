@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainmatter Foundation: field guide</title>
+<style>
+@font-face{font-family:"Cabinet Grotesk";font-weight:300 900;font-display:swap;src:url("/fonts/cabinet-grotesk.woff2") format("woff2")}
+@font-face{font-family:"Hanken Grotesk";font-weight:300 800;font-display:swap;src:url("/fonts/hanken-grotesk.woff2") format("woff2")}
+@font-face{font-family:"Fraunces";font-weight:400 700;font-display:swap;src:url("/fonts/fraunces.woff2") format("woff2")}
+</style>
+<style>
+  :root{
+    --bg:#f5f3ea; --surface:#fcfbf5; --raised:#fbf9f0; --text:#11271e; --dim:#5e6b5f; --faint:#94a08d;
+    --hair:#e2decf; --mist:#edf1e8; --leaf:#3da35d; --leaf-deep:#2c7a45; --water:#1e6e6a; --forest:#0a4030;
+    --sage:#c7d6c2; --root:#7d6a49; --warn:#9a6a00; --danger:#9b2c2c; --fill:#0a4030;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --display:"Cabinet Grotesk",ui-sans-serif,system-ui,"Segoe UI",sans-serif;
+    --body:"Hanken Grotesk",ui-sans-serif,-apple-system,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+    --shadow:0 1px 2px rgba(17,39,30,.05),0 18px 48px -30px rgba(17,39,30,.28);
+    --urban:#1e6e6a; --rural:#2c7a45; --wild:#7d6a49; --horiz:#9a6a00;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#07231b; --surface:#0c2c22; --raised:#0e3327; --text:#eef3ea; --dim:#9fb0a2; --faint:#6f8274;
+    --hair:#18392c; --mist:#0f3226; --leaf:#4fbf72; --leaf-deep:#6fce8b; --water:#4aa39d; --forest:#bfe6c9;
+    --sage:#2f5e43; --root:#b9a97f; --warn:#e0a72e; --danger:#e6857f; --fill:#2c7a45;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 18px 48px -26px rgba(0,0,0,.6);
+    --urban:#4aa39d; --rural:#6fce8b; --wild:#c3ac7d; --horiz:#e0a72e;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#07231b; --surface:#0c2c22; --raised:#0e3327; --text:#eef3ea; --dim:#9fb0a2; --faint:#6f8274;
+    --hair:#18392c; --mist:#0f3226; --leaf:#4fbf72; --leaf-deep:#6fce8b; --water:#4aa39d; --forest:#bfe6c9;
+    --sage:#2f5e43; --root:#b9a97f; --warn:#e0a72e; --danger:#e6857f; --fill:#2c7a45;
+    --urban:#4aa39d; --rural:#6fce8b; --wild:#c3ac7d; --horiz:#e0a72e;
+  }
+  :root[data-theme="light"]{
+    --bg:#f5f3ea; --surface:#fcfbf5; --raised:#fbf9f0; --text:#11271e; --dim:#5e6b5f; --faint:#94a08d;
+    --hair:#e2decf; --mist:#edf1e8; --leaf:#3da35d; --leaf-deep:#2c7a45; --water:#1e6e6a; --forest:#0a4030;
+    --sage:#c7d6c2; --root:#7d6a49; --warn:#9a6a00; --danger:#9b2c2c; --fill:#0a4030;
+    --urban:#1e6e6a; --rural:#2c7a45; --wild:#7d6a49; --horiz:#9a6a00;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:1000px;margin:0 auto;padding:52px 28px 72px}
+  .tag{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;
+    color:var(--leaf-deep);background:var(--mist);border:1px solid var(--hair);padding:5px 11px;border-radius:20px}
+  .eyebrow{font-family:var(--display);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700;color:var(--leaf-deep)}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5.5vw,50px);line-height:1.05;margin:.35em 0 .18em;letter-spacing:-.015em;text-wrap:balance}
+  .dek{font-size:clamp(16px,2vw,20px);color:var(--dim);max-width:64ch;margin:0}
+  h2{font-family:var(--display);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--leaf-deep);margin:0 0 2px}
+  .sec{margin-top:50px;border-top:1px solid var(--hair);padding-top:26px}
+  .sec .lead{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);line-height:1.26;font-weight:500;margin:.2em 0 .55em;letter-spacing:-.01em;text-wrap:balance}
+  p{margin:0 0 15px;max-width:72ch} .muted{color:var(--dim)}
+  b,strong{color:var(--forest)} .muted b,.muted strong{color:var(--forest)}
+  .pull{font-family:var(--serif);font-size:clamp(20px,2.8vw,26px);line-height:1.3;color:var(--forest);border-left:3px solid var(--leaf);padding:2px 0 2px 20px;margin:22px 0;max-width:58ch;font-weight:500}
+  /* three questions */
+  .qs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 6px}
+  @media(max-width:640px){.qs{grid-template-columns:1fr}}
+  .qs .q{background:var(--surface);border:1px solid var(--hair);border-top:3px solid var(--leaf);border-radius:14px;padding:14px 16px}
+  .qs .q .k{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--leaf-deep)}
+  .qs .q .d{font-size:14px;color:var(--dim);margin-top:5px}
+  /* one-line notation */
+  .oneliner{background:var(--mist);border:1px solid var(--hair);border-radius:14px;padding:16px 20px;margin:18px 0;font-size:15px;line-height:1.5}
+  .oneliner .fill{color:var(--forest);font-weight:700}
+  .oneliner .w{border-bottom:1px solid var(--sage)}
+  .oneliner .ex{display:block;font-size:13.5px;color:var(--dim);margin-top:11px;padding-top:11px;border-top:1px dashed var(--hair)}
+  .oneliner .ex b{color:var(--leaf-deep)}
+  /* mental models */
+  .mm{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--hair)}
+  .mm .n{font-family:var(--display);font-weight:700;font-size:22px;color:var(--leaf);line-height:1;padding-top:2px;font-variant-numeric:tabular-nums}
+  .mm h4{font-family:var(--display);font-size:16.5px;font-weight:700;margin:0 0 4px;color:var(--forest)}
+  .mm p{margin:0;font-size:14.5px;color:var(--dim);max-width:74ch}
+  .mm p b{color:var(--text)}
+  /* form x life grid */
+  .grid2{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0 6px;font-size:14px}
+  .grid2 th,.grid2 td{border:1px solid var(--hair);padding:12px 14px;text-align:left;vertical-align:top}
+  .grid2 thead th{background:var(--mist);font-family:var(--display);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--leaf-deep)}
+  .grid2 tbody th{background:var(--mist);font-family:var(--display);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--leaf-deep);width:110px}
+  .grid2 td b{color:var(--forest)}
+  /* test checks */
+  .test{list-style:none;padding:0;margin:18px 0 0;counter-reset:c;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+  .test li{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:13px 16px 13px 42px;font-size:14px;position:relative}
+  .test li::before{counter-increment:c;content:counter(c);position:absolute;left:13px;top:13px;font-family:var(--display);font-weight:700;font-size:13px;color:var(--leaf);
+    width:20px;height:20px;border:1.5px solid var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .test b{color:var(--forest);font-family:var(--display);font-size:13px;display:block;margin-bottom:2px}
+  /* roles + lifecycle */
+  .roles{width:100%;border-collapse:collapse;margin:16px 0 6px;font-size:13.5px}
+  .roles th,.roles td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--hair);vertical-align:top}
+  .roles thead th{font-family:var(--display);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);font-weight:700}
+  .roles td:first-child{font-family:var(--display);font-weight:700;color:var(--forest);white-space:nowrap}
+  .life{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0 6px;font-family:var(--display);font-size:13px;font-weight:700}
+  .life span{background:var(--mist);border:1px solid var(--hair);border-radius:20px;padding:6px 13px;color:var(--forest)}
+  .life .arw{color:var(--faint);font-weight:400;padding:0 1px}
+  /* worked shapes */
+  .shapes{width:100%;border-collapse:collapse;margin:16px 0 6px;font-size:14px}
+  .shapes th,.shapes td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--hair);vertical-align:top}
+  .shapes thead th{font-family:var(--display);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);font-weight:700}
+  .shapes td:first-child{font-family:var(--display);font-weight:700}
+  .shapes .u{color:var(--urban)} .shapes .r{color:var(--rural)} .shapes .k{color:var(--warn)}
+  /* stranded stories */
+  .story{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--hair);font-size:14.5px}
+  .story:last-child{border-bottom:0}
+  .story .s{font-family:var(--display);font-weight:700;font-size:13px;color:var(--forest)}
+  .story .s span{display:block;font-weight:500;font-size:11px;color:var(--faint);margin-top:2px}
+  @media(max-width:560px){.story{grid-template-columns:1fr;gap:4px}}
+  .callout{background:var(--mist);border:1px solid var(--hair);border-radius:14px;padding:18px 20px;margin:22px 0;font-size:14.5px;color:var(--dim)}
+  .callout b{color:var(--forest)}
+  ol.use{padding-left:20px;margin:14px 0 0} ol.use li{margin-bottom:9px;max-width:70ch;font-size:15px}
+  a{color:var(--leaf-deep)}
+  .note{margin-top:48px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px;color:var(--faint);max-width:82ch}
+
+.td-nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 84%,transparent);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--hair)}
+.td-nav-in{padding:12px clamp(20px,4.5vw,40px);display:flex;align-items:center;
+  justify-content:space-between;gap:20px;font-family:var(--display)}
+.td-nav .brand{font-weight:700;font-size:14px;letter-spacing:-.01em;color:var(--leaf-deep);text-decoration:none;white-space:nowrap}
+.td-nav .lnk{display:flex;gap:clamp(16px,3vw,28px);font-size:13.5px;font-weight:600}
+.td-nav .lnk a{color:var(--dim);text-decoration:none;padding:3px 0;border-bottom:2px solid transparent;transition:color .15s}
+.td-nav .lnk a:hover{color:var(--leaf-deep)}
+.td-nav .lnk a.on{color:var(--text);border-bottom-color:var(--leaf)}
+</style>
+</head>
+<body>
+<nav class="td-nav"><div class="td-nav-in"><a class="brand" href="/">Rainmatter Foundation</a><div class="lnk"><a href="/">Operating model</a><a href="/field-guide.html" class="on">Field guide</a></div></div></nav>
+<div class="wrap">
+  <span class="tag">Rainmatter Foundation · how we work</span>
+  <div class="eyebrow" style="margin-top:20px">Border artefacts · a field guide</div>
+  <h1>How to spot, build, and steward a border artefact</h1>
+  <p class="dek">A working guide for the RF team. A border artefact is a position, not a thing. It is defined by who sits at the border, what it coordinates, and how long it lives. Its form (data, a canvas, a strategy, a contract, a convening) is incidental. This guide gives the mental models, the test, the roles, and three worked shapes, so you can derive the right artefact for any theme.</p>
+
+  <div class="sec">
+    <h2>1 · What it is</h2>
+    <p class="lead">A border artefact is not an object. It is a relationship: a shared thing that sits on the edge between a few named actors and lets them coordinate without merging or agreeing on everything.</p>
+    <p>It is the working cousin of the "boundary object": plastic enough to fit each actor's local use, robust enough to hold one identity across all of them. What makes it a <i>border</i> artefact is where it sits, not what it is made of.</p>
+    <p class="pull">The artefact sits in no one's turf. It sits in the border between named actors. RF stewards it; RF never owns it.</p>
+    <p class="muted">That neutrality is load-bearing, not an ethic. Its power comes from being on nobody's turf, which is exactly what lets actors adopt it without ceding control. The moment one actor owns it, it stops being a commons and becomes a platform-grab, and the others defect. RF can hold the border precisely because it is not competing for anyone's turf.</p>
+
+    <p style="margin-top:26px"><b>Its utility is three questions.</b> If you cannot answer all three, you do not yet have an artefact.</p>
+    <div class="qs">
+      <div class="q"><div class="k">Who is at the border</div><div class="d">A few <b>named</b> actors, each with a distinct unmet incentive. Never "everybody".</div></div>
+      <div class="q"><div class="k">What is its purpose</div><div class="d">The specific misalignment it resolves, and what crosses the border in each direction.</div></div>
+      <div class="q"><div class="k">How long it lives</div><div class="d">Transient (hands off to a successor) or enduring (becomes infrastructure).</div></div>
+    </div>
+
+    <div class="oneliner">
+      Write any artefact in one line:<br>
+      <span class="w">[artefact]</span> sits between <span class="fill">[named actors]</span> so that <span class="w">[what crosses / purpose]</span>; it is a <span class="w">[form]</span>, <span class="w">[transient &rarr; successor / enduring]</span>. RF stewards it because <span class="w">[why it is on no one's turf]</span>.
+      <span class="ex"><b>OAQ:</b> the open air-quality commons sits between <b>communities</b> and <b>solution actors</b> so that all of them act on the same air numbers; a <b>commons, enduring</b>. RF stewards it because it competes with none of them.</span>
+      <span class="ex"><b>Waste (dry):</b> the waste canvas sits between <b>innovators, funders and the housing ministry</b> so all three see the same broken material-recovery chokepoint; a <b>diagnostic, transient &rarr; the professionalised-MRF feedstock-market policy</b>. RF stewards it because it holds no waste asset and clears no tender.</span>
+      <span class="ex"><b>Waste (wet):</b> the artefact <b>has not crystallised</b>. It will sit between <b>air-quality, water and waste actors</b> so that landfill methane and leachate become one measured problem. Form and life are not yet set; the intersection is the nursery.</span>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>2 · Seven mental models</h2>
+    <p class="lead">The whole method falls out of the three questions.</p>
+
+    <div class="mm"><div class="n">1</div><div>
+      <h4>The named edge, not the public square</h4>
+      <p>A border has <b>sides</b>, and you must be able to name who is on each. "Open data for everyone" is not a border artefact; it is a public good no one champions. The power comes from specific actors with specific unmet incentives facing each other across the object. If the border is "everybody", reject it: there is no edge to hold.</p>
+    </div></div>
+    <div class="mm"><div class="n">2</div><div>
+      <h4>Form follows the border</h4>
+      <p>The artefact takes whatever shape that edge needs. Data is only one option: a <b>diagnostic</b> (a canvas or map that makes the broken link visible), a <b>commons</b> (an open registry or data substrate), a <b>strategy</b> (a PPP standard, a benefit-sharing rule), a <b>contract</b> (a model clause that pulls actors in), or a <b>convening</b> (the coalition itself as the object). Sometimes the artefact <i>is</i> the strategy. The border, purpose and life are essential; the material is incidental.</p>
+    </div></div>
+    <div class="mm"><div class="n">3</div><div>
+      <h4>The form-by-life grid, and artefacts move across it</h4>
+      <p>Two axes place every artefact, and its job is often to <b>travel</b> from one cell to another. A diagnostic canvas is strategy-and-transient; its purpose is to migrate to strategy-and-enduring (the policy it points to).</p>
+    </div></div>
+    <table class="grid2">
+      <thead><tr><th></th><th>Transient</th><th>Enduring</th></tr></thead>
+      <tbody>
+        <tr><th>Data</th><td>A one-off study (quantify landfill methane once to make the case)</td><td>The OAQ commons, an open registry</td></tr>
+        <tr><th>Strategy</th><td>The <b>waste canvas</b> (diagnose, then retire)</td><td>The professionalised-MRF policy, an ABS mechanism, a standard</td></tr>
+      </tbody>
+    </table>
+    <div class="mm"><div class="n">4</div><div>
+      <h4>Succession: know when to let one die</h4>
+      <p>An artefact is born for a purpose. When it is served, it either becomes permanent infrastructure or <b>hands off to a successor and retires</b>. The canvas identifies the broken MRF, spawns the policy artefact, and its job is done. The failure mode is the <b>zombie artefact</b>: a canvas kept alive as a deliverable because no one named its successor. RF's discipline is running the lifecycle, not preserving any single object.</p>
+    </div></div>
+    <div class="mm"><div class="n">5</div><div>
+      <h4>The intersection is a nursery</h4>
+      <p>Where two theme-borders overlap, a new artefact crystallises with a new cast of actors. Wet waste is unsolved precisely because its artefact (air-quality, water and waste actors, around methane and leachate) has not been born yet. That is not a gap, it is the site. And the strategic kicker: <b>only an actor working across waste, air and water can even see that intersectional artefact.</b> A deep single-theme funder is blind to it. Intersectional artefacts are what a wide portfolio can uniquely steward.</p>
+    </div></div>
+    <div class="mm"><div class="n">6</div><div>
+      <h4>Neutrality is load-bearing</h4>
+      <p>Because the artefact sits between named actors and RF is on none of their turf, RF can hold the edge. The instant RF, or any one actor, owns it, the border collapses into a platform-grab and the others defect. Steward, never own: not as ethics, as physics.</p>
+    </div></div>
+    <div class="mm"><div class="n">7</div><div>
+      <h4>It is all chlorophyll</h4>
+      <p>Data-artefact or strategy-artefact, diagnostic or standard, every one lives in the same layer of the tree: the conversion of RF's four capitals into ownership on the ground. The verticals are <i>where</i>; the artefacts are <i>how the light becomes growth</i>. That is what unifies them.</p>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <h2>3 · The test</h2>
+    <p class="lead">Six questions. The old checklist described a commons; this screens any form, including a strategy or a diagnostic.</p>
+    <ul class="test">
+      <li><b>Name the sides</b>Who is at the border? If the honest answer is "everybody", it is a public good, not an artefact.</li>
+      <li><b>What crosses</b>Name what flows each way (data one way, solutions back; feedstock one way, rules the other).</li>
+      <li><b>The misalignment</b>What specific incentive gap or broken link does it resolve between those actors?</li>
+      <li><b>The form, for now</b>Diagnostic, commons, strategy, contract or convening? Pick the one this edge needs today.</li>
+      <li><b>Longevity and successor</b>Transient or enduring? If transient, name the artefact it hands off to.</li>
+      <li><b>RF's neutral seat</b>Why can RF steward this edge without any actor defecting? If RF would own it, stop.</li>
+    </ul>
+    <p class="muted" style="margin-top:16px">Where the form is a <b>commons</b>, the older tests still apply on top: open and interoperable (FOSS / PDGI), ownable at the edges, cheap to join and valuable at the margin, trusted by convergence rather than single authority, and tied to an action loop. They are properties of the commons form, not the definition of a border artefact.</p>
+  </div>
+
+  <div class="sec">
+    <h2>4 · Roles and the lifecycle</h2>
+    <p class="lead">An artefact becomes impact only when the roles are staffed and the lifecycle is run.</p>
+    <p>Two of our own maps already name the roles: the OAQ six roles and the waste canvas's Core / Catalyst / Enabler layers. They are the same taxonomy. Before backing a candidate, name a real actor for each. The empty role is where it will stall.</p>
+    <table class="roles">
+      <thead><tr><th>RF role</th><th>What it does</th><th>OAQ</th><th>Waste canvas layer</th></tr></thead>
+      <tbody>
+        <tr><td>Artefact</td><td>The open object at the border</td><td>Aurassure + FOSS / PDGI</td><td>the canvas, later the MRF standard</td></tr>
+        <tr><td>Orchestrator</td><td>Holds the neutral edge, convenes</td><td>Socratus</td><td>Enabler: Socratus</td></tr>
+        <tr><td>Ownership layer</td><td>Owns the last mile</td><td>BPAC, RWAs, communities</td><td>Core: ULBs, RWAs, informal collectors</td></tr>
+        <tr><td>Depth partner</td><td>Evidence and credibility</td><td>CSTEP</td><td>Catalyst: consultants (KPMG), research bodies</td></tr>
+        <tr><td>Tipping capital / incumbent</td><td>De-risks or legitimises at scale</td><td>philanthropy, Google</td><td>Catalyst: funders; the housing ministry</td></tr>
+        <tr><td>Downstream market</td><td>Builds on top</td><td>app-builders on open AQI</td><td>startups freed to buy feedstock</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">To these six, the multi-year cases add three verbs that recur at every stage: <b>convening</b> the actors, <b>presenting evidence</b>, and <b>lobbying</b> for the rule change nothing else substitutes for.</p>
+    <div class="life">
+      <span>Diagnose</span><span class="arw">&rarr;</span><span>Convene</span><span class="arw">&rarr;</span><span>Re-align (strategy)</span><span class="arw">&rarr;</span><span>Institutionalise</span><span class="arw">&rarr;</span><span>Retire or persist</span>
+    </div>
+    <div class="callout"><b>Measure the gap being crossed, not the aggregation.</b> Not the count of partners or canvases, but: an open commons that exists, an incumbent that joins, a rule that changes, another geography that replicates, an artefact that successfully handed off to its successor.</div>
+  </div>
+
+  <div class="sec">
+    <h2>5 · Three shapes, worked</h2>
+    <p class="lead">RF's method has more than one shape. Naming them is half the work.</p>
+    <table class="shapes">
+      <thead><tr><th>Case</th><th>Shape</th><th>Win condition</th></tr></thead>
+      <tbody>
+        <tr><td class="u">OAQ &middot; air</td><td>Open one commons, aggregate fast</td><td>an incumbent joins (Google opens its sensor data)</td></tr>
+        <tr><td class="r">Biodiversity &middot; wild + rural</td><td>Link stranded registries via devolution</td><td>a rights-to-benefit chain finally carries value</td></tr>
+        <tr><td class="k">Waste &middot; urban</td><td>A canvas exposes a chokepoint, then policy plus a market</td><td>innovators get reliable feedstock, freed from tenders</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px"><b>OAQ</b> is the fast, single-commons shape: an open air-quality layer that communities feed and solution actors build on. RF seeded the artefact and aggregated the ecosystem; it built no sensor. <a href="#">Read the OAQ case study &rarr;</a></p>
+    <p><b>The biodiversity chain</b> is the slow, multi-registry shape. A People's Biodiversity Register is inert unless it is linked to Community Forest Rights (tenure) and Access and Benefit Sharing (a return), riding a devolution chain from the national authority down to a capable local committee. The artefact is the <b>linkage</b> plus the multi-year coalition, not any single register. It fuses ecology and livelihoods in one place.</p>
+    <p><b>Waste</b> is the cross-theme shape. The Socratus and Desta canvas revealed the broken material-recovery facility; a coalition (housing ministry, funders, consultants) turns that into a professionalised-MRF policy and a feedstock-purchasing market that routes innovators around the municipal tenders they never clear. Then it radiates: wet-waste mountains are measured for methane by <b>reusing OAQ</b>, and their leachate is measured against the <b>water-quality</b> theme. One artefact serves three themes; one coalition dissolves several linked dynamics at once.</p>
+  </div>
+
+  <div class="sec">
+    <h2>6 · Registries are the entry, not the answer</h2>
+    <p class="lead">A registry is hollow not only when it is closed, but when it is stranded: cut off from the rights, benefits and devolved authority that make it actionable.</p>
+    <p>Opening the data is necessary and nowhere near sufficient. Our own data stories are the pipeline of <b>starting diagnostics</b>: each names a stranded registry and, more importantly, the <b>linkage</b> it still needs before it can act. Read them as the first move, not the artefact.</p>
+    <div class="story"><div class="s">the-uncounted<span>wild</span></div><div>India counts elephants and tigers; 8 of 10 conflict species go untallied and snakebite (~50,000 deaths a year) is excluded from conflict policy. <b>&rarr; an open conflict registry, linked to verified-incident compensation.</b></div></div>
+    <div class="story"><div class="s">whose-forest<span>wild</span></div><div>Twenty years on, ~3% of Community Forest Rights are recognised; boundaries are mapped but unpublished, so the right is un-auditable. <b>&rarr; an open CFR boundary registry, linked to tenure recognition.</b></div></div>
+    <div class="story"><div class="s">pbr-story<span>wild &middot; rural</span></div><div>2.72 lakh People's Biodiversity Registers, 2 approved, near-zero public access, benefit-sharing at 4%. <b>&rarr; a biodiversity commons linked to ABS and CFR, on a working devolution chain.</b></div></div>
+    <div class="story"><div class="s">fpo-story<span>rural</span></div><div>Farmer Producer Organisations registered on paper but "hollow", formalism masking weak operations. <b>&rarr; an operational registry linked to services, credit and markets.</b></div></div>
+    <div class="story"><div class="s">shg-story<span>rural</span></div><div>~90 million women in Self Help Groups, in isolation with no shared tracking. <b>&rarr; an interoperable registry linked to credit history and outcomes.</b></div></div>
+    <div class="story"><div class="s">canitlast<span>rural &middot; knowledge</span></div><div>The Panchayat Advancement Index scores "successful" districts draining aquifers 2 to 3x faster than they refill. <b>&rarr; a groundwater-sustainability index linked to how panchayats are scored and funded.</b></div></div>
+  </div>
+
+  <div class="sec">
+    <h2>7 · How to derive the artefact for a theme</h2>
+    <p class="lead">The generic recipe. Run it per vertical, per horizontal, and per leaf, one at a time.</p>
+    <p class="muted">This section is the reusable method. The detailed per-theme derivations (which artefact each leaf actually needs, and who sits at its border) are the next phase of work, done one theme at a time.</p>
+    <ol class="use">
+      <li><b>Start from a stranded registry or a data desert.</b> The data stories are the pipeline; each names a candidate and the linkage it lacks.</li>
+      <li><b>Draw the border.</b> Name the few actors on each side and what would cross between them. If it is "everybody", you have not found the edge yet.</li>
+      <li><b>Pick the form the edge needs now.</b> Diagnostic, commons, strategy, contract or convening. Expect it to change over the lifecycle.</li>
+      <li><b>Set the longevity.</b> Transient or enduring, and if transient, name the successor it should hand off to.</li>
+      <li><b>Staff the roles.</b> Fill every row of the role table with a real actor. The empty role is the risk.</li>
+      <li><b>Run the lifecycle.</b> Diagnose, convene, re-align, institutionalise, then retire or persist. Present evidence and lobby at every stage.</li>
+      <li><b>Watch the intersections.</b> When a theme's artefact touches another theme (waste to air to water), that overlap is a new artefact waiting to be named.</li>
+      <li><b>Measure the gap crossed,</b> not the aggregation. Make open, interoperable contribution a condition of RF support.</li>
+    </ol>
+  </div>
+
+  <p class="note">A border artefact is defined by its border, purpose and longevity, not its material. Candidates are options to test, not commitments; sources are our own data stories (the-uncounted, whose-forest, pbr-story, fpo-story, shg-story, canitlast), the sector hidden-dynamics, the OAQ platform, and the Socratus and Desta waste ecosystem canvas.</p>
+</div>
+</body>
+</html>
