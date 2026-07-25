@@ -63,6 +63,26 @@
   .legend h3{font-family:var(--display);font-size:13px;margin:0 0 4px;text-transform:uppercase;letter-spacing:.08em}
   .legend p{margin:0;font-size:14px;color:var(--dim)} .legend .k{color:var(--leaf-deep);font-weight:600}
   .note{margin-top:26px;font-size:13.5px;color:var(--faint);max-width:82ch}
+  /* ---- mobile: a dedicated stacked layout (the landscape SVG does not fit a phone) ---- */
+  .mobile-model{display:none}
+  .mm-l{background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--leaf);
+    border-radius:14px;padding:14px 16px;margin:10px 0;box-shadow:var(--shadow)}
+  .mm-l .eye{font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:10.5px;
+    font-weight:700;color:var(--leaf-deep);display:block;margin-bottom:3px}
+  .mm-l h3{font-family:var(--serif);font-weight:500;font-size:18px;line-height:1.15;color:var(--text);margin:0}
+  .mm-l .sub{font-size:12px;color:var(--dim);margin:3px 0 0;line-height:1.45}
+  .mm-l p{margin:8px 0 0;font-size:13.5px;line-height:1.5;color:var(--text)}
+  .mm-l p .k{color:var(--leaf-deep);font-weight:600}
+  .mm-tracks{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .mm-tracks span{font-size:12px;border:1px solid var(--hair);border-radius:20px;padding:3px 10px;color:var(--text)}
+  .mm-v{margin-top:10px;padding-top:10px;border-top:1px solid var(--hair)}
+  .mm-v b{font-family:var(--display);font-size:13.5px;color:var(--text)}
+  @media(max-width:760px){
+    .hint{display:none}
+    .figure{display:none}
+    .legend{display:none}
+    .mobile-model{display:block;margin-top:8px}
+  }
 
 .td-nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 84%,transparent);
   -webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);
@@ -1040,6 +1060,39 @@
       <rect class="hit" data-focus="place" x="452" y="884" width="336" height="80"/>
     </g>
   </svg>
+  </div>
+
+  <div class="mobile-model">
+    <div class="mm-l"><span class="eye">The canopy · the outcome</span><h3>Enabling the increase of climate-thriving places</h3></div>
+    <div class="mm-l"><span class="eye">The forest · the capital</span><h3>What backs the system</h3>
+      <p><span class="k">Primary capital:</span> Social · Network · Financial</p>
+      <p><span class="k">Financial capital:</span> Zerodha (ZBL)</p>
+      <p><span class="k">Allied capital:</span> Rainmatter Capital · Climate Investments</p></div>
+    <div class="mm-l"><span class="eye">The verticals · branches</span><h3>Three place-based theses</h3>
+      <p class="sub">Place-based; each adopts RF’s thesis (the principle).</p>
+      <div class="mm-v"><b>Urban</b><p class="sub">Climate-conscious cities</p>
+        <div class="mm-tracks"><span>Air</span><span>Water</span><span>Waste</span><span>Ecology</span><span>Energy</span></div></div>
+      <div class="mm-v"><b>Rural</b><p class="sub">Ecological sustenance · Ecology · Economy · Social (light focus)</p>
+        <div class="mm-tracks"><span>Ecology · Water</span><span>Soil</span><span>Ecology</span></div>
+        <div class="mm-tracks"><span>Economy · Inputs</span><span>Market</span><span>Energy</span></div></div>
+      <div class="mm-v"><b>Wild</b><p class="sub">Where ecology thrives (the rest)</p>
+        <div class="mm-tracks"><span>Co-existence</span><span>Restoration</span></div></div></div>
+    <div class="mm-l"><span class="eye">Horizontals · shared capability</span><h3>Drawn on selectively by the verticals</h3>
+      <div class="mm-tracks"><span>Culture</span><span>Buildings</span><span>Tech / Knowledge</span><span>Business / Education</span></div>
+      <p class="sub" style="margin-top:8px">e.g. Buildings serves Urban and Rural, not Wild.</p></div>
+    <div class="mm-l"><span class="eye">Rainmatter Foundation · the trunk</span><h3>The four capitals it brings up from the roots</h3>
+      <p><span class="k">Financial</span> · supporting work &amp; artefacts</p>
+      <p><span class="k">Social</span> · travelling the problem</p>
+      <p><span class="k">Network</span> · complementarities &amp; collaboration</p>
+      <p><span class="k">Multidimensional thinking</span> · State · Market · Society</p>
+      <p class="sub" style="margin-top:8px">The counterfactual: else the solution ships, but ownership dwindles.</p></div>
+    <div class="mm-l"><span class="eye">Chlorophyll · tools &amp; frameworks</span><h3>What turns capital into ownership on the ground</h3>
+      <div class="mm-tracks"><span>Border artefacts</span><span>Collaboratives</span><span>FOSS / PDGI</span><span>Multidimensional thinking</span><span>Roles &amp; leverage</span><span>Strategy frameworks</span></div></div>
+    <div class="mm-l"><span class="eye">Owners · who holds the place</span><h3>Official · formal · informal, by place-type</h3>
+      <p><span class="k">Urban · NOTF:</span> Corporations · Councils (official) · RWAs · Societies (formal) · Interest groups (informal)</p>
+      <p><span class="k">Rural:</span> Panchayat · Gram Sabha (official) · SHG · FPO · Co-ops (formal) · Youth collectives · Interest groups (informal)</p></div>
+    <div class="mm-l"><span class="eye">Root · place</span><h3>Place</h3>
+      <p class="sub">The root of the whole structure: the tree grows from place. Ownership gathers here first; everything above depends on it.</p></div>
   </div>
 
   <div class="legend">

@@ -109,6 +109,11 @@
   ol.use{padding-left:20px;margin:14px 0 0} ol.use li{margin-bottom:9px;max-width:70ch;font-size:15px}
   a{color:var(--leaf-deep)}
   .note{margin-top:48px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px;color:var(--faint);max-width:82ch}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:6px 0}
+  @media(max-width:600px){
+    .wrap{padding:40px 20px 60px}
+    .grid2,.roles,.shapes{min-width:460px}
+  }
 
 .td-nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 84%,transparent);
   -webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);
@@ -169,13 +174,13 @@
       <h4>The form-by-life grid, and artefacts move across it</h4>
       <p>Two axes place every artefact, and its job is often to <b>travel</b> from one cell to another. A diagnostic canvas is strategy-and-transient; its purpose is to migrate to strategy-and-enduring (the policy it points to).</p>
     </div></div>
-    <table class="grid2">
+    <div class="tw"><table class="grid2">
       <thead><tr><th></th><th>Transient</th><th>Enduring</th></tr></thead>
       <tbody>
         <tr><th>Data</th><td>A one-off study (quantify landfill methane once to make the case)</td><td>The OAQ commons, an open registry</td></tr>
         <tr><th>Strategy</th><td>The <b>waste canvas</b> (diagnose, then retire)</td><td>The professionalised-MRF policy, an ABS mechanism, a standard</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <div class="mm"><div class="n">4</div><div>
       <h4>Succession: know when to let one die</h4>
       <p>An artefact is born for a purpose. When it is served, it either becomes permanent infrastructure or <b>hands off to a successor and retires</b>. The canvas identifies the broken MRF, spawns the policy artefact, and its job is done. The failure mode is the <b>zombie artefact</b>: a canvas kept alive as a deliverable because no one named its successor. RF's discipline is running the lifecycle, not preserving any single object.</p>
@@ -212,7 +217,7 @@
     <h2>4 · Roles and the lifecycle</h2>
     <p class="lead">An artefact becomes impact only when the roles are staffed and the lifecycle is run.</p>
     <p>Two of our own maps already name the roles: the OAQ six roles and the waste canvas's Core / Catalyst / Enabler layers. They are the same taxonomy. Before backing a candidate, name a real actor for each. The empty role is where it will stall.</p>
-    <table class="roles">
+    <div class="tw"><table class="roles">
       <thead><tr><th>RF role</th><th>What it does</th><th>OAQ</th><th>Waste canvas layer</th></tr></thead>
       <tbody>
         <tr><td>Artefact</td><td>The open object at the border</td><td>Aurassure + FOSS / PDGI</td><td>the canvas, later the MRF standard</td></tr>
@@ -222,7 +227,7 @@
         <tr><td>Tipping capital / incumbent</td><td>De-risks or legitimises at scale</td><td>philanthropy, Google</td><td>Catalyst: funders; the housing ministry</td></tr>
         <tr><td>Downstream market</td><td>Builds on top</td><td>app-builders on open AQI</td><td>startups freed to buy feedstock</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <p class="muted">To these six, the multi-year cases add three verbs that recur at every stage: <b>convening</b> the actors, <b>presenting evidence</b>, and <b>lobbying</b> for the rule change nothing else substitutes for.</p>
     <div class="life">
       <span>Diagnose</span><span class="arw">&rarr;</span><span>Convene</span><span class="arw">&rarr;</span><span>Re-align (strategy)</span><span class="arw">&rarr;</span><span>Institutionalise</span><span class="arw">&rarr;</span><span>Retire or persist</span>
@@ -233,29 +238,30 @@
   <div class="sec">
     <h2>5 · Three shapes, worked</h2>
     <p class="lead">RF's method has more than one shape. Naming them is half the work.</p>
-    <table class="shapes">
+    <div class="tw"><table class="shapes">
       <thead><tr><th>Case</th><th>Shape</th><th>Win condition</th></tr></thead>
       <tbody>
         <tr><td class="u">OAQ &middot; air</td><td>Open one commons, aggregate fast</td><td>an incumbent joins (Google opens its sensor data)</td></tr>
         <tr><td class="r">Biodiversity &middot; wild + rural</td><td>Link stranded registries via devolution</td><td>a rights-to-benefit chain finally carries value</td></tr>
         <tr><td class="k">Waste &middot; urban</td><td>A canvas exposes a chokepoint, then policy plus a market</td><td>innovators get reliable feedstock, freed from tenders</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <p style="margin-top:14px"><b>OAQ</b> is the fast, single-commons shape: an open air-quality layer that communities feed and solution actors build on. RF seeded the artefact and aggregated the ecosystem; it built no sensor. <a href="#">Read the OAQ case study &rarr;</a></p>
     <p><b>The biodiversity chain</b> is the slow, multi-registry shape. A People's Biodiversity Register is inert unless it is linked to Community Forest Rights (tenure) and Access and Benefit Sharing (a return), riding a devolution chain from the national authority down to a capable local committee. The artefact is the <b>linkage</b> plus the multi-year coalition, not any single register. It fuses ecology and livelihoods in one place.</p>
     <p><b>Waste</b> is the cross-theme shape. The Socratus and Desta canvas revealed the broken material-recovery facility; a coalition (housing ministry, funders, consultants) turns that into a professionalised-MRF policy and a feedstock-purchasing market that routes innovators around the municipal tenders they never clear. Then it radiates: wet-waste mountains are measured for methane by <b>reusing OAQ</b>, and their leachate is measured against the <b>water-quality</b> theme. One artefact serves three themes; one coalition dissolves several linked dynamics at once.</p>
   </div>
 
   <div class="sec">
-    <h2>6 · Registries are the entry, not the answer</h2>
-    <p class="lead">A registry is hollow not only when it is closed, but when it is stranded: cut off from the rights, benefits and devolved authority that make it actionable.</p>
-    <p>Opening the data is necessary and nowhere near sufficient. Our own data stories are the pipeline of <b>starting diagnostics</b>: each names a stranded registry and, more importantly, the <b>linkage</b> it still needs before it can act. Read them as the first move, not the artefact.</p>
-    <div class="story"><div class="s">the-uncounted<span>wild</span></div><div>India counts elephants and tigers; 8 of 10 conflict species go untallied and snakebite (~50,000 deaths a year) is excluded from conflict policy. <b>&rarr; an open conflict registry, linked to verified-incident compensation.</b></div></div>
-    <div class="story"><div class="s">whose-forest<span>wild</span></div><div>Twenty years on, ~3% of Community Forest Rights are recognised; boundaries are mapped but unpublished, so the right is un-auditable. <b>&rarr; an open CFR boundary registry, linked to tenure recognition.</b></div></div>
-    <div class="story"><div class="s">pbr-story<span>wild &middot; rural</span></div><div>2.72 lakh People's Biodiversity Registers, 2 approved, near-zero public access, benefit-sharing at 4%. <b>&rarr; a biodiversity commons linked to ABS and CFR, on a working devolution chain.</b></div></div>
-    <div class="story"><div class="s">fpo-story<span>rural</span></div><div>Farmer Producer Organisations registered on paper but "hollow", formalism masking weak operations. <b>&rarr; an operational registry linked to services, credit and markets.</b></div></div>
-    <div class="story"><div class="s">shg-story<span>rural</span></div><div>~90 million women in Self Help Groups, in isolation with no shared tracking. <b>&rarr; an interoperable registry linked to credit history and outcomes.</b></div></div>
-    <div class="story"><div class="s">canitlast<span>rural &middot; knowledge</span></div><div>The Panchayat Advancement Index scores "successful" districts draining aquifers 2 to 3x faster than they refill. <b>&rarr; a groundwater-sustainability index linked to how panchayats are scored and funded.</b></div></div>
+    <h2>6 · Start with the data</h2>
+    <p class="lead">Before you define an artefact, do the data work. Get the data to answer a real question, and let it surface the hidden dynamics underneath.</p>
+    <p>Write the data story. A data story is data gathered to answer one honest question about a place or a system, read until the hidden dynamics show themselves: the political economy, the perverse incentives, the broken data integrity that keep the problem stuck. The border artefact is <b>derived from that understanding, never assumed</b>. If no data story exists for your theme, writing one is the first move, and often the most valuable thing RF can seed.</p>
+    <p class="muted">Make this a habit across the team and our partners: pick a question that matters, get the data, and let it draw the linkages between issues. The stories below are <b>examples of the practice, not a menu of artefacts</b>. Read each to understand an issue and see what it connects to; the artefact comes after, and usually spans more than one of them.</p>
+    <div class="story"><div class="s">the-uncounted<span>wild</span></div><div>India counts elephants and tigers; 8 of 10 conflict species go untallied and snakebite (~50,000 deaths a year) is excluded from conflict policy. <b>Hidden dynamic: what is not counted cannot be governed.</b></div></div>
+    <div class="story"><div class="s">whose-forest<span>wild</span></div><div>Twenty years on, ~3% of Community Forest Rights are recognised; boundaries are mapped but unpublished, so the right is un-auditable. <b>Hidden dynamic: a right you cannot see is a right you cannot claim.</b></div></div>
+    <div class="story"><div class="s">pbr-story<span>wild &middot; rural</span></div><div>2.72 lakh People's Biodiversity Registers, 2 approved, near-zero public access, benefit-sharing at 4%. <b>Hidden dynamic: documentation without devolution is inert.</b></div></div>
+    <div class="story"><div class="s">fpo-story<span>rural</span></div><div>Farmer Producer Organisations registered on paper but "hollow", formalism masking weak operations. <b>Hidden dynamic: the count of institutions is mistaken for their function.</b></div></div>
+    <div class="story"><div class="s">shg-story<span>rural</span></div><div>~90 million women in Self Help Groups, in isolation with no shared tracking. <b>Hidden dynamic: scale without interoperability does not compound.</b></div></div>
+    <div class="story"><div class="s">canitlast<span>rural &middot; knowledge</span></div><div>The Panchayat Advancement Index scores "successful" districts draining aquifers 2 to 3x faster than they refill. <b>Hidden dynamic: the wrong metric rewards the wrong outcome.</b></div></div>
   </div>
 
   <div class="sec">
@@ -263,7 +269,7 @@
     <p class="lead">The generic recipe. Run it per vertical, per horizontal, and per leaf, one at a time.</p>
     <p class="muted">This section is the reusable method. The detailed per-theme derivations (which artefact each leaf actually needs, and who sits at its border) are the next phase of work, done one theme at a time.</p>
     <ol class="use">
-      <li><b>Start from a stranded registry or a data desert.</b> The data stories are the pipeline; each names a candidate and the linkage it lacks.</li>
+      <li><b>Start with a question and the data (Section 6).</b> Do the data story first: get the data, surface the hidden dynamics, draw the linkages. The artefact is derived from what you find, not chosen from a list.</li>
       <li><b>Draw the border.</b> Name the few actors on each side and what would cross between them. If it is "everybody", you have not found the edge yet.</li>
       <li><b>Pick the form the edge needs now.</b> Diagnostic, commons, strategy, contract or convening. Expect it to change over the lifecycle.</li>
       <li><b>Set the longevity.</b> Transient or enduring, and if transient, name the successor it should hand off to.</li>
