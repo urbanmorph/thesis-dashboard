@@ -114,6 +114,28 @@
     .wrap{padding:40px 20px 60px}
     .grid2,.roles,.shapes{min-width:460px}
   }
+  /* ---- POESI actor map (nested rings) ---- */
+  .poesi-sec{margin-top:42px;padding-top:28px;border-top:1px solid var(--hair)}
+  .po-eyebrow{font-family:var(--display);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;font-weight:700;color:var(--leaf-deep)}
+  .po-h{font-family:var(--serif);font-weight:500;font-size:clamp(21px,3vw,28px);line-height:1.12;margin:.3em 0 .12em;color:var(--text)}
+  .po-sub{font-size:14.5px;color:var(--dim);margin:0 0 12px;max-width:70ch}
+  .po-cap{font-size:13px;color:var(--faint);margin-top:8px;max-width:74ch}
+  .po-cap b{color:var(--leaf-deep)}
+  .po-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .po-svg{width:100%;height:auto;display:block}
+  @media(max-width:640px){.po-svg{min-width:580px}}
+  .po-ring{stroke:var(--hair);stroke-width:1.5}
+  .po-ring.r5{fill:color-mix(in srgb,var(--leaf) 4%,var(--surface))}
+  .po-ring.r4{fill:color-mix(in srgb,var(--leaf) 7%,var(--surface))}
+  .po-ring.r3{fill:color-mix(in srgb,var(--leaf) 11%,var(--surface));stroke:var(--leaf);stroke-dasharray:6 6}
+  .po-ring.r2{fill:color-mix(in srgb,var(--leaf) 15%,var(--surface))}
+  .po-ring.r1{fill:color-mix(in srgb,var(--leaf) 24%,var(--surface));stroke:var(--leaf-deep)}
+  .po-t{font-family:var(--display);font-weight:700;fill:var(--text)}
+  .po-d{font-family:var(--body);fill:var(--dim);font-size:12px}
+  .po-cc{fill:var(--leaf-deep);font-weight:600}
+  .po-note{font-family:var(--body);font-size:11.5px;font-style:italic;fill:var(--faint)}
+  .po-art{fill:var(--leaf-deep);stroke:var(--bg);stroke-width:3}
+  .po-leg{font-family:var(--body);font-size:12.5px;fill:var(--dim)}
 
 .td-nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 84%,transparent);
   -webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);
@@ -214,9 +236,41 @@
   </div>
 
   <div class="sec">
-    <h2>4 · Roles and the lifecycle</h2>
-    <p class="lead">An artefact becomes impact only when the roles are staffed and the lifecycle is run.</p>
-    <p>Two of our own maps already name the roles: the OAQ six roles and the waste canvas's Core / Catalyst / Enabler layers. They are the same taxonomy. Before backing a candidate, name a real actor for each. The empty role is where it will stall.</p>
+    <h2>4 · Map the actors, then staff the roles</h2>
+    <p class="lead">POESI is our actor-mapping tool: sort every actor in a place into one of its five rings, and the artefact you are hunting shows up at the intersection between them.</p>
+    <div class="po-scroll"><svg class="po-svg" viewBox="0 0 1080 560" role="img" aria-label="POESI nested rings: Place, Owners, Enablers, Solutions, Supporting Infrastructure">
+      <rect class="po-ring r5" x="20" y="44" width="1040" height="472" rx="30"/>
+      <rect class="po-ring r4" x="20" y="92" width="812" height="376" rx="26"/>
+      <rect class="po-ring r3" x="20" y="140" width="600" height="280" rx="22"/>
+      <rect class="po-ring r2" x="20" y="184" width="400" height="192" rx="18"/>
+      <rect class="po-ring r1" x="20" y="224" width="220" height="112" rx="14"/>
+      <g text-anchor="middle">
+        <text class="po-t" x="130" y="276" font-size="20">PLACE</text>
+        <text class="po-d" x="130" y="298" font-size="11">the boundary of</text>
+        <text class="po-d" x="130" y="313" font-size="11"><tspan class="po-cc">care &amp; concern</tspan>, by principles</text>
+        <text class="po-t" x="320" y="232" font-size="17">Owners</text>
+        <text class="po-d" x="320" y="252">who hold the</text>
+        <text class="po-d" x="320" y="267"><tspan class="po-cc">care &amp; concern</tspan></text>
+        <text class="po-t" x="510" y="188" font-size="17">Enablers</text>
+        <text class="po-d" x="510" y="208">bridge to owners;</text>
+        <text class="po-d" x="510" y="223">not deep in a domain</text>
+        <text class="po-t" x="726" y="140" font-size="17">Solutions</text>
+        <text class="po-d" x="726" y="160">deep-domain providers</text>
+        <text class="po-d" x="726" y="175">(water, waste, ...)</text>
+        <text class="po-t" x="946" y="94" font-size="16">Supporting</text>
+        <text class="po-t" x="946" y="114" font-size="16">infrastructure</text>
+        <text class="po-d" x="946" y="134">pure-play: research, policy</text>
+      </g>
+      <text class="po-note" x="250" y="404" text-anchor="middle">Owners can be enablers, not vice versa (the dashed ring)</text>
+      <!-- border artefacts sit on the borders between the rings -->
+      <circle class="po-art" cx="420" cy="340" r="8"/>
+      <circle class="po-art" cx="620" cy="340" r="8"/>
+      <circle class="po-art" cx="832" cy="340" r="8"/>
+      <circle class="po-art" cx="82" cy="486" r="7"/>
+      <text class="po-leg" x="100" y="491">a border artefact, on the border between two actor rings</text>
+    </svg></div>
+    <p class="po-cap" style="margin:8px 0 0">Place and Owners are the model&rsquo;s root; Enablers bridge to the deep-domain solution providers; supporting infrastructure (research, policy) is pure-play. Owners can be enablers, not vice versa.</p>
+    <p style="margin-top:16px">Then, for the artefact you are building, staff the delivery roles. Two of our own maps already name them: the OAQ six roles and the waste canvas's Core / Catalyst / Enabler layers, the same taxonomy. Name a real actor for each; the empty role is where it will stall.</p>
     <div class="tw"><table class="roles">
       <thead><tr><th>RF role</th><th>What it does</th><th>OAQ</th><th>Waste canvas layer</th></tr></thead>
       <tbody>
